@@ -178,23 +178,23 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   margin-bottom: 6px; text-align: center;
 }
 .eq-crawl-wrap {
-  height: 120px;
+  height: 160px;
   overflow: hidden;
-  perspective: 160px;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 28%, black 72%, transparent 100%);
-  mask-image:         linear-gradient(to bottom, transparent 0%, black 28%, black 72%, transparent 100%);
+  perspective: 400px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
+  mask-image:         linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
 }
 .eq-crawl {
   transform-origin: 50% 100%;
-  animation: sw-crawl 35s linear infinite;
+  animation: sw-crawl 40s linear infinite;
 }
 @keyframes sw-crawl {
-  from { transform: rotateX(22deg) translateY(0); }
-  to   { transform: rotateX(22deg) translateY(-50%); }
+  from { transform: rotateX(12deg) translateY(0); }
+  to   { transform: rotateX(12deg) translateY(-50%); }
 }
 .eq-crawl .eq-item {
-  font-size: 1.05rem; color: var(--muted);
-  text-align: center; line-height: 1.9;
+  font-size: 1.25rem; color: var(--muted);
+  text-align: center; line-height: 2.2;
   font-style: italic; padding: 0;
 }
 </style>
