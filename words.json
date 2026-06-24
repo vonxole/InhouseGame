@@ -1122,378 +1122,378 @@
   {
     "word": "teacher",
     "thai": "ครู / อาจารย์",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "explains things and helps students learn"
   },
   {
     "word": "doctor",
     "thai": "แพทย์ / หมอ",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "treats sick or injured people"
   },
   {
     "word": "chef",
     "thai": "พ่อครัว / แม่ครัว",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "a professional cook in a restaurant"
   },
   {
     "word": "police",
     "thai": "ตำรวจ",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "keeps people safe and enforces the law"
   },
   {
     "word": "singer",
     "thai": "นักร้อง",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "performs music using their voice"
   },
   {
     "word": "farmer",
     "thai": "เกษตรกร / ชาวนา",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "grows crops or raises animals for food"
   },
   {
     "word": "pilot",
     "thai": "นักบิน",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "flies airplanes"
   },
   {
     "word": "firefighter",
     "thai": "นักดับเพลิง",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "puts out fires and saves people"
   },
   {
     "word": "athlete",
     "thai": "นักกีฬา",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "competes in sports professionally"
   },
   {
     "word": "scientist",
     "thai": "นักวิทยาศาสตร์",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "studies and researches how the world works"
   },
   {
     "word": "archaeologist",
     "thai": "นักโบราณคดี",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "digs up and studies ancient objects"
   },
   {
     "word": "journalist",
     "thai": "นักข่าว",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "writes or reports news stories"
   },
   {
     "word": "detective",
     "thai": "นักสืบ",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "investigates crimes and finds clues"
   },
   {
     "word": "diplomat",
     "thai": "นักการทูต",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "represents their country abroad and negotiates"
   },
   {
     "word": "astronaut",
     "thai": "นักบินอวกาศ",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "travels to space"
   },
   {
     "word": "therapist",
     "thai": "นักบำบัด",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "helps people with emotional and mental health"
   },
   {
     "word": "auctioneer",
     "thai": "ผู้ประมูล / พิธีกรประมูล",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "runs sales where people bid for items"
   },
   {
     "word": "sommelier",
     "thai": "ผู้เชี่ยวชาญไวน์",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "an expert in selecting and serving wine"
   },
   {
     "word": "actuary",
     "thai": "นักคณิตศาสตร์ประกันภัย",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "calculates financial risk using statistics"
   },
   {
     "word": "ghostwriter",
     "thai": "ผู้เขียนเบื้องหลัง",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "writes content that someone else publishes as their own"
   },
   {
     "word": "whistleblower",
     "thai": "ผู้แจ้งเบาะแส",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "hard",
     "hint": "exposes illegal activity within an organization"
   },
   {
     "word": "cryptographer",
     "thai": "นักเข้ารหัส",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "hard",
     "hint": "creates or breaks secret codes"
   },
   {
     "word": "undercover agent",
     "thai": "สายลับ / สายสืบ",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "hard",
     "hint": "secretly infiltrates a group to gather information"
   },
   {
     "word": "forensic accountant",
     "thai": "นักบัญชีนิติเวช",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "hard",
     "hint": "investigates financial crimes through numbers"
   },
   {
     "word": "double agent",
     "thai": "สายลับสองหน้า",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "hard",
     "hint": "a spy who works for two opposing sides"
   },
   {
     "word": "coroner",
     "thai": "แพทย์นิติเวช",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "hard",
     "hint": "investigates the cause of suspicious deaths"
   },
   {
     "word": "nurse",
     "thai": "พยาบาล",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "helps doctors and takes care of patients"
   },
   {
     "word": "cashier",
     "thai": "แคชเชียร์",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "handles payments at a shop or restaurant"
   },
   {
     "word": "driver",
     "thai": "คนขับรถ",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "operates a vehicle to transport people or goods"
   },
   {
     "word": "baker",
     "thai": "คนทำขนมปัง",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "makes bread, cakes, and pastries"
   },
   {
     "word": "judge",
     "thai": "ผู้พิพากษา",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "makes legal decisions in a court"
   },
   {
     "word": "actor",
     "thai": "นักแสดง",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "performs roles in movies, TV, or theatre"
   },
   {
     "word": "dentist",
     "thai": "ทันตแพทย์",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "a doctor who takes care of your teeth"
   },
   {
     "word": "librarian",
     "thai": "บรรณารักษ์",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "works in a library and helps people find books"
   },
   {
     "word": "guard",
     "thai": "เจ้าหน้าที่รักษาความปลอดภัย",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "protects a building or person"
   },
   {
     "word": "photographer",
     "thai": "ช่างภาพ",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "takes photos professionally"
   },
   {
     "word": "mechanic",
     "thai": "ช่างซ่อมรถ",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "repairs cars and engines"
   },
   {
     "word": "waiter",
     "thai": "บริกร / เวเตอร์",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "easy",
     "hint": "serves food and drinks at a restaurant"
   },
   {
     "word": "hacker",
     "thai": "แฮกเกอร์",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "breaks into computer systems"
   },
   {
     "word": "lobbyist",
     "thai": "นักล็อบบี้",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "tries to influence politicians on behalf of a group"
   },
   {
     "word": "bounty hunter",
     "thai": "นักล่าหัว",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "tracks down and captures fugitives for a reward"
   },
   {
     "word": "profiler",
     "thai": "นักทำโปรไฟล์อาชญากร",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "analyzes criminal behavior to help catch suspects"
   },
   {
     "word": "middleman",
     "thai": "คนกลาง",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "a person who connects buyers and sellers"
   },
   {
     "word": "social worker",
     "thai": "นักสังคมสงเคราะห์",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "helps vulnerable people improve their lives"
   },
   {
     "word": "translator",
     "thai": "ล่าม / นักแปล",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "converts speech or text from one language to another"
   },
   {
     "word": "stockbroker",
     "thai": "นายหน้าซื้อขายหุ้น",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "buys and sells shares on behalf of clients"
   },
   {
     "word": "hitman",
     "thai": "มือปืนรับจ้าง",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "a person hired to kill someone"
   },
   {
     "word": "con artist",
     "thai": "นักต้มตุ๋น",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "medium",
     "hint": "tricks people out of money through deception"
   },
   {
     "word": "fixer",
     "thai": "คนแก้ปัญหาเบื้องหลัง",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "hard",
     "hint": "secretly resolves problems for powerful people"
   },
   {
     "word": "sleeper agent",
     "thai": "สายลับที่ซ่อนตัวรอ",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "hard",
     "hint": "a spy who blends into society waiting to be activated"
   },
   {
     "word": "mole",
     "thai": "สายลับที่แฝงตัวอยู่ในองค์กร",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "hard",
     "hint": "a spy secretly working inside an organization"
   },
   {
     "word": "money mule",
     "thai": "ลูกหาบเงิน / ตัวนำเงิน",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "hard",
     "hint": "someone used to transfer illegally obtained money"
   },
   {
     "word": "getaway driver",
     "thai": "คนขับรถหลบหนี",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "hard",
     "hint": "drives the escape vehicle after a crime"
   },
   {
     "word": "arms dealer",
     "thai": "พ่อค้าอาวุธ",
-    "category": "Characters",
+    "category": "Occupations",
     "level": "hard",
     "hint": "illegally trades weapons"
   },
@@ -2813,27 +2813,165 @@
     "level": "hard",
     "hint": "an outdoor clothing brand famous for sustainability and donating profits to the planet"
   },
-  { "word": "coffee", "thai": "กาแฟ", "category": "Drinks", "level": "easy", "hint": "a hot dark drink made from roasted beans that helps you wake up" },
-  { "word": "tea", "thai": "ชา", "category": "Drinks", "level": "easy", "hint": "a hot drink made by pouring water over dried leaves" },
-  { "word": "water", "thai": "น้ำเปล่า", "category": "Drinks", "level": "easy", "hint": "the clearest drink with no taste, essential for life" },
-  { "word": "milk", "thai": "นม", "category": "Drinks", "level": "easy", "hint": "a white drink that comes from cows and is good for your bones" },
-  { "word": "juice", "thai": "น้ำผลไม้", "category": "Drinks", "level": "easy", "hint": "a drink squeezed from fruit" },
-  { "word": "beer", "thai": "เบียร์", "category": "Drinks", "level": "easy", "hint": "a bubbly alcoholic drink made from hops and barley" },
-  { "word": "wine", "thai": "ไวน์", "category": "Drinks", "level": "easy", "hint": "an alcoholic drink made from fermented grapes" },
-  { "word": "smoothie", "thai": "สมูทตี้", "category": "Drinks", "level": "easy", "hint": "a thick blended drink made from fruit and sometimes yogurt or milk" },
-  { "word": "lemonade", "thai": "น้ำมะนาว", "category": "Drinks", "level": "easy", "hint": "a cold sweet drink made from lemon juice and sugar" },
-  { "word": "soda", "thai": "โซดา / น้ำอัดลม", "category": "Drinks", "level": "easy", "hint": "a fizzy drink with bubbles, often sweet and flavored" },
-  { "word": "cocktail", "thai": "ค็อกเทล", "category": "Drinks", "level": "medium", "hint": "a mixed alcoholic drink, often colorful and served at parties" },
-  { "word": "espresso", "thai": "เอสเพรสโซ", "category": "Drinks", "level": "medium", "hint": "a very strong, small shot of coffee made by pushing hot water through ground beans" },
-  { "word": "latte", "thai": "ลาเต้", "category": "Drinks", "level": "medium", "hint": "a coffee drink made with espresso and lots of steamed milk" },
-  { "word": "matcha", "thai": "มัทฉะ", "category": "Drinks", "level": "medium", "hint": "a bright green Japanese powder made from ground tea leaves" },
-  { "word": "bubble tea", "thai": "ชานมไข่มุก", "category": "Drinks", "level": "medium", "hint": "a Taiwanese drink with tea, milk, and chewy tapioca balls at the bottom" },
-  { "word": "whiskey", "thai": "วิสกี้", "category": "Drinks", "level": "medium", "hint": "a strong alcoholic spirit aged in wooden barrels, often drunk on the rocks" },
-  { "word": "sparkling water", "thai": "น้ำอัดลมไม่มีรส", "category": "Drinks", "level": "medium", "hint": "plain water with bubbles but no sugar or flavor" },
-  { "word": "hot chocolate", "thai": "ช็อกโกแลตร้อน", "category": "Drinks", "level": "medium", "hint": "a warm sweet drink made from cocoa or melted chocolate and milk" },
-  { "word": "energy drink", "thai": "เครื่องดื่มชูกำลัง", "category": "Drinks", "level": "medium", "hint": "a drink with caffeine and sugar that claims to boost your energy" },
-  { "word": "kombucha", "thai": "คอมบูชา", "category": "Drinks", "level": "hard", "hint": "a fizzy fermented tea drink believed to be good for your gut" },
-  { "word": "mocktail", "thai": "ม็อกเทล", "category": "Drinks", "level": "hard", "hint": "a fancy mixed drink that looks like a cocktail but contains no alcohol" },
-  { "word": "cold brew", "thai": "โคลด์บรูว์", "category": "Drinks", "level": "hard", "hint": "coffee steeped in cold water for many hours instead of using heat" },
-  { "word": "affogato", "thai": "อัฟโฟกาโต้", "category": "Drinks", "level": "hard", "hint": "an Italian dessert drink — a shot of hot espresso poured over vanilla ice cream" }
+  {
+    "word": "coffee",
+    "thai": "กาแฟ",
+    "category": "Drinks",
+    "level": "easy",
+    "hint": "a hot dark drink made from roasted beans that helps you wake up"
+  },
+  {
+    "word": "tea",
+    "thai": "ชา",
+    "category": "Drinks",
+    "level": "easy",
+    "hint": "a hot drink made by pouring water over dried leaves"
+  },
+  {
+    "word": "water",
+    "thai": "น้ำเปล่า",
+    "category": "Drinks",
+    "level": "easy",
+    "hint": "the clearest drink with no taste, essential for life"
+  },
+  {
+    "word": "milk",
+    "thai": "นม",
+    "category": "Drinks",
+    "level": "easy",
+    "hint": "a white drink that comes from cows and is good for your bones"
+  },
+  {
+    "word": "juice",
+    "thai": "น้ำผลไม้",
+    "category": "Drinks",
+    "level": "easy",
+    "hint": "a drink squeezed from fruit"
+  },
+  {
+    "word": "beer",
+    "thai": "เบียร์",
+    "category": "Drinks",
+    "level": "easy",
+    "hint": "a bubbly alcoholic drink made from hops and barley"
+  },
+  {
+    "word": "wine",
+    "thai": "ไวน์",
+    "category": "Drinks",
+    "level": "easy",
+    "hint": "an alcoholic drink made from fermented grapes"
+  },
+  {
+    "word": "smoothie",
+    "thai": "สมูทตี้",
+    "category": "Drinks",
+    "level": "easy",
+    "hint": "a thick blended drink made from fruit and sometimes yogurt or milk"
+  },
+  {
+    "word": "lemonade",
+    "thai": "น้ำมะนาว",
+    "category": "Drinks",
+    "level": "easy",
+    "hint": "a cold sweet drink made from lemon juice and sugar"
+  },
+  {
+    "word": "soda",
+    "thai": "โซดา / น้ำอัดลม",
+    "category": "Drinks",
+    "level": "easy",
+    "hint": "a fizzy drink with bubbles, often sweet and flavored"
+  },
+  {
+    "word": "cocktail",
+    "thai": "ค็อกเทล",
+    "category": "Drinks",
+    "level": "medium",
+    "hint": "a mixed alcoholic drink, often colorful and served at parties"
+  },
+  {
+    "word": "espresso",
+    "thai": "เอสเพรสโซ",
+    "category": "Drinks",
+    "level": "medium",
+    "hint": "a very strong, small shot of coffee made by pushing hot water through ground beans"
+  },
+  {
+    "word": "latte",
+    "thai": "ลาเต้",
+    "category": "Drinks",
+    "level": "medium",
+    "hint": "a coffee drink made with espresso and lots of steamed milk"
+  },
+  {
+    "word": "matcha",
+    "thai": "มัทฉะ",
+    "category": "Drinks",
+    "level": "medium",
+    "hint": "a bright green Japanese powder made from ground tea leaves"
+  },
+  {
+    "word": "bubble tea",
+    "thai": "ชานมไข่มุก",
+    "category": "Drinks",
+    "level": "medium",
+    "hint": "a Taiwanese drink with tea, milk, and chewy tapioca balls at the bottom"
+  },
+  {
+    "word": "whiskey",
+    "thai": "วิสกี้",
+    "category": "Drinks",
+    "level": "medium",
+    "hint": "a strong alcoholic spirit aged in wooden barrels, often drunk on the rocks"
+  },
+  {
+    "word": "sparkling water",
+    "thai": "น้ำอัดลมไม่มีรส",
+    "category": "Drinks",
+    "level": "medium",
+    "hint": "plain water with bubbles but no sugar or flavor"
+  },
+  {
+    "word": "hot chocolate",
+    "thai": "ช็อกโกแลตร้อน",
+    "category": "Drinks",
+    "level": "medium",
+    "hint": "a warm sweet drink made from cocoa or melted chocolate and milk"
+  },
+  {
+    "word": "energy drink",
+    "thai": "เครื่องดื่มชูกำลัง",
+    "category": "Drinks",
+    "level": "medium",
+    "hint": "a drink with caffeine and sugar that claims to boost your energy"
+  },
+  {
+    "word": "kombucha",
+    "thai": "คอมบูชา",
+    "category": "Drinks",
+    "level": "hard",
+    "hint": "a fizzy fermented tea drink believed to be good for your gut"
+  },
+  {
+    "word": "mocktail",
+    "thai": "ม็อกเทล",
+    "category": "Drinks",
+    "level": "hard",
+    "hint": "a fancy mixed drink that looks like a cocktail but contains no alcohol"
+  },
+  {
+    "word": "cold brew",
+    "thai": "โคลด์บรูว์",
+    "category": "Drinks",
+    "level": "hard",
+    "hint": "coffee steeped in cold water for many hours instead of using heat"
+  },
+  {
+    "word": "affogato",
+    "thai": "อัฟโฟกาโต้",
+    "category": "Drinks",
+    "level": "hard",
+    "hint": "an Italian dessert drink — a shot of hot espresso poured over vanilla ice cream"
+  }
 ]

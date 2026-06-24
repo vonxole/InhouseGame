@@ -299,6 +299,21 @@ io.on('connection', (socket) => {
     broadcastRoom(room);
   });
 
+  // Insider doesn't know the word → ask master to reroll
+  socket.on('insider_unknown', () => {
+    const room = getRoom(socket.id);
+    if (!room || room.state !== 'reveal') return;
+    if (room.roles[socket.id] !== 'insider') return;
+    const w = pickWord(room.filterCategories, room.filterLevels);
+    room.word         = w.word;
+    room.hint         = w.hint;
+    room.wordThai     = w.thai;
+    room.wordCategory = w.category;
+    room.wordLevel    = w.level;
+    room.revealsDone  = [];
+    broadcastRoom(room);
+  });
+
   // Master taps when word is guessed face-to-face → reveal Insider
   socket.on('word_guessed', () => {
     const room = getRoom(socket.id);

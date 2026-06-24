@@ -303,15 +303,6 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   <!-- Host: filters (multi-select) -->
   <div class="card" id="l-filters" style="display:none;flex-direction:column;gap:14px;">
     <div>
-      <label style="margin-bottom:8px;">📂 Category <span class="muted" style="font-weight:400;">(pick multiple)</span></label>
-      <div class="pill-group" id="fg-cat">
-        <button class="pill" onclick="setFilter('category','General')">General</button>
-        <button class="pill" onclick="setFilter('category','Places')">Places</button>
-        <button class="pill" onclick="setFilter('category','Objects')">Objects</button>
-        <button class="pill" onclick="setFilter('category','Characters')">Characters</button>
-      </div>
-    </div>
-    <div>
       <label style="margin-bottom:8px;">⚡ Difficulty <span class="muted" style="font-weight:400;">(pick multiple)</span></label>
       <div class="pill-group" id="fg-lvl">
         <button class="pill" onclick="setFilter('level','easy')"   style="--pc:#6ee7b7;--bc:#059669;">Easy</button>
@@ -390,6 +381,7 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   </div>
 
   <button class="btn btn-primary" id="btn-ready" onclick="doReady()">Ready</button>
+  <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:0.9rem;">❓ Don't know this word</button>
   <button class="btn" id="btn-reroll" onclick="doReroll()" style="display:none;background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.9rem;">🎲 New Word</button>
 
   <div class="center">
@@ -686,7 +678,6 @@ function renderLobby(room) {
     btn.disabled    = need > 0;
     btn.textContent = need > 0 ? `Need ${need} more player(s)` : 'Start Game 🎮';
     document.getElementById('l-need-msg').style.display = need > 0 ? 'block' : 'none';
-    syncPills('fg-cat', room.filterCategories || []);
     syncPills('fg-lvl', room.filterLevels    || []);
     syncSlider('sl-play',    'play-val',    room.playTime    || 180);
     syncSlider('sl-discuss', 'discuss-val', room.discussTime || 60);
@@ -695,16 +686,14 @@ function renderLobby(room) {
     document.getElementById('l-settings-view').style.display = 'block';
     document.getElementById('l-host-ctrl').style.display   = 'none';
     document.getElementById('l-wait-msg').style.display    = 'block';
-    const cats = room.filterCategories || [];
-    const lvls = room.filterLevels    || [];
-    const catChips = cats.length
-      ? cats.map(c => `<span class="chip" style="background:var(--accent);color:#fff;">${c}</span>`).join('')
-      : `<span class="chip" style="background:var(--border);color:var(--muted);">All</span>`;
-    const lvlChips = lvls.map(l => levelChip(l)).join('');
+    const lvls = room.filterLevels || [];
+    const lvlChips = lvls.length
+      ? lvls.map(l => levelChip(l)).join('')
+      : `<span class="chip" style="background:var(--border);color:var(--muted);">All levels</span>`;
     const playLabel  = fmtTime(room.playTime    || 180);
     const discLabel  = fmtTime(room.discussTime || 60);
     const timerChips = `<span class="chip" style="background:var(--border);color:var(--muted);">⏱ ${playLabel}</span><span class="chip" style="background:var(--border);color:var(--muted);">💬 ${discLabel}</span>`;
-    document.getElementById('l-setting-chips').innerHTML = catChips + lvlChips + timerChips;
+    document.getElementById('l-setting-chips').innerHTML = lvlChips + timerChips;
   }
 
   // scoreboard (show only after at least one round)
@@ -785,8 +774,9 @@ function renderReveal(room) {
     if (myRole === 'master') document.getElementById('rv-hint-text').textContent = room.myHint || '';
   }
 
-  document.getElementById('btn-reroll').style.display        = 'none';
-  document.getElementById('btn-reroll-inline').style.display = room.isMaster ? 'block' : 'none';
+  document.getElementById('btn-reroll').style.display          = 'none';
+  document.getElementById('btn-reroll-inline').style.display   = room.isMaster ? 'block' : 'none';
+  document.getElementById('btn-insider-unknown').style.display = (myRole === 'insider' && !room.iAmReady) ? 'block' : 'none';
 
   const iAmReady   = room.iAmReady;
   const lockedOut  = (myRole === 'insider' || myRole === 'common') && !room.masterIsReady;
@@ -834,6 +824,12 @@ function doReady() {
 
 function doReroll() {
   socket.emit('reroll_word');
+}
+
+function doInsiderUnknown() {
+  if (confirm("Don't know the word? The Master will get a new word for everyone.")) {
+    socket.emit('insider_unknown');
+  }
 }
 
 // ── Playing ───────────────────────────────────────────────────────────────────
