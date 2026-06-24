@@ -106,9 +106,9 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
 .role-card .icon { font-size: 4.5rem; line-height: 1; }
 .role-card .name { font-size: 1.8rem; font-weight: 900; }
 .role-card .desc { font-size: 0.92rem; line-height: 1.5; opacity: .85; max-width: 280px; }
-.role-master  { background: linear-gradient(135deg,#0f2557,#1e3a8a); border: 2px solid #3b82f6; }
-.role-insider { background: linear-gradient(135deg,#2d0457,#6b21a8); border: 2px solid var(--accent2); }
-.role-common  { background: linear-gradient(135deg,#052e16,#14532d); border: 2px solid var(--green); }
+.role-master  { background: linear-gradient(135deg,#0f1f3d,#162d5e); border: 2px solid #3b5faa; }
+.role-insider { background: linear-gradient(135deg,#1a1230,#2d1f52); border: 2px solid #6d5aab; }
+.role-common  { background: linear-gradient(135deg,#0f1e1a,#172e28); border: 2px solid #3a7a68; }
 
 /* Word box */
 .word-box {
@@ -170,41 +170,22 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
 .result-icon  { font-size: 5rem; text-align: center; }
 .result-title { font-size: 1.7rem; font-weight: 900; text-align: center; }
 
-/* Example questions */
+/* Example questions — inline hint style */
 .example-q-box {
-  background: var(--card);
-  border: 1.5px solid var(--border);
-  border-radius: 14px;
-  padding: 14px 16px;
-}
-.example-q-box .eq-header {
-  display: flex; justify-content: space-between; align-items: center;
-  cursor: pointer; user-select: none;
+  padding: 0 4px;
 }
 .example-q-box .eq-title {
-  font-size: 0.8rem; font-weight: 600; opacity: .55; text-transform: uppercase; letter-spacing: .08em;
-}
-.example-q-box .eq-toggle {
-  font-size: 0.75rem; opacity: .4;
+  font-size: 0.72rem; font-weight: 600; opacity: .4;
+  text-transform: uppercase; letter-spacing: .1em;
+  margin-bottom: 8px; text-align: center;
 }
 .example-q-box .eq-list {
-  display: none;
-  margin-top: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
+  display: flex; flex-direction: column; gap: 5px;
 }
 .example-q-box .eq-item {
-  font-size: 0.88rem;
-  color: var(--muted);
-  padding: 6px 10px;
-  background: rgba(255,255,255,0.04);
-  border-radius: 8px;
-  line-height: 1.4;
-}
-.example-q-box .eq-item span {
-  color: var(--text);
-  font-weight: 500;
+  font-size: 0.82rem; color: var(--muted);
+  text-align: center; line-height: 1.5;
+  font-style: italic;
 }
 </style>
 </head>
@@ -416,15 +397,15 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   <div id="rv-card"></div>
 
   <!-- Shared word box — all roles see this box, content differs -->
-  <div id="rv-word" class="word-box" style="background:var(--card);border:1.5px solid var(--border);">
+  <div id="rv-word" class="word-box" style="background:var(--card);border:1.5px solid var(--border);padding:12px 16px;">
     <div class="wlabel" id="rv-word-label">Secret Word</div>
-    <div class="wword" id="rv-word-text" style="font-size:1.4rem;font-weight:600;"></div>
-    <div id="rv-word-thai" style="font-size:1rem;opacity:.7;margin-bottom:6px;"></div>
+    <div class="wword" id="rv-word-text" style="font-size:1.3rem;font-weight:700;margin:4px 0 2px;"></div>
+    <div id="rv-word-thai" style="font-size:0.88rem;opacity:.65;margin-bottom:4px;"></div>
     <div class="wmeta">
       <span class="chip chip-cat" id="rv-cat"></span>
       <span id="rv-lvl"></span>
     </div>
-    <button id="btn-reroll-inline" onclick="doReroll()" style="display:none;margin-top:12px;background:transparent;border:1.5px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.7);font-size:0.85rem;padding:6px 16px;border-radius:20px;cursor:pointer;">🎲 New Word</button>
+    <button id="btn-reroll-inline" onclick="doReroll()" style="display:none;margin-top:10px;background:transparent;border:1.5px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.7);font-size:0.85rem;padding:5px 14px;border-radius:20px;cursor:pointer;">🎲 New Word</button>
   </div>
 
   <!-- Shared hint line — all roles see a line (blank for common) -->
@@ -437,8 +418,10 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
     <p id="rv-hint-thai" style="margin-top:4px;font-size:0.82rem;opacity:.45;line-height:1.5;"></p>
   </div>
 
-  <button class="btn btn-primary" id="btn-ready" onclick="doReady()">Ready</button>
-  <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:0.9rem;">❓ Don't know this word</button>
+  <div id="rv-action-row" style="display:flex;gap:8px;">
+    <button class="btn btn-primary" id="btn-ready" onclick="doReady()" style="flex:1;">Ready</button>
+    <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;flex:1;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:0.85rem;">❓ Don't know</button>
+  </div>
   <button class="btn" id="btn-reroll" onclick="doReroll()" style="display:none;background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.9rem;">🎲 New Word</button>
 
   <!-- Example questions (reveal screen) -->
