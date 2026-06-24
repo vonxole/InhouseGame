@@ -194,6 +194,12 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
     </div>
   </div>
 
+  <!-- Room list -->
+  <div id="room-list-wrap" style="width:100%;max-width:400px;display:none;flex-direction:column;gap:8px;">
+    <p class="muted" style="font-size:0.82rem;text-align:center;margin-bottom:2px;">Open rooms</p>
+    <div id="room-list"></div>
+  </div>
+
   <details style="width:100%;max-width:400px;">
     <summary style="cursor:pointer;color:var(--muted);font-size:0.88rem;text-align:center;list-style:none;user-select:none;">📖 How to play</summary>
     <div style="margin-top:14px;display:flex;flex-direction:column;gap:10px;">
@@ -336,6 +342,14 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
     </div>
   </div>
 
+  <!-- Password (host only) -->
+  <div class="card" id="l-password-wrap" style="display:none;">
+    <label>Room password <span class="muted" style="font-size:0.8rem;">(optional)</span></label>
+    <input id="inp-room-password" type="text" placeholder="Leave blank = open room" maxlength="20" autocomplete="off"
+      oninput="socket.emit('set_password', { password: this.value })"
+      style="margin-top:6px;">
+  </div>
+
   <!-- Non-host: see current settings -->
   <div class="card" id="l-settings-view" style="display:none;">
     <div style="display:flex;justify-content:space-between;align-items:center;">
@@ -378,6 +392,7 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   <div id="rv-hint" style="display:none;" class="card">
     <label>Hint (for answering questions)</label>
     <p id="rv-hint-text" style="margin-top:6px;color:var(--muted);font-style:italic;line-height:1.5;"></p>
+    <p id="rv-hint-thai" style="margin-top:4px;font-size:0.82rem;opacity:.45;line-height:1.5;"></p>
   </div>
 
   <button class="btn btn-primary" id="btn-ready" onclick="doReady()">Ready</button>
@@ -606,6 +621,46 @@ document.getElementById('inp-code').addEventListener('keydown', e => { if(e.key=
 
 socket.on('room_created', () => {});
 
+socket.on('rooms_list', (list) => {
+  const wrap = document.getElementById('room-list-wrap');
+  const el   = document.getElementById('room-list');
+  if (!wrap || !el) return;
+  if (list.length === 0) { wrap.style.display = 'none'; return; }
+  wrap.style.display = 'flex';
+  el.innerHTML = list.map(r => `
+    <div onclick="doJoinRoom('${r.code}', ${r.hasPassword})" style="
+      display:flex;justify-content:space-between;align-items:center;
+      padding:10px 14px;border-radius:12px;border:1.5px solid var(--border);
+      cursor:pointer;background:var(--card);transition:border-color .15s;
+    " onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+      <div>
+        <span style="font-weight:600;letter-spacing:.05em;">${r.code}</span>
+        <span class="muted" style="font-size:0.85rem;margin-left:8px;">by ${r.host}</span>
+      </div>
+      <span class="muted" style="font-size:0.82rem;">${r.hasPassword ? '🔒' : ''} 👥 ${r.count}</span>
+    </div>
+  `).join('');
+});
+
+function doJoinRoom(code, hasPassword) {
+  let name = document.getElementById('inp-name').value.trim();
+  if (!name) {
+    name = prompt('Your name:');
+    if (!name || !name.trim()) return;
+    name = name.trim();
+    document.getElementById('inp-name').value = name;
+  }
+  if (hasPassword) {
+    const pw = prompt('🔒 Room password:');
+    if (pw === null) return;
+    myName = name;
+    socket.emit('join_room', { code, name, password: pw });
+  } else {
+    myName = name;
+    socket.emit('join_room', { code, name, password: '' });
+  }
+}
+
 // ── Room Update ───────────────────────────────────────────────────────────────
 socket.on('room_update', (room) => {
   // persist session for rejoin-on-reload
@@ -669,10 +724,11 @@ function renderLobby(room) {
   }).join('');
 
   if (isHost) {
-    document.getElementById('l-filters').style.display     = 'flex';
+    document.getElementById('l-filters').style.display       = 'flex';
+    document.getElementById('l-password-wrap').style.display = 'block';
     document.getElementById('l-settings-view').style.display = 'none';
-    document.getElementById('l-host-ctrl').style.display   = 'flex';
-    document.getElementById('l-wait-msg').style.display    = 'none';
+    document.getElementById('l-host-ctrl').style.display     = 'flex';
+    document.getElementById('l-wait-msg').style.display      = 'none';
     const btn = document.getElementById('btn-start');
     const need = 3 - room.players.length;
     btn.disabled    = need > 0;
@@ -682,10 +738,11 @@ function renderLobby(room) {
     syncSlider('sl-play',    'play-val',    room.playTime    || 180);
     syncSlider('sl-discuss', 'discuss-val', room.discussTime || 60);
   } else {
-    document.getElementById('l-filters').style.display     = 'none';
+    document.getElementById('l-filters').style.display       = 'none';
+    document.getElementById('l-password-wrap').style.display = 'none';
     document.getElementById('l-settings-view').style.display = 'block';
-    document.getElementById('l-host-ctrl').style.display   = 'none';
-    document.getElementById('l-wait-msg').style.display    = 'block';
+    document.getElementById('l-host-ctrl').style.display     = 'none';
+    document.getElementById('l-wait-msg').style.display      = 'block';
     const lvls = room.filterLevels || [];
     const lvlChips = lvls.length
       ? lvls.map(l => levelChip(l)).join('')
@@ -764,14 +821,17 @@ function renderReveal(room) {
     // Only master sees category/level
     const catEl = document.getElementById('rv-cat');
     const lvlEl = document.getElementById('rv-lvl');
-    if (myRole === 'master') {
+    if (myRole === 'master' || myRole === 'insider') {
       catEl.textContent = room.wordCategory || '';
-      lvlEl.innerHTML   = levelChip(room.wordLevel);
+      lvlEl.innerHTML   = myRole === 'master' ? levelChip(room.wordLevel) : '';
     } else {
       catEl.textContent = '';
       lvlEl.innerHTML   = '';
     }
-    if (myRole === 'master') document.getElementById('rv-hint-text').textContent = room.myHint || '';
+    if (myRole === 'master') {
+      document.getElementById('rv-hint-text').textContent = room.myHint || '';
+      document.getElementById('rv-hint-thai').textContent = room.myHintThai || '';
+    }
   }
 
   document.getElementById('btn-reroll').style.display          = 'none';
@@ -846,9 +906,8 @@ function renderPlaying(room) {
     common:  `<div style="display:flex;gap:12px;align-items:center;"><span style="font-size:1.6rem;">🙋</span><div><div style="font-weight:700;">Common</div><div class="muted" style="font-size:0.85rem;">Ask yes/no questions, then find the Insider</div></div></div>`,
   };
   document.getElementById('pl-role-card').innerHTML = roleInfo[myRole] || '';
-  const timeUp = (room.timeLeft ?? 1) <= 0;
-  document.getElementById('pl-master-btn').style.display  = myRole === 'master' && !timeUp ? 'block' : 'none';
-  document.getElementById('pl-timeup-btn').style.display  = myRole === 'master' && timeUp  ? 'flex'  : 'none';
+  document.getElementById('pl-master-btn').style.display  = 'none';
+  document.getElementById('pl-timeup-btn').style.display  = myRole === 'master' ? 'flex' : 'none';
 
   updateTimer(room.timeLeft ?? timerTotal);
 }

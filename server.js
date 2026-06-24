@@ -55,6 +55,7 @@ function createRoom(hostId, hostName) {
     voteTimer: null,
     voteTimeLeft: 0,
     scores: {},         // playerId → { name, score }
+    password: '',       // '' = no password
   };
   return code;
 }
@@ -118,7 +119,8 @@ function broadcastRoom(room) {
   room.players.forEach(p => {
     const role   = room.roles[p.id] || null;
     const myWord = (role === 'master' || role === 'insider') ? room.word     : null;
-    const myHint = role === 'master'                         ? room.hint     : null;
+    const myHint     = role === 'master' ? room.hint     : null;
+    const myHintThai = role === 'master' ? room.hintThai : null;
     const myThai = (role === 'master' || role === 'insider') ? room.wordThai : null;
     const iAmReady      = room.revealsDone ? room.revealsDone.includes(p.id) : false;
     const amHost        = p.isHost === true;
@@ -134,8 +136,21 @@ function broadcastRoom(room) {
     const canOpenRole   = room.state === 'suspense' && (isMaster || iAmAccused);
     const canConfirm    = room.state === 'verdict'  && isMaster;
     const s = io.sockets.sockets.get(p.id);
-    if (s) s.emit('room_update', { ...base, role, myWord, myHint, myThai, iAmReady, amHost, isMaster, masterIsReady, myVote, canReveal, iAmAccused, canOpenRole, canConfirm });
+    if (s) s.emit('room_update', { ...base, role, myWord, myHint, myHintThai, myThai, iAmReady, amHost, isMaster, masterIsReady, myVote, canReveal, iAmAccused, canOpenRole, canConfirm });
   });
+  broadcastRoomList();
+}
+
+function broadcastRoomList() {
+  const list = Object.values(rooms)
+    .filter(r => r.state === 'lobby')
+    .map(r => ({
+      code: r.code,
+      host: r.players.find(p => p.id === r.hostId)?.name || '?',
+      count: r.players.length,
+      hasPassword: !!r.password,
+    }));
+  io.emit('rooms_list', list);
 }
 
 function startTimer(room) {
@@ -195,6 +210,18 @@ function endGame(room) {
 
 // ── Socket Events ─────────────────────────────────────────────────────────────
 io.on('connection', (socket) => {
+  // Send current lobby list immediately on connect
+  const initList = Object.values(rooms)
+    .filter(r => r.state === 'lobby')
+    .map(r => ({ code: r.code, host: r.players.find(p => p.id === r.hostId)?.name || '?', count: r.players.length }));
+  socket.emit('rooms_list', initList);
+
+  socket.on('list_rooms', () => {
+    const list = Object.values(rooms)
+      .filter(r => r.state === 'lobby')
+      .map(r => ({ code: r.code, host: r.players.find(p => p.id === r.hostId)?.name || '?', count: r.players.length }));
+    socket.emit('rooms_list', list);
+  });
 
   socket.on('create_room', ({ name }) => {
     const code = createRoom(socket.id, name);
@@ -203,14 +230,22 @@ io.on('connection', (socket) => {
     broadcastRoom(rooms[code]);
   });
 
-  socket.on('join_room', ({ code, name }) => {
+  socket.on('join_room', ({ code, name, password }) => {
     const room = rooms[code.toUpperCase()];
     if (!room) return socket.emit('error', 'Room not found');
     if (room.state !== 'lobby') return socket.emit('error', 'Game already started');
+    if (room.password && room.password !== (password || '')) return socket.emit('error', 'Wrong password');
     if (room.players.some(p => p.id === socket.id)) return;
     room.players.push({ id: socket.id, name, isHost: false });
     socket.join(room.code);
     broadcastRoom(room);
+  });
+
+  socket.on('set_password', ({ password }) => {
+    const room = getRoom(socket.id);
+    if (!room || room.hostId !== socket.id || room.state !== 'lobby') return;
+    room.password = (password || '').trim();
+    broadcastRoomList();
   });
 
   socket.on('set_master', ({ playerId }) => {
@@ -253,7 +288,8 @@ io.on('connection', (socket) => {
     room.wordThai = picked.thai;
     room.wordCategory = picked.category;
     room.wordLevel = picked.level;
-    room.hint = picked.hint;
+    room.hint     = picked.hint;
+    room.hintThai = picked.hintThai || null;
     room.state = 'reveal';
     room.revealsDone = [];
     assignRoles(room);
@@ -292,6 +328,7 @@ io.on('connection', (socket) => {
     const w = pickWord(room.filterCategories, room.filterLevels);
     room.word         = w.word;
     room.hint         = w.hint;
+    room.hintThai     = w.hintThai || null;
     room.wordThai     = w.thai;
     room.wordCategory = w.category;
     room.wordLevel    = w.level;
@@ -307,6 +344,7 @@ io.on('connection', (socket) => {
     const w = pickWord(room.filterCategories, room.filterLevels);
     room.word         = w.word;
     room.hint         = w.hint;
+    room.hintThai     = w.hintThai || null;
     room.wordThai     = w.thai;
     room.wordCategory = w.category;
     room.wordLevel    = w.level;
