@@ -545,6 +545,29 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
 </div><!-- #app -->
 <div id="toast"></div>
 
+<!-- Confirm modal -->
+<div id="confirm-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:999;align-items:center;justify-content:center;">
+  <div class="card" style="width:min(320px,90vw);display:flex;flex-direction:column;gap:14px;">
+    <p id="confirm-msg" style="font-size:0.95rem;line-height:1.5;text-align:center;"></p>
+    <div style="display:flex;gap:8px;">
+      <button class="btn" style="flex:1;background:transparent;border:1.5px solid var(--border);color:var(--muted);" onclick="resolveConfirm(false)">Cancel</button>
+      <button id="confirm-ok" class="btn btn-primary" style="flex:1;" onclick="resolveConfirm(true)">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<!-- Password modal -->
+<div id="pw-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:999;align-items:center;justify-content:center;">
+  <div class="card" style="width:min(340px,90vw);display:flex;flex-direction:column;gap:12px;">
+    <p style="font-weight:600;">🔒 Room password</p>
+    <input id="pw-input" type="text" placeholder="Enter password" autocomplete="off">
+    <div style="display:flex;gap:8px;">
+      <button class="btn" style="flex:1;background:transparent;border:1.5px solid var(--border);color:var(--muted);" onclick="closePwModal()">Cancel</button>
+      <button class="btn btn-primary" style="flex:1;" onclick="submitPwModal()">Join</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const socket = io();
 let myName = '';
@@ -646,20 +669,16 @@ socket.on('rooms_list', (list) => {
 });
 
 function doJoinRoom(code, hasPassword) {
-  let name = document.getElementById('inp-name').value.trim();
+  const name = document.getElementById('inp-name').value.trim();
   if (!name) {
-    name = prompt('Your name:');
-    if (!name || !name.trim()) return;
-    name = name.trim();
-    document.getElementById('inp-name').value = name;
+    toast('Enter your name first ☝️');
+    document.getElementById('inp-name').focus();
+    return;
   }
+  myName = name;
   if (hasPassword) {
-    const pw = prompt('🔒 Room password:');
-    if (pw === null) return;
-    myName = name;
-    socket.emit('join_room', { code, name, password: pw });
+    showPasswordModal(code, name);
   } else {
-    myName = name;
     socket.emit('join_room', { code, name, password: '' });
   }
 }
@@ -915,10 +934,10 @@ function doReroll() {
   socket.emit('reroll_word');
 }
 
-function doInsiderUnknown() {
-  if (confirm("Don't know the word? The Master will get a new word for everyone.")) {
-    socket.emit('insider_unknown');
-  }
+async function doInsiderUnknown() {
+  const ok = await showConfirm("Don't know this word?\nMaster will pick a new one.", "New Word");
+  if (!ok) return;
+  socket.emit('insider_unknown');
 }
 
 // ── Playing ───────────────────────────────────────────────────────────────────
@@ -1175,8 +1194,9 @@ function renderVerdict(room) {
 
 function doRevealNow() { socket.emit('trigger_reveal_now'); }
 function doConfirmResult() { socket.emit('confirm_result'); }
-function doLeaveRoom() {
-  if (!confirm('Leave this room?')) return;
+async function doLeaveRoom() {
+  const ok = await showConfirm('Leave this room?', 'Leave');
+  if (!ok) return;
   socket.emit('leave_room');
   clearSession();
   myName = ''; myRole = null; myWord = null; myThai = null; isHost = false;
@@ -1265,6 +1285,37 @@ function doPlayAgain(){ socket.emit('play_again'); }
 function doLeave()    { clearSession(); location.reload(); }
 
 socket.on('error', msg => toast('⚠️ ' + msg));
+
+// ── Confirm modal (replaces native confirm() which is blocked on mobile) ──────
+let _confirmResolve = null;
+function showConfirm(msg, okLabel = 'Confirm') {
+  document.getElementById('confirm-msg').textContent = msg;
+  document.getElementById('confirm-ok').textContent = okLabel;
+  document.getElementById('confirm-modal').style.display = 'flex';
+  return new Promise(res => { _confirmResolve = res; });
+}
+function resolveConfirm(val) {
+  document.getElementById('confirm-modal').style.display = 'none';
+  if (_confirmResolve) { _confirmResolve(val); _confirmResolve = null; }
+}
+
+let _pwModalCode = '', _pwModalName = '';
+function showPasswordModal(code, name) {
+  _pwModalCode = code; _pwModalName = name;
+  document.getElementById('pw-input').value = '';
+  const m = document.getElementById('pw-modal');
+  m.style.display = 'flex';
+  setTimeout(() => document.getElementById('pw-input').focus(), 50);
+}
+function closePwModal() {
+  document.getElementById('pw-modal').style.display = 'none';
+}
+function submitPwModal() {
+  const pw = document.getElementById('pw-input').value.trim();
+  closePwModal();
+  socket.emit('join_room', { code: _pwModalCode, name: _pwModalName, password: pw });
+}
+document.getElementById('pw-input')?.addEventListener('keydown', e => { if (e.key === 'Enter') submitPwModal(); });
 
 socket.on('player_left', ({ name }) => toast(`👋 ${name} left the room`));
 
