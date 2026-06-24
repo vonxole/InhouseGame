@@ -467,8 +467,8 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   </div>
 
   <div id="rv-action-row" style="display:flex;gap:8px;align-items:stretch;">
-    <button class="btn btn-primary" id="btn-ready" onclick="doReady()" style="flex:1;">Ready</button>
-    <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;flex:0 0 auto;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:0.78rem;padding:0 14px;white-space:nowrap;">❓ Don't know</button>
+    <button class="btn btn-primary" id="btn-ready" onclick="doReady()" style="flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Ready</button>
+    <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;flex:0 0 auto;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:0.78rem;padding:0 12px;white-space:nowrap;">❓ Don't know</button>
   </div>
   <div class="center" style="margin-top:8px;">
     <p class="muted" style="font-size:0.82rem;margin-bottom:4px;" id="rv-wait-msg"></p>
