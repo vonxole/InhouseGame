@@ -178,7 +178,7 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   margin-bottom: 6px; text-align: center;
 }
 .eq-crawl-wrap {
-  height: 200px;
+  height: 240px;
   overflow: hidden;
   perspective: 500px;
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
@@ -193,7 +193,7 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   to   { transform: rotateX(12deg) translateY(-50%); }
 }
 .eq-crawl .eq-item {
-  font-size: 1.45rem; color: var(--muted);
+  font-size: 1.7rem; color: var(--muted);
   text-align: center; line-height: 2.2;
   font-style: italic; padding: 0;
 }
@@ -1023,6 +1023,14 @@ const EQ_GENERATORS = [
   () => _pick(['Do most people own one?', 'Is it rare or expensive?', 'Can a child own it?']),
   // Reality
   () => _pick(['Does it exist in real life?', 'Is it a real thing, not fictional?', 'Can you actually see it in the real world?']),
+  // Office / school
+  () => _pick(['Can you find it on a desk?', 'Is it used in an office?', 'Do students use it at school?', 'Is it stationery?']),
+  // Writing tools
+  () => _pick(['Can you write with it?', 'Does it need ink or lead?', 'Is it used for drawing or writing?']),
+  // Electronic
+  () => _pick(['Does it have a screen?', 'Is it plugged into a computer?', 'Does it connect with a cable or wirelessly?']),
+  // Paper
+  () => _pick(['Is it made of paper?', 'Does it hold or organise paper?', 'Is it used for storing documents?']),
 ];
 
 function renderExampleQ(boxId) {
