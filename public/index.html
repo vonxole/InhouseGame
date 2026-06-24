@@ -214,6 +214,10 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
         <div class="muted">Don't know the word. Ask yes/no questions to guess it before time runs out.<br><span style="font-size:0.83rem;">ไม่รู้คำ ถามคำถามใช่/ไม่ใช่ เพื่อทายให้ถูกก่อนหมดเวลา</span></div>
       </div>
       <div>
+        <div style="font-weight:700;margin-bottom:4px;">📋 Pre-game</div>
+        <div class="muted">Master sees the word first — re-roll if needed, then tap Ready. Only after Master is ready can others tap Ready.<br><span style="font-size:0.83rem;">Master เห็นคำก่อน สุ่มใหม่ได้ถ้าต้องการ แล้วกด Ready ก่อน คนอื่นถึงจะกด Ready ได้</span></div>
+      </div>
+      <div>
         <div style="font-weight:700;margin-bottom:4px;">🗳️ Voting / โหวต</div>
         <div class="muted">Once the word is guessed, everyone votes for who they think is the Insider. Master reveals the result.<br><span style="font-size:0.83rem;">เมื่อทายคำถูก ทุกคนโหวตว่าใครคือ Insider แล้ว Master เฉลย</span></div>
       </div>
@@ -734,7 +738,7 @@ function renderReveal(room) {
   document.getElementById('btn-reroll-inline').style.display = room.isMaster ? 'block' : 'none';
 
   const iAmReady   = room.iAmReady;
-  const lockedOut  = myRole === 'insider' && !room.masterIsReady;
+  const lockedOut  = (myRole === 'insider' || myRole === 'common') && !room.masterIsReady;
   const btn = document.getElementById('btn-ready');
   if (iAmReady) {
     btn.textContent = 'Cancel ✕';
