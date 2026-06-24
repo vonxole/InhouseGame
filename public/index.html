@@ -192,7 +192,44 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
       <button class="btn btn-outline" onclick="doJoin()">Join</button>
     </div>
   </div>
-  <p class="muted center" style="font-size:0.78rem;">Everyone must be on the same WiFi</p>
+  <p class="muted center" style="font-size:0.78rem;">Everyone must be on the same WiFi or use the shared link</p>
+
+  <details style="width:100%;max-width:400px;">
+    <summary style="cursor:pointer;color:var(--muted);font-size:0.88rem;text-align:center;list-style:none;user-select:none;">📖 How to play</summary>
+    <div class="card" style="margin-top:12px;display:flex;flex-direction:column;gap:14px;font-size:0.9rem;line-height:1.6;">
+      <div>
+        <div style="font-weight:700;margin-bottom:4px;">🎭 Roles / บทบาท</div>
+        <div class="muted">Each round: one <strong>Master</strong>, one <strong>Insider</strong>, everyone else is <strong>Common</strong>.<br><span style="font-size:0.83rem;">แต่ละรอบจะมี Master 1 คน, Insider 1 คน, ที่เหลือเป็น Common</span></div>
+      </div>
+      <div>
+        <div style="font-weight:700;margin-bottom:4px;">👑 Master</div>
+        <div class="muted">Knows the secret word. Answer everyone's yes/no questions out loud. Does not vote.<br><span style="font-size:0.83rem;">รู้คำศัพท์ ตอบคำถามใช่/ไม่ใช่ ไม่ต้องโหวต</span></div>
+      </div>
+      <div>
+        <div style="font-weight:700;margin-bottom:4px;">🕵️ Insider</div>
+        <div class="muted">Knows the secret word too. Pretend to be Common — secretly guide everyone to the answer without getting caught.<br><span style="font-size:0.83rem;">รู้คำศัพท์เหมือนกัน แกล้งทำเป็น Common แอบช่วยนำคนอื่นไปถูกคำโดยไม่โดนจับได้</span></div>
+      </div>
+      <div>
+        <div style="font-weight:700;margin-bottom:4px;">🙋 Common</div>
+        <div class="muted">Don't know the word. Ask yes/no questions to guess it before time runs out.<br><span style="font-size:0.83rem;">ไม่รู้คำ ถามคำถามใช่/ไม่ใช่ เพื่อทายให้ถูกก่อนหมดเวลา</span></div>
+      </div>
+      <div>
+        <div style="font-weight:700;margin-bottom:4px;">🗳️ Voting / โหวต</div>
+        <div class="muted">Once the word is guessed, everyone votes for who they think is the Insider. Master reveals the result.<br><span style="font-size:0.83rem;">เมื่อทายคำถูก ทุกคนโหวตว่าใครคือ Insider แล้ว Master เฉลย</span></div>
+      </div>
+      <div style="border-top:1px solid var(--border);padding-top:12px;">
+        <div style="font-weight:700;margin-bottom:4px;">🏆 Scoring / คะแนน</div>
+        <div class="muted">
+          Insider caught → Master & Common +1 each<br>
+          <span style="font-size:0.83rem;">จับ Insider ได้ → Master และ Common ได้คนละ +1</span><br><br>
+          Insider escapes → Insider +2<br>
+          <span style="font-size:0.83rem;">Insider หนีรอด → Insider ได้ +2</span><br><br>
+          Word not guessed → nobody scores<br>
+          <span style="font-size:0.83rem;">ทายคำไม่ถูก → ไม่มีใครได้คะแนน</span>
+        </div>
+      </div>
+    </div>
+  </details>
 </div>
 
 <!-- LOBBY ────────────────────────────────────────────────────────────── -->
