@@ -378,10 +378,11 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
 
   <div id="rv-card"></div>
 
-  <div id="rv-word" style="display:none;" class="word-box">
-    <div class="wlabel">Secret Word</div>
-    <div class="wword" id="rv-word-text"></div>
-    <div id="rv-word-thai" style="font-size:1.1rem;opacity:.8;margin-bottom:6px;"></div>
+  <!-- Shared word box — all roles see this box, content differs -->
+  <div id="rv-word" class="word-box" style="background:var(--card);border:1.5px solid var(--border);">
+    <div class="wlabel" id="rv-word-label">Secret Word</div>
+    <div class="wword" id="rv-word-text" style="font-size:1.4rem;font-weight:600;"></div>
+    <div id="rv-word-thai" style="font-size:1rem;opacity:.7;margin-bottom:6px;"></div>
     <div class="wmeta">
       <span class="chip chip-cat" id="rv-cat"></span>
       <span id="rv-lvl"></span>
@@ -389,16 +390,15 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
     <button id="btn-reroll-inline" onclick="doReroll()" style="display:none;margin-top:12px;background:transparent;border:1.5px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.7);font-size:0.85rem;padding:6px 16px;border-radius:20px;cursor:pointer;">🎲 New Word</button>
   </div>
 
-  <!-- Master: full hint card -->
+  <!-- Shared hint line — all roles see a line (blank for common) -->
+  <p id="rv-insider-hint" style="font-size:0.8rem;opacity:.45;text-align:center;font-style:italic;padding:0 16px;line-height:1.5;min-height:1.2em;"></p>
+
+  <!-- Master: full hint card (only master) -->
   <div id="rv-hint" style="display:none;" class="card">
     <label>Hint (for answering questions)</label>
     <p id="rv-hint-text" style="margin-top:6px;color:var(--muted);font-style:italic;line-height:1.5;"></p>
     <p id="rv-hint-thai" style="margin-top:4px;font-size:0.82rem;opacity:.45;line-height:1.5;"></p>
   </div>
-  <!-- Insider: small hint only -->
-  <p id="rv-insider-hint" style="display:none;font-size:0.8rem;opacity:.45;text-align:center;font-style:italic;padding:0 16px;line-height:1.5;"></p>
-
-  <button class="btn" id="btn-peek" onclick="togglePeek()" style="display:none;background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.9rem;">👁 Peek at word</button>
 
   <button class="btn btn-primary" id="btn-ready" onclick="doReady()">Ready</button>
   <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:0.9rem;">❓ Don't know this word</button>
@@ -836,55 +836,44 @@ function renderReveal(room) {
   document.getElementById('rv-card').innerHTML =
     `<div class="role-card ${d.cls}"><div class="icon">${d.icon}</div><div class="name">${d.name}</div><div class="desc">${d.desc}</div></div>`;
 
-  const showWord = myRole === 'master' || myRole === 'insider';
-  const wordBox = document.getElementById('rv-word');
-  // Insider: hide word box until peek button tapped
-  wordBox.style.display = (showWord && myRole !== 'insider') ? 'block' : 'none';
+  // Word box — always shown for all roles, content differs
   const wordTextEl = document.getElementById('rv-word-text');
-  wordBox.style.background = '';
-  wordBox.style.border     = '';
-  wordBox.style.color      = '';
-  wordBox.style.padding    = '';
-  wordTextEl.style.fontSize = '';
-  wordTextEl.style.fontWeight = '';
-
-  // Peek button: only for insider, hidden once ready
-  const peekBtn = document.getElementById('btn-peek');
-  peekBtn.style.display = (myRole === 'insider' && !room.iAmReady) ? 'block' : 'none';
-  peekBtn.textContent = '👁 Peek at word';
-  document.getElementById('rv-hint').style.display = myRole === 'master' ? 'block' : 'none';
   const insiderHintEl = document.getElementById('rv-insider-hint');
-  if (showWord) {
-    document.getElementById('rv-word-text').textContent = room.myWord  || '';
-    // insider hides thai in word box (shown in hint line instead)
-    const thaiEl = document.getElementById('rv-word-thai');
-    thaiEl.textContent = (myRole !== 'insider' && room.myThai) ? `(${room.myThai})` : '';
-    const catEl = document.getElementById('rv-cat');
-    const lvlEl = document.getElementById('rv-lvl');
-    if (myRole === 'master' || myRole === 'insider') {
-      catEl.textContent = room.wordCategory || '';
-      lvlEl.innerHTML   = myRole === 'master' ? levelChip(room.wordLevel) : '';
-    } else {
-      catEl.textContent = '';
-      lvlEl.innerHTML   = '';
-    }
-    if (myRole === 'master') {
-      document.getElementById('rv-hint-text').textContent = room.myHint || '';
-      document.getElementById('rv-hint-thai').textContent = room.myHintThai || '';
-      insiderHintEl.style.display = 'none';
-    } else if (myRole === 'insider' && room.myHint) {
-      insiderHintEl.textContent = `${room.myHint}${room.myHintThai ? '  ·  ' + room.myHintThai : ''}`;
-      insiderHintEl.style.display = 'none'; // hidden until peek
-    } else {
-      insiderHintEl.style.display = 'none';
-    }
+
+  if (myRole === 'master' || myRole === 'insider') {
+    document.getElementById('rv-word-label').textContent = 'Secret Word';
+    wordTextEl.textContent = room.myWord || '';
+    wordTextEl.style.opacity = '1';
+    document.getElementById('rv-word-thai').textContent = room.myThai ? `(${room.myThai})` : '';
+    document.getElementById('rv-cat').textContent = room.wordCategory || '';
+    document.getElementById('rv-lvl').innerHTML = myRole === 'master' ? levelChip(room.wordLevel) : '';
+  } else {
+    // Common: same box layout but no real info
+    document.getElementById('rv-word-label').textContent = 'Secret Word';
+    wordTextEl.textContent = '???';
+    wordTextEl.style.opacity = '0.2';
+    document.getElementById('rv-word-thai').textContent = '';
+    document.getElementById('rv-cat').textContent = '';
+    document.getElementById('rv-lvl').innerHTML = '';
+  }
+
+  // Hint line — insider gets hint text, others get blank (keeps layout same height)
+  if (myRole === 'insider' && room.myHint) {
+    insiderHintEl.textContent = `${room.myHint}${room.myHintThai ? '  ·  ' + room.myHintThai : ''}`;
+  } else {
+    insiderHintEl.textContent = '';
+  }
+
+  // Master: full hint card
+  document.getElementById('rv-hint').style.display = myRole === 'master' ? 'block' : 'none';
+  if (myRole === 'master') {
+    document.getElementById('rv-hint-text').textContent = room.myHint || '';
+    document.getElementById('rv-hint-thai').textContent = room.myHintThai || '';
   }
 
   document.getElementById('btn-reroll').style.display          = 'none';
   document.getElementById('btn-reroll-inline').style.display   = room.isMaster ? 'block' : 'none';
   document.getElementById('btn-insider-unknown').style.display = (myRole === 'insider' && !room.iAmReady) ? 'block' : 'none';
-  // Hide peek btn once ready
-  if (room.iAmReady) document.getElementById('btn-peek').style.display = 'none';
 
   const iAmReady   = room.iAmReady;
   const lockedOut  = (myRole === 'insider' || myRole === 'common') && !room.masterIsReady;
@@ -934,15 +923,6 @@ function doReroll() {
   socket.emit('reroll_word');
 }
 
-function togglePeek() {
-  const wordBox = document.getElementById('rv-word');
-  const hintEl  = document.getElementById('rv-insider-hint');
-  const btn     = document.getElementById('btn-peek');
-  const visible = wordBox.style.display !== 'none';
-  wordBox.style.display = visible ? 'none' : 'block';
-  hintEl.style.display  = visible ? 'none' : 'block';
-  btn.textContent = visible ? '👁 Peek at word' : '🙈 Hide word';
-}
 
 function doInsiderUnknown() {
   socket.emit('insider_unknown');
