@@ -106,9 +106,9 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
 .role-card .icon { font-size: 4.5rem; line-height: 1; }
 .role-card .name { font-size: 1.8rem; font-weight: 900; }
 .role-card .desc { font-size: 0.92rem; line-height: 1.5; opacity: .85; max-width: 280px; }
-.role-master  { background: linear-gradient(135deg,#0f1f3d,#162d5e); border: 2px solid #3b5faa; }
-.role-insider { background: linear-gradient(135deg,#1a1230,#2d1f52); border: 2px solid #6d5aab; }
-.role-common  { background: linear-gradient(135deg,#0f1e1a,#172e28); border: 2px solid #3a7a68; }
+.role-master  { background: linear-gradient(135deg,#111827,#1e293b); border: 2px solid #334155; }
+.role-insider { background: linear-gradient(135deg,#111827,#1e293b); border: 2px solid #334155; }
+.role-common  { background: linear-gradient(135deg,#111827,#1e293b); border: 2px solid #334155; }
 
 /* Word box */
 .word-box {
@@ -124,7 +124,7 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   display: inline-block; border-radius: 99px;
   padding: 4px 12px; font-size: 0.75rem; font-weight: 700;
 }
-.chip-cat   { background: rgba(255,255,255,.18); color: #fff; }
+.chip-cat   { background: transparent; color: rgba(255,255,255,.45); border: 1px solid rgba(255,255,255,.18); font-weight: 500; }
 .chip-easy  { background: #064e3b; color: #6ee7b7; border: 1px solid #059669; }
 .chip-medium{ background: #451a03; color: #fcd34d; border: 1px solid #d97706; }
 .chip-hard  { background: #450a0a; color: #fca5a5; border: 1px solid #dc2626; }
@@ -445,15 +445,15 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   <div id="rv-card"></div>
 
   <!-- Shared word box — all roles see this box, content differs -->
-  <div id="rv-word" class="word-box" style="background:var(--card);border:1.5px solid var(--border);padding:12px 16px;">
+  <div id="rv-word" class="word-box" style="background:var(--card);border:1.5px solid var(--border);padding:12px 16px;position:relative;">
+    <button id="btn-reroll-inline" onclick="doReroll()" style="display:none;position:absolute;top:10px;right:10px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.6);font-size:0.75rem;padding:4px 10px;border-radius:20px;cursor:pointer;letter-spacing:.02em;">🎲 New</button>
     <div class="wlabel" id="rv-word-label">Secret Word</div>
-    <div class="wword" id="rv-word-text" style="font-size:1.3rem;font-weight:700;margin:4px 0 2px;"></div>
-    <div id="rv-word-thai" style="font-size:0.88rem;opacity:.65;margin-bottom:4px;"></div>
-    <div class="wmeta">
+    <div class="wword" id="rv-word-text" style="font-size:1.3rem;font-weight:700;margin:4px 0 1px;"></div>
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px;">
+      <span id="rv-word-thai" style="font-size:0.82rem;opacity:.5;"></span>
       <span class="chip chip-cat" id="rv-cat"></span>
       <span id="rv-lvl"></span>
     </div>
-    <button id="btn-reroll-inline" onclick="doReroll()" style="display:none;margin-top:10px;background:transparent;border:1.5px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.7);font-size:0.85rem;padding:5px 14px;border-radius:20px;cursor:pointer;">🎲 New Word</button>
   </div>
 
   <!-- Shared hint line — all roles see a line (blank for common) -->
@@ -467,8 +467,8 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   </div>
 
   <div id="rv-action-row" style="display:flex;gap:8px;align-items:stretch;">
-    <button class="btn btn-primary" id="btn-ready" onclick="doReady()" style="flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Ready</button>
-    <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;flex:0 0 auto;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:0.78rem;padding:0 12px;white-space:nowrap;">❓ Don't know</button>
+    <button class="btn btn-primary" id="btn-ready" onclick="doReady()" style="flex:1;min-width:0;">Ready</button>
+    <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;flex:0 0 52px;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:1.2rem;padding:0;white-space:nowrap;">🎲</button>
   </div>
   <div class="center" style="margin-top:8px;">
     <p class="muted" style="font-size:0.82rem;margin-bottom:4px;" id="rv-wait-msg"></p>
