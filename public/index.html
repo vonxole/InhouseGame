@@ -981,32 +981,60 @@ function doInsiderUnknown() {
 }
 
 // ── Example Questions ─────────────────────────────────────────────────────────
-const EQ_POOL = [
-  'Is it a living thing?',
-  'Is it a place?',
-  'Is it something you can carry?',
-  'Is it made of wood?',
-  'Is it made of metal?',
-  'Is it used every day?',
-  'Can you find it at work?',
-  'Can you find it at home?',
-  'Is it bigger than a phone?',
-  'Is it smaller than a car?',
-  'Does it make a sound?',
-  'Does it need electricity?',
-  'Can you eat or drink it?',
-  'Is it related to technology?',
-  'Do you use it with your hands?',
-  'Can you wear it?',
-  'Is it something you can buy at a store?',
-  'Is it related to travel?',
-  'Does it exist outdoors?',
-  'Is it something you do, not a thing?',
+const _pick = arr => arr[Math.floor(Math.random() * arr.length)];
+
+const EQ_GENERATORS = [
+  // Existence
+  () => _pick(['Is it a living thing?', 'Is it alive?', 'Does it grow?', 'Was it ever alive?']),
+  // Place
+  () => _pick(['Is it a place?', 'Is it somewhere people go?', 'Can you visit it?']),
+  // Material
+  () => `Is it made of ${_pick(['wood', 'metal', 'plastic', 'glass', 'fabric', 'paper', 'stone'])}?`,
+  // Size vs object
+  () => `Is it ${_pick(['bigger', 'smaller'])} than a ${_pick(['phone', 'car', 'book', 'chair', 'person', 'house'])}?`,
+  // Frequency
+  () => _pick(['Is it used every day?', 'Do most people use it often?', 'Is it something you need daily?']),
+  // Location
+  () => `Can you find it ${_pick(['at work', 'at home', 'in a store', 'outdoors', 'in a hospital', 'at school'])}?`,
+  // Portability
+  () => _pick(['Can one person carry it?', 'Can you hold it in one hand?', 'Is it easy to move?']),
+  // Senses
+  () => `Does it ${_pick(['make a sound', 'produce light', 'have a strong smell', 'have a colour', 'generate heat'])}?`,
+  // Power
+  () => _pick(['Does it need electricity?', 'Does it run on a battery?', 'Does it need fuel to work?']),
+  // Food
+  () => _pick(['Can you eat it?', 'Can you drink it?', 'Is it food or a drink?', 'Does it have a taste?']),
+  // Technology
+  () => _pick(['Is it related to technology?', 'Is it a kind of device?', 'Was it invented in the last 100 years?']),
+  // Body
+  () => _pick(['Do you use it with your hands?', 'Can you wear it?', 'Does it touch your body?']),
+  // Purchase
+  () => `Can you buy it ${_pick(['at a supermarket', 'online', 'at a pharmacy', 'at a department store'])}?`,
+  // Movement / transport
+  () => _pick(['Can it move on its own?', 'Is it used for transport?', 'Does it travel fast?']),
+  // Emotion
+  () => _pick(['Does it make you feel happy?', 'Can it change your mood?', 'Is it something people love?']),
+  // People / job
+  () => _pick(['Is it a type of person?', 'Is it related to a job?', 'Does someone use it at work?']),
+  // Indoor / outdoor
+  () => `Is it usually ${_pick(['indoors', 'outdoors', 'underground', 'in the water', 'in the sky'])}?`,
+  // Age / who uses it
+  () => _pick(['Is it used by children?', 'Is it for adults only?', 'Can anyone use it?', 'Is it for professionals?']),
+  // Global / cultural
+  () => _pick(['Can you find it in every country?', 'Is it popular in Thailand?', 'Is it common in offices?']),
+  // Senses 2
+  () => `Can you ${_pick(['see', 'hear', 'touch', 'smell'])} it easily?`,
+  // Abstract
+  () => _pick(['Is it an action, not a thing?', 'Is it something you do?', 'Is it a concept or idea?']),
+  // Ownership
+  () => _pick(['Do most people own one?', 'Is it rare or expensive?', 'Can a child own it?']),
+  // Reality
+  () => _pick(['Does it exist in real life?', 'Is it a real thing, not fictional?', 'Can you actually see it in the real world?']),
 ];
 
 function renderExampleQ(boxId) {
-  const shuffled = EQ_POOL.slice().sort(() => Math.random() - 0.5);
-  const picked   = shuffled.slice(0, 4);
+  const shuffled = EQ_GENERATORS.slice().sort(() => Math.random() - 0.5);
+  const picked   = shuffled.slice(0, 4).map(fn => fn());
   document.getElementById(boxId).innerHTML =
     `<div class="eq-title">💬 Example Questions</div>` +
     `<div class="eq-list">` +
