@@ -122,8 +122,8 @@ function broadcastRoom(room) {
   room.players.forEach(p => {
     const role   = room.roles[p.id] || null;
     const myWord = (role === 'master' || role === 'insider') ? room.word     : null;
-    const myHint     = role === 'master' ? room.hint     : null;
-    const myHintThai = role === 'master' ? room.hintThai : null;
+    const myHint     = (role === 'master' || role === 'insider') ? room.hint     : null;
+    const myHintThai = (role === 'master' || role === 'insider') ? room.hintThai : null;
     const myThai = (role === 'master' || role === 'insider') ? room.wordThai : null;
     const iAmReady      = room.revealsDone ? room.revealsDone.includes(p.id) : false;
     const amHost        = p.isHost === true;
@@ -526,14 +526,15 @@ io.on('connection', (socket) => {
   socket.on('leave_room', () => {
     const room = getRoom(socket.id);
     if (!room) return;
+    const leavingName = room.players.find(p => p.id === socket.id)?.name || '?';
     room.players = room.players.filter(p => p.id !== socket.id);
     delete playerRooms[socket.id];
     if (room.players.length === 0) { delete rooms[room.code]; return; }
-    // pass host if needed
     if (room.hostId === socket.id) {
       const next = room.players[0];
       room.hostId = next.id; next.isHost = true;
     }
+    io.to(room.code).emit('player_left', { name: leavingName });
     broadcastRoom(room);
   });
 
@@ -554,7 +555,10 @@ io.on('connection', (socket) => {
     if (!room) return;
     // mark disconnected but keep player in list so they can rejoin
     const player = room.players.find(p => p.id === socket.id);
-    if (player) player.disconnected = true;
+    if (player) {
+      player.disconnected = true;
+      if (room.state === 'lobby') io.to(room.code).emit('player_left', { name: player.name });
+    }
     // if all disconnected, clean up after delay
     if (room.players.every(p => p.disconnected)) {
       room._cleanupTimer = setTimeout(() => {

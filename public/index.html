@@ -389,11 +389,14 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
     <button id="btn-reroll-inline" onclick="doReroll()" style="display:none;margin-top:12px;background:transparent;border:1.5px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.7);font-size:0.85rem;padding:6px 16px;border-radius:20px;cursor:pointer;">🎲 New Word</button>
   </div>
 
+  <!-- Master: full hint card -->
   <div id="rv-hint" style="display:none;" class="card">
     <label>Hint (for answering questions)</label>
     <p id="rv-hint-text" style="margin-top:6px;color:var(--muted);font-style:italic;line-height:1.5;"></p>
     <p id="rv-hint-thai" style="margin-top:4px;font-size:0.82rem;opacity:.45;line-height:1.5;"></p>
   </div>
+  <!-- Insider: small hint only -->
+  <p id="rv-insider-hint" style="display:none;font-size:0.8rem;opacity:.45;text-align:center;font-style:italic;padding:0 16px;line-height:1.5;"></p>
 
   <button class="btn btn-primary" id="btn-ready" onclick="doReady()">Ready</button>
   <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:0.9rem;">❓ Don't know this word</button>
@@ -813,12 +816,32 @@ function renderReveal(room) {
     `<div class="role-card ${d.cls}"><div class="icon">${d.icon}</div><div class="name">${d.name}</div><div class="desc">${d.desc}</div></div>`;
 
   const showWord = myRole === 'master' || myRole === 'insider';
-  document.getElementById('rv-word').style.display = showWord ? 'block' : 'none';
+  const wordBox = document.getElementById('rv-word');
+  wordBox.style.display = showWord ? 'block' : 'none';
+  // Insider: tone down & shrink word box so it doesn't stand out vs Common's screen
+  const wordTextEl = document.getElementById('rv-word-text');
+  if (myRole === 'insider') {
+    wordBox.style.background = 'var(--card)';
+    wordBox.style.border     = '1.5px solid var(--border)';
+    wordBox.style.color      = 'var(--text)';
+    wordBox.style.padding    = '10px 16px';
+    wordTextEl.style.fontSize = '1.4rem';
+    wordTextEl.style.fontWeight = '600';
+  } else {
+    wordBox.style.background = '';
+    wordBox.style.border     = '';
+    wordBox.style.color      = '';
+    wordBox.style.padding    = '';
+    wordTextEl.style.fontSize = '';
+    wordTextEl.style.fontWeight = '';
+  }
   document.getElementById('rv-hint').style.display = myRole === 'master' ? 'block' : 'none';
+  const insiderHintEl = document.getElementById('rv-insider-hint');
   if (showWord) {
     document.getElementById('rv-word-text').textContent = room.myWord  || '';
-    document.getElementById('rv-word-thai').textContent = room.myThai  ? `(${room.myThai})` : '';
-    // Only master sees category/level
+    // insider hides thai in word box (shown in hint line instead)
+    const thaiEl = document.getElementById('rv-word-thai');
+    thaiEl.textContent = (myRole !== 'insider' && room.myThai) ? `(${room.myThai})` : '';
     const catEl = document.getElementById('rv-cat');
     const lvlEl = document.getElementById('rv-lvl');
     if (myRole === 'master' || myRole === 'insider') {
@@ -831,6 +854,12 @@ function renderReveal(room) {
     if (myRole === 'master') {
       document.getElementById('rv-hint-text').textContent = room.myHint || '';
       document.getElementById('rv-hint-thai').textContent = room.myHintThai || '';
+      insiderHintEl.style.display = 'none';
+    } else if (myRole === 'insider' && room.myHint) {
+      insiderHintEl.textContent = `${room.myHint}${room.myHintThai ? '  ·  ' + room.myHintThai : ''}`;
+      insiderHintEl.style.display = 'block';
+    } else {
+      insiderHintEl.style.display = 'none';
     }
   }
 
@@ -1236,6 +1265,11 @@ function doPlayAgain(){ socket.emit('play_again'); }
 function doLeave()    { clearSession(); location.reload(); }
 
 socket.on('error', msg => toast('⚠️ ' + msg));
+
+socket.on('player_left', ({ name }) => toast(`👋 ${name} left the room`));
+
+// Keep Render from sleeping
+setInterval(() => fetch('/api/version').catch(() => {}), 10 * 60 * 1000);
 
 fetch('/api/version').then(r => r.json()).then(({ startedAt }) => {
   const d = new Date(startedAt);
