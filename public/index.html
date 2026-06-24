@@ -330,8 +330,8 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   <!-- Master: time up — pick outcome -->
   <div id="pl-timeup-btn" style="display:none;flex-direction:column;gap:10px;">
     <p class="muted center" style="font-size:0.9rem;">⏰ Time's up — did they guess the word?</p>
-    <button class="btn btn-green" onclick="doWordGuessed()">✅ ทายได้</button>
-    <button class="btn" style="border:1.5px solid var(--red);color:var(--red);" onclick="doWordNotGuessed()">❌ ทายไม่ได้</button>
+    <button class="btn btn-green" onclick="doWordGuessed()">✅ Word Guessed!</button>
+    <button class="btn" style="border:1.5px solid var(--red);color:var(--red);" onclick="doWordNotGuessed()">❌ Word NOT Guessed</button>
   </div>
 </div>
 
@@ -1010,10 +1010,19 @@ function renderResult(room) {
   show('s-result');
   const caught   = room.winnerTeam === 'common';
   const noWinner = room.winnerTeam === 'none';
+  const insiderName = room.insiderName || '???';
+  const noWinnerTaunts = [
+    `ไม่มีใครได้แต้ม และ ${insiderName} ก็ไม่ได้ช่วยอะไรเลยนะ 🙄`,
+    `${insiderName} เป็น Insider แต่ทำให้ทุกคนแพ้ ขอบคุณมากเลย 👏`,
+    `${insiderName} หน้าที่คือช่วยให้ทายถูก แต่ดูเหมือนจะลืมไป 😶`,
+    `ทายไม่ได้เลย ${insiderName} คุณทำอะไรอยู่ 🤦`,
+  ];
+  const noWinnerTaunt = noWinnerTaunts[Math.floor(Math.random() * noWinnerTaunts.length)];
+
   document.getElementById('res-icon').textContent     = noWinner ? '⏰' : caught ? '🎉' : '🕵️';
-  document.getElementById('res-title').textContent    = noWinner ? 'No one wins!' : caught ? 'Insider Caught!' : 'Insider Wins!';
+  document.getElementById('res-title').textContent    = noWinner ? 'ไม่มีใครชนะ!' : caught ? 'Insider Caught!' : 'Insider Wins!';
   document.getElementById('res-subtitle').textContent = noWinner
-    ? 'Word was not guessed in time — everyone loses'
+    ? noWinnerTaunt
     : caught
     ? 'Common players successfully identified the Insider'
     : 'The Insider escaped — better luck next time!';

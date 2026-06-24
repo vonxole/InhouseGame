@@ -311,6 +311,7 @@ io.on('connection', (socket) => {
     const room = getRoom(socket.id);
     if (!room || room.state !== 'playing') return;
     if (room.roles[socket.id] !== 'master') return;
+    room.insiderId  = Object.entries(room.roles).find(([, r]) => r === 'insider')?.[0];
     room.winnerTeam = 'none';
     updateScores(room);
     room.state = 'result';
