@@ -242,6 +242,8 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
     <div id="room-list"></div>
   </div>
 
+  <button class="btn" onclick="document.getElementById('qg-modal').style.display='flex'" style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.88rem;width:100%;max-width:400px;">💬 Question Guide</button>
+
   <details style="width:100%;max-width:400px;">
     <summary style="cursor:pointer;color:var(--muted);font-size:0.88rem;text-align:center;list-style:none;user-select:none;">📖 How to play</summary>
     <div style="margin-top:14px;display:flex;flex-direction:column;gap:10px;">
@@ -427,7 +429,7 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   </div>
 
   <div id="l-host-ctrl" style="display:none;flex-direction:column;gap:8px;">
-    <p class="muted center" id="l-need-msg">Need at least 3 players to start</p>
+    <p class="muted center" id="l-need-msg">Need at least 4 players to start</p>
     <button id="btn-start" class="btn btn-primary" onclick="doStart()" disabled>Start Game</button>
   </div>
   <p id="l-wait-msg" class="muted center" style="display:none;">Waiting for host to start…</p>
@@ -632,6 +634,34 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   </div>
 </div>
 
+<!-- Question Guide modal -->
+<div id="qg-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999;align-items:flex-start;justify-content:center;overflow-y:auto;padding:24px 0;">
+  <div class="card" style="width:min(400px,92vw);display:flex;flex-direction:column;gap:0;margin:auto;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+      <p style="font-weight:700;font-size:1.05rem;">💬 How to Ask Questions</p>
+      <button onclick="document.getElementById('qg-modal').style.display='none'" style="background:none;border:none;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;">✕</button>
+    </div>
+
+    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">กฎพื้นฐาน</p>
+    <div style="background:rgba(124,58,237,.12);border-radius:10px;padding:12px 14px;margin-bottom:16px;display:flex;flex-direction:column;gap:6px;">
+      <p style="font-size:0.88rem;line-height:1.5;">• ถามเฉพาะ <strong>Yes / No</strong> questions เท่านั้น</p>
+      <p style="font-size:0.88rem;line-height:1.5;">• Master ตอบได้แค่ <strong>"Yes"</strong> / <strong>"No"</strong> / <strong>"I don't know"</strong></p>
+      <p style="font-size:0.88rem;line-height:1.5;">• ถ้าคำถามใกล้เฉลยเกินไป Master บอกว่า <strong>"Getting warm — rephrase it"</strong></p>
+    </div>
+
+    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">เริ่มต้นด้วยคำถามกว้างๆ</p>
+    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:16px;" id="qg-broad"></div>
+
+    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">แคบลงเรื่อยๆ</p>
+    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:16px;" id="qg-narrow"></div>
+
+    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">ถ้าใกล้ได้แล้ว</p>
+    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:20px;" id="qg-close"></div>
+
+    <button class="btn btn-primary" onclick="document.getElementById('qg-modal').style.display='none'">Got it!</button>
+  </div>
+</div>
+
 <!-- Password modal -->
 <div id="pw-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:999;align-items:center;justify-content:center;">
   <div class="card" style="width:min(340px,90vw);display:flex;flex-direction:column;gap:12px;">
@@ -828,7 +858,7 @@ function renderLobby(room) {
     document.getElementById('l-host-ctrl').style.display     = 'flex';
     document.getElementById('l-wait-msg').style.display      = 'none';
     const btn = document.getElementById('btn-start');
-    const need = 3 - room.players.length;
+    const need = 4 - room.players.length;
     btn.disabled    = need > 0;
     btn.textContent = need > 0 ? `Need ${need} more player(s)` : 'Start Game 🎮';
     document.getElementById('l-need-msg').style.display = need > 0 ? 'block' : 'none';
@@ -1475,6 +1505,44 @@ function submitPwModal() {
 document.getElementById('pw-input')?.addEventListener('keydown', e => { if (e.key === 'Enter') submitPwModal(); });
 
 socket.on('player_left', ({ name }) => toast(`👋 ${name} left the room`));
+
+// Question Guide content
+(function() {
+  function qRow(en, th) {
+    return `<div style="background:rgba(255,255,255,.04);border-radius:8px;padding:8px 12px;">
+      <span style="font-size:0.9rem;">${en}</span><br>
+      <span style="font-size:0.78rem;color:var(--muted);">${th}</span>
+    </div>`;
+  }
+  const broad = [
+    ['Is it a living thing?', 'เป็นสิ่งมีชีวิตไหม'],
+    ['Is it a place?', 'เป็นสถานที่ไหม'],
+    ['Is it something you can touch?', 'จับต้องได้ไหม'],
+    ['Does it exist in real life?', 'มีอยู่จริงในชีวิตจริงไหม'],
+    ['Is it related to technology?', 'เกี่ยวกับเทคโนโลยีไหม'],
+    ['Can you eat or drink it?', 'กินหรือดื่มได้ไหม'],
+  ];
+  const narrow = [
+    ['Is it bigger than a phone?', 'ใหญ่กว่ามือถือไหม'],
+    ['Can you find it at work?', 'เจอได้ในออฟฟิศไหม'],
+    ['Is it made of metal?', 'ทำจากโลหะไหม'],
+    ['Do people use it every day?', 'คนใช้ทุกวันไหม'],
+    ['Does it need electricity?', 'ต้องใช้ไฟฟ้าไหม'],
+    ['Can you buy it at a store?', 'ซื้อได้ที่ร้านไหม'],
+    ['Is it usually found indoors?', 'ปกติอยู่ในร่มไหม'],
+  ];
+  const close = [
+    ['Is it an animal?', 'เป็นสัตว์ไหม'],
+    ['Is it found in Asia?', 'อยู่ในเอเชียไหม'],
+    ['Is it used for communication?', 'ใช้สื่อสารไหม'],
+    ['Is it something you wear?', 'สวมใส่ได้ไหม'],
+    ['Is it a type of person?', 'เป็นประเภทของคนไหม'],
+    ['Is it related to a job?', 'เกี่ยวกับอาชีพไหม'],
+  ];
+  document.getElementById('qg-broad').innerHTML  = broad.map(([e,t])  => qRow(e,t)).join('');
+  document.getElementById('qg-narrow').innerHTML = narrow.map(([e,t]) => qRow(e,t)).join('');
+  document.getElementById('qg-close').innerHTML  = close.map(([e,t])  => qRow(e,t)).join('');
+})();
 
 // Keep Render from sleeping
 setInterval(() => fetch('/api/version').catch(() => {}), 10 * 60 * 1000);

@@ -303,7 +303,7 @@ io.on('connection', (socket) => {
   socket.on('start_game', () => {
     const room = getRoom(socket.id);
     if (!room || room.hostId !== socket.id) return;
-    if (room.players.length < 3) return socket.emit('error', 'Need at least 3 players');
+    if (room.players.length < 4) return socket.emit('error', 'Need at least 4 players');
     const picked = pickWord(room.filterCategories, room.filterLevels);
     room.word = picked.word;
     room.wordThai = picked.thai;
