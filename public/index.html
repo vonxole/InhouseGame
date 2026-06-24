@@ -169,6 +169,43 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
 /* Result */
 .result-icon  { font-size: 5rem; text-align: center; }
 .result-title { font-size: 1.7rem; font-weight: 900; text-align: center; }
+
+/* Example questions */
+.example-q-box {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+.example-q-box .eq-header {
+  display: flex; justify-content: space-between; align-items: center;
+  cursor: pointer; user-select: none;
+}
+.example-q-box .eq-title {
+  font-size: 0.8rem; font-weight: 600; opacity: .55; text-transform: uppercase; letter-spacing: .08em;
+}
+.example-q-box .eq-toggle {
+  font-size: 0.75rem; opacity: .4;
+}
+.example-q-box .eq-list {
+  display: none;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.example-q-box .eq-item {
+  font-size: 0.88rem;
+  color: var(--muted);
+  padding: 6px 10px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 8px;
+  line-height: 1.4;
+}
+.example-q-box .eq-item span {
+  color: var(--text);
+  font-weight: 500;
+}
 </style>
 </head>
 <body>
@@ -404,6 +441,11 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:0.9rem;">❓ Don't know this word</button>
   <button class="btn" id="btn-reroll" onclick="doReroll()" style="display:none;background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.9rem;">🎲 New Word</button>
 
+  <!-- Example questions (reveal screen) -->
+  <div id="rv-example-q" style="display:none;">
+    <div class="example-q-box" id="rv-eq-box"></div>
+  </div>
+
   <div class="center">
     <p class="muted" style="font-size:0.82rem;margin-bottom:6px;" id="rv-wait-msg"></p>
     <div class="ready-bar" id="rv-dots"></div>
@@ -437,6 +479,11 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
     <p class="muted center" style="font-size:0.9rem;">⏰ Time's up — did they guess the word?</p>
     <button class="btn btn-green" onclick="doWordGuessed()">✅ Word Guessed!</button>
     <button class="btn" style="border:1.5px solid var(--red);color:var(--red);" onclick="doWordNotGuessed()">❌ Word NOT Guessed</button>
+  </div>
+
+  <!-- Example questions (playing screen) -->
+  <div id="pl-example-q" style="display:none;">
+    <div class="example-q-box" id="pl-eq-box"></div>
   </div>
 </div>
 
@@ -901,6 +948,11 @@ function renderReveal(room) {
     document.getElementById('rv-wait-msg').textContent = '';
   }
   renderReadyDots(room.revealsDone?.length || 0, room.players.length);
+
+  // Example questions (not shown to master — they already know the word)
+  const showEQ = myRole !== 'master';
+  document.getElementById('rv-example-q').style.display = showEQ ? 'block' : 'none';
+  if (showEQ) renderExampleQ('rv-eq-box');
 }
 
 function renderReadyDots(done, total) {
@@ -928,6 +980,40 @@ function doInsiderUnknown() {
   socket.emit('insider_unknown');
 }
 
+// ── Example Questions ─────────────────────────────────────────────────────────
+const EQ_POOL = [
+  'Is it a living thing?',
+  'Is it a place?',
+  'Is it something you can carry?',
+  'Is it made of wood?',
+  'Is it made of metal?',
+  'Is it used every day?',
+  'Can you find it at work?',
+  'Can you find it at home?',
+  'Is it bigger than a phone?',
+  'Is it smaller than a car?',
+  'Does it make a sound?',
+  'Does it need electricity?',
+  'Can you eat or drink it?',
+  'Is it related to technology?',
+  'Do you use it with your hands?',
+  'Can you wear it?',
+  'Is it something you can buy at a store?',
+  'Is it related to travel?',
+  'Does it exist outdoors?',
+  'Is it something you do, not a thing?',
+];
+
+function renderExampleQ(boxId) {
+  const shuffled = EQ_POOL.slice().sort(() => Math.random() - 0.5);
+  const picked   = shuffled.slice(0, 4);
+  document.getElementById(boxId).innerHTML =
+    `<div class="eq-title">💬 Example Questions</div>` +
+    `<div class="eq-list">` +
+    picked.map(q => `<div class="eq-item"><span>${q}</span></div>`).join('') +
+    `</div>`;
+}
+
 // ── Playing ───────────────────────────────────────────────────────────────────
 function renderPlaying(room) {
   show('s-playing');
@@ -944,6 +1030,15 @@ function renderPlaying(room) {
   document.getElementById('pl-role-card').innerHTML = roleInfo[myRole] || '';
   document.getElementById('pl-master-btn').style.display  = 'none';
   document.getElementById('pl-timeup-btn').style.display  = myRole === 'master' ? 'flex' : 'none';
+
+  // Example questions — shown to common & insider, re-randomised each render
+  const plEQ = document.getElementById('pl-example-q');
+  if (myRole !== 'master') {
+    plEQ.style.display = 'block';
+    renderExampleQ('pl-eq-box');
+  } else {
+    plEQ.style.display = 'none';
+  }
 
   updateTimer(room.timeLeft ?? timerTotal);
 }
