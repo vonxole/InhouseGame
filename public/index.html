@@ -186,7 +186,7 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
 }
 .eq-crawl {
   transform-origin: 50% 100%;
-  animation: sw-crawl 12s linear infinite;
+  animation: sw-crawl 35s linear infinite;
 }
 @keyframes sw-crawl {
   from { transform: rotateX(22deg) translateY(0); }
@@ -1027,7 +1027,7 @@ const EQ_GENERATORS = [
 
 function renderExampleQ(boxId) {
   const shuffled = EQ_GENERATORS.slice().sort(() => Math.random() - 0.5);
-  const picked   = shuffled.slice(0, 6).map(fn => fn());
+  const picked   = shuffled.map(fn => fn()); // use all generators
   // Duplicate for seamless loop
   const items    = [...picked, ...picked].map(q => `<div class="eq-item">${q}</div>`).join('');
   document.getElementById(boxId).innerHTML =
