@@ -527,14 +527,14 @@ io.on('connection', (socket) => {
     const room = getRoom(socket.id);
     if (!room) return;
     const leavingName = room.players.find(p => p.id === socket.id)?.name || '?';
+    io.to(room.code).emit('player_left', { name: leavingName });
     room.players = room.players.filter(p => p.id !== socket.id);
-    delete playerRooms[socket.id];
+    socket.leave(room.code);
     if (room.players.length === 0) { delete rooms[room.code]; return; }
     if (room.hostId === socket.id) {
       const next = room.players[0];
       room.hostId = next.id; next.isHost = true;
     }
-    io.to(room.code).emit('player_left', { name: leavingName });
     broadcastRoom(room);
   });
 
@@ -566,7 +566,7 @@ io.on('connection', (socket) => {
           if (room.timer) clearInterval(room.timer);
           delete rooms[room.code];
         }
-      }, 5 * 60 * 1000); // 5 min
+      }, 30 * 60 * 1000); // 30 min
     }
     if (room.hostId === socket.id) {
       if (player) player.isHost = false;   // ← fix: clear old host flag
