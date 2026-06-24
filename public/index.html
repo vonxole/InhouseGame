@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Inhouse Insider</title>
+<script src="/socket.io/socket.io.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+:root {
+  --bg: #0f0f1a;
+  --card: #1a1a2e;
+  --accent: #7c3aed;
+  --accent2: #a855f7;
+  --green: #10b981;
+  --red: #ef4444;
+  --yellow: #f59e0b;
+  --text: #e2e8f0;
+  --muted: #64748b;
+  --border: #2d2d4e;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+}
+#app {
+  width: 100%;
+  max-width: 420px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px 32px;
+}
+.screen { display: none; flex-direction: column; gap: 16px; flex: 1; }
+.screen.active { display: flex; }
+
+/* Typography */
+h1 { font-size: 2.2rem; font-weight: 900; text-align: center; }
+h1 span { color: var(--accent2); }
+h2 { font-size: 1.25rem; font-weight: 700; }
+.muted { color: var(--muted); font-size: 0.88rem; }
+.center { text-align: center; }
+
+/* Card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+/* Buttons */
+.btn {
+  display: block; width: 100%; padding: 15px;
+  border: none; border-radius: 13px;
+  font-size: 1rem; font-weight: 700; cursor: pointer;
+  transition: transform .1s, opacity .15s;
+}
+.btn:active { transform: scale(0.97); }
+.btn:disabled { opacity: .35; cursor: not-allowed; transform: none; }
+.btn-primary  { background: var(--accent);  color: #fff; }
+.btn-green    { background: var(--green);   color: #fff; }
+.btn-outline  { background: transparent; border: 2px solid var(--border); color: var(--text); }
+
+/* Input */
+input {
+  width: 100%; padding: 13px 16px;
+  border-radius: 12px; border: 1.5px solid var(--border);
+  background: var(--card); color: var(--text); font-size: 1rem; outline: none;
+}
+input:focus { border-color: var(--accent2); }
+label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 6px; }
+
+/* Pills */
+.pill-group { display: flex; gap: 6px; flex-wrap: wrap; }
+.pill {
+  padding: 7px 14px; border-radius: 99px;
+  font-size: 0.82rem; font-weight: 600;
+  border: 1.5px solid var(--border); background: transparent; color: var(--muted); cursor: pointer;
+}
+.pill.active { border-color: var(--accent2); background: var(--accent); color: #fff; }
+
+/* Player list */
+.player-list { display: flex; flex-direction: column; gap: 8px; }
+.player-row {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--border); border-radius: 11px; padding: 10px 14px;
+}
+.avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--accent); display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 1rem; flex-shrink: 0;
+}
+.player-name { font-weight: 600; font-size: 0.95rem; }
+.host-tag { font-size: 0.7rem; color: var(--accent2); margin-top: 1px; }
+
+/* Role card */
+.role-card {
+  border-radius: 22px; padding: 32px 24px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.role-card .icon { font-size: 4.5rem; line-height: 1; }
+.role-card .name { font-size: 1.8rem; font-weight: 900; }
+.role-card .desc { font-size: 0.92rem; line-height: 1.5; opacity: .85; max-width: 280px; }
+.role-master  { background: linear-gradient(135deg,#0f2557,#1e3a8a); border: 2px solid #3b82f6; }
+.role-insider { background: linear-gradient(135deg,#2d0457,#6b21a8); border: 2px solid var(--accent2); }
+.role-common  { background: linear-gradient(135deg,#052e16,#14532d); border: 2px solid var(--green); }
+
+/* Word box */
+.word-box {
+  background: linear-gradient(135deg, var(--accent), #9333ea);
+  border-radius: 16px; padding: 20px; text-align: center;
+}
+.word-box .wlabel { font-size: 0.72rem; text-transform: uppercase; letter-spacing: .12em; opacity: .7; }
+.word-box .wword  { font-size: 2.4rem; font-weight: 900; margin: 6px 0 4px; }
+.word-box .wmeta  { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; }
+
+/* Chips */
+.chip {
+  display: inline-block; border-radius: 99px;
+  padding: 4px 12px; font-size: 0.75rem; font-weight: 700;
+}
+.chip-cat   { background: rgba(255,255,255,.18); color: #fff; }
+.chip-easy  { background: #064e3b; color: #6ee7b7; border: 1px solid #059669; }
+.chip-medium{ background: #451a03; color: #fcd34d; border: 1px solid #d97706; }
+.chip-hard  { background: #450a0a; color: #fca5a5; border: 1px solid #dc2626; }
+
+/* Timer */
+.timer-wrap { text-align: center; }
+.timer-big  { font-size: 4rem; font-weight: 900; line-height: 1; letter-spacing: -.02em; }
+.timer-big.warn  { color: var(--yellow); }
+.timer-big.crit  { color: var(--red); }
+.timer-bar-bg { background: var(--border); border-radius: 99px; height: 8px; overflow: hidden; margin-top: 10px; }
+.timer-bar    { height: 100%; border-radius: 99px; transition: width .95s linear, background .5s; }
+
+/* Code display */
+.code-big { font-size: 2.8rem; font-weight: 900; letter-spacing: .22em; color: var(--accent2); text-align: center; }
+
+/* Divider */
+.divider { height: 1px; background: var(--border); }
+
+/* Row */
+.row { display: flex; gap: 8px; }
+.row .btn, .row input { flex: 1; }
+.row .btn { width: auto; padding: 13px 20px; }
+
+/* Ready counter */
+.ready-bar { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin-top: 4px; }
+.ready-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--border); transition: background .3s;
+}
+.ready-dot.done { background: var(--green); }
+
+/* Toast */
+#toast {
+  position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%);
+  background: #1e293b; color: var(--text); border: 1px solid var(--border);
+  padding: 10px 20px; border-radius: 12px; font-size: 0.9rem;
+  opacity: 0; pointer-events: none; transition: opacity .3s;
+  max-width: 90vw; text-align: center; z-index: 999;
+}
+#toast.show { opacity: 1; }
+
+/* Result */
+.result-icon  { font-size: 5rem; text-align: center; }
+.result-title { font-size: 1.7rem; font-weight: 900; text-align: center; }
+</style>
+</head>
+<body>
+<div id="app">
+
+<!-- HOME ─────────────────────────────────────────────────────────────── -->
+<div id="s-home" class="screen active" style="justify-content:center;gap:24px;">
+  <div class="center" style="margin-bottom:4px;">
+    <div style="font-size:3rem;">🕵️</div>
+    <h1>Inhouse <span>Insider</span></h1>
+    <p class="muted" style="margin-top:6px;">Office English party game</p>
+  </div>
+  <div class="card" style="display:flex;flex-direction:column;gap:12px;">
+    <div>
+      <label>Your name</label>
+      <input id="inp-name" type="text" placeholder="Name" maxlength="16" autocomplete="off">
+    </div>
+    <button class="btn btn-primary" onclick="doCreate()">Create Room</button>
+    <div class="row">
+      <input id="inp-code" type="text" placeholder="Room code" maxlength="4" style="text-transform:uppercase;letter-spacing:.1em;">
+      <button class="btn btn-outline" onclick="doJoin()">Join</button>
+    </div>
+  </div>
+  <p class="muted center" style="font-size:0.78rem;">Everyone must be on the same WiFi</p>
+</div>
+
+<!-- LOBBY ────────────────────────────────────────────────────────────── -->
+<div id="s-lobby" class="screen" style="gap:16px;">
+  <div class="center">
+    <p class="muted" style="margin-bottom:4px;">Room Code</p>
+    <div class="code-big" id="l-code">----</div>
+    <p class="muted" style="margin-top:4px;font-size:0.78rem;">Share this with your friends</p>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-bottom:12px;">Players <span id="l-count" class="muted" style="font-size:0.9rem;"></span></h2>
+    <div class="player-list" id="l-players"></div>
+  </div>
+
+  <!-- Host: filters (multi-select) -->
+  <div class="card" id="l-filters" style="display:none;flex-direction:column;gap:14px;">
+    <div>
+      <label style="margin-bottom:8px;">📂 Category <span class="muted" style="font-weight:400;">(เลือกได้หลายอัน)</span></label>
+      <div class="pill-group" id="fg-cat">
+        <button class="pill" onclick="setFilter('category','General')">General</button>
+        <button class="pill" onclick="setFilter('category','Places')">Places</button>
+        <button class="pill" onclick="setFilter('category','Objects')">Objects</button>
+        <button class="pill" onclick="setFilter('category','Characters')">Characters</button>
+      </div>
+    </div>
+    <div>
+      <label style="margin-bottom:8px;">⚡ Difficulty <span class="muted" style="font-weight:400;">(เลือกได้หลายอัน)</span></label>
+      <div class="pill-group" id="fg-lvl">
+        <button class="pill" onclick="setFilter('level','easy')"   style="--pc:#6ee7b7;--bc:#059669;">Easy</button>
+        <button class="pill" onclick="setFilter('level','medium')" style="--pc:#fcd34d;--bc:#d97706;">Medium</button>
+        <button class="pill" onclick="setFilter('level','hard')"   style="--pc:#fca5a5;--bc:#dc2626;">Hard</button>
+      </div>
+    </div>
+    <p class="muted" style="font-size:0.78rem;">ไม่เลือก = สุ่มจากทั้งหมด</p>
+
+    <div style="border-top:1px solid var(--border);padding-top:14px;display:flex;flex-direction:column;gap:16px;">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <label>⏱ Play Time</label>
+          <span id="play-val" style="font-weight:700;color:var(--accent);font-size:1rem;"></span>
+        </div>
+        <input id="sl-play" type="range" min="1" max="10" step="1"
+          oninput="onSliderInput('play', this.value)"
+          onchange="setTimer('play', this.value * 60)"
+          style="width:100%;accent-color:var(--accent);">
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <label>💬 Discuss Time</label>
+          <span id="discuss-val" style="font-weight:700;color:var(--accent);font-size:1rem;"></span>
+        </div>
+        <input id="sl-discuss" type="range" min="1" max="10" step="1"
+          oninput="onSliderInput('discuss', this.value)"
+          onchange="setTimer('discuss', this.value * 60)"
+          style="width:100%;accent-color:var(--accent);">
+      </div>
+    </div>
+  </div>
+
+  <!-- Non-host: see current settings -->
+  <div class="card" id="l-settings-view" style="display:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <span class="muted" style="font-size:0.85rem;">Settings</span>
+      <div id="l-setting-chips" style="display:flex;gap:6px;"></div>
+    </div>
+  </div>
+
+  <!-- scoreboard (hidden until round 1 done) -->
+  <div id="l-scoreboard" style="display:none;">
+    <p class="muted" style="font-size:0.8rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">🏆 Scoreboard</p>
+    <div id="l-score-list" style="display:flex;flex-direction:column;gap:6px;"></div>
+  </div>
+
+  <div id="l-host-ctrl" style="display:none;flex-direction:column;gap:8px;">
+    <p class="muted center" id="l-need-msg">Need at least 3 players to start</p>
+    <button id="btn-start" class="btn btn-primary" onclick="doStart()" disabled>Start Game</button>
+  </div>
+  <p id="l-wait-msg" class="muted center" style="display:none;">Waiting for host to start…</p>
+  <button class="btn" style="opacity:0.5;font-size:0.85rem;" onclick="doLeaveRoom()">🚪 Leave Room</button>
+</div>
+
+<!-- REVEAL ───────────────────────────────────────────────────────────── -->
+<div id="s-reveal" class="screen" style="justify-content:center;gap:20px;">
+  <p class="muted center">Your secret role — don't show anyone!</p>
+
+  <div id="rv-card"></div>
+
+  <div id="rv-word" style="display:none;" class="word-box">
+    <div class="wlabel">Secret Word</div>
+    <div class="wword" id="rv-word-text"></div>
+    <div id="rv-word-thai" style="font-size:1.1rem;opacity:.8;margin-bottom:6px;"></div>
+    <div class="wmeta">
+      <span class="chip chip-cat" id="rv-cat"></span>
+      <span id="rv-lvl"></span>
+    </div>
+  </div>
+
+  <div id="rv-hint" style="display:none;" class="card">
+    <label>Hint (for answering questions)</label>
+    <p id="rv-hint-text" style="margin-top:6px;color:var(--muted);font-style:italic;line-height:1.5;"></p>
+  </div>
+
+  <button class="btn btn-primary" id="btn-ready" onclick="doReady()">Ready</button>
+  <button class="btn" id="btn-reroll" onclick="doReroll()" style="display:none;background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.9rem;">🎲 New Word</button>
+
+  <div class="center">
+    <p class="muted" style="font-size:0.82rem;margin-bottom:6px;" id="rv-wait-msg"></p>
+    <div class="ready-bar" id="rv-dots"></div>
+  </div>
+</div>
+
+<!-- PLAYING ──────────────────────────────────────────────────────────── -->
+<div id="s-playing" class="screen" style="justify-content:center;gap:20px;">
+  <!-- Category + level -->
+  <div class="center" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+    <span class="chip" style="background:var(--accent);color:#fff;font-size:0.85rem;" id="pl-cat"></span>
+    <span id="pl-lvl"></span>
+  </div>
+
+  <!-- Timer -->
+  <div class="timer-wrap">
+    <div class="timer-big" id="pl-timer">3:00</div>
+    <div class="timer-bar-bg"><div class="timer-bar" id="pl-bar" style="width:100%;background:var(--green);"></div></div>
+  </div>
+
+  <!-- Role reminder -->
+  <div class="card" id="pl-role-card"></div>
+
+  <!-- Master: word guessed button -->
+  <div id="pl-master-btn" style="display:none;">
+    <button class="btn btn-green" onclick="doWordGuessed()">✓ Word Guessed!</button>
+    <p class="muted center" style="margin-top:8px;font-size:0.82rem;">Tap when someone says the correct word</p>
+  </div>
+</div>
+
+<!-- VOTING (face-to-face) ────────────────────────────────────────────── -->
+<div id="s-voting" class="screen" style="justify-content:center;gap:16px;">
+  <div style="text-align:center;">
+    <div style="font-size:3rem;">🗳️</div>
+    <h2 style="margin:8px 0 4px;">Who is the Insider?</h2>
+    <p class="muted" style="font-size:0.85rem;">Category: <span id="vt-cat" style="color:var(--accent2);font-weight:700;"></span></p>
+  </div>
+
+  <!-- vote timer + progress -->
+  <div class="card" style="text-align:center;padding:12px 16px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <span class="muted" style="font-size:0.85rem;" id="vt-vote-count">0/0 voted</span>
+      <span id="vt-timer" style="font-size:0.85rem;color:var(--yellow);font-weight:700;"></span>
+    </div>
+    <div id="vt-vote-bar" style="height:4px;background:var(--border);border-radius:99px;overflow:hidden;">
+      <div id="vt-vote-fill" style="height:100%;background:var(--accent);width:0%;transition:width 0.3s;"></div>
+    </div>
+  </div>
+
+  <!-- player list to vote -->
+  <div id="vt-players" style="display:flex;flex-direction:column;gap:8px;"></div>
+
+  <!-- master reveal button -->
+  <div id="vt-host-btn" style="display:none;flex-direction:column;gap:6px;">
+    <button class="btn btn-red" id="btn-reveal-insider" onclick="doRevealInsider()">🕵️ Reveal Insider</button>
+    <p class="muted center" style="font-size:0.8rem;" id="vt-reveal-hint"></p>
+  </div>
+  <p id="vt-wait" class="muted center" style="display:none;font-size:0.9rem;">Waiting for Master to reveal…</p>
+</div>
+
+<!-- SUSPENSE ─────────────────────────────────────────────────────────── -->
+<div id="s-suspense" class="screen" style="justify-content:center;gap:20px;">
+  <div class="center">
+    <p class="muted" style="font-size:0.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;">Most Votes</p>
+    <div id="sp-accused-card" style="background:var(--card);border:2px solid var(--accent);border-radius:20px;padding:28px 36px;text-align:center;">
+      <div id="sp-accused-avatar" style="width:64px;height:64px;border-radius:50%;background:var(--accent);color:#fff;font-size:1.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;"></div>
+      <div id="sp-accused-name" style="font-size:1.5rem;font-weight:700;"></div>
+      <div id="sp-accused-votes" class="muted" style="margin-top:4px;font-size:0.9rem;"></div>
+    </div>
+  </div>
+
+  <div id="sp-vote-tally" style="width:100%;max-width:360px;"></div>
+
+  <p id="sp-countdown" class="muted center" style="display:none;font-size:1rem;font-weight:600;letter-spacing:.04em;"></p>
+  <div id="sp-open-btn-wrap" style="display:none;flex-direction:column;gap:8px;width:100%;">
+    <p id="sp-open-hint" class="muted center" style="font-size:0.88rem;"></p>
+    <button class="btn btn-primary" onclick="doOpenRole()">🎴 Open Role</button>
+  </div>
+  <p id="sp-wait-msg" class="muted center" style="display:none;font-size:0.9rem;">Waiting for the accused to reveal…</p>
+</div>
+
+<!-- VERDICT ──────────────────────────────────────────────────────────── -->
+<div id="s-verdict" class="screen" style="justify-content:center;gap:24px;">
+  <div id="vd-banner" style="text-align:center;padding:28px 24px;border-radius:20px;width:100%;max-width:360px;"></div>
+  <div id="vd-accused-role" style="text-align:center;"></div>
+  <div id="vd-insider-reveal" style="display:none;text-align:center;padding:20px 24px;border-radius:16px;width:100%;max-width:360px;background:rgba(124,58,237,0.12);border:2px solid var(--accent);"></div>
+  <button id="vd-reveal-now-btn" style="display:none;" class="btn" onclick="doRevealNow()">🕵️ Reveal Insider Now</button>
+  <button id="vd-summary-btn" style="display:none;" class="btn btn-primary" onclick="doConfirmResult()">📊 Go to Summary</button>
+  <p id="vd-countdown" class="muted center" style="font-size:0.88rem;"></p>
+</div>
+
+<!-- RESULT ───────────────────────────────────────────────────────────── -->
+<div id="s-result" class="screen" style="justify-content:center;gap:16px;">
+  <div class="result-icon" id="res-icon"></div>
+  <div class="result-title" id="res-title"></div>
+  <p class="muted center" id="res-subtitle" style="font-size:0.9rem;margin-top:-8px;"></p>
+
+  <div class="card" style="display:flex;flex-direction:column;gap:12px;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;">
+      <span class="muted">Secret Word</span>
+      <div style="text-align:right;">
+        <strong style="color:var(--accent2);" id="res-word"></strong>
+        <div class="muted" style="font-size:0.8rem;" id="res-word-thai"></div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div style="display:flex;justify-content:space-between;">
+      <span class="muted">Insider was</span>
+      <strong id="res-insider"></strong>
+    </div>
+    <div style="display:flex;justify-content:space-between;">
+      <span class="muted">Accused</span>
+      <strong id="res-accused"></strong>
+    </div>
+  </div>
+
+  <!-- vote tally -->
+  <div class="card" style="padding:14px 16px;">
+    <p class="muted" style="font-size:0.8rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em;">Vote Count</p>
+    <div id="res-tally" style="display:flex;flex-direction:column;gap:8px;"></div>
+  </div>
+
+  <!-- cumulative scoreboard -->
+  <div id="res-scoreboard-wrap" style="display:none;" class="card">
+    <p class="muted" style="font-size:0.8rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;">🏆 Scoreboard</p>
+    <div id="res-score-list" style="display:flex;flex-direction:column;gap:8px;"></div>
+  </div>
+
+  <div id="res-host-btn" style="display:none;">
+    <button class="btn btn-primary" onclick="doPlayAgain()">Play Again 🔄</button>
+  </div>
+  <p id="res-wait" class="muted center" style="display:none;">Waiting for Host to start next round…</p>
+</div>
+
+</div><!-- #app -->
+<div id="toast"></div>
+
+<script>
+const socket = io();
+let myName = '';
+let myRole = null;
+let myWord = null;
+let myThai = null;
+let isHost = false;
+let timerTotal = 180;
+let verdictInterval  = null;
+let suspenseInterval = null;
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+function show(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._t);
+  t._t = setTimeout(() => t.classList.remove('show'), 2800);
+}
+function fmtTime(s) {
+  return `${Math.floor(s/60)}:${(s%60).toString().padStart(2,'0')}`;
+}
+function levelChip(lvl) {
+  if (!lvl || lvl === 'All') return '';
+  return `<span class="chip chip-${lvl}">${lvl.charAt(0).toUpperCase()+lvl.slice(1)}</span>`;
+}
+function syncPills(groupId, selected) {
+  // selected is now an array
+  const arr = Array.isArray(selected) ? selected.map(s => s.toLowerCase()) : [];
+  document.querySelectorAll(`#${groupId} .pill`).forEach(btn => {
+    const v = btn.textContent.trim().toLowerCase();
+    btn.classList.toggle('active', arr.includes(v));
+  });
+}
+
+// ── Session persistence ───────────────────────────────────────────────────────
+function saveSession(code, name) {
+  sessionStorage.setItem('insider_session', JSON.stringify({ code, name }));
+}
+function clearSession() {
+  sessionStorage.removeItem('insider_session');
+}
+
+socket.on('connect', () => {
+  const raw = sessionStorage.getItem('insider_session');
+  if (!raw) return;
+  try {
+    const { code, name } = JSON.parse(raw);
+    if (code && name) { myName = name; socket.emit('rejoin_room', { code, name }); }
+  } catch(e) { clearSession(); }
+});
+
+socket.on('rejoin_failed', () => {
+  clearSession();
+  show('s-home');
+  toast('Session ended — please rejoin');
+});
+
+// ── Home ─────────────────────────────────────────────────────────────────────
+function doCreate() {
+  myName = document.getElementById('inp-name').value.trim();
+  if (!myName) return toast('Enter your name first');
+  socket.emit('create_room', { name: myName });
+}
+function doJoin() {
+  myName = document.getElementById('inp-name').value.trim();
+  const code = document.getElementById('inp-code').value.trim().toUpperCase();
+  if (!myName) return toast('Enter your name first');
+  if (!code)   return toast('Enter a room code');
+  socket.emit('join_room', { code, name: myName });
+}
+document.getElementById('inp-code').addEventListener('keydown', e => { if(e.key==='Enter') doJoin(); });
+
+socket.on('room_created', () => {});
+
+// ── Room Update ───────────────────────────────────────────────────────────────
+socket.on('room_update', (room) => {
+  // persist session for rejoin-on-reload
+  if (myName) saveSession(room.code, myName);
+
+  myRole = room.role;
+  myWord = room.myWord || null;
+  myThai = room.myThai || null;
+  if (room.state === 'reveal') console.log('[role received]', myName, '→', myRole, '| word:', myWord);
+  const me = room.players.find(p => p.name === myName);
+  isHost = room.amHost === true;
+  timerTotal = room.totalTime || 180;
+
+  if (room.state !== 'verdict' && verdictInterval) {
+    clearInterval(verdictInterval); verdictInterval = null;
+  }
+  if (room.state !== 'suspense' && suspenseInterval) {
+    clearInterval(suspenseInterval); suspenseInterval = null;
+  }
+  if      (room.state === 'lobby')    renderLobby(room);
+  else if (room.state === 'reveal')   renderReveal(room);
+  else if (room.state === 'playing')  renderPlaying(room);
+  else if (room.state === 'voting')   renderVoting(room);
+  else if (room.state === 'suspense') renderSuspense(room);
+  else if (room.state === 'verdict')  renderVerdict(room);
+  else if (room.state === 'result')   renderResult(room);
+
+  // update ready dots whenever we're on reveal screen
+  if (room.state === 'reveal' && typeof room.readyCount === 'number') {
+    renderReadyDots(room.readyCount, room.players.length);
+  }
+});
+
+// ── Lobby ─────────────────────────────────────────────────────────────────────
+function renderLobby(room) {
+  show('s-lobby');
+  document.getElementById('l-code').textContent  = room.code;
+  document.getElementById('l-count').textContent = `(${room.players.length})`;
+  const chosen = room.chosenMasterId;
+  document.getElementById('l-players').innerHTML = room.players.map(p => {
+    const isMe      = p.name === myName;
+    const isMasterP = p.id === chosen;
+    const crownBtn  = isHost
+      ? `<button onclick="setMaster('${p.id}')" title="${isMasterP ? 'Clear master' : 'Set as Master'}"
+           style="padding:4px 8px;border-radius:99px;border:1.5px solid ${isMasterP ? 'var(--accent)' : 'var(--border)'};
+                  background:${isMasterP ? 'rgba(124,58,237,0.2)' : 'transparent'};
+                  color:${isMasterP ? 'var(--accent)' : 'var(--muted)'};font-size:0.85rem;cursor:pointer;">👑</button>`
+      : (isMasterP ? `<span style="font-size:0.85rem;color:var(--accent);">👑</span>` : '');
+    const kickBtn = isHost && !isMe && !p.isHost
+      ? `<button onclick="kickPlayer('${p.id}')" style="padding:5px 10px;border-radius:99px;border:1.5px solid var(--red);background:transparent;color:var(--red);font-size:0.8rem;cursor:pointer;" title="Kick">✕</button>`
+      : '';
+    return `
+    <div class="player-row">
+      <div class="avatar">${p.name[0].toUpperCase()}</div>
+      <div style="flex:1;">
+        <div class="player-name">${p.name}</div>
+        ${p.isHost ? '<div class="host-tag">Host</div>' : ''}
+      </div>
+      <div style="display:flex;gap:6px;align-items:center;">${crownBtn}${kickBtn}</div>
+    </div>`;
+  }).join('');
+
+  if (isHost) {
+    document.getElementById('l-filters').style.display     = 'flex';
+    document.getElementById('l-settings-view').style.display = 'none';
+    document.getElementById('l-host-ctrl').style.display   = 'flex';
+    document.getElementById('l-wait-msg').style.display    = 'none';
+    const btn = document.getElementById('btn-start');
+    const need = 3 - room.players.length;
+    btn.disabled    = need > 0;
+    btn.textContent = need > 0 ? `Need ${need} more player(s)` : 'Start Game 🎮';
+    document.getElementById('l-need-msg').style.display = need > 0 ? 'block' : 'none';
+    syncPills('fg-cat', room.filterCategories || []);
+    syncPills('fg-lvl', room.filterLevels    || []);
+    syncSlider('sl-play',    'play-val',    room.playTime    || 180);
+    syncSlider('sl-discuss', 'discuss-val', room.discussTime || 60);
+  } else {
+    document.getElementById('l-filters').style.display     = 'none';
+    document.getElementById('l-settings-view').style.display = 'block';
+    document.getElementById('l-host-ctrl').style.display   = 'none';
+    document.getElementById('l-wait-msg').style.display    = 'block';
+    const cats = room.filterCategories || [];
+    const lvls = room.filterLevels    || [];
+    const catChips = cats.length
+      ? cats.map(c => `<span class="chip" style="background:var(--accent);color:#fff;">${c}</span>`).join('')
+      : `<span class="chip" style="background:var(--border);color:var(--muted);">All</span>`;
+    const lvlChips = lvls.map(l => levelChip(l)).join('');
+    const playLabel  = fmtTime(room.playTime    || 180);
+    const discLabel  = fmtTime(room.discussTime || 60);
+    const timerChips = `<span class="chip" style="background:var(--border);color:var(--muted);">⏱ ${playLabel}</span><span class="chip" style="background:var(--border);color:var(--muted);">💬 ${discLabel}</span>`;
+    document.getElementById('l-setting-chips').innerHTML = catChips + lvlChips + timerChips;
+  }
+
+  // scoreboard (show only after at least one round)
+  const scores = room.scores || [];
+  const hasScores = scores.some(s => s.score > 0);
+  document.getElementById('l-scoreboard').style.display = hasScores ? 'block' : 'none';
+  if (hasScores) renderScoreboard(scores, 'l-score-list');
+}
+
+function kickPlayer(playerId) { socket.emit('kick_player', { playerId }); }
+
+socket.on('show_insider_reveal', () => {
+  if (window._showInsiderReveal) window._showInsiderReveal();
+});
+
+socket.on('kicked', () => {
+  clearSession();
+  myName = '';
+  show('s-home');
+  toast('You have been removed from the room');
+});
+
+function setMaster(playerId) { socket.emit('set_master', { playerId }); }
+
+function setFilter(type, val) {
+  socket.emit('set_filter', { type, value: val });
+  // optimistic local toggle; server will confirm via room_update
+}
+
+function setTimer(type, seconds) {
+  socket.emit('set_timer', { type, value: seconds });
+}
+
+function syncSlider(sliderId, valId, currentSecs) {
+  const mins = Math.round(currentSecs / 60) || 1;
+  const sl = document.getElementById(sliderId);
+  if (sl) sl.value = Math.min(10, Math.max(1, mins));
+  const vl = document.getElementById(valId);
+  if (vl) vl.textContent = mins + ' min';
+}
+function onSliderInput(type, val) {
+  const id = type === 'play' ? 'play-val' : 'discuss-val';
+  const el = document.getElementById(id);
+  if (el) el.textContent = val + ' min';
+}
+
+// ── Reveal ────────────────────────────────────────────────────────────────────
+function renderReveal(room) {
+  show('s-reveal');
+  const defs = {
+    master:  { icon:'👑', name:'Master',  cls:'role-master',
+               desc:'You know the word. Answer YES / NO / IDK to questions out loud. When someone guesses it, tap the button.' },
+    insider: { icon:'🕵️', name:'Insider', cls:'role-insider',
+               desc:'You know the word secretly. Guide the team to guess it — without getting caught!' },
+    common:  { icon:'🙋', name:'Common',  cls:'role-common',
+               desc:"You don't know the word. Ask yes/no questions and try to figure it out — then find the Insider!" },
+  };
+  const d = defs[myRole];
+  document.getElementById('rv-card').innerHTML =
+    `<div class="role-card ${d.cls}"><div class="icon">${d.icon}</div><div class="name">${d.name}</div><div class="desc">${d.desc}</div></div>`;
+
+  const showWord = myRole === 'master' || myRole === 'insider';
+  document.getElementById('rv-word').style.display = showWord ? 'block' : 'none';
+  document.getElementById('rv-hint').style.display = myRole === 'master' ? 'block' : 'none';
+  if (showWord) {
+    document.getElementById('rv-word-text').textContent = room.myWord  || '';
+    document.getElementById('rv-word-thai').textContent = room.myThai  ? `(${room.myThai})` : '';
+    // Only master sees category/level
+    const catEl = document.getElementById('rv-cat');
+    const lvlEl = document.getElementById('rv-lvl');
+    if (myRole === 'master') {
+      catEl.textContent = room.wordCategory || '';
+      lvlEl.innerHTML   = levelChip(room.wordLevel);
+    } else {
+      catEl.textContent = '';
+      lvlEl.innerHTML   = '';
+    }
+    if (myRole === 'master') document.getElementById('rv-hint-text').textContent = room.myHint || '';
+  }
+
+  document.getElementById('btn-reroll').style.display = room.isMaster ? 'block' : 'none';
+
+  const iAmReady   = room.iAmReady;
+  const lockedOut  = myRole === 'insider' && !room.masterIsReady;
+  const btn = document.getElementById('btn-ready');
+  if (iAmReady) {
+    btn.textContent = 'Cancel ✕';
+    btn.style.background = 'transparent';
+    btn.style.border     = '1.5px solid var(--muted)';
+    btn.style.color      = 'var(--muted)';
+    btn.disabled = false;
+    document.getElementById('rv-wait-msg').textContent = 'Waiting for others…';
+  } else if (lockedOut) {
+    btn.textContent = '⏳ Waiting for Master…';
+    btn.style.background = 'transparent';
+    btn.style.border     = '1.5px solid var(--border)';
+    btn.style.color      = 'var(--muted)';
+    btn.disabled = true;
+    document.getElementById('rv-wait-msg').textContent = '';
+  } else {
+    btn.textContent = 'Ready';
+    btn.style.background = '';
+    btn.style.border     = '';
+    btn.style.color      = '';
+    btn.disabled = false;
+    document.getElementById('rv-wait-msg').textContent = '';
+  }
+  renderReadyDots(room.revealsDone?.length || 0, room.players.length);
+}
+
+function renderReadyDots(done, total) {
+  document.getElementById('rv-dots').innerHTML =
+    Array.from({length: total}, (_, i) =>
+      `<div class="ready-dot${i < done ? ' done' : ''}"></div>`).join('');
+}
+
+
+function doReady() {
+  const btn = document.getElementById('btn-ready');
+  if (btn.textContent.startsWith('Cancel')) {
+    socket.emit('reveal_unready');
+  } else {
+    socket.emit('reveal_done');
+  }
+}
+
+function doReroll() {
+  socket.emit('reroll_word');
+}
+
+// ── Playing ───────────────────────────────────────────────────────────────────
+function renderPlaying(room) {
+  show('s-playing');
+  // Only master sees category/level on playing screen
+  document.getElementById('pl-cat').textContent = myRole === 'master' ? '📂 ' + (room.wordCategory || '') : '';
+  document.getElementById('pl-lvl').innerHTML   = myRole === 'master' ? levelChip(room.wordLevel) : '';
+
+  // Role reminder
+  const roleInfo = {
+    master:  `<div style="display:flex;gap:12px;align-items:center;"><span style="font-size:1.6rem;">👑</span><div><div style="font-weight:700;">Master</div><div class="muted" style="font-size:0.85rem;">Word: <strong style="color:var(--accent2);">${myWord}</strong> <span style="opacity:.7;">${myWord ? `(${room.myThai||''})` : ''}</span> — answer questions out loud</div></div></div>`,
+    insider: `<div style="display:flex;gap:12px;align-items:center;"><span style="font-size:1.6rem;">🕵️</span><div><div style="font-weight:700;">Insider</div><div class="muted" style="font-size:0.85rem;">Word: <strong style="color:var(--accent2);">${myWord}</strong> <span style="opacity:.7;">${myWord ? `(${room.myThai||''})` : ''}</span> — guide without being caught</div></div></div>`,
+    common:  `<div style="display:flex;gap:12px;align-items:center;"><span style="font-size:1.6rem;">🙋</span><div><div style="font-weight:700;">Common</div><div class="muted" style="font-size:0.85rem;">Ask yes/no questions, then find the Insider</div></div></div>`,
+  };
+  document.getElementById('pl-role-card').innerHTML = roleInfo[myRole] || '';
+  document.getElementById('pl-master-btn').style.display = myRole === 'master' ? 'block' : 'none';
+
+  updateTimer(room.timeLeft ?? timerTotal);
+}
+
+socket.on('tick', t => updateTimer(t));
+
+function updateTimer(t) {
+  const el  = document.getElementById('pl-timer');
+  const bar = document.getElementById('pl-bar');
+  if (!el) return;
+  el.textContent = fmtTime(t);
+  el.className = 'timer-big' + (t <= 30 ? ' crit' : t <= 60 ? ' warn' : '');
+  const pct = (t / timerTotal) * 100;
+  bar.style.width      = pct + '%';
+  bar.style.background = t > 60 ? 'var(--green)' : t > 30 ? 'var(--yellow)' : 'var(--red)';
+}
+
+function doWordGuessed() { socket.emit('word_guessed'); }
+
+// ── Voting (face-to-face) ─────────────────────────────────────────────────────
+function renderVoting(room) {
+  show('s-voting');
+  document.getElementById('vt-cat').textContent = ''; // category hidden from players
+
+  // vote progress
+  const total = room.players.length;
+  const voted = room.voteCount || 0;
+  const totalVoters = room.totalVoters || total;
+  document.getElementById('vt-vote-count').textContent = `${voted}/${totalVoters} voted`;
+  document.getElementById('vt-vote-fill').style.width  = totalVoters ? `${(voted/totalVoters)*100}%` : '0%';
+
+  // vote timer
+  const timerEl = document.getElementById('vt-timer');
+  if (room.voteTimeLeft > 0) {
+    timerEl.textContent = `⏱ ${room.voteTimeLeft}s`;
+    timerEl.style.color = room.voteTimeLeft <= 10 ? 'var(--red)' : 'var(--yellow)';
+  } else {
+    timerEl.textContent = '✓ Time up — vote then find Insider!';
+    timerEl.style.color = 'var(--muted)';
+  }
+
+  // player vote buttons — exclude master from list, can't vote for self
+  const myId = room.players.find(p => p.name === myName)?.id;
+  const iAmMaster = room.isMaster;
+  document.getElementById('vt-players').innerHTML = room.players
+    .filter(p => p.id !== room.masterPlayerId) // master not shown as vote target
+    .map(p => {
+    const isMe     = p.id === myId;
+    const voted    = room.myVote === p.id;
+    const disabled = isMe || iAmMaster;
+    const style    = voted
+      ? 'background:rgba(124,58,237,0.25);border:1.5px solid var(--accent);color:var(--text);'
+      : 'background:var(--card);border:1.5px solid var(--border);color:var(--muted);';
+    return `<button onclick="doVote('${p.id}')" ${disabled ? 'disabled' : ''}
+      style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;cursor:${disabled?'default':'pointer'};width:100%;text-align:left;${style}">
+      <div class="avatar" style="width:36px;height:36px;font-size:1rem;">${p.name[0].toUpperCase()}</div>
+      <span style="font-weight:600;font-size:0.95rem;">${p.name}${isMe?' (you)':''}</span>
+      ${voted ? '<span style="margin-left:auto;color:var(--accent2);">✓ Your vote</span>' : ''}
+    </button>`;
+  }).join('');
+
+  // master reveal button
+  const canReveal = room.canReveal;
+  document.getElementById('vt-host-btn').style.display = room.isMaster ? 'flex' : 'none';
+  document.getElementById('vt-wait').style.display     = room.isMaster ? 'none'  : 'block';
+  if (room.isMaster) {
+    const btn = document.getElementById('btn-reveal-insider');
+    btn.disabled = !canReveal;
+    btn.style.opacity = canReveal ? '1' : '0.4';
+    document.getElementById('vt-reveal-hint').textContent = canReveal
+      ? 'ทุกคนโหวตแล้ว — กด Reveal ได้เลย!'
+      : 'รอให้ทุกคนโหวตหรือหมดเวลา…';
+  }
+}
+function doVote(targetId) { socket.emit('cast_vote', { targetId }); }
+function doRevealInsider() { socket.emit('reveal_insider'); }
+
+// ── Suspense ──────────────────────────────────────────────────────────────────
+function renderSuspense(room) {
+  show('s-suspense');
+
+  // accused card
+  const name = room.accusedName || '???';
+  document.getElementById('sp-accused-avatar').textContent = name[0].toUpperCase();
+  document.getElementById('sp-accused-name').textContent   = name;
+  const topEntry = (room.voteTally || []).find(e => e.name === name);
+  document.getElementById('sp-accused-votes').textContent  = topEntry
+    ? `${topEntry.votes} vote${topEntry.votes !== 1 ? 's' : ''}` : '';
+
+  // vote tally mini list
+  document.getElementById('sp-vote-tally').innerHTML = (room.voteTally || [])
+    .filter(e => e.votes > 0)
+    .map(e => `
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--card);border-radius:10px;margin-bottom:6px;">
+        <span style="font-weight:600;">${e.name}</span>
+        <span class="muted">${e.votes} vote${e.votes !== 1 ? 's' : ''}</span>
+      </div>`).join('');
+
+  // countdown then show buttons
+  const cdEl      = document.getElementById('sp-countdown');
+  const openWrap  = document.getElementById('sp-open-btn-wrap');
+  const waitMsg   = document.getElementById('sp-wait-msg');
+
+  function showSuspenseButtons() {
+    cdEl.style.display = 'none';
+    if (room.canOpenRole) {
+      openWrap.style.display = 'flex';
+      waitMsg.style.display  = 'none';
+      document.getElementById('sp-open-hint').textContent = room.iAmAccused
+        ? 'You got the most votes — reveal your role!'
+        : 'As Master, you can reveal their role.';
+    } else {
+      openWrap.style.display = 'none';
+      waitMsg.style.display  = 'block';
+    }
+  }
+
+  // show buttons immediately + countdown alongside
+  showSuspenseButtons();
+  if (!suspenseInterval) {
+    cdEl.style.display = 'block';
+    let t = 45;
+    cdEl.textContent = `Auto-opening in ${t}s…`;
+    suspenseInterval = setInterval(() => {
+      t -= 1;
+      if (t <= 0) {
+        clearInterval(suspenseInterval); suspenseInterval = null;
+        cdEl.style.display = 'none';
+      } else {
+        cdEl.textContent = `Auto-opening in ${t}s…`;
+      }
+    }, 1000);
+  }
+}
+
+function doOpenRole() { socket.emit('open_role'); }
+
+// ── Verdict ───────────────────────────────────────────────────────────────────
+function renderVerdict(room) {
+  show('s-verdict');
+  if (verdictInterval) return; // countdown already running — don't reset
+
+  const caught      = room.insiderCaught;
+  const accusedRole = room.accusedRole;
+  const name        = room.accusedName || '???';
+  const roleLabel   = { insider: '🕵️ Insider', master: '👑 Master', common: '🙋 Common' }[accusedRole] || accusedRole;
+
+  const banner = document.getElementById('vd-banner');
+  if (caught) {
+    banner.style.background = 'rgba(16,185,129,0.15)';
+    banner.style.border     = '2px solid var(--green)';
+    banner.innerHTML = `
+      <div style="font-size:3rem;margin-bottom:8px;">🎯</div>
+      <div style="font-size:1.4rem;font-weight:700;color:var(--green);">Correct!</div>
+      <div style="margin-top:6px;font-size:1rem;color:var(--text);">${name} is the Insider!</div>`;
+  } else if (myRole === 'insider') {
+    const taunts = [
+      'พวกเขาเดาผิดหมดเลย 😏',
+      'แค่นี้เองเหรอ? ง่ายจัง 🤭',
+      'ขอบคุณที่ไว้ใจนะ… เสียดายที่ไว้ใจผิดคน 😈',
+      'นักสืบระดับนี้ก็แพ้ Insider ได้เหมือนกัน 🕶️',
+      'หลอกทุกคนได้ขนาดนี้ มีความสามารถอนาคตไกล 😇',
+    ];
+    const taunt = taunts[Math.floor(Math.random() * taunts.length)];
+    banner.style.background = 'rgba(239,68,68,0.15)';
+    banner.style.border     = '2px solid #ef4444';
+    banner.innerHTML = `
+      <div style="font-size:3rem;margin-bottom:8px;">🏆</div>
+      <div style="font-size:1.8rem;font-weight:800;color:#ef4444;">Insider</div>
+      <div style="margin-top:10px;font-size:0.9rem;color:var(--muted);font-style:italic;">${taunt}</div>`;
+  } else {
+    banner.style.background = 'rgba(59,130,246,0.15)';
+    banner.style.border     = '2px solid #3b82f6';
+    banner.innerHTML = `
+      <div style="font-size:3rem;margin-bottom:8px;">❌</div>
+      <div style="font-size:1.4rem;font-weight:700;color:#3b82f6;">Wrong!</div>
+      <div style="margin-top:6px;font-size:1rem;color:var(--text);">${name} is not the Insider</div>`;
+  }
+
+  document.getElementById('vd-accused-role').innerHTML = '';
+
+  const insiderRevealEl  = document.getElementById('vd-insider-reveal');
+  const revealNowBtn     = document.getElementById('vd-reveal-now-btn');
+  const countdownEl      = document.getElementById('vd-countdown');
+  insiderRevealEl.style.display = 'none';
+  revealNowBtn.style.display    = 'none';
+
+  function startCountdown(secs, onDone, labelFn) {
+    let t = secs;
+    countdownEl.textContent = labelFn(t);
+    verdictInterval = setInterval(() => {
+      t -= 1;
+      countdownEl.textContent = labelFn(t);
+      if (t <= 0) {
+        clearInterval(verdictInterval);
+        verdictInterval = null;
+        onDone();
+      }
+    }, 1000);
+  }
+
+  function showInsiderReveal() {
+    if (verdictInterval) { clearInterval(verdictInterval); verdictInterval = null; }
+    revealNowBtn.style.display    = 'none';
+    insiderRevealEl.style.display = 'block';
+    insiderRevealEl.innerHTML = `
+      <p style="font-size:0.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px;">The Real Insider</p>
+      <div style="font-size:1.5rem;font-weight:700;">🕵️ ${room.insiderName || '???'}</div>`;
+    if (isHost) document.getElementById('vd-summary-btn').style.display = 'block';
+    startCountdown(45,
+      () => socket.emit('confirm_result'),
+      t => `Going to summary in ${t}s…`
+    );
+  }
+
+  // expose for manual button
+  window._showInsiderReveal = showInsiderReveal;
+
+  if (caught) {
+    // Correct → 45s → summary
+    if (isHost) document.getElementById('vd-summary-btn').style.display = 'block';
+    startCountdown(45,
+      () => socket.emit('confirm_result'),
+      t => `Going to summary in ${t}s…`
+    );
+  } else {
+    // Wrong → 30s countdown + Insider/Master can reveal early
+    const canRevealEarly = (myRole === 'insider' || myRole === 'master');
+    if (canRevealEarly) {
+      revealNowBtn.style.display = 'block';
+    }
+    startCountdown(45, showInsiderReveal, t => `Revealing Insider in ${t}s…`);
+  }
+}
+
+function doRevealNow() { socket.emit('trigger_reveal_now'); }
+function doConfirmResult() { socket.emit('confirm_result'); }
+function doLeaveRoom() {
+  if (!confirm('ออกจากห้องนี้?')) return;
+  socket.emit('leave_room');
+  clearSession();
+  myName = ''; myRole = null; myWord = null; myThai = null; isHost = false;
+  show('s-home');
+}
+
+// ── Result ────────────────────────────────────────────────────────────────────
+function renderResult(room) {
+  show('s-result');
+  const caught = room.winnerTeam === 'common';
+  document.getElementById('res-icon').textContent     = caught ? '🎉' : '🕵️';
+  document.getElementById('res-title').textContent    = caught ? 'Insider Caught!' : 'Insider Wins!';
+  document.getElementById('res-subtitle').textContent = caught
+    ? 'Common players successfully identified the Insider'
+    : 'The Insider escaped — better luck next time!';
+  document.getElementById('res-word').textContent      = room.word     || '—';
+  document.getElementById('res-word-thai').textContent = room.wordThai || '';
+  document.getElementById('res-insider').textContent   = room.insiderName || '—';
+  document.getElementById('res-accused').textContent   = room.accusedName || '(tie — no clear winner)';
+
+  // vote tally
+  const maxVotes = Math.max(...(room.voteTally || []).map(t => t.votes));
+  document.getElementById('res-tally').innerHTML = (room.voteTally || []).map(t => {
+    const pct     = maxVotes > 0 ? (t.votes / maxVotes) * 100 : 0;
+    const isTop   = t.votes === maxVotes && maxVotes > 0;
+    const isInsider = t.name === room.insiderName;
+    const barColor  = isInsider ? 'var(--red)' : 'var(--accent)';
+    return `<div>
+      <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+        <span style="font-size:0.88rem;font-weight:${isTop?700:400};">${t.name}${isInsider?' 🕵️':''}</span>
+        <span style="font-size:0.88rem;color:var(--muted);">${t.votes} vote${t.votes!==1?'s':''}</span>
+      </div>
+      <div style="height:6px;background:var(--border);border-radius:99px;overflow:hidden;">
+        <div style="height:100%;width:${pct}%;background:${barColor};border-radius:99px;transition:width 0.5s;"></div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // scoreboard
+  if (room.scores && room.scores.length > 0) {
+    document.getElementById('res-scoreboard-wrap').style.display = 'block';
+    renderScoreboard(room.scores, 'res-score-list');
+  }
+
+  document.getElementById('res-host-btn').style.display = room.amHost ? 'block' : 'none';
+  document.getElementById('res-wait').style.display     = room.amHost ? 'none'  : 'block';
+}
+
+function renderScoreboard(scores, containerId) {
+  const el = document.getElementById(containerId);
+  if (!scores || scores.length === 0) { el.innerHTML = ''; return; }
+  const maxScore = scores[0]?.score || 0;
+  el.innerHTML = scores.map((s, i) => {
+    const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i+1}.`;
+    const pct   = maxScore > 0 ? (s.score / maxScore) * 100 : 0;
+    return `<div style="display:flex;align-items:center;gap:10px;">
+      <span style="width:28px;text-align:center;font-size:1rem;">${medal}</span>
+      <div style="flex:1;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+          <span style="font-size:0.88rem;font-weight:${i===0?700:400};">${s.name}</span>
+          <span style="font-size:0.88rem;color:var(--accent2);font-weight:700;">${s.score} pt${s.score!==1?'s':''}</span>
+        </div>
+        <div style="height:5px;background:var(--border);border-radius:99px;overflow:hidden;">
+          <div style="height:100%;width:${pct}%;background:var(--accent);border-radius:99px;"></div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function doStart()    { socket.emit('start_game'); }
+function doPlayAgain(){ socket.emit('play_again'); }
+function doLeave()    { clearSession(); location.reload(); }
+
+socket.on('error', msg => toast('⚠️ ' + msg));
+</script>
+</body>
+</html>

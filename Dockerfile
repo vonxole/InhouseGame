@@ -1,0 +1,13 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm ci --omit=dev
+
+COPY server.js words.json ./
+COPY public ./public
+
+EXPOSE 3001
+
+CMD ["node", "server.js"]

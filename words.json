@@ -1,0 +1,2839 @@
+[
+  {
+    "word": "rain",
+    "thai": "ฝน",
+    "category": "General",
+    "level": "easy",
+    "hint": "water falling from the sky"
+  },
+  {
+    "word": "smile",
+    "thai": "รอยยิ้ม",
+    "category": "General",
+    "level": "easy",
+    "hint": "expression of happiness on your face"
+  },
+  {
+    "word": "money",
+    "thai": "เงิน",
+    "category": "General",
+    "level": "easy",
+    "hint": "used to buy things"
+  },
+  {
+    "word": "dream",
+    "thai": "ความฝัน",
+    "category": "General",
+    "level": "easy",
+    "hint": "happens while you sleep"
+  },
+  {
+    "word": "music",
+    "thai": "ดนตรี",
+    "category": "General",
+    "level": "easy",
+    "hint": "you listen to it"
+  },
+  {
+    "word": "birthday",
+    "thai": "วันเกิด",
+    "category": "General",
+    "level": "easy",
+    "hint": "a special day once a year"
+  },
+  {
+    "word": "holiday",
+    "thai": "วันหยุด",
+    "category": "General",
+    "level": "easy",
+    "hint": "a day off from work or school"
+  },
+  {
+    "word": "shadow",
+    "thai": "เงา",
+    "category": "General",
+    "level": "easy",
+    "hint": "a dark shape made by blocking light"
+  },
+  {
+    "word": "secret",
+    "thai": "ความลับ",
+    "category": "General",
+    "level": "easy",
+    "hint": "something you do not tell others"
+  },
+  {
+    "word": "habit",
+    "thai": "นิสัย / ความเคยชิน",
+    "category": "General",
+    "level": "easy",
+    "hint": "something you do regularly without thinking"
+  },
+  {
+    "word": "tradition",
+    "thai": "ประเพณี",
+    "category": "General",
+    "level": "medium",
+    "hint": "a custom passed down through generations"
+  },
+  {
+    "word": "rumor",
+    "thai": "ข่าวลือ",
+    "category": "General",
+    "level": "medium",
+    "hint": "unverified information that spreads quickly"
+  },
+  {
+    "word": "patience",
+    "thai": "ความอดทน",
+    "category": "General",
+    "level": "medium",
+    "hint": "ability to wait calmly"
+  },
+  {
+    "word": "jealousy",
+    "thai": "ความอิจฉา",
+    "category": "General",
+    "level": "medium",
+    "hint": "feeling when you want what others have"
+  },
+  {
+    "word": "freedom",
+    "thai": "อิสรภาพ",
+    "category": "General",
+    "level": "medium",
+    "hint": "the right to do what you want"
+  },
+  {
+    "word": "adventure",
+    "thai": "การผจญภัย",
+    "category": "General",
+    "level": "medium",
+    "hint": "an exciting or unusual experience"
+  },
+  {
+    "word": "coincidence",
+    "thai": "ความบังเอิญ",
+    "category": "General",
+    "level": "medium",
+    "hint": "two things happening by chance at the same time"
+  },
+  {
+    "word": "deadline",
+    "thai": "กำหนดเส้นตาย",
+    "category": "General",
+    "level": "medium",
+    "hint": "the last time something must be finished"
+  },
+  {
+    "word": "influence",
+    "thai": "อิทธิพล",
+    "category": "General",
+    "level": "medium",
+    "hint": "the power to affect others"
+  },
+  {
+    "word": "reputation",
+    "thai": "ชื่อเสียง",
+    "category": "General",
+    "level": "medium",
+    "hint": "what people think of you"
+  },
+  {
+    "word": "procrastination",
+    "thai": "การผัดวันประกันพรุ่ง",
+    "category": "General",
+    "level": "hard",
+    "hint": "delaying tasks you should do now"
+  },
+  {
+    "word": "nostalgia",
+    "thai": "ความคิดถึงอดีต",
+    "category": "General",
+    "level": "hard",
+    "hint": "longing for the past"
+  },
+  {
+    "word": "sarcasm",
+    "thai": "การเสียดสี / ประชด",
+    "category": "General",
+    "level": "hard",
+    "hint": "saying the opposite of what you mean"
+  },
+  {
+    "word": "empathy",
+    "thai": "ความเห็นอกเห็นใจ",
+    "category": "General",
+    "level": "hard",
+    "hint": "understanding how others feel"
+  },
+  {
+    "word": "ambiguity",
+    "thai": "ความคลุมเครือ",
+    "category": "General",
+    "level": "hard",
+    "hint": "when something has more than one meaning"
+  },
+  {
+    "word": "phenomenon",
+    "thai": "ปรากฏการณ์",
+    "category": "General",
+    "level": "hard",
+    "hint": "a remarkable observable fact or event"
+  },
+  {
+    "word": "perseverance",
+    "thai": "ความพากเพียร",
+    "category": "General",
+    "level": "hard",
+    "hint": "continuing despite difficulty"
+  },
+  {
+    "word": "subconscious",
+    "thai": "จิตใต้สำนึก",
+    "category": "General",
+    "level": "hard",
+    "hint": "thoughts you are not fully aware of"
+  },
+  {
+    "word": "hunger",
+    "thai": "ความหิว",
+    "category": "General",
+    "level": "easy",
+    "hint": "the feeling when you need food"
+  },
+  {
+    "word": "sleep",
+    "thai": "การนอนหลับ",
+    "category": "General",
+    "level": "easy",
+    "hint": "what your body does at night to rest"
+  },
+  {
+    "word": "laugh",
+    "thai": "เสียงหัวเราะ",
+    "category": "General",
+    "level": "easy",
+    "hint": "a sound you make when something is funny"
+  },
+  {
+    "word": "speed",
+    "thai": "ความเร็ว",
+    "category": "General",
+    "level": "easy",
+    "hint": "how fast something moves"
+  },
+  {
+    "word": "color",
+    "thai": "สี",
+    "category": "General",
+    "level": "easy",
+    "hint": "what your eyes see — red, blue, green…"
+  },
+  {
+    "word": "luck",
+    "thai": "โชค",
+    "category": "General",
+    "level": "easy",
+    "hint": "good things that happen by chance"
+  },
+  {
+    "word": "pain",
+    "thai": "ความเจ็บปวด",
+    "category": "General",
+    "level": "easy",
+    "hint": "an unpleasant feeling from injury"
+  },
+  {
+    "word": "fire",
+    "thai": "ไฟ",
+    "category": "General",
+    "level": "easy",
+    "hint": "hot and bright, it burns things"
+  },
+  {
+    "word": "noise",
+    "thai": "เสียงรบกวน",
+    "category": "General",
+    "level": "easy",
+    "hint": "an unwanted or loud sound"
+  },
+  {
+    "word": "gift",
+    "thai": "ของขวัญ",
+    "category": "General",
+    "level": "easy",
+    "hint": "something you give someone on a special occasion"
+  },
+  {
+    "word": "silence",
+    "thai": "ความเงียบ",
+    "category": "General",
+    "level": "easy",
+    "hint": "complete absence of sound"
+  },
+  {
+    "word": "memory",
+    "thai": "ความทรงจำ",
+    "category": "General",
+    "level": "easy",
+    "hint": "something you remember from the past"
+  },
+  {
+    "word": "fear",
+    "thai": "ความกลัว",
+    "category": "General",
+    "level": "easy",
+    "hint": "a feeling when you are scared"
+  },
+  {
+    "word": "sunset",
+    "thai": "พระอาทิตย์ตก",
+    "category": "General",
+    "level": "easy",
+    "hint": "when the sun goes below the horizon in the evening"
+  },
+  {
+    "word": "competition",
+    "thai": "การแข่งขัน",
+    "category": "General",
+    "level": "medium",
+    "hint": "trying to win against others"
+  },
+  {
+    "word": "consequence",
+    "thai": "ผลที่ตามมา",
+    "category": "General",
+    "level": "medium",
+    "hint": "what happens as a result of an action"
+  },
+  {
+    "word": "obsession",
+    "thai": "ความหมกมุ่น",
+    "category": "General",
+    "level": "medium",
+    "hint": "when you think about one thing constantly"
+  },
+  {
+    "word": "sacrifice",
+    "thai": "การเสียสละ",
+    "category": "General",
+    "level": "medium",
+    "hint": "giving up something valuable for a purpose"
+  },
+  {
+    "word": "motivation",
+    "thai": "แรงจูงใจ",
+    "category": "General",
+    "level": "medium",
+    "hint": "what drives you to do something"
+  },
+  {
+    "word": "stereotype",
+    "thai": "อคติ / ภาพจำ",
+    "category": "General",
+    "level": "medium",
+    "hint": "a fixed idea about a group of people"
+  },
+  {
+    "word": "illusion",
+    "thai": "ภาพลวงตา / มายา",
+    "category": "General",
+    "level": "medium",
+    "hint": "something that appears real but is not"
+  },
+  {
+    "word": "routine",
+    "thai": "กิจวัตร",
+    "category": "General",
+    "level": "medium",
+    "hint": "a set of activities you do regularly in order"
+  },
+  {
+    "word": "crisis",
+    "thai": "วิกฤต",
+    "category": "General",
+    "level": "medium",
+    "hint": "a very dangerous or difficult situation"
+  },
+  {
+    "word": "negotiation",
+    "thai": "การเจรจา",
+    "category": "General",
+    "level": "medium",
+    "hint": "a discussion to reach an agreement"
+  },
+  {
+    "word": "temptation",
+    "thai": "การล่อใจ",
+    "category": "General",
+    "level": "medium",
+    "hint": "a strong urge to do something you should avoid"
+  },
+  {
+    "word": "expectations",
+    "thai": "ความคาดหวัง",
+    "category": "General",
+    "level": "medium",
+    "hint": "what you believe will or should happen"
+  },
+  {
+    "word": "cognitive bias",
+    "thai": "อคติทางความคิด",
+    "category": "General",
+    "level": "hard",
+    "hint": "systematic errors in thinking that affect decisions"
+  },
+  {
+    "word": "paradox",
+    "thai": "ความขัดแย้งในตัวเอง",
+    "category": "General",
+    "level": "hard",
+    "hint": "a statement that seems contradictory but may be true"
+  },
+  {
+    "word": "bureaucracy",
+    "thai": "ระบบราชการ",
+    "category": "General",
+    "level": "hard",
+    "hint": "a complex system of rules and processes in organizations"
+  },
+  {
+    "word": "manipulation",
+    "thai": "การบิดเบือน / ชักใย",
+    "category": "General",
+    "level": "hard",
+    "hint": "controlling someone unfairly for your own benefit"
+  },
+  {
+    "word": "transparency",
+    "thai": "ความโปร่งใส",
+    "category": "General",
+    "level": "hard",
+    "hint": "being open and honest with nothing hidden"
+  },
+  {
+    "word": "accountability",
+    "thai": "ความรับผิดชอบต่อสังคม",
+    "category": "General",
+    "level": "hard",
+    "hint": "being responsible and answerable for your actions"
+  },
+  {
+    "word": "hospital",
+    "thai": "โรงพยาบาล",
+    "category": "Places",
+    "level": "easy",
+    "hint": "where sick people go to be treated"
+  },
+  {
+    "word": "airport",
+    "thai": "สนามบิน",
+    "category": "Places",
+    "level": "easy",
+    "hint": "where planes take off and land"
+  },
+  {
+    "word": "library",
+    "thai": "ห้องสมุด",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a building full of books to borrow"
+  },
+  {
+    "word": "market",
+    "thai": "ตลาด",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a place to buy and sell goods"
+  },
+  {
+    "word": "park",
+    "thai": "สวนสาธารณะ",
+    "category": "Places",
+    "level": "easy",
+    "hint": "an outdoor area with grass and trees"
+  },
+  {
+    "word": "restaurant",
+    "thai": "ร้านอาหาร",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a place where you pay to eat food"
+  },
+  {
+    "word": "hotel",
+    "thai": "โรงแรม",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a place where travelers sleep"
+  },
+  {
+    "word": "school",
+    "thai": "โรงเรียน",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a place where children learn"
+  },
+  {
+    "word": "gym",
+    "thai": "โรงยิม",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a place to exercise and lift weights"
+  },
+  {
+    "word": "museum",
+    "thai": "พิพิธภัณฑ์",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a building that displays historical objects"
+  },
+  {
+    "word": "embassy",
+    "thai": "สถานทูต",
+    "category": "Places",
+    "level": "medium",
+    "hint": "office representing a country in another country"
+  },
+  {
+    "word": "stadium",
+    "thai": "สนามกีฬา",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a large venue for sports events"
+  },
+  {
+    "word": "warehouse",
+    "thai": "โกดัง / คลังสินค้า",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a large building for storing goods"
+  },
+  {
+    "word": "pharmacy",
+    "thai": "ร้านขายยา",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a shop where you buy medicine"
+  },
+  {
+    "word": "observatory",
+    "thai": "หอดูดาว",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a place with telescopes to study the sky"
+  },
+  {
+    "word": "courtroom",
+    "thai": "ห้องพิจารณาคดี",
+    "category": "Places",
+    "level": "medium",
+    "hint": "where legal trials take place"
+  },
+  {
+    "word": "vineyard",
+    "thai": "ไร่องุ่น",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a farm where grapes are grown for wine"
+  },
+  {
+    "word": "aquarium",
+    "thai": "พิพิธภัณฑ์สัตว์น้ำ",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a place where fish and sea life are displayed"
+  },
+  {
+    "word": "headquarters",
+    "thai": "สำนักงานใหญ่",
+    "category": "Places",
+    "level": "hard",
+    "hint": "the main office of an organization"
+  },
+  {
+    "word": "amphitheater",
+    "thai": "โรงละครกลางแจ้ง",
+    "category": "Places",
+    "level": "hard",
+    "hint": "an outdoor circular venue for performances"
+  },
+  {
+    "word": "penitentiary",
+    "thai": "เรือนจำ",
+    "category": "Places",
+    "level": "hard",
+    "hint": "a large prison for serious criminals"
+  },
+  {
+    "word": "catacombs",
+    "thai": "อุโมงค์ฝังศพใต้ดิน",
+    "category": "Places",
+    "level": "hard",
+    "hint": "underground tunnels used as burial chambers"
+  },
+  {
+    "word": "quarantine zone",
+    "thai": "เขตกักกันโรค",
+    "category": "Places",
+    "level": "hard",
+    "hint": "an area isolated to prevent disease spread"
+  },
+  {
+    "word": "consulate",
+    "thai": "สถานกงสุล",
+    "category": "Places",
+    "level": "hard",
+    "hint": "a government office in a foreign city"
+  },
+  {
+    "word": "beach",
+    "thai": "ชายหาด",
+    "category": "Places",
+    "level": "easy",
+    "hint": "sandy shore next to the sea"
+  },
+  {
+    "word": "zoo",
+    "thai": "สวนสัตว์",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a place where animals are kept for people to see"
+  },
+  {
+    "word": "supermarket",
+    "thai": "ซูเปอร์มาร์เก็ต",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a large shop that sells food and household items"
+  },
+  {
+    "word": "cinema",
+    "thai": "โรงภาพยนตร์",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a place where you watch movies on a big screen"
+  },
+  {
+    "word": "church",
+    "thai": "โบสถ์",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a building where Christians worship"
+  },
+  {
+    "word": "bank",
+    "thai": "ธนาคาร",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a place where you save and borrow money"
+  },
+  {
+    "word": "post office",
+    "thai": "ที่ทำการไปรษณีย์",
+    "category": "Places",
+    "level": "easy",
+    "hint": "where you send letters and packages"
+  },
+  {
+    "word": "playground",
+    "thai": "สนามเด็กเล่น",
+    "category": "Places",
+    "level": "easy",
+    "hint": "an outdoor area with swings and slides for children"
+  },
+  {
+    "word": "farm",
+    "thai": "ฟาร์ม",
+    "category": "Places",
+    "level": "easy",
+    "hint": "land where crops and animals are raised"
+  },
+  {
+    "word": "temple",
+    "thai": "วัด",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a place of worship in Buddhism or Hinduism"
+  },
+  {
+    "word": "stock exchange",
+    "thai": "ตลาดหลักทรัพย์",
+    "category": "Places",
+    "level": "medium",
+    "hint": "where shares of companies are bought and sold"
+  },
+  {
+    "word": "orphanage",
+    "thai": "บ้านเด็กกำพร้า",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a home for children without parents"
+  },
+  {
+    "word": "data center",
+    "thai": "ศูนย์ข้อมูล",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a building that houses computers and servers"
+  },
+  {
+    "word": "slaughterhouse",
+    "thai": "โรงฆ่าสัตว์",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a facility where animals are killed for meat"
+  },
+  {
+    "word": "refugee camp",
+    "thai": "ค่ายผู้ลี้ภัย",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a temporary settlement for people who fled their country"
+  },
+  {
+    "word": "power plant",
+    "thai": "โรงไฟฟ้า",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a facility that generates electricity"
+  },
+  {
+    "word": "pawnshop",
+    "thai": "โรงรับจำนำ",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a shop where you borrow money in exchange for valuables"
+  },
+  {
+    "word": "laundromat",
+    "thai": "ร้านซักรีด",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a place with coin-operated washing machines"
+  },
+  {
+    "word": "construction site",
+    "thai": "สถานที่ก่อสร้าง",
+    "category": "Places",
+    "level": "medium",
+    "hint": "where a new building is being built"
+  },
+  {
+    "word": "border crossing",
+    "thai": "ด่านตรวจชายแดน",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a checkpoint where you enter another country"
+  },
+  {
+    "word": "black site",
+    "thai": "สถานที่ลับของรัฐ",
+    "category": "Places",
+    "level": "hard",
+    "hint": "a secret government facility not officially acknowledged"
+  },
+  {
+    "word": "red-light district",
+    "thai": "ย่านโคมแดง",
+    "category": "Places",
+    "level": "hard",
+    "hint": "an area known for adult entertainment businesses"
+  },
+  {
+    "word": "safe house",
+    "thai": "บ้านพักลับ",
+    "category": "Places",
+    "level": "hard",
+    "hint": "a secret location for hiding people in danger"
+  },
+  {
+    "word": "money laundry",
+    "thai": "แหล่งฟอกเงิน",
+    "category": "Places",
+    "level": "hard",
+    "hint": "a place that disguises the origin of illegal money"
+  },
+  {
+    "word": "umbrella",
+    "thai": "ร่ม",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "protects you from rain"
+  },
+  {
+    "word": "mirror",
+    "thai": "กระจก",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "shows your reflection"
+  },
+  {
+    "word": "wallet",
+    "thai": "กระเป๋าสตางค์",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "you keep money and cards in it"
+  },
+  {
+    "word": "scissors",
+    "thai": "กรรไกร",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a tool with two blades for cutting"
+  },
+  {
+    "word": "candle",
+    "thai": "เทียน",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "gives light when you burn it"
+  },
+  {
+    "word": "pillow",
+    "thai": "หมอน",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "you rest your head on it when sleeping"
+  },
+  {
+    "word": "key",
+    "thai": "กุญแจ",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a small tool that opens a lock"
+  },
+  {
+    "word": "clock",
+    "thai": "นาฬิกา",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "tells you what time it is"
+  },
+  {
+    "word": "ladder",
+    "thai": "บันได",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "you climb it to reach high places"
+  },
+  {
+    "word": "thermometer",
+    "thai": "เทอร์โมมิเตอร์",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "measures temperature"
+  },
+  {
+    "word": "compass",
+    "thai": "เข็มทิศ",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "shows which direction is north"
+  },
+  {
+    "word": "telescope",
+    "thai": "กล้องโทรทรรศน์",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "makes distant things look close"
+  },
+  {
+    "word": "magnifying glass",
+    "thai": "แว่นขยาย",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "makes small things appear larger"
+  },
+  {
+    "word": "trophy",
+    "thai": "ถ้วยรางวัล",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a prize given to winners"
+  },
+  {
+    "word": "blueprint",
+    "thai": "แบบแปลนสิ่งก่อสร้าง",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a detailed technical drawing of a building"
+  },
+  {
+    "word": "hourglass",
+    "thai": "นาฬิกาทราย",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "measures time using falling sand"
+  },
+  {
+    "word": "barcode",
+    "thai": "บาร์โค้ด",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "black and white lines that store product info"
+  },
+  {
+    "word": "metronome",
+    "thai": "เมโทรนอม",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a device that keeps a steady beat for music"
+  },
+  {
+    "word": "stethoscope",
+    "thai": "หูฟังแพทย์",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "doctors use it to listen to your heart"
+  },
+  {
+    "word": "protractor",
+    "thai": "ไม้วัดมุม",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a semicircular tool for measuring angles"
+  },
+  {
+    "word": "defibrillator",
+    "thai": "เครื่องกระตุ้นหัวใจ",
+    "category": "Objects",
+    "level": "hard",
+    "hint": "a device that restarts a stopped heart with electricity"
+  },
+  {
+    "word": "periscope",
+    "thai": "กล้องเพอริสโคป",
+    "category": "Objects",
+    "level": "hard",
+    "hint": "a tube with mirrors used in submarines to see above water"
+  },
+  {
+    "word": "sextant",
+    "thai": "เครื่องวัดมุมดาว",
+    "category": "Objects",
+    "level": "hard",
+    "hint": "an instrument used to navigate by measuring stars"
+  },
+  {
+    "word": "spectrometer",
+    "thai": "สเปกโตรมิเตอร์",
+    "category": "Objects",
+    "level": "hard",
+    "hint": "a device that analyzes light wavelengths"
+  },
+  {
+    "word": "oscilloscope",
+    "thai": "ออสซิลโลสโคป",
+    "category": "Objects",
+    "level": "hard",
+    "hint": "shows electrical signals as waves on a screen"
+  },
+  {
+    "word": "spirometer",
+    "thai": "เครื่องวัดสมรรถภาพปอด",
+    "category": "Objects",
+    "level": "hard",
+    "hint": "measures how much air your lungs can hold"
+  },
+  {
+    "word": "toothbrush",
+    "thai": "แปรงสีฟัน",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "you use it to clean your teeth every day"
+  },
+  {
+    "word": "stamp",
+    "thai": "แสตมป์",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "small paper you stick on a letter to send it"
+  },
+  {
+    "word": "receipt",
+    "thai": "ใบเสร็จ",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a paper proof that you paid for something"
+  },
+  {
+    "word": "remote control",
+    "thai": "รีโมตคอนโทรล",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a device to operate a TV or AC from a distance"
+  },
+  {
+    "word": "suitcase",
+    "thai": "กระเป๋าเดินทาง",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a large bag with wheels for travel"
+  },
+  {
+    "word": "pen",
+    "thai": "ปากกา",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a tool you use to write"
+  },
+  {
+    "word": "calendar",
+    "thai": "ปฏิทิน",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "shows the days, weeks, and months of the year"
+  },
+  {
+    "word": "battery",
+    "thai": "แบตเตอรี่",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "stores energy to power devices"
+  },
+  {
+    "word": "rope",
+    "thai": "เชือก",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a thick twisted cord used to tie things"
+  },
+  {
+    "word": "map",
+    "thai": "แผนที่",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a drawing showing roads and places"
+  },
+  {
+    "word": "envelope",
+    "thai": "ซองจดหมาย",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a paper cover you put a letter inside"
+  },
+  {
+    "word": "glasses",
+    "thai": "แว่นตา",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "worn on your face to help you see better"
+  },
+  {
+    "word": "handcuffs",
+    "thai": "กุญแจมือ",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "metal rings police use to restrain a person's wrists"
+  },
+  {
+    "word": "binoculars",
+    "thai": "กล้องส่องทางไกล",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "two telescopes joined together to see far away"
+  },
+  {
+    "word": "safe",
+    "thai": "ตู้เซฟ",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a locked metal box for storing valuables"
+  },
+  {
+    "word": "polygraph",
+    "thai": "เครื่องจับเท็จ",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a machine used to detect if someone is lying"
+  },
+  {
+    "word": "USB drive",
+    "thai": "แฟลชไดรฟ์",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a small device you plug in to store files"
+  },
+  {
+    "word": "padlock",
+    "thai": "กุญแจคล้อง",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a portable lock with a metal loop"
+  },
+  {
+    "word": "walkie-talkie",
+    "thai": "วิทยุสื่อสาร",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a handheld two-way radio"
+  },
+  {
+    "word": "fire extinguisher",
+    "thai": "ถังดับเพลิง",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a canister used to spray foam or gas on fires"
+  },
+  {
+    "word": "wig",
+    "thai": "วิก / ผมปลอม",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "fake hair worn on your head as a disguise or costume"
+  },
+  {
+    "word": "briefcase",
+    "thai": "กระเป๋าเอกสาร",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a flat rectangular bag for carrying documents"
+  },
+  {
+    "word": "listening device",
+    "thai": "อุปกรณ์盗听",
+    "category": "Objects",
+    "level": "hard",
+    "hint": "a hidden microphone used to spy on conversations"
+  },
+  {
+    "word": "body cam",
+    "thai": "กล้องติดตัว",
+    "category": "Objects",
+    "level": "hard",
+    "hint": "a small camera worn on the body to record events"
+  },
+  {
+    "word": "night-vision goggles",
+    "thai": "แว่นตามองกลางคืน",
+    "category": "Objects",
+    "level": "hard",
+    "hint": "eyewear that lets you see in the dark"
+  },
+  {
+    "word": "silencer",
+    "thai": "ตัวเก็บเสียงปืน",
+    "category": "Objects",
+    "level": "hard",
+    "hint": "a device attached to a gun to reduce the sound"
+  },
+  {
+    "word": "teacher",
+    "thai": "ครู / อาจารย์",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "explains things and helps students learn"
+  },
+  {
+    "word": "doctor",
+    "thai": "แพทย์ / หมอ",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "treats sick or injured people"
+  },
+  {
+    "word": "chef",
+    "thai": "พ่อครัว / แม่ครัว",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a professional cook in a restaurant"
+  },
+  {
+    "word": "police",
+    "thai": "ตำรวจ",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "keeps people safe and enforces the law"
+  },
+  {
+    "word": "singer",
+    "thai": "นักร้อง",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "performs music using their voice"
+  },
+  {
+    "word": "farmer",
+    "thai": "เกษตรกร / ชาวนา",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "grows crops or raises animals for food"
+  },
+  {
+    "word": "pilot",
+    "thai": "นักบิน",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "flies airplanes"
+  },
+  {
+    "word": "firefighter",
+    "thai": "นักดับเพลิง",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "puts out fires and saves people"
+  },
+  {
+    "word": "athlete",
+    "thai": "นักกีฬา",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "competes in sports professionally"
+  },
+  {
+    "word": "scientist",
+    "thai": "นักวิทยาศาสตร์",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "studies and researches how the world works"
+  },
+  {
+    "word": "archaeologist",
+    "thai": "นักโบราณคดี",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "digs up and studies ancient objects"
+  },
+  {
+    "word": "journalist",
+    "thai": "นักข่าว",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "writes or reports news stories"
+  },
+  {
+    "word": "detective",
+    "thai": "นักสืบ",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "investigates crimes and finds clues"
+  },
+  {
+    "word": "diplomat",
+    "thai": "นักการทูต",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "represents their country abroad and negotiates"
+  },
+  {
+    "word": "astronaut",
+    "thai": "นักบินอวกาศ",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "travels to space"
+  },
+  {
+    "word": "therapist",
+    "thai": "นักบำบัด",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "helps people with emotional and mental health"
+  },
+  {
+    "word": "auctioneer",
+    "thai": "ผู้ประมูล / พิธีกรประมูล",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "runs sales where people bid for items"
+  },
+  {
+    "word": "sommelier",
+    "thai": "ผู้เชี่ยวชาญไวน์",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "an expert in selecting and serving wine"
+  },
+  {
+    "word": "actuary",
+    "thai": "นักคณิตศาสตร์ประกันภัย",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "calculates financial risk using statistics"
+  },
+  {
+    "word": "ghostwriter",
+    "thai": "ผู้เขียนเบื้องหลัง",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "writes content that someone else publishes as their own"
+  },
+  {
+    "word": "whistleblower",
+    "thai": "ผู้แจ้งเบาะแส",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "exposes illegal activity within an organization"
+  },
+  {
+    "word": "cryptographer",
+    "thai": "นักเข้ารหัส",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "creates or breaks secret codes"
+  },
+  {
+    "word": "undercover agent",
+    "thai": "สายลับ / สายสืบ",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "secretly infiltrates a group to gather information"
+  },
+  {
+    "word": "forensic accountant",
+    "thai": "นักบัญชีนิติเวช",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "investigates financial crimes through numbers"
+  },
+  {
+    "word": "double agent",
+    "thai": "สายลับสองหน้า",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "a spy who works for two opposing sides"
+  },
+  {
+    "word": "coroner",
+    "thai": "แพทย์นิติเวช",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "investigates the cause of suspicious deaths"
+  },
+  {
+    "word": "nurse",
+    "thai": "พยาบาล",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "helps doctors and takes care of patients"
+  },
+  {
+    "word": "cashier",
+    "thai": "แคชเชียร์",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "handles payments at a shop or restaurant"
+  },
+  {
+    "word": "driver",
+    "thai": "คนขับรถ",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "operates a vehicle to transport people or goods"
+  },
+  {
+    "word": "baker",
+    "thai": "คนทำขนมปัง",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "makes bread, cakes, and pastries"
+  },
+  {
+    "word": "judge",
+    "thai": "ผู้พิพากษา",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "makes legal decisions in a court"
+  },
+  {
+    "word": "actor",
+    "thai": "นักแสดง",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "performs roles in movies, TV, or theatre"
+  },
+  {
+    "word": "dentist",
+    "thai": "ทันตแพทย์",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a doctor who takes care of your teeth"
+  },
+  {
+    "word": "librarian",
+    "thai": "บรรณารักษ์",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "works in a library and helps people find books"
+  },
+  {
+    "word": "guard",
+    "thai": "เจ้าหน้าที่รักษาความปลอดภัย",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "protects a building or person"
+  },
+  {
+    "word": "photographer",
+    "thai": "ช่างภาพ",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "takes photos professionally"
+  },
+  {
+    "word": "mechanic",
+    "thai": "ช่างซ่อมรถ",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "repairs cars and engines"
+  },
+  {
+    "word": "waiter",
+    "thai": "บริกร / เวเตอร์",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "serves food and drinks at a restaurant"
+  },
+  {
+    "word": "hacker",
+    "thai": "แฮกเกอร์",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "breaks into computer systems"
+  },
+  {
+    "word": "lobbyist",
+    "thai": "นักล็อบบี้",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "tries to influence politicians on behalf of a group"
+  },
+  {
+    "word": "bounty hunter",
+    "thai": "นักล่าหัว",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "tracks down and captures fugitives for a reward"
+  },
+  {
+    "word": "profiler",
+    "thai": "นักทำโปรไฟล์อาชญากร",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "analyzes criminal behavior to help catch suspects"
+  },
+  {
+    "word": "middleman",
+    "thai": "คนกลาง",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "a person who connects buyers and sellers"
+  },
+  {
+    "word": "social worker",
+    "thai": "นักสังคมสงเคราะห์",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "helps vulnerable people improve their lives"
+  },
+  {
+    "word": "translator",
+    "thai": "ล่าม / นักแปล",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "converts speech or text from one language to another"
+  },
+  {
+    "word": "stockbroker",
+    "thai": "นายหน้าซื้อขายหุ้น",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "buys and sells shares on behalf of clients"
+  },
+  {
+    "word": "hitman",
+    "thai": "มือปืนรับจ้าง",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "a person hired to kill someone"
+  },
+  {
+    "word": "con artist",
+    "thai": "นักต้มตุ๋น",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "tricks people out of money through deception"
+  },
+  {
+    "word": "fixer",
+    "thai": "คนแก้ปัญหาเบื้องหลัง",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "secretly resolves problems for powerful people"
+  },
+  {
+    "word": "sleeper agent",
+    "thai": "สายลับที่ซ่อนตัวรอ",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "a spy who blends into society waiting to be activated"
+  },
+  {
+    "word": "mole",
+    "thai": "สายลับที่แฝงตัวอยู่ในองค์กร",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "a spy secretly working inside an organization"
+  },
+  {
+    "word": "money mule",
+    "thai": "ลูกหาบเงิน / ตัวนำเงิน",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "someone used to transfer illegally obtained money"
+  },
+  {
+    "word": "getaway driver",
+    "thai": "คนขับรถหลบหนี",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "drives the escape vehicle after a crime"
+  },
+  {
+    "word": "arms dealer",
+    "thai": "พ่อค้าอาวุธ",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "illegally trades weapons"
+  },
+  {
+    "word": "Eiffel Tower",
+    "thai": "หอไอเฟล",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a famous iron tower in Paris, France"
+  },
+  {
+    "word": "Great Wall",
+    "thai": "กำแพงเมืองจีน",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a very long ancient wall across northern China"
+  },
+  {
+    "word": "Colosseum",
+    "thai": "โคลอสเซียม",
+    "category": "Places",
+    "level": "easy",
+    "hint": "an ancient Roman arena used for gladiator fights"
+  },
+  {
+    "word": "Statue of Liberty",
+    "thai": "เทพีเสรีภาพ",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a giant green copper statue in New York harbor"
+  },
+  {
+    "word": "Big Ben",
+    "thai": "บิ๊กเบน",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a famous clock tower in London, England"
+  },
+  {
+    "word": "Taj Mahal",
+    "thai": "ทัชมาฮาล",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a white marble mausoleum in Agra, India"
+  },
+  {
+    "word": "Pyramids",
+    "thai": "พีระมิด",
+    "category": "Places",
+    "level": "easy",
+    "hint": "ancient triangular stone structures in Egypt"
+  },
+  {
+    "word": "Sydney Opera House",
+    "thai": "ซิดนีย์โอเปร่าเฮาส์",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a famous concert hall shaped like sails in Australia"
+  },
+  {
+    "word": "Mount Everest",
+    "thai": "ยอดเขาเอเวอเรสต์",
+    "category": "Places",
+    "level": "easy",
+    "hint": "the highest mountain in the world, in Nepal"
+  },
+  {
+    "word": "Grand Canyon",
+    "thai": "แกรนด์แคนยอน",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a vast red rock gorge in Arizona, USA"
+  },
+  {
+    "word": "Niagara Falls",
+    "thai": "น้ำตกไนแองการา",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a massive waterfall on the US-Canada border"
+  },
+  {
+    "word": "Santorini",
+    "thai": "ซานโตรีนี",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a Greek island famous for white buildings and blue domes"
+  },
+  {
+    "word": "Machu Picchu",
+    "thai": "มาชูปิกชู",
+    "category": "Places",
+    "level": "medium",
+    "hint": "an ancient Inca city high in the Andes mountains of Peru"
+  },
+  {
+    "word": "Angkor Wat",
+    "thai": "นครวัด",
+    "category": "Places",
+    "level": "medium",
+    "hint": "the largest Hindu temple complex, in Cambodia"
+  },
+  {
+    "word": "Stonehenge",
+    "thai": "สโตนเฮนจ์",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a prehistoric circle of giant standing stones in England"
+  },
+  {
+    "word": "Sagrada Família",
+    "thai": "ซากราดา ฟามิเลีย",
+    "category": "Places",
+    "level": "medium",
+    "hint": "Gaudí's unfinished cathedral in Barcelona, Spain"
+  },
+  {
+    "word": "Petra",
+    "thai": "เปตรา",
+    "category": "Places",
+    "level": "medium",
+    "hint": "an ancient city carved into rose-red rock in Jordan"
+  },
+  {
+    "word": "Louvre",
+    "thai": "พิพิธภัณฑ์ลูฟวร์",
+    "category": "Places",
+    "level": "medium",
+    "hint": "the world's largest art museum in Paris, home to the Mona Lisa"
+  },
+  {
+    "word": "Amazon River",
+    "thai": "แม่น้ำอเมซอน",
+    "category": "Places",
+    "level": "medium",
+    "hint": "the world's largest river by volume, flowing through Brazil"
+  },
+  {
+    "word": "Burj Khalifa",
+    "thai": "เบิร์จคาลิฟา",
+    "category": "Places",
+    "level": "medium",
+    "hint": "the world's tallest building, in Dubai"
+  },
+  {
+    "word": "Vatican",
+    "thai": "นครวาติกัน",
+    "category": "Places",
+    "level": "medium",
+    "hint": "the smallest country in the world, home of the Pope"
+  },
+  {
+    "word": "Galápagos Islands",
+    "thai": "หมู่เกาะกาลาปากอส",
+    "category": "Places",
+    "level": "hard",
+    "hint": "islands in Ecuador famous for unique wildlife that inspired Darwin"
+  },
+  {
+    "word": "Chernobyl",
+    "thai": "เชอร์โนบิล",
+    "category": "Places",
+    "level": "hard",
+    "hint": "site of a catastrophic 1986 nuclear disaster in Ukraine"
+  },
+  {
+    "word": "Area 51",
+    "thai": "แอเรีย 51",
+    "category": "Places",
+    "level": "hard",
+    "hint": "a classified US Air Force base famous for UFO conspiracy theories"
+  },
+  {
+    "word": "Japan",
+    "thai": "ญี่ปุ่น",
+    "category": "Places",
+    "level": "easy",
+    "hint": "an island nation known for sushi, anime, and Mount Fuji"
+  },
+  {
+    "word": "France",
+    "thai": "ฝรั่งเศส",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a European country famous for the Eiffel Tower and wine"
+  },
+  {
+    "word": "Brazil",
+    "thai": "บราซิล",
+    "category": "Places",
+    "level": "easy",
+    "hint": "the largest country in South America, famous for Carnival and football"
+  },
+  {
+    "word": "Australia",
+    "thai": "ออสเตรเลีย",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a continent-country known for kangaroos and the Great Barrier Reef"
+  },
+  {
+    "word": "India",
+    "thai": "อินเดีย",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a vast South Asian country known for the Taj Mahal and spices"
+  },
+  {
+    "word": "Egypt",
+    "thai": "อียิปต์",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a country in North Africa home to ancient pyramids"
+  },
+  {
+    "word": "Mexico",
+    "thai": "เม็กซิโก",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a North American country famous for tacos and Aztec ruins"
+  },
+  {
+    "word": "Italy",
+    "thai": "อิตาลี",
+    "category": "Places",
+    "level": "easy",
+    "hint": "a boot-shaped country in Europe known for pasta and the Colosseum"
+  },
+  {
+    "word": "South Korea",
+    "thai": "เกาหลีใต้",
+    "category": "Places",
+    "level": "easy",
+    "hint": "an East Asian country famous for K-pop and technology"
+  },
+  {
+    "word": "Russia",
+    "thai": "รัสเซีย",
+    "category": "Places",
+    "level": "easy",
+    "hint": "the world's largest country, spanning Europe and Asia"
+  },
+  {
+    "word": "Argentina",
+    "thai": "อาร์เจนตินา",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a South American country famous for tango and football legend Messi"
+  },
+  {
+    "word": "Norway",
+    "thai": "นอร์เวย์",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a Scandinavian country famous for fjords and the northern lights"
+  },
+  {
+    "word": "Switzerland",
+    "thai": "สวิตเซอร์แลนด์",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a landlocked European country known for chocolate, cheese, and banks"
+  },
+  {
+    "word": "Morocco",
+    "thai": "โมร็อกโก",
+    "category": "Places",
+    "level": "medium",
+    "hint": "a North African country known for its colorful medinas"
+  },
+  {
+    "word": "New Zealand",
+    "thai": "นิวซีแลนด์",
+    "category": "Places",
+    "level": "medium",
+    "hint": "an island nation near Australia famous for Lord of the Rings scenery"
+  },
+  {
+    "word": "Bangkok",
+    "thai": "กรุงเทพมหานคร",
+    "category": "Places",
+    "level": "easy",
+    "hint": "the capital of Thailand, known for temples and street food"
+  },
+  {
+    "word": "Tokyo",
+    "thai": "โตเกียว",
+    "category": "Places",
+    "level": "easy",
+    "hint": "the capital of Japan, the world's most populous metro area"
+  },
+  {
+    "word": "Paris",
+    "thai": "ปารีส",
+    "category": "Places",
+    "level": "easy",
+    "hint": "the capital of France, known as the City of Light"
+  },
+  {
+    "word": "London",
+    "thai": "ลอนดอน",
+    "category": "Places",
+    "level": "easy",
+    "hint": "the capital of the UK, home to Big Ben and Buckingham Palace"
+  },
+  {
+    "word": "Washington DC",
+    "thai": "วอชิงตัน ดี.ซี.",
+    "category": "Places",
+    "level": "easy",
+    "hint": "the capital of the United States, home of the White House"
+  },
+  {
+    "word": "Beijing",
+    "thai": "ปักกิ่ง",
+    "category": "Places",
+    "level": "easy",
+    "hint": "the capital of China"
+  },
+  {
+    "word": "Rome",
+    "thai": "โรม",
+    "category": "Places",
+    "level": "easy",
+    "hint": "the capital of Italy, known as the Eternal City"
+  },
+  {
+    "word": "Moscow",
+    "thai": "มอสโก",
+    "category": "Places",
+    "level": "easy",
+    "hint": "the capital of Russia"
+  },
+  {
+    "word": "Cairo",
+    "thai": "ไคโร",
+    "category": "Places",
+    "level": "easy",
+    "hint": "the capital of Egypt, near the Pyramids of Giza"
+  },
+  {
+    "word": "Nairobi",
+    "thai": "ไนโรบี",
+    "category": "Places",
+    "level": "medium",
+    "hint": "the capital of Kenya, a major hub in East Africa"
+  },
+  {
+    "word": "Reykjavik",
+    "thai": "เรคยาวิก",
+    "category": "Places",
+    "level": "medium",
+    "hint": "the capital of Iceland, one of the world's northernmost capitals"
+  },
+  {
+    "word": "Kathmandu",
+    "thai": "กาฐมาณฑุ",
+    "category": "Places",
+    "level": "medium",
+    "hint": "the capital of Nepal, gateway to the Himalayas"
+  },
+  {
+    "word": "Ulaanbaatar",
+    "thai": "อูลานบาตอร์",
+    "category": "Places",
+    "level": "hard",
+    "hint": "the capital of Mongolia, one of the coldest capitals on Earth"
+  },
+  {
+    "word": "Nur-Sultan",
+    "thai": "นูร์-ซุลตัน",
+    "category": "Places",
+    "level": "hard",
+    "hint": "the futuristic capital of Kazakhstan (also called Astana)"
+  },
+  {
+    "word": "Sherlock Holmes",
+    "thai": "เชอร์ล็อค โฮล์มส์",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a brilliant fictional detective created by Arthur Conan Doyle"
+  },
+  {
+    "word": "Santa Claus",
+    "thai": "ซานตาคลอส",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a jolly old man in red who delivers gifts on Christmas Eve"
+  },
+  {
+    "word": "Dracula",
+    "thai": "แดร็กคิวล่า",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a famous fictional vampire from Transylvania"
+  },
+  {
+    "word": "Robin Hood",
+    "thai": "โรบิน ฮู้ด",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a legendary English outlaw who stole from the rich to give to the poor"
+  },
+  {
+    "word": "Cinderella",
+    "thai": "ซินเดอเรลล่า",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a fairy-tale girl who loses her glass slipper at midnight"
+  },
+  {
+    "word": "James Bond",
+    "thai": "เจมส์ บอนด์",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a fictional British spy known as Agent 007"
+  },
+  {
+    "word": "Harry Potter",
+    "thai": "แฮร์รี่ พอตเตอร์",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a young wizard at Hogwarts School in a famous book series"
+  },
+  {
+    "word": "Pinocchio",
+    "thai": "พินอคคิโอ",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a wooden puppet whose nose grows when he lies"
+  },
+  {
+    "word": "Superman",
+    "thai": "ซูเปอร์แมน",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a superhero from Krypton who can fly and has super strength"
+  },
+  {
+    "word": "Romeo",
+    "thai": "โรมิโอ",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "the male lead in Shakespeare's most famous tragedy about love"
+  },
+  {
+    "word": "Napoleon",
+    "thai": "นโปเลียน",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "a French military general who became Emperor of France"
+  },
+  {
+    "word": "Cleopatra",
+    "thai": "คลีโอพัตรา",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "the last active ruler of ancient Egypt, famous for her intelligence and beauty"
+  },
+  {
+    "word": "Hercules",
+    "thai": "เฮอร์คิวลีส",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "a hero from Greek mythology famous for his incredible strength"
+  },
+  {
+    "word": "Medusa",
+    "thai": "เมดูซ่า",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "a monster from Greek mythology whose gaze turns people to stone"
+  },
+  {
+    "word": "Frankenstein",
+    "thai": "แฟรงเกนสไตน์",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "a scientist who creates a monster from body parts in a Gothic novel"
+  },
+  {
+    "word": "Don Quixote",
+    "thai": "ดอน กิโฆเต้",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "a Spanish literary character who believes he is a knight fighting windmills"
+  },
+  {
+    "word": "Hannibal Lecter",
+    "thai": "ฮันนิบัล เลกเตอร์",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "a brilliant but terrifying fictional cannibal psychiatrist"
+  },
+  {
+    "word": "Walter White",
+    "thai": "วอลเตอร์ ไวท์",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "a chemistry teacher who becomes a drug lord in Breaking Bad"
+  },
+  {
+    "word": "Macbeth",
+    "thai": "แมคเบธ",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "a Scottish general who murders the king to seize power in Shakespeare's play"
+  },
+  {
+    "word": "Machiavelli",
+    "thai": "มาเคียเวลลี",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "an Italian thinker who wrote that leaders should do anything to keep power"
+  },
+  {
+    "word": "Rasputin",
+    "thai": "รัสปูติน",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "a mysterious Russian mystic who had great influence over the Romanov royal family"
+  },
+  {
+    "word": "Iago",
+    "thai": "อีอาโก",
+    "category": "Characters",
+    "level": "hard",
+    "hint": "the manipulative villain in Shakespeare's Othello"
+  },
+  {
+    "word": "carrot",
+    "thai": "แครอท",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "an orange root vegetable rabbits love"
+  },
+  {
+    "word": "broccoli",
+    "thai": "บรอกโคลี",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a green vegetable that looks like a tiny tree"
+  },
+  {
+    "word": "onion",
+    "thai": "หัวหอม",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a vegetable that makes you cry when you cut it"
+  },
+  {
+    "word": "garlic",
+    "thai": "กระเทียม",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a strong-smelling ingredient used in cooking"
+  },
+  {
+    "word": "potato",
+    "thai": "มันฝรั่ง",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a starchy underground vegetable used for fries and chips"
+  },
+  {
+    "word": "tomato",
+    "thai": "มะเขือเทศ",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a red round fruit often used in salads and sauces"
+  },
+  {
+    "word": "cucumber",
+    "thai": "แตงกวา",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a long green vegetable often eaten raw in salads"
+  },
+  {
+    "word": "corn",
+    "thai": "ข้าวโพด",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a yellow vegetable on a cob"
+  },
+  {
+    "word": "mushroom",
+    "thai": "เห็ด",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a fungus you eat, shaped like an umbrella"
+  },
+  {
+    "word": "cabbage",
+    "thai": "กะหล่ำปลี",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a round leafy green vegetable"
+  },
+  {
+    "word": "spinach",
+    "thai": "ผักโขม",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a dark leafy green vegetable Popeye loves"
+  },
+  {
+    "word": "pumpkin",
+    "thai": "ฟักทอง",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a large orange vegetable carved at Halloween"
+  },
+  {
+    "word": "eggplant",
+    "thai": "มะเขือยาว",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a long purple vegetable used in stir-fries"
+  },
+  {
+    "word": "chili",
+    "thai": "พริก",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a small spicy pepper"
+  },
+  {
+    "word": "ginger",
+    "thai": "ขิง",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a knobbly root with a spicy flavor used in cooking and tea"
+  },
+  {
+    "word": "mango",
+    "thai": "มะม่วง",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a tropical yellow-orange fruit popular in Thailand"
+  },
+  {
+    "word": "durian",
+    "thai": "ทุเรียน",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "the \"king of fruits\" — spiky with a very strong smell"
+  },
+  {
+    "word": "strawberry",
+    "thai": "สตรอว์เบอร์รี",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a small red heart-shaped fruit, often in desserts"
+  },
+  {
+    "word": "watermelon",
+    "thai": "แตงโม",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a large green fruit with red flesh and black seeds"
+  },
+  {
+    "word": "banana",
+    "thai": "กล้วย",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a yellow curved fruit monkeys love"
+  },
+  {
+    "word": "pineapple",
+    "thai": "สับปะรด",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a tropical fruit with a spiky crown and sweet-sour taste"
+  },
+  {
+    "word": "grape",
+    "thai": "องุ่น",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "small round fruits that grow in clusters, used to make wine"
+  },
+  {
+    "word": "lemon",
+    "thai": "มะนาวเหลือง",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a sour yellow citrus fruit"
+  },
+  {
+    "word": "coconut",
+    "thai": "มะพร้าว",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a large tropical fruit with white flesh and sweet water inside"
+  },
+  {
+    "word": "papaya",
+    "thai": "มะละกอ",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "an orange tropical fruit used in som tum"
+  },
+  {
+    "word": "lychee",
+    "thai": "ลิ้นจี่",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a small white juicy tropical fruit with a rough red skin"
+  },
+  {
+    "word": "dragon fruit",
+    "thai": "แก้วมังกร",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a bright pink fruit with white flesh and black seeds"
+  },
+  {
+    "word": "avocado",
+    "thai": "อะโวคาโด",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a creamy green fruit used in guacamole and on toast"
+  },
+  {
+    "word": "passion fruit",
+    "thai": "เสาวรส",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a wrinkled purple fruit with tangy yellow seeds inside"
+  },
+  {
+    "word": "jackfruit",
+    "thai": "ขนุน",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "the world's largest tree fruit, with yellow pods inside"
+  },
+  {
+    "word": "pizza",
+    "thai": "พิซซ่า",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a flat round dish with tomato sauce and cheese, baked in an oven"
+  },
+  {
+    "word": "sushi",
+    "thai": "ซูชิ",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "Japanese rice rolls often topped with raw fish"
+  },
+  {
+    "word": "burger",
+    "thai": "เบอร์เกอร์",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a grilled patty in a bun with toppings"
+  },
+  {
+    "word": "noodles",
+    "thai": "เส้นก๋วยเตี๋ยว",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "long thin strips of pasta or wheat, eaten in soup or stir-fried"
+  },
+  {
+    "word": "ice cream",
+    "thai": "ไอศกรีม",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a sweet frozen dessert in a cone or cup"
+  },
+  {
+    "word": "chocolate",
+    "thai": "ช็อกโกแลต",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a sweet brown food made from cacao beans"
+  },
+  {
+    "word": "coffee",
+    "thai": "กาแฟ",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a hot dark drink made from roasted beans"
+  },
+  {
+    "word": "popcorn",
+    "thai": "ป๊อปคอร์น",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a snack made from heated corn kernels, eaten at the cinema"
+  },
+  {
+    "word": "ramen",
+    "thai": "ราเมน",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "Japanese noodle soup with broth, meat, and toppings"
+  },
+  {
+    "word": "pad thai",
+    "thai": "ผัดไทย",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "Thailand's most famous stir-fried noodle dish"
+  },
+  {
+    "word": "curry",
+    "thai": "แกงกะหรี่",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a spiced sauce dish popular in India and Thailand"
+  },
+  {
+    "word": "dim sum",
+    "thai": "ติ่มซำ",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "small Chinese dishes served in steamer baskets"
+  },
+  {
+    "word": "croissant",
+    "thai": "ครัวซองต์",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a buttery, flaky crescent-shaped French pastry"
+  },
+  {
+    "word": "fondue",
+    "thai": "ฟองดูว์",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a Swiss dish where you dip food into melted cheese or chocolate"
+  },
+  {
+    "word": "tiramisu",
+    "thai": "ทีรามิสุ",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "an Italian dessert made with coffee, mascarpone, and ladyfingers"
+  },
+  {
+    "word": "boba tea",
+    "thai": "ชานมไข่มุก",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a Taiwanese drink with tea, milk, and chewy tapioca balls"
+  },
+  {
+    "word": "kimchi",
+    "thai": "กิมจิ",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a Korean fermented spicy cabbage dish"
+  },
+  {
+    "word": "truffle",
+    "thai": "เห็ดทรัฟเฟิล",
+    "category": "Objects",
+    "level": "hard",
+    "hint": "a rare underground fungus considered a luxury food ingredient"
+  },
+  {
+    "word": "Mickey Mouse",
+    "thai": "มิกกี้เมาส์",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "Disney's iconic cartoon mouse with round black ears"
+  },
+  {
+    "word": "SpongeBob",
+    "thai": "สปองบ็อบ",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a cheerful yellow sea sponge who lives under the sea and fries burgers"
+  },
+  {
+    "word": "Doraemon",
+    "thai": "โดราเอมอน",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a blue robotic cat from the future with a magic pocket"
+  },
+  {
+    "word": "Pikachu",
+    "thai": "ปิกาจู",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a yellow electric mouse Pokémon"
+  },
+  {
+    "word": "Naruto",
+    "thai": "นารูโตะ",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a young ninja with a fox spirit sealed inside him"
+  },
+  {
+    "word": "Simba",
+    "thai": "ซิมบ้า",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "the young lion prince in The Lion King"
+  },
+  {
+    "word": "Elsa",
+    "thai": "เอลซ่า",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a queen with ice powers in Frozen"
+  },
+  {
+    "word": "Shrek",
+    "thai": "ชเร็ค",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a large green ogre who lives in a swamp"
+  },
+  {
+    "word": "Goku",
+    "thai": "โกคู",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a Saiyan warrior who trains to be the strongest in Dragon Ball"
+  },
+  {
+    "word": "Tom and Jerry",
+    "thai": "ทอมกับเจอร์รี",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a classic cartoon about a cat always chasing a mouse"
+  },
+  {
+    "word": "Winnie the Pooh",
+    "thai": "วินนี่เดอะพู",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a yellow bear who loves honey"
+  },
+  {
+    "word": "Bugs Bunny",
+    "thai": "บักส์ บันนี่",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a wise-cracking grey rabbit who munches carrots"
+  },
+  {
+    "word": "Totoro",
+    "thai": "โตโตโร่",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a giant fluffy forest spirit in a Studio Ghibli film"
+  },
+  {
+    "word": "Woody",
+    "thai": "วู้ดดี้",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a cowboy doll who is the leader of the toys in Toy Story"
+  },
+  {
+    "word": "Luffy",
+    "thai": "ลูฟฟี่",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a rubber-bodied pirate who wants to become King of the Pirates in One Piece"
+  },
+  {
+    "word": "Sailor Moon",
+    "thai": "เซเลอร์มูน",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "a magical girl warrior who fights evil in the name of the moon"
+  },
+  {
+    "word": "Spirited Away",
+    "thai": "มิติวิญญาณมหัศจรรย์",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "a Studio Ghibli film where a girl works in a spirit bathhouse"
+  },
+  {
+    "word": "Light Yagami",
+    "thai": "ไลท์ ยางามิ",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "a genius student who finds a notebook that kills anyone whose name is written in it"
+  },
+  {
+    "word": "Attack on Titan",
+    "thai": "อาณาจักรพินาศ",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "an anime where humanity lives behind walls to hide from giant humanoid monsters"
+  },
+  {
+    "word": "Levi Ackerman",
+    "thai": "กัปตันลีวาย",
+    "category": "Characters",
+    "level": "medium",
+    "hint": "humanity's strongest soldier in Attack on Titan"
+  },
+  {
+    "word": "Nobita",
+    "thai": "โนบิตะ",
+    "category": "Characters",
+    "level": "easy",
+    "hint": "Doraemon's clumsy owner who always needs help"
+  },
+  {
+    "word": "Apple",
+    "thai": "แอปเปิ้ล",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a tech company famous for iPhone, Mac, and a bitten fruit logo"
+  },
+  {
+    "word": "Google",
+    "thai": "กูเกิล",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "the world's most used search engine"
+  },
+  {
+    "word": "Netflix",
+    "thai": "เน็ตฟลิกซ์",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a streaming service where you binge-watch series"
+  },
+  {
+    "word": "YouTube",
+    "thai": "ยูทูบ",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a platform where anyone can upload and watch videos"
+  },
+  {
+    "word": "TikTok",
+    "thai": "ติ๊กต็อก",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "an app famous for short vertical videos"
+  },
+  {
+    "word": "Instagram",
+    "thai": "อินสตาแกรม",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a social media app built around sharing photos"
+  },
+  {
+    "word": "Amazon",
+    "thai": "อเมซอน",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "the world's largest online shopping platform"
+  },
+  {
+    "word": "Tesla",
+    "thai": "เทสลา",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "an electric car brand founded by Elon Musk"
+  },
+  {
+    "word": "Microsoft",
+    "thai": "ไมโครซอฟต์",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "the company behind Windows and Office"
+  },
+  {
+    "word": "Samsung",
+    "thai": "ซัมซุง",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a South Korean tech giant making phones, TVs, and chips"
+  },
+  {
+    "word": "Spotify",
+    "thai": "สปอติฟาย",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a music streaming app where you listen to millions of songs"
+  },
+  {
+    "word": "ChatGPT",
+    "thai": "แชตจีพีที",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "an AI chatbot made by OpenAI that answers almost anything"
+  },
+  {
+    "word": "Nike",
+    "thai": "ไนกี้",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a sportswear brand with a swoosh logo — \"Just Do It\""
+  },
+  {
+    "word": "Adidas",
+    "thai": "อาดิดาส",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a sportswear brand known for three stripes"
+  },
+  {
+    "word": "Louis Vuitton",
+    "thai": "หลุยส์ วิตตอง",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a French luxury brand famous for monogram bags"
+  },
+  {
+    "word": "Gucci",
+    "thai": "กุชชี่",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "an Italian luxury brand known for its double-G logo"
+  },
+  {
+    "word": "Chanel",
+    "thai": "ชาแนล",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a French luxury house famous for No. 5 perfume and the little black dress"
+  },
+  {
+    "word": "Zara",
+    "thai": "ซาร่า",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a fast-fashion brand that copies runway looks quickly"
+  },
+  {
+    "word": "H&M",
+    "thai": "เอชแอนด์เอ็ม",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a Swedish affordable fashion chain"
+  },
+  {
+    "word": "Rolex",
+    "thai": "โรเล็กซ์",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a Swiss luxury watch brand associated with success"
+  },
+  {
+    "word": "Hermès",
+    "thai": "แอร์เมส",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a French luxury brand famous for Birkin bags and silk scarves"
+  },
+  {
+    "word": "Balenciaga",
+    "thai": "บาเลนเซียก้า",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a high fashion brand known for oversized silhouettes and chunky sneakers"
+  },
+  {
+    "word": "Supreme",
+    "thai": "ซูพรีม",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a streetwear brand whose red box logo creates huge hype every drop"
+  },
+  {
+    "word": "McDonald's",
+    "thai": "แมคโดนัลด์",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a fast food chain famous for the Big Mac and golden arches"
+  },
+  {
+    "word": "Starbucks",
+    "thai": "สตาร์บัคส์",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a global coffee chain with a mermaid logo"
+  },
+  {
+    "word": "Coca-Cola",
+    "thai": "โคคา-โคล่า",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "the world's most famous cola drink in a red can"
+  },
+  {
+    "word": "Red Bull",
+    "thai": "เรดบูล",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "an energy drink originally from Thailand, sold worldwide"
+  },
+  {
+    "word": "KFC",
+    "thai": "เคเอฟซี",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a fried chicken fast food chain started by Colonel Sanders"
+  },
+  {
+    "word": "Oreo",
+    "thai": "โอรีโอ้",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a black-and-white sandwich cookie you twist, lick, and dunk"
+  },
+  {
+    "word": "Nutella",
+    "thai": "นูเทลล่า",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a sweet hazelnut-chocolate spread in a brown jar"
+  },
+  {
+    "word": "Lay's",
+    "thai": "เลย์ส",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a popular potato chip brand sold worldwide"
+  },
+  {
+    "word": "Toyota",
+    "thai": "โตโยต้า",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "the world's bestselling car brand, based in Japan"
+  },
+  {
+    "word": "Ferrari",
+    "thai": "เฟอร์รารี่",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "an Italian sports car brand known for speed and a prancing horse logo"
+  },
+  {
+    "word": "Lamborghini",
+    "thai": "แลมโบร์กินี",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "an Italian supercar brand whose cars are named after bulls"
+  },
+  {
+    "word": "Harley-Davidson",
+    "thai": "ฮาร์ลีย์-เดวิดสัน",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "an American motorcycle brand famous for its loud rumble"
+  },
+  {
+    "word": "Disney",
+    "thai": "ดิสนีย์",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "the entertainment giant behind Mickey Mouse, Pixar, and theme parks"
+  },
+  {
+    "word": "LEGO",
+    "thai": "เลโก้",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a Danish toy company famous for colorful plastic building bricks"
+  },
+  {
+    "word": "IKEA",
+    "thai": "อิเกีย",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "a Swedish furniture store where you assemble everything yourself"
+  },
+  {
+    "word": "Airbnb",
+    "thai": "แอร์บีเอ็นบี",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "a platform where people rent out their homes to travelers"
+  },
+  {
+    "word": "Uber",
+    "thai": "อูเบอร์",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "an app that lets you book a car ride from your phone"
+  },
+  {
+    "word": "NASA",
+    "thai": "นาซ่า",
+    "category": "Objects",
+    "level": "easy",
+    "hint": "the US space agency that sent astronauts to the Moon"
+  },
+  {
+    "word": "Harvard",
+    "thai": "ฮาร์วาร์ด",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "the most famous university in the world, in Boston USA"
+  },
+  {
+    "word": "Rolls-Royce",
+    "thai": "โรลส์-รอยซ์",
+    "category": "Objects",
+    "level": "medium",
+    "hint": "the ultimate symbol of luxury — cars and jet engines"
+  },
+  {
+    "word": "Patagonia",
+    "thai": "พาตาโกเนีย",
+    "category": "Objects",
+    "level": "hard",
+    "hint": "an outdoor clothing brand famous for sustainability and donating profits to the planet"
+  },
+  { "word": "coffee", "thai": "กาแฟ", "category": "Drinks", "level": "easy", "hint": "a hot dark drink made from roasted beans that helps you wake up" },
+  { "word": "tea", "thai": "ชา", "category": "Drinks", "level": "easy", "hint": "a hot drink made by pouring water over dried leaves" },
+  { "word": "water", "thai": "น้ำเปล่า", "category": "Drinks", "level": "easy", "hint": "the clearest drink with no taste, essential for life" },
+  { "word": "milk", "thai": "นม", "category": "Drinks", "level": "easy", "hint": "a white drink that comes from cows and is good for your bones" },
+  { "word": "juice", "thai": "น้ำผลไม้", "category": "Drinks", "level": "easy", "hint": "a drink squeezed from fruit" },
+  { "word": "beer", "thai": "เบียร์", "category": "Drinks", "level": "easy", "hint": "a bubbly alcoholic drink made from hops and barley" },
+  { "word": "wine", "thai": "ไวน์", "category": "Drinks", "level": "easy", "hint": "an alcoholic drink made from fermented grapes" },
+  { "word": "smoothie", "thai": "สมูทตี้", "category": "Drinks", "level": "easy", "hint": "a thick blended drink made from fruit and sometimes yogurt or milk" },
+  { "word": "lemonade", "thai": "น้ำมะนาว", "category": "Drinks", "level": "easy", "hint": "a cold sweet drink made from lemon juice and sugar" },
+  { "word": "soda", "thai": "โซดา / น้ำอัดลม", "category": "Drinks", "level": "easy", "hint": "a fizzy drink with bubbles, often sweet and flavored" },
+  { "word": "cocktail", "thai": "ค็อกเทล", "category": "Drinks", "level": "medium", "hint": "a mixed alcoholic drink, often colorful and served at parties" },
+  { "word": "espresso", "thai": "เอสเพรสโซ", "category": "Drinks", "level": "medium", "hint": "a very strong, small shot of coffee made by pushing hot water through ground beans" },
+  { "word": "latte", "thai": "ลาเต้", "category": "Drinks", "level": "medium", "hint": "a coffee drink made with espresso and lots of steamed milk" },
+  { "word": "matcha", "thai": "มัทฉะ", "category": "Drinks", "level": "medium", "hint": "a bright green Japanese powder made from ground tea leaves" },
+  { "word": "bubble tea", "thai": "ชานมไข่มุก", "category": "Drinks", "level": "medium", "hint": "a Taiwanese drink with tea, milk, and chewy tapioca balls at the bottom" },
+  { "word": "whiskey", "thai": "วิสกี้", "category": "Drinks", "level": "medium", "hint": "a strong alcoholic spirit aged in wooden barrels, often drunk on the rocks" },
+  { "word": "sparkling water", "thai": "น้ำอัดลมไม่มีรส", "category": "Drinks", "level": "medium", "hint": "plain water with bubbles but no sugar or flavor" },
+  { "word": "hot chocolate", "thai": "ช็อกโกแลตร้อน", "category": "Drinks", "level": "medium", "hint": "a warm sweet drink made from cocoa or melted chocolate and milk" },
+  { "word": "energy drink", "thai": "เครื่องดื่มชูกำลัง", "category": "Drinks", "level": "medium", "hint": "a drink with caffeine and sugar that claims to boost your energy" },
+  { "word": "kombucha", "thai": "คอมบูชา", "category": "Drinks", "level": "hard", "hint": "a fizzy fermented tea drink believed to be good for your gut" },
+  { "word": "mocktail", "thai": "ม็อกเทล", "category": "Drinks", "level": "hard", "hint": "a fancy mixed drink that looks like a cocktail but contains no alcohol" },
+  { "word": "cold brew", "thai": "โคลด์บรูว์", "category": "Drinks", "level": "hard", "hint": "coffee steeped in cold water for many hours instead of using heat" },
+  { "word": "affogato", "thai": "อัฟโฟกาโต้", "category": "Drinks", "level": "hard", "hint": "an Italian dessert drink — a shot of hot espresso poured over vanilla ice cream" }
+]
