@@ -289,6 +289,7 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
       <span class="chip chip-cat" id="rv-cat"></span>
       <span id="rv-lvl"></span>
     </div>
+    <button id="btn-reroll-inline" onclick="doReroll()" style="display:none;margin-top:12px;background:transparent;border:1.5px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.7);font-size:0.85rem;padding:6px 16px;border-radius:20px;cursor:pointer;">🎲 New Word</button>
   </div>
 
   <div id="rv-hint" style="display:none;" class="card">
@@ -692,7 +693,8 @@ function renderReveal(room) {
     if (myRole === 'master') document.getElementById('rv-hint-text').textContent = room.myHint || '';
   }
 
-  document.getElementById('btn-reroll').style.display = room.isMaster ? 'block' : 'none';
+  document.getElementById('btn-reroll').style.display        = 'none';
+  document.getElementById('btn-reroll-inline').style.display = room.isMaster ? 'block' : 'none';
 
   const iAmReady   = room.iAmReady;
   const lockedOut  = myRole === 'insider' && !room.masterIsReady;
@@ -1011,17 +1013,18 @@ function renderResult(room) {
   const caught   = room.winnerTeam === 'common';
   const noWinner = room.winnerTeam === 'none';
   const insiderName = room.insiderName || '???';
+  const b = `<strong style="color:var(--accent2);">${insiderName}</strong>`;
   const noWinnerTaunts = [
-    `ไม่มีใครได้แต้ม และ ${insiderName} ก็ไม่ได้ช่วยอะไรเลยนะ 🙄`,
-    `${insiderName} เป็น Insider แต่ทำให้ทุกคนแพ้ ขอบคุณมากเลย 👏`,
-    `${insiderName} หน้าที่คือช่วยให้ทายถูก แต่ดูเหมือนจะลืมไป 😶`,
-    `ทายไม่ได้เลย ${insiderName} คุณทำอะไรอยู่ 🤦`,
+    `ไม่มีใครได้แต้ม และ ${b} ก็ไม่ได้ช่วยอะไรเลยนะ 🙄`,
+    `${b} เป็น Insider แต่ทำให้ทุกคนแพ้ ขอบคุณมากเลย 👏`,
+    `${b} หน้าที่คือช่วยให้ทายถูก แต่ดูเหมือนจะลืมไป 😶`,
+    `ทายไม่ได้เลย ${b} คุณทำอะไรอยู่ 🤦`,
   ];
   const noWinnerTaunt = noWinnerTaunts[Math.floor(Math.random() * noWinnerTaunts.length)];
 
   document.getElementById('res-icon').textContent     = noWinner ? '⏰' : caught ? '🎉' : '🕵️';
   document.getElementById('res-title').textContent    = noWinner ? 'ไม่มีใครชนะ!' : caught ? 'Insider Caught!' : 'Insider Wins!';
-  document.getElementById('res-subtitle').textContent = noWinner
+  document.getElementById('res-subtitle').innerHTML = noWinner
     ? noWinnerTaunt
     : caught
     ? 'Common players successfully identified the Insider'
