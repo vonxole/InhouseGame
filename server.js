@@ -147,7 +147,7 @@ function startTimer(room) {
     if (room.timeLeft <= 0) {
       clearInterval(room.timer);
       room.timer = null;
-      endGame(room);
+      broadcastRoom(room); // stay in playing, master picks outcome
     }
   }, 1000);
 }
@@ -167,10 +167,11 @@ function updateScores(room) {
       const role = room.roles[p.id];
       if (role === 'master' || role === 'common') room.scores[p.id].score += 1;
     });
-  } else {
+  } else if (room.winnerTeam === 'insider') {
     // Insider wins → Insider +2
     if (insiderId && room.scores[insiderId]) room.scores[insiderId].score += 2;
   }
+  // winnerTeam === 'none' → word not guessed, no points for anyone
 }
 
 function endGame(room) {
@@ -304,6 +305,16 @@ io.on('connection', (socket) => {
     if (!room || room.state !== 'playing') return;
     if (room.roles[socket.id] !== 'master') return;
     endGame(room);
+  });
+
+  socket.on('word_not_guessed', () => {
+    const room = getRoom(socket.id);
+    if (!room || room.state !== 'playing') return;
+    if (room.roles[socket.id] !== 'master') return;
+    room.winnerTeam = 'none';
+    updateScores(room);
+    room.state = 'result';
+    broadcastRoom(room);
   });
 
   socket.on('cast_vote', ({ targetId }) => {

@@ -322,10 +322,16 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   <!-- Role reminder -->
   <div class="card" id="pl-role-card"></div>
 
-  <!-- Master: word guessed button -->
+  <!-- Master: word guessed button (during play) -->
   <div id="pl-master-btn" style="display:none;">
     <button class="btn btn-green" onclick="doWordGuessed()">✓ Word Guessed!</button>
     <p class="muted center" style="margin-top:8px;font-size:0.82rem;">Tap when someone says the correct word</p>
+  </div>
+  <!-- Master: time up — pick outcome -->
+  <div id="pl-timeup-btn" style="display:none;flex-direction:column;gap:10px;">
+    <p class="muted center" style="font-size:0.9rem;">⏰ Time's up — did they guess the word?</p>
+    <button class="btn btn-green" onclick="doWordGuessed()">✅ ทายได้</button>
+    <button class="btn" style="border:1.5px solid var(--red);color:var(--red);" onclick="doWordNotGuessed()">❌ ทายไม่ได้</button>
   </div>
 </div>
 
@@ -750,7 +756,9 @@ function renderPlaying(room) {
     common:  `<div style="display:flex;gap:12px;align-items:center;"><span style="font-size:1.6rem;">🙋</span><div><div style="font-weight:700;">Common</div><div class="muted" style="font-size:0.85rem;">Ask yes/no questions, then find the Insider</div></div></div>`,
   };
   document.getElementById('pl-role-card').innerHTML = roleInfo[myRole] || '';
-  document.getElementById('pl-master-btn').style.display = myRole === 'master' ? 'block' : 'none';
+  const timeUp = (room.timeLeft ?? 1) <= 0;
+  document.getElementById('pl-master-btn').style.display  = myRole === 'master' && !timeUp ? 'block' : 'none';
+  document.getElementById('pl-timeup-btn').style.display  = myRole === 'master' && timeUp  ? 'flex'  : 'none';
 
   updateTimer(room.timeLeft ?? timerTotal);
 }
@@ -768,7 +776,8 @@ function updateTimer(t) {
   bar.style.background = t > 60 ? 'var(--green)' : t > 30 ? 'var(--yellow)' : 'var(--red)';
 }
 
-function doWordGuessed() { socket.emit('word_guessed'); }
+function doWordGuessed()    { socket.emit('word_guessed'); }
+function doWordNotGuessed() { socket.emit('word_not_guessed'); }
 
 // ── Voting (face-to-face) ─────────────────────────────────────────────────────
 function renderVoting(room) {
@@ -999,10 +1008,13 @@ function doLeaveRoom() {
 // ── Result ────────────────────────────────────────────────────────────────────
 function renderResult(room) {
   show('s-result');
-  const caught = room.winnerTeam === 'common';
-  document.getElementById('res-icon').textContent     = caught ? '🎉' : '🕵️';
-  document.getElementById('res-title').textContent    = caught ? 'Insider Caught!' : 'Insider Wins!';
-  document.getElementById('res-subtitle').textContent = caught
+  const caught   = room.winnerTeam === 'common';
+  const noWinner = room.winnerTeam === 'none';
+  document.getElementById('res-icon').textContent     = noWinner ? '⏰' : caught ? '🎉' : '🕵️';
+  document.getElementById('res-title').textContent    = noWinner ? 'No one wins!' : caught ? 'Insider Caught!' : 'Insider Wins!';
+  document.getElementById('res-subtitle').textContent = noWinner
+    ? 'Word was not guessed in time — everyone loses'
+    : caught
     ? 'Common players successfully identified the Insider'
     : 'The Insider escaped — better luck next time!';
   document.getElementById('res-word').textContent      = room.word     || '—';
