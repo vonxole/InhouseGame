@@ -398,6 +398,8 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   <!-- Insider: small hint only -->
   <p id="rv-insider-hint" style="display:none;font-size:0.8rem;opacity:.45;text-align:center;font-style:italic;padding:0 16px;line-height:1.5;"></p>
 
+  <button class="btn" id="btn-peek" onclick="togglePeek()" style="display:none;background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.9rem;">👁 Peek at word</button>
+
   <button class="btn btn-primary" id="btn-ready" onclick="doReady()">Ready</button>
   <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:0.9rem;">❓ Don't know this word</button>
   <button class="btn" id="btn-reroll" onclick="doReroll()" style="display:none;background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.9rem;">🎲 New Word</button>
@@ -836,24 +838,20 @@ function renderReveal(room) {
 
   const showWord = myRole === 'master' || myRole === 'insider';
   const wordBox = document.getElementById('rv-word');
-  wordBox.style.display = showWord ? 'block' : 'none';
-  // Insider: tone down & shrink word box so it doesn't stand out vs Common's screen
+  // Insider: hide word box until peek button tapped
+  wordBox.style.display = (showWord && myRole !== 'insider') ? 'block' : 'none';
   const wordTextEl = document.getElementById('rv-word-text');
-  if (myRole === 'insider') {
-    wordBox.style.background = 'var(--card)';
-    wordBox.style.border     = '1.5px solid var(--border)';
-    wordBox.style.color      = 'var(--text)';
-    wordBox.style.padding    = '10px 16px';
-    wordTextEl.style.fontSize = '1.4rem';
-    wordTextEl.style.fontWeight = '600';
-  } else {
-    wordBox.style.background = '';
-    wordBox.style.border     = '';
-    wordBox.style.color      = '';
-    wordBox.style.padding    = '';
-    wordTextEl.style.fontSize = '';
-    wordTextEl.style.fontWeight = '';
-  }
+  wordBox.style.background = '';
+  wordBox.style.border     = '';
+  wordBox.style.color      = '';
+  wordBox.style.padding    = '';
+  wordTextEl.style.fontSize = '';
+  wordTextEl.style.fontWeight = '';
+
+  // Peek button: only for insider, hidden once ready
+  const peekBtn = document.getElementById('btn-peek');
+  peekBtn.style.display = (myRole === 'insider' && !room.iAmReady) ? 'block' : 'none';
+  peekBtn.textContent = '👁 Peek at word';
   document.getElementById('rv-hint').style.display = myRole === 'master' ? 'block' : 'none';
   const insiderHintEl = document.getElementById('rv-insider-hint');
   if (showWord) {
@@ -876,7 +874,7 @@ function renderReveal(room) {
       insiderHintEl.style.display = 'none';
     } else if (myRole === 'insider' && room.myHint) {
       insiderHintEl.textContent = `${room.myHint}${room.myHintThai ? '  ·  ' + room.myHintThai : ''}`;
-      insiderHintEl.style.display = 'block';
+      insiderHintEl.style.display = 'none'; // hidden until peek
     } else {
       insiderHintEl.style.display = 'none';
     }
@@ -885,6 +883,8 @@ function renderReveal(room) {
   document.getElementById('btn-reroll').style.display          = 'none';
   document.getElementById('btn-reroll-inline').style.display   = room.isMaster ? 'block' : 'none';
   document.getElementById('btn-insider-unknown').style.display = (myRole === 'insider' && !room.iAmReady) ? 'block' : 'none';
+  // Hide peek btn once ready
+  if (room.iAmReady) document.getElementById('btn-peek').style.display = 'none';
 
   const iAmReady   = room.iAmReady;
   const lockedOut  = (myRole === 'insider' || myRole === 'common') && !room.masterIsReady;
@@ -934,9 +934,17 @@ function doReroll() {
   socket.emit('reroll_word');
 }
 
-async function doInsiderUnknown() {
-  const ok = await showConfirm("Don't know this word?\nMaster will pick a new one.", "New Word");
-  if (!ok) return;
+function togglePeek() {
+  const wordBox = document.getElementById('rv-word');
+  const hintEl  = document.getElementById('rv-insider-hint');
+  const btn     = document.getElementById('btn-peek');
+  const visible = wordBox.style.display !== 'none';
+  wordBox.style.display = visible ? 'none' : 'block';
+  hintEl.style.display  = visible ? 'none' : 'block';
+  btn.textContent = visible ? '👁 Peek at word' : '🙈 Hide word';
+}
+
+function doInsiderUnknown() {
   socket.emit('insider_unknown');
 }
 
