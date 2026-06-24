@@ -9,6 +9,9 @@ const io = new Server(server, { cors: { origin: '*' } });
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+const START_TIME = new Date();
+app.get('/api/version', (_, res) => res.json({ startedAt: START_TIME.toISOString() }));
+
 // ── Word Bank ─────────────────────────────────────────────────────────────────
 // Loaded from words.json — edit that file to add/remove words
 // category: 'General' | 'Places' | 'Objects' | 'Characters'

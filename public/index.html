@@ -180,7 +180,7 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
     <div style="font-size:3rem;">🕵️</div>
     <h1>Inhouse <span>Insider</span></h1>
     <p class="muted" style="margin-top:6px;">Office English party game</p>
-    <p style="font-size:0.72rem;opacity:.35;margin-top:2px;">v2026.06.24 14:30</p>
+    <p id="version-label" style="font-size:0.72rem;opacity:.35;margin-top:2px;"></p>
   </div>
   <div class="card" style="display:flex;flex-direction:column;gap:12px;">
     <div>
@@ -1236,6 +1236,14 @@ function doPlayAgain(){ socket.emit('play_again'); }
 function doLeave()    { clearSession(); location.reload(); }
 
 socket.on('error', msg => toast('⚠️ ' + msg));
+
+fetch('/api/version').then(r => r.json()).then(({ startedAt }) => {
+  const d = new Date(startedAt);
+  const pad = n => String(n).padStart(2, '0');
+  const label = `${d.getFullYear()}.${pad(d.getMonth()+1)}.${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+  const el = document.getElementById('version-label');
+  if (el) el.textContent = label;
+}).catch(() => {});
 </script>
 </body>
 </html>
