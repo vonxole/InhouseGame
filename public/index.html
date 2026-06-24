@@ -447,9 +447,10 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   <!-- Shared word box — all roles see this box, content differs -->
   <div id="rv-word" class="word-box" style="background:var(--card);border:1.5px solid var(--border);padding:12px 16px;position:relative;">
     <button id="btn-reroll-inline" onclick="doReroll()" style="display:none;position:absolute;top:10px;right:10px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.6);font-size:0.75rem;padding:4px 10px;border-radius:20px;cursor:pointer;letter-spacing:.02em;">🎲 New</button>
-    <div class="wlabel" id="rv-word-label">Secret Word</div>
-    <div class="wword" id="rv-word-text" style="font-size:1.3rem;font-weight:700;margin:4px 0 1px;"></div>
-    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px;">
+    <button id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;position:absolute;top:10px;right:10px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.6);font-size:1rem;width:32px;height:32px;border-radius:50%;cursor:pointer;padding:0;line-height:1;">🎲</button>
+    <div class="wlabel" id="rv-word-label" style="text-align:center;">Secret Word</div>
+    <div class="wword" id="rv-word-text" style="font-size:1.3rem;font-weight:700;margin:4px 0 1px;text-align:center;"></div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:4px;">
       <span id="rv-word-thai" style="font-size:0.82rem;opacity:.5;"></span>
       <span class="chip chip-cat" id="rv-cat"></span>
       <span id="rv-lvl"></span>
@@ -468,7 +469,6 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
 
   <div id="rv-action-row" style="display:flex;gap:8px;align-items:stretch;">
     <button class="btn btn-primary" id="btn-ready" onclick="doReady()" style="flex:1;min-width:0;">Ready</button>
-    <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;flex:0 0 52px;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:1.2rem;padding:0;white-space:nowrap;">🎲</button>
   </div>
   <div class="center" style="margin-top:8px;">
     <p class="muted" style="font-size:0.82rem;margin-bottom:4px;" id="rv-wait-msg"></p>
