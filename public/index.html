@@ -170,6 +170,20 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
 .result-icon  { font-size: 5rem; text-align: center; }
 .result-title { font-size: 1.7rem; font-weight: 900; text-align: center; }
 
+/* Toggle switch */
+.toggle-switch { position:relative; display:inline-block; width:44px; height:24px; }
+.toggle-switch input { opacity:0; width:0; height:0; }
+.toggle-track {
+  position:absolute; inset:0; border-radius:24px;
+  background:var(--border); cursor:pointer; transition:.2s;
+}
+.toggle-track::before {
+  content:''; position:absolute; width:18px; height:18px;
+  border-radius:50%; background:#fff; top:3px; left:3px; transition:.2s;
+}
+.toggle-switch input:checked + .toggle-track { background:var(--accent); }
+.toggle-switch input:checked + .toggle-track::before { transform:translateX(20px); }
+
 /* Example questions — Star Wars crawl */
 .example-q-box { padding: 0 4px; }
 .example-q-box .eq-title {
@@ -370,12 +384,19 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
     </div>
   </div>
 
-  <!-- Password (host only) -->
+  <!-- Password + toggles (host only) -->
   <div class="card" id="l-password-wrap" style="display:none;">
     <label>Room password <span class="muted" style="font-size:0.8rem;">(optional)</span></label>
     <input id="inp-room-password" type="text" placeholder="Leave blank = open room" maxlength="20" autocomplete="off"
       oninput="socket.emit('set_password', { password: this.value })"
       style="margin-top:6px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;">
+      <span style="font-size:0.88rem;">💬 Example questions</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="tog-examples" checked onchange="socket.emit('set_show_examples', { value: this.checked })">
+        <span class="toggle-track"></span>
+      </label>
+    </div>
   </div>
 
   <!-- Non-host: see current settings -->
@@ -801,6 +822,7 @@ function renderLobby(room) {
     syncPills('fg-lvl', room.filterLevels    || []);
     syncSlider('sl-play',    'play-val',    room.playTime    || 180);
     syncSlider('sl-discuss', 'discuss-val', room.discussTime || 60);
+    document.getElementById('tog-examples').checked = room.showExamples !== false;
   } else {
     document.getElementById('l-filters').style.display       = 'none';
     document.getElementById('l-password-wrap').style.display = 'none';
@@ -943,7 +965,7 @@ function renderReveal(room) {
   renderReadyDots(room.revealsDone?.length || 0, room.players.length);
 
   // Example questions (not shown to master — they already know the word)
-  const showEQ = myRole !== 'master';
+  const showEQ = myRole !== 'master' && room.showExamples;
   document.getElementById('rv-example-q').style.display = showEQ ? 'block' : 'none';
   if (showEQ) renderExampleQ('rv-eq-box');
 }
@@ -1062,7 +1084,7 @@ function renderPlaying(room) {
 
   // Example questions — shown to common & insider, re-randomised each render
   const plEQ = document.getElementById('pl-example-q');
-  if (myRole !== 'master') {
+  if (myRole !== 'master' && room.showExamples) {
     plEQ.style.display = 'block';
     renderExampleQ('pl-eq-box');
   } else {

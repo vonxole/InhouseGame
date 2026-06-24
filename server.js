@@ -59,6 +59,7 @@ function createRoom(hostId, hostName) {
     voteTimeLeft: 0,
     scores: {},         // playerId → { name, score }
     password: '',       // '' = no password
+    showExamples: true, // show example questions during reveal/playing
   };
   return code;
 }
@@ -118,6 +119,7 @@ function broadcastRoom(room) {
     wordThai:    room.state === 'result' ? room.wordThai  : null,
     winnerTeam:  room.state === 'result' ? room.winnerTeam  : null,
     scores: Object.values(room.scores).sort((a, b) => b.score - a.score),
+    showExamples: room.showExamples,
   };
   room.players.forEach(p => {
     const role   = room.roles[p.id] || null;
@@ -249,6 +251,13 @@ io.on('connection', (socket) => {
     if (!room || room.hostId !== socket.id || room.state !== 'lobby') return;
     room.password = (password || '').trim();
     broadcastRoomList();
+  });
+
+  socket.on('set_show_examples', ({ value }) => {
+    const room = getRoom(socket.id);
+    if (!room || room.hostId !== socket.id || room.state !== 'lobby') return;
+    room.showExamples = !!value;
+    broadcastRoom(room);
   });
 
   socket.on('set_master', ({ playerId }) => {
