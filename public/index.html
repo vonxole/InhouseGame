@@ -464,9 +464,9 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
     <p id="rv-hint-thai" style="margin-top:4px;font-size:0.82rem;opacity:.45;line-height:1.5;"></p>
   </div>
 
-  <div id="rv-action-row" style="display:flex;gap:8px;">
+  <div id="rv-action-row" style="display:flex;gap:8px;align-items:stretch;">
     <button class="btn btn-primary" id="btn-ready" onclick="doReady()" style="flex:1;">Ready</button>
-    <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;flex:1;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:0.85rem;">❓ Don't know</button>
+    <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;flex:0 0 auto;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:0.78rem;padding:0 14px;white-space:nowrap;">❓ Don't know</button>
   </div>
   <button class="btn" id="btn-reroll" onclick="doReroll()" style="display:none;background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.9rem;">🎲 New Word</button>
 
@@ -649,13 +649,32 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
       <p style="font-size:0.88rem;line-height:1.5;">• ถ้าคำถามใกล้เฉลยเกินไป Master บอกว่า <strong>"Getting warm — rephrase it"</strong></p>
     </div>
 
-    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">เริ่มต้นด้วยคำถามกว้างๆ</p>
+    <!-- Strategy -->
+    <div style="background:rgba(124,58,237,.12);border-radius:10px;padding:12px 14px;margin-bottom:18px;">
+      <p style="font-size:0.82rem;font-weight:600;margin-bottom:8px;">วิธีถามให้ได้คำเร็ว</p>
+      <div style="display:flex;flex-direction:column;gap:5px;">
+        <p style="font-size:0.82rem;line-height:1.5;">1️⃣  <strong>Category</strong> — ระบุก่อนว่าเป็นอะไร</p>
+        <p style="font-size:0.82rem;line-height:1.5;">2️⃣  <strong>Location</strong> — หาได้ที่ไหน</p>
+        <p style="font-size:0.82rem;line-height:1.5;">3️⃣  <strong>Characteristics</strong> — ลักษณะทั่วไป</p>
+        <p style="font-size:0.82rem;line-height:1.5;">4️⃣  <strong>Specific</strong> — เจาะจงจนเดาได้</p>
+      </div>
+    </div>
+
+    <!-- Example game -->
+    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">ตัวอย่างเกม — คำลับคือ 🐶 Dog</p>
+    <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:20px;" id="qg-example"></div>
+
+    <!-- Question bank -->
+    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">1️⃣  Category — เป็นอะไร</p>
     <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:16px;" id="qg-broad"></div>
 
-    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">แคบลงเรื่อยๆ</p>
+    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">2️⃣  Location — หาได้ที่ไหน</p>
     <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:16px;" id="qg-narrow"></div>
 
-    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">ถ้าใกล้ได้แล้ว</p>
+    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">3️⃣  Characteristics — ลักษณะทั่วไป</p>
+    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:16px;" id="qg-char"></div>
+
+    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">4️⃣  Specific — เจาะจง</p>
     <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:20px;" id="qg-close"></div>
 
     <button class="btn btn-primary" onclick="document.getElementById('qg-modal').style.display='none'">Got it!</button>
@@ -1514,32 +1533,72 @@ socket.on('player_left', ({ name }) => toast(`👋 ${name} left the room`));
       <span style="font-size:0.78rem;color:var(--muted);">${th}</span>
     </div>`;
   }
+
+  // Example game: Dog — follows 4-step strategy
+  const example = [
+    { step: '1️⃣', q: 'Is it alive?',              a: 'Yes',     th: 'มีชีวิตไหม' },
+    { step: '1️⃣', q: 'Is it an animal?',           a: 'Yes',     th: 'เป็นสัตว์ไหม' },
+    { step: '2️⃣', q: 'Can you find it at home?',   a: 'Yes',     th: 'เจอได้ที่บ้านไหม' },
+    { step: '2️⃣', q: 'Does it live outdoors too?', a: 'Yes',     th: 'อยู่ข้างนอกได้ด้วยไหม' },
+    { step: '3️⃣', q: 'Does it have 4 legs?',       a: 'Yes',     th: 'มี 4 ขาไหม' },
+    { step: '3️⃣', q: 'Does it make a sound?',      a: 'Yes',     th: 'ส่งเสียงได้ไหม' },
+    { step: '4️⃣', q: 'Is it a pet?',               a: 'Yes',     th: 'เลี้ยงเป็นสัตว์เลี้ยงได้ไหม' },
+    { step: '4️⃣', q: 'Is it a cat?',               a: 'No',      th: 'เป็นแมวไหม' },
+    { step: '4️⃣', q: 'Is it a dog?',               a: '🎉 Yes!', th: 'เป็นหมาไหม' },
+  ];
+  const aColor = { 'Yes': '#10b981', 'No': '#ef4444', '🎉 Yes!': '#f59e0b' };
+  document.getElementById('qg-example').innerHTML = example.map(({step, q, a, th}) =>
+    `<div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.04);border-radius:8px;padding:8px 12px;">
+      <span style="font-size:0.8rem;opacity:.5;min-width:24px;">${step}</span>
+      <div style="flex:1;">
+        <span style="font-size:0.9rem;">${q}</span><br>
+        <span style="font-size:0.75rem;color:var(--muted);">${th}</span>
+      </div>
+      <span style="font-weight:700;font-size:0.9rem;color:${aColor[a] || '#e2e8f0'};white-space:nowrap;">${a}</span>
+    </div>`
+  ).join('');
+
+  // 1. Category
   const broad = [
-    ['Is it a living thing?', 'เป็นสิ่งมีชีวิตไหม'],
-    ['Is it a place?', 'เป็นสถานที่ไหม'],
-    ['Is it something you can touch?', 'จับต้องได้ไหม'],
-    ['Is it related to technology?', 'เกี่ยวกับเทคโนโลยีไหม'],
-    ['Can you eat or drink it?', 'กินหรือดื่มได้ไหม'],
+    ['Is it alive?',           'มีชีวิตไหม'],
+    ['Is it an animal?',       'เป็นสัตว์ไหม'],
+    ['Is it a plant?',         'เป็นพืชไหม'],
+    ['Is it a place?',         'เป็นสถานที่ไหม'],
+    ['Is it an object?',       'เป็นวัตถุไหม'],
+    ['Is it a person?',        'เป็นคนไหม'],
+    ['Is it an idea or action?', 'เป็นความคิดหรือการกระทำไหม'],
   ];
+  // 2. Location
   const narrow = [
-    ['Is it bigger than a phone?', 'ใหญ่กว่ามือถือไหม'],
-    ['Can you find it at work?', 'เจอได้ในออฟฟิศไหม'],
-    ['Is it made of metal?', 'ทำจากโลหะไหม'],
-    ['Do people use it every day?', 'คนใช้ทุกวันไหม'],
-    ['Does it need electricity?', 'ต้องใช้ไฟฟ้าไหม'],
-    ['Can you buy it at a store?', 'ซื้อได้ที่ร้านไหม'],
-    ['Is it usually found indoors?', 'ปกติอยู่ในร่มไหม'],
+    ['Can you find it at home?',    'เจอได้ที่บ้านไหม'],
+    ['Can you find it at work?',    'เจอได้ในออฟฟิศไหม'],
+    ['Can you find it outdoors?',   'เจอได้ข้างนอกไหม'],
+    ['Can you find it in a store?', 'เจอได้ในร้านค้าไหม'],
+    ['Is it common in Thailand?',   'พบได้ทั่วไปในไทยไหม'],
+    ['Is it found worldwide?',      'มีทั่วโลกไหม'],
   ];
+  // 3. Characteristics
+  const chars = [
+    ['Is it bigger than a phone?',   'ใหญ่กว่ามือถือไหม'],
+    ['Can you hold it in one hand?', 'ถือด้วยมือเดียวได้ไหม'],
+    ['Is it made of metal?',         'ทำจากโลหะไหม'],
+    ['Does it make a sound?',        'ส่งเสียงได้ไหม'],
+    ['Does it need electricity?',    'ต้องใช้ไฟฟ้าไหม'],
+    ['Does it have a colour?',       'มีสีไหม'],
+    ['Does it move on its own?',     'เคลื่อนที่เองได้ไหม'],
+  ];
+  // 4. Specific
   const close = [
-    ['Is it an animal?', 'เป็นสัตว์ไหม'],
-    ['Is it found in Asia?', 'อยู่ในเอเชียไหม'],
-    ['Is it used for communication?', 'ใช้สื่อสารไหม'],
+    ['Is it a pet?',              'เลี้ยงเป็นสัตว์เลี้ยงได้ไหม'],
+    ['Do most people own one?',   'คนส่วนใหญ่มีไหม'],
+    ['Is it used every day?',     'ใช้ทุกวันไหม'],
+    ['Is it related to a job?',   'เกี่ยวกับอาชีพไหม'],
     ['Is it something you wear?', 'สวมใส่ได้ไหม'],
-    ['Is it a type of person?', 'เป็นประเภทของคนไหม'],
-    ['Is it related to a job?', 'เกี่ยวกับอาชีพไหม'],
+    ['Is it for children?',       'สำหรับเด็กไหม'],
   ];
   document.getElementById('qg-broad').innerHTML  = broad.map(([e,t])  => qRow(e,t)).join('');
   document.getElementById('qg-narrow').innerHTML = narrow.map(([e,t]) => qRow(e,t)).join('');
+  document.getElementById('qg-char').innerHTML   = chars.map(([e,t])  => qRow(e,t)).join('');
   document.getElementById('qg-close').innerHTML  = close.map(([e,t])  => qRow(e,t)).join('');
 })();
 
