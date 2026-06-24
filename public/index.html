@@ -196,42 +196,93 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
 
   <details style="width:100%;max-width:400px;">
     <summary style="cursor:pointer;color:var(--muted);font-size:0.88rem;text-align:center;list-style:none;user-select:none;">📖 How to play</summary>
-    <div class="card" style="margin-top:12px;display:flex;flex-direction:column;gap:14px;font-size:0.9rem;line-height:1.6;">
-      <div>
-        <div style="font-weight:700;margin-bottom:4px;">🎭 Roles / บทบาท</div>
-        <div class="muted">Each round: one <strong>Master</strong>, one <strong>Insider</strong>, everyone else is <strong>Common</strong>.<br><span style="font-size:0.83rem;">แต่ละรอบจะมี Master 1 คน, Insider 1 คน, ที่เหลือเป็น Common</span></div>
+    <div style="margin-top:14px;display:flex;flex-direction:column;gap:10px;">
+
+      <!-- Objective -->
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px 16px;">
+        <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px;">🎯 Objective</div>
+        <div style="font-size:0.88rem;line-height:1.55;color:var(--text);">Guess the secret word together — but one player secretly knows it and is guiding you.</div>
+        <div style="font-size:0.78rem;color:var(--muted);margin-top:4px;line-height:1.5;">ร่วมกันทายคำลับ แต่มีคนนึงรู้คำอยู่แล้วและแอบนำทางคุณ</div>
       </div>
-      <div>
-        <div style="font-weight:700;margin-bottom:4px;">👑 Master</div>
-        <div class="muted">Knows the secret word. Answer everyone's yes/no questions out loud. Does not vote.<br><span style="font-size:0.83rem;">รู้คำศัพท์ ตอบคำถามใช่/ไม่ใช่ ไม่ต้องโหวต</span></div>
-      </div>
-      <div>
-        <div style="font-weight:700;margin-bottom:4px;">🕵️ Insider</div>
-        <div class="muted">Knows the secret word too. Pretend to be Common — secretly guide everyone to the answer without getting caught.<br><span style="font-size:0.83rem;">รู้คำศัพท์เหมือนกัน แกล้งทำเป็น Common แอบช่วยนำคนอื่นไปถูกคำโดยไม่โดนจับได้</span></div>
-      </div>
-      <div>
-        <div style="font-weight:700;margin-bottom:4px;">🙋 Common</div>
-        <div class="muted">Don't know the word. Ask yes/no questions to guess it before time runs out.<br><span style="font-size:0.83rem;">ไม่รู้คำ ถามคำถามใช่/ไม่ใช่ เพื่อทายให้ถูกก่อนหมดเวลา</span></div>
-      </div>
-      <div>
-        <div style="font-weight:700;margin-bottom:4px;">📋 Pre-game</div>
-        <div class="muted">Master sees the word first — re-roll if needed, then tap Ready. Only after Master is ready can others tap Ready.<br><span style="font-size:0.83rem;">Master เห็นคำก่อน สุ่มใหม่ได้ถ้าต้องการ แล้วกด Ready ก่อน คนอื่นถึงจะกด Ready ได้</span></div>
-      </div>
-      <div>
-        <div style="font-weight:700;margin-bottom:4px;">🗳️ Voting / โหวต</div>
-        <div class="muted">Once the word is guessed, everyone votes for who they think is the Insider. Master reveals the result.<br><span style="font-size:0.83rem;">เมื่อทายคำถูก ทุกคนโหวตว่าใครคือ Insider แล้ว Master เฉลย</span></div>
-      </div>
-      <div style="border-top:1px solid var(--border);padding-top:12px;">
-        <div style="font-weight:700;margin-bottom:4px;">🏆 Scoring / คะแนน</div>
-        <div class="muted">
-          Insider caught → Master & Common +1 each<br>
-          <span style="font-size:0.83rem;">จับ Insider ได้ → Master และ Common ได้คนละ +1</span><br><br>
-          Insider escapes → Insider +2<br>
-          <span style="font-size:0.83rem;">Insider หนีรอด → Insider ได้ +2</span><br><br>
-          Word not guessed → nobody scores<br>
-          <span style="font-size:0.83rem;">ทายคำไม่ถูก → ไม่มีใครได้คะแนน</span>
+
+      <!-- Roles -->
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:12px;">
+        <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);">🎭 Roles</div>
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div style="width:36px;height:36px;border-radius:50%;background:rgba(124,58,237,0.15);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">👑</div>
+          <div>
+            <div style="font-size:0.88rem;font-weight:700;color:var(--text);">Master</div>
+            <div style="font-size:0.82rem;color:var(--muted);line-height:1.5;margin-top:2px;">Knows the word. Answer yes/no questions. Does not vote.</div>
+            <div style="font-size:0.75rem;color:var(--muted);opacity:.7;margin-top:2px;">รู้คำ ตอบคำถาม ไม่ต้องโหวต</div>
+          </div>
+        </div>
+        <div style="height:1px;background:var(--border);"></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div style="width:36px;height:36px;border-radius:50%;background:rgba(239,68,68,0.12);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🕵️</div>
+          <div>
+            <div style="font-size:0.88rem;font-weight:700;color:var(--text);">Insider</div>
+            <div style="font-size:0.82rem;color:var(--muted);line-height:1.5;margin-top:2px;">Secretly knows the word. Pretend to be Common — guide the group without getting caught.</div>
+            <div style="font-size:0.75rem;color:var(--muted);opacity:.7;margin-top:2px;">รู้คำลับ แกล้งทำเป็น Common แอบนำทางโดยไม่โดนจับ</div>
+          </div>
+        </div>
+        <div style="height:1px;background:var(--border);"></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div style="width:36px;height:36px;border-radius:50%;background:rgba(59,130,246,0.12);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🙋</div>
+          <div>
+            <div style="font-size:0.88rem;font-weight:700;color:var(--text);">Common</div>
+            <div style="font-size:0.82rem;color:var(--muted);line-height:1.5;margin-top:2px;">Don't know the word. Ask yes/no questions to guess it — then find the Insider.</div>
+            <div style="font-size:0.75rem;color:var(--muted);opacity:.7;margin-top:2px;">ไม่รู้คำ ถามคำถามเพื่อทาย แล้วหา Insider</div>
+          </div>
         </div>
       </div>
+
+      <!-- How to play -->
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;">
+        <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);">📋 How it works</div>
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div style="min-width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.5;">Master sees the word — re-roll if needed, then tap Ready. Others can only ready up after Master.<br><span style="font-size:0.75rem;opacity:.8;">Master เห็นคำก่อน สุ่มใหม่ได้ แล้วกด Ready ก่อน</span></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div style="min-width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.5;">Everyone asks yes/no questions. Master answers out loud. Guess the word before time runs out.<br><span style="font-size:0.75rem;opacity:.8;">ถามคำถามใช่/ไม่ใช่ ทายคำให้ถูกก่อนหมดเวลา</span></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div style="min-width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.5;">Vote for who you think is the Insider. Most-voted player reveals their role.<br><span style="font-size:0.75rem;opacity:.8;">โหวตหา Insider คนโดนโหวตมากสุดเปิด role</span></div>
+        </div>
+      </div>
+
+      <!-- Scoring -->
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px 16px;">
+        <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px;">🏆 Scoring</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <div style="font-size:0.82rem;color:var(--text);">Insider caught</div>
+              <div style="font-size:0.72rem;color:var(--muted);">Master + Common</div>
+            </div>
+            <div style="font-size:1.1rem;font-weight:700;color:var(--green);">+1 each</div>
+          </div>
+          <div style="height:1px;background:var(--border);"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <div style="font-size:0.82rem;color:var(--text);">Insider escapes</div>
+              <div style="font-size:0.72rem;color:var(--muted);">Insider only</div>
+            </div>
+            <div style="font-size:1.1rem;font-weight:700;color:#ef4444;">+2</div>
+          </div>
+          <div style="height:1px;background:var(--border);"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <div style="font-size:0.82rem;color:var(--text);">Word not guessed</div>
+              <div style="font-size:0.72rem;color:var(--muted);">Nobody</div>
+            </div>
+            <div style="font-size:1.1rem;font-weight:700;color:var(--muted);">0</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </details>
 </div>
