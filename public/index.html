@@ -242,10 +242,12 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
     <div id="room-list"></div>
   </div>
 
-  <button class="btn" onclick="document.getElementById('qg-modal').style.display='flex'" style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.88rem;width:100%;max-width:400px;">💬 Question Guide</button>
+  <div style="display:flex;flex-direction:column;gap:10px;width:100%;max-width:400px;">
+    <button class="btn" onclick="document.getElementById('htp-modal').style.display='flex'" style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.88rem;">📖 How to play</button>
+    <button class="btn" onclick="document.getElementById('qg-modal').style.display='flex'" style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.88rem;">💬 Question Guide</button>
+  </div>
 
-  <details style="width:100%;max-width:400px;">
-    <summary style="cursor:pointer;color:var(--muted);font-size:0.88rem;text-align:center;list-style:none;user-select:none;">📖 How to play</summary>
+  <div style="display:none;"><!-- old details content below, moved to modal -->
     <div style="margin-top:14px;display:flex;flex-direction:column;gap:10px;">
 
       <!-- Objective -->
@@ -334,7 +336,7 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
       </div>
 
     </div>
-  </details>
+  </div><!-- end hidden old details -->
 </div>
 
 <!-- LOBBY ────────────────────────────────────────────────────────────── -->
@@ -468,16 +470,15 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
     <button class="btn btn-primary" id="btn-ready" onclick="doReady()" style="flex:1;">Ready</button>
     <button class="btn" id="btn-insider-unknown" onclick="doInsiderUnknown()" style="display:none;flex:0 0 auto;background:transparent;border:1.5px solid var(--red);color:var(--red);font-size:0.78rem;padding:0 14px;white-space:nowrap;">❓ Don't know</button>
   </div>
+  <div class="center" style="margin-top:8px;">
+    <p class="muted" style="font-size:0.82rem;margin-bottom:4px;" id="rv-wait-msg"></p>
+    <div class="ready-bar" id="rv-dots"></div>
+  </div>
   <button class="btn" id="btn-reroll" onclick="doReroll()" style="display:none;background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.9rem;">🎲 New Word</button>
 
   <!-- Example questions (reveal screen) -->
   <div id="rv-example-q" style="display:none;">
     <div class="example-q-box" id="rv-eq-box"></div>
-  </div>
-
-  <div class="center">
-    <p class="muted" style="font-size:0.82rem;margin-bottom:6px;" id="rv-wait-msg"></p>
-    <div class="ready-bar" id="rv-dots"></div>
   </div>
 </div>
 
@@ -634,6 +635,94 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   </div>
 </div>
 
+<!-- How to play modal -->
+<div id="htp-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999;align-items:flex-start;justify-content:center;overflow-y:auto;padding:24px 0;">
+  <div class="card" style="width:min(400px,92vw);display:flex;flex-direction:column;gap:0;margin:auto;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+      <p style="font-weight:700;font-size:1.05rem;">📖 How to play</p>
+      <button onclick="document.getElementById('htp-modal').style.display='none'" style="background:none;border:none;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;">✕</button>
+    </div>
+
+    <!-- Objective -->
+    <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;margin-bottom:12px;">
+      <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px;">🎯 Objective</div>
+      <div style="font-size:0.88rem;line-height:1.55;">Guess the secret word together — but one player secretly knows it and is guiding you.</div>
+      <div style="font-size:0.78rem;color:var(--muted);margin-top:4px;line-height:1.5;">ร่วมกันทายคำลับ แต่มีคนนึงรู้คำอยู่แล้วและแอบนำทางคุณ</div>
+    </div>
+
+    <!-- Roles -->
+    <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;margin-bottom:12px;display:flex;flex-direction:column;gap:12px;">
+      <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);">🎭 Roles</div>
+      <div style="display:flex;gap:10px;align-items:flex-start;">
+        <div style="width:34px;height:34px;border-radius:50%;background:rgba(124,58,237,0.15);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">👑</div>
+        <div>
+          <div style="font-size:0.88rem;font-weight:700;">Master</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.5;margin-top:2px;">Knows the word. Answers yes/no questions. Does not vote.</div>
+          <div style="font-size:0.75rem;color:var(--muted);opacity:.7;margin-top:2px;">รู้คำ ตอบคำถาม ไม่ต้องโหวต</div>
+        </div>
+      </div>
+      <div style="height:1px;background:var(--border);"></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;">
+        <div style="width:34px;height:34px;border-radius:50%;background:rgba(239,68,68,0.12);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🕵️</div>
+        <div>
+          <div style="font-size:0.88rem;font-weight:700;">Insider</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.5;margin-top:2px;">Secretly knows the word. Pretend to be Common — guide the group without getting caught.</div>
+          <div style="font-size:0.75rem;color:var(--muted);opacity:.7;margin-top:2px;">รู้คำลับ แกล้งทำเป็น Common แอบนำทางโดยไม่โดนจับ</div>
+        </div>
+      </div>
+      <div style="height:1px;background:var(--border);"></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;">
+        <div style="width:34px;height:34px;border-radius:50%;background:rgba(59,130,246,0.12);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🙋</div>
+        <div>
+          <div style="font-size:0.88rem;font-weight:700;">Common</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.5;margin-top:2px;">Don't know the word. Ask yes/no questions to guess — then find the Insider.</div>
+          <div style="font-size:0.75rem;color:var(--muted);opacity:.7;margin-top:2px;">ไม่รู้คำ ถามคำถามเพื่อทาย แล้วหา Insider</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;margin-bottom:12px;display:flex;flex-direction:column;gap:10px;">
+      <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);">📋 How it works</div>
+      <div style="display:flex;gap:10px;align-items:flex-start;">
+        <div style="min-width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+        <div style="font-size:0.82rem;color:var(--muted);line-height:1.5;">Master sees the word — re-roll if needed, then tap Ready. Others ready up after Master.<br><span style="font-size:0.75rem;opacity:.8;">Master เห็นคำก่อน สุ่มใหม่ได้ แล้วกด Ready ก่อน</span></div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start;">
+        <div style="min-width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+        <div style="font-size:0.82rem;color:var(--muted);line-height:1.5;">Everyone asks yes/no questions. Master answers out loud. Guess the word before time runs out.<br><span style="font-size:0.75rem;opacity:.8;">ถามคำถามใช่/ไม่ใช่ ทายคำให้ถูกก่อนหมดเวลา</span></div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start;">
+        <div style="min-width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+        <div style="font-size:0.82rem;color:var(--muted);line-height:1.5;">Vote for who you think is the Insider. Most-voted player reveals their role.<br><span style="font-size:0.75rem;opacity:.8;">โหวตหา Insider คนโดนโหวตมากสุดเปิด role</span></div>
+      </div>
+    </div>
+
+    <!-- Scoring -->
+    <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;margin-bottom:16px;">
+      <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px;">🏆 Scoring</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div><div style="font-size:0.82rem;">Insider caught</div><div style="font-size:0.72rem;color:var(--muted);">Master + Common</div></div>
+          <div style="font-size:1rem;font-weight:700;color:var(--green);">+1 each</div>
+        </div>
+        <div style="height:1px;background:var(--border);"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div><div style="font-size:0.82rem;">Insider escapes</div><div style="font-size:0.72rem;color:var(--muted);">Insider only</div></div>
+          <div style="font-size:1rem;font-weight:700;color:#ef4444;">+2</div>
+        </div>
+        <div style="height:1px;background:var(--border);"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div><div style="font-size:0.82rem;">Word not guessed</div><div style="font-size:0.72rem;color:var(--muted);">Nobody</div></div>
+          <div style="font-size:1rem;font-weight:700;color:var(--muted);">0</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" onclick="document.getElementById('htp-modal').style.display='none'">Got it!</button>
+  </div>
+</div>
+
 <!-- Question Guide modal -->
 <div id="qg-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999;align-items:flex-start;justify-content:center;overflow-y:auto;padding:24px 0;">
   <div class="card" style="width:min(400px,92vw);display:flex;flex-direction:column;gap:0;margin:auto;">
@@ -649,21 +738,6 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
       <p style="font-size:0.88rem;line-height:1.5;">• ถ้าคำถามใกล้เฉลยเกินไป Master บอกว่า <strong>"Getting warm — rephrase it"</strong></p>
     </div>
 
-    <!-- Strategy -->
-    <div style="background:rgba(124,58,237,.12);border-radius:10px;padding:12px 14px;margin-bottom:18px;">
-      <p style="font-size:0.82rem;font-weight:600;margin-bottom:8px;">วิธีถามให้ได้คำเร็ว</p>
-      <div style="display:flex;flex-direction:column;gap:5px;">
-        <p style="font-size:0.82rem;line-height:1.5;">1️⃣  <strong>Category</strong> — ระบุก่อนว่าเป็นอะไร</p>
-        <p style="font-size:0.82rem;line-height:1.5;">2️⃣  <strong>Location</strong> — หาได้ที่ไหน</p>
-        <p style="font-size:0.82rem;line-height:1.5;">3️⃣  <strong>Characteristics</strong> — ลักษณะทั่วไป</p>
-        <p style="font-size:0.82rem;line-height:1.5;">4️⃣  <strong>Specific</strong> — เจาะจงจนเดาได้</p>
-      </div>
-    </div>
-
-    <!-- Example game -->
-    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">ตัวอย่างเกม — คำลับคือ 🐶 Dog</p>
-    <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:20px;" id="qg-example"></div>
-
     <!-- Question bank -->
     <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">1️⃣  Category — เป็นอะไร</p>
     <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:16px;" id="qg-broad"></div>
@@ -676,6 +750,11 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
 
     <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">4️⃣  Specific — เจาะจง</p>
     <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:20px;" id="qg-close"></div>
+
+    <!-- Example game -->
+    <div style="border-top:1px solid var(--border);margin:4px 0 16px;"></div>
+    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">ตัวอย่างเกม — คำลับคือ 🐶 Dog</p>
+    <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:20px;" id="qg-example"></div>
 
     <button class="btn btn-primary" onclick="document.getElementById('qg-modal').style.display='none'">Got it!</button>
   </div>
@@ -1534,30 +1613,6 @@ socket.on('player_left', ({ name }) => toast(`👋 ${name} left the room`));
     </div>`;
   }
 
-  // Example game: Dog — follows 4-step strategy
-  const example = [
-    { step: '1️⃣', q: 'Is it alive?',              a: 'Yes',     th: 'มีชีวิตไหม' },
-    { step: '1️⃣', q: 'Is it an animal?',           a: 'Yes',     th: 'เป็นสัตว์ไหม' },
-    { step: '2️⃣', q: 'Can you find it at home?',   a: 'Yes',     th: 'เจอได้ที่บ้านไหม' },
-    { step: '2️⃣', q: 'Does it live outdoors too?', a: 'Yes',     th: 'อยู่ข้างนอกได้ด้วยไหม' },
-    { step: '3️⃣', q: 'Does it have 4 legs?',       a: 'Yes',     th: 'มี 4 ขาไหม' },
-    { step: '3️⃣', q: 'Does it make a sound?',      a: 'Yes',     th: 'ส่งเสียงได้ไหม' },
-    { step: '4️⃣', q: 'Is it a pet?',               a: 'Yes',     th: 'เลี้ยงเป็นสัตว์เลี้ยงได้ไหม' },
-    { step: '4️⃣', q: 'Is it a cat?',               a: 'No',      th: 'เป็นแมวไหม' },
-    { step: '4️⃣', q: 'Is it a dog?',               a: '🎉 Yes!', th: 'เป็นหมาไหม' },
-  ];
-  const aColor = { 'Yes': '#10b981', 'No': '#ef4444', '🎉 Yes!': '#f59e0b' };
-  document.getElementById('qg-example').innerHTML = example.map(({step, q, a, th}) =>
-    `<div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.04);border-radius:8px;padding:8px 12px;">
-      <span style="font-size:0.8rem;opacity:.5;min-width:24px;">${step}</span>
-      <div style="flex:1;">
-        <span style="font-size:0.9rem;">${q}</span><br>
-        <span style="font-size:0.75rem;color:var(--muted);">${th}</span>
-      </div>
-      <span style="font-weight:700;font-size:0.9rem;color:${aColor[a] || '#e2e8f0'};white-space:nowrap;">${a}</span>
-    </div>`
-  ).join('');
-
   // 1. Category
   const broad = [
     ['Is it alive?',           'มีชีวิตไหม'],
@@ -1600,6 +1655,41 @@ socket.on('player_left', ({ name }) => toast(`👋 ${name} left the room`));
   document.getElementById('qg-narrow').innerHTML = narrow.map(([e,t]) => qRow(e,t)).join('');
   document.getElementById('qg-char').innerHTML   = chars.map(([e,t])  => qRow(e,t)).join('');
   document.getElementById('qg-close').innerHTML  = close.map(([e,t])  => qRow(e,t)).join('');
+
+  // Example game with mixed good/bad questions
+  const example = [
+    { ok: true,  q: 'Is it alive?',                       a: 'Yes',                          th: 'มีชีวิตไหม' },
+    { ok: false, q: 'What kind of animal is it?',         a: '❌ Not a yes/no question',      th: 'ถามแบบนี้ไม่ได้นะ' },
+    { ok: true,  q: 'Is it an animal?',                   a: 'Yes',                          th: 'เป็นสัตว์ไหม' },
+    { ok: true,  q: 'Can you find it at home?',           a: 'Yes',                          th: 'เจอได้ที่บ้านไหม' },
+    { ok: false, q: 'Is it popular in Thailand?',         a: '🤷 I don\'t know',             th: 'คำถามไม่มีประโยชน์' },
+    { ok: true,  q: 'Does it live outdoors too?',         a: 'Yes',                          th: 'อยู่ข้างนอกได้ด้วยไหม' },
+    { ok: true,  q: 'Does it have 4 legs?',               a: 'Yes',                          th: 'มี 4 ขาไหม' },
+    { ok: false, q: 'Is it cute?',                        a: '❌ Not a yes/no question',      th: 'อย่าถามแบบนี้ มันตอบไม่ได้' },
+    { ok: true,  q: 'Does it make a sound?',              a: 'Yes',                          th: 'ส่งเสียงได้ไหม' },
+    { ok: false, q: 'Is it a dog?',                       a: '🔥 Getting warm — rephrase it', th: 'ใกล้เกิน ถามมาใหม่' },
+    { ok: true,  q: 'Is it a pet?',                       a: 'Yes',                          th: 'เลี้ยงเป็นสัตว์เลี้ยงได้ไหม' },
+    { ok: false, q: 'Does it bark?',                      a: '🔥 Getting warm — rephrase it', th: 'ใกล้เกิน ถามมาใหม่' },
+    { ok: true,  q: 'Is it smaller than a cow?',          a: 'Yes',                          th: 'เล็กกว่าวัวไหม' },
+    { ok: true,  q: 'Is it a cat?',                       a: 'No',                           th: 'เป็นแมวไหม' },
+    { ok: true,  q: 'Is it a dog?',                       a: '🎉 Yes!',                      th: 'เป็นหมาไหม' },
+  ];
+  const aColor = {
+    'Yes': '#10b981', 'No': '#ef4444', '🎉 Yes!': '#f59e0b',
+    '❌ Not a yes/no question': '#ef4444',
+    '🤷 I don\'t know': '#94a3b8',
+    '🔥 Getting warm — rephrase it': '#f97316',
+  };
+  document.getElementById('qg-example').innerHTML = example.map(({ok, q, a, th}) =>
+    `<div style="display:flex;align-items:center;gap:10px;background:${ok ? 'rgba(255,255,255,.04)' : 'rgba(239,68,68,.06)'};border-radius:8px;padding:8px 12px;border:1px solid ${ok ? 'transparent' : 'rgba(239,68,68,.2)'};">
+      <span style="font-size:0.85rem;min-width:18px;">${ok ? '' : '⚠️'}</span>
+      <div style="flex:1;">
+        <span style="font-size:0.88rem;">${q}</span><br>
+        <span style="font-size:0.72rem;color:var(--muted);">${th}</span>
+      </div>
+      <span style="font-weight:700;font-size:0.78rem;color:${aColor[a] || '#e2e8f0'};white-space:nowrap;max-width:140px;text-align:right;">${a}</span>
+    </div>`
+  ).join('');
 })();
 
 // Keep Render from sleeping
