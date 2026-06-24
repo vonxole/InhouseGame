@@ -393,9 +393,22 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
     <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;">
       <span style="font-size:0.88rem;">💬 Example questions</span>
       <label class="toggle-switch">
-        <input type="checkbox" id="tog-examples" checked onchange="socket.emit('set_show_examples', { value: this.checked })">
+        <input type="checkbox" id="tog-examples" checked onchange="onToggleExamples(this.checked)">
         <span class="toggle-track"></span>
       </label>
+    </div>
+    <div id="example-count-wrap" style="margin-top:10px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+        <span class="muted" style="font-size:0.82rem;">Number of questions</span>
+        <span style="font-size:0.88rem;font-weight:700;" id="example-count-val">15</span>
+      </div>
+      <input type="range" id="sl-example-count" min="5" max="30" step="1" value="15"
+        oninput="document.getElementById('example-count-val').textContent=this.value"
+        onchange="socket.emit('set_example_count', { count: parseInt(this.value) })"
+        style="width:100%;accent-color:var(--accent);">
+      <div class="muted" style="display:flex;justify-content:space-between;font-size:0.75rem;margin-top:2px;">
+        <span>5 (focused)</span><span>30 (varied)</span>
+      </div>
     </div>
   </div>
 
@@ -822,7 +835,12 @@ function renderLobby(room) {
     syncPills('fg-lvl', room.filterLevels    || []);
     syncSlider('sl-play',    'play-val',    room.playTime    || 180);
     syncSlider('sl-discuss', 'discuss-val', room.discussTime || 60);
-    document.getElementById('tog-examples').checked = room.showExamples !== false;
+    const showEx = room.showExamples !== false;
+    document.getElementById('tog-examples').checked = showEx;
+    document.getElementById('example-count-wrap').style.display = showEx ? 'block' : 'none';
+    const cnt = room.exampleCount || 15;
+    document.getElementById('sl-example-count').value = cnt;
+    document.getElementById('example-count-val').textContent = cnt;
   } else {
     document.getElementById('l-filters').style.display       = 'none';
     document.getElementById('l-password-wrap').style.display = 'none';
@@ -967,7 +985,7 @@ function renderReveal(room) {
   // Example questions (not shown to master — they already know the word)
   const showEQ = myRole !== 'master' && room.showExamples;
   document.getElementById('rv-example-q').style.display = showEQ ? 'block' : 'none';
-  if (showEQ) renderExampleQ('rv-eq-box');
+  if (showEQ) renderExampleQ('rv-eq-box', room.exampleCount || 15);
 }
 
 function renderReadyDots(done, total) {
@@ -1055,9 +1073,14 @@ const EQ_GENERATORS = [
   () => _pick(['Is it made of paper?', 'Does it hold or organise paper?', 'Is it used for storing documents?']),
 ];
 
-function renderExampleQ(boxId) {
+function onToggleExamples(on) {
+  socket.emit('set_show_examples', { value: on });
+  document.getElementById('example-count-wrap').style.display = on ? 'block' : 'none';
+}
+
+function renderExampleQ(boxId, count = 6) {
   const shuffled = EQ_GENERATORS.slice().sort(() => Math.random() - 0.5);
-  const picked   = shuffled.map(fn => fn()); // use all generators
+  const picked   = shuffled.slice(0, count).map(fn => fn());
   // Duplicate for seamless loop
   const items    = [...picked, ...picked].map(q => `<div class="eq-item">${q}</div>`).join('');
   document.getElementById(boxId).innerHTML =
@@ -1086,7 +1109,7 @@ function renderPlaying(room) {
   const plEQ = document.getElementById('pl-example-q');
   if (myRole !== 'master' && room.showExamples) {
     plEQ.style.display = 'block';
-    renderExampleQ('pl-eq-box');
+    renderExampleQ('pl-eq-box', room.exampleCount || 15);
   } else {
     plEQ.style.display = 'none';
   }

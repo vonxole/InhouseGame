@@ -59,7 +59,8 @@ function createRoom(hostId, hostName) {
     voteTimeLeft: 0,
     scores: {},         // playerId → { name, score }
     password: '',       // '' = no password
-    showExamples: true, // show example questions during reveal/playing
+    showExamples: true,   // show example questions during reveal/playing
+    exampleCount: 15,     // number of example questions to show (5–30)
   };
   return code;
 }
@@ -120,6 +121,7 @@ function broadcastRoom(room) {
     winnerTeam:  room.state === 'result' ? room.winnerTeam  : null,
     scores: Object.values(room.scores).sort((a, b) => b.score - a.score),
     showExamples: room.showExamples,
+    exampleCount: room.exampleCount,
   };
   room.players.forEach(p => {
     const role   = room.roles[p.id] || null;
@@ -257,6 +259,13 @@ io.on('connection', (socket) => {
     const room = getRoom(socket.id);
     if (!room || room.hostId !== socket.id || room.state !== 'lobby') return;
     room.showExamples = !!value;
+    broadcastRoom(room);
+  });
+
+  socket.on('set_example_count', ({ count }) => {
+    const room = getRoom(socket.id);
+    if (!room || room.hostId !== socket.id || room.state !== 'lobby') return;
+    room.exampleCount = Math.max(5, Math.min(30, parseInt(count) || 6));
     broadcastRoom(room);
   });
 
