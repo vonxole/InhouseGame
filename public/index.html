@@ -170,22 +170,32 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
 .result-icon  { font-size: 5rem; text-align: center; }
 .result-title { font-size: 1.7rem; font-weight: 900; text-align: center; }
 
-/* Example questions — inline hint style */
-.example-q-box {
-  padding: 0 4px;
-}
+/* Example questions — Star Wars crawl */
+.example-q-box { padding: 0 4px; }
 .example-q-box .eq-title {
   font-size: 0.72rem; font-weight: 600; opacity: .4;
   text-transform: uppercase; letter-spacing: .1em;
-  margin-bottom: 8px; text-align: center;
+  margin-bottom: 6px; text-align: center;
 }
-.example-q-box .eq-list {
-  display: flex; flex-direction: column; gap: 5px;
+.eq-crawl-wrap {
+  height: 88px;
+  overflow: hidden;
+  perspective: 120px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 28%, black 72%, transparent 100%);
+  mask-image:         linear-gradient(to bottom, transparent 0%, black 28%, black 72%, transparent 100%);
 }
-.example-q-box .eq-item {
-  font-size: 0.82rem; color: var(--muted);
-  text-align: center; line-height: 1.5;
-  font-style: italic;
+.eq-crawl {
+  transform-origin: 50% 100%;
+  animation: sw-crawl 12s linear infinite;
+}
+@keyframes sw-crawl {
+  from { transform: rotateX(22deg) translateY(0); }
+  to   { transform: rotateX(22deg) translateY(-50%); }
+}
+.eq-crawl .eq-item {
+  font-size: 0.84rem; color: var(--muted);
+  text-align: center; line-height: 1.6;
+  font-style: italic; padding: 2px 0;
 }
 </style>
 </head>
@@ -1017,12 +1027,12 @@ const EQ_GENERATORS = [
 
 function renderExampleQ(boxId) {
   const shuffled = EQ_GENERATORS.slice().sort(() => Math.random() - 0.5);
-  const picked   = shuffled.slice(0, 4).map(fn => fn());
+  const picked   = shuffled.slice(0, 6).map(fn => fn());
+  // Duplicate for seamless loop
+  const items    = [...picked, ...picked].map(q => `<div class="eq-item">${q}</div>`).join('');
   document.getElementById(boxId).innerHTML =
     `<div class="eq-title">💬 Example Questions</div>` +
-    `<div class="eq-list">` +
-    picked.map(q => `<div class="eq-item"><span>${q}</span></div>`).join('') +
-    `</div>`;
+    `<div class="eq-crawl-wrap"><div class="eq-crawl">${items}</div></div>`;
 }
 
 // ── Playing ───────────────────────────────────────────────────────────────────
