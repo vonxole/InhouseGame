@@ -211,7 +211,7 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
   <!-- Host: filters (multi-select) -->
   <div class="card" id="l-filters" style="display:none;flex-direction:column;gap:14px;">
     <div>
-      <label style="margin-bottom:8px;">📂 Category <span class="muted" style="font-weight:400;">(เลือกได้หลายอัน)</span></label>
+      <label style="margin-bottom:8px;">📂 Category <span class="muted" style="font-weight:400;">(pick multiple)</span></label>
       <div class="pill-group" id="fg-cat">
         <button class="pill" onclick="setFilter('category','General')">General</button>
         <button class="pill" onclick="setFilter('category','Places')">Places</button>
@@ -220,14 +220,14 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
       </div>
     </div>
     <div>
-      <label style="margin-bottom:8px;">⚡ Difficulty <span class="muted" style="font-weight:400;">(เลือกได้หลายอัน)</span></label>
+      <label style="margin-bottom:8px;">⚡ Difficulty <span class="muted" style="font-weight:400;">(pick multiple)</span></label>
       <div class="pill-group" id="fg-lvl">
         <button class="pill" onclick="setFilter('level','easy')"   style="--pc:#6ee7b7;--bc:#059669;">Easy</button>
         <button class="pill" onclick="setFilter('level','medium')" style="--pc:#fcd34d;--bc:#d97706;">Medium</button>
         <button class="pill" onclick="setFilter('level','hard')"   style="--pc:#fca5a5;--bc:#dc2626;">Hard</button>
       </div>
     </div>
-    <p class="muted" style="font-size:0.78rem;">ไม่เลือก = สุ่มจากทั้งหมด</p>
+    <p class="muted" style="font-size:0.78rem;">Leave blank = pick from all</p>
 
     <div style="border-top:1px solid var(--border);padding-top:14px;display:flex;flex-direction:column;gap:16px;">
       <div>
@@ -832,8 +832,8 @@ function renderVoting(room) {
     btn.disabled = !canReveal;
     btn.style.opacity = canReveal ? '1' : '0.4';
     document.getElementById('vt-reveal-hint').textContent = canReveal
-      ? 'ทุกคนโหวตแล้ว — กด Reveal ได้เลย!'
-      : 'รอให้ทุกคนโหวตหรือหมดเวลา…';
+      ? 'Everyone voted — you can reveal now!'
+      : 'Waiting for all votes or timer to end…';
   }
 }
 function doVote(targetId) { socket.emit('cast_vote', { targetId }); }
@@ -919,11 +919,11 @@ function renderVerdict(room) {
       <div style="margin-top:6px;font-size:1rem;color:var(--text);">${name} is the Insider!</div>`;
   } else if (myRole === 'insider') {
     const taunts = [
-      'พวกเขาเดาผิดหมดเลย 😏',
-      'แค่นี้เองเหรอ? ง่ายจัง 🤭',
-      'ขอบคุณที่ไว้ใจนะ… เสียดายที่ไว้ใจผิดคน 😈',
-      'นักสืบระดับนี้ก็แพ้ Insider ได้เหมือนกัน 🕶️',
-      'หลอกทุกคนได้ขนาดนี้ มีความสามารถอนาคตไกล 😇',
+      'They never had a chance 😏',
+      'Too easy — was anyone even trying? 🤭',
+      'Thanks for trusting me… too bad you shouldn\'t have 😈',
+      'Even detectives fall for a good Insider 🕶️',
+      'Fooled everyone — truly a gift 😇',
     ];
     const taunt = taunts[Math.floor(Math.random() * taunts.length)];
     banner.style.background = 'rgba(239,68,68,0.15)';
@@ -1000,7 +1000,7 @@ function renderVerdict(room) {
 function doRevealNow() { socket.emit('trigger_reveal_now'); }
 function doConfirmResult() { socket.emit('confirm_result'); }
 function doLeaveRoom() {
-  if (!confirm('ออกจากห้องนี้?')) return;
+  if (!confirm('Leave this room?')) return;
   socket.emit('leave_room');
   clearSession();
   myName = ''; myRole = null; myWord = null; myThai = null; isHost = false;
@@ -1015,15 +1015,15 @@ function renderResult(room) {
   const insiderName = room.insiderName || '???';
   const b = `<strong style="color:var(--accent2);">${insiderName}</strong>`;
   const noWinnerTaunts = [
-    `ไม่มีใครได้แต้ม และ ${b} ก็ไม่ได้ช่วยอะไรเลยนะ 🙄`,
-    `${b} เป็น Insider แต่ทำให้ทุกคนแพ้ ขอบคุณมากเลย 👏`,
-    `${b} หน้าที่คือช่วยให้ทายถูก แต่ดูเหมือนจะลืมไป 😶`,
-    `ทายไม่ได้เลย ${b} คุณทำอะไรอยู่ 🤦`,
+    `No points for anyone — and ${b} was zero help 🙄`,
+    `${b} was the Insider and still let everyone lose. Thanks! 👏`,
+    `${b}'s one job was to help guess the word… apparently forgot 😶`,
+    `Word not guessed. ${b}, what were you doing? 🤦`,
   ];
   const noWinnerTaunt = noWinnerTaunts[Math.floor(Math.random() * noWinnerTaunts.length)];
 
   document.getElementById('res-icon').textContent     = noWinner ? '⏰' : caught ? '🎉' : '🕵️';
-  document.getElementById('res-title').textContent    = noWinner ? 'ไม่มีใครชนะ!' : caught ? 'Insider Caught!' : 'Insider Wins!';
+  document.getElementById('res-title').textContent    = noWinner ? 'No one wins!' : caught ? 'Insider Caught!' : 'Insider Wins!';
   document.getElementById('res-subtitle').innerHTML = noWinner
     ? noWinnerTaunt
     : caught
