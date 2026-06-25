@@ -244,7 +244,6 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
 
   <div style="display:flex;flex-direction:column;gap:10px;width:100%;max-width:400px;">
     <button class="btn" onclick="document.getElementById('htp-modal').style.display='flex'" style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.88rem;">📖 How to play</button>
-    <button class="btn" onclick="document.getElementById('qg-modal').style.display='flex'" style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.88rem;">💬 Question Guide</button>
     <button class="btn" onclick="document.getElementById('el-modal').style.display='flex'" style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.88rem;">📝 English Lesson</button>
   </div>
 
@@ -639,114 +638,194 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
 <!-- English Lesson modal -->
 <div id="el-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999;align-items:flex-start;justify-content:center;overflow-y:auto;padding:24px 0;">
   <div class="card" style="width:min(400px,92vw);display:flex;flex-direction:column;gap:0;margin:auto;">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-      <p style="font-weight:700;font-size:1.05rem;">📝 How to Ask in English</p>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+      <p style="font-weight:700;font-size:1.05rem;">📝 English Lesson</p>
       <button onclick="document.getElementById('el-modal').style.display='none'" style="background:none;border:none;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;">✕</button>
     </div>
 
-    <!-- Word Order -->
-    <div style="background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:10px;padding:12px 14px;margin-bottom:12px;">
-      <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(239,68,68,.7);margin-bottom:10px;">⚠️ Word Order — Verb ขึ้นก่อนเสมอ</div>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="display:flex;gap:10px;align-items:center;">
-          <span style="font-size:0.75rem;color:#ef4444;min-width:20px;">❌</span>
-          <span style="font-size:0.85rem;color:rgba(255,255,255,.4);text-decoration:line-through;">It is an animal?</span>
+    <!-- Tabs -->
+    <div style="display:flex;gap:0;margin-bottom:16px;border-bottom:1px solid var(--border);">
+      <button id="el-tab1-btn" onclick="elTab(1)" style="flex:1;background:none;border:none;border-bottom:2px solid var(--accent);color:var(--text);font-size:0.8rem;padding:8px 4px;cursor:pointer;font-weight:600;">How to Ask</button>
+      <button id="el-tab2-btn" onclick="elTab(2)" style="flex:1;background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);font-size:0.8rem;padding:8px 4px;cursor:pointer;">Vocab</button>
+      <button id="el-tab3-btn" onclick="elTab(3)" style="flex:1;background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);font-size:0.8rem;padding:8px 4px;cursor:pointer;">Question Guide</button>
+    </div>
+
+    <!-- Tab 1: How to Ask -->
+    <div id="el-content1">
+      <!-- Word Order -->
+      <div style="background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:10px;padding:12px 14px;margin-bottom:12px;">
+        <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(239,68,68,.7);margin-bottom:10px;">⚠️ Word Order — Verb ขึ้นก่อนเสมอ</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span style="font-size:0.75rem;color:#ef4444;min-width:20px;">❌</span>
+            <span style="font-size:0.85rem;color:rgba(255,255,255,.4);text-decoration:line-through;">It is an animal?</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span style="font-size:0.75rem;color:#10b981;min-width:20px;">✅</span>
+            <span style="font-size:0.85rem;">Is it an animal?</span>
+          </div>
+          <div style="height:1px;background:rgba(239,68,68,.15);"></div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span style="font-size:0.75rem;color:#ef4444;min-width:20px;">❌</span>
+            <span style="font-size:0.85rem;color:rgba(255,255,255,.4);text-decoration:line-through;">It can eat?</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span style="font-size:0.75rem;color:#10b981;min-width:20px;">✅</span>
+            <span style="font-size:0.85rem;">Can you eat it?</span>
+          </div>
+          <div style="height:1px;background:rgba(239,68,68,.15);"></div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span style="font-size:0.75rem;color:#ef4444;min-width:20px;">❌</span>
+            <span style="font-size:0.85rem;color:rgba(255,255,255,.4);text-decoration:line-through;">Does it is alive?</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span style="font-size:0.75rem;color:#10b981;min-width:20px;">✅</span>
+            <span style="font-size:0.85rem;">Is it alive?</span>
+          </div>
         </div>
-        <div style="display:flex;gap:10px;align-items:center;">
-          <span style="font-size:0.75rem;color:#10b981;min-width:20px;">✅</span>
-          <span style="font-size:0.85rem;">Is it an animal?</span>
+      </div>
+
+      <!-- 5 Patterns -->
+      <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;margin-bottom:12px;">
+        <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px;">🗂 5 Patterns</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div>
+            <div style="font-size:0.82rem;font-weight:700;color:var(--accent);margin-bottom:4px;">Is it + noun / adjective ?</div>
+            <div style="font-size:0.78rem;color:var(--muted);line-height:1.5;">ถามประเภท สภาพ วัสดุ ขนาด</div>
+            <div style="font-size:0.8rem;margin-top:4px;line-height:1.8;opacity:.7;">Is it an animal? &nbsp;·&nbsp; Is it alive? &nbsp;·&nbsp; Is it made of metal? &nbsp;·&nbsp; Is it bigger than a phone?</div>
+          </div>
+          <div style="height:1px;background:var(--border);"></div>
+          <div>
+            <div style="font-size:0.82rem;font-weight:700;color:var(--accent);margin-bottom:4px;">Does it + verb ?</div>
+            <div style="font-size:0.78rem;color:var(--muted);line-height:1.5;">ถามพฤติกรรมหรือคุณสมบัติ</div>
+            <div style="font-size:0.8rem;margin-top:4px;line-height:1.8;opacity:.7;">Does it make a sound? &nbsp;·&nbsp; Does it need electricity? &nbsp;·&nbsp; Does it move?</div>
+          </div>
+          <div style="height:1px;background:var(--border);"></div>
+          <div>
+            <div style="font-size:0.82rem;font-weight:700;color:var(--accent);margin-bottom:4px;">Can you + verb + it ?</div>
+            <div style="font-size:0.78rem;color:var(--muted);line-height:1.5;">ถามว่าทำอะไรกับมันได้บ้าง</div>
+            <div style="font-size:0.8rem;margin-top:4px;line-height:1.8;opacity:.7;">Can you eat it? &nbsp;·&nbsp; Can you hold it? &nbsp;·&nbsp; Can you find it at home?</div>
+          </div>
+          <div style="height:1px;background:var(--border);"></div>
+          <div>
+            <div style="font-size:0.82rem;font-weight:700;color:var(--accent);margin-bottom:4px;">Do people + verb + it ?</div>
+            <div style="font-size:0.78rem;color:var(--muted);line-height:1.5;">ถามพฤติกรรมของคนทั่วไป</div>
+            <div style="font-size:0.8rem;margin-top:4px;line-height:1.8;opacity:.7;">Do people use it every day? &nbsp;·&nbsp; Do most people own one?</div>
+          </div>
+          <div style="height:1px;background:var(--border);"></div>
+          <div>
+            <div style="font-size:0.82rem;font-weight:700;color:var(--accent);margin-bottom:4px;">Is it used for + verb-ing ?</div>
+            <div style="font-size:0.78rem;color:var(--muted);line-height:1.5;">ถามว่ามีไว้ทำอะไร</div>
+            <div style="font-size:0.8rem;margin-top:4px;line-height:1.8;opacity:.7;">Is it used for cooking? &nbsp;·&nbsp; Is it used for writing?</div>
+          </div>
         </div>
-        <div style="height:1px;background:rgba(239,68,68,.15);"></div>
-        <div style="display:flex;gap:10px;align-items:center;">
-          <span style="font-size:0.75rem;color:#ef4444;min-width:20px;">❌</span>
-          <span style="font-size:0.85rem;color:rgba(255,255,255,.4);text-decoration:line-through;">It can eat?</span>
-        </div>
-        <div style="display:flex;gap:10px;align-items:center;">
-          <span style="font-size:0.75rem;color:#10b981;min-width:20px;">✅</span>
-          <span style="font-size:0.85rem;">Can you eat it?</span>
-        </div>
-        <div style="height:1px;background:rgba(239,68,68,.15);"></div>
-        <div style="display:flex;gap:10px;align-items:center;">
-          <span style="font-size:0.75rem;color:#ef4444;min-width:20px;">❌</span>
-          <span style="font-size:0.85rem;color:rgba(255,255,255,.4);text-decoration:line-through;">Does it is alive?</span>
-        </div>
-        <div style="display:flex;gap:10px;align-items:center;">
-          <span style="font-size:0.75rem;color:#10b981;min-width:20px;">✅</span>
-          <span style="font-size:0.85rem;">Is it alive?</span>
+      </div>
+
+      <!-- Prepositions -->
+      <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;margin-bottom:16px;">
+        <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px;">📍 at / in / on</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="font-size:0.85rem;font-weight:700;color:var(--accent);min-width:28px;">at</span>
+            <div><div style="font-size:0.8rem;color:var(--muted);">สถานที่ทั่วไป</div><div style="font-size:0.8rem;opacity:.7;margin-top:2px;">at home &nbsp;·&nbsp; at school &nbsp;·&nbsp; at work</div></div>
+          </div>
+          <div style="height:1px;background:var(--border);"></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="font-size:0.85rem;font-weight:700;color:var(--accent);min-width:28px;">in</span>
+            <div><div style="font-size:0.8rem;color:var(--muted);">ข้างใน / พื้นที่</div><div style="font-size:0.8rem;opacity:.7;margin-top:2px;">in a kitchen &nbsp;·&nbsp; in a country &nbsp;·&nbsp; in Thailand</div></div>
+          </div>
+          <div style="height:1px;background:var(--border);"></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="font-size:0.85rem;font-weight:700;color:var(--accent);min-width:28px;">on</span>
+            <div><div style="font-size:0.8rem;color:var(--muted);">บนพื้นผิว</div><div style="font-size:0.8rem;opacity:.7;margin-top:2px;">on a desk &nbsp;·&nbsp; on a wall &nbsp;·&nbsp; on the floor</div></div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- 5 Patterns -->
-    <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;margin-bottom:12px;">
-      <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px;">🗂 5 Patterns</div>
-      <div style="display:flex;flex-direction:column;gap:12px;">
+    <!-- Tab 2: Vocab -->
+    <div id="el-content2" style="display:none;">
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
 
-        <div>
-          <div style="font-size:0.82rem;font-weight:700;color:var(--accent);margin-bottom:4px;">Is it + noun / adjective ?</div>
-          <div style="font-size:0.78rem;color:var(--muted);line-height:1.5;">ถามประเภท สภาพ วัสดุ ขนาด</div>
-          <div style="font-size:0.8rem;margin-top:4px;line-height:1.8;opacity:.7;">Is it an animal? &nbsp;·&nbsp; Is it alive? &nbsp;·&nbsp; Is it made of metal? &nbsp;·&nbsp; Is it bigger than a phone?</div>
+        <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px;">📏 ขนาด / น้ำหนัก</div>
+          <div style="font-size:0.82rem;line-height:2;opacity:.8;">big · small · tiny · huge · heavy · light · long · short · thick · thin</div>
         </div>
 
-        <div style="height:1px;background:var(--border);"></div>
-        <div>
-          <div style="font-size:0.82rem;font-weight:700;color:var(--accent);margin-bottom:4px;">Does it + verb ?</div>
-          <div style="font-size:0.78rem;color:var(--muted);line-height:1.5;">ถามพฤติกรรมหรือคุณสมบัติ</div>
-          <div style="font-size:0.8rem;margin-top:4px;line-height:1.8;opacity:.7;">Does it make a sound? &nbsp;·&nbsp; Does it need electricity? &nbsp;·&nbsp; Does it move?</div>
+        <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px;">🔷 รูปร่าง / พื้นผิว</div>
+          <div style="font-size:0.82rem;line-height:2;opacity:.8;">round · flat · square · sharp · soft · hard · smooth · rough</div>
         </div>
 
-        <div style="height:1px;background:var(--border);"></div>
-        <div>
-          <div style="font-size:0.82rem;font-weight:700;color:var(--accent);margin-bottom:4px;">Can you + verb + it ?</div>
-          <div style="font-size:0.78rem;color:var(--muted);line-height:1.5;">ถามว่าทำอะไรกับมันได้บ้าง</div>
-          <div style="font-size:0.8rem;margin-top:4px;line-height:1.8;opacity:.7;">Can you eat it? &nbsp;·&nbsp; Can you hold it? &nbsp;·&nbsp; Can you find it at home?</div>
+        <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px;">🧱 วัสดุ</div>
+          <div style="font-size:0.82rem;line-height:2;opacity:.8;">metal · plastic · wood · glass · fabric · paper · rubber · stone</div>
         </div>
 
-        <div style="height:1px;background:var(--border);"></div>
-        <div>
-          <div style="font-size:0.82rem;font-weight:700;color:var(--accent);margin-bottom:4px;">Do people + verb + it ?</div>
-          <div style="font-size:0.78rem;color:var(--muted);line-height:1.5;">ถามพฤติกรรมของคนทั่วไป</div>
-          <div style="font-size:0.8rem;margin-top:4px;line-height:1.8;opacity:.7;">Do people use it every day? &nbsp;·&nbsp; Do most people own one?</div>
+        <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px;">⚡ คุณสมบัติ</div>
+          <div style="font-size:0.82rem;line-height:2;opacity:.8;">alive · wild · edible · natural · artificial · electric · digital · portable</div>
         </div>
 
-        <div style="height:1px;background:var(--border);"></div>
-        <div>
-          <div style="font-size:0.82rem;font-weight:700;color:var(--accent);margin-bottom:4px;">Is it used for + verb-ing ?</div>
-          <div style="font-size:0.78rem;color:var(--muted);line-height:1.5;">ถามว่ามีไว้ทำอะไร</div>
-          <div style="font-size:0.8rem;margin-top:4px;line-height:1.8;opacity:.7;">Is it used for cooking? &nbsp;·&nbsp; Is it used for writing?</div>
+        <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px;">🏃 กริยาพื้นฐาน</div>
+          <div style="font-size:0.82rem;line-height:2;opacity:.8;">eat · wear · hold · carry · move · grow · fly · swim · cook · write · cut · open</div>
+        </div>
+
+        <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px;">🏠 สถานที่</div>
+          <div style="font-size:0.82rem;line-height:2;opacity:.8;">indoor · outdoor · kitchen · bathroom · office · classroom · garden · market · hospital</div>
+        </div>
+
+        <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px;">📅 ความถี่ / มูลค่า</div>
+          <div style="font-size:0.82rem;line-height:2;opacity:.8;">daily · common · rare · popular · expensive · cheap</div>
         </div>
 
       </div>
     </div>
 
-    <!-- Prepositions of Place -->
-    <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px;margin-bottom:16px;">
-      <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px;">📍 at / in / on — Prepositions of Place</div>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="display:flex;gap:12px;align-items:flex-start;">
-          <span style="font-size:0.85rem;font-weight:700;color:var(--accent);min-width:28px;">at</span>
-          <div>
-            <div style="font-size:0.8rem;color:var(--muted);">สถานที่ทั่วไป</div>
-            <div style="font-size:0.8rem;opacity:.7;margin-top:2px;">at home &nbsp;·&nbsp; at school &nbsp;·&nbsp; at work</div>
+    <!-- Tab 3: Question Guide -->
+    <div id="el-content3" style="display:none;">
+      <div style="background:rgba(124,58,237,.12);border-radius:10px;padding:12px 14px;margin-bottom:16px;display:flex;flex-direction:column;gap:10px;">
+        <p style="font-size:0.88rem;line-height:1.5;">• ถามเฉพาะ <strong>Yes / No</strong> questions เท่านั้น</p>
+        <div style="height:1px;background:rgba(124,58,237,.25);"></div>
+        <div>
+          <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.4);margin-bottom:6px;">Master ตอบได้</p>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:0.8rem;font-weight:700;color:#10b981;min-width:60px;">Yes</span><span style="font-size:0.8rem;color:var(--muted);">ใช่</span></div>
+            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:0.8rem;font-weight:700;color:#ef4444;min-width:60px;">No</span><span style="font-size:0.8rem;color:var(--muted);">ไม่ใช่</span></div>
+            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:0.8rem;font-weight:700;color:#94a3b8;min-width:60px;">I don't know</span><span style="font-size:0.8rem;color:var(--muted);">ไม่แน่ใจ / ตอบไม่ได้</span></div>
+            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:0.8rem;font-weight:700;color:#f59e0b;min-width:80px;">Mostly yes</span><span style="font-size:0.8rem;color:var(--muted);">ส่วนใหญ่ใช่</span></div>
+            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:0.8rem;font-weight:700;color:#f59e0b;min-width:80px;">Mostly no</span><span style="font-size:0.8rem;color:var(--muted);">ส่วนใหญ่ไม่ใช่</span></div>
+            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:0.8rem;font-weight:700;color:#f59e0b;min-width:80px;">Sort of</span><span style="font-size:0.8rem;color:var(--muted);">ใช่ซักครึ่ง</span></div>
+            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:0.8rem;font-weight:700;color:#f59e0b;min-width:80px;">It depends</span><span style="font-size:0.8rem;color:var(--muted);">แล้วแต่สถานการณ์</span></div>
+            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:0.8rem;font-weight:700;color:#f59e0b;min-width:80px;">Not exactly</span><span style="font-size:0.8rem;color:var(--muted);">ไม่ถูกทีเดียว</span></div>
           </div>
         </div>
-        <div style="height:1px;background:var(--border);"></div>
-        <div style="display:flex;gap:12px;align-items:flex-start;">
-          <span style="font-size:0.85rem;font-weight:700;color:var(--accent);min-width:28px;">in</span>
-          <div>
-            <div style="font-size:0.8rem;color:var(--muted);">ข้างใน / พื้นที่</div>
-            <div style="font-size:0.8rem;opacity:.7;margin-top:2px;">in a kitchen &nbsp;·&nbsp; in a country &nbsp;·&nbsp; in Thailand</div>
-          </div>
-        </div>
-        <div style="height:1px;background:var(--border);"></div>
-        <div style="display:flex;gap:12px;align-items:flex-start;">
-          <span style="font-size:0.85rem;font-weight:700;color:var(--accent);min-width:28px;">on</span>
-          <div>
-            <div style="font-size:0.8rem;color:var(--muted);">บนพื้นผิว</div>
-            <div style="font-size:0.8rem;opacity:.7;margin-top:2px;">on a desk &nbsp;·&nbsp; on a wall &nbsp;·&nbsp; on the floor</div>
+        <div style="height:1px;background:rgba(124,58,237,.25);"></div>
+        <div>
+          <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.4);margin-bottom:6px;">Master พูดเมื่อ...</p>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:0.8rem;font-weight:700;color:#f97316;min-width:120px;">Getting warm</span><span style="font-size:0.8rem;color:var(--muted);">ใกล้เกิน ให้ถามใหม่</span></div>
+            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:0.8rem;font-weight:700;color:#6ee7b7;min-width:120px;">That's it!</span><span style="font-size:0.8rem;color:var(--muted);">เดาถูก! จบเกม</span></div>
+            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:0.8rem;font-weight:700;color:#6ee7b7;min-width:120px;">You got it!</span><span style="font-size:0.8rem;color:var(--muted);">เดาถูก! จบเกม</span></div>
+            <div style="display:flex;gap:8px;align-items:center;"><span style="font-size:0.8rem;font-weight:700;color:#6ee7b7;min-width:120px;">Correct! / Bingo!</span><span style="font-size:0.8rem;color:var(--muted);">เดาถูก! จบเกม</span></div>
           </div>
         </div>
       </div>
+
+      <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">1️⃣  Category — เป็นอะไร</p>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:16px;" id="qg-broad"></div>
+
+      <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">2️⃣  Location — หาได้ที่ไหน</p>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:16px;" id="qg-narrow"></div>
+
+      <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">3️⃣  Characteristics — ลักษณะทั่วไป</p>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:16px;" id="qg-char"></div>
+
+      <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">4️⃣  Specific — เจาะจง</p>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:20px;" id="qg-close"></div>
     </div>
 
     <button class="btn btn-primary" onclick="document.getElementById('el-modal').style.display='none'">Got it!</button>
@@ -837,46 +916,15 @@ label { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 
       </div>
     </div>
 
+    <!-- Dog example -->
+    <div style="border-top:1px solid var(--border);margin:4px 0 16px;"></div>
+    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">ตัวอย่างเกม — คำลับคือ 🐶 Dog</p>
+    <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:16px;" id="htp-example"></div>
+
     <button class="btn btn-primary" onclick="document.getElementById('htp-modal').style.display='none'">Got it!</button>
   </div>
 </div>
 
-<!-- Question Guide modal -->
-<div id="qg-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999;align-items:flex-start;justify-content:center;overflow-y:auto;padding:24px 0;">
-  <div class="card" style="width:min(400px,92vw);display:flex;flex-direction:column;gap:0;margin:auto;">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-      <p style="font-weight:700;font-size:1.05rem;">💬 How to Ask Questions</p>
-      <button onclick="document.getElementById('qg-modal').style.display='none'" style="background:none;border:none;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;">✕</button>
-    </div>
-
-    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">กฎพื้นฐาน</p>
-    <div style="background:rgba(124,58,237,.12);border-radius:10px;padding:12px 14px;margin-bottom:16px;display:flex;flex-direction:column;gap:6px;">
-      <p style="font-size:0.88rem;line-height:1.5;">• ถามเฉพาะ <strong>Yes / No</strong> questions เท่านั้น</p>
-      <p style="font-size:0.88rem;line-height:1.5;">• Master ตอบได้แค่ <strong>"Yes"</strong> / <strong>"No"</strong> / <strong>"I don't know"</strong></p>
-      <p style="font-size:0.88rem;line-height:1.5;">• ถ้าคำถามใกล้เฉลยเกินไป Master บอกว่า <strong>"Getting warm — rephrase it"</strong></p>
-    </div>
-
-    <!-- Question bank -->
-    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">1️⃣  Category — เป็นอะไร</p>
-    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:16px;" id="qg-broad"></div>
-
-    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">2️⃣  Location — หาได้ที่ไหน</p>
-    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:16px;" id="qg-narrow"></div>
-
-    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">3️⃣  Characteristics — ลักษณะทั่วไป</p>
-    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:16px;" id="qg-char"></div>
-
-    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">4️⃣  Specific — เจาะจง</p>
-    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:20px;" id="qg-close"></div>
-
-    <!-- Example game -->
-    <div style="border-top:1px solid var(--border);margin:4px 0 16px;"></div>
-    <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">ตัวอย่างเกม — คำลับคือ 🐶 Dog</p>
-    <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:20px;" id="qg-example"></div>
-
-    <button class="btn btn-primary" onclick="document.getElementById('qg-modal').style.display='none'">Got it!</button>
-  </div>
-</div>
 
 <!-- Password modal -->
 <div id="pw-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:999;align-items:center;justify-content:center;">
@@ -1722,6 +1770,17 @@ document.getElementById('pw-input')?.addEventListener('keydown', e => { if (e.ke
 
 socket.on('player_left', ({ name }) => toast(`👋 ${name} left the room`));
 
+// Tab switcher for English Lesson modal
+function elTab(n) {
+  [1,2,3].forEach(i => {
+    document.getElementById('el-content'+i).style.display = i===n ? 'block' : 'none';
+    const btn = document.getElementById('el-tab'+i+'-btn');
+    btn.style.borderBottom = i===n ? '2px solid var(--accent)' : '2px solid transparent';
+    btn.style.color = i===n ? 'var(--text)' : 'var(--muted)';
+    btn.style.fontWeight = i===n ? '600' : '400';
+  });
+}
+
 // Question Guide content
 (function() {
   function qRow(en, th) {
@@ -1777,28 +1836,27 @@ socket.on('player_left', ({ name }) => toast(`👋 ${name} left the room`));
   // Example game with mixed good/bad questions
   const example = [
     { ok: true,  q: 'Is it alive?',                       a: 'Yes',                          th: 'มีชีวิตไหม' },
-    { ok: false, q: 'What kind of animal is it?',         a: '❌ Not a yes/no question',      th: 'ถามแบบนี้ไม่ได้นะ' },
     { ok: true,  q: 'Is it an animal?',                   a: 'Yes',                          th: 'เป็นสัตว์ไหม' },
+    { ok: false, q: 'What kind of animal is it?',         a: '❌ Not a yes/no question',     th: 'ถามชนิดสัตว์ไม่ได้' },
     { ok: true,  q: 'Can you find it at home?',           a: 'Yes',                          th: 'เจอได้ที่บ้านไหม' },
     { ok: false, q: 'Is it popular in Thailand?',         a: '🤷 I don\'t know',             th: 'คำถามไม่มีประโยชน์' },
     { ok: true,  q: 'Does it live outdoors too?',         a: 'Yes',                          th: 'อยู่ข้างนอกได้ด้วยไหม' },
     { ok: true,  q: 'Does it have 4 legs?',               a: 'Yes',                          th: 'มี 4 ขาไหม' },
-    { ok: false, q: 'Is it cute?',                        a: '❌ Not a yes/no question',      th: 'อย่าถามแบบนี้ มันตอบไม่ได้' },
+    { ok: false, q: 'Is it cute?',                        a: '❌ Not a yes/no question',     th: 'น่ารักไหม ตอบไม่ได้' },
     { ok: true,  q: 'Does it make a sound?',              a: 'Yes',                          th: 'ส่งเสียงได้ไหม' },
-    { ok: false, q: 'Is it a dog?',                       a: '🔥 Getting warm — rephrase it', th: 'ใกล้เกิน ถามมาใหม่' },
     { ok: true,  q: 'Is it a pet?',                       a: 'Yes',                          th: 'เลี้ยงเป็นสัตว์เลี้ยงได้ไหม' },
-    { ok: false, q: 'Does it bark?',                      a: '🔥 Getting warm — rephrase it', th: 'ใกล้เกิน ถามมาใหม่' },
     { ok: true,  q: 'Is it smaller than a cow?',          a: 'Yes',                          th: 'เล็กกว่าวัวไหม' },
     { ok: true,  q: 'Is it a cat?',                       a: 'No',                           th: 'เป็นแมวไหม' },
-    { ok: true,  q: 'Is it a dog?',                       a: '🎉 Yes!',                      th: 'เป็นหมาไหม' },
+    { ok: false, q: 'Does it bark?',                      a: 'Yes',                          th: 'เห่าได้ไหม' },
+    { ok: true,  q: 'Is it a dog?',                       a: '🎉 That\'s it! it Dogs',              th: 'เป็นหมาไหม' },
   ];
   const aColor = {
-    'Yes': '#10b981', 'No': '#ef4444', '🎉 Yes!': '#f59e0b',
+    'Yes': '#10b981', 'No': '#ef4444', '🎉 That\'s it! it Dogs': '#f59e0b',
     '❌ Not a yes/no question': '#ef4444',
     '🤷 I don\'t know': '#94a3b8',
     '🔥 Getting warm — rephrase it': '#f97316',
   };
-  document.getElementById('qg-example').innerHTML = example.map(({ok, q, a, th}) =>
+  document.getElementById('htp-example').innerHTML = example.map(({ok, q, a, th}) =>
     `<div style="display:flex;align-items:center;gap:10px;background:${ok ? 'rgba(255,255,255,.04)' : 'rgba(239,68,68,.06)'};border-radius:8px;padding:8px 12px;border:1px solid ${ok ? 'transparent' : 'rgba(239,68,68,.2)'};">
       <span style="font-size:0.85rem;min-width:18px;">${ok ? '' : '⚠️'}</span>
       <div style="flex:1;">
