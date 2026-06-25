@@ -1835,25 +1835,26 @@ function elTab(n) {
 
   // Example game with mixed good/bad questions
   const example = [
+    { ok: true,  q: 'Is it place?',                       a: 'No',                          th: 'เป็นสถานที่ไหม' },
     { ok: true,  q: 'Is it alive?',                       a: 'Yes',                          th: 'มีชีวิตไหม' },
     { ok: true,  q: 'Is it an animal?',                   a: 'Yes',                          th: 'เป็นสัตว์ไหม' },
     { ok: false, q: 'What kind of animal is it?',         a: '❌ Not a yes/no question',     th: 'ถามชนิดสัตว์ไม่ได้' },
     { ok: true,  q: 'Can you find it at home?',           a: 'Yes',                          th: 'เจอได้ที่บ้านไหม' },
-    { ok: false, q: 'Is it popular in Thailand?',         a: '🤷 I don\'t know',             th: 'คำถามไม่มีประโยชน์' },
+    { ok: false, q: 'Is it popular in Thailand?',         a: '🤷 I don\'t know / Mostly yes',       th: 'คำถามกว้าง ตอบไม่รู้ได้' },
     { ok: true,  q: 'Does it live outdoors too?',         a: 'Yes',                          th: 'อยู่ข้างนอกได้ด้วยไหม' },
     { ok: true,  q: 'Does it have 4 legs?',               a: 'Yes',                          th: 'มี 4 ขาไหม' },
-    { ok: false, q: 'Is it cute?',                        a: '❌ Not a yes/no question',     th: 'น่ารักไหม ตอบไม่ได้' },
+    { ok: false, q: 'Is it cute?',                        a: '❌ Not a yes/no question',     th: 'น่ารักไหม ตอบยาก' },
     { ok: true,  q: 'Does it make a sound?',              a: 'Yes',                          th: 'ส่งเสียงได้ไหม' },
     { ok: true,  q: 'Is it a pet?',                       a: 'Yes',                          th: 'เลี้ยงเป็นสัตว์เลี้ยงได้ไหม' },
     { ok: true,  q: 'Is it smaller than a cow?',          a: 'Yes',                          th: 'เล็กกว่าวัวไหม' },
     { ok: true,  q: 'Is it a cat?',                       a: 'No',                           th: 'เป็นแมวไหม' },
-    { ok: false, q: 'Does it bark?',                      a: 'Yes',                          th: 'เห่าได้ไหม' },
-    { ok: true,  q: 'Is it a dog?',                       a: '🎉 That\'s it! it Dogs',              th: 'เป็นหมาไหม' },
+    { ok: true, q: 'Does it bark?',                      a: 'Yes',                          th: 'เห่าได้ไหม' },
+    { ok: true,  q: 'Is it a dog?',                       a: '🎉 That\'s it!',              th: 'เป็นหมาไหม' },
   ];
   const aColor = {
     'Yes': '#10b981', 'No': '#ef4444', '🎉 That\'s it! it Dogs': '#f59e0b',
     '❌ Not a yes/no question': '#ef4444',
-    '🤷 I don\'t know': '#94a3b8',
+    '🤷 I don\'t know/Mostly yes': '#94a3b8',
     '🔥 Getting warm — rephrase it': '#f97316',
   };
   document.getElementById('htp-example').innerHTML = example.map(({ok, q, a, th}) =>
