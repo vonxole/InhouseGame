@@ -1065,8 +1065,8 @@
 
   <!-- English Lesson modal -->
   <div id="el-modal"
-    style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999;align-items:flex-start;justify-content:center;overflow-y:auto;padding:24px 0;">
-    <div class="card" style="width:min(400px,92vw);display:flex;flex-direction:column;gap:0;margin:auto;">
+    style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999;align-items:flex-end;justify-content:center;">
+    <div class="card" style="width:min(400px,100vw);border-bottom-left-radius:0;border-bottom-right-radius:0;display:flex;flex-direction:column;gap:0;max-height:90dvh;overflow:hidden;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
         <p style="font-weight:700;font-size:1.05rem;">📝 English Lesson</p>
         <button onclick="document.getElementById('el-modal').style.display='none'"
@@ -1074,7 +1074,7 @@
       </div>
 
       <!-- Tabs -->
-      <div style="display:flex;gap:0;margin-bottom:16px;border-bottom:1px solid var(--border);">
+      <div style="display:flex;gap:0;margin-bottom:0;border-bottom:1px solid var(--border);flex-shrink:0;">
         <button id="el-tab1-btn" onclick="elTab(1)"
           style="flex:1;background:none;border:none;border-bottom:2px solid var(--accent);color:var(--text);font-size:0.8rem;padding:8px 4px;cursor:pointer;font-weight:600;">How
           to Ask</button>
@@ -1084,6 +1084,9 @@
           style="flex:1;background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);font-size:0.8rem;padding:8px 4px;cursor:pointer;">Question
           Guide</button>
       </div>
+
+      <!-- Scrollable content area -->
+      <div style="overflow-y:auto;flex:1;padding-top:16px;">
 
       <!-- Tab 1: How to Ask -->
       <div id="el-content1">
@@ -1193,15 +1196,17 @@
         </details>
       </div>
 
-      <button class="btn btn-primary" onclick="document.getElementById('el-modal').style.display='none'">Got
-        it!</button>
+      </div><!-- end scrollable -->
+      <div style="padding-top:12px;flex-shrink:0;">
+        <button class="btn btn-primary" onclick="document.getElementById('el-modal').style.display='none'">Got it!</button>
+      </div>
     </div>
   </div>
 
   <!-- How to play modal -->
   <div id="htp-modal"
-    style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999;align-items:flex-start;justify-content:center;overflow-y:auto;padding:24px 0;">
-    <div class="card" style="width:min(400px,92vw);display:flex;flex-direction:column;gap:0;margin:auto;">
+    style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999;align-items:flex-end;justify-content:center;">
+    <div class="card" style="width:min(400px,100vw);border-bottom-left-radius:0;border-bottom-right-radius:0;display:flex;flex-direction:column;gap:0;max-height:90dvh;overflow:hidden;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
         <p style="font-weight:700;font-size:1.05rem;">📖 How to play</p>
         <button onclick="document.getElementById('htp-modal').style.display='none'"
@@ -1209,12 +1214,15 @@
       </div>
 
       <!-- Tabs -->
-      <div style="display:flex;gap:0;margin-bottom:16px;border-bottom:1px solid var(--border);">
+      <div style="display:flex;gap:0;margin-bottom:0;border-bottom:1px solid var(--border);flex-shrink:0;">
         <button id="htp-tab1-btn" onclick="htpTab(1)"
           style="flex:1;background:none;border:none;border-bottom:2px solid var(--accent);color:var(--text);font-size:0.8rem;padding:8px 4px;cursor:pointer;font-weight:600;">Rules</button>
         <button id="htp-tab2-btn" onclick="htpTab(2)"
           style="flex:1;background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);font-size:0.8rem;padding:8px 4px;cursor:pointer;">Example</button>
       </div>
+
+      <!-- Scrollable content area -->
+      <div style="overflow-y:auto;flex:1;padding-top:16px;">
 
       <!-- Tab 1: Rules -->
       <div id="htp-content1">
@@ -1340,8 +1348,10 @@
         <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:16px;" id="htp-example"></div>
       </div>
 
-      <button class="btn btn-primary" onclick="document.getElementById('htp-modal').style.display='none'"
-        style="margin-top:8px;">Got it!</button>
+      </div><!-- end scrollable -->
+      <div style="padding-top:12px;flex-shrink:0;">
+        <button class="btn btn-primary" onclick="document.getElementById('htp-modal').style.display='none'">Got it!</button>
+      </div>
     </div>
   </div>
 
@@ -2299,16 +2309,20 @@
         if (a.includes('Not a') || a.includes('yes/no')) return '#ef4444';
         return '#e2e8f0';
       }
-      document.getElementById('htp-example').innerHTML = example.map(({ ok, q, a, th }) =>
-        `<div style="display:flex;align-items:center;gap:10px;background:${ok ? 'rgba(255,255,255,.04)' : 'rgba(239,68,68,.06)'};border-radius:8px;padding:8px 12px;border:1px solid ${ok ? 'transparent' : 'rgba(239,68,68,.2)'};">
+      document.getElementById('htp-example').innerHTML = example.map(({ ok, q, a, th }) => {
+        const col = exColor(a);
+        const isSpecial = !ok || col !== '#e2e8f0';
+        const bg = !ok ? 'rgba(239,68,68,.06)' : isSpecial ? `${col}18` : 'rgba(255,255,255,.04)';
+        const border = !ok ? 'rgba(239,68,68,.3)' : isSpecial ? `${col}55` : 'transparent';
+        return `<div style="display:flex;align-items:center;gap:10px;background:${bg};border-radius:8px;padding:8px 12px;border:1px solid ${border};">
       <span style="font-size:0.85rem;min-width:18px;">${ok ? '' : '⚠️'}</span>
       <div style="flex:1;">
         <span style="font-size:0.88rem;">${q}</span><br>
         <span style="font-size:0.72rem;color:var(--muted);">${th}</span>
       </div>
-      <span style="font-weight:700;font-size:0.78rem;color:${exColor(a)};white-space:nowrap;max-width:140px;text-align:right;">${a}</span>
-    </div>`
-      ).join('');
+      <span style="font-weight:700;font-size:0.78rem;color:${col};white-space:nowrap;max-width:140px;text-align:right;">${a}</span>
+    </div>`;
+      }).join('');
     })();
 
     // Keep Render from sleeping
