@@ -2290,12 +2290,15 @@
         { ok: true, q: 'Does it bark?', a: 'Yes', th: 'เห่าได้ไหม' },
         { ok: true, q: 'Is it a dog?', a: '🎉 That\'s it!', th: 'เป็นหมาไหม' },
       ];
-      const aColor = {
-        'Yes': '#10b981', 'No': '#ef4444', '🎉 That\'s it!': '#6ee7b7',
-        '❌ Not a yes/no question': '#ef4444',
-        '🤷 I don\'t know / Mostly yes': '#94a3b8',
-        '🔥 Getting warm — rephrase it': '#f97316',
-      };
+      function exColor(a) {
+        if (a === 'Yes') return '#10b981';
+        if (a === 'No') return '#ef4444';
+        if (a.includes('it!') || a.includes('got') || a.includes('Correct') || a.includes('Bingo')) return '#6ee7b7';
+        if (a.includes('warm') || a.includes('Getting')) return '#f97316';
+        if (a.includes('know') || a.includes('Mostly') || a.includes('depends') || a.includes('Sort')) return '#94a3b8';
+        if (a.includes('Not a') || a.includes('yes/no')) return '#ef4444';
+        return '#e2e8f0';
+      }
       document.getElementById('htp-example').innerHTML = example.map(({ ok, q, a, th }) =>
         `<div style="display:flex;align-items:center;gap:10px;background:${ok ? 'rgba(255,255,255,.04)' : 'rgba(239,68,68,.06)'};border-radius:8px;padding:8px 12px;border:1px solid ${ok ? 'transparent' : 'rgba(239,68,68,.2)'};">
       <span style="font-size:0.85rem;min-width:18px;">${ok ? '' : '⚠️'}</span>
@@ -2303,7 +2306,7 @@
         <span style="font-size:0.88rem;">${q}</span><br>
         <span style="font-size:0.72rem;color:var(--muted);">${th}</span>
       </div>
-      <span style="font-weight:700;font-size:0.78rem;color:${aColor[a] || '#e2e8f0'};white-space:nowrap;max-width:140px;text-align:right;">${a}</span>
+      <span style="font-weight:700;font-size:0.78rem;color:${exColor(a)};white-space:nowrap;max-width:140px;text-align:right;">${a}</span>
     </div>`
       ).join('');
     })();
