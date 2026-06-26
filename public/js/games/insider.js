@@ -336,28 +336,24 @@ function renderPlaying(room) {
   document.getElementById('pl-cat').textContent = myRole === 'master' ? '📂 ' + (room.wordCategory || '') : '';
   document.getElementById('pl-lvl').innerHTML   = myRole === 'master' ? levelChip(room.wordLevel) : '';
 
-  // Answer reference cards — tap to highlight which answer you're giving
   const ANS = [
-    { emoji:'✅', th:'ใช่',          color:'var(--green)', bg:'rgba(16,185,129,.12)',  phrases:'Yes / That\'s right / Correct / Exactly / Absolutely' },
-    { emoji:'❌', th:'ไม่ใช่',       color:'#ef4444',      bg:'rgba(239,68,68,.12)',   phrases:'No / Not really / Incorrect / That\'s not it / Nope' },
-    { emoji:'🟡', th:'ก้ำกึ่ง',      color:'var(--yellow)',bg:'rgba(234,179,8,.12)',   phrases:'Kind of / Sort of / In a way / It depends / More or less' },
-    { emoji:'☑️', th:'ส่วนใหญ่ใช่',  color:'var(--green)', bg:'rgba(16,185,129,.08)',  phrases:'Mostly yes / Generally / For the most part / Usually' },
-    { emoji:'🔹', th:'เป็นส่วนน้อย', color:'#3b82f6',      bg:'rgba(59,130,246,.1)',   phrases:'A little / Slightly / Sometimes / In some cases / Rarely' },
-    { emoji:'⬜', th:'ไม่ต้องสนใจ',  color:'var(--muted)', bg:'rgba(255,255,255,.04)', phrases:'Irrelevant / Doesn\'t apply / Not really / Skip that' },
+    { emoji:'✅', th:'ใช่',          color:'var(--green)', phrases:'Yes · That\'s right · Correct · Exactly · Absolutely' },
+    { emoji:'❌', th:'ไม่ใช่',       color:'#ef4444',      phrases:'No · Not really · That\'s not it · Incorrect · Nope' },
+    { emoji:'🟡', th:'ก้ำกึ่ง',      color:'var(--yellow)',phrases:'Kind of · Sort of · In a way · It depends · More or less' },
+    { emoji:'☑️', th:'ส่วนใหญ่ใช่',  color:'var(--green)', phrases:'Mostly · Generally · For the most part · Usually yes' },
+    { emoji:'🔹', th:'เป็นส่วนน้อย', color:'#3b82f6',      phrases:'A little · Slightly · Sometimes · Rarely · In some cases' },
+    { emoji:'⬜', th:'ไม่ต้องสนใจ',  color:'var(--muted)', phrases:'Irrelevant · Doesn\'t apply · Skip that · N/A' },
   ];
-  const answerBtns = `
+  const answerGuide = `
     <hr style="border:none;border-top:1px solid var(--border);margin:12px 0 10px;">
-    <p class="muted" style="font-size:0.72rem;text-align:center;letter-spacing:.05em;margin-bottom:8px;">💬 Answer Guide — กดเพื่อ highlight คำตอบที่กำลังพูด</p>
-    <div style="display:flex;flex-direction:column;gap:7px;">
+    <p class="muted" style="font-size:0.7rem;letter-spacing:.05em;margin-bottom:8px;">💬 Answer Guide</p>
+    <div style="display:flex;flex-direction:column;gap:6px;">
       ${ANS.map(a => `
-        <button class="master-ans-btn" onclick="masterAnswer(this)"
-          style="border-radius:10px;padding:9px 12px;cursor:pointer;border:1.5px solid ${a.color};background:${a.bg};text-align:left;transition:opacity .15s,transform .15s,box-shadow .15s;">
-          <div style="display:flex;align-items:center;gap:7px;margin-bottom:3px;">
-            <span style="font-size:1rem;">${a.emoji}</span>
-            <span style="font-weight:700;color:${a.color};font-size:0.82rem;">${a.th}</span>
-          </div>
-          <div style="font-size:0.78rem;color:var(--text);opacity:0.75;font-style:italic;line-height:1.4;">${a.phrases}</div>
-        </button>`).join('')}
+        <div style="display:flex;align-items:baseline;gap:7px;font-size:0.8rem;line-height:1.45;">
+          <span style="font-size:0.9rem;flex-shrink:0;">${a.emoji}</span>
+          <span style="font-weight:700;color:${a.color};flex-shrink:0;min-width:72px;">${a.th}</span>
+          <span style="color:var(--muted);font-style:italic;">${a.phrases}</span>
+        </div>`).join('')}
     </div>`;
 
   const roleInfo = {
@@ -372,17 +368,26 @@ function renderPlaying(room) {
         <div style="font-size:2rem;font-weight:800;color:var(--accent2);">${myWord}</div>
         ${room.myThai ? `<div style="font-size:0.95rem;color:var(--muted);margin-top:2px;">${room.myThai}</div>` : ''}
       </div>
-      ${answerBtns}`,
+      ${answerGuide}`,
     insider: `
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
         <span style="font-size:1.4rem;">🕵️</span>
         <span style="font-weight:700;">Insider</span>
         <span class="muted" style="font-size:0.8rem;">— ช่วยโดยไม่ให้โดนจับ</span>
       </div>
-      <div style="text-align:center;padding:10px 0;">
-        <div class="muted" style="font-size:0.72rem;letter-spacing:.08em;margin-bottom:4px;">SECRET WORD</div>
-        <div style="font-size:2rem;font-weight:800;color:var(--accent2);">${myWord}</div>
-        ${room.myThai ? `<div style="font-size:0.95rem;color:var(--muted);margin-top:2px;">${room.myThai}</div>` : ''}
+      <div onclick="toggleInsiderWord()" id="insider-word-toggle"
+        style="cursor:pointer;border-radius:10px;border:1.5px dashed var(--border);background:rgba(255,255,255,.03);padding:14px;text-align:center;user-select:none;">
+        <div id="insider-word-cover">
+          <div style="font-size:1.6rem;margin-bottom:4px;">👁️</div>
+          <div style="font-size:0.82rem;color:var(--muted);">แตะเพื่อดูคำลับ</div>
+          <div style="font-size:0.7rem;color:var(--border);margin-top:3px;">กันคนอื่นแอบเห็น</div>
+        </div>
+        <div id="insider-word-content" style="display:none;">
+          <div class="muted" style="font-size:0.72rem;letter-spacing:.08em;margin-bottom:4px;">SECRET WORD</div>
+          <div style="font-size:2rem;font-weight:800;color:var(--accent2);">${myWord}</div>
+          ${room.myThai ? `<div style="font-size:0.95rem;color:var(--muted);margin-top:2px;">${room.myThai}</div>` : ''}
+          <div style="font-size:0.7rem;color:var(--border);margin-top:6px;">แตะอีกครั้งเพื่อซ่อน</div>
+        </div>
       </div>`,
     common: `
       <div style="display:flex;align-items:center;gap:10px;">
@@ -423,19 +428,13 @@ function updateTimer(t) {
 function doWordGuessed()    { socket.emit('word_guessed'); }
 function doWordNotGuessed() { socket.emit('word_not_guessed'); }
 
-function masterAnswer(btn) {
-  document.querySelectorAll('.master-ans-btn').forEach(b => {
-    const active = b === btn;
-    b.style.opacity    = active ? '1' : '0.3';
-    b.style.transform  = active ? 'scale(1.02)' : 'scale(1)';
-    b.style.boxShadow  = active ? '0 0 0 2px currentColor' : 'none';
-  });
-  clearTimeout(masterAnswer._t);
-  masterAnswer._t = setTimeout(() => {
-    document.querySelectorAll('.master-ans-btn').forEach(b => {
-      b.style.opacity = '1'; b.style.transform = 'scale(1)'; b.style.boxShadow = 'none';
-    });
-  }, 3000);
+function toggleInsiderWord() {
+  const cover   = document.getElementById('insider-word-cover');
+  const content = document.getElementById('insider-word-content');
+  if (!cover || !content) return;
+  const showing = content.style.display !== 'none';
+  cover.style.display   = showing ? 'block' : 'none';
+  content.style.display = showing ? 'none'  : 'block';
 }
 
 // ── Voting ────────────────────────────────────────────────────────────────────
