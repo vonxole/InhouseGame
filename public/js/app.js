@@ -157,6 +157,7 @@ socket.on('room_update', (room) => {
 socket.on('kicked', () => {
   clearSession();
   myName = '';
+  document.getElementById('l-sticky-footer').style.display = 'none';
   show('s-home');
   toast('You have been removed from the room');
 });

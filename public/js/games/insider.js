@@ -566,6 +566,7 @@ async function doLeaveRoom() {
   socket.emit('leave_room');
   clearSession();
   myName = ''; myRole = null; myWord = null; myThai = null; isHost = false;
+  document.getElementById('l-sticky-footer').style.display = 'none';
   show('s-home');
 }
 
