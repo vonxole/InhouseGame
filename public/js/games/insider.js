@@ -336,16 +336,28 @@ function renderPlaying(room) {
   document.getElementById('pl-cat').textContent = myRole === 'master' ? '📂 ' + (room.wordCategory || '') : '';
   document.getElementById('pl-lvl').innerHTML   = myRole === 'master' ? levelChip(room.wordLevel) : '';
 
+  // Answer reference cards — tap to highlight which answer you're giving
+  const ANS = [
+    { emoji:'✅', th:'ใช่',          color:'var(--green)', bg:'rgba(16,185,129,.12)',  phrases:'Yes / That\'s right / Correct / Exactly / Absolutely' },
+    { emoji:'❌', th:'ไม่ใช่',       color:'#ef4444',      bg:'rgba(239,68,68,.12)',   phrases:'No / Not really / Incorrect / That\'s not it / Nope' },
+    { emoji:'🟡', th:'ก้ำกึ่ง',      color:'var(--yellow)',bg:'rgba(234,179,8,.12)',   phrases:'Kind of / Sort of / In a way / It depends / More or less' },
+    { emoji:'☑️', th:'ส่วนใหญ่ใช่',  color:'var(--green)', bg:'rgba(16,185,129,.08)',  phrases:'Mostly yes / Generally / For the most part / Usually' },
+    { emoji:'🔹', th:'เป็นส่วนน้อย', color:'#3b82f6',      bg:'rgba(59,130,246,.1)',   phrases:'A little / Slightly / Sometimes / In some cases / Rarely' },
+    { emoji:'⬜', th:'ไม่ต้องสนใจ',  color:'var(--muted)', bg:'rgba(255,255,255,.04)', phrases:'Irrelevant / Doesn\'t apply / Not really / Skip that' },
+  ];
   const answerBtns = `
     <hr style="border:none;border-top:1px solid var(--border);margin:12px 0 10px;">
-    <p class="muted" style="font-size:0.72rem;text-align:center;letter-spacing:.05em;margin-bottom:8px;">คำตอบที่ใช้ได้</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-      <button class="master-ans-btn" onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid var(--green);background:rgba(16,185,129,.12);color:var(--green);transition:opacity .15s,transform .15s;">✅ ใช่</button>
-      <button class="master-ans-btn" onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid #ef4444;background:rgba(239,68,68,.12);color:#ef4444;transition:opacity .15s,transform .15s;">❌ ไม่ใช่</button>
-      <button class="master-ans-btn" onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid var(--yellow);background:rgba(234,179,8,.12);color:var(--yellow);transition:opacity .15s,transform .15s;">🟡 ก้ำกึ่ง</button>
-      <button class="master-ans-btn" onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid var(--green);background:rgba(16,185,129,.08);color:var(--green);transition:opacity .15s,transform .15s;">☑️ ส่วนใหญ่ใช่</button>
-      <button class="master-ans-btn" onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid #3b82f6;background:rgba(59,130,246,.1);color:#3b82f6;transition:opacity .15s,transform .15s;">🔹 เป็นส่วนน้อย</button>
-      <button class="master-ans-btn" onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid var(--border);background:rgba(255,255,255,.04);color:var(--muted);transition:opacity .15s,transform .15s;">⬜ ไม่ต้องสนใจ</button>
+    <p class="muted" style="font-size:0.72rem;text-align:center;letter-spacing:.05em;margin-bottom:8px;">💬 Answer Guide — กดเพื่อ highlight คำตอบที่กำลังพูด</p>
+    <div style="display:flex;flex-direction:column;gap:7px;">
+      ${ANS.map(a => `
+        <button class="master-ans-btn" onclick="masterAnswer(this)"
+          style="border-radius:10px;padding:9px 12px;cursor:pointer;border:1.5px solid ${a.color};background:${a.bg};text-align:left;transition:opacity .15s,transform .15s,box-shadow .15s;">
+          <div style="display:flex;align-items:center;gap:7px;margin-bottom:3px;">
+            <span style="font-size:1rem;">${a.emoji}</span>
+            <span style="font-weight:700;color:${a.color};font-size:0.82rem;">${a.th}</span>
+          </div>
+          <div style="font-size:0.78rem;color:var(--text);opacity:0.75;font-style:italic;line-height:1.4;">${a.phrases}</div>
+        </button>`).join('')}
     </div>`;
 
   const roleInfo = {
@@ -412,16 +424,16 @@ function doWordGuessed()    { socket.emit('word_guessed'); }
 function doWordNotGuessed() { socket.emit('word_not_guessed'); }
 
 function masterAnswer(btn) {
-  // Highlight selected, dim others (buttons are inside pl-role-card)
   document.querySelectorAll('.master-ans-btn').forEach(b => {
-    b.style.opacity = b === btn ? '1' : '0.35';
-    b.style.transform = b === btn ? 'scale(1.04)' : 'scale(1)';
+    const active = b === btn;
+    b.style.opacity    = active ? '1' : '0.3';
+    b.style.transform  = active ? 'scale(1.02)' : 'scale(1)';
+    b.style.boxShadow  = active ? '0 0 0 2px currentColor' : 'none';
   });
-  // Auto-reset after 3s
   clearTimeout(masterAnswer._t);
   masterAnswer._t = setTimeout(() => {
     document.querySelectorAll('.master-ans-btn').forEach(b => {
-      b.style.opacity = '1'; b.style.transform = 'scale(1)';
+      b.style.opacity = '1'; b.style.transform = 'scale(1)'; b.style.boxShadow = 'none';
     });
   }, 3000);
 }
