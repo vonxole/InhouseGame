@@ -6,6 +6,7 @@ COPY package*.json ./
 RUN npm install --omit=dev
 
 COPY server.js words.json ./
+COPY games ./games
 COPY public ./public
 
 EXPOSE 3001
