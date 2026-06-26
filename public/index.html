@@ -96,51 +96,59 @@
         <div class="player-list" id="l-players"></div>
       </div>
 
-      <!-- Host: filters -->
-      <div class="card" id="l-filters" style="display:none;flex-direction:column;gap:14px;">
-        <div>
-          <label style="margin-bottom:8px;">⚡ Difficulty <span class="muted" style="font-weight:400;">(pick multiple)</span></label>
-          <div class="pill-group" id="fg-lvl">
-            <button class="pill" onclick="setFilter('level','easy')"   style="--pc:#6ee7b7;--bc:#059669;">Easy</button>
-            <button class="pill" onclick="setFilter('level','medium')" style="--pc:#fcd34d;--bc:#d97706;">Medium</button>
-            <button class="pill" onclick="setFilter('level','hard')"   style="--pc:#fca5a5;--bc:#dc2626;">Hard</button>
-          </div>
-        </div>
-        <p class="muted" style="font-size:0.78rem;">Leave blank = pick from all</p>
-
-        <div style="border-top:1px solid var(--border);padding-top:14px;display:flex;flex-direction:column;gap:16px;">
-          <div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-              <label>⏱ Play Time</label>
-              <span id="play-val" style="font-weight:700;color:var(--accent);font-size:1rem;"></span>
+      <!-- Host: collapsible settings -->
+      <div id="l-settings-host" style="display:none;">
+        <div class="card" style="padding:0;overflow:hidden;">
+          <button onclick="toggleLobbySettings()" style="width:100%;background:rgba(255,255,255,0.03);border:none;padding:14px 18px;display:flex;align-items:center;gap:10px;cursor:pointer;text-align:left;color:var(--text);transition:background .15s;" onmouseover="this.style.background='rgba(255,255,255,0.07)'" onmouseout="this.style.background='rgba(255,255,255,0.03)'">
+            <span style="font-size:1rem;">⚙️</span>
+            <span style="font-weight:600;font-size:0.9rem;">Settings</span>
+            <span id="l-settings-summary" style="flex:1;font-size:0.8rem;color:var(--muted);text-align:right;margin-right:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"></span>
+            <span id="l-settings-chevron" style="color:var(--accent2);font-size:0.85rem;font-weight:700;transition:transform .2s;flex-shrink:0;background:rgba(124,58,237,0.18);border-radius:99px;padding:3px 8px;">Edit</span>
+          </button>
+          <div id="l-settings-body" style="display:none;flex-direction:column;gap:14px;padding:0 18px 18px;border-top:1px solid var(--border);">
+            <!-- Difficulty -->
+            <div style="padding-top:14px;">
+              <label style="margin-bottom:8px;">⚡ Difficulty <span class="muted" style="font-weight:400;">(pick multiple)</span></label>
+              <div class="pill-group" id="fg-lvl">
+                <button class="pill" onclick="setFilter('level','easy')"   style="--pc:#6ee7b7;--bc:#059669;">Easy</button>
+                <button class="pill" onclick="setFilter('level','medium')" style="--pc:#fcd34d;--bc:#d97706;">Medium</button>
+                <button class="pill" onclick="setFilter('level','hard')"   style="--pc:#fca5a5;--bc:#dc2626;">Hard</button>
+              </div>
+              <p class="muted" style="font-size:0.78rem;margin-top:6px;">Leave blank = pick from all</p>
             </div>
-            <input id="sl-play" type="range" min="1" max="10" step="1" oninput="onSliderInput('play', this.value)"
-              onchange="setTimer('play', this.value * 60)" style="width:100%;accent-color:var(--accent);">
-          </div>
-          <div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-              <label>💬 Discuss Time</label>
-              <span id="discuss-val" style="font-weight:700;color:var(--accent);font-size:1rem;"></span>
+            <!-- Timers -->
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                  <label>⏱ Play Time</label>
+                  <span id="play-val" style="font-weight:700;color:var(--accent);font-size:1rem;"></span>
+                </div>
+                <input id="sl-play" type="range" min="1" max="10" step="1" oninput="onSliderInput('play', this.value)"
+                  onchange="setTimer('play', this.value * 60)" style="width:100%;accent-color:var(--accent);">
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                  <label>💬 Discuss Time</label>
+                  <span id="discuss-val" style="font-weight:700;color:var(--accent);font-size:1rem;"></span>
+                </div>
+                <input id="sl-discuss" type="range" min="1" max="10" step="1" oninput="onSliderInput('discuss', this.value)"
+                  onchange="setTimer('discuss', this.value * 60)" style="width:100%;accent-color:var(--accent);">
+              </div>
             </div>
-            <input id="sl-discuss" type="range" min="1" max="10" step="1" oninput="onSliderInput('discuss', this.value)"
-              onchange="setTimer('discuss', this.value * 60)" style="width:100%;accent-color:var(--accent);">
           </div>
         </div>
       </div>
 
-      <!-- Password + toggles (host only) -->
-      <div class="card" id="l-password-wrap" style="display:none;">
-        <label>Room password <span class="muted" style="font-size:0.8rem;">(optional)</span></label>
-        <input id="inp-room-password" type="text" placeholder="Leave blank = open room" maxlength="20"
-          autocomplete="off" oninput="socket.emit('set_password', { password: this.value })" style="margin-top:6px;">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;">
-          <span style="font-size:0.88rem;">💬 Example questions</span>
+      <!-- Host: example questions (standalone) -->
+      <div id="l-examples-host" style="display:none;" class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:0.9rem;font-weight:600;">💬 Example questions</span>
           <label class="toggle-switch">
-            <input type="checkbox" id="tog-examples" checked onchange="onToggleExamples(this.checked)">
+            <input type="checkbox" id="tog-examples" onchange="onToggleExamples(this.checked)">
             <span class="toggle-track"></span>
           </label>
         </div>
-        <div id="example-count-wrap" style="margin-top:10px;">
+        <div id="example-count-wrap" style="margin-top:12px;">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
             <span class="muted" style="font-size:0.82rem;">Number of questions</span>
             <span style="font-size:0.88rem;font-weight:700;" id="example-count-val">15</span>
@@ -152,6 +160,21 @@
           <div class="muted" style="display:flex;justify-content:space-between;font-size:0.75rem;margin-top:2px;">
             <span>5 (focused)</span><span>30 (varied)</span>
           </div>
+        </div>
+      </div>
+
+      <!-- Host: password (standalone) -->
+      <div id="l-password-host" style="display:none;" class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:0.9rem;font-weight:600;">🔒 Room password</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="tog-password" onchange="onTogglePassword(this.checked)">
+            <span class="toggle-track"></span>
+          </label>
+        </div>
+        <div id="password-input-wrap" style="display:none;margin-top:12px;">
+          <input id="inp-room-password" type="text" placeholder="Enter password" maxlength="20"
+            autocomplete="off" oninput="socket.emit('set_password', { password: this.value })">
         </div>
       </div>
 
@@ -169,12 +192,8 @@
         <div id="l-score-list" style="display:flex;flex-direction:column;gap:6px;"></div>
       </div>
 
-      <div id="l-host-ctrl" style="display:none;flex-direction:column;gap:8px;">
-        <p class="muted center" id="l-need-msg">Need at least 4 players to start</p>
-        <button id="btn-start" class="btn btn-primary" onclick="doStart()" disabled>Start Game</button>
-      </div>
-      <p id="l-wait-msg" class="muted center" style="display:none;">Waiting for host to start…</p>
-      <button class="btn" style="opacity:0.5;font-size:0.85rem;" onclick="doLeaveRoom()">🚪 Leave Room</button>
+      <!-- spacer so content clears sticky footer -->
+      <div style="height:100px;"></div>
     </div>
 
     <!-- REVEAL ───────────────────────────────────────────────────────────── -->
@@ -634,6 +653,15 @@
           onclick="closePwModal()">Cancel</button>
         <button class="btn btn-primary" style="flex:1;" onclick="submitPwModal()">Join</button>
       </div>
+    </div>
+  </div>
+
+  <!-- Lobby sticky footer -->
+  <div id="l-sticky-footer" style="display:none;position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:420px;padding:12px 16px 32px;background:linear-gradient(to top, var(--bg) 75%, transparent);z-index:50;pointer-events:none;">
+    <div style="display:flex;flex-direction:column;gap:8px;pointer-events:all;">
+      <p id="l-footer-msg" class="muted center" style="font-size:0.82rem;"></p>
+      <button id="btn-start" class="btn btn-primary" onclick="doStart()" disabled style="display:none;">Start Game 🎮</button>
+      <button class="btn btn-outline" style="font-size:0.85rem;" onclick="doLeaveRoom()">🚪 Leave Room</button>
     </div>
   </div>
 

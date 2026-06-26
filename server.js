@@ -39,7 +39,7 @@ function createRoom(hostId, hostName, gameType = 'insider') {
     roles: {}, timer: null, timeLeft: 0,
     revealsDone: [], votes: {}, voteTimer: null, voteTimeLeft: 0,
     scores: {}, password: '',
-    showExamples: true, exampleCount: 15,
+    showExamples: false, exampleCount: 15,
   };
   return code;
 }
@@ -100,6 +100,7 @@ io.on('connection', (socket) => {
     if (room.state !== 'lobby') return socket.emit('error', 'Game already started');
     if (room.password && room.password !== (password || '')) return socket.emit('error', 'Wrong password');
     if (room.players.some(p => p.id === socket.id)) return;
+    if (room.players.some(p => p.name.toLowerCase() === name.toLowerCase())) return socket.emit('error', `"${name}" already in use — try a different one`);
     room.players.push({ id: socket.id, name, isHost: false });
     socket.join(room.code);
     broadcastRoom(room);

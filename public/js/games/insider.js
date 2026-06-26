@@ -3,6 +3,8 @@
 
 // ── Entry point ───────────────────────────────────────────────────────────────
 function handleInsiderRoomUpdate(room) {
+  if (room.state !== 'lobby') _prevRoomState = room.state;
+  document.getElementById('l-sticky-footer').style.display = room.state === 'lobby' ? 'block' : 'none';
   if (room.state === 'lobby')   renderLobby(room);
   else if (room.state === 'reveal')  renderReveal(room);
   else if (room.state === 'playing') renderPlaying(room);
@@ -22,7 +24,22 @@ socket.on('show_insider_reveal', () => {
 });
 
 // ── Lobby ─────────────────────────────────────────────────────────────────────
+let _prevRoomState = null;
+let _settingsOpen  = false;
 function renderLobby(room) {
+  // Collapse settings when transitioning TO lobby (e.g. after play again or first join)
+  if (_prevRoomState !== 'lobby') {
+    _settingsOpen = false;
+    const body    = document.getElementById('l-settings-body');
+    const chevron = document.getElementById('l-settings-chevron');
+    if (body) body.style.display = 'none';
+    if (chevron) {
+      chevron.textContent      = 'Edit';
+      chevron.style.background = 'rgba(124,58,237,0.18)';
+      chevron.style.color      = 'var(--accent2)';
+    }
+  }
+  _prevRoomState = 'lobby';
   show('s-lobby');
   document.getElementById('l-code').textContent  = room.code;
   document.getElementById('l-count').textContent = `(${room.players.length})`;
@@ -51,16 +68,16 @@ function renderLobby(room) {
   }).join('');
 
   if (isHost) {
-    document.getElementById('l-filters').style.display      = 'flex';
-    document.getElementById('l-password-wrap').style.display = 'block';
-    document.getElementById('l-settings-view').style.display = 'none';
-    document.getElementById('l-host-ctrl').style.display    = 'flex';
-    document.getElementById('l-wait-msg').style.display     = 'none';
+    document.getElementById('l-settings-host').style.display  = 'block';
+    document.getElementById('l-examples-host').style.display  = 'block';
+    document.getElementById('l-password-host').style.display  = 'block';
+    document.getElementById('l-settings-view').style.display  = 'none';
     const btn  = document.getElementById('btn-start');
     const need = 4 - room.players.length;
-    btn.disabled    = need > 0;
-    btn.textContent = need > 0 ? `Need ${need} more player(s)` : 'Start Game 🎮';
-    document.getElementById('l-need-msg').style.display = need > 0 ? 'block' : 'none';
+    btn.style.display = 'block';
+    btn.disabled      = need > 0;
+    btn.textContent   = need > 0 ? `Need ${need} more player(s)` : 'Start Game 🎮';
+    document.getElementById('l-footer-msg').textContent = '';
     syncPills('fg-lvl', room.filterLevels || []);
     syncSlider('sl-play',    'play-val',    room.playTime    || 180);
     syncSlider('sl-discuss', 'discuss-val', room.discussTime || 60);
@@ -70,12 +87,23 @@ function renderLobby(room) {
     const cnt = room.exampleCount || 15;
     document.getElementById('sl-example-count').value        = cnt;
     document.getElementById('example-count-val').textContent = cnt;
+    // Update summary line shown when accordion is collapsed
+    const lvls    = room.filterLevels || [];
+    const lvlText = lvls.length ? lvls.map(l => l[0].toUpperCase() + l.slice(1)).join(' · ') : 'All';
+    const playMin = Math.round((room.playTime || 180) / 60);
+    const discMin = Math.round((room.discussTime || 60) / 60);
+    document.getElementById('l-settings-summary').textContent = `${lvlText} · ⏱ ${playMin}min · 💬 ${discMin}min`;
+    const hasPw = !!room.password;
+    document.getElementById('tog-password').checked = hasPw;
+    document.getElementById('password-input-wrap').style.display = hasPw ? 'block' : 'none';
+    if (hasPw) document.getElementById('inp-room-password').value = room.password;
   } else {
-    document.getElementById('l-filters').style.display      = 'none';
-    document.getElementById('l-password-wrap').style.display = 'none';
-    document.getElementById('l-settings-view').style.display = 'block';
-    document.getElementById('l-host-ctrl').style.display    = 'none';
-    document.getElementById('l-wait-msg').style.display     = 'block';
+    document.getElementById('l-settings-host').style.display  = 'none';
+    document.getElementById('l-examples-host').style.display  = 'none';
+    document.getElementById('l-password-host').style.display  = 'none';
+    document.getElementById('l-settings-view').style.display  = 'block';
+    document.getElementById('btn-start').style.display        = 'none';
+    document.getElementById('l-footer-msg').textContent       = 'Waiting for host to start…';
     const lvls     = room.filterLevels || [];
     const lvlChips = lvls.length
       ? lvls.map(l => levelChip(l)).join('')
@@ -95,6 +123,17 @@ function renderLobby(room) {
 function kickPlayer(playerId) { socket.emit('kick_player', { playerId }); }
 function setMaster(playerId)  { socket.emit('set_master',  { playerId }); }
 
+function onTogglePassword(on) {
+  const wrap = document.getElementById('password-input-wrap');
+  wrap.style.display = on ? 'block' : 'none';
+  if (!on) {
+    document.getElementById('inp-room-password').value = '';
+    socket.emit('set_password', { password: '' });
+  } else {
+    document.getElementById('inp-room-password').focus();
+  }
+}
+
 function setFilter(type, val) {
   socket.emit('set_filter', { type, value: val });
 }
@@ -112,6 +151,24 @@ function onSliderInput(type, val) {
   const id = type === 'play' ? 'play-val' : 'discuss-val';
   const el = document.getElementById(id);
   if (el) el.textContent = val + ' min';
+}
+
+function toggleLobbySettings() {
+  _settingsOpen = !_settingsOpen;
+  const body    = document.getElementById('l-settings-body');
+  const chevron = document.getElementById('l-settings-chevron');
+  if (_settingsOpen) {
+    body.style.display       = 'flex';
+    body.style.flexDirection = 'column';
+    chevron.textContent = 'Done';
+    chevron.style.background = 'rgba(16,185,129,0.18)';
+    chevron.style.color      = '#10b981';
+  } else {
+    body.style.display  = 'none';
+    chevron.textContent = 'Edit';
+    chevron.style.background = 'rgba(124,58,237,0.18)';
+    chevron.style.color      = 'var(--accent2)';
+  }
 }
 
 // ── Reveal ────────────────────────────────────────────────────────────────────
