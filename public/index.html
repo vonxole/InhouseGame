@@ -13,54 +13,71 @@
   <div id="app">
 
     <!-- HOME ─────────────────────────────────────────────────────────────── -->
-    <div id="s-home" class="screen active" style="justify-content:center;gap:20px;">
-      <div class="center" style="margin-bottom:4px;">
-        <div style="font-size:3rem;">🎮</div>
-        <h1>Digi<span>Play</span></h1>
-        <p class="muted" style="margin-top:6px;">Office party games</p>
-        <p id="version-label" style="font-size:0.72rem;opacity:.35;margin-top:2px;"></p>
-      </div>
+    <div id="s-home" class="screen active" style="justify-content:flex-start;gap:0;padding-top:0;">
 
-      <!-- Name input -->
-      <div class="card" style="display:flex;flex-direction:column;gap:10px;">
+      <!-- Header bar -->
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 20px 12px;width:100%;">
         <div>
-          <label>Your name</label>
-          <input id="inp-name" type="text" placeholder="Name" maxlength="16" autocomplete="off">
+          <h1 style="font-size:1.4rem;margin:0;">Digi<span>Play</span></h1>
+          <p id="version-label" style="font-size:0.65rem;opacity:.3;margin:0;"></p>
         </div>
-
-        <!-- Join by code — PRIMARY (most people tap this) -->
-        <div>
-          <label>Join a room</label>
-          <div class="row">
-            <input id="inp-code" type="text" placeholder="Room code" maxlength="4"
-              style="text-transform:uppercase;letter-spacing:.12em;font-size:1.1rem;font-weight:700;">
-            <button class="btn btn-primary" onclick="doJoin()" style="white-space:nowrap;">Join →</button>
-          </div>
-        </div>
-
-        <div style="display:flex;align-items:center;gap:10px;margin:2px 0;">
-          <div style="flex:1;height:1px;background:var(--border);"></div>
-          <span class="muted" style="font-size:0.78rem;">or</span>
-          <div style="flex:1;height:1px;background:var(--border);"></div>
-        </div>
-
-        <!-- Create — SECONDARY -->
-        <button class="btn" onclick="showPickGame()"
-          style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.9rem;">
-          🏠 Create a Room
+        <button onclick="document.getElementById('el-modal').style.display='flex'"
+          style="background:transparent;border:1.5px solid var(--border);color:var(--muted);border-radius:8px;padding:6px 12px;font-size:0.8rem;cursor:pointer;">
+          📝 EN
         </button>
       </div>
 
-      <!-- Open rooms list -->
-      <div id="room-list-wrap" style="width:100%;max-width:400px;display:none;flex-direction:column;gap:8px;">
-        <p class="muted" style="font-size:0.8rem;text-align:center;margin-bottom:2px;">🚪 Open rooms — tap to join</p>
-        <div id="room-list" style="display:flex;flex-direction:column;gap:8px;"></div>
+      <!-- Room list -->
+      <div style="flex:1;width:100%;overflow-y:auto;padding:0 16px;">
+
+        <!-- Rooms exist -->
+        <div id="room-list-wrap" style="display:none;flex-direction:column;gap:8px;">
+          <p class="muted" style="font-size:0.75rem;margin:0 0 4px;">เลือกห้องที่จะเข้า</p>
+          <div id="room-list" style="display:flex;flex-direction:column;gap:8px;"></div>
+          <button onclick="showNameModal(null)"
+            style="background:transparent;border:1.5px dashed var(--border);color:var(--muted);border-radius:12px;padding:12px;font-size:0.85rem;cursor:pointer;margin-top:4px;">
+            ⌨️ Enter room code instead
+          </button>
+        </div>
+
+        <!-- No rooms -->
+        <div id="no-rooms-msg" style="display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:40px 0;text-align:center;">
+          <div style="font-size:3rem;">🎮</div>
+          <div>
+            <div style="font-weight:700;font-size:1rem;">ยังไม่มีห้องที่เปิดอยู่</div>
+            <div class="muted" style="font-size:0.85rem;margin-top:4px;">สร้างห้องเพื่อให้เพื่อนเข้ามาได้เลย</div>
+          </div>
+        </div>
+
       </div>
 
-      <button class="btn" onclick="document.getElementById('el-modal').style.display='flex'"
-        style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.85rem;max-width:400px;width:100%;">
-        📝 English Lesson
-      </button>
+      <!-- Bottom bar: Create -->
+      <div style="width:100%;padding:12px 16px 20px;border-top:1px solid var(--border);background:var(--bg);">
+        <button class="btn btn-primary" onclick="showNameModal('create')" style="width:100%;font-size:1rem;">
+          🏠 Create a Room
+        </button>
+      </div>
+    </div>
+
+    <!-- NAME MODAL (join / create) -->
+    <div id="name-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:200;align-items:flex-end;justify-content:center;">
+      <div style="background:var(--card);border-radius:20px 20px 0 0;padding:24px 20px 32px;width:100%;max-width:500px;display:flex;flex-direction:column;gap:14px;">
+        <div style="width:40px;height:4px;background:var(--border);border-radius:99px;align-self:center;margin-bottom:4px;"></div>
+        <div id="name-modal-title" style="font-size:1rem;font-weight:700;"></div>
+        <div>
+          <label>ชื่อของคุณ</label>
+          <input id="inp-name" type="text" placeholder="Enter your name" maxlength="16" autocomplete="off"
+            style="font-size:1rem;" onkeydown="if(event.key==='Enter')nameModalConfirm()">
+        </div>
+        <div id="name-modal-code-wrap" style="display:none;">
+          <label>Room code</label>
+          <input id="inp-code" type="text" placeholder="XXXX" maxlength="4"
+            style="text-transform:uppercase;letter-spacing:.14em;font-size:1.1rem;font-weight:700;"
+            onkeydown="if(event.key==='Enter')nameModalConfirm()">
+        </div>
+        <button class="btn btn-primary" onclick="nameModalConfirm()" style="margin-top:4px;" id="name-modal-confirm">Confirm</button>
+        <button onclick="closeNameModal()" style="background:transparent;border:none;color:var(--muted);font-size:0.88rem;cursor:pointer;">Cancel</button>
+      </div>
     </div>
 
     <!-- PICK GAME ──────────────────────────────────────────────────────────── -->

@@ -67,53 +67,141 @@ socket.on('rejoin_failed', () => {
   toast('Session ended — please rejoin');
 });
 
-// ── Home ──────────────────────────────────────────────────────────────────────
+// ── Name Modal ────────────────────────────────────────────────────────────────
+let _nameModalMode  = null; // 'join-code' | 'join-room' | 'create'
+let _nameModalCode  = null; // pre-filled room code when joining a listed room
+
+function showNameModal(mode, code) {
+  _nameModalMode = mode;
+  _nameModalCode = code || null;
+
+  const modal    = document.getElementById('name-modal');
+  const title    = document.getElementById('name-modal-title');
+  const codeWrap = document.getElementById('name-modal-code-wrap');
+  const codeInp  = document.getElementById('inp-code');
+  const nameInp  = document.getElementById('inp-name');
+
+  // Pre-fill name from last session
+  const saved = sessionStorage.getItem('insider_name');
+  if (saved && !nameInp.value) nameInp.value = saved;
+
+  if (mode === 'create') {
+    title.textContent      = '🏠 สร้างห้องใหม่';
+    codeWrap.style.display = 'none';
+  } else if (code) {
+    // Joining a specific room from list
+    title.textContent      = '🚪 เข้าห้อง';
+    codeWrap.style.display = 'none';
+    _nameModalMode = 'join-room';
+  } else {
+    // Manual code entry
+    title.textContent      = '⌨️ เข้าด้วย Room Code';
+    codeWrap.style.display = 'block';
+    if (codeInp) codeInp.value = '';
+    _nameModalMode = 'join-code';
+  }
+
+  modal.style.display = 'flex';
+  setTimeout(() => nameInp.focus(), 80);
+}
+
+function closeNameModal() {
+  document.getElementById('name-modal').style.display = 'none';
+}
+
+function nameModalConfirm() {
+  const nameInp = document.getElementById('inp-name');
+  myName = nameInp.value.trim();
+  if (!myName) { nameInp.focus(); return toast('ใส่ชื่อก่อนนะ'); }
+  sessionStorage.setItem('insider_name', myName);
+  closeNameModal();
+
+  if (_nameModalMode === 'create') {
+    const rnInput = document.getElementById('inp-room-name');
+    if (rnInput && !rnInput.value.trim()) rnInput.value = `${myName}'s Room`;
+    show('s-pick-game');
+  } else if (_nameModalMode === 'join-room') {
+    socket.emit('join_room', { code: _nameModalCode, name: myName });
+  } else {
+    // join-code
+    const code = document.getElementById('inp-code')?.value.trim().toUpperCase();
+    if (!code) return toast('ใส่ room code ด้วย');
+    socket.emit('join_room', { code, name: myName });
+  }
+}
+
+// close modal on backdrop click
+document.getElementById('name-modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('name-modal')) closeNameModal();
+});
+
 function showPickGame() {
-  myName = document.getElementById('inp-name').value.trim();
-  if (!myName) return toast('Enter your name first');
+  if (!myName) return showNameModal('create');
+  const rnInput = document.getElementById('inp-room-name');
+  if (rnInput && !rnInput.value.trim()) rnInput.value = `${myName}'s Room`;
   show('s-pick-game');
 }
 
 function doCreate(gameType) {
-  socket.emit('create_room', { name: myName, gameType: gameType || 'insider' });
+  const roomName = (document.getElementById('inp-room-name')?.value || '').trim();
+  socket.emit('create_room', { name: myName, gameType: gameType || 'insider', roomName });
 }
 
-function doJoin() {
-  myName = document.getElementById('inp-name').value.trim();
-  const code = document.getElementById('inp-code').value.trim().toUpperCase();
-  if (!myName) return toast('Enter your name first');
-  if (!code)   return toast('Enter a room code');
-  socket.emit('join_room', { code, name: myName });
-}
-
-document.getElementById('inp-code').addEventListener('keydown', e => {
-  if (e.key === 'Enter') doJoin();
-});
+function doJoin() { /* legacy — now handled by nameModalConfirm */ }
 
 socket.on('room_created', () => { });
 
 // ── Room list ─────────────────────────────────────────────────────────────────
 socket.on('rooms_list', (list) => {
-  const wrap = document.getElementById('room-list-wrap');
-  const el   = document.getElementById('room-list');
-  if (!wrap || !el) return;
-  if (list.length === 0) { wrap.style.display = 'none'; return; }
-  wrap.style.display = 'flex';
-  const gameLabel = { insider: '🕵️ Insider', spyfall: '🕵️ Spyfall' };
-  el.innerHTML = list.map(r => `
+  const wrap    = document.getElementById('room-list-wrap');
+  const el      = document.getElementById('room-list');
+  const noRooms = document.getElementById('no-rooms-msg');
+  if (!el) return;
+
+  if (list.length === 0) {
+    if (wrap)    wrap.style.display    = 'none';
+    if (noRooms) noRooms.style.display = 'flex';
+    return;
+  }
+
+  if (noRooms) noRooms.style.display = 'none';
+  if (wrap)    wrap.style.display    = 'flex';
+
+  const gameLabel  = { insider: '🕵️ Insider', spyfall: '🕵️ Spyfall' };
+  const gameAccent = { insider: 'rgba(124,58,237,.2)', spyfall: 'rgba(14,165,233,.2)' };
+  const gameColor  = { insider: 'var(--accent2)', spyfall: '#0ea5e9' };
+
+  el.innerHTML = list.map(r => {
+    const label = gameLabel[r.gameType]  || '🎮';
+    const bg    = gameAccent[r.gameType] || 'rgba(124,58,237,.2)';
+    const clr   = gameColor[r.gameType]  || 'var(--accent2)';
+    const name  = r.roomName || `${r.host}'s Room`;
+    return `
     <div onclick="doJoinRoom('${r.code}', ${r.hasPassword})" style="
-      display:flex;justify-content:space-between;align-items:center;
-      padding:10px 14px;border-radius:12px;border:1.5px solid var(--border);
+      padding:14px 16px;border-radius:12px;border:1.5px solid var(--border);
       cursor:pointer;background:var(--card);transition:border-color .15s;
-    " onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-      <div>
-        <span style="font-size:0.75rem;background:rgba(124,58,237,.2);color:var(--accent2);border-radius:5px;padding:1px 7px;font-weight:600;margin-right:8px;">${gameLabel[r.gameType] || '🎮'}</span>
-        <span class="muted" style="font-size:0.85rem;">by ${r.host}</span>
+    " onmouseover="this.style.borderColor='${clr}'" onmouseout="this.style.borderColor='var(--border)'">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <div style="font-size:1rem;font-weight:700;">${r.hasPassword ? '🔒 ' : ''}${name}</div>
+        <span style="font-size:0.82rem;color:var(--muted);white-space:nowrap;margin-left:10px;">👥 ${r.count}</span>
       </div>
-      <span class="muted" style="font-size:0.82rem;">${r.hasPassword ? '🔒 ' : ''}👥 ${r.count}</span>
-    </div>
-  `).join('');
+      <div style="margin-top:4px;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:0.72rem;background:${bg};color:${clr};border-radius:5px;padding:1px 7px;font-weight:600;">${label}</span>
+        <span class="muted" style="font-size:0.78rem;">by ${r.host}</span>
+      </div>
+    </div>`;
+  }).join('');
 });
+
+function doJoinRoom(code, hasPassword) {
+  if (hasPassword) {
+    // Need name first, then password
+    showNameModal('join-room', code);
+  } else {
+    showNameModal('join-room', code);
+  }
+  _nameModalCode = code;
+}
 
 function doJoinRoom(code, hasPassword) {
   const name = document.getElementById('inp-name').value.trim();
