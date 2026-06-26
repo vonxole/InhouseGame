@@ -13,45 +13,71 @@
   <div id="app">
 
     <!-- HOME ─────────────────────────────────────────────────────────────── -->
-    <div id="s-home" class="screen active" style="justify-content:center;gap:24px;">
+    <div id="s-home" class="screen active" style="justify-content:center;gap:20px;">
       <div class="center" style="margin-bottom:4px;">
         <div style="font-size:3rem;">🎮</div>
         <h1>Digi<span>Play</span></h1>
         <p class="muted" style="margin-top:6px;">Office party games</p>
         <p id="version-label" style="font-size:0.72rem;opacity:.35;margin-top:2px;"></p>
       </div>
-      <div class="card" style="display:flex;flex-direction:column;gap:12px;">
+
+      <!-- Name input -->
+      <div class="card" style="display:flex;flex-direction:column;gap:10px;">
         <div>
           <label>Your name</label>
           <input id="inp-name" type="text" placeholder="Name" maxlength="16" autocomplete="off">
         </div>
-        <button class="btn btn-primary" onclick="showPickGame()">Create Room</button>
-        <div class="row">
-          <input id="inp-code" type="text" placeholder="Room code" maxlength="4"
-            style="text-transform:uppercase;letter-spacing:.1em;">
-          <button class="btn btn-outline" onclick="doJoin()">Join</button>
+
+        <!-- Join by code — PRIMARY (most people tap this) -->
+        <div>
+          <label>Join a room</label>
+          <div class="row">
+            <input id="inp-code" type="text" placeholder="Room code" maxlength="4"
+              style="text-transform:uppercase;letter-spacing:.12em;font-size:1.1rem;font-weight:700;">
+            <button class="btn btn-primary" onclick="doJoin()" style="white-space:nowrap;">Join →</button>
+          </div>
         </div>
+
+        <div style="display:flex;align-items:center;gap:10px;margin:2px 0;">
+          <div style="flex:1;height:1px;background:var(--border);"></div>
+          <span class="muted" style="font-size:0.78rem;">or</span>
+          <div style="flex:1;height:1px;background:var(--border);"></div>
+        </div>
+
+        <!-- Create — SECONDARY -->
+        <button class="btn" onclick="showPickGame()"
+          style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.9rem;">
+          🏠 Create a Room
+        </button>
       </div>
 
-      <!-- Room list -->
+      <!-- Open rooms list -->
       <div id="room-list-wrap" style="width:100%;max-width:400px;display:none;flex-direction:column;gap:8px;">
-        <p class="muted" style="font-size:0.82rem;text-align:center;margin-bottom:2px;">Open rooms</p>
-        <div id="room-list"></div>
+        <p class="muted" style="font-size:0.8rem;text-align:center;margin-bottom:2px;">🚪 Open rooms — tap to join</p>
+        <div id="room-list" style="display:flex;flex-direction:column;gap:8px;"></div>
       </div>
 
-      <div style="display:flex;flex-direction:column;gap:10px;width:100%;max-width:400px;">
-        <button class="btn" onclick="document.getElementById('el-modal').style.display='flex'"
-          style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.88rem;">📝 English Lesson</button>
-      </div>
+      <button class="btn" onclick="document.getElementById('el-modal').style.display='flex'"
+        style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.85rem;max-width:400px;width:100%;">
+        📝 English Lesson
+      </button>
     </div>
 
     <!-- PICK GAME ──────────────────────────────────────────────────────────── -->
-    <div id="s-pick-game" class="screen" style="justify-content:center;gap:20px;">
+    <div id="s-pick-game" class="screen" style="justify-content:center;gap:16px;">
       <div class="center">
-        <div style="font-size:2.5rem;margin-bottom:6px;">🎮</div>
-        <h2 style="font-size:1.2rem;font-weight:700;">เลือกเกม</h2>
-        <p class="muted" style="font-size:0.85rem;margin-top:4px;">Select a game to create a room</p>
+        <div style="font-size:2.5rem;margin-bottom:6px;">🏠</div>
+        <h2 style="font-size:1.2rem;font-weight:700;">สร้างห้อง</h2>
       </div>
+
+      <!-- Room name input -->
+      <div style="width:100%;max-width:360px;">
+        <label>ชื่อห้อง</label>
+        <input id="inp-room-name" type="text" placeholder="e.g. Team Alpha's Room" maxlength="30" autocomplete="off"
+          style="font-size:1rem;">
+      </div>
+
+      <p class="muted" style="font-size:0.8rem;margin:-4px 0 0;max-width:360px;width:100%;">เลือกเกม</p>
 
       <!-- Insider -->
       <div onclick="doCreate('insider')" style="cursor:pointer;border:1.5px solid var(--accent);border-radius:14px;padding:16px 20px;background:rgba(124,58,237,.08);width:100%;max-width:360px;transition:background .15s;"
@@ -420,6 +446,7 @@
         <button class="btn btn-primary" onclick="doPlayAgain()">Play Again 🔄</button>
       </div>
       <p id="res-wait" class="muted center" style="display:none;">Waiting for Host to start next round…</p>
+      <button class="btn" onclick="doLeaveRoom()" style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.88rem;">🚪 Leave Room</button>
     </div>
 
     <!-- ══════════════════════════════════════════════════════════════════════ -->
@@ -631,6 +658,7 @@
         <button class="btn btn-primary" onclick="sfPlayAgain()">Play Again 🔄</button>
       </div>
       <p id="sf-res-wait" class="muted center" style="display:none;">Waiting for Host to start next round…</p>
+      <button class="btn" onclick="doLeaveRoom()" style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.88rem;">🚪 Leave Room</button>
     </div>
 
     <!-- SF GUESS MODAL ──────────────────────────────────────────────────────── -->
