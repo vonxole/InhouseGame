@@ -54,7 +54,7 @@ function createRoom(hostId, hostName, gameType = 'insider', roomName = '') {
       chosenMasterId: null,
       word: null, wordCategory: null, wordLevel: null, hint: null,
       voteTimer: null, voteTimeLeft: 0,
-      showExamples: false, exampleCount: 15,
+      showExamples: true, exampleCount: 15,
     };
   }
   return code;
@@ -174,6 +174,21 @@ io.on('connection', (socket) => {
     broadcastRoom(room);
   });
 
+  function closeRoomIfAlone(room) {
+    if (room.players.length <= 1) {
+      if (room.timer) clearInterval(room.timer);
+      // Tell the last person left (if any) to go home
+      if (room.players.length === 1) {
+        const lastSocket = io.sockets.sockets.get(room.players[0].id);
+        if (lastSocket) lastSocket.emit('room_closed');
+      }
+      delete rooms[room.code];
+      broadcastRoomList();
+      return true;
+    }
+    return false;
+  }
+
   socket.on('leave_room', () => {
     const room = getRoom(socket.id);
     if (!room) return;
@@ -181,12 +196,14 @@ io.on('connection', (socket) => {
     io.to(room.code).emit('player_left', { name: leavingName });
     room.players = room.players.filter(p => p.id !== socket.id);
     socket.leave(room.code);
-    if (room.players.length === 0) { delete rooms[room.code]; return; }
+    if (room.players.length === 0) { delete rooms[room.code]; broadcastRoomList(); return; }
+    if (closeRoomIfAlone(room)) return;
     if (room.hostId === socket.id) {
       const next = room.players[0];
       room.hostId = next.id; next.isHost = true;
     }
     broadcastRoom(room);
+    broadcastRoomList();
   });
 
   socket.on('kick_player', ({ playerId }) => {
@@ -197,6 +214,7 @@ io.on('connection', (socket) => {
     room.players = room.players.filter(p => p.id !== playerId);
     const ks = io.sockets.sockets.get(playerId);
     if (ks) ks.emit('kicked');
+    if (closeRoomIfAlone(room)) return;
     broadcastRoom(room);
   });
 
