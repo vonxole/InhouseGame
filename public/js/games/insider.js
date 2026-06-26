@@ -336,6 +336,18 @@ function renderPlaying(room) {
   document.getElementById('pl-cat').textContent = myRole === 'master' ? '📂 ' + (room.wordCategory || '') : '';
   document.getElementById('pl-lvl').innerHTML   = myRole === 'master' ? levelChip(room.wordLevel) : '';
 
+  const answerBtns = `
+    <hr style="border:none;border-top:1px solid var(--border);margin:12px 0 10px;">
+    <p class="muted" style="font-size:0.72rem;text-align:center;letter-spacing:.05em;margin-bottom:8px;">คำตอบที่ใช้ได้</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+      <button class="master-ans-btn" onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid var(--green);background:rgba(16,185,129,.12);color:var(--green);transition:opacity .15s,transform .15s;">✅ ใช่</button>
+      <button class="master-ans-btn" onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid #ef4444;background:rgba(239,68,68,.12);color:#ef4444;transition:opacity .15s,transform .15s;">❌ ไม่ใช่</button>
+      <button class="master-ans-btn" onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid var(--yellow);background:rgba(234,179,8,.12);color:var(--yellow);transition:opacity .15s,transform .15s;">🟡 ก้ำกึ่ง</button>
+      <button class="master-ans-btn" onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid var(--green);background:rgba(16,185,129,.08);color:var(--green);transition:opacity .15s,transform .15s;">☑️ ส่วนใหญ่ใช่</button>
+      <button class="master-ans-btn" onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid #3b82f6;background:rgba(59,130,246,.1);color:#3b82f6;transition:opacity .15s,transform .15s;">🔹 เป็นส่วนน้อย</button>
+      <button class="master-ans-btn" onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid var(--border);background:rgba(255,255,255,.04);color:var(--muted);transition:opacity .15s,transform .15s;">⬜ ไม่ต้องสนใจ</button>
+    </div>`;
+
   const roleInfo = {
     master: `
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
@@ -347,7 +359,8 @@ function renderPlaying(room) {
         <div class="muted" style="font-size:0.72rem;letter-spacing:.08em;margin-bottom:4px;">SECRET WORD</div>
         <div style="font-size:2rem;font-weight:800;color:var(--accent2);">${myWord}</div>
         ${room.myThai ? `<div style="font-size:0.95rem;color:var(--muted);margin-top:2px;">${room.myThai}</div>` : ''}
-      </div>`,
+      </div>
+      ${answerBtns}`,
     insider: `
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
         <span style="font-size:1.4rem;">🕵️</span>
@@ -369,7 +382,7 @@ function renderPlaying(room) {
   document.getElementById('pl-role-card').innerHTML = roleInfo[myRole] || '';
   document.getElementById('pl-master-btn').style.display   = 'none';
   document.getElementById('pl-timeup-btn').style.display   = myRole === 'master' ? 'flex' : 'none';
-  document.getElementById('pl-answer-btns').style.display  = myRole === 'master' ? 'flex' : 'none';
+  document.getElementById('pl-answer-btns').style.display  = 'none'; // now embedded inside role card
 
   const plEQ = document.getElementById('pl-example-q');
   if (myRole !== 'master' && room.showExamples) {
@@ -399,15 +412,15 @@ function doWordGuessed()    { socket.emit('word_guessed'); }
 function doWordNotGuessed() { socket.emit('word_not_guessed'); }
 
 function masterAnswer(btn) {
-  // Highlight selected, dim others
-  document.querySelectorAll('#pl-answer-btns button').forEach(b => {
+  // Highlight selected, dim others (buttons are inside pl-role-card)
+  document.querySelectorAll('.master-ans-btn').forEach(b => {
     b.style.opacity = b === btn ? '1' : '0.35';
     b.style.transform = b === btn ? 'scale(1.04)' : 'scale(1)';
   });
   // Auto-reset after 3s
   clearTimeout(masterAnswer._t);
   masterAnswer._t = setTimeout(() => {
-    document.querySelectorAll('#pl-answer-btns button').forEach(b => {
+    document.querySelectorAll('.master-ans-btn').forEach(b => {
       b.style.opacity = '1'; b.style.transform = 'scale(1)';
     });
   }, 3000);
