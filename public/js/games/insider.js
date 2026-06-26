@@ -337,13 +337,39 @@ function renderPlaying(room) {
   document.getElementById('pl-lvl').innerHTML   = myRole === 'master' ? levelChip(room.wordLevel) : '';
 
   const roleInfo = {
-    master:  `<div style="display:flex;gap:12px;align-items:center;"><span style="font-size:1.6rem;">👑</span><div><div style="font-weight:700;">Master</div><div class="muted" style="font-size:0.85rem;">Word: <strong style="color:var(--accent2);">${myWord}</strong> <span style="opacity:.7;">${myWord ? `(${room.myThai || ''})` : ''}</span> — answer questions out loud</div></div></div>`,
-    insider: `<div style="display:flex;gap:12px;align-items:center;"><span style="font-size:1.6rem;">🕵️</span><div><div style="font-weight:700;">Insider</div><div class="muted" style="font-size:0.85rem;">Word: <strong style="color:var(--accent2);">${myWord}</strong> <span style="opacity:.7;">${myWord ? `(${room.myThai || ''})` : ''}</span> — guide without being caught</div></div></div>`,
-    common:  `<div style="display:flex;gap:12px;align-items:center;"><span style="font-size:1.6rem;">🙋</span><div><div style="font-weight:700;">Common</div><div class="muted" style="font-size:0.85rem;">Ask yes/no questions, then find the Insider</div></div></div>`,
+    master: `
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+        <span style="font-size:1.4rem;">👑</span>
+        <span style="font-weight:700;">Master</span>
+        <span class="muted" style="font-size:0.8rem;">— ตอบคำถาม Yes/No</span>
+      </div>
+      <div style="text-align:center;padding:10px 0;">
+        <div class="muted" style="font-size:0.72rem;letter-spacing:.08em;margin-bottom:4px;">SECRET WORD</div>
+        <div style="font-size:2rem;font-weight:800;color:var(--accent2);">${myWord}</div>
+        ${room.myThai ? `<div style="font-size:0.95rem;color:var(--muted);margin-top:2px;">${room.myThai}</div>` : ''}
+      </div>`,
+    insider: `
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+        <span style="font-size:1.4rem;">🕵️</span>
+        <span style="font-weight:700;">Insider</span>
+        <span class="muted" style="font-size:0.8rem;">— ช่วยโดยไม่ให้โดนจับ</span>
+      </div>
+      <div style="text-align:center;padding:10px 0;">
+        <div class="muted" style="font-size:0.72rem;letter-spacing:.08em;margin-bottom:4px;">SECRET WORD</div>
+        <div style="font-size:2rem;font-weight:800;color:var(--accent2);">${myWord}</div>
+        ${room.myThai ? `<div style="font-size:0.95rem;color:var(--muted);margin-top:2px;">${room.myThai}</div>` : ''}
+      </div>`,
+    common: `
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="font-size:1.4rem;">🙋</span>
+        <div><div style="font-weight:700;">Common</div>
+        <div class="muted" style="font-size:0.85rem;margin-top:2px;">ถามคำถาม Yes/No แล้วหา Insider</div></div>
+      </div>`,
   };
   document.getElementById('pl-role-card').innerHTML = roleInfo[myRole] || '';
-  document.getElementById('pl-master-btn').style.display  = 'none';
-  document.getElementById('pl-timeup-btn').style.display  = myRole === 'master' ? 'flex' : 'none';
+  document.getElementById('pl-master-btn').style.display   = 'none';
+  document.getElementById('pl-timeup-btn').style.display   = myRole === 'master' ? 'flex' : 'none';
+  document.getElementById('pl-answer-btns').style.display  = myRole === 'master' ? 'flex' : 'none';
 
   const plEQ = document.getElementById('pl-example-q');
   if (myRole !== 'master' && room.showExamples) {
@@ -371,6 +397,21 @@ function updateTimer(t) {
 
 function doWordGuessed()    { socket.emit('word_guessed'); }
 function doWordNotGuessed() { socket.emit('word_not_guessed'); }
+
+function masterAnswer(btn) {
+  // Highlight selected, dim others
+  document.querySelectorAll('#pl-answer-btns button').forEach(b => {
+    b.style.opacity = b === btn ? '1' : '0.35';
+    b.style.transform = b === btn ? 'scale(1.04)' : 'scale(1)';
+  });
+  // Auto-reset after 3s
+  clearTimeout(masterAnswer._t);
+  masterAnswer._t = setTimeout(() => {
+    document.querySelectorAll('#pl-answer-btns button').forEach(b => {
+      b.style.opacity = '1'; b.style.transform = 'scale(1)';
+    });
+  }, 3000);
+}
 
 // ── Voting ────────────────────────────────────────────────────────────────────
 function renderVoting(room) {
@@ -484,12 +525,20 @@ function renderVerdict(room) {
   show('s-verdict');
   if (verdictInterval) return;
 
-  const caught     = room.insiderCaught;
+  const caught      = room.insiderCaught;
   const accusedRole = room.accusedRole;
-  const name       = room.accusedName || '???';
+  const name        = room.accusedName || '???';
+  const isTie       = room.isTie || !room.accusedName;
 
   const banner = document.getElementById('vd-banner');
-  if (caught) {
+  if (isTie) {
+    banner.style.background = 'rgba(234,179,8,0.15)';
+    banner.style.border     = '2px solid var(--yellow)';
+    banner.innerHTML = `
+      <div style="font-size:3rem;margin-bottom:8px;">⚖️</div>
+      <div style="font-size:1.4rem;font-weight:700;color:var(--yellow);">โหวตเสมอ!</div>
+      <div style="margin-top:6px;font-size:1rem;color:var(--text);">ตกลงกันไม่ได้ — Insider หลุดรอด</div>`;
+  } else if (caught) {
     banner.style.background = 'rgba(16,185,129,0.15)';
     banner.style.border     = '2px solid var(--green)';
     banner.innerHTML = `

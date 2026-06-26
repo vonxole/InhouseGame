@@ -9,14 +9,46 @@ module.exports = function createInsiderGame(io, rooms, { getRoom, pickWord, broa
   // ── Role assignment ───────────────────────────────────────────────────────────
   function assignRoles(room) {
     const ids = room.players.map(p => p.id);
-    const masterId = (room.chosenMasterId && ids.includes(room.chosenMasterId))
+
+    // ── Pick Insider with anti-repeat weighting ──────────────────────────────
+    // insiderHistory: array of player IDs, most recent last
+    if (!room.insiderHistory) room.insiderHistory = [];
+
+    // Remove IDs no longer in room
+    room.insiderHistory = room.insiderHistory.filter(id => ids.includes(id));
+
+    // Weight: 1 for everyone, halved for each position from the end of history
+    // e.g. last insider gets weight 0.125, one before gets 0.25, etc.
+    const weights = ids.map(id => {
+      const pos = room.insiderHistory.lastIndexOf(id);
+      if (pos === -1) return 1;                          // never been insider
+      const recency = room.insiderHistory.length - pos;  // 1 = most recent
+      return Math.pow(0.5, recency);                     // 0.5, 0.25, 0.125…
+    });
+
+    const totalWeight = weights.reduce((s, w) => s + w, 0);
+    let r = Math.random() * totalWeight;
+    let insiderId = ids[ids.length - 1];
+    for (let i = 0; i < ids.length; i++) {
+      r -= weights[i];
+      if (r <= 0) { insiderId = ids[i]; break; }
+    }
+
+    // Record this round
+    room.insiderHistory.push(insiderId);
+    if (room.insiderHistory.length > ids.length * 2) room.insiderHistory.shift();
+
+    // ── Pick Master ──────────────────────────────────────────────────────────
+    const nonInsider = ids.filter(id => id !== insiderId);
+    const masterId = (room.chosenMasterId && nonInsider.includes(room.chosenMasterId))
       ? room.chosenMasterId
-      : ids[Math.floor(Math.random() * ids.length)];
-    const rest = ids.filter(id => id !== masterId).sort(() => Math.random() - 0.5);
+      : nonInsider[Math.floor(Math.random() * nonInsider.length)];
+
     const roles = {};
-    roles[masterId] = 'master';
-    roles[rest[0]]  = 'insider';
-    rest.slice(1).forEach(id => { roles[id] = 'common'; });
+    roles[masterId]  = 'master';
+    roles[insiderId] = 'insider';
+    ids.filter(id => id !== masterId && id !== insiderId)
+       .forEach(id => { roles[id] = 'common'; });
     room.roles = roles;
   }
 
@@ -50,6 +82,7 @@ module.exports = function createInsiderGame(io, rooms, { getRoom, pickWord, broa
       voteTally:     (['suspense','verdict','result'].includes(room.state)) ? room.voteTally     : null,
       accusedRole:   (['verdict','result'].includes(room.state))            ? room.accusedRole   : null,
       insiderCaught: (['verdict','result'].includes(room.state))            ? room.insiderCaught : null,
+      isTie:         (['verdict','result'].includes(room.state))            ? !!room.isTie       : false,
       insiderId:     (['verdict','result'].includes(room.state)) ? (room.insiderId || insiderId) : null,
       insiderName:   (['verdict','result'].includes(room.state))
         ? (room.players.find(p => p.id === (room.insiderId || insiderId))?.name || null) : null,
@@ -295,25 +328,39 @@ module.exports = function createInsiderGame(io, rooms, { getRoom, pickWord, broa
       });
       const maxVotes   = Math.max(...Object.values(tally));
       const topIds     = Object.keys(tally).filter(id => tally[id] === maxVotes);
-      const accusedId  = topIds.length === 1 ? topIds[0] : null;
-      const accusedName = accusedId ? (room.players.find(p => p.id === accusedId)?.name || null) : null;
       const insiderId  = Object.entries(room.roles).find(([, r]) => r === 'insider')?.[0];
-
       const namedTally = room.players
         .map(p => ({ name: p.name, votes: tally[p.id] || 0 }))
         .sort((a, b) => b.votes - a.votes);
 
-      room.voteTally   = namedTally;
-      room.accusedId   = accusedId;
-      room.accusedName = accusedName;
-      room.insiderId   = insiderId;
-      room.state       = 'suspense';
+      room.voteTally  = namedTally;
+      room.insiderId  = insiderId;
+
+      if (topIds.length > 1) {
+        // Tie — Insider escapes immediately, skip suspense
+        room.accusedId     = null;
+        room.accusedName   = null;
+        room.accusedRole   = null;
+        room.insiderCaught = false;
+        room.isTie         = true;
+        room.state         = 'verdict';
+      } else {
+        room.accusedId   = topIds[0];
+        room.accusedName = room.players.find(p => p.id === topIds[0])?.name || null;
+        room.isTie       = false;
+        room.state       = 'suspense';
+      }
       broadcastRoom(room);
     });
 
     socket.on('open_role', () => {
       const room = getRoom(socket.id);
       if (!room || room.state !== 'suspense') return;
+      // Safety: if no accused (shouldn't happen but guard anyway), treat as tie
+      if (!room.accusedId) {
+        room.isTie = true; room.insiderCaught = false; room.state = 'verdict';
+        broadcastRoom(room); return;
+      }
       const isMaster  = room.roles[socket.id] === 'master';
       const isAccused = socket.id === room.accusedId;
       if (!isMaster && !isAccused) return;
