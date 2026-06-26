@@ -42,6 +42,12 @@ function renderLobby(room) {
   _prevRoomState = 'lobby';
   show('s-lobby');
 
+  // Hide Spyfall-specific lobby elements
+  ['l-sf-settings-host', 'l-sf-settings-view'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  });
+
   // Show Insider How to Play button
   const rulesBtnWrap  = document.getElementById('l-rules-btn');
   const rulesBtnInner = document.getElementById('l-rules-btn-inner');
