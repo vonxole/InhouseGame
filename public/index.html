@@ -40,8 +40,6 @@
       </div>
 
       <div style="display:flex;flex-direction:column;gap:10px;width:100%;max-width:400px;">
-        <button class="btn" onclick="document.getElementById('htp-modal').style.display='flex'"
-          style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.88rem;">📖 How to play</button>
         <button class="btn" onclick="document.getElementById('el-modal').style.display='flex'"
           style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.88rem;">📝 English Lesson</button>
       </div>
@@ -68,15 +66,16 @@
         </div>
       </div>
 
-      <!-- Werewords (coming soon) -->
-      <div style="border:1.5px solid var(--border);border-radius:14px;padding:16px 20px;background:rgba(255,255,255,.02);width:100%;max-width:360px;opacity:.45;cursor:not-allowed;">
+      <!-- Spyfall -->
+      <div onclick="doCreate('spyfall')" style="cursor:pointer;border:1.5px solid #0ea5e9;border-radius:14px;padding:16px 20px;background:rgba(14,165,233,.08);width:100%;max-width:360px;transition:background .15s;"
+        onmouseover="this.style.background='rgba(14,165,233,.16)'" onmouseout="this.style.background='rgba(14,165,233,.08)'">
         <div style="display:flex;align-items:center;gap:14px;">
-          <span style="font-size:2rem;">🐺</span>
+          <span style="font-size:2rem;">🕵️</span>
           <div>
-            <div style="font-size:1rem;font-weight:700;">Werewords</div>
-            <div style="font-size:0.8rem;color:var(--muted);margin-top:2px;">ทายคำลับ — หนีหมาป่า</div>
+            <div style="font-size:1rem;font-weight:700;">Spyfall</div>
+            <div style="font-size:0.8rem;color:var(--muted);margin-top:2px;">ทายสถานที่ — หาสปายในกลุ่ม</div>
           </div>
-          <span style="margin-left:auto;font-size:0.75rem;border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:2px 8px;">SOON</span>
+          <span style="margin-left:auto;font-size:0.75rem;background:#0ea5e9;color:#fff;border-radius:6px;padding:2px 8px;font-weight:600;">PLAY</span>
         </div>
       </div>
 
@@ -178,7 +177,7 @@
         </div>
       </div>
 
-      <!-- Non-host: settings view -->
+      <!-- Non-host: settings view (Insider) -->
       <div class="card" id="l-settings-view" style="display:none;">
         <div style="display:flex;justify-content:space-between;align-items:center;">
           <span class="muted" style="font-size:0.85rem;">Settings</span>
@@ -186,10 +185,57 @@
         </div>
       </div>
 
+      <!-- Spyfall: host settings -->
+      <div id="l-sf-settings-host" style="display:none;" class="card">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;">⚙️ Settings</p>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <label>📍 Locations per round</label>
+              <span id="sf-loc-val" style="font-weight:700;color:var(--accent);font-size:1rem;">20</span>
+            </div>
+            <input id="sl-sf-loc" type="range" min="10" max="50" step="5" value="20"
+              oninput="document.getElementById('sf-loc-val').textContent=this.value"
+              onchange="socket.emit('sf_set_location_count',{count:parseInt(this.value)})"
+              style="width:100%;accent-color:var(--accent);">
+            <div class="muted" style="display:flex;justify-content:space-between;font-size:0.75rem;margin-top:2px;">
+              <span>10 (fast)</span><span>50 (varied)</span>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <label>⏱ Play Time</label>
+              <span id="sf-time-val" style="font-weight:700;color:var(--accent);font-size:1rem;">5 min</span>
+            </div>
+            <input id="sl-sf-time" type="range" min="1" max="10" step="1" value="5"
+              oninput="document.getElementById('sf-time-val').textContent=this.value+' min'"
+              onchange="socket.emit('sf_set_play_time',{seconds:parseInt(this.value)*60})"
+              style="width:100%;accent-color:var(--accent);">
+            <div class="muted" style="display:flex;justify-content:space-between;font-size:0.75rem;margin-top:2px;">
+              <span>1 min</span><span>10 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spyfall: non-host settings view -->
+      <div class="card" id="l-sf-settings-view" style="display:none;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span class="muted" style="font-size:0.85rem;">Settings</span>
+          <div id="l-sf-setting-chips" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
+        </div>
+      </div>
+
       <!-- Scoreboard (hidden until round 1 done) -->
       <div id="l-scoreboard" style="display:none;">
         <p class="muted" style="font-size:0.8rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">🏆 Scoreboard</p>
         <div id="l-score-list" style="display:flex;flex-direction:column;gap:6px;"></div>
+      </div>
+
+      <!-- Game rules button — shown by game renderer -->
+      <div id="l-rules-btn" style="display:none;">
+        <button id="l-rules-btn-inner" class="btn"
+          style="background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.85rem;width:100%;">📖 How to Play</button>
       </div>
 
       <!-- spacer so content clears sticky footer -->
@@ -374,6 +420,229 @@
         <button class="btn btn-primary" onclick="doPlayAgain()">Play Again 🔄</button>
       </div>
       <p id="res-wait" class="muted center" style="display:none;">Waiting for Host to start next round…</p>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════════════════ -->
+    <!-- SPYFALL SCREENS                                                        -->
+    <!-- ══════════════════════════════════════════════════════════════════════ -->
+
+    <!-- SF PREVIEW ──────────────────────────────────────────────────────────── -->
+    <div id="s-sf-preview" class="screen" style="gap:16px;">
+      <div class="center">
+        <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:4px;">
+          <div style="font-size:2rem;">📍</div>
+          <button onclick="document.getElementById('sf-htp-modal').style.display='flex'"
+            style="background:transparent;border:1px solid var(--border);color:var(--muted);font-size:0.78rem;border-radius:99px;padding:3px 10px;cursor:pointer;">📖 Rules</button>
+        </div>
+        <h2 style="font-size:1.15rem;">Locations This Round</h2>
+        <p class="muted" style="font-size:0.82rem;margin-top:4px;">Study the list — then you'll get your secret role</p>
+      </div>
+
+      <div id="sf-location-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;"></div>
+
+      <div id="sf-preview-host-btn" style="display:none;flex-direction:column;gap:8px;width:100%;margin-top:8px;">
+        <button class="btn btn-primary" onclick="sfPreviewDone()">Everyone's Ready → Deal Roles 🎴</button>
+      </div>
+      <p id="sf-preview-wait" class="muted center" style="display:none;font-size:0.88rem;">Waiting for host to deal roles…</p>
+    </div>
+
+    <!-- SF REVEAL ───────────────────────────────────────────────────────────── -->
+    <div id="s-sf-reveal" class="screen" style="justify-content:center;gap:20px;">
+      <p class="muted center" style="font-size:0.85rem;">Your secret role — don't show anyone!</p>
+
+      <!-- Non-spy role card -->
+      <div id="sf-rv-location-card" style="display:none;background:var(--card);border:2px solid #0ea5e9;border-radius:20px;padding:24px;text-align:center;width:100%;max-width:320px;">
+        <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:.08em;color:#0ea5e9;margin-bottom:10px;">You are at…</p>
+        <div style="font-size:2rem;margin-bottom:6px;">📍</div>
+        <div id="sf-rv-location-name" style="font-size:1.5rem;font-weight:800;"></div>
+        <div id="sf-rv-location-thai" class="muted" style="font-size:0.88rem;margin-top:4px;"></div>
+        <div style="height:1px;background:var(--border);margin:14px 0;"></div>
+        <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px;">Your role</p>
+        <div id="sf-rv-role" style="font-size:1.2rem;font-weight:700;color:var(--accent2);"></div>
+      </div>
+
+      <!-- Spy role card -->
+      <div id="sf-rv-spy-card" style="display:none;background:var(--card);border:2px solid #ef4444;border-radius:20px;padding:24px;text-align:center;width:100%;max-width:320px;">
+        <div style="font-size:2.5rem;margin-bottom:6px;">🕵️</div>
+        <div style="font-size:1.4rem;font-weight:800;color:#ef4444;">YOU ARE THE SPY</div>
+        <p class="muted" style="font-size:0.82rem;margin-top:6px;">ทายว่าทุกคนอยู่ที่ไหน</p>
+        <div style="height:1px;background:var(--border);margin:14px 0;"></div>
+        <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px;">Possible locations</p>
+        <div id="sf-rv-spy-locations" style="display:grid;grid-template-columns:1fr 1fr;gap:6px;text-align:left;"></div>
+      </div>
+
+      <div style="display:flex;gap:8px;align-items:stretch;width:100%;">
+        <button class="btn btn-primary" id="sf-btn-ready" onclick="sfReady()" style="flex:1;">Ready ✓</button>
+      </div>
+      <div class="center">
+        <p class="muted" style="font-size:0.82rem;margin-bottom:6px;" id="sf-rv-wait-msg"></p>
+        <div class="ready-bar" id="sf-rv-dots"></div>
+      </div>
+    </div>
+
+    <!-- SF PLAYING ──────────────────────────────────────────────────────────── -->
+    <div id="s-sf-playing" class="screen" style="justify-content:center;gap:20px;">
+      <div class="timer-wrap">
+        <div class="timer-big" id="sf-pl-timer">5:00</div>
+        <div class="timer-bar-bg">
+          <div class="timer-bar" id="sf-pl-bar" style="width:100%;background:var(--green);"></div>
+        </div>
+      </div>
+
+      <!-- Non-spy: location + role reminder -->
+      <div id="sf-pl-nonspy-card" style="display:none;" class="card">
+        <div style="display:flex;gap:12px;align-items:center;">
+          <span style="font-size:1.8rem;">📍</span>
+          <div>
+            <div style="font-weight:700;font-size:1rem;" id="sf-pl-location-name"></div>
+            <div class="muted" style="font-size:0.82rem;" id="sf-pl-role-name"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spy: location list + guess button -->
+      <div id="sf-pl-spy-card" style="display:none;" class="card">
+        <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px;">
+          <span style="font-size:1.8rem;">🕵️</span>
+          <div>
+            <div style="font-weight:700;">SPY</div>
+            <div class="muted" style="font-size:0.82rem;">ฟังคำถาม แล้วทาย location</div>
+          </div>
+        </div>
+        <div id="sf-pl-spy-locations" style="display:grid;grid-template-columns:1fr 1fr;gap:5px;"></div>
+      </div>
+
+      <!-- Spy guess button -->
+      <div id="sf-spy-guess-btn" style="display:none;">
+        <button class="btn" style="border:2px solid #ef4444;color:#ef4444;background:rgba(239,68,68,0.08);" onclick="sfShowGuessModal()">🎯 I Know the Location!</button>
+        <p class="muted center" style="font-size:0.78rem;margin-top:6px;">Guess correctly to win — but if wrong, everyone wins</p>
+      </div>
+
+      <p class="muted center" id="sf-pl-nonspy-hint" style="display:none;font-size:0.85rem;">Ask yes/no questions — find the SPY!</p>
+    </div>
+
+    <!-- SF VOTING ───────────────────────────────────────────────────────────── -->
+    <div id="s-sf-voting" class="screen" style="justify-content:center;gap:16px;">
+      <div style="text-align:center;">
+        <div style="font-size:3rem;">🗳️</div>
+        <h2 style="margin:8px 0 4px;">Who is the SPY?</h2>
+        <p class="muted" style="font-size:0.85rem;">Vote for who you think is the spy</p>
+      </div>
+
+      <div class="card" style="padding:12px 16px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <span class="muted" style="font-size:0.85rem;" id="sf-vt-vote-count">0/0 voted</span>
+        </div>
+        <div style="height:4px;background:var(--border);border-radius:99px;overflow:hidden;">
+          <div id="sf-vt-vote-fill" style="height:100%;background:var(--accent);width:0%;transition:width 0.3s;"></div>
+        </div>
+      </div>
+
+      <div id="sf-vt-players" style="display:flex;flex-direction:column;gap:8px;"></div>
+
+      <div id="sf-vt-host-btn" style="display:none;flex-direction:column;gap:6px;">
+        <button class="btn btn-red" id="sf-btn-reveal-accused" onclick="sfRevealAccused()">🎴 Reveal Most Voted</button>
+        <p class="muted center" style="font-size:0.8rem;" id="sf-vt-reveal-hint"></p>
+      </div>
+      <p id="sf-vt-wait" class="muted center" style="display:none;font-size:0.9rem;">Waiting for host to reveal…</p>
+    </div>
+
+    <!-- SF SUSPENSE ─────────────────────────────────────────────────────────── -->
+    <div id="s-sf-suspense" class="screen" style="justify-content:center;gap:20px;">
+      <div class="center">
+        <p class="muted" style="font-size:0.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;">Most Voted</p>
+        <div style="background:var(--card);border:2px solid var(--accent);border-radius:20px;padding:28px 36px;text-align:center;">
+          <div id="sf-sp-avatar" style="width:64px;height:64px;border-radius:50%;background:var(--accent);color:#fff;font-size:1.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;"></div>
+          <div id="sf-sp-name" style="font-size:1.5rem;font-weight:700;"></div>
+          <div id="sf-sp-votes" class="muted" style="margin-top:4px;font-size:0.9rem;"></div>
+        </div>
+      </div>
+
+      <div id="sf-sp-tally" style="width:100%;max-width:360px;"></div>
+
+      <div id="sf-sp-host-btn" style="display:none;flex-direction:column;gap:8px;width:100%;">
+        <button class="btn btn-primary" onclick="sfRevealAccused()">🎴 Are They the Spy?</button>
+      </div>
+      <p id="sf-sp-wait" class="muted center" style="display:none;font-size:0.9rem;">Waiting for host to reveal…</p>
+    </div>
+
+    <!-- SF VERDICT ──────────────────────────────────────────────────────────── -->
+    <div id="s-sf-verdict" class="screen" style="justify-content:center;gap:20px;">
+      <div id="sf-vd-banner" style="text-align:center;padding:28px 24px;border-radius:20px;width:100%;max-width:360px;"></div>
+
+      <!-- Spy final guess (shown when spy was caught and gets one more chance) -->
+      <div id="sf-vd-spy-guess-wrap" style="display:none;width:100%;">
+        <p style="text-align:center;font-size:0.9rem;margin-bottom:12px;color:var(--accent2);">🎯 One last chance! Guess the location to still win:</p>
+        <div id="sf-vd-guess-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;"></div>
+      </div>
+
+      <div id="sf-vd-result-reveal" style="display:none;text-align:center;padding:20px 24px;border-radius:16px;width:100%;max-width:360px;background:rgba(14,165,233,0.12);border:2px solid #0ea5e9;">
+        <p style="font-size:0.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px;">The location was</p>
+        <div id="sf-vd-real-location" style="font-size:1.4rem;font-weight:700;"></div>
+        <div id="sf-vd-real-location-thai" class="muted" style="font-size:0.85rem;margin-top:4px;"></div>
+        <div style="height:1px;background:var(--border);margin:12px 0;"></div>
+        <p style="font-size:0.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px;">The spy was</p>
+        <div id="sf-vd-spy-name" style="font-size:1.2rem;font-weight:700;color:#ef4444;"></div>
+      </div>
+
+      <button id="sf-vd-summary-btn" style="display:none;" class="btn btn-primary" onclick="sfConfirmResult()">📊 Go to Summary</button>
+      <p id="sf-vd-wait" class="muted center" style="display:none;font-size:0.88rem;"></p>
+    </div>
+
+    <!-- SF RESULT ───────────────────────────────────────────────────────────── -->
+    <div id="s-sf-result" class="screen" style="justify-content:center;gap:16px;">
+      <div style="text-align:center;">
+        <div class="result-icon" id="sf-res-icon"></div>
+        <div class="result-title" id="sf-res-title"></div>
+        <p class="muted center" id="sf-res-subtitle" style="font-size:0.9rem;margin-top:4px;"></p>
+      </div>
+
+      <div class="card" style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;">
+          <span class="muted">Location</span>
+          <div style="text-align:right;">
+            <strong style="color:var(--accent2);" id="sf-res-location"></strong>
+            <div class="muted" style="font-size:0.8rem;" id="sf-res-location-thai"></div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div style="display:flex;justify-content:space-between;">
+          <span class="muted">Spy was</span>
+          <strong id="sf-res-spy" style="color:#ef4444;"></strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;">
+          <span class="muted">Accused</span>
+          <strong id="sf-res-accused"></strong>
+        </div>
+      </div>
+
+      <!-- All roles reveal -->
+      <div class="card">
+        <p class="muted" style="font-size:0.8rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;">Roles Revealed</p>
+        <div id="sf-res-roles" style="display:flex;flex-direction:column;gap:6px;"></div>
+      </div>
+
+      <div id="sf-res-scoreboard-wrap" style="display:none;" class="card">
+        <p class="muted" style="font-size:0.8rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;">🏆 Scoreboard</p>
+        <div id="sf-res-score-list" style="display:flex;flex-direction:column;gap:8px;"></div>
+      </div>
+
+      <div id="sf-res-host-btn" style="display:none;">
+        <button class="btn btn-primary" onclick="sfPlayAgain()">Play Again 🔄</button>
+      </div>
+      <p id="sf-res-wait" class="muted center" style="display:none;">Waiting for Host to start next round…</p>
+    </div>
+
+    <!-- SF GUESS MODAL ──────────────────────────────────────────────────────── -->
+    <div id="sf-guess-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999;align-items:flex-end;justify-content:center;">
+      <div class="card" style="width:min(420px,100vw);border-bottom-left-radius:0;border-bottom-right-radius:0;max-height:80dvh;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-shrink:0;">
+          <p style="font-weight:700;font-size:1.05rem;">🎯 Guess the Location</p>
+          <button onclick="sfCloseGuessModal()" style="background:none;border:none;color:var(--muted);font-size:1.3rem;cursor:pointer;">✕</button>
+        </div>
+        <p class="muted" style="font-size:0.85rem;margin-bottom:14px;flex-shrink:0;">Tap the location you think everyone is at. Correct = +2 pts. Wrong = players win!</p>
+        <div id="sf-guess-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;overflow-y:auto;flex:1;"></div>
+      </div>
     </div>
 
   </div><!-- #app -->
@@ -642,6 +911,110 @@
     </div>
   </div>
 
+  <!-- Spyfall How to Play modal -->
+  <div id="sf-htp-modal"
+    style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999;align-items:flex-end;justify-content:center;">
+    <div class="card" style="width:min(420px,100vw);border-bottom-left-radius:0;border-bottom-right-radius:0;display:flex;flex-direction:column;gap:0;max-height:88dvh;overflow:hidden;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-shrink:0;">
+        <p style="font-weight:700;font-size:1.05rem;">🕵️ Spyfall — How to Play</p>
+        <button onclick="document.getElementById('sf-htp-modal').style.display='none'"
+          style="background:none;border:none;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;">✕</button>
+      </div>
+
+      <div style="overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:14px;padding-bottom:8px;">
+
+        <!-- Overview -->
+        <div style="background:rgba(14,165,233,.08);border:1.5px solid #0ea5e9;border-radius:12px;padding:14px 16px;">
+          <p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:.08em;color:#0ea5e9;margin-bottom:8px;">Overview</p>
+          <p style="font-size:0.88rem;line-height:1.6;">Everyone is at the <strong>same secret location</strong> — except the <strong style="color:#ef4444;">SPY</strong>, who doesn't know where they are. The spy must blend in. Everyone else must find the spy.</p>
+        </div>
+
+        <!-- Roles -->
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="background:var(--card);border-radius:10px;padding:12px 14px;display:flex;gap:12px;align-items:flex-start;">
+            <span style="font-size:1.4rem;flex-shrink:0;">🙋</span>
+            <div>
+              <div style="font-weight:700;margin-bottom:4px;">ผู้เล่นปกติ</div>
+              <div style="font-size:0.83rem;color:var(--muted);line-height:1.5;">รู้ <strong style="color:var(--text);">location + role</strong> ของตัวเอง · ถามคำถามผู้อื่น · ระวังตอบคำถามให้สมเหตุสมผลตาม role · โหวตหา spy ตอนท้าย</div>
+            </div>
+          </div>
+          <div style="background:rgba(239,68,68,.06);border:1.5px solid rgba(239,68,68,.25);border-radius:10px;padding:12px 14px;display:flex;gap:12px;align-items:flex-start;">
+            <span style="font-size:1.4rem;flex-shrink:0;">🕵️</span>
+            <div>
+              <div style="font-weight:700;color:#ef4444;margin-bottom:4px;">SPY</div>
+              <div style="font-size:0.83rem;color:var(--muted);line-height:1.5;">เห็นแค่ <strong style="color:var(--text);">list ของ locations</strong> ทั้งหมด · ต้องทายว่าทุกคนอยู่ที่ไหน · ถามและตอบคำถามแบบ vague · อย่าให้ถูกจับ!</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flow -->
+        <div>
+          <p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px;">Game Flow</p>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <span style="background:var(--accent);color:#fff;border-radius:99px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700;flex-shrink:0;">1</span>
+              <span style="font-size:0.85rem;line-height:1.5;"><strong>Preview</strong> — ทุกคนดู list locations ทั้งหมดที่ใช้รอบนี้</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <span style="background:var(--accent);color:#fff;border-radius:99px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700;flex-shrink:0;">2</span>
+              <span style="font-size:0.85rem;line-height:1.5;"><strong>Reveal</strong> — แต่ละคนดู role ตัวเองในมือถือ (ห้ามให้ใครเห็น)</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <span style="background:var(--accent);color:#fff;border-radius:99px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700;flex-shrink:0;">3</span>
+              <span style="font-size:0.85rem;line-height:1.5;"><strong>Playing</strong> — ถามคำถามกันรอบวง · spy กดปุ่ม 🎯 เพื่อ guess location ได้ตลอดเวลา</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <span style="background:var(--accent);color:#fff;border-radius:99px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700;flex-shrink:0;">4</span>
+              <span style="font-size:0.85rem;line-height:1.5;"><strong>Vote</strong> — เมื่อหมดเวลา ทุกคนโหวตว่าใครเป็น spy</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <span style="background:var(--accent);color:#fff;border-radius:99px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700;flex-shrink:0;">5</span>
+              <span style="font-size:0.85rem;line-height:1.5;"><strong>Verdict</strong> — ถ้าโหวตถูก spy → spy ได้ guess ครั้งสุดท้าย · ถ้าโหวตผิด → spy หนีรอด</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scoring -->
+        <div style="background:var(--card);border-radius:12px;padding:14px 16px;">
+          <p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px;">🏆 Scoring</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:0.85rem;">🕵️ Spy guesses location correctly</span>
+              <span style="font-weight:700;color:var(--accent2);">+2 pts</span>
+            </div>
+            <div style="height:1px;background:var(--border);"></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:0.85rem;">🏃 Spy escapes (wrong person accused)</span>
+              <span style="font-weight:700;color:#ef4444;">+4 pts</span>
+            </div>
+            <div style="height:1px;background:var(--border);"></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:0.85rem;">🎉 Players catch the spy</span>
+              <span style="font-weight:700;color:var(--green);">+1 pt each</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tips -->
+        <div>
+          <p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px;">💡 Tips</p>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="font-size:0.83rem;color:var(--muted);background:rgba(255,255,255,.03);border-radius:8px;padding:8px 12px;line-height:1.5;">
+              🙋 <strong style="color:var(--text);">ผู้เล่นปกติ:</strong> ตอบคำถามให้ตรงกับ role แต่อย่าบอกตรงๆ ว่าอยู่ที่ไหน — spy อาจฟังอยู่
+            </div>
+            <div style="font-size:0.83rem;color:var(--muted);background:rgba(239,68,68,.04);border-radius:8px;padding:8px 12px;line-height:1.5;">
+              🕵️ <strong style="color:#ef4444;">Spy:</strong> ถามคำถาม vague · อย่าดูมือถือบ่อย · ระวังคำถามที่เจาะจงเกินไป
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end scrollable -->
+      <div style="padding-top:12px;flex-shrink:0;">
+        <button class="btn btn-primary" onclick="document.getElementById('sf-htp-modal').style.display='none'">Got it!</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Password modal -->
   <div id="pw-modal"
     style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:999;align-items:center;justify-content:center;">
@@ -668,6 +1041,7 @@
   <!-- Scripts: shared first, then game-specific -->
   <script src="/js/app.js"></script>
   <script src="/js/games/insider.js"></script>
+  <script src="/js/games/spyfall.js"></script>
 </body>
 
 </html>

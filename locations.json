@@ -1,0 +1,752 @@
+[
+  {
+    "name": "Hospital",
+    "thai": "โรงพยาบาล",
+    "roles": [
+      { "name": "Doctor",         "thai": "หมอ" },
+      { "name": "Nurse",          "thai": "พยาบาล" },
+      { "name": "Patient",        "thai": "คนไข้" },
+      { "name": "Surgeon",        "thai": "ศัลยแพทย์" },
+      { "name": "Receptionist",   "thai": "พนักงานต้อนรับ" },
+      { "name": "Paramedic",      "thai": "เวชกรฉุกเฉิน" },
+      { "name": "Security Guard", "thai": "รปภ." },
+      { "name": "Janitor",        "thai": "พนักงานทำความสะอาด" },
+      { "name": "Intern",         "thai": "แพทย์ฝึกหัด" }
+    ]
+  },
+  {
+    "name": "Airport",
+    "thai": "สนามบิน",
+    "roles": [
+      { "name": "Pilot",                   "thai": "นักบิน" },
+      { "name": "Flight Attendant",        "thai": "แอร์โฮสเตส" },
+      { "name": "Passenger",              "thai": "ผู้โดยสาร" },
+      { "name": "Security Officer",        "thai": "เจ้าหน้าที่รักษาความปลอดภัย" },
+      { "name": "Customs Officer",         "thai": "เจ้าหน้าที่ศุลกากร" },
+      { "name": "Baggage Handler",         "thai": "พนักงานยกกระเป๋า" },
+      { "name": "Tourist",                 "thai": "นักท่องเที่ยว" },
+      { "name": "Ground Crew",             "thai": "พนักงานภาคพื้น" },
+      { "name": "Air Traffic Controller",  "thai": "เจ้าหน้าที่ควบคุมจราจรทางอากาศ" }
+    ]
+  },
+  {
+    "name": "School",
+    "thai": "โรงเรียน",
+    "roles": [
+      { "name": "Teacher",       "thai": "ครู" },
+      { "name": "Student",       "thai": "นักเรียน" },
+      { "name": "Principal",     "thai": "ผู้อำนวยการ" },
+      { "name": "Librarian",     "thai": "บรรณารักษ์" },
+      { "name": "Security Guard","thai": "รปภ." },
+      { "name": "Janitor",       "thai": "นักการ" },
+      { "name": "Counselor",     "thai": "นักแนะแนว" },
+      { "name": "New Student",   "thai": "นักเรียนใหม่" },
+      { "name": "Parent",        "thai": "ผู้ปกครอง" }
+    ]
+  },
+  {
+    "name": "Restaurant",
+    "thai": "ร้านอาหาร",
+    "roles": [
+      { "name": "Chef",           "thai": "เชฟ" },
+      { "name": "Waiter",         "thai": "พนักงานเสิร์ฟ" },
+      { "name": "Customer",       "thai": "ลูกค้า" },
+      { "name": "Manager",        "thai": "ผู้จัดการ" },
+      { "name": "Dishwasher",     "thai": "คนล้างจาน" },
+      { "name": "Cashier",        "thai": "แคชเชียร์" },
+      { "name": "Food Critic",    "thai": "นักวิจารณ์อาหาร" },
+      { "name": "Busboy",         "thai": "พนักงานเก็บโต๊ะ" },
+      { "name": "Delivery Driver","thai": "ไรเดอร์ส่งอาหาร" }
+    ]
+  },
+  {
+    "name": "Supermarket",
+    "thai": "ซูเปอร์มาร์เก็ต",
+    "roles": [
+      { "name": "Cashier",         "thai": "แคชเชียร์" },
+      { "name": "Security Guard",  "thai": "รปภ." },
+      { "name": "Manager",         "thai": "ผู้จัดการ" },
+      { "name": "Customer",        "thai": "ลูกค้า" },
+      { "name": "Stock Person",    "thai": "พนักงานจัดสินค้า" },
+      { "name": "Baker",           "thai": "พ่อครัวอบขนม" },
+      { "name": "Butcher",         "thai": "คนขายเนื้อ" },
+      { "name": "Cart Collector",  "thai": "พนักงานเก็บรถเข็น" },
+      { "name": "Delivery Worker", "thai": "พนักงานส่งของ" }
+    ]
+  },
+  {
+    "name": "Police Station",
+    "thai": "สถานีตำรวจ",
+    "roles": [
+      { "name": "Police Officer",      "thai": "ตำรวจ" },
+      { "name": "Detective",           "thai": "นักสืบ" },
+      { "name": "Criminal",            "thai": "อาชญากร" },
+      { "name": "Victim",              "thai": "ผู้เสียหาย" },
+      { "name": "Lawyer",              "thai": "ทนายความ" },
+      { "name": "Receptionist",        "thai": "พนักงานต้อนรับ" },
+      { "name": "Forensic Scientist",  "thai": "นักนิติวิทยาศาสตร์" },
+      { "name": "Warden",              "thai": "ผู้คุม" },
+      { "name": "Journalist",          "thai": "นักข่าว" }
+    ]
+  },
+  {
+    "name": "Beach",
+    "thai": "ชายหาด",
+    "roles": [
+      { "name": "Lifeguard",           "thai": "เจ้าหน้าที่กู้ภัยทางน้ำ" },
+      { "name": "Tourist",             "thai": "นักท่องเที่ยว" },
+      { "name": "Surfer",              "thai": "นักเซิร์ฟ" },
+      { "name": "Vendor",              "thai": "พ่อค้าแม่ขาย" },
+      { "name": "Fisherman",           "thai": "ชาวประมง" },
+      { "name": "Volleyball Player",   "thai": "นักวอลเลย์บอล" },
+      { "name": "Sunbather",           "thai": "คนอาบแดด" },
+      { "name": "Photographer",        "thai": "ช่างภาพ" },
+      { "name": "Jet Ski Instructor",  "thai": "ครูสอนเจ็ตสกี" }
+    ]
+  },
+  {
+    "name": "Office",
+    "thai": "ออฟฟิศ",
+    "roles": [
+      { "name": "Manager",   "thai": "ผู้จัดการ" },
+      { "name": "Secretary", "thai": "เลขานุการ" },
+      { "name": "Intern",    "thai": "นักศึกษาฝึกงาน" },
+      { "name": "IT Support","thai": "ไอทีซัพพอร์ต" },
+      { "name": "Accountant","thai": "นักบัญชี" },
+      { "name": "Sales Person","thai": "พนักงานขาย" },
+      { "name": "CEO",       "thai": "ซีอีโอ" },
+      { "name": "Cleaner",   "thai": "พนักงานทำความสะอาด" },
+      { "name": "HR Manager","thai": "ผู้จัดการฝ่ายบุคคล" }
+    ]
+  },
+  {
+    "name": "Hotel",
+    "thai": "โรงแรม",
+    "roles": [
+      { "name": "Receptionist",  "thai": "พนักงานต้อนรับ" },
+      { "name": "Guest",         "thai": "แขก" },
+      { "name": "Bellboy",       "thai": "พนักงานแบกกระเป๋า" },
+      { "name": "Housekeeper",   "thai": "แม่บ้าน" },
+      { "name": "Manager",       "thai": "ผู้จัดการ" },
+      { "name": "Chef",          "thai": "เชฟ" },
+      { "name": "Bartender",     "thai": "บาร์เทนเดอร์" },
+      { "name": "Concierge",     "thai": "คอนเซียร์จ" },
+      { "name": "Security Guard","thai": "รปภ." }
+    ]
+  },
+  {
+    "name": "Movie Theater",
+    "thai": "โรงหนัง",
+    "roles": [
+      { "name": "Moviegoer",       "thai": "คนดูหนัง" },
+      { "name": "Cashier",         "thai": "แคชเชียร์" },
+      { "name": "Usher",           "thai": "พนักงานต้อนรับ" },
+      { "name": "Projectionist",   "thai": "เจ้าหน้าที่ฉายหนัง" },
+      { "name": "Popcorn Vendor",  "thai": "พนักงานขายป๊อปคอร์น" },
+      { "name": "Manager",         "thai": "ผู้จัดการ" },
+      { "name": "Film Critic",     "thai": "นักวิจารณ์หนัง" },
+      { "name": "Couple on a Date","thai": "คู่รักออกเดท" },
+      { "name": "Crying Person",   "thai": "คนร้องไห้" }
+    ]
+  },
+  {
+    "name": "Gym",
+    "thai": "ยิม",
+    "roles": [
+      { "name": "Personal Trainer",   "thai": "เทรนเนอร์" },
+      { "name": "Member",             "thai": "สมาชิก" },
+      { "name": "Receptionist",       "thai": "พนักงานต้อนรับ" },
+      { "name": "Bodybuilder",        "thai": "นักเพาะกาย" },
+      { "name": "Yoga Instructor",    "thai": "ครูโยคะ" },
+      { "name": "Nutritionist",       "thai": "นักโภชนาการ" },
+      { "name": "Newcomer",           "thai": "สมาชิกใหม่" },
+      { "name": "Cardio Addict",      "thai": "คนติดคาร์ดิโอ" },
+      { "name": "Locker Room Guard",  "thai": "เจ้าหน้าที่ห้องล็อคเกอร์" }
+    ]
+  },
+  {
+    "name": "Bank",
+    "thai": "ธนาคาร",
+    "roles": [
+      { "name": "Bank Teller",       "thai": "พนักงานธนาคาร" },
+      { "name": "Manager",           "thai": "ผู้จัดการ" },
+      { "name": "Customer",          "thai": "ลูกค้า" },
+      { "name": "Security Guard",    "thai": "รปภ." },
+      { "name": "Loan Officer",      "thai": "เจ้าหน้าที่สินเชื่อ" },
+      { "name": "Accountant",        "thai": "นักบัญชี" },
+      { "name": "Robber",            "thai": "โจรปล้นธนาคาร" },
+      { "name": "Financial Advisor", "thai": "ที่ปรึกษาการเงิน" },
+      { "name": "Cleaner",           "thai": "พนักงานทำความสะอาด" }
+    ]
+  },
+  {
+    "name": "Library",
+    "thai": "ห้องสมุด",
+    "roles": [
+      { "name": "Librarian",            "thai": "บรรณารักษ์" },
+      { "name": "Student",              "thai": "นักเรียน" },
+      { "name": "Researcher",           "thai": "นักวิจัย" },
+      { "name": "Security Guard",       "thai": "รปภ." },
+      { "name": "Volunteer",            "thai": "อาสาสมัคร" },
+      { "name": "Children's Librarian", "thai": "บรรณารักษ์เด็ก" },
+      { "name": "Professor",            "thai": "อาจารย์" },
+      { "name": "Book Club Member",     "thai": "สมาชิกชมรมหนังสือ" },
+      { "name": "Sleeping Visitor",     "thai": "คนนอนหลับ" }
+    ]
+  },
+  {
+    "name": "Park",
+    "thai": "สวนสาธารณะ",
+    "roles": [
+      { "name": "Jogger",          "thai": "นักวิ่ง" },
+      { "name": "Dog Walker",      "thai": "คนพาสุนัขเดิน" },
+      { "name": "Child",           "thai": "เด็ก" },
+      { "name": "Parent",          "thai": "พ่อแม่" },
+      { "name": "Ice Cream Vendor","thai": "คนขายไอศกรีม" },
+      { "name": "Gardener",        "thai": "คนสวน" },
+      { "name": "Bird Watcher",    "thai": "นักดูนก" },
+      { "name": "Skateboarder",    "thai": "นักสเก็ตบอร์ด" },
+      { "name": "Couple",          "thai": "คู่รัก" }
+    ]
+  },
+  {
+    "name": "Train Station",
+    "thai": "สถานีรถไฟ",
+    "roles": [
+      { "name": "Conductor",       "thai": "พนักงานบนรถไฟ" },
+      { "name": "Passenger",       "thai": "ผู้โดยสาร" },
+      { "name": "Ticket Agent",    "thai": "พนักงานขายตั๋ว" },
+      { "name": "Security Officer","thai": "เจ้าหน้าที่รักษาความปลอดภัย" },
+      { "name": "Janitor",         "thai": "พนักงานทำความสะอาด" },
+      { "name": "Tourist",         "thai": "นักท่องเที่ยว" },
+      { "name": "Commuter",        "thai": "คนเดินทางประจำ" },
+      { "name": "Pickpocket",      "thai": "หัวขโมย" },
+      { "name": "Station Master",  "thai": "นายสถานี" }
+    ]
+  },
+  {
+    "name": "Shopping Mall",
+    "thai": "ห้างสรรพสินค้า",
+    "roles": [
+      { "name": "Shopper",         "thai": "นักช้อป" },
+      { "name": "Store Clerk",     "thai": "พนักงานขาย" },
+      { "name": "Security Guard",  "thai": "รปภ." },
+      { "name": "Manager",         "thai": "ผู้จัดการ" },
+      { "name": "Food Court Worker","thai": "พนักงานฟู้ดคอร์ต" },
+      { "name": "Cleaner",         "thai": "พนักงานทำความสะอาด" },
+      { "name": "Lost Child",      "thai": "เด็กหลง" },
+      { "name": "Santa Claus",     "thai": "ซานตาคลอส" },
+      { "name": "Influencer",      "thai": "อินฟลูเอนเซอร์" }
+    ]
+  },
+  {
+    "name": "Casino",
+    "thai": "คาสิโน",
+    "roles": [
+      { "name": "Dealer",           "thai": "ดีลเลอร์" },
+      { "name": "Player",           "thai": "นักพนัน" },
+      { "name": "Security Guard",   "thai": "รปภ." },
+      { "name": "Manager",          "thai": "ผู้จัดการ" },
+      { "name": "Bartender",        "thai": "บาร์เทนเดอร์" },
+      { "name": "High Roller",      "thai": "ไฮโรลเลอร์" },
+      { "name": "Croupier",         "thai": "ครูปิเยร์" },
+      { "name": "Cocktail Waitress","thai": "พนักงานเสิร์ฟค็อกเทล" },
+      { "name": "Cheater",          "thai": "คนโกง" }
+    ]
+  },
+  {
+    "name": "Zoo",
+    "thai": "สวนสัตว์",
+    "roles": [
+      { "name": "Zookeeper",        "thai": "ผู้ดูแลสวนสัตว์" },
+      { "name": "Visitor",          "thai": "ผู้เข้าชม" },
+      { "name": "Tour Guide",       "thai": "ไกด์" },
+      { "name": "Veterinarian",     "thai": "สัตวแพทย์" },
+      { "name": "Gift Shop Worker", "thai": "พนักงานร้านของที่ระลึก" },
+      { "name": "Photographer",     "thai": "ช่างภาพ" },
+      { "name": "Child",            "thai": "เด็ก" },
+      { "name": "Animal Feeder",    "thai": "คนให้อาหารสัตว์" },
+      { "name": "Security Guard",   "thai": "รปภ." }
+    ]
+  },
+  {
+    "name": "Museum",
+    "thai": "พิพิธภัณฑ์",
+    "roles": [
+      { "name": "Curator",          "thai": "ภัณฑารักษ์" },
+      { "name": "Tourist",          "thai": "นักท่องเที่ยว" },
+      { "name": "Security Guard",   "thai": "รปภ." },
+      { "name": "Art Restorer",     "thai": "ผู้บูรณะงานศิลป์" },
+      { "name": "Tour Guide",       "thai": "ไกด์" },
+      { "name": "Gift Shop Worker", "thai": "พนักงานร้านของที่ระลึก" },
+      { "name": "Student",          "thai": "นักเรียน" },
+      { "name": "Archaeologist",    "thai": "นักโบราณคดี" },
+      { "name": "Photographer",     "thai": "ช่างภาพ" }
+    ]
+  },
+  {
+    "name": "Prison",
+    "thai": "คุก",
+    "roles": [
+      { "name": "Warden",        "thai": "ผู้คุมเรือนจำ" },
+      { "name": "Prison Guard",  "thai": "ผู้คุม" },
+      { "name": "Inmate",        "thai": "นักโทษ" },
+      { "name": "Lawyer",        "thai": "ทนายความ" },
+      { "name": "Visitor",       "thai": "ผู้มาเยี่ยม" },
+      { "name": "Cook",          "thai": "พ่อครัว" },
+      { "name": "Chaplain",      "thai": "บาทหลวง" },
+      { "name": "Psychologist",  "thai": "นักจิตวิทยา" },
+      { "name": "New Prisoner",  "thai": "นักโทษใหม่" }
+    ]
+  },
+  {
+    "name": "Submarine",
+    "thai": "เรือดำน้ำ",
+    "roles": [
+      { "name": "Captain",           "thai": "กัปตัน" },
+      { "name": "Navigator",         "thai": "นักเดินเรือ" },
+      { "name": "Engineer",          "thai": "วิศวกร" },
+      { "name": "Cook",              "thai": "พ่อครัว" },
+      { "name": "Torpedo Operator",  "thai": "เจ้าหน้าที่ตอร์ปิโด" },
+      { "name": "Medic",             "thai": "พยาบาล" },
+      { "name": "Radio Operator",    "thai": "เจ้าหน้าที่วิทยุ" },
+      { "name": "Lookout",           "thai": "ยามเฝ้าระวัง" },
+      { "name": "Mechanic",          "thai": "ช่างซ่อม" }
+    ]
+  },
+  {
+    "name": "Space Station",
+    "thai": "สถานีอวกาศ",
+    "roles": [
+      { "name": "Astronaut",              "thai": "นักบินอวกาศ" },
+      { "name": "Commander",             "thai": "ผู้บังคับการ" },
+      { "name": "Engineer",              "thai": "วิศวกร" },
+      { "name": "Scientist",             "thai": "นักวิทยาศาสตร์" },
+      { "name": "Mission Control Officer","thai": "เจ้าหน้าที่ควบคุมภารกิจ" },
+      { "name": "Robot Technician",      "thai": "ช่างซ่อมหุ่นยนต์" },
+      { "name": "Space Tourist",         "thai": "นักท่องเที่ยวอวกาศ" },
+      { "name": "Biologist",             "thai": "นักชีววิทยา" },
+      { "name": "Medic",                 "thai": "พยาบาล" }
+    ]
+  },
+  {
+    "name": "Pirate Ship",
+    "thai": "เรือโจรสลัด",
+    "roles": [
+      { "name": "Captain",        "thai": "กัปตัน" },
+      { "name": "First Mate",     "thai": "รองกัปตัน" },
+      { "name": "Navigator",      "thai": "นักเดินเรือ" },
+      { "name": "Cook",           "thai": "พ่อครัว" },
+      { "name": "Cannon Operator","thai": "เจ้าหน้าที่ปืนใหญ่" },
+      { "name": "Prisoner",       "thai": "นักโทษ" },
+      { "name": "Deckhand",       "thai": "กะลาสีเรือ" },
+      { "name": "Surgeon",        "thai": "หมอประจำเรือ" },
+      { "name": "Parrot Trainer", "thai": "คนฝึกนกแก้ว" }
+    ]
+  },
+  {
+    "name": "Military Base",
+    "thai": "ฐานทัพ",
+    "roles": [
+      { "name": "General",                "thai": "นายพล" },
+      { "name": "Soldier",                "thai": "ทหาร" },
+      { "name": "Medic",                  "thai": "พยาบาลทหาร" },
+      { "name": "Mechanic",               "thai": "ช่างซ่อม" },
+      { "name": "Cook",                   "thai": "พ่อครัว" },
+      { "name": "Spy",                    "thai": "สายลับ" },
+      { "name": "Drill Sergeant",         "thai": "จ่าฝึก" },
+      { "name": "Sniper",                 "thai": "มือปืนซุ่มยิง" },
+      { "name": "Communications Officer", "thai": "เจ้าหน้าที่สื่อสาร" }
+    ]
+  },
+  {
+    "name": "Circus",
+    "thai": "คณะละครสัตว์",
+    "roles": [
+      { "name": "Clown",           "thai": "ตัวตลก" },
+      { "name": "Acrobat",         "thai": "นักกายกรรม" },
+      { "name": "Ringmaster",      "thai": "พิธีกร" },
+      { "name": "Animal Trainer",  "thai": "ครูฝึกสัตว์" },
+      { "name": "Magician",        "thai": "นักมายากล" },
+      { "name": "Ticket Seller",   "thai": "คนขายตั๋ว" },
+      { "name": "Trapeze Artist",  "thai": "นักโหนเชือก" },
+      { "name": "Juggler",         "thai": "นักโยน" },
+      { "name": "Audience Member", "thai": "ผู้ชม" }
+    ]
+  },
+  {
+    "name": "Cruise Ship",
+    "thai": "เรือสำราญ",
+    "roles": [
+      { "name": "Captain",                "thai": "กัปตัน" },
+      { "name": "Passenger",             "thai": "ผู้โดยสาร" },
+      { "name": "Entertainment Director","thai": "ผู้อำนวยการบันเทิง" },
+      { "name": "Chef",                  "thai": "เชฟ" },
+      { "name": "Bartender",             "thai": "บาร์เทนเดอร์" },
+      { "name": "Housekeeper",           "thai": "แม่บ้าน" },
+      { "name": "Doctor",                "thai": "หมอ" },
+      { "name": "Lifeguard",             "thai": "เจ้าหน้าที่กู้ภัยทางน้ำ" },
+      { "name": "Tour Guide",            "thai": "ไกด์" }
+    ]
+  },
+  {
+    "name": "Fire Station",
+    "thai": "สถานีดับเพลิง",
+    "roles": [
+      { "name": "Firefighter",         "thai": "นักดับเพลิง" },
+      { "name": "Captain",             "thai": "กัปตัน" },
+      { "name": "Dispatcher",          "thai": "เจ้าหน้าที่รับแจ้งเหตุ" },
+      { "name": "Mechanic",            "thai": "ช่างซ่อม" },
+      { "name": "Paramedic",           "thai": "เวชกรฉุกเฉิน" },
+      { "name": "Rescue Dog Handler",  "thai": "คนฝึกสุนัขกู้ภัย" },
+      { "name": "Chief",               "thai": "หัวหน้า" },
+      { "name": "Volunteer",           "thai": "อาสาสมัคร" },
+      { "name": "Cook",                "thai": "พ่อครัว" }
+    ]
+  },
+  {
+    "name": "University",
+    "thai": "มหาวิทยาลัย",
+    "roles": [
+      { "name": "Professor",            "thai": "อาจารย์" },
+      { "name": "Student",              "thai": "นักศึกษา" },
+      { "name": "Dean",                 "thai": "คณบดี" },
+      { "name": "Teaching Assistant",   "thai": "ผู้ช่วยสอน" },
+      { "name": "Librarian",            "thai": "บรรณารักษ์" },
+      { "name": "Janitor",              "thai": "พนักงานทำความสะอาด" },
+      { "name": "International Student","thai": "นักศึกษาต่างชาติ" },
+      { "name": "Researcher",           "thai": "นักวิจัย" },
+      { "name": "Security Guard",       "thai": "รปภ." }
+    ]
+  },
+  {
+    "name": "Spa",
+    "thai": "สปา",
+    "roles": [
+      { "name": "Masseuse",        "thai": "นักนวด" },
+      { "name": "Customer",        "thai": "ลูกค้า" },
+      { "name": "Receptionist",    "thai": "พนักงานต้อนรับ" },
+      { "name": "Nail Technician", "thai": "ช่างทำเล็บ" },
+      { "name": "Manager",         "thai": "ผู้จัดการ" },
+      { "name": "Sauna Attendant", "thai": "พนักงานห้องซาวน่า" },
+      { "name": "Beautician",      "thai": "ช่างสำอาง" },
+      { "name": "Aromatherapist",  "thai": "นักอโรมาเธอราพี" },
+      { "name": "Sleeping Guest",  "thai": "แขกที่หลับไป" }
+    ]
+  },
+  {
+    "name": "Farm",
+    "thai": "ฟาร์ม",
+    "roles": [
+      { "name": "Farmer",            "thai": "ชาวนา" },
+      { "name": "Farmhand",          "thai": "กรรมกรไร่" },
+      { "name": "Veterinarian",      "thai": "สัตวแพทย์" },
+      { "name": "Tractor Driver",    "thai": "คนขับรถแทรกเตอร์" },
+      { "name": "Crop Harvester",    "thai": "คนเก็บเกี่ยว" },
+      { "name": "Livestock Handler", "thai": "ผู้ดูแลปศุสัตว์" },
+      { "name": "Tourist",           "thai": "นักท่องเที่ยว" },
+      { "name": "Scarecrow Maker",   "thai": "คนทำหุ่นไล่กา" },
+      { "name": "Organic Inspector", "thai": "ผู้ตรวจสอบออร์แกนิก" }
+    ]
+  },
+  {
+    "name": "Amusement Park",
+    "thai": "สวนสนุก",
+    "roles": [
+      { "name": "Ride Operator", "thai": "ผู้ควบคุมเครื่องเล่น" },
+      { "name": "Tourist",       "thai": "นักท่องเที่ยว" },
+      { "name": "Food Vendor",   "thai": "พ่อค้าอาหาร" },
+      { "name": "Mascot",        "thai": "มาสคอต" },
+      { "name": "Security Guard","thai": "รปภ." },
+      { "name": "Photographer",  "thai": "ช่างภาพ" },
+      { "name": "Child",         "thai": "เด็ก" },
+      { "name": "Park Manager",  "thai": "ผู้จัดการสวนสนุก" },
+      { "name": "Lost Parent",   "thai": "ผู้ปกครองที่หลงทาง" }
+    ]
+  },
+  {
+    "name": "Wedding",
+    "thai": "งานแต่งงาน",
+    "roles": [
+      { "name": "Bride",           "thai": "เจ้าสาว" },
+      { "name": "Groom",           "thai": "เจ้าบ่าว" },
+      { "name": "Priest",          "thai": "บาทหลวง" },
+      { "name": "Photographer",    "thai": "ช่างภาพ" },
+      { "name": "Guest",           "thai": "แขก" },
+      { "name": "Caterer",         "thai": "พ่อครัวงานเลี้ยง" },
+      { "name": "Flower Girl",     "thai": "เด็กโปรยดอกไม้" },
+      { "name": "Wedding Planner", "thai": "ผู้จัดงานแต่งงาน" },
+      { "name": "Jealous Ex",      "thai": "แฟนเก่าที่อิจฉา" }
+    ]
+  },
+  {
+    "name": "Concert",
+    "thai": "คอนเสิร์ต",
+    "roles": [
+      { "name": "Singer",         "thai": "นักร้อง" },
+      { "name": "Guitarist",      "thai": "มือกีต้าร์" },
+      { "name": "Drummer",        "thai": "มือกลอง" },
+      { "name": "Sound Engineer", "thai": "วิศวกรเสียง" },
+      { "name": "Security Guard", "thai": "รปภ." },
+      { "name": "Fan",            "thai": "แฟนคลับ" },
+      { "name": "Stage Manager",  "thai": "ผู้จัดการเวที" },
+      { "name": "Roadie",         "thai": "โรดี้" },
+      { "name": "Opening Act",    "thai": "วงเปิด" }
+    ]
+  },
+  {
+    "name": "Courtroom",
+    "thai": "ศาล",
+    "roles": [
+      { "name": "Judge",          "thai": "ผู้พิพากษา" },
+      { "name": "Lawyer",         "thai": "ทนายความ" },
+      { "name": "Defendant",      "thai": "จำเลย" },
+      { "name": "Witness",        "thai": "พยาน" },
+      { "name": "Jury Member",    "thai": "ลูกขุน" },
+      { "name": "Bailiff",        "thai": "เจ้าหน้าที่ศาล" },
+      { "name": "Court Reporter", "thai": "เจ้าหน้าที่บันทึก" },
+      { "name": "Spectator",      "thai": "ผู้ชม" },
+      { "name": "Prosecutor",     "thai": "อัยการ" }
+    ]
+  },
+  {
+    "name": "Nightclub",
+    "thai": "ไนท์คลับ",
+    "roles": [
+      { "name": "DJ",           "thai": "ดีเจ" },
+      { "name": "Bouncer",      "thai": "รปภ.ประตู" },
+      { "name": "Bartender",    "thai": "บาร์เทนเดอร์" },
+      { "name": "Dancer",       "thai": "นักเต้น" },
+      { "name": "VIP Guest",    "thai": "แขกวีไอพี" },
+      { "name": "Waiter",       "thai": "พนักงานเสิร์ฟ" },
+      { "name": "Promoter",     "thai": "โปรโมเตอร์" },
+      { "name": "Coat Check",   "thai": "พนักงานฝากของ" },
+      { "name": "Lost Tourist", "thai": "นักท่องเที่ยวหลงทาง" }
+    ]
+  },
+  {
+    "name": "Construction Site",
+    "thai": "ไซต์ก่อสร้าง",
+    "roles": [
+      { "name": "Foreman",          "thai": "หัวหน้าคนงาน" },
+      { "name": "Worker",           "thai": "กรรมกร" },
+      { "name": "Safety Inspector", "thai": "ผู้ตรวจความปลอดภัย" },
+      { "name": "Architect",        "thai": "สถาปนิก" },
+      { "name": "Crane Operator",   "thai": "คนขับเครน" },
+      { "name": "Electrician",      "thai": "ช่างไฟ" },
+      { "name": "Plumber",          "thai": "ช่างประปา" },
+      { "name": "Security Guard",   "thai": "รปภ." },
+      { "name": "Delivery Driver",  "thai": "พนักงานขนส่ง" }
+    ]
+  },
+  {
+    "name": "Movie Set",
+    "thai": "กองถ่าย",
+    "roles": [
+      { "name": "Director",      "thai": "ผู้กำกับ" },
+      { "name": "Actor",         "thai": "นักแสดง" },
+      { "name": "Camera Operator","thai": "ช่างกล้อง" },
+      { "name": "Makeup Artist", "thai": "ช่างแต่งหน้า" },
+      { "name": "Producer",      "thai": "โปรดิวเซอร์" },
+      { "name": "Script Writer", "thai": "นักเขียนบท" },
+      { "name": "Extra",         "thai": "นักแสดงประกอบ" },
+      { "name": "Sound Mixer",   "thai": "มิกเซอร์เสียง" },
+      { "name": "Stunt Double",  "thai": "สตันท์แมน" }
+    ]
+  },
+  {
+    "name": "Night Market",
+    "thai": "ตลาดนัดกลางคืน",
+    "roles": [
+      { "name": "Vendor",            "thai": "พ่อค้าแม่ขาย" },
+      { "name": "Tourist",           "thai": "นักท่องเที่ยว" },
+      { "name": "Food Critic",       "thai": "นักวิจารณ์อาหาร" },
+      { "name": "Bargain Hunter",    "thai": "นักล่าของถูก" },
+      { "name": "Security Guard",    "thai": "รปภ." },
+      { "name": "Street Performer",  "thai": "นักแสดงข้างถนน" },
+      { "name": "Tuk-tuk Driver",    "thai": "คนขับตุ๊กตุ๊ก" },
+      { "name": "Photographer",      "thai": "ช่างภาพ" },
+      { "name": "Local Regular",     "thai": "ขาประจำ" }
+    ]
+  },
+  {
+    "name": "7-Eleven",
+    "thai": "เซเว่น-อีเลฟเว่น",
+    "roles": [
+      { "name": "Cashier",          "thai": "แคชเชียร์" },
+      { "name": "Customer",         "thai": "ลูกค้า" },
+      { "name": "Manager",          "thai": "ผู้จัดการ" },
+      { "name": "Delivery Driver",  "thai": "คนส่งของ" },
+      { "name": "Night Shift Worker","thai": "พนักงานกะดึก" },
+      { "name": "Student",          "thai": "นักเรียน" },
+      { "name": "Drunk Person",     "thai": "คนเมา" },
+      { "name": "Lottery Seller",   "thai": "คนขายหวย" },
+      { "name": "Cleaner",          "thai": "พนักงานทำความสะอาด" }
+    ]
+  },
+  {
+    "name": "Thai Massage Shop",
+    "thai": "ร้านนวดแผนไทย",
+    "roles": [
+      { "name": "Masseuse",          "thai": "นักนวด" },
+      { "name": "Customer",          "thai": "ลูกค้า" },
+      { "name": "Receptionist",      "thai": "พนักงานต้อนรับ" },
+      { "name": "Owner",             "thai": "เจ้าของร้าน" },
+      { "name": "Apprentice",        "thai": "ลูกมือฝึกงาน" },
+      { "name": "Sleeping Tourist",  "thai": "นักท่องเที่ยวที่หลับ" },
+      { "name": "Monk",              "thai": "พระ" },
+      { "name": "Business Traveler", "thai": "นักธุรกิจ" },
+      { "name": "Regular",           "thai": "ขาประจำ" }
+    ]
+  },
+  {
+    "name": "Muay Thai Gym",
+    "thai": "ยิมมวยไทย",
+    "roles": [
+      { "name": "Fighter",         "thai": "นักมวย" },
+      { "name": "Trainer",         "thai": "เทรนเนอร์" },
+      { "name": "Corner Man",      "thai": "ทีมมุมนักมวย" },
+      { "name": "Referee",         "thai": "กรรมการ" },
+      { "name": "Spectator",       "thai": "ผู้ชม" },
+      { "name": "Manager",         "thai": "ผู้จัดการ" },
+      { "name": "Promoter",        "thai": "โปรโมเตอร์" },
+      { "name": "Foreign Student", "thai": "นักเรียนต่างชาติ" },
+      { "name": "Cheerleader",     "thai": "กองเชียร์" }
+    ]
+  },
+  {
+    "name": "Chatuchak Market",
+    "thai": "ตลาดจตุจักร",
+    "roles": [
+      { "name": "Vendor",         "thai": "พ่อค้าแม่ขาย" },
+      { "name": "Tourist",        "thai": "นักท่องเที่ยว" },
+      { "name": "Bargain Hunter", "thai": "นักล่าของถูก" },
+      { "name": "Security Guard", "thai": "รปภ." },
+      { "name": "Food Seller",    "thai": "คนขายอาหาร" },
+      { "name": "Antique Dealer", "thai": "คนขายของเก่า" },
+      { "name": "Plant Seller",   "thai": "คนขายต้นไม้" },
+      { "name": "Lost Child",     "thai": "เด็กหลง" },
+      { "name": "Backpacker",     "thai": "แบ็คแพ็คเกอร์" }
+    ]
+  },
+  {
+    "name": "Buddhist Temple",
+    "thai": "วัด",
+    "roles": [
+      { "name": "Monk",          "thai": "พระ" },
+      { "name": "Tourist",       "thai": "นักท่องเที่ยว" },
+      { "name": "Merit Maker",   "thai": "คนทำบุญ" },
+      { "name": "Tour Guide",    "thai": "ไกด์" },
+      { "name": "Street Vendor", "thai": "หาบเร่แผงลอย" },
+      { "name": "Devotee",       "thai": "ผู้ศรัทธา" },
+      { "name": "Photographer",  "thai": "ช่างภาพ" },
+      { "name": "Fortune Teller","thai": "หมอดู" },
+      { "name": "Novice Monk",   "thai": "สามเณร" }
+    ]
+  },
+  {
+    "name": "BTS Station",
+    "thai": "สถานีรถไฟฟ้า BTS",
+    "roles": [
+      { "name": "Commuter",           "thai": "คนเดินทาง" },
+      { "name": "Station Master",     "thai": "นายสถานี" },
+      { "name": "Security Officer",   "thai": "เจ้าหน้าที่รักษาความปลอดภัย" },
+      { "name": "Tourist",            "thai": "นักท่องเที่ยว" },
+      { "name": "Student",            "thai": "นักเรียน" },
+      { "name": "Vendor",             "thai": "พ่อค้าแม่ขาย" },
+      { "name": "Pickpocket",         "thai": "หัวขโมย" },
+      { "name": "Rush Hour Survivor", "thai": "คนที่รอดจากชั่วโมงเร่งด่วน" },
+      { "name": "Ticket Officer",     "thai": "เจ้าหน้าที่ตั๋ว" }
+    ]
+  },
+  {
+    "name": "McDonald's",
+    "thai": "แมคโดนัลด์",
+    "roles": [
+      { "name": "Cashier",               "thai": "แคชเชียร์" },
+      { "name": "Customer",              "thai": "ลูกค้า" },
+      { "name": "Manager",               "thai": "ผู้จัดการ" },
+      { "name": "Cook",                  "thai": "พ่อครัว" },
+      { "name": "Drive-Through Worker",  "thai": "พนักงานไดรฟ์ทรู" },
+      { "name": "Health Inspector",      "thai": "ผู้ตรวจสุขาภิบาล" },
+      { "name": "Child",                 "thai": "เด็ก" },
+      { "name": "Birthday Party Guest",  "thai": "แขกงานวันเกิด" },
+      { "name": "Delivery Rider",        "thai": "ไรเดอร์" }
+    ]
+  },
+  {
+    "name": "Starbucks",
+    "thai": "สตาร์บัคส์",
+    "roles": [
+      { "name": "Barista",         "thai": "บาริสต้า" },
+      { "name": "Customer",        "thai": "ลูกค้า" },
+      { "name": "Manager",         "thai": "ผู้จัดการ" },
+      { "name": "Regular",         "thai": "ขาประจำ" },
+      { "name": "Wi-Fi Worker",    "thai": "คนนั่งทำงาน" },
+      { "name": "First Date",      "thai": "คนออกเดทครั้งแรก" },
+      { "name": "Influencer",      "thai": "อินฟลูเอนเซอร์" },
+      { "name": "Delivery Rider",  "thai": "ไรเดอร์" },
+      { "name": "Crying Person",   "thai": "คนร้องไห้" }
+    ]
+  },
+  {
+    "name": "IKEA",
+    "thai": "อีเกีย",
+    "roles": [
+      { "name": "Customer",         "thai": "ลูกค้า" },
+      { "name": "Employee",         "thai": "พนักงาน" },
+      { "name": "Interior Designer","thai": "นักออกแบบตกแต่งภายใน" },
+      { "name": "Lost Child",       "thai": "เด็กหลง" },
+      { "name": "Assembly Expert",  "thai": "ผู้เชี่ยวชาญประกอบเฟอร์นิเจอร์" },
+      { "name": "Food Court Worker","thai": "พนักงานฟู้ดคอร์ต" },
+      { "name": "Cart Collector",   "thai": "พนักงานเก็บรถเข็น" },
+      { "name": "Arguing Couple",   "thai": "คู่รักที่ทะเลาะกัน" },
+      { "name": "Store Detective",  "thai": "นักสืบประจำร้าน" }
+    ]
+  },
+  {
+    "name": "Disneyland",
+    "thai": "ดิสนีย์แลนด์",
+    "roles": [
+      { "name": "Costumed Character","thai": "คนแต่งชุดคาแรคเตอร์" },
+      { "name": "Visitor",           "thai": "ผู้เข้าชม" },
+      { "name": "Photographer",      "thai": "ช่างภาพ" },
+      { "name": "Security Guard",    "thai": "รปภ." },
+      { "name": "Park Cleaner",      "thai": "พนักงานทำความสะอาด" },
+      { "name": "Child",             "thai": "เด็ก" },
+      { "name": "Lost Parent",       "thai": "ผู้ปกครองที่หลงทาง" },
+      { "name": "Tour Guide",        "thai": "ไกด์" },
+      { "name": "Souvenir Seller",   "thai": "คนขายของที่ระลึก" }
+    ]
+  },
+  {
+    "name": "Football Stadium",
+    "thai": "สนามฟุตบอล",
+    "roles": [
+      { "name": "Player",          "thai": "นักฟุตบอล" },
+      { "name": "Coach",           "thai": "โค้ช" },
+      { "name": "Referee",         "thai": "กรรมการ" },
+      { "name": "Fan",             "thai": "แฟนบอล" },
+      { "name": "Commentator",     "thai": "ผู้บรรยาย" },
+      { "name": "Vendor",          "thai": "พ่อค้าแม่ขาย" },
+      { "name": "Medic",           "thai": "พยาบาล" },
+      { "name": "Security Guard",  "thai": "รปภ." },
+      { "name": "Celebrity Guest", "thai": "แขกรับเชิญ" }
+    ]
+  },
+  {
+    "name": "Haunted House",
+    "thai": "บ้านผีสิง",
+    "roles": [
+      { "name": "Ghost",                   "thai": "ผี" },
+      { "name": "Tourist",                 "thai": "นักท่องเที่ยว" },
+      { "name": "Medium",                  "thai": "ร่างทรง" },
+      { "name": "Paranormal Investigator", "thai": "นักสืบพาราน" },
+      { "name": "Skeptic",                 "thai": "คนไม่เชื่อ" },
+      { "name": "Caretaker",               "thai": "ผู้ดูแล" },
+      { "name": "Journalist",              "thai": "นักข่าว" },
+      { "name": "Scared Child",            "thai": "เด็กที่กลัว" },
+      { "name": "Camera Crew",             "thai": "ทีมถ่ายทำ" }
+    ]
+  }
+]

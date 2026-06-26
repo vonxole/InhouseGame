@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install --omit=dev
 
-COPY server.js words.json ./
+COPY server.js words.json locations.json ./
 COPY games ./games
 COPY public ./public
 

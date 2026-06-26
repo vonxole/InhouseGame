@@ -99,7 +99,7 @@ socket.on('rooms_list', (list) => {
   if (!wrap || !el) return;
   if (list.length === 0) { wrap.style.display = 'none'; return; }
   wrap.style.display = 'flex';
-  const gameLabel = { insider: '🕵️ Insider', werewords: '🐺 Werewords' };
+  const gameLabel = { insider: '🕵️ Insider', spyfall: '🕵️ Spyfall' };
   el.innerHTML = list.map(r => `
     <div onclick="doJoinRoom('${r.code}', ${r.hasPassword})" style="
       display:flex;justify-content:space-between;align-items:center;
@@ -149,8 +149,8 @@ socket.on('room_update', (room) => {
   }
 
   const gameType = room.gameType || 'insider';
-  if (gameType === 'insider') handleInsiderRoomUpdate(room);
-  // else if (gameType === 'werewords') handleWerewordsRoomUpdate(room);
+  if (gameType === 'insider')  handleInsiderRoomUpdate(room);
+  else if (gameType === 'spyfall') handleSpyfallRoomUpdate(room);
 });
 
 // ── Shared socket events ──────────────────────────────────────────────────────

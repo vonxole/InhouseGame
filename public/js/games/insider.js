@@ -41,6 +41,13 @@ function renderLobby(room) {
   }
   _prevRoomState = 'lobby';
   show('s-lobby');
+
+  // Show Insider How to Play button
+  const rulesBtnWrap  = document.getElementById('l-rules-btn');
+  const rulesBtnInner = document.getElementById('l-rules-btn-inner');
+  if (rulesBtnWrap)  rulesBtnWrap.style.display  = 'block';
+  if (rulesBtnInner) rulesBtnInner.onclick = () => document.getElementById('htp-modal').style.display = 'flex';
+
   document.getElementById('l-code').textContent  = room.code;
   document.getElementById('l-count').textContent = `(${room.players.length})`;
   const chosen = room.chosenMasterId;

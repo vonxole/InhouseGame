@@ -28,19 +28,34 @@ const rooms = {};
 
 function createRoom(hostId, hostName, gameType = 'insider') {
   const code = Math.random().toString(36).substring(2, 6).toUpperCase();
-  rooms[code] = {
+  const base = {
     code, gameType, hostId,
     players: [{ id: hostId, name: hostName, isHost: true }],
     state: 'lobby',
-    filterCategories: [], filterLevels: [],
-    playTime: 180, discussTime: 60,
-    chosenMasterId: null,
-    word: null, wordCategory: null, wordLevel: null, hint: null,
     roles: {}, timer: null, timeLeft: 0,
-    revealsDone: [], votes: {}, voteTimer: null, voteTimeLeft: 0,
-    scores: {}, password: '',
-    showExamples: false, exampleCount: 15,
+    revealsDone: [], votes: {}, scores: {}, password: '',
   };
+
+  if (gameType === 'spyfall') {
+    rooms[code] = {
+      ...base,
+      locationCount: 20,
+      playTime: 300,
+      locations: [], realLocation: null, spyId: null,
+      accusedId: null, spyGuess: null, outcome: null,
+    };
+  } else {
+    // insider (default)
+    rooms[code] = {
+      ...base,
+      filterCategories: [], filterLevels: [],
+      playTime: 180, discussTime: 60,
+      chosenMasterId: null,
+      word: null, wordCategory: null, wordLevel: null, hint: null,
+      voteTimer: null, voteTimeLeft: 0,
+      showExamples: false, exampleCount: 15,
+    };
+  }
   return code;
 }
 
@@ -69,7 +84,8 @@ function broadcastRoom(room) {
   if (mod) mod.broadcastRoom(room);
 }
 
-gameModules.insider = require('./games/insider')(io, rooms, { getRoom, pickWord, broadcastRoomList });
+gameModules.insider  = require('./games/insider')(io, rooms, { getRoom, pickWord, broadcastRoomList });
+gameModules.spyfall  = require('./games/spyfall')(io, rooms, { getRoom, broadcastRoomList });
 
 // ── Socket Events ─────────────────────────────────────────────────────────────
 io.on('connection', (socket) => {
