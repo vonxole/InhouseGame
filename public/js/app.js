@@ -194,28 +194,7 @@ socket.on('rooms_list', (list) => {
 });
 
 function doJoinRoom(code, hasPassword) {
-  if (hasPassword) {
-    // Need name first, then password
-    showNameModal('join-room', code);
-  } else {
-    showNameModal('join-room', code);
-  }
-  _nameModalCode = code;
-}
-
-function doJoinRoom(code, hasPassword) {
-  const name = document.getElementById('inp-name').value.trim();
-  if (!name) {
-    toast('Enter your name first ☝️');
-    document.getElementById('inp-name').focus();
-    return;
-  }
-  myName = name;
-  if (hasPassword) {
-    showPasswordModal(code, name);
-  } else {
-    socket.emit('join_room', { code, name, password: '' });
-  }
+  showNameModal('join-room', code);
 }
 
 // ── Room Update — route to game handler ───────────────────────────────────────
