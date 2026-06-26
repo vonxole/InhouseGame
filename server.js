@@ -26,10 +26,11 @@ function pickWord(filterCategories = [], filterLevels = []) {
 // ── Room State ────────────────────────────────────────────────────────────────
 const rooms = {};
 
-function createRoom(hostId, hostName, gameType = 'insider') {
+function createRoom(hostId, hostName, gameType = 'insider', roomName = '') {
   const code = Math.random().toString(36).substring(2, 6).toUpperCase();
   const base = {
     code, gameType, hostId,
+    roomName: roomName.trim() || `${hostName}'s Room`,
     players: [{ id: hostId, name: hostName, isHost: true }],
     state: 'lobby',
     roles: {}, timer: null, timeLeft: 0,
@@ -69,6 +70,7 @@ function broadcastRoomList() {
     .map(r => ({
       code:        r.code,
       gameType:    r.gameType || 'insider',
+      roomName:    r.roomName || '',
       host:        r.players.find(p => p.id === r.hostId)?.name || '?',
       count:       r.players.length,
       hasPassword: !!r.password,
@@ -95,6 +97,7 @@ io.on('connection', (socket) => {
     .map(r => ({
       code:        r.code,
       gameType:    r.gameType || 'insider',
+      roomName:    r.roomName || '',
       host:        r.players.find(p => p.id === r.hostId)?.name || '?',
       count:       r.players.length,
       hasPassword: !!r.password,
@@ -103,8 +106,8 @@ io.on('connection', (socket) => {
 
   socket.on('list_rooms', () => broadcastRoomList());
 
-  socket.on('create_room', ({ name, gameType }) => {
-    const code = createRoom(socket.id, name, gameType || 'insider');
+  socket.on('create_room', ({ name, gameType, roomName }) => {
+    const code = createRoom(socket.id, name, gameType || 'insider', roomName || '');
     socket.join(code);
     socket.emit('room_created', { code });
     broadcastRoom(rooms[code]);
@@ -151,11 +154,21 @@ io.on('connection', (socket) => {
       room.scores[socket.id] = room.scores[oldId];
       delete room.scores[oldId];
     }
-    if (room.votes && room.votes[oldId] !== undefined) {
-      room.votes[socket.id] = room.votes[oldId];
-      delete room.votes[oldId];
+    if (room.votes) {
+      // Update voter key
+      if (room.votes[oldId] !== undefined) {
+        room.votes[socket.id] = room.votes[oldId];
+        delete room.votes[oldId];
+      }
+      // Update vote targets (other players voted FOR this player)
+      for (const [voter, target] of Object.entries(room.votes)) {
+        if (target === oldId) room.votes[voter] = socket.id;
+      }
     }
     if (room.hostId === oldId) room.hostId = socket.id;
+    // Spyfall-specific ID fields
+    if (room.spyId    === oldId) room.spyId    = socket.id;
+    if (room.accusedId === oldId) room.accusedId = socket.id;
 
     socket.join(room.code);
     broadcastRoom(room);
@@ -178,7 +191,7 @@ io.on('connection', (socket) => {
 
   socket.on('kick_player', ({ playerId }) => {
     const room = getRoom(socket.id);
-    if (!room || room.hostId !== socket.id || room.state !== 'lobby') return;
+    if (!room || room.hostId !== socket.id) return;
     const kicked = room.players.find(p => p.id === playerId);
     if (!kicked || kicked.isHost) return;
     room.players = room.players.filter(p => p.id !== playerId);

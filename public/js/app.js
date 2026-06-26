@@ -34,13 +34,44 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
-const HIDE_LEAVE_SCREENS = new Set(['s-home', 's-pick-game']);
+const HIDE_FLOAT_SCREENS = new Set(['s-home', 's-pick-game']);
 
 function show(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  const btn = document.getElementById('float-leave-btn');
-  if (btn) btn.style.display = HIDE_LEAVE_SCREENS.has(id) ? 'none' : 'block';
+  const bar = document.getElementById('float-bar');
+  if (bar) bar.style.display = HIDE_FLOAT_SCREENS.has(id) ? 'none' : 'flex';
+  // kick btn only for host
+  const kickBtn = document.getElementById('float-kick-btn');
+  if (kickBtn) kickBtn.style.display = isHost ? 'block' : 'none';
+}
+
+// keep a ref to latest room players for the kick modal
+let _latestRoomPlayers = [];
+let _latestRoomHostId  = null;
+
+function openKickModal() {
+  const list = document.getElementById('kick-player-list');
+  list.innerHTML = _latestRoomPlayers.map(p => {
+    const isMe   = p.name === myName;
+    const canKick = !p.isHost && !isMe;
+    return `<div style="display:flex;align-items:center;gap:12px;padding:8px 0;">
+      <div class="avatar" style="width:36px;height:36px;font-size:0.9rem;">${p.name[0].toUpperCase()}</div>
+      <div style="flex:1;">
+        <div style="font-size:0.92rem;font-weight:600;">${p.name}${isMe ? ' (you)' : ''}${p.isHost ? ' 👑' : ''}${p.disconnected ? ' 🔴' : ''}</div>
+      </div>
+      ${canKick ? `<button onclick="doKick('${p.id}')"
+        style="background:transparent;border:1.5px solid #ef4444;color:#ef4444;border-radius:8px;padding:5px 12px;font-size:0.8rem;cursor:pointer;">
+        Kick
+      </button>` : ''}
+    </div>`;
+  }).join('');
+  document.getElementById('kick-modal').style.display = 'flex';
+}
+
+function doKick(playerId) {
+  socket.emit('kick_player', { playerId });
+  document.getElementById('kick-modal').style.display = 'none';
 }
 
 async function floatLeave() {
@@ -252,6 +283,12 @@ socket.on('room_update', (room) => {
   if (room.state !== 'suspense' && suspenseInterval) {
     clearInterval(suspenseInterval); suspenseInterval = null;
   }
+
+  // Cache players for kick modal
+  _latestRoomPlayers = room.players || [];
+  _latestRoomHostId  = room.hostId  || null;
+  const kickBtn = document.getElementById('float-kick-btn');
+  if (kickBtn) kickBtn.style.display = isHost ? 'block' : 'none';
 
   // Host disconnected banner (non-host players only, non-lobby states)
   const banner     = document.getElementById('host-gone-banner');

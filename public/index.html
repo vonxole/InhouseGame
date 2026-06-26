@@ -700,14 +700,34 @@
   </div><!-- #app -->
   <div id="toast"></div>
 
-  <!-- Floating leave button (all non-home screens) -->
-  <button id="float-leave-btn" onclick="floatLeave()" style="
-    display:none;position:fixed;top:14px;right:14px;z-index:250;
-    background:rgba(0,0,0,.45);backdrop-filter:blur(6px);
-    border:1.5px solid var(--border);border-radius:99px;
-    color:var(--muted);font-size:0.78rem;padding:6px 12px;
-    cursor:pointer;line-height:1;">🚪 Leave
-  </button>
+  <!-- Floating top-right bar (all non-home screens) -->
+  <div id="float-bar" style="display:none;position:fixed;top:14px;right:14px;z-index:250;display:none;gap:6px;align-items:center;">
+    <button id="float-kick-btn" onclick="openKickModal()" style="
+      background:rgba(0,0,0,.45);backdrop-filter:blur(6px);
+      border:1.5px solid var(--border);border-radius:99px;
+      color:var(--muted);font-size:0.78rem;padding:6px 12px;cursor:pointer;line-height:1;">
+      👥 Players
+    </button>
+    <button id="float-leave-btn" onclick="floatLeave()" style="
+      background:rgba(0,0,0,.45);backdrop-filter:blur(6px);
+      border:1.5px solid var(--border);border-radius:99px;
+      color:var(--muted);font-size:0.78rem;padding:6px 12px;cursor:pointer;line-height:1;">
+      🚪 Leave
+    </button>
+  </div>
+
+  <!-- Host kick modal -->
+  <div id="kick-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:300;align-items:flex-end;justify-content:center;">
+    <div style="background:var(--card);border-radius:20px 20px 0 0;padding:20px 20px 32px;width:100%;max-width:500px;">
+      <div style="width:40px;height:4px;background:var(--border);border-radius:99px;margin:0 auto 16px;"></div>
+      <p style="font-size:0.78rem;font-weight:700;letter-spacing:.06em;color:var(--muted);margin-bottom:12px;">PLAYERS</p>
+      <div id="kick-player-list" style="display:flex;flex-direction:column;gap:8px;"></div>
+      <button onclick="document.getElementById('kick-modal').style.display='none'"
+        style="margin-top:16px;width:100%;background:transparent;border:1.5px solid var(--border);color:var(--muted);border-radius:10px;padding:10px;font-size:0.88rem;cursor:pointer;">
+        Close
+      </button>
+    </div>
+  </div>
 
   <!-- Host disconnected banner -->
   <div id="host-gone-banner" style="display:none;position:fixed;bottom:80px;left:50%;transform:translateX(-50%);
