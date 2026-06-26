@@ -208,6 +208,26 @@ module.exports = function createSpyfallGame(io, rooms, { getRoom, broadcastRoomL
       broadcastRoom(room);
     });
 
+    // Host cancels back to lobby (from preview or reveal)
+    socket.on('sf_back_to_lobby', () => {
+      const room = getRoom(socket.id);
+      if (!room || room.hostId !== socket.id || room.gameType !== 'spyfall') return;
+      if (!['preview', 'reveal'].includes(room.state)) return;
+      if (room.timer) { clearInterval(room.timer); room.timer = null; }
+      room.state        = 'lobby';
+      room.roles        = {};
+      room.spyId        = null;
+      room.realLocation = null;
+      room.locations    = [];
+      room.revealsDone  = [];
+      room.votes        = {};
+      room.accusedId    = null;
+      room.spyGuess     = null;
+      room.outcome      = null;
+      broadcastRoom(room);
+      broadcastRoomList();
+    });
+
     // Host sends everyone to reveal
     socket.on('sf_preview_done', () => {
       const room = getRoom(socket.id);
@@ -223,7 +243,8 @@ module.exports = function createSpyfallGame(io, rooms, { getRoom, broadcastRoomL
       const room = getRoom(socket.id);
       if (!room || room.gameType !== 'spyfall' || room.state !== 'reveal') return;
       if (!room.revealsDone.includes(socket.id)) room.revealsDone.push(socket.id);
-      if (room.revealsDone.length >= room.players.length) {
+      const connected = room.players.filter(p => !p.disconnected).length;
+      if (room.revealsDone.length >= connected) {
         room.state = 'playing';
         startTimer(room);
       }
@@ -234,6 +255,33 @@ module.exports = function createSpyfallGame(io, rooms, { getRoom, broadcastRoomL
       const room = getRoom(socket.id);
       if (!room || room.gameType !== 'spyfall' || room.state !== 'reveal') return;
       room.revealsDone = room.revealsDone.filter(id => id !== socket.id);
+      broadcastRoom(room);
+    });
+
+    // Host force-starts playing even if not all players are ready (someone disconnected)
+    socket.on('sf_force_start', () => {
+      const room = getRoom(socket.id);
+      if (!room || room.hostId !== socket.id || room.gameType !== 'spyfall') return;
+      if (room.state !== 'reveal') return;
+      room.state = 'playing';
+      startTimer(room);
+      broadcastRoom(room);
+    });
+
+    // Host force-tallies votes even if not all players voted (someone disconnected)
+    socket.on('sf_force_tally', () => {
+      const room = getRoom(socket.id);
+      if (!room || room.hostId !== socket.id || room.gameType !== 'spyfall') return;
+      if (room.state !== 'voting') return;
+      const voteCounts = {};
+      Object.values(room.votes).forEach(id => {
+        voteCounts[id] = (voteCounts[id] || 0) + 1;
+      });
+      if (Object.keys(voteCounts).length === 0) return; // nobody voted yet
+      const maxV   = Math.max(...Object.values(voteCounts));
+      const topIds = Object.keys(voteCounts).filter(id => voteCounts[id] === maxV);
+      room.accusedId = topIds[Math.floor(Math.random() * topIds.length)];
+      room.state = 'suspense';
       broadcastRoom(room);
     });
 
@@ -260,8 +308,9 @@ module.exports = function createSpyfallGame(io, rooms, { getRoom, broadcastRoomL
 
       room.votes[socket.id] = targetId;
 
-      // Check if everyone voted
-      if (Object.keys(room.votes).length >= room.players.length) {
+      // Check if all connected players voted
+      const connectedVoters = room.players.filter(p => !p.disconnected).length;
+      if (Object.keys(room.votes).length >= connectedVoters) {
         // Tally votes
         const voteCounts = {};
         Object.values(room.votes).forEach(id => {

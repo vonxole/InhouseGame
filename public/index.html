@@ -469,6 +469,7 @@
 
       <div id="sf-preview-host-btn" style="display:none;flex-direction:column;gap:8px;width:100%;margin-top:8px;">
         <button class="btn btn-primary" onclick="sfPreviewDone()">Everyone's Ready → Deal Roles 🎴</button>
+        <button onclick="socket.emit('sf_back_to_lobby')" style="background:transparent;border:1.5px solid var(--border);color:var(--muted);border-radius:10px;padding:10px 18px;font-size:0.85rem;cursor:pointer;">← Back to Lobby</button>
       </div>
       <p id="sf-preview-wait" class="muted center" style="display:none;font-size:0.88rem;">Waiting for host to deal roles…</p>
     </div>
@@ -504,6 +505,12 @@
       <div class="center">
         <p class="muted" style="font-size:0.82rem;margin-bottom:6px;" id="sf-rv-wait-msg"></p>
         <div class="ready-bar" id="sf-rv-dots"></div>
+      </div>
+      <button id="sf-rv-force-btn" onclick="socket.emit('sf_force_start')" style="display:none;background:transparent;border:1.5px solid var(--yellow);color:var(--yellow);border-radius:10px;padding:10px 18px;font-size:0.88rem;cursor:pointer;width:100%;">
+        ⚡ Force Start (someone disconnected)
+      </button>
+      <div id="sf-rv-back-btn" style="display:none;">
+        <button onclick="socket.emit('sf_back_to_lobby')" style="background:transparent;border:1.5px solid var(--border);color:var(--muted);border-radius:10px;padding:10px 18px;font-size:0.85rem;cursor:pointer;width:100%;">← Back to Lobby</button>
       </div>
     </div>
 

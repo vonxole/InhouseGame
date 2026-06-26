@@ -183,6 +183,12 @@ function sfRenderReveal(room) {
     Array.from({ length: total }, (_, i) =>
       `<div class="ready-dot${i < readyCount ? ' done' : ''}"></div>`).join('');
 
+  // Host controls: Force Start + Back to Lobby
+  const forceBtn = document.getElementById('sf-rv-force-btn');
+  const backBtn  = document.getElementById('sf-rv-back-btn');
+  if (forceBtn) forceBtn.style.display = (isHost && readyCount < total && readyCount > 0) ? 'block' : 'none';
+  if (backBtn)  backBtn.style.display  = isHost ? 'block' : 'none';
+
   _sfPrevState = 'reveal';
 }
 
@@ -292,8 +298,15 @@ function sfRenderVoting(room) {
 
   if (isHost) {
     const btn = document.getElementById('sf-btn-reveal-accused');
-    btn.disabled      = !canReveal;
-    btn.style.opacity = canReveal ? '1' : '0.4';
+    const hasAnyVote = voted > 0;
+    btn.disabled      = !hasAnyVote;
+    btn.style.opacity = hasAnyVote ? '1' : '0.4';
+    btn.textContent   = canReveal ? 'Reveal Accused 👁' : `Force Tally (${voted}/${total}) 👁`;
+    if (!canReveal && hasAnyVote) {
+      btn.onclick = () => socket.emit('sf_force_tally');
+    } else {
+      btn.onclick = sfRevealAccused;
+    }
     document.getElementById('sf-vt-reveal-hint').textContent = canReveal
       ? 'Everyone voted!' : 'Waiting for all votes…';
   }
