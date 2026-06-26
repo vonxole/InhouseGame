@@ -370,23 +370,14 @@ function renderPlaying(room) {
       </div>
       ${answerGuide}`,
     insider: `
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <div style="display:flex;align-items:center;gap:10px;">
         <span style="font-size:1.4rem;">🕵️</span>
-        <span style="font-weight:700;">Insider</span>
-        <span class="muted" style="font-size:0.8rem;">— ช่วยโดยไม่ให้โดนจับ</span>
-      </div>
-      <div onclick="toggleInsiderWord()" id="insider-word-toggle"
-        style="cursor:pointer;border-radius:10px;border:1.5px dashed var(--border);background:rgba(255,255,255,.03);padding:14px;text-align:center;user-select:none;">
-        <div id="insider-word-cover">
-          <div style="font-size:1.6rem;margin-bottom:4px;">👁️</div>
-          <div style="font-size:0.82rem;color:var(--muted);">แตะเพื่อดูคำลับ</div>
-          <div style="font-size:0.7rem;color:var(--border);margin-top:3px;">กันคนอื่นแอบเห็น</div>
-        </div>
-        <div id="insider-word-content" style="display:none;">
-          <div class="muted" style="font-size:0.72rem;letter-spacing:.08em;margin-bottom:4px;">SECRET WORD</div>
-          <div style="font-size:2rem;font-weight:800;color:var(--accent2);">${myWord}</div>
-          ${room.myThai ? `<div style="font-size:0.95rem;color:var(--muted);margin-top:2px;">${room.myThai}</div>` : ''}
-          <div style="font-size:0.7rem;color:var(--border);margin-top:6px;">แตะอีกครั้งเพื่อซ่อน</div>
+        <div>
+          <div style="font-weight:700;">Insider</div>
+          <div style="font-size:0.85rem;margin-top:2px;">
+            <span style="color:var(--accent2);font-weight:700;">${myWord}</span>
+            ${room.myThai ? `<span class="muted"> — ${room.myThai}</span>` : ''}
+          </div>
         </div>
       </div>`,
     common: `
@@ -428,14 +419,6 @@ function updateTimer(t) {
 function doWordGuessed()    { socket.emit('word_guessed'); }
 function doWordNotGuessed() { socket.emit('word_not_guessed'); }
 
-function toggleInsiderWord() {
-  const cover   = document.getElementById('insider-word-cover');
-  const content = document.getElementById('insider-word-content');
-  if (!cover || !content) return;
-  const showing = content.style.display !== 'none';
-  cover.style.display   = showing ? 'block' : 'none';
-  content.style.display = showing ? 'none'  : 'block';
-}
 
 // ── Voting ────────────────────────────────────────────────────────────────────
 function renderVoting(room) {
