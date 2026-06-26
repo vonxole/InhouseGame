@@ -12,10 +12,48 @@ let timerTotal       = 180;
 let verdictInterval  = null;
 let suspenseInterval = null;
 
+// ── Self-reset (stuck recovery) ───────────────────────────────────────────────
+function selfReset() {
+  clearSession();
+  myName = ''; myRole = null; myWord = null; myThai = null; isHost = false;
+  document.getElementById('host-gone-banner').style.display = 'none';
+  show('s-home');
+  socket.emit('leave_room');
+}
+
+// Long-press logo (2s) anywhere → selfReset
+let _logoTimer = null;
+document.addEventListener('DOMContentLoaded', () => {
+  const logo = document.querySelector('h1');
+  if (!logo) return;
+  logo.addEventListener('pointerdown', () => {
+    _logoTimer = setTimeout(() => { selfReset(); toast('Session reset ✓'); }, 2000);
+  });
+  logo.addEventListener('pointerup',   () => clearTimeout(_logoTimer));
+  logo.addEventListener('pointerleave',() => clearTimeout(_logoTimer));
+});
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
+const HIDE_LEAVE_SCREENS = new Set(['s-home', 's-pick-game']);
+
 function show(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
+  const btn = document.getElementById('float-leave-btn');
+  if (btn) btn.style.display = HIDE_LEAVE_SCREENS.has(id) ? 'none' : 'block';
+}
+
+async function floatLeave() {
+  const ok = await showConfirm('ออกจากห้อง?', 'Leave');
+  if (!ok) return;
+  socket.emit('leave_room');
+  clearSession();
+  myName = ''; myRole = null; myWord = null; myThai = null; isHost = false;
+  document.getElementById('host-gone-banner').style.display = 'none';
+  document.getElementById('float-leave-btn').style.display = 'none';
+  const footer = document.getElementById('l-sticky-footer');
+  if (footer) footer.style.display = 'none';
+  show('s-home');
 }
 
 function toast(msg) {
@@ -214,6 +252,12 @@ socket.on('room_update', (room) => {
   if (room.state !== 'suspense' && suspenseInterval) {
     clearInterval(suspenseInterval); suspenseInterval = null;
   }
+
+  // Host disconnected banner (non-host players only, non-lobby states)
+  const banner     = document.getElementById('host-gone-banner');
+  const hostPlayer = room.players?.find(p => p.id === room.hostId);
+  const hostGone   = !isHost && room.state !== 'lobby' && hostPlayer?.disconnected;
+  if (banner) banner.style.display = hostGone ? 'flex' : 'none';
 
   const gameType = room.gameType || 'insider';
   if (gameType === 'insider')  handleInsiderRoomUpdate(room);
