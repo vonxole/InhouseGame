@@ -1,7 +1,7 @@
 {
-  "name": "inhouse-insider",
+  "name": "digiplay",
   "version": "1.0.0",
-  "description": "Office English party game — Insider clone",
+  "description": "Office party games platform",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

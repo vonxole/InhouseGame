@@ -205,7 +205,7 @@ const BASE_PORT = parseInt(process.env.PORT || '3001');
 function listen(port) {
   server.listen(port, '0.0.0.0')
     .once('listening', () => {
-      console.log(`\n🎮 Inhouse Game Platform running at http://localhost:${port}`);
+      console.log(`\n🎮 DigiPlay running at http://localhost:${port}`);
       console.log(`   Share your local IP with friends on the same WiFi\n`);
     })
     .once('error', (err) => {
