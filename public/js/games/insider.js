@@ -3,11 +3,18 @@
 
 // ── Entry point ───────────────────────────────────────────────────────────────
 function handleInsiderRoomUpdate(room) {
+  const comingFromReveal = _prevRoomState === 'reveal';
   if (room.state !== 'lobby') _prevRoomState = room.state;
   document.getElementById('l-sticky-footer').style.display = room.state === 'lobby' ? 'block' : 'none';
   if (room.state === 'lobby')   renderLobby(room);
   else if (room.state === 'reveal')  renderReveal(room);
-  else if (room.state === 'playing') renderPlaying(room);
+  else if (room.state === 'playing') {
+    if (comingFromReveal) {
+      startCountdown(() => renderPlaying(room));
+    } else {
+      renderPlaying(room);
+    }
+  }
   else if (room.state === 'voting')  renderVoting(room);
   else if (room.state === 'suspense') renderSuspense(room);
   else if (room.state === 'verdict') renderVerdict(room);
@@ -16,6 +23,54 @@ function handleInsiderRoomUpdate(room) {
   if (room.state === 'reveal' && typeof room.readyCount === 'number') {
     renderReadyDots(room.readyCount, room.players.length);
   }
+}
+
+// ── Countdown overlay ─────────────────────────────────────────────────────────
+function startCountdown(onDone) {
+  const overlay  = document.getElementById('countdown-overlay');
+  const numEl    = document.getElementById('countdown-num');
+  const labelEl  = document.getElementById('countdown-label');
+  overlay.style.display = 'flex';
+  let n = 5;
+  function tick() {
+    numEl.style.opacity   = '0';
+    numEl.style.transform = 'scale(1.4)';
+    setTimeout(() => {
+      if (n > 0) {
+        numEl.textContent   = n;
+        labelEl.textContent = '';
+        numEl.style.opacity   = '1';
+        numEl.style.transform = 'scale(1)';
+        n--;
+        setTimeout(tick, 900);
+      } else {
+        numEl.textContent   = '🎮';
+        labelEl.textContent = 'START!';
+        numEl.style.opacity   = '1';
+        numEl.style.transform = 'scale(1)';
+        setTimeout(() => {
+          overlay.style.display = 'none';
+          onDone();
+        }, 700);
+      }
+    }, 150);
+  }
+  tick();
+}
+
+// ── Auto-hide role card ───────────────────────────────────────────────────────
+let _hideRoleTimer = null;
+function scheduleRoleHide(delayMs = 8000) {
+  clearTimeout(_hideRoleTimer);
+  _hideRoleTimer = setTimeout(() => {
+    const overlay = document.getElementById('rv-hide-overlay');
+    if (overlay) overlay.style.display = 'flex';
+  }, delayMs);
+}
+function revealRoleTemporarily() {
+  const overlay = document.getElementById('rv-hide-overlay');
+  if (overlay) overlay.style.display = 'none';
+  scheduleRoleHide(5000); // re-hide after 5s
 }
 
 // ── Insider reveal socket event ───────────────────────────────────────────────
@@ -187,6 +242,10 @@ function toggleLobbySettings() {
 // ── Reveal ────────────────────────────────────────────────────────────────────
 function renderReveal(room) {
   show('s-reveal');
+  // Reset hide overlay and schedule auto-hide after 8s
+  const hideOverlay = document.getElementById('rv-hide-overlay');
+  if (hideOverlay) hideOverlay.style.display = 'none';
+  scheduleRoleHide(8000);
   const defs = {
     master:  { icon: '👑', name: 'Master',  cls: 'role-master',
       desc: 'You know the word. Answer YES / NO / IDK to questions out loud. When someone guesses it, tap the button.' },
@@ -206,7 +265,9 @@ function renderReveal(room) {
     document.getElementById('rv-word-label').textContent = 'Secret Word';
     wordTextEl.textContent = room.myWord || '';
     wordTextEl.style.opacity = '1';
-    document.getElementById('rv-word-thai').textContent = room.myThai ? `(${room.myThai})` : '';
+    const thaiPart    = room.myThai        ? `(${room.myThai})`                                          : '';
+    const countryPart = myCountry          ? ` · ${myCountry}${myCountryThai ? ' · ' + myCountryThai : ''}` : '';
+    document.getElementById('rv-word-thai').textContent = thaiPart + countryPart;
     document.getElementById('rv-cat').textContent = room.wordCategory || '';
     document.getElementById('rv-lvl').innerHTML   = myRole === 'master' ? levelChip(room.wordLevel) : '';
   } else {
@@ -218,16 +279,14 @@ function renderReveal(room) {
     document.getElementById('rv-lvl').innerHTML         = '';
   }
 
-  if (myRole === 'insider' && room.myHint) {
-    insiderHintEl.textContent = `${room.myHint}${room.myHintThai ? '  ·  ' + room.myHintThai : ''}`;
+  // Hint — plain text, same style for both master and insider
+  document.getElementById('rv-hint').style.display = 'none'; // unused card
+  if ((myRole === 'master' || myRole === 'insider') && room.myHint) {
+    insiderHintEl.innerHTML =
+      `<span style="color:var(--text);opacity:.7;">${room.myHint}</span>` +
+      (room.myHintThai ? `<br><span style="opacity:.4;">${room.myHintThai}</span>` : '');
   } else {
-    insiderHintEl.textContent = '';
-  }
-
-  document.getElementById('rv-hint').style.display = myRole === 'master' ? 'block' : 'none';
-  if (myRole === 'master') {
-    document.getElementById('rv-hint-text').textContent = room.myHint     || '';
-    document.getElementById('rv-hint-thai').textContent = room.myHintThai || '';
+    insiderHintEl.innerHTML = '';
   }
 
   document.getElementById('btn-reroll').style.display         = 'none';
@@ -346,8 +405,11 @@ function renderPlaying(room) {
   ];
   const answerGuide = `
     <hr style="border:none;border-top:1px solid var(--border);margin:12px 0 10px;">
-    <p class="muted" style="font-size:0.7rem;letter-spacing:.05em;margin-bottom:8px;">💬 Answer Guide</p>
-    <div style="display:flex;flex-direction:column;gap:6px;">
+    <div onclick="toggleAnswerGuide()" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;user-select:none;">
+      <p class="muted" style="font-size:0.7rem;letter-spacing:.05em;margin:0;">💬 Answer Guide</p>
+      <span id="ans-guide-chevron" class="muted" style="font-size:0.7rem;">▶</span>
+    </div>
+    <div id="ans-guide-body" style="display:none;margin-top:8px;display:none;flex-direction:column;gap:6px;">
       ${ANS.map(a => `
         <div style="display:flex;align-items:baseline;gap:7px;font-size:0.8rem;line-height:1.45;">
           <span style="font-size:0.9rem;flex-shrink:0;">${a.emoji}</span>
@@ -356,6 +418,13 @@ function renderPlaying(room) {
         </div>`).join('')}
     </div>`;
 
+  const countryLine = myCountry
+    ? `<div style="font-size:0.78rem;color:var(--muted);opacity:.6;margin-top:1px;">${myCountry}${myCountryThai ? ' · ' + myCountryThai : ''}</div>`
+    : '';
+  const hintLine = room.myHint
+    ? `<div style="margin-top:8px;font-size:0.8rem;color:var(--muted);font-style:italic;text-align:center;line-height:1.5;">${room.myHint}${room.myHintThai ? '<br><span style="opacity:.55;">' + room.myHintThai + '</span>' : ''}</div>`
+    : '';
+
   const roleInfo = {
     master: `
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
@@ -363,21 +432,24 @@ function renderPlaying(room) {
         <span style="font-weight:700;">Master</span>
         <span class="muted" style="font-size:0.8rem;">— ตอบคำถาม Yes/No</span>
       </div>
-      <div style="text-align:center;padding:10px 0;">
+      <div style="text-align:center;padding:8px 0;">
         <div class="muted" style="font-size:0.72rem;letter-spacing:.08em;margin-bottom:4px;">SECRET WORD</div>
         <div style="font-size:2rem;font-weight:800;color:var(--accent2);">${myWord}</div>
-        ${room.myThai ? `<div style="font-size:0.95rem;color:var(--muted);margin-top:2px;">${room.myThai}</div>` : ''}
+        ${myThai ? `<div style="font-size:0.9rem;color:var(--muted);margin-top:2px;">${myThai}</div>` : ''}
+        ${countryLine}
       </div>
+      ${hintLine}
       ${answerGuide}`,
     insider: `
       <div style="display:flex;align-items:center;gap:10px;">
         <span style="font-size:1.4rem;">🕵️</span>
         <div>
           <div style="font-weight:700;">Insider</div>
-          <div style="font-size:0.85rem;margin-top:2px;">
+          <div style="font-size:0.88rem;margin-top:3px;">
             <span style="color:var(--accent2);font-weight:700;">${myWord}</span>
-            ${room.myThai ? `<span class="muted"> — ${room.myThai}</span>` : ''}
+            ${myThai ? `<span class="muted"> — ${myThai}</span>` : ''}
           </div>
+          ${countryLine}
         </div>
       </div>`,
     common: `
@@ -393,7 +465,7 @@ function renderPlaying(room) {
   document.getElementById('pl-answer-btns').style.display  = 'none'; // now embedded inside role card
 
   const plEQ = document.getElementById('pl-example-q');
-  if (myRole !== 'master' && room.showExamples) {
+  if (myRole !== 'master' && room.showExamples !== false) {
     plEQ.style.display = 'block';
     renderExampleQ('pl-eq-box', room.exampleCount || 15);
   } else {
@@ -418,6 +490,15 @@ function updateTimer(t) {
 
 function doWordGuessed()    { socket.emit('word_guessed'); }
 function doWordNotGuessed() { socket.emit('word_not_guessed'); }
+
+function toggleAnswerGuide() {
+  const body    = document.getElementById('ans-guide-body');
+  const chevron = document.getElementById('ans-guide-chevron');
+  if (!body) return;
+  const open = body.style.display === 'flex';
+  body.style.display    = open ? 'none' : 'flex';
+  if (chevron) chevron.textContent = open ? '▶' : '▼';
+}
 
 
 // ── Voting ────────────────────────────────────────────────────────────────────
@@ -634,7 +715,8 @@ async function doLeaveRoom() {
   if (!ok) return;
   socket.emit('leave_room');
   clearSession();
-  myName = ''; myRole = null; myWord = null; myThai = null; isHost = false;
+  myName = ''; myRole = null; myWord = null; myThai = null; myCountry = null; myCountryThai = null; isHost = false;
+  clearTimeout(_hideRoleTimer);
   document.getElementById('l-sticky-footer').style.display = 'none';
   show('s-home');
 }

@@ -97,8 +97,10 @@ module.exports = function createInsiderGame(io, rooms, { getRoom, pickWord, broa
       const role       = room.roles[p.id] || null;
       const myWord     = (role === 'master' || role === 'insider') ? room.word     : null;
       const myHint     = (role === 'master' || role === 'insider') ? room.hint     : null;
-      const myHintThai = (role === 'master' || role === 'insider') ? room.hintThai : null;
-      const myThai     = (role === 'master' || role === 'insider') ? room.wordThai : null;
+      const myHintThai    = (role === 'master' || role === 'insider') ? room.hintThai    : null;
+      const myThai        = (role === 'master' || role === 'insider') ? room.wordThai    : null;
+      const myCountry     = (role === 'master' || role === 'insider') ? room.country     : null;
+      const myCountryThai = (role === 'master' || role === 'insider') ? room.countryThai : null;
       const iAmReady   = room.revealsDone ? room.revealsDone.includes(p.id) : false;
       const amHost     = p.isHost === true;
       const isMaster   = role === 'master';
@@ -116,7 +118,7 @@ module.exports = function createInsiderGame(io, rooms, { getRoom, pickWord, broa
       const s = io.sockets.sockets.get(p.id);
       if (s) s.emit('room_update', {
         ...base,
-        role, myWord, myHint, myHintThai, myThai,
+        role, myWord, myHint, myHintThai, myThai, myCountry, myCountryThai,
         iAmReady, amHost, isMaster, masterIsReady,
         myVote, canReveal, iAmAccused, canOpenRole, canConfirm,
       });
@@ -228,7 +230,9 @@ module.exports = function createInsiderGame(io, rooms, { getRoom, pickWord, broa
       room.wordCategory = picked.category;
       room.wordLevel    = picked.level;
       room.hint         = picked.hint;
-      room.hintThai     = picked.hintThai || null;
+      room.hintThai     = picked.hintThai    || null;
+      room.country      = picked.country     || null;
+      room.countryThai  = picked.countryThai || null;
       room.state        = 'reveal';
       room.revealsDone  = [];
       assignRoles(room);
@@ -266,6 +270,7 @@ module.exports = function createInsiderGame(io, rooms, { getRoom, pickWord, broa
       const w = pickWord(room.filterCategories, room.filterLevels);
       room.word = w.word; room.hint = w.hint; room.hintThai = w.hintThai || null;
       room.wordThai = w.thai; room.wordCategory = w.category; room.wordLevel = w.level;
+      room.country = w.country || null; room.countryThai = w.countryThai || null;
       room.revealsDone = [];
       broadcastRoom(room);
     });
@@ -277,6 +282,7 @@ module.exports = function createInsiderGame(io, rooms, { getRoom, pickWord, broa
       const w = pickWord(room.filterCategories, room.filterLevels);
       room.word = w.word; room.hint = w.hint; room.hintThai = w.hintThai || null;
       room.wordThai = w.thai; room.wordCategory = w.category; room.wordLevel = w.level;
+      room.country = w.country || null; room.countryThai = w.countryThai || null;
       room.revealsDone = [];
       broadcastRoom(room);
     });
