@@ -60,15 +60,21 @@ function startCountdown(onDone) {
 
 // ── Auto-hide role card ───────────────────────────────────────────────────────
 let _hideRoleTimer = null;
+function _activeRoleOverlay() {
+  // Return whichever role overlay is in an active screen
+  if (document.getElementById('s-playing')?.style.display !== 'none')
+    return document.getElementById('pl-hide-overlay');
+  return document.getElementById('rv-hide-overlay');
+}
 function scheduleRoleHide(delayMs = 8000) {
   clearTimeout(_hideRoleTimer);
   _hideRoleTimer = setTimeout(() => {
-    const overlay = document.getElementById('rv-hide-overlay');
+    const overlay = _activeRoleOverlay();
     if (overlay) overlay.style.display = 'flex';
   }, delayMs);
 }
 function revealRoleTemporarily() {
-  const overlay = document.getElementById('rv-hide-overlay');
+  const overlay = _activeRoleOverlay();
   if (overlay) overlay.style.display = 'none';
   scheduleRoleHide(5000); // re-hide after 5s
 }
@@ -464,6 +470,11 @@ function renderPlaying(room) {
   document.getElementById('pl-master-btn').style.display   = 'none';
   document.getElementById('pl-timeup-btn').style.display   = myRole === 'master' ? 'flex' : 'none';
   document.getElementById('pl-answer-btns').style.display  = 'none'; // now embedded inside role card
+
+  // Reset + schedule role hide
+  const plOverlay = document.getElementById('pl-hide-overlay');
+  if (plOverlay) plOverlay.style.display = 'none';
+  scheduleRoleHide(10000);
 
   const plEQ = document.getElementById('pl-example-q');
   if (myRole !== 'master' && room.showExamples !== false) {
