@@ -98,7 +98,7 @@ module.exports = function createSpyfallGame(io, rooms, { getRoom, broadcastRoomL
         code:          room.code,
         gameType:      'spyfall',
         state:         room.state,
-        players:       room.players.map(pl => ({ id: pl.id, name: pl.name, isHost: pl.isHost })),
+        players:       room.players.map(pl => ({ id: pl.id, name: pl.name, isHost: pl.isHost, disconnected: !!pl.disconnected })),
         hostId:        room.hostId,
         amHost,
         locations:     room.locations,
@@ -119,7 +119,9 @@ module.exports = function createSpyfallGame(io, rooms, { getRoom, broadcastRoomL
         revealsDone:   room.revealsDone || [],
         readyCount:    (room.revealsDone || []).length,
         iAmReady:      (room.revealsDone || []).includes(myId),
-        password:      amHost ? room.password : undefined,
+        password:           amHost ? room.password : undefined,
+        startingPlayerName: room.startingPlayerName || null,
+        iAmStarter:         myId === room.startingPlayerId,
       };
 
       // Role-specific fields
@@ -164,6 +166,13 @@ module.exports = function createSpyfallGame(io, rooms, { getRoom, broadcastRoomL
   function startTimer(room) {
     if (room.timer) clearInterval(room.timer);
     room.timeLeft = room.playTime || 300;
+    // Pick a random connected player to start asking (prefer non-spy, any if spy only)
+    const connected = room.players.filter(p => !p.disconnected);
+    const nonSpy = connected.filter(p => p.id !== room.spyId);
+    const pool = nonSpy.length > 0 ? nonSpy : connected;
+    const starter = pool[Math.floor(Math.random() * pool.length)];
+    room.startingPlayerId   = starter?.id   || null;
+    room.startingPlayerName = starter?.name || null;
     room.timer = setInterval(() => {
       room.timeLeft--;
       io.to(room.code).emit('sf_tick', room.timeLeft);

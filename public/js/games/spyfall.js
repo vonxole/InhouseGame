@@ -229,6 +229,18 @@ function sfRenderPlaying(room) {
     ).join('');
   }
 
+  // Show who starts asking
+  const starterEl     = document.getElementById('sf-pl-starter');
+  const starterNameEl = document.getElementById('sf-pl-starter-name');
+  if (room.startingPlayerName && starterEl) {
+    starterEl.style.display = 'block';
+    starterNameEl.textContent = room.iAmStarter
+      ? `${room.startingPlayerName} (คุณ) 🎤`
+      : `${room.startingPlayerName} 🎤`;
+  } else if (starterEl) {
+    starterEl.style.display = 'none';
+  }
+
   sfUpdateTimer(room.timeLeft ?? _sfTimerTotal);
   _sfPrevState = 'playing';
 }

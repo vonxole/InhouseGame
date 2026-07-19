@@ -3399,39 +3399,484 @@
     "hint": "an Italian dessert drink — a shot of hot espresso poured over vanilla ice cream",
     "hintThai": "เอสเปรสโซร้อนราดบนไอศกรีมวานิลลา"
   },
-  { "word": "stapler", "thai": "เครื่องเย็บกระดาษ", "category": "Office & School", "level": "easy", "hint": "a tool that joins sheets of paper together with a small metal clip", "hintThai": "อุปกรณ์ที่ใช้เย็บกระดาษเข้าด้วยกันด้วยลวดโลหะ" },
-  { "word": "whiteboard", "thai": "กระดานไวท์บอร์ด", "category": "Office & School", "level": "easy", "hint": "a smooth white surface you can write on with a marker and wipe clean", "hintThai": "กระดานขาวที่เขียนได้ด้วยปากกาและลบออกได้" },
-  { "word": "projector", "thai": "โปรเจคเตอร์", "category": "Office & School", "level": "easy", "hint": "a device that shines an image or video onto a wall or screen", "hintThai": "อุปกรณ์ฉายภาพหรือวิดีโอบนผนังหรือจอ" },
-  { "word": "printer", "thai": "เครื่องพิมพ์", "category": "Office & School", "level": "easy", "hint": "a machine connected to a computer that puts text or images on paper", "hintThai": "เครื่องที่พิมพ์ข้อความหรือภาพลงบนกระดาษ" },
-  { "word": "sticky note", "thai": "กระดาษโน้ต", "category": "Office & School", "level": "easy", "hint": "a small piece of coloured paper with a sticky back used for quick reminders", "hintThai": "กระดาษสีเล็กๆที่มีกาวด้านหลังสำหรับจดบันทึกย่อ" },
-  { "word": "highlighter", "thai": "ปากกาเน้นข้อความ", "category": "Office & School", "level": "easy", "hint": "a bright-coloured pen used to mark important text so it stands out", "hintThai": "ปากกาสีสดที่ใช้ขีดเน้นข้อความสำคัญ" },
-  { "word": "scissors", "thai": "กรรไกร", "category": "Office & School", "level": "easy", "hint": "a tool with two blades that cut paper, fabric, or other thin materials", "hintThai": "อุปกรณ์สองใบมีดสำหรับตัดกระดาษหรือผ้า" },
-  { "word": "ruler", "thai": "ไม้บรรทัด", "category": "Office & School", "level": "easy", "hint": "a long flat strip used for measuring length and drawing straight lines", "hintThai": "แท่งแบนยาวสำหรับวัดความยาวและลากเส้นตรง" },
-  { "word": "eraser", "thai": "ยางลบ", "category": "Office & School", "level": "easy", "hint": "a small block used to remove pencil or pen marks from paper", "hintThai": "ก้อนเล็กๆใช้ลบรอยดินสอหรือปากกาออกจากกระดาษ" },
-  { "word": "notebook", "thai": "สมุดโน้ต", "category": "Office & School", "level": "easy", "hint": "a book with blank or lined pages for writing notes", "hintThai": "สมุดที่มีหน้ากระดาษเปล่าหรือบรรทัดสำหรับจดบันทึก" },
-  { "word": "calculator", "thai": "เครื่องคิดเลข", "category": "Office & School", "level": "easy", "hint": "a small electronic device used to do maths quickly", "hintThai": "อุปกรณ์อิเล็กทรอนิกส์ขนาดเล็กสำหรับคำนวณตัวเลข" },
-  { "word": "backpack", "thai": "กระเป๋าเป้", "category": "Office & School", "level": "easy", "hint": "a bag with two straps worn on your back to carry things", "hintThai": "กระเป๋าสะพายหลังที่มีสายสองเส้น" },
-  { "word": "pencil case", "thai": "กล่องดินสอ", "category": "Office & School", "level": "easy", "hint": "a small pouch or box that holds pens, pencils, and stationery", "hintThai": "กล่องหรือถุงเล็กสำหรับใส่ดินสอและอุปกรณ์เครื่องเขียน" },
-  { "word": "marker", "thai": "ปากกาไวท์บอร์ด", "category": "Office & School", "level": "easy", "hint": "a thick pen used to write on whiteboards or flip charts", "hintThai": "ปากกาหัวหนาสำหรับเขียนบนไวท์บอร์ด" },
-  { "word": "tape", "thai": "เทปใส", "category": "Office & School", "level": "easy", "hint": "a clear sticky strip used to join or seal pieces of paper", "hintThai": "เทปใสที่มีกาวสำหรับติดหรือปิดผนึกกระดาษ" },
-  { "word": "folder", "thai": "แฟ้มเอกสาร", "category": "Office & School", "level": "easy", "hint": "a stiff cover used to keep papers organised together", "hintThai": "ปกแข็งที่ใช้จัดเก็บกระดาษให้เป็นระเบียบ" },
-  { "word": "clipboard", "thai": "คลิปบอร์ด", "category": "Office & School", "level": "medium", "hint": "a flat board with a clip at the top for holding paper while writing", "hintThai": "กระดานแบนที่มีคลิปด้านบนสำหรับหนีบกระดาษขณะเขียน" },
-  { "word": "hole punch", "thai": "ที่เจาะรู", "category": "Office & School", "level": "medium", "hint": "a tool that makes round holes in paper so it can be put in a binder", "hintThai": "อุปกรณ์เจาะรูกลมในกระดาษเพื่อใส่แฟ้ม" },
-  { "word": "binder", "thai": "แฟ้มแหวน", "category": "Office & School", "level": "medium", "hint": "a large folder with metal rings inside that hold punched pages", "hintThai": "แฟ้มขนาดใหญ่ที่มีห่วงโลหะสำหรับเก็บกระดาษที่เจาะรูแล้ว" },
-  { "word": "desk lamp", "thai": "โคมตั้งโต๊ะ", "category": "Office & School", "level": "easy", "hint": "a small light that sits on a desk to help you see while working", "hintThai": "โคมไฟขนาดเล็กที่วางบนโต๊ะเพื่อให้แสงสว่างขณะทำงาน" },
-  { "word": "webcam", "thai": "กล้องเว็บแคม", "category": "Office & School", "level": "medium", "hint": "a small camera attached to a computer for video calls", "hintThai": "กล้องขนาดเล็กที่ต่อกับคอมพิวเตอร์สำหรับวิดีโอคอล" },
-  { "word": "headset", "thai": "หูฟังพร้อมไมค์", "category": "Office & School", "level": "medium", "hint": "earphones combined with a microphone, used for calls or listening", "hintThai": "หูฟังที่มีไมโครโฟนในตัวสำหรับโทรศัพท์หรือฟังเพลง" },
-  { "word": "mouse pad", "thai": "แผ่นรองเมาส์", "category": "Office & School", "level": "easy", "hint": "a flat pad placed under a computer mouse so it moves smoothly", "hintThai": "แผ่นรองที่วางใต้เมาส์คอมพิวเตอร์เพื่อให้เลื่อนได้คล่อง" },
-  { "word": "keyboard", "thai": "แป้นพิมพ์", "category": "Office & School", "level": "easy", "hint": "a board with many keys used to type text into a computer", "hintThai": "แผงที่มีปุ่มมากมายสำหรับพิมพ์ข้อความเข้าคอมพิวเตอร์" },
-  { "word": "monitor", "thai": "จอคอมพิวเตอร์", "category": "Office & School", "level": "easy", "hint": "the screen that shows what your computer is doing", "hintThai": "จอแสดงผลที่แสดงสิ่งที่คอมพิวเตอร์กำลังทำ" },
-  { "word": "shredder", "thai": "เครื่องทำลายเอกสาร", "category": "Office & School", "level": "medium", "hint": "a machine that cuts paper into tiny strips so documents cannot be read", "hintThai": "เครื่องที่ตัดกระดาษเป็นชิ้นเล็กๆเพื่อทำลายเอกสาร" },
-  { "word": "filing cabinet", "thai": "ตู้เอกสาร", "category": "Office & School", "level": "medium", "hint": "a tall metal furniture with drawers used to store paper files", "hintThai": "เฟอร์นิเจอร์โลหะสูงที่มีลิ้นชักสำหรับเก็บแฟ้มเอกสาร" },
-  { "word": "extension cord", "thai": "สายพ่วงไฟ", "category": "Office & School", "level": "medium", "hint": "a cable with extra sockets that lets you plug in several devices far from the wall", "hintThai": "สายไฟที่มีปลั๊กหลายช่องเพื่อต่ออุปกรณ์หลายตัวห่างจากผนัง" },
-  { "word": "USB hub", "thai": "ยูเอสบีฮับ", "category": "Office & School", "level": "medium", "hint": "a device that adds extra USB ports so you can connect many devices at once", "hintThai": "อุปกรณ์ที่เพิ่มพอร์ต USB เพื่อต่ออุปกรณ์หลายตัวพร้อมกัน" },
-  { "word": "globe", "thai": "ลูกโลก", "category": "Office & School", "level": "easy", "hint": "a round model of the Earth that spins on a stand", "hintThai": "โมเดลโลกทรงกลมที่หมุนได้บนขาตั้ง" },
-  { "word": "scanner", "thai": "เครื่องสแกน", "category": "Office & School", "level": "medium", "hint": "a machine that converts a paper document into a digital image on your computer", "hintThai": "เครื่องที่แปลงเอกสารกระดาษเป็นภาพดิจิทัลในคอมพิวเตอร์" },
-  { "word": "calendar", "thai": "ปฏิทิน", "category": "Office & School", "level": "easy", "hint": "a chart showing all the days, weeks, and months of the year", "hintThai": "แผนภูมิที่แสดงวัน สัปดาห์ และเดือนทั้งหมดของปี" },
-  { "word": "whiteboard eraser", "thai": "แปรงลบกระดาน", "category": "Office & School", "level": "easy", "hint": "a soft block used to wipe writing off a whiteboard", "hintThai": "ก้อนนุ่มสำหรับลบตัวเขียนออกจากไวท์บอร์ด" },
-  { "word": "name tag", "thai": "ป้ายชื่อ", "category": "Office & School", "level": "easy", "hint": "a small badge worn on clothing to show who you are", "hintThai": "ป้ายเล็กๆที่ติดบนเสื้อผ้าเพื่อแสดงตัวตน" },
-  { "word": "ID card", "thai": "บัตรพนักงาน", "category": "Office & School", "level": "easy", "hint": "a card you carry or swipe to prove who you are and enter a building", "hintThai": "บัตรที่พกพาหรือแตะเพื่อยืนยันตัวตนและเข้าอาคาร" }
+  {
+    "word": "stapler",
+    "thai": "เครื่องเย็บกระดาษ",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a tool that joins sheets of paper together with a small metal clip",
+    "hintThai": "อุปกรณ์ที่ใช้เย็บกระดาษเข้าด้วยกันด้วยลวดโลหะ"
+  },
+  {
+    "word": "whiteboard",
+    "thai": "กระดานไวท์บอร์ด",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a smooth white surface you can write on with a marker and wipe clean",
+    "hintThai": "กระดานขาวที่เขียนได้ด้วยปากกาและลบออกได้"
+  },
+  {
+    "word": "projector",
+    "thai": "โปรเจคเตอร์",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a device that shines an image or video onto a wall or screen",
+    "hintThai": "อุปกรณ์ฉายภาพหรือวิดีโอบนผนังหรือจอ"
+  },
+  {
+    "word": "printer",
+    "thai": "เครื่องพิมพ์",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a machine connected to a computer that puts text or images on paper",
+    "hintThai": "เครื่องที่พิมพ์ข้อความหรือภาพลงบนกระดาษ"
+  },
+  {
+    "word": "sticky note",
+    "thai": "กระดาษโน้ต",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a small piece of coloured paper with a sticky back used for quick reminders",
+    "hintThai": "กระดาษสีเล็กๆที่มีกาวด้านหลังสำหรับจดบันทึกย่อ"
+  },
+  {
+    "word": "highlighter",
+    "thai": "ปากกาเน้นข้อความ",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a bright-coloured pen used to mark important text so it stands out",
+    "hintThai": "ปากกาสีสดที่ใช้ขีดเน้นข้อความสำคัญ"
+  },
+  {
+    "word": "scissors",
+    "thai": "กรรไกร",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a tool with two blades that cut paper, fabric, or other thin materials",
+    "hintThai": "อุปกรณ์สองใบมีดสำหรับตัดกระดาษหรือผ้า"
+  },
+  {
+    "word": "ruler",
+    "thai": "ไม้บรรทัด",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a long flat strip used for measuring length and drawing straight lines",
+    "hintThai": "แท่งแบนยาวสำหรับวัดความยาวและลากเส้นตรง"
+  },
+  {
+    "word": "eraser",
+    "thai": "ยางลบ",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a small block used to remove pencil or pen marks from paper",
+    "hintThai": "ก้อนเล็กๆใช้ลบรอยดินสอหรือปากกาออกจากกระดาษ"
+  },
+  {
+    "word": "notebook",
+    "thai": "สมุดโน้ต",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a book with blank or lined pages for writing notes",
+    "hintThai": "สมุดที่มีหน้ากระดาษเปล่าหรือบรรทัดสำหรับจดบันทึก"
+  },
+  {
+    "word": "calculator",
+    "thai": "เครื่องคิดเลข",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a small electronic device used to do maths quickly",
+    "hintThai": "อุปกรณ์อิเล็กทรอนิกส์ขนาดเล็กสำหรับคำนวณตัวเลข"
+  },
+  {
+    "word": "backpack",
+    "thai": "กระเป๋าเป้",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a bag with two straps worn on your back to carry things",
+    "hintThai": "กระเป๋าสะพายหลังที่มีสายสองเส้น"
+  },
+  {
+    "word": "pencil case",
+    "thai": "กล่องดินสอ",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a small pouch or box that holds pens, pencils, and stationery",
+    "hintThai": "กล่องหรือถุงเล็กสำหรับใส่ดินสอและอุปกรณ์เครื่องเขียน"
+  },
+  {
+    "word": "marker",
+    "thai": "ปากกาไวท์บอร์ด",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a thick pen used to write on whiteboards or flip charts",
+    "hintThai": "ปากกาหัวหนาสำหรับเขียนบนไวท์บอร์ด"
+  },
+  {
+    "word": "tape",
+    "thai": "เทปใส",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a clear sticky strip used to join or seal pieces of paper",
+    "hintThai": "เทปใสที่มีกาวสำหรับติดหรือปิดผนึกกระดาษ"
+  },
+  {
+    "word": "folder",
+    "thai": "แฟ้มเอกสาร",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a stiff cover used to keep papers organised together",
+    "hintThai": "ปกแข็งที่ใช้จัดเก็บกระดาษให้เป็นระเบียบ"
+  },
+  {
+    "word": "clipboard",
+    "thai": "คลิปบอร์ด",
+    "category": "Office & School",
+    "level": "medium",
+    "hint": "a flat board with a clip at the top for holding paper while writing",
+    "hintThai": "กระดานแบนที่มีคลิปด้านบนสำหรับหนีบกระดาษขณะเขียน"
+  },
+  {
+    "word": "hole punch",
+    "thai": "ที่เจาะรู",
+    "category": "Office & School",
+    "level": "medium",
+    "hint": "a tool that makes round holes in paper so it can be put in a binder",
+    "hintThai": "อุปกรณ์เจาะรูกลมในกระดาษเพื่อใส่แฟ้ม"
+  },
+  {
+    "word": "binder",
+    "thai": "แฟ้มแหวน",
+    "category": "Office & School",
+    "level": "medium",
+    "hint": "a large folder with metal rings inside that hold punched pages",
+    "hintThai": "แฟ้มขนาดใหญ่ที่มีห่วงโลหะสำหรับเก็บกระดาษที่เจาะรูแล้ว"
+  },
+  {
+    "word": "desk lamp",
+    "thai": "โคมตั้งโต๊ะ",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a small light that sits on a desk to help you see while working",
+    "hintThai": "โคมไฟขนาดเล็กที่วางบนโต๊ะเพื่อให้แสงสว่างขณะทำงาน"
+  },
+  {
+    "word": "webcam",
+    "thai": "กล้องเว็บแคม",
+    "category": "Office & School",
+    "level": "medium",
+    "hint": "a small camera attached to a computer for video calls",
+    "hintThai": "กล้องขนาดเล็กที่ต่อกับคอมพิวเตอร์สำหรับวิดีโอคอล"
+  },
+  {
+    "word": "headset",
+    "thai": "หูฟังพร้อมไมค์",
+    "category": "Office & School",
+    "level": "medium",
+    "hint": "earphones combined with a microphone, used for calls or listening",
+    "hintThai": "หูฟังที่มีไมโครโฟนในตัวสำหรับโทรศัพท์หรือฟังเพลง"
+  },
+  {
+    "word": "mouse pad",
+    "thai": "แผ่นรองเมาส์",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a flat pad placed under a computer mouse so it moves smoothly",
+    "hintThai": "แผ่นรองที่วางใต้เมาส์คอมพิวเตอร์เพื่อให้เลื่อนได้คล่อง"
+  },
+  {
+    "word": "keyboard",
+    "thai": "แป้นพิมพ์",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a board with many keys used to type text into a computer",
+    "hintThai": "แผงที่มีปุ่มมากมายสำหรับพิมพ์ข้อความเข้าคอมพิวเตอร์"
+  },
+  {
+    "word": "monitor",
+    "thai": "จอคอมพิวเตอร์",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "the screen that shows what your computer is doing",
+    "hintThai": "จอแสดงผลที่แสดงสิ่งที่คอมพิวเตอร์กำลังทำ"
+  },
+  {
+    "word": "shredder",
+    "thai": "เครื่องทำลายเอกสาร",
+    "category": "Office & School",
+    "level": "medium",
+    "hint": "a machine that cuts paper into tiny strips so documents cannot be read",
+    "hintThai": "เครื่องที่ตัดกระดาษเป็นชิ้นเล็กๆเพื่อทำลายเอกสาร"
+  },
+  {
+    "word": "filing cabinet",
+    "thai": "ตู้เอกสาร",
+    "category": "Office & School",
+    "level": "medium",
+    "hint": "a tall metal furniture with drawers used to store paper files",
+    "hintThai": "เฟอร์นิเจอร์โลหะสูงที่มีลิ้นชักสำหรับเก็บแฟ้มเอกสาร"
+  },
+  {
+    "word": "extension cord",
+    "thai": "สายพ่วงไฟ",
+    "category": "Office & School",
+    "level": "medium",
+    "hint": "a cable with extra sockets that lets you plug in several devices far from the wall",
+    "hintThai": "สายไฟที่มีปลั๊กหลายช่องเพื่อต่ออุปกรณ์หลายตัวห่างจากผนัง"
+  },
+  {
+    "word": "USB hub",
+    "thai": "ยูเอสบีฮับ",
+    "category": "Office & School",
+    "level": "medium",
+    "hint": "a device that adds extra USB ports so you can connect many devices at once",
+    "hintThai": "อุปกรณ์ที่เพิ่มพอร์ต USB เพื่อต่ออุปกรณ์หลายตัวพร้อมกัน"
+  },
+  {
+    "word": "globe",
+    "thai": "ลูกโลก",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a round model of the Earth that spins on a stand",
+    "hintThai": "โมเดลโลกทรงกลมที่หมุนได้บนขาตั้ง"
+  },
+  {
+    "word": "scanner",
+    "thai": "เครื่องสแกน",
+    "category": "Office & School",
+    "level": "medium",
+    "hint": "a machine that converts a paper document into a digital image on your computer",
+    "hintThai": "เครื่องที่แปลงเอกสารกระดาษเป็นภาพดิจิทัลในคอมพิวเตอร์"
+  },
+  {
+    "word": "calendar",
+    "thai": "ปฏิทิน",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a chart showing all the days, weeks, and months of the year",
+    "hintThai": "แผนภูมิที่แสดงวัน สัปดาห์ และเดือนทั้งหมดของปี"
+  },
+  {
+    "word": "whiteboard eraser",
+    "thai": "แปรงลบกระดาน",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a soft block used to wipe writing off a whiteboard",
+    "hintThai": "ก้อนนุ่มสำหรับลบตัวเขียนออกจากไวท์บอร์ด"
+  },
+  {
+    "word": "name tag",
+    "thai": "ป้ายชื่อ",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a small badge worn on clothing to show who you are",
+    "hintThai": "ป้ายเล็กๆที่ติดบนเสื้อผ้าเพื่อแสดงตัวตน"
+  },
+  {
+    "word": "ID card",
+    "thai": "บัตรพนักงาน",
+    "category": "Office & School",
+    "level": "easy",
+    "hint": "a card you carry or swipe to prove who you are and enter a building",
+    "hintThai": "บัตรที่พกพาหรือแตะเพื่อยืนยันตัวตนและเข้าอาคาร"
+  },
+  {
+    "word": "Bangkok",
+    "thai": "กรุงเทพฯ",
+    "country": "Thailand",
+    "countryThai": "ประเทศไทย",
+    "category": "Cities",
+    "level": "easy",
+    "hint": "capital city known for temples and street food",
+    "hintThai": "เมืองหลวงที่มีวัดและอาหารริมทาง"
+  },
+  {
+    "word": "Tokyo",
+    "thai": "โตเกียว",
+    "country": "Japan",
+    "countryThai": "ประเทศญี่ปุ่น",
+    "category": "Cities",
+    "level": "easy",
+    "hint": "the world's largest city, famous for sushi and anime",
+    "hintThai": "เมืองใหญ่ที่สุดในโลก มีซูชิและอนิเมะ"
+  },
+  {
+    "word": "Paris",
+    "thai": "ปารีส",
+    "country": "France",
+    "countryThai": "ประเทศฝรั่งเศส",
+    "category": "Cities",
+    "level": "easy",
+    "hint": "city of love with a famous iron tower",
+    "hintThai": "เมืองแห่งความรัก มีหอคอยเหล็กชื่อดัง"
+  },
+  {
+    "word": "New York",
+    "thai": "นิวยอร์ก",
+    "country": "USA",
+    "countryThai": "สหรัฐอเมริกา",
+    "category": "Cities",
+    "level": "easy",
+    "hint": "city that never sleeps with a famous statue of liberty",
+    "hintThai": "เมืองที่ไม่มีวันหลับ มีเทพีเสรีภาพ"
+  },
+  {
+    "word": "London",
+    "thai": "ลอนดอน",
+    "country": "UK",
+    "countryThai": "สหราชอาณาจักร",
+    "category": "Cities",
+    "level": "easy",
+    "hint": "city with a famous clock tower and red buses",
+    "hintThai": "มีหอนาฬิกาบิ๊กเบนและรถบัสสีแดง"
+  },
+  {
+    "word": "Dubai",
+    "thai": "ดูไบ",
+    "country": "UAE",
+    "countryThai": "สหรัฐอาหรับเอมิเรตส์",
+    "category": "Cities",
+    "level": "easy",
+    "hint": "desert city famous for its skyscrapers and luxury",
+    "hintThai": "เมืองทะเลทรายที่มีตึกสูงและความหรูหรา"
+  },
+  {
+    "word": "Singapore",
+    "thai": "สิงคโปร์",
+    "country": "Singapore",
+    "countryThai": "ประเทศสิงคโปร์",
+    "category": "Cities",
+    "level": "easy",
+    "hint": "small island city-state known for being very clean",
+    "hintThai": "เกาะเล็กๆ ที่สะอาดมากที่สุดในโลก"
+  },
+  {
+    "word": "Sydney",
+    "thai": "ซิดนีย์",
+    "country": "Australia",
+    "countryThai": "ประเทศออสเตรเลีย",
+    "category": "Cities",
+    "level": "medium",
+    "hint": "city with a famous opera house by the harbor",
+    "hintThai": "มีโรงโอเปร่าชื่อดังริมอ่าว"
+  },
+  {
+    "word": "Rome",
+    "thai": "โรม",
+    "country": "Italy",
+    "countryThai": "ประเทศอิตาลี",
+    "category": "Cities",
+    "level": "medium",
+    "hint": "ancient city with the Colosseum and the Vatican",
+    "hintThai": "เมืองโบราณ มีโคลอสเซียมและวาติกัน"
+  },
+  {
+    "word": "Barcelona",
+    "thai": "บาร์เซโลนา",
+    "country": "Spain",
+    "countryThai": "ประเทศสเปน",
+    "category": "Cities",
+    "level": "medium",
+    "hint": "coastal city famous for Gaudi's architecture and football",
+    "hintThai": "เมืองชายฝั่งมีสถาปัตยกรรมของเกาดี"
+  },
+  {
+    "word": "Amsterdam",
+    "thai": "อัมสเตอร์ดัม",
+    "country": "Netherlands",
+    "countryThai": "ประเทศเนเธอร์แลนด์",
+    "category": "Cities",
+    "level": "medium",
+    "hint": "city of canals, bicycles, and tulips",
+    "hintThai": "เมืองคูน้ำ จักรยาน และดอกทิวลิป"
+  },
+  {
+    "word": "Istanbul",
+    "thai": "อิสตันบูล",
+    "country": "Turkey",
+    "countryThai": "ประเทศตุรกี",
+    "category": "Cities",
+    "level": "medium",
+    "hint": "city on two continents with grand mosques",
+    "hintThai": "เมืองที่ตั้งอยู่บนสองทวีป มีมัสยิดใหญ่"
+  },
+  {
+    "word": "Cairo",
+    "thai": "ไคโร",
+    "country": "Egypt",
+    "countryThai": "ประเทศอียิปต์",
+    "category": "Cities",
+    "level": "medium",
+    "hint": "city near the ancient pyramids",
+    "hintThai": "เมืองใกล้พีระมิดโบราณ"
+  },
+  {
+    "word": "Seoul",
+    "thai": "โซล",
+    "country": "South Korea",
+    "countryThai": "ประเทศเกาหลีใต้",
+    "category": "Cities",
+    "level": "medium",
+    "hint": "capital of K-pop and Korean BBQ",
+    "hintThai": "เมืองหลวงของเคป็อปและบาร์บีคิวเกาหลี"
+  },
+  {
+    "word": "Mumbai",
+    "thai": "มุมไบ",
+    "country": "India",
+    "countryThai": "ประเทศอินเดีย",
+    "category": "Cities",
+    "level": "medium",
+    "hint": "India's financial capital and Bollywood home",
+    "hintThai": "เมืองหลวงการเงินและบอลลีวูดของอินเดีย"
+  },
+  {
+    "word": "Chiang Mai",
+    "thai": "เชียงใหม่",
+    "country": "Thailand",
+    "countryThai": "ประเทศไทย",
+    "category": "Cities",
+    "level": "medium",
+    "hint": "northern Thai city famous for temples and mountains",
+    "hintThai": "เมืองเหนือของไทย มีวัดและภูเขา"
+  },
+  {
+    "word": "Kyoto",
+    "thai": "เกียวโต",
+    "country": "Japan",
+    "countryThai": "ประเทศญี่ปุ่น",
+    "category": "Cities",
+    "level": "medium",
+    "hint": "Japan's ancient capital full of temples and geishas",
+    "hintThai": "เมืองหลวงเก่าญี่ปุ่น มีวัดและเกอิชา"
+  },
+  {
+    "word": "Prague",
+    "thai": "ปราก",
+    "country": "Czech Republic",
+    "countryThai": "สาธารณรัฐเช็ก",
+    "category": "Cities",
+    "level": "hard",
+    "hint": "fairy-tale city with a medieval old town in Europe",
+    "hintThai": "เมืองแบบเทพนิยาย มีเมืองเก่ายุคกลาง"
+  },
+  {
+    "word": "Marrakech",
+    "thai": "มาร์ราเกช",
+    "country": "Morocco",
+    "countryThai": "ประเทศโมร็อกโก",
+    "category": "Cities",
+    "level": "hard",
+    "hint": "colorful maze-like market city in North Africa",
+    "hintThai": "เมืองตลาดสีสันสดใสในแอฟริกาเหนือ"
+  },
+  {
+    "word": "Bali",
+    "thai": "บาหลี",
+    "country": "Indonesia",
+    "countryThai": "ประเทศอินโดนีเซีย",
+    "category": "Cities",
+    "level": "easy",
+    "hint": "tropical island resort famous for rice terraces and temples",
+    "hintThai": "เกาะท่องเที่ยวมีนาขั้นบันไดและวัด"
+  }
 ]

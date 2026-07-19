@@ -75,6 +75,11 @@
             style="text-transform:uppercase;letter-spacing:.14em;font-size:1.1rem;font-weight:700;"
             onkeydown="if(event.key==='Enter')nameModalConfirm()">
         </div>
+        <div id="name-modal-pw-wrap" style="display:none;">
+          <label>Password</label>
+          <input id="inp-join-password" type="password" placeholder="Room password" maxlength="32" autocomplete="off"
+            style="font-size:1rem;" onkeydown="if(event.key==='Enter')nameModalConfirm()">
+        </div>
         <button class="btn btn-primary" onclick="nameModalConfirm()" style="margin-top:4px;" id="name-modal-confirm">Confirm</button>
         <button onclick="closeNameModal()" style="background:transparent;border:none;color:var(--muted);font-size:0.88rem;cursor:pointer;">Cancel</button>
       </div>
@@ -119,6 +124,19 @@
             <div style="font-size:0.8rem;color:var(--muted);margin-top:2px;">ทายสถานที่ — หาสปายในกลุ่ม</div>
           </div>
           <span style="margin-left:auto;font-size:0.75rem;background:#0ea5e9;color:#fff;border-radius:6px;padding:2px 8px;font-weight:600;">PLAY</span>
+        </div>
+      </div>
+
+      <!-- Ito -->
+      <div onclick="doCreate('ito')" style="cursor:pointer;border:1.5px solid #f97316;border-radius:14px;padding:16px 20px;background:rgba(249,115,22,.08);width:100%;max-width:360px;transition:background .15s;"
+        onmouseover="this.style.background='rgba(249,115,22,.16)'" onmouseout="this.style.background='rgba(249,115,22,.08)'">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <span style="font-size:2rem;">🔢</span>
+          <div>
+            <div style="font-size:1rem;font-weight:700;">Ito</div>
+            <div style="font-size:0.8rem;color:var(--muted);margin-top:2px;">เรียงเบอร์ตามหัวข้อ — ทำงานเป็นทีม</div>
+          </div>
+          <span style="margin-left:auto;font-size:0.75rem;background:#f97316;color:#fff;border-radius:6px;padding:2px 8px;font-weight:600;">PLAY</span>
         </div>
       </div>
 
@@ -269,6 +287,44 @@
         </div>
       </div>
 
+      <!-- Ito: host settings -->
+      <div id="l-ito-settings-host" style="display:none;" class="card">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;">⚙️ Settings</p>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <!-- Level -->
+          <div>
+            <label style="margin-bottom:10px;">📋 จำนวนใบต่อคน</label>
+            <div style="display:flex;gap:8px;">
+              <button id="ito-lvl-1" onclick="itoSetLevel(1)" class="pill" style="--pc:#fcd34d;--bc:#d97706;flex:1;">1 ใบ</button>
+              <button id="ito-lvl-2" onclick="itoSetLevel(2)" class="pill" style="--pc:#fcd34d;--bc:#d97706;flex:1;">2 ใบ</button>
+              <button id="ito-lvl-3" onclick="itoSetLevel(3)" class="pill" style="--pc:#fcd34d;--bc:#d97706;flex:1;">3 ใบ</button>
+            </div>
+          </div>
+          <!-- Hearts -->
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <label>❤️ หัวใจ</label>
+              <span id="ito-hearts-val" style="font-weight:700;color:#ef4444;font-size:1rem;">3</span>
+            </div>
+            <input id="sl-ito-hearts" type="range" min="1" max="10" step="1" value="3"
+              oninput="document.getElementById('ito-hearts-val').textContent=this.value"
+              onchange="socket.emit('ito_set_hearts',{hearts:parseInt(this.value)})"
+              style="width:100%;accent-color:#ef4444;">
+            <div class="muted" style="display:flex;justify-content:space-between;font-size:0.75rem;margin-top:2px;">
+              <span>1 (hard)</span><span>10 (easy)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ito: non-host settings view -->
+      <div class="card" id="l-ito-settings-view" style="display:none;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span class="muted" style="font-size:0.85rem;">Settings</span>
+          <div id="l-ito-setting-chips" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
+        </div>
+      </div>
+
       <!-- Scoreboard (hidden until round 1 done) -->
       <div id="l-scoreboard" style="display:none;">
         <p class="muted" style="font-size:0.8rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">🏆 Scoreboard</p>
@@ -285,11 +341,110 @@
       <div style="height:100px;"></div>
     </div>
 
+    <!-- ITO PLAYING ──────────────────────────────────────────────────────────── -->
+    <div id="s-ito-playing" class="screen" style="justify-content:flex-start;gap:16px;overflow-y:auto;padding-bottom:24px;">
+      <!-- Hearts -->
+      <div id="ito-pl-hearts" style="display:flex;justify-content:center;gap:6px;padding-top:8px;font-size:1.5rem;"></div>
+
+      <!-- Topic -->
+      <div class="card" style="text-align:center;background:rgba(249,115,22,.08);border:1.5px solid #f97316;">
+        <div style="font-size:0.72rem;color:#f97316;letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-bottom:4px;">หัวข้อ / Topic</div>
+        <div id="ito-pl-topic-th" style="font-size:1.4rem;font-weight:800;"></div>
+        <div id="ito-pl-topic-en" style="font-size:0.88rem;color:var(--muted);margin-top:2px;"></div>
+        <div id="ito-pl-scale" style="font-size:0.82rem;color:var(--muted);margin-top:6px;padding-top:6px;border-top:1px solid rgba(249,115,22,.2);"></div>
+      </div>
+
+      <!-- My cards -->
+      <div style="text-align:center;">
+        <div style="font-size:0.75rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;">เบอร์ของคุณ</div>
+        <div id="ito-pl-cards" style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;"></div>
+      </div>
+
+      <!-- Description -->
+      <div class="card" style="text-align:center;font-size:0.88rem;color:var(--muted);line-height:1.6;">
+        คุยกันได้เลย — ช่วยกันเรียงเบอร์จากน้อยไปมาก<br>
+        <span style="font-size:0.8rem;opacity:.7;">Discuss together and order numbers low → high</span>
+      </div>
+
+      <!-- Host: start reveal button -->
+      <div id="ito-pl-host-btn" style="display:none;width:100%;">
+        <button class="btn btn-primary" onclick="socket.emit('ito_start_reveal')" style="width:100%;font-size:1rem;">
+          เริ่มเฉลย →
+        </button>
+      </div>
+
+      <!-- Non-host waiting -->
+      <div id="ito-pl-wait" style="display:none;text-align:center;">
+        <p class="muted" style="font-size:0.88rem;">รอ host เริ่มเฉลย...</p>
+      </div>
+    </div>
+
+    <!-- ITO REVEAL ──────────────────────────────────────────────────────────── -->
+    <div id="s-ito-reveal" class="screen" style="justify-content:flex-start;gap:14px;overflow-y:auto;padding-bottom:24px;">
+      <!-- Hearts -->
+      <div id="ito-rv-hearts" style="display:flex;justify-content:center;gap:6px;padding-top:8px;font-size:1.5rem;"></div>
+
+      <!-- Topic reminder -->
+      <div style="text-align:center;padding:6px 0;">
+        <div style="font-size:0.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;">หัวข้อ</div>
+        <div id="ito-rv-topic" style="font-size:1rem;font-weight:700;margin-top:2px;"></div>
+        <div id="ito-rv-scale" style="font-size:0.8rem;color:var(--muted);margin-top:2px;"></div>
+      </div>
+
+      <!-- Progress -->
+      <div style="text-align:center;">
+        <span id="ito-rv-progress" class="muted" style="font-size:0.82rem;"></span>
+      </div>
+
+      <!-- Card grid — rendered by JS -->
+      <div id="ito-rv-grid" style="display:flex;flex-direction:column;gap:10px;width:100%;"></div>
+
+      <div id="ito-rv-host-hint" style="display:none;text-align:center;">
+        <p class="muted" style="font-size:0.82rem;">แตะไพ่เพื่อเปิดเฉลย</p>
+      </div>
+    </div>
+
+    <!-- ITO RESULT ───────────────────────────────────────────────────────────── -->
+    <div id="s-ito-result" class="screen" style="justify-content:center;gap:18px;">
+      <!-- Outcome -->
+      <div id="ito-res-icon" style="font-size:4rem;text-align:center;"></div>
+      <div id="ito-res-title" style="font-size:1.5rem;font-weight:800;text-align:center;"></div>
+      <div id="ito-res-subtitle" style="font-size:0.9rem;color:var(--muted);text-align:center;line-height:1.5;"></div>
+
+      <!-- Hearts remaining -->
+      <div id="ito-res-hearts" style="display:flex;justify-content:center;gap:6px;font-size:1.5rem;"></div>
+
+      <!-- Revealed order summary -->
+      <div class="card" style="width:100%;max-width:360px;">
+        <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;">ลำดับที่เปิด</p>
+        <div id="ito-res-sequence" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;"></div>
+      </div>
+
+      <!-- Host buttons -->
+      <div id="ito-res-host-btns" style="display:none;display:flex;flex-direction:column;gap:10px;width:100%;max-width:360px;">
+        <button id="ito-res-next-btn" class="btn btn-primary" onclick="socket.emit('ito_next_round')" style="width:100%;display:none;">
+          🔄 รอบต่อไป
+        </button>
+        <button class="btn" onclick="socket.emit('ito_back_lobby')"
+          style="width:100%;background:transparent;border:1.5px solid var(--border);color:var(--muted);">
+          ← กลับ Lobby
+        </button>
+      </div>
+    </div>
+
     <!-- REVEAL ───────────────────────────────────────────────────────────── -->
     <div id="s-reveal" class="screen" style="justify-content:center;gap:20px;">
       <p class="muted center">Your secret role — don't show anyone!</p>
 
-      <div id="rv-card"></div>
+      <!-- Role card with auto-hide overlay -->
+      <div style="position:relative;">
+        <div id="rv-card"></div>
+        <div id="rv-hide-overlay" onclick="revealRoleTemporarily()"
+          style="display:none;position:absolute;inset:0;border-radius:16px;background:rgba(15,15,26,0.92);backdrop-filter:blur(6px);cursor:pointer;display:none;flex-direction:column;align-items:center;justify-content:center;gap:6px;user-select:none;">
+          <div style="font-size:1.6rem;">👁️</div>
+          <div style="font-size:0.85rem;color:var(--muted);">แตะเพื่อดูบทบาท</div>
+        </div>
+      </div>
 
       <div id="rv-word" class="word-box"
         style="background:var(--card);border:1.5px solid var(--border);padding:12px 16px;position:relative;">
@@ -333,7 +488,7 @@
     </div>
 
     <!-- PLAYING ──────────────────────────────────────────────────────────── -->
-    <div id="s-playing" class="screen" style="justify-content:center;gap:20px;">
+    <div id="s-playing" class="screen" style="justify-content:flex-start;gap:16px;overflow-y:auto;padding-bottom:24px;">
       <div class="center" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
         <span class="chip" style="background:var(--accent);color:#fff;font-size:0.85rem;" id="pl-cat"></span>
         <span id="pl-lvl"></span>
@@ -347,6 +502,19 @@
       </div>
 
       <div class="card" id="pl-role-card"></div>
+
+      <!-- Master answer buttons (local only — reference for Master) -->
+      <div id="pl-answer-btns" style="display:none;flex-direction:column;gap:8px;">
+        <p class="muted" style="font-size:0.75rem;text-align:center;letter-spacing:.05em;">คำตอบ</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+          <button onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid var(--green);background:rgba(16,185,129,.12);color:var(--green);transition:opacity .15s;">✅ ใช่</button>
+          <button onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid #ef4444;background:rgba(239,68,68,.12);color:#ef4444;transition:opacity .15s;">❌ ไม่ใช่</button>
+          <button onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid var(--yellow);background:rgba(234,179,8,.12);color:var(--yellow);transition:opacity .15s;">🟡 ก้ำกึ่ง</button>
+          <button onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid var(--green);background:rgba(16,185,129,.08);color:var(--green);transition:opacity .15s;">☑️ ส่วนใหญ่ใช่</button>
+          <button onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid #3b82f6;background:rgba(59,130,246,.1);color:#3b82f6;transition:opacity .15s;">🔹 เป็นส่วนน้อย</button>
+          <button onclick="masterAnswer(this)" style="border-radius:10px;padding:11px 8px;font-size:0.9rem;cursor:pointer;border:1.5px solid var(--border);background:rgba(255,255,255,.04);color:var(--muted);transition:opacity .15s;">⬜ ไม่ต้องสนใจ</button>
+        </div>
+      </div>
 
       <div id="pl-master-btn" style="display:none;">
         <button class="btn btn-green" onclick="doWordGuessed()">✓ Word Guessed!</button>
@@ -570,6 +738,12 @@
       </div>
 
       <p class="muted center" id="sf-pl-nonspy-hint" style="display:none;font-size:0.85rem;">Ask yes/no questions — find the SPY!</p>
+
+      <!-- Who starts asking -->
+      <div id="sf-pl-starter" style="display:none;border-radius:12px;border:1.5px solid var(--accent);background:rgba(124,58,237,.1);padding:12px 16px;text-align:center;">
+        <div style="font-size:0.72rem;color:var(--muted);letter-spacing:.06em;margin-bottom:4px;">เริ่มถามก่อน</div>
+        <div id="sf-pl-starter-name" style="font-size:1.1rem;font-weight:700;color:var(--accent2);"></div>
+      </div>
     </div>
 
     <!-- SF VOTING ───────────────────────────────────────────────────────────── -->
@@ -1135,10 +1309,17 @@
     </div>
   </div>
 
+  <!-- Countdown overlay -->
+  <div id="countdown-overlay" style="display:none;position:fixed;inset:0;z-index:200;background:var(--bg);flex-direction:column;align-items:center;justify-content:center;gap:12px;">
+    <div id="countdown-num" style="font-size:7rem;font-weight:900;line-height:1;color:var(--accent2);transition:transform .15s,opacity .15s;"></div>
+    <div id="countdown-label" class="muted" style="font-size:1rem;letter-spacing:.1em;"></div>
+  </div>
+
   <!-- Scripts: shared first, then game-specific -->
   <script src="/js/app.js"></script>
   <script src="/js/games/insider.js"></script>
   <script src="/js/games/spyfall.js"></script>
+  <script src="/js/games/ito.js"></script>
 </body>
 
 </html>

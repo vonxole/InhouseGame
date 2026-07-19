@@ -3,10 +3,12 @@
 
 const socket = io();
 
-let myName  = '';
-let myRole  = null;
-let myWord  = null;
-let myThai  = null;
+let myName        = '';
+let myRole        = null;
+let myWord        = null;
+let myThai        = null;
+let myCountry     = null;
+let myCountryThai = null;
 let isHost  = false;
 let timerTotal       = 180;
 let verdictInterval  = null;
@@ -15,7 +17,7 @@ let suspenseInterval = null;
 // ── Self-reset (stuck recovery) ───────────────────────────────────────────────
 function selfReset() {
   clearSession();
-  myName = ''; myRole = null; myWord = null; myThai = null; isHost = false;
+  myName = ''; myRole = null; myWord = null; myThai = null; myCountry = null; myCountryThai = null; isHost = false;
   document.getElementById('host-gone-banner').style.display = 'none';
   show('s-home');
   socket.emit('leave_room');
@@ -79,7 +81,7 @@ async function floatLeave() {
   if (!ok) return;
   socket.emit('leave_room');
   clearSession();
-  myName = ''; myRole = null; myWord = null; myThai = null; isHost = false;
+  myName = ''; myRole = null; myWord = null; myThai = null; myCountry = null; myCountryThai = null; isHost = false;
   document.getElementById('host-gone-banner').style.display = 'none';
   document.getElementById('float-leave-btn').style.display = 'none';
   const footer = document.getElementById('l-sticky-footer');
@@ -137,36 +139,44 @@ socket.on('rejoin_failed', () => {
 });
 
 // ── Name Modal ────────────────────────────────────────────────────────────────
-let _nameModalMode  = null; // 'join-code' | 'join-room' | 'create'
-let _nameModalCode  = null; // pre-filled room code when joining a listed room
+let _nameModalMode        = null; // 'join-code' | 'join-room' | 'create'
+let _nameModalCode        = null; // pre-filled room code when joining a listed room
+let _nameModalHasPassword = false;
 
-function showNameModal(mode, code) {
-  _nameModalMode = mode;
-  _nameModalCode = code || null;
+function showNameModal(mode, code, hasPassword) {
+  _nameModalMode        = mode;
+  _nameModalCode        = code || null;
+  _nameModalHasPassword = !!hasPassword;
 
   const modal    = document.getElementById('name-modal');
   const title    = document.getElementById('name-modal-title');
   const codeWrap = document.getElementById('name-modal-code-wrap');
+  const pwWrap   = document.getElementById('name-modal-pw-wrap');
+  const pwInp    = document.getElementById('inp-room-password');
   const codeInp  = document.getElementById('inp-code');
   const nameInp  = document.getElementById('inp-name');
 
   // Pre-fill name from last session
   const saved = sessionStorage.getItem('insider_name');
   if (saved && !nameInp.value) nameInp.value = saved;
+  if (pwInp) pwInp.value = '';
 
   if (mode === 'create') {
     title.textContent      = '🏠 สร้างห้องใหม่';
     codeWrap.style.display = 'none';
+    if (pwWrap) pwWrap.style.display = 'none';
   } else if (code) {
     // Joining a specific room from list
     title.textContent      = '🚪 เข้าห้อง';
     codeWrap.style.display = 'none';
+    if (pwWrap) pwWrap.style.display = hasPassword ? 'block' : 'none';
     _nameModalMode = 'join-room';
   } else {
     // Manual code entry
     title.textContent      = '⌨️ เข้าด้วย Room Code';
     codeWrap.style.display = 'block';
     if (codeInp) codeInp.value = '';
+    if (pwWrap) pwWrap.style.display = 'none';
     _nameModalMode = 'join-code';
   }
 
@@ -190,7 +200,10 @@ function nameModalConfirm() {
     if (rnInput && !rnInput.value.trim()) rnInput.value = `${myName}'s Room`;
     show('s-pick-game');
   } else if (_nameModalMode === 'join-room') {
-    socket.emit('join_room', { code: _nameModalCode, name: myName });
+    const pw = _nameModalHasPassword
+      ? (document.getElementById('inp-join-password')?.value || '')
+      : '';
+    socket.emit('join_room', { code: _nameModalCode, name: myName, password: pw });
   } else {
     // join-code
     const code = document.getElementById('inp-code')?.value.trim().toUpperCase();
@@ -236,9 +249,9 @@ socket.on('rooms_list', (list) => {
   if (noRooms) noRooms.style.display = 'none';
   if (wrap)    wrap.style.display    = 'flex';
 
-  const gameLabel  = { insider: '🕵️ Insider', spyfall: '🕵️ Spyfall' };
-  const gameAccent = { insider: 'rgba(124,58,237,.2)', spyfall: 'rgba(14,165,233,.2)' };
-  const gameColor  = { insider: 'var(--accent2)', spyfall: '#0ea5e9' };
+  const gameLabel  = { insider: '🕵️ Insider', spyfall: '🕵️ Spyfall', ito: '🔢 Ito' };
+  const gameAccent = { insider: 'rgba(124,58,237,.2)', spyfall: 'rgba(14,165,233,.2)', ito: 'rgba(249,115,22,.15)' };
+  const gameColor  = { insider: 'var(--accent2)', spyfall: '#0ea5e9', ito: '#f97316' };
 
   el.innerHTML = list.map(r => {
     const label = gameLabel[r.gameType]  || '🎮';
@@ -263,16 +276,18 @@ socket.on('rooms_list', (list) => {
 });
 
 function doJoinRoom(code, hasPassword) {
-  showNameModal('join-room', code);
+  showNameModal('join-room', code, hasPassword);
 }
 
 // ── Room Update — route to game handler ───────────────────────────────────────
 socket.on('room_update', (room) => {
   if (myName) saveSession(room.code, myName);
 
-  myRole = room.role;
-  myWord = room.myWord || null;
-  myThai = room.myThai || null;
+  myRole        = room.role;
+  myWord        = room.myWord        || null;
+  myThai        = room.myThai        || null;
+  myCountry     = room.myCountry     || null;
+  myCountryThai = room.myCountryThai || null;
   if (room.state === 'reveal') console.log('[role received]', myName, '→', myRole, '| word:', myWord);
   isHost      = room.amHost === true;
   timerTotal  = room.totalTime || 180;
@@ -297,11 +312,23 @@ socket.on('room_update', (room) => {
   if (banner) banner.style.display = hostGone ? 'flex' : 'none';
 
   const gameType = room.gameType || 'insider';
-  if (gameType === 'insider')  handleInsiderRoomUpdate(room);
-  else if (gameType === 'spyfall') handleSpyfallRoomUpdate(room);
+  if (gameType === 'insider')       handleInsiderRoomUpdate(room);
+  else if (gameType === 'spyfall')  handleSpyfallRoomUpdate(room);
+  else if (gameType === 'ito')      handleItoRoomUpdate(room);
 });
 
 // ── Shared socket events ──────────────────────────────────────────────────────
+socket.on('room_closed', () => {
+  clearSession();
+  myName = ''; myRole = null; myWord = null; myThai = null; myCountry = null; myCountryThai = null; isHost = false;
+  document.getElementById('float-bar').style.display = 'none';
+  document.getElementById('host-gone-banner').style.display = 'none';
+  const footer = document.getElementById('l-sticky-footer');
+  if (footer) footer.style.display = 'none';
+  show('s-home');
+  toast('ห้องถูกปิดแล้ว — ไม่มีผู้เล่นเหลืออยู่');
+});
+
 socket.on('kicked', () => {
   clearSession();
   myName = '';

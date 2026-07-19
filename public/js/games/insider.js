@@ -145,6 +145,7 @@ function renderLobby(room) {
     btn.style.display = 'block';
     btn.disabled      = need > 0;
     btn.textContent   = need > 0 ? `Need ${need} more player(s)` : 'Start Game 🎮';
+    btn.onclick       = doStart;
     document.getElementById('l-footer-msg').textContent = '';
     syncPills('fg-lvl', room.filterLevels || []);
     syncSlider('sl-play',    'play-val',    room.playTime    || 180);

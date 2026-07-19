@@ -45,6 +45,18 @@ function createRoom(hostId, hostName, gameType = 'insider', roomName = '') {
       locations: [], realLocation: null, spyId: null,
       accusedId: null, spyGuess: null, outcome: null,
     };
+  } else if (gameType === 'ito') {
+    rooms[code] = {
+      ...base,
+      itoLevel:        1,
+      itoMaxHearts:    3,
+      itoHearts:       3,
+      itoTopic:        null,
+      itoRevealedCards: [],
+      itoTotalCards:   0,
+      itoMistakes:     0,
+      itoGameOver:     false,
+    };
   } else {
     // insider (default)
     rooms[code] = {
@@ -88,6 +100,7 @@ function broadcastRoom(room) {
 
 gameModules.insider  = require('./games/insider')(io, rooms, { getRoom, pickWord, broadcastRoomList });
 gameModules.spyfall  = require('./games/spyfall')(io, rooms, { getRoom, broadcastRoomList });
+gameModules.ito      = require('./games/ito')(io, rooms, { getRoom });
 
 // ── Socket Events ─────────────────────────────────────────────────────────────
 io.on('connection', (socket) => {

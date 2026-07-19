@@ -222,7 +222,7 @@ module.exports = function createInsiderGame(io, rooms, { getRoom, pickWord, broa
 
     socket.on('start_game', () => {
       const room = getRoom(socket.id);
-      if (!room || room.hostId !== socket.id) return;
+      if (!room || room.hostId !== socket.id || room.gameType !== 'insider') return;
       if (room.players.length < 4) return socket.emit('error', 'Need at least 4 players');
       const picked = pickWord(room.filterCategories, room.filterLevels);
       room.word         = picked.word;
