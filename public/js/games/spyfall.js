@@ -5,6 +5,7 @@
 let _sfPrevState  = null;
 let _sfTimerTotal = 300;
 let _sfLocations  = [];
+let _sfHideTimer  = null;
 
 // ── Entry point ───────────────────────────────────────────────────────────────
 function handleSpyfallRoomUpdate(room) {
@@ -121,6 +122,21 @@ function sfRenderLobby(room) {
 function sfKickPlayer(playerId) { socket.emit('kick_player', { playerId }); }
 function doSfStart()            { socket.emit('sf_start'); }
 
+// ── Role hide helpers ──────────────────────────────────────────────────────────
+function sfScheduleRoleHide(ms) {
+  if (_sfHideTimer) clearTimeout(_sfHideTimer);
+  _sfHideTimer = setTimeout(() => {
+    const overlay = document.getElementById('sf-pl-hide-overlay');
+    if (overlay) overlay.style.display = 'flex';
+  }, ms);
+}
+
+function sfRevealRoleTemporarily() {
+  const overlay = document.getElementById('sf-pl-hide-overlay');
+  if (overlay) overlay.style.display = 'none';
+  sfScheduleRoleHide(3000);
+}
+
 // ── Preview ───────────────────────────────────────────────────────────────────
 function sfRenderPreview(room) {
   show('s-sf-preview');
@@ -203,6 +219,7 @@ function sfReady() {
 
 // ── Playing ───────────────────────────────────────────────────────────────────
 function sfRenderPlaying(room) {
+  const isFirstEntry = _sfPrevState !== 'playing';
   show('s-sf-playing');
   const iAmSpy = room.myRole === 'spy';
 
@@ -239,6 +256,17 @@ function sfRenderPlaying(room) {
       : `${room.startingPlayerName} 🎤`;
   } else if (starterEl) {
     starterEl.style.display = 'none';
+  }
+
+  // Hide overlay — non-spy only, reset on first entry
+  const sfOverlay = document.getElementById('sf-pl-hide-overlay');
+  if (sfOverlay) {
+    if (!iAmSpy && isFirstEntry) {
+      sfOverlay.style.display = 'none';
+      sfScheduleRoleHide(3000);
+    } else if (iAmSpy) {
+      sfOverlay.style.display = 'none'; // spy has no secret card, keep clear
+    }
   }
 
   sfUpdateTimer(room.timeLeft ?? _sfTimerTotal);

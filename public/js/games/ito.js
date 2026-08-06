@@ -90,8 +90,10 @@ function itoRenderLobby(room) {
   // Start button
   const btn = document.getElementById('btn-start');
   if (btn) {
+    const need = 2 - room.players.length;
     btn.style.display = isHost ? 'block' : 'none';
-    btn.textContent   = '▶ เริ่มเกม';
+    btn.disabled      = need > 0;
+    btn.textContent   = need > 0 ? `Need ${need} more player(s)` : '▶ เริ่มเกม';
     btn.onclick       = () => socket.emit('ito_start');
   }
 }
