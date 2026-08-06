@@ -49,6 +49,7 @@ module.exports = function mindModule(io, rooms, helpers) {
       lastCard:      room.mindLastCard,
       pileTop:       room.mindPile.slice(-5),
       mistakeCards:  room.mindMistakeCards || [],
+      starDiscards:  room.mindStarDiscards || [],
       gameOver:      room.mindGameOver  || false,
       won:           room.mindWon       || false,
       reward:        room.mindReward    || null,  // 'life' | 'star' | null
@@ -176,16 +177,15 @@ module.exports = function mindModule(io, rooms, helpers) {
           room.mindGameOver = true;
           room.state        = 'result';
         } else {
-          room.state = 'mistake';
+          // Stay on playing screen — show mistake inline, clear after 3s
           const code = room.code;
           setTimeout(() => {
             const r = rooms[code];
-            if (!r || r.state !== 'mistake') return;
+            if (!r || r.state !== 'playing') return;
             r.mindMistakeCards = [];
             checkAfterPlay(r);
-            if (r.state === 'mistake') r.state = 'playing';
             broadcastRoom(r);
-          }, 3500);
+          }, 3000);
         }
       } else {
         room.mindMistakeCards = [];
@@ -204,14 +204,19 @@ module.exports = function mindModule(io, rooms, helpers) {
       if (room.mindStars <= 0) return;
 
       room.mindStars--;
+
+      // Capture what each player discards before removing
+      const starDiscards = [];
       for (const p of room.players) {
         if (p.mindCards?.length > 0) {
-          p.mindCards = p.mindCards.slice(1); // discard lowest (sorted, so index 0)
+          starDiscards.push({ number: p.mindCards[0], playerName: p.name });
+          p.mindCards = p.mindCards.slice(1);
         }
       }
+      room.mindStarDiscards = [...(room.mindStarDiscards || []), ...starDiscards].sort((a, b) => a.number - b.number);
+
       checkAfterPlay(room);
-      if (room.state === 'playing') broadcastRoom(room);
-      else broadcastRoom(room);
+      broadcastRoom(room);
     });
 
     socket.on('mind_next_level', () => {
@@ -224,6 +229,7 @@ module.exports = function mindModule(io, rooms, helpers) {
       room.mindPile         = [];
       room.mindLastCard     = 0;
       room.mindMistakeCards = [];
+      room.mindStarDiscards = [];
       dealCards(room);
       room.state = 'playing';
       broadcastRoom(room);

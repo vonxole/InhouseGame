@@ -54,6 +54,7 @@ function createRoom(hostId, hostName, gameType = 'insider', roomName = '') {
       mindLives:        3,
       mindStars:        0,
       mindReward:       null,
+      mindStarDiscards: [],
       mindPile:         [],
       mindLastCard:     0,
       mindMistakeCards: [],

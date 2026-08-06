@@ -407,6 +407,12 @@
         <span style="font-size:0.75rem;opacity:.7;">No talking — feel the moment, then play</span>
       </div>
 
+      <!-- Inline mistake banner -->
+      <div id="mind-pl-mistake" style="display:none;background:rgba(239,68,68,.12);border:1.5px solid #ef4444;border-radius:10px;padding:10px 14px;font-size:0.82rem;color:#ef4444;line-height:1.5;"></div>
+
+      <!-- Star discard banner -->
+      <div id="mind-pl-star-info" style="display:none;background:rgba(245,158,11,.1);border:1.5px solid #f59e0b;border-radius:10px;padding:10px 14px;font-size:0.82rem;color:#f59e0b;line-height:1.5;"></div>
+
       <!-- Throw star button (host only) -->
       <div id="mind-pl-star-btn" style="display:none;text-align:center;">
         <button onclick="socket.emit('mind_throw_star')"

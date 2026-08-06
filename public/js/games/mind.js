@@ -121,6 +121,36 @@ function mindRenderPlaying(room) {
   document.getElementById('mind-pl-stars').innerHTML = mindStars(room.stars);
   document.getElementById('mind-pl-level').textContent = `Level ${room.level} / ${room.maxLevel}`;
 
+  // Star discard banner
+  const starInfoEl  = document.getElementById('mind-pl-star-info');
+  const starDiscards = room.starDiscards || [];
+  if (starInfoEl) {
+    if (starDiscards.length > 0) {
+      const cards = starDiscards.map(c =>
+        `<span style="background:rgba(245,158,11,.2);border:1px solid #f59e0b;border-radius:6px;padding:2px 8px;font-weight:700;">${c.number}</span> (${c.playerName})`
+      ).join(', ');
+      starInfoEl.style.display = 'block';
+      starInfoEl.innerHTML = `⭐ ทิ้งไพ่: ${cards}`;
+    } else {
+      starInfoEl.style.display = 'none';
+    }
+  }
+
+  // Inline mistake banner
+  const mistakeEl = document.getElementById('mind-pl-mistake');
+  const skipped   = room.mistakeCards || [];
+  if (mistakeEl) {
+    if (skipped.length > 0) {
+      const cards = skipped.map(c =>
+        `<span style="background:rgba(239,68,68,.2);border:1px solid #ef4444;border-radius:6px;padding:2px 8px;font-weight:700;">${c.number}</span> (${c.playerName})`
+      ).join(', ');
+      mistakeEl.style.display = 'block';
+      mistakeEl.innerHTML = `⚠️ ลงผิดลำดับ! ทิ้งไพ่: ${cards} — เสีย ❤️`;
+    } else {
+      mistakeEl.style.display = 'none';
+    }
+  }
+
   // Throw star button — host only, when stars available
   const starBtn = document.getElementById('mind-pl-star-btn');
   if (starBtn) starBtn.style.display = (isHost && room.stars > 0) ? 'block' : 'none';
