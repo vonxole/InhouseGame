@@ -94,7 +94,7 @@ module.exports = function itoModule(io, rooms, helpers) {
       sock.emit('room_update', {
         ...base,
         myCards: p.itoCards || [],
-        isHost:  p.id === room.hostId,
+        amHost:  p.id === room.hostId,
       });
     }
   }

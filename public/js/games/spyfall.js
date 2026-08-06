@@ -224,7 +224,8 @@ function sfRenderPlaying(room) {
   const iAmSpy = room.myRole === 'spy';
 
   document.getElementById('sf-pl-nonspy-card').style.display  = iAmSpy ? 'none' : 'block';
-  document.getElementById('sf-pl-spy-card').style.display     = iAmSpy ? 'block' : 'none';
+  document.getElementById('sf-pl-spy-card').style.display     = 'block'; // always visible
+  document.getElementById('sf-pl-spy-header').style.display   = iAmSpy ? 'flex' : 'none';
   document.getElementById('sf-spy-guess-btn').style.display   = iAmSpy ? 'block' : 'none';
   document.getElementById('sf-pl-nonspy-hint').style.display  = iAmSpy ? 'none' : 'block';
 
@@ -237,14 +238,13 @@ function sfRenderPlaying(room) {
       '👤 ' + roleName + (roleThai ? ` (${roleThai})` : '');
   }
 
-  if (iAmSpy) {
-    const locs = room.locations || [];
-    document.getElementById('sf-pl-spy-locations').innerHTML = locs.map(loc =>
-      `<div style="font-size:0.78rem;background:rgba(255,255,255,.06);border-radius:6px;padding:4px 8px;">
-        📍 ${loc.name}
-      </div>`
-    ).join('');
-  }
+  // Always populate location list for everyone
+  const locs = room.locations || [];
+  document.getElementById('sf-pl-spy-locations').innerHTML = locs.map(loc =>
+    `<div style="font-size:0.78rem;background:rgba(255,255,255,.06);border-radius:6px;padding:4px 8px;">
+      📍 ${loc.name}
+    </div>`
+  ).join('');
 
   // Show who starts asking
   const starterEl     = document.getElementById('sf-pl-starter');
@@ -258,14 +258,13 @@ function sfRenderPlaying(room) {
     starterEl.style.display = 'none';
   }
 
-  // Hide overlay — non-spy only, reset on first entry
+  // Hide overlay — non-spy only, hide card immediately on first entry
   const sfOverlay = document.getElementById('sf-pl-hide-overlay');
   if (sfOverlay) {
     if (!iAmSpy && isFirstEntry) {
-      sfOverlay.style.display = 'none';
-      sfScheduleRoleHide(3000);
+      sfOverlay.style.display = 'flex'; // hidden from the start — tap to reveal
     } else if (iAmSpy) {
-      sfOverlay.style.display = 'none'; // spy has no secret card, keep clear
+      sfOverlay.style.display = 'none'; // spy has no secret card
     }
   }
 

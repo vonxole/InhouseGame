@@ -858,15 +858,16 @@
         </div>
       </div>
 
-      <!-- Spy: location list + guess button -->
+      <!-- Spy: location list + guess button (card shown to all; spy header only for spy) -->
       <div id="sf-pl-spy-card" style="display:none;" class="card">
-        <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px;">
+        <div id="sf-pl-spy-header" style="display:none;gap:12px;align-items:center;margin-bottom:12px;">
           <span style="font-size:1.8rem;">🕵️</span>
           <div>
             <div style="font-weight:700;">SPY</div>
             <div class="muted" style="font-size:0.82rem;">ฟังคำถาม แล้วทาย location</div>
           </div>
         </div>
+        <p style="font-size:0.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:8px;">Possible locations</p>
         <div id="sf-pl-spy-locations" style="display:grid;grid-template-columns:1fr 1fr;gap:5px;"></div>
       </div>
 

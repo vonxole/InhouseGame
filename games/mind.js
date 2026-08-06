@@ -54,7 +54,7 @@ module.exports = function mindModule(io, rooms, helpers) {
       sock.emit('room_update', {
         ...base,
         myCards: p.mindCards || [],
-        isHost:  p.id === room.hostId,
+        amHost:  p.id === room.hostId,
       });
     }
   }
