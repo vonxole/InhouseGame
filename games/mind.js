@@ -179,15 +179,24 @@ module.exports = function mindModule(io, rooms, helpers) {
           room.mindGameOver = true;
           room.state        = 'result';
         } else {
-          // Stay on playing screen — show mistake inline, clear after 3s
+          const totalLeft = room.players.reduce((s, p) => s + (p.mindCards?.length || 0), 0);
           const code = room.code;
           setTimeout(() => {
             const r = rooms[code];
             if (!r || r.state !== 'playing') return;
             r.mindMistakeCards = [];
-            checkAfterPlay(r);
+            if (totalLeft === 0) {
+              // All cards gone via mistake — go to level_clear (no reward), host must advance
+              if (r.mindLevel >= r.mindMaxLevel) {
+                r.mindWon = true;
+                r.state = 'result';
+              } else {
+                r.mindReward = null;
+                r.state = 'level_clear';
+              }
+            }
             broadcastRoom(r);
-          }, 3000);
+          }, 2500);
         }
       } else {
         room.mindMistakeCards = [];
