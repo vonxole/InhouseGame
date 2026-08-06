@@ -159,6 +159,14 @@ module.exports = function itoModule(io, rooms, helpers) {
       );
       if (already) return;
 
+      // Must reveal in order — previous index must be revealed first
+      if (cardIndex > 0) {
+        const prevRevealed = room.itoRevealedCards.some(
+          c => c.playerId === playerId && c.cardIndex === cardIndex - 1
+        );
+        if (!prevRevealed) return;
+      }
+
       const number = player.itoCards[cardIndex];
       if (number === undefined) return;
 

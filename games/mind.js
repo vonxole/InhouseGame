@@ -115,7 +115,7 @@ module.exports = function mindModule(io, rooms, helpers) {
     socket.on('mind_start', () => {
       const room = getRoom(socket.id);
       if (!room || room.gameType !== 'mind' || room.hostId !== socket.id) return;
-      if (room.state !== 'lobby') return;
+      if (room.state !== 'lobby' && room.state !== 'result') return;
       const active = room.players.filter(p => !p.disconnected);
       if (active.length < 2) return;
 
@@ -128,10 +128,11 @@ module.exports = function mindModule(io, rooms, helpers) {
 
       room.mindLevel        = 1;
       room.mindLives        = room.mindMaxLives;
-      room.mindStars        = 1;   // always start with 1 throwing star
+      room.mindStars        = 1;
       room.mindPile         = [];
       room.mindLastCard     = 0;
       room.mindMistakeCards = [];
+      room.mindStarDiscards = [];
       room.mindReward       = null;
       room.mindGameOver     = false;
       room.mindWon          = false;
@@ -172,7 +173,8 @@ module.exports = function mindModule(io, rooms, helpers) {
       room.mindMistakeCards = skipped.sort((a, b) => a.number - b.number);
 
       if (isMistake) {
-        room.mindLives--;
+        const livesLost = skipped.length > 0 ? skipped.length : 1;
+        room.mindLives -= livesLost;
         if (room.mindLives <= 0) {
           room.mindGameOver = true;
           room.state        = 'result';
