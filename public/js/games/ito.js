@@ -157,6 +157,28 @@ function itoRenderReveal(room) {
   document.getElementById('ito-rv-topic').textContent = `${topic.th || ''} / ${topic.en || ''}`;
   document.getElementById('ito-rv-scale').textContent = `${topic.scale || ''} · ${topic.scaleEn || ''}`;
 
+  // My own cards — show all, dim ones already revealed
+  const myId = room.players?.find(p => p.name === myName)?.id;
+  const myCards = room.myCards || [];
+  const myRevealedIndices = new Set(
+    (room.revealedCards || [])
+      .filter(c => c.playerId === myId)
+      .map(c => c.cardIndex)
+  );
+  document.getElementById('ito-rv-my-cards').innerHTML = myCards.map((n, i) => {
+    const done = myRevealedIndices.has(i);
+    return `<div style="
+      width:52px;height:72px;border-radius:10px;
+      background:${done ? 'rgba(249,115,22,.12)' : 'linear-gradient(135deg,#f97316,#ea580c)'};
+      border:${done ? '1.5px solid rgba(249,115,22,.3)' : 'none'};
+      color:${done ? 'rgba(249,115,22,.4)' : '#fff'};
+      display:flex;align-items:center;justify-content:center;
+      font-size:1.5rem;font-weight:900;
+      box-shadow:${done ? 'none' : '0 3px 12px rgba(249,115,22,.35)'};
+      text-decoration:${done ? 'line-through' : 'none'};
+    ">${n}</div>`;
+  }).join('');
+
   // Progress
   const revealed = room.revealedCards?.length || 0;
   document.getElementById('ito-rv-progress').textContent =

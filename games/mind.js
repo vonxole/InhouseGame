@@ -2,6 +2,10 @@
 module.exports = function mindModule(io, rooms, helpers) {
   const { getRoom } = helpers;
 
+  // ── Reward schedule (real rules) ──────────────────────────────────────────────
+  // After completing a level, team receives a reward from the level card
+  const LEVEL_REWARDS = { 2: 'star', 3: 'life', 5: 'star', 6: 'life', 8: 'star', 9: 'life' };
+
   // ── Card dealing ──────────────────────────────────────────────────────────────
   function dealCards(room) {
     const active     = room.players.filter(p => !p.disconnected);
@@ -39,13 +43,15 @@ module.exports = function mindModule(io, rooms, helpers) {
       })),
       lives:         room.mindLives,
       maxLives:      room.mindMaxLives,
+      stars:         room.mindStars,
       level:         room.mindLevel,
       maxLevel:      room.mindMaxLevel,
       lastCard:      room.mindLastCard,
-      pileTop:       room.mindPile.slice(-5),   // last 5 for display
+      pileTop:       room.mindPile.slice(-5),
       mistakeCards:  room.mindMistakeCards || [],
       gameOver:      room.mindGameOver  || false,
       won:           room.mindWon       || false,
+      reward:        room.mindReward    || null,  // 'life' | 'star' | null
     };
 
     for (const p of room.players) {
@@ -67,6 +73,17 @@ module.exports = function mindModule(io, rooms, helpers) {
         room.mindWon  = true;
         room.state    = 'result';
       } else {
+        // Apply level reward per real rules
+        const reward = LEVEL_REWARDS[room.mindLevel] || null;
+        if (reward === 'life' && room.mindLives < room.mindMaxLives) {
+          room.mindLives++;
+          room.mindReward = 'life';
+        } else if (reward === 'star' && room.mindStars < 3) {
+          room.mindStars++;
+          room.mindReward = 'star';
+        } else {
+          room.mindReward = null;
+        }
         room.state = 'level_clear';
       }
     }
@@ -98,13 +115,23 @@ module.exports = function mindModule(io, rooms, helpers) {
       const room = getRoom(socket.id);
       if (!room || room.gameType !== 'mind' || room.hostId !== socket.id) return;
       if (room.state !== 'lobby') return;
-      if (room.players.filter(p => !p.disconnected).length < 2) return;
+      const active = room.players.filter(p => !p.disconnected);
+      if (active.length < 2) return;
+
+      // Auto-set based on player count (real rules)
+      const n = active.length;
+      const autoLives  = n <= 2 ? 2 : n === 3 ? 3 : Math.min(n, 5);
+      const autoLevels = n <= 2 ? 12 : n === 3 ? 10 : 8;
+      room.mindMaxLives  = autoLives;
+      room.mindMaxLevel  = autoLevels;
 
       room.mindLevel        = 1;
       room.mindLives        = room.mindMaxLives;
+      room.mindStars        = 1;   // always start with 1 throwing star
       room.mindPile         = [];
       room.mindLastCard     = 0;
       room.mindMistakeCards = [];
+      room.mindReward       = null;
       room.mindGameOver     = false;
       room.mindWon          = false;
       dealCards(room);
@@ -121,45 +148,70 @@ module.exports = function mindModule(io, rooms, helpers) {
 
       const card = player.mindCards[0]; // always lowest (sorted)
 
-      if (card > room.mindLastCard) {
-        // ✅ Valid play
-        player.mindCards.shift();
-        room.mindPile.push({ number: card, playerName: player.name });
-        room.mindLastCard = card;
-        checkAfterPlay(room);
-      } else {
-        // ❌ Mistake — reveal all cards lower than this card across all players
-        const revealed = [];
-        for (const p of room.players) {
-          const lower = (p.mindCards || []).filter(c => c < card);
-          lower.forEach(c => revealed.push({ number: c, playerName: p.name }));
-          p.mindCards = (p.mindCards || []).filter(c => c >= card);
-        }
-        // Play the mistake card (goes to pile marked as mistake)
-        player.mindCards = player.mindCards.filter(c => c !== card);
-        room.mindPile.push({ number: card, playerName: player.name, mistake: true });
-        room.mindLastCard     = card;
-        room.mindMistakeCards = revealed.sort((a, b) => a.number - b.number);
-        room.mindLives--;
+      // Collect skipped cards from OTHER players lower than this card
+      const skipped = [];
+      for (const p of room.players) {
+        if (p.id === socket.id) continue;
+        const lower = (p.mindCards || []).filter(c => c < card);
+        lower.forEach(c => skipped.push({ number: c, playerName: p.name }));
+        p.mindCards = (p.mindCards || []).filter(c => c >= card);
+      }
 
+      const outOfOrder = card <= room.mindLastCard;
+      const isMistake  = outOfOrder || skipped.length > 0;
+
+      if (outOfOrder) {
+        player.mindCards = player.mindCards.filter(c => c !== card);
+      } else {
+        player.mindCards.shift();
+      }
+
+      room.mindPile.push({ number: card, playerName: player.name, mistake: isMistake });
+      room.mindLastCard     = card;
+      room.mindMistakeCards = skipped.sort((a, b) => a.number - b.number);
+
+      if (isMistake) {
+        room.mindLives--;
         if (room.mindLives <= 0) {
           room.mindGameOver = true;
           room.state        = 'result';
         } else {
           room.state = 'mistake';
-          // Auto-resume playing after 3.5s
           const code = room.code;
           setTimeout(() => {
             const r = rooms[code];
             if (!r || r.state !== 'mistake') return;
             r.mindMistakeCards = [];
             checkAfterPlay(r);
-            if (r.state === 'mistake') r.state = 'playing'; // still going
+            if (r.state === 'mistake') r.state = 'playing';
             broadcastRoom(r);
           }, 3500);
         }
+      } else {
+        room.mindMistakeCards = [];
+        checkAfterPlay(room);
       }
+
       broadcastRoom(room);
+    });
+
+    // Throw a star — host activates after group agrees verbally
+    // Each active player discards their lowest card face-up (not on pile)
+    socket.on('mind_throw_star', () => {
+      const room = getRoom(socket.id);
+      if (!room || room.gameType !== 'mind' || room.state !== 'playing') return;
+      if (room.hostId !== socket.id) return;
+      if (room.mindStars <= 0) return;
+
+      room.mindStars--;
+      for (const p of room.players) {
+        if (p.mindCards?.length > 0) {
+          p.mindCards = p.mindCards.slice(1); // discard lowest (sorted, so index 0)
+        }
+      }
+      checkAfterPlay(room);
+      if (room.state === 'playing') broadcastRoom(room);
+      else broadcastRoom(room);
     });
 
     socket.on('mind_next_level', () => {
@@ -168,6 +220,7 @@ module.exports = function mindModule(io, rooms, helpers) {
       if (room.state !== 'level_clear') return;
 
       room.mindLevel++;
+      room.mindReward       = null;
       room.mindPile         = [];
       room.mindLastCard     = 0;
       room.mindMistakeCards = [];
@@ -183,8 +236,10 @@ module.exports = function mindModule(io, rooms, helpers) {
       room.mindPile         = [];
       room.mindLastCard     = 0;
       room.mindMistakeCards = [];
+      room.mindReward       = null;
       room.mindGameOver     = false;
       room.mindWon          = false;
+      room.mindStars        = 0;
       for (const p of room.players) p.mindCards = [];
       broadcastRoom(room);
     });

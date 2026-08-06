@@ -19,6 +19,13 @@ function mindHearts(lives, maxLives) {
   return h;
 }
 
+function mindStars(stars) {
+  if (!stars) return '';
+  let h = '';
+  for (let i = 0; i < stars; i++) h += '⭐';
+  return h;
+}
+
 function mindCard(n, dim = false) {
   return `<div style="
     width:56px;height:78px;border-radius:10px;
@@ -60,22 +67,39 @@ function mindRenderLobby(room) {
   const rulesBtnWrap = document.getElementById('l-rules-btn');
   if (rulesBtnWrap) rulesBtnWrap.style.display = 'none';
 
+  // Auto-values based on player count (real rules)
+  const n = room.players.length;
+  const autoLives  = n <= 2 ? 2 : n === 3 ? 3 : Math.min(n, 5);
+  const autoLevels = n <= 2 ? 12 : n === 3 ? 10 : 8;
+
   if (isHost) {
     document.getElementById('l-mind-settings-host').style.display = 'block';
     document.getElementById('l-password-host').style.display      = 'block';
 
-    const ml = room.maxLevel || 5;
-    const lv = room.maxLives || 3;
-    const slML = document.getElementById('sl-mind-maxlv');
-    const slLV = document.getElementById('sl-mind-lives');
-    if (slML) { slML.value = ml; document.getElementById('mind-maxlv-val').textContent = ml; }
-    if (slLV) { slLV.value = lv; document.getElementById('mind-lives-val').textContent = lv; }
+    const infoEl = document.getElementById('l-mind-auto-info');
+    if (infoEl) infoEl.innerHTML = `
+      <div style="display:flex;justify-content:space-between;">
+        <span style="color:var(--muted);">👥 ผู้เล่น</span>
+        <span style="font-weight:600;">${n} คน</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;">
+        <span style="color:var(--muted);">❤️ ชีวิต</span>
+        <span style="font-weight:600;color:#ef4444;">${autoLives}</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;">
+        <span style="color:var(--muted);">🏆 Levels</span>
+        <span style="font-weight:600;color:#06b6d4;">${autoLevels}</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;">
+        <span style="color:var(--muted);">⭐ Throwing Stars</span>
+        <span style="font-weight:600;color:#f59e0b;">1</span>
+      </div>`;
   } else {
     document.getElementById('l-mind-settings-view').style.display = 'block';
     const chips = document.getElementById('l-mind-setting-chips');
     if (chips) chips.innerHTML =
-      `<span style="font-size:.75rem;background:rgba(6,182,212,.15);color:#06b6d4;border-radius:6px;padding:2px 8px;font-weight:600;">${room.maxLevel || 5} Levels</span>` +
-      `<span style="font-size:.75rem;background:rgba(239,68,68,.15);color:#ef4444;border-radius:6px;padding:2px 8px;font-weight:600;">${room.maxLives || 3} ❤️</span>`;
+      `<span style="font-size:.75rem;background:rgba(6,182,212,.15);color:#06b6d4;border-radius:6px;padding:2px 8px;font-weight:600;">${autoLevels} Levels</span>` +
+      `<span style="font-size:.75rem;background:rgba(239,68,68,.15);color:#ef4444;border-radius:6px;padding:2px 8px;font-weight:600;">${autoLives} ❤️</span>`;
   }
 
   const btn = document.getElementById('btn-start');
@@ -92,9 +116,14 @@ function mindRenderLobby(room) {
 function mindRenderPlaying(room) {
   show('s-mind-playing');
 
-  // Lives + level
+  // Lives, stars + level
   document.getElementById('mind-pl-lives').innerHTML = mindHearts(room.lives, room.maxLives);
+  document.getElementById('mind-pl-stars').innerHTML = mindStars(room.stars);
   document.getElementById('mind-pl-level').textContent = `Level ${room.level} / ${room.maxLevel}`;
+
+  // Throw star button — host only, when stars available
+  const starBtn = document.getElementById('mind-pl-star-btn');
+  if (starBtn) starBtn.style.display = (isHost && room.stars > 0) ? 'block' : 'none';
 
   // Last card
   const lastEl   = document.getElementById('mind-pl-last');
@@ -164,7 +193,25 @@ function mindRenderLevelClear(room) {
 
   document.getElementById('mind-lc-title').textContent =
     `Level ${room.level} ผ่านแล้ว! 🎉`;
+
+  // Reward banner
+  const rewardEl = document.getElementById('mind-lc-reward');
+  if (room.reward === 'life') {
+    rewardEl.style.display    = 'block';
+    rewardEl.style.background = 'rgba(239,68,68,.15)';
+    rewardEl.style.color      = '#ef4444';
+    rewardEl.textContent      = '🎁 ได้รับ +1 ❤️';
+  } else if (room.reward === 'star') {
+    rewardEl.style.display    = 'block';
+    rewardEl.style.background = 'rgba(245,158,11,.15)';
+    rewardEl.style.color      = '#f59e0b';
+    rewardEl.textContent      = '🎁 ได้รับ +1 ⭐ Throwing Star';
+  } else {
+    rewardEl.style.display = 'none';
+  }
+
   document.getElementById('mind-lc-lives').innerHTML = mindHearts(room.lives, room.maxLives);
+  document.getElementById('mind-lc-stars').innerHTML = mindStars(room.stars);
 
   const hostBtn = document.getElementById('mind-lc-host-btn');
   const waitEl  = document.getElementById('mind-lc-wait');

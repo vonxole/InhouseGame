@@ -49,9 +49,11 @@ function createRoom(hostId, hostName, gameType = 'insider', roomName = '') {
     rooms[code] = {
       ...base,
       mindLevel:        1,
-      mindMaxLevel:     5,
-      mindMaxLives:     3,
+      mindMaxLevel:     8,  // overridden on mind_start by player count
+      mindMaxLives:     3,  // overridden on mind_start by player count
       mindLives:        3,
+      mindStars:        0,
+      mindReward:       null,
       mindPile:         [],
       mindLastCard:     0,
       mindMistakeCards: [],

@@ -330,37 +330,10 @@
         </div>
       </div>
 
-      <!-- Mind: host settings -->
+      <!-- Mind: settings (same view for host and non-host — auto from player count) -->
       <div id="l-mind-settings-host" style="display:none;" class="card">
-        <p style="font-size:0.85rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;">⚙️ Settings</p>
-        <div style="display:flex;flex-direction:column;gap:16px;">
-          <div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-              <label>🏆 จำนวน Level</label>
-              <span id="mind-maxlv-val" style="font-weight:700;color:#06b6d4;font-size:1rem;">5</span>
-            </div>
-            <input id="sl-mind-maxlv" type="range" min="1" max="12" step="1" value="5"
-              oninput="document.getElementById('mind-maxlv-val').textContent=this.value"
-              onchange="socket.emit('mind_set_max_level',{maxLevel:parseInt(this.value)})"
-              style="width:100%;accent-color:#06b6d4;">
-            <div class="muted" style="display:flex;justify-content:space-between;font-size:0.75rem;margin-top:2px;">
-              <span>1 (quick)</span><span>12 (full game)</span>
-            </div>
-          </div>
-          <div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-              <label>❤️ ชีวิต</label>
-              <span id="mind-lives-val" style="font-weight:700;color:#ef4444;font-size:1rem;">3</span>
-            </div>
-            <input id="sl-mind-lives" type="range" min="1" max="10" step="1" value="3"
-              oninput="document.getElementById('mind-lives-val').textContent=this.value"
-              onchange="socket.emit('mind_set_lives',{lives:parseInt(this.value)})"
-              style="width:100%;accent-color:#ef4444;">
-            <div class="muted" style="display:flex;justify-content:space-between;font-size:0.75rem;margin-top:2px;">
-              <span>1 (hard)</span><span>10 (easy)</span>
-            </div>
-          </div>
-        </div>
+        <p style="font-size:0.85rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;">⚙️ ตามกติกาจริง (auto)</p>
+        <div id="l-mind-auto-info" style="display:flex;flex-direction:column;gap:6px;font-size:0.88rem;"></div>
       </div>
 
       <!-- Mind: non-host settings view -->
@@ -399,7 +372,10 @@
     <div id="s-mind-playing" class="screen" style="justify-content:flex-start;gap:14px;overflow-y:auto;padding-bottom:24px;">
       <!-- Status bar -->
       <div style="display:flex;justify-content:space-between;align-items:center;padding-top:8px;">
-        <div id="mind-pl-lives" style="display:flex;gap:4px;font-size:1.3rem;"></div>
+        <div style="display:flex;flex-direction:column;gap:3px;">
+          <div id="mind-pl-lives" style="display:flex;gap:4px;font-size:1.3rem;"></div>
+          <div id="mind-pl-stars" style="display:flex;gap:4px;font-size:1.1rem;"></div>
+        </div>
         <div id="mind-pl-level" style="font-size:0.9rem;font-weight:700;color:#06b6d4;"></div>
       </div>
 
@@ -430,6 +406,15 @@
         🤫 ห้ามสื่อสาร — รู้สึกว่าถึงเวลาแล้วค่อยวาง<br>
         <span style="font-size:0.75rem;opacity:.7;">No talking — feel the moment, then play</span>
       </div>
+
+      <!-- Throw star button (host only) -->
+      <div id="mind-pl-star-btn" style="display:none;text-align:center;">
+        <button onclick="socket.emit('mind_throw_star')"
+          style="padding:12px 24px;border-radius:12px;border:2px solid #f59e0b;background:rgba(245,158,11,.1);color:#f59e0b;font-size:0.9rem;font-weight:700;cursor:pointer;">
+          ⭐ ใช้ Throwing Star
+        </button>
+        <p class="muted" style="font-size:0.75rem;margin-top:6px;">ทุกคนทิ้งไพ่ต่ำสุดของตัวเอง</p>
+      </div>
     </div>
 
     <!-- MIND MISTAKE ──────────────────────────────────────────────────────────── -->
@@ -448,7 +433,9 @@
     <div id="s-mind-level-clear" class="screen" style="justify-content:center;gap:18px;">
       <div style="font-size:4rem;text-align:center;">⭐</div>
       <div id="mind-lc-title" style="font-size:1.5rem;font-weight:800;text-align:center;"></div>
+      <div id="mind-lc-reward" style="display:none;font-size:1rem;font-weight:700;text-align:center;padding:8px 20px;border-radius:10px;"></div>
       <div id="mind-lc-lives" style="display:flex;justify-content:center;gap:6px;font-size:1.4rem;"></div>
+      <div id="mind-lc-stars" style="display:flex;justify-content:center;gap:6px;font-size:1.2rem;"></div>
       <div id="mind-lc-host-btn" style="display:none;width:100%;max-width:280px;">
         <button class="btn btn-primary" onclick="socket.emit('mind_next_level')" style="width:100%;font-size:1rem;">
           Level ถัดไป →
@@ -518,6 +505,12 @@
         <div style="font-size:0.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;">หัวข้อ</div>
         <div id="ito-rv-topic" style="font-size:1rem;font-weight:700;margin-top:2px;"></div>
         <div id="ito-rv-scale" style="font-size:0.8rem;color:var(--muted);margin-top:2px;"></div>
+      </div>
+
+      <!-- My own cards (always visible for reference) -->
+      <div style="text-align:center;">
+        <div style="font-size:0.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;">เบอร์ของคุณ</div>
+        <div id="ito-rv-my-cards" style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;"></div>
       </div>
 
       <!-- Progress -->
