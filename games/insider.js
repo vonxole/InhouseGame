@@ -86,8 +86,11 @@ module.exports = function createInsiderGame(io, rooms, { getRoom, pickWord, broa
       insiderId:     (['verdict','result'].includes(room.state)) ? (room.insiderId || insiderId) : null,
       insiderName:   (['verdict','result'].includes(room.state))
         ? (room.players.find(p => p.id === (room.insiderId || insiderId))?.name || null) : null,
-      word:        room.state === 'result' ? room.word       : null,
-      winnerTeam:  room.state === 'result' ? room.winnerTeam : null,
+      word:             room.state === 'result' ? room.word       : null,
+      winnerTeam:       room.state === 'result' ? room.winnerTeam : null,
+      correctVoterIds:  room.state === 'result' && room.winnerTeam === 'insider'
+        ? Object.entries(room.votes || {}).filter(([,t]) => t === insiderId).map(([v]) => v)
+        : [],
       scores:      Object.values(room.scores).sort((a, b) => b.score - a.score),
       showExamples: room.showExamples,
       exampleCount: room.exampleCount,
@@ -172,6 +175,12 @@ module.exports = function createInsiderGame(io, rooms, { getRoom, pickWord, broa
       });
     } else if (room.winnerTeam === 'insider') {
       if (insiderId && room.scores[insiderId]) room.scores[insiderId].score += 2;
+      // Players who voted correctly despite insider escaping → +1
+      Object.entries(room.votes || {}).forEach(([voterId, targetId]) => {
+        if (targetId === insiderId && room.scores[voterId]) {
+          room.scores[voterId].score += 1;
+        }
+      });
     }
   }
 

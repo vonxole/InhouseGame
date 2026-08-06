@@ -7,7 +7,7 @@ function handleInsiderRoomUpdate(room) {
   if (room.state !== 'lobby') _prevRoomState = room.state;
   document.getElementById('l-sticky-footer').style.display = room.state === 'lobby' ? 'block' : 'none';
   if (room.state === 'lobby')   renderLobby(room);
-  else if (room.state === 'reveal')  renderReveal(room);
+  else if (room.state === 'reveal')  renderReveal(room, !comingFromReveal);
   else if (room.state === 'playing') {
     if (comingFromReveal) {
       startCountdown(() => renderPlaying(room));
@@ -247,12 +247,14 @@ function toggleLobbySettings() {
 }
 
 // ── Reveal ────────────────────────────────────────────────────────────────────
-function renderReveal(room) {
+function renderReveal(room, isFirstEntry = false) {
   show('s-reveal');
-  // Reset hide overlay and schedule auto-hide after 8s
+  // Only reset overlay on fresh entry — reroll/word updates keep current overlay state
   const hideOverlay = document.getElementById('rv-hide-overlay');
-  if (hideOverlay) hideOverlay.style.display = 'none';
-  scheduleRoleHide(8000);
+  if (hideOverlay && isFirstEntry) {
+    hideOverlay.style.display = 'none';
+    scheduleRoleHide(3000);
+  }
   const defs = {
     master:  { icon: '👑', name: 'Master',  cls: 'role-master',
       desc: 'You know the word. Answer YES / NO / IDK to questions out loud. When someone guesses it, tap the button.' },
@@ -474,7 +476,7 @@ function renderPlaying(room) {
   // Reset + schedule role hide
   const plOverlay = document.getElementById('pl-hide-overlay');
   if (plOverlay) plOverlay.style.display = 'none';
-  scheduleRoleHide(10000);
+  scheduleRoleHide(3000);
 
   const plEQ = document.getElementById('pl-example-q');
   if (myRole !== 'master' && room.showExamples !== false) {
@@ -750,11 +752,19 @@ function renderResult(room) {
 
   document.getElementById('res-icon').textContent  = noWinner ? '⏰' : caught ? '🎉' : '🕵️';
   document.getElementById('res-title').textContent = noWinner ? 'No one wins!' : caught ? 'Insider Caught!' : 'Insider Wins!';
+  const correctVoters = (room.correctVoterIds || [])
+    .map(id => room.players?.find(p => p.id === id)?.name)
+    .filter(Boolean);
+  const correctLine = !caught && correctVoters.length
+    ? `<div style="margin-top:8px;font-size:0.82rem;color:var(--accent2);">
+        ✅ โหวตถูก (+1): ${correctVoters.join(', ')}
+       </div>`
+    : '';
   document.getElementById('res-subtitle').innerHTML = noWinner
     ? noWinnerTaunt
     : caught
       ? 'Common players successfully identified the Insider'
-      : 'The Insider escaped — better luck next time!';
+      : `The Insider escaped — better luck next time!${correctLine}`;
   document.getElementById('res-word').textContent      = room.word      || '—';
   document.getElementById('res-word-thai').textContent = room.wordThai  || '';
   document.getElementById('res-insider').textContent   = room.insiderName || '—';

@@ -45,6 +45,19 @@ function createRoom(hostId, hostName, gameType = 'insider', roomName = '') {
       locations: [], realLocation: null, spyId: null,
       accusedId: null, spyGuess: null, outcome: null,
     };
+  } else if (gameType === 'mind') {
+    rooms[code] = {
+      ...base,
+      mindLevel:        1,
+      mindMaxLevel:     5,
+      mindMaxLives:     3,
+      mindLives:        3,
+      mindPile:         [],
+      mindLastCard:     0,
+      mindMistakeCards: [],
+      mindGameOver:     false,
+      mindWon:          false,
+    };
   } else if (gameType === 'ito') {
     rooms[code] = {
       ...base,
@@ -101,6 +114,7 @@ function broadcastRoom(room) {
 gameModules.insider  = require('./games/insider')(io, rooms, { getRoom, pickWord, broadcastRoomList });
 gameModules.spyfall  = require('./games/spyfall')(io, rooms, { getRoom, broadcastRoomList });
 gameModules.ito      = require('./games/ito')(io, rooms, { getRoom });
+gameModules.mind     = require('./games/mind')(io, rooms, { getRoom });
 
 // ── Socket Events ─────────────────────────────────────────────────────────────
 io.on('connection', (socket) => {

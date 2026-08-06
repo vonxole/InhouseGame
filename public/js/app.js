@@ -249,9 +249,9 @@ socket.on('rooms_list', (list) => {
   if (noRooms) noRooms.style.display = 'none';
   if (wrap)    wrap.style.display    = 'flex';
 
-  const gameLabel  = { insider: '🕵️ Insider', spyfall: '🕵️ Spyfall', ito: '🔢 Ito' };
-  const gameAccent = { insider: 'rgba(124,58,237,.2)', spyfall: 'rgba(14,165,233,.2)', ito: 'rgba(249,115,22,.15)' };
-  const gameColor  = { insider: 'var(--accent2)', spyfall: '#0ea5e9', ito: '#f97316' };
+  const gameLabel  = { insider: '🕵️ Insider', spyfall: '🕵️ Spyfall', ito: '🔢 Ito', mind: '🧘 The Mind' };
+  const gameAccent = { insider: 'rgba(124,58,237,.2)', spyfall: 'rgba(14,165,233,.2)', ito: 'rgba(249,115,22,.15)', mind: 'rgba(6,182,212,.15)' };
+  const gameColor  = { insider: 'var(--accent2)', spyfall: '#0ea5e9', ito: '#f97316', mind: '#06b6d4' };
 
   el.innerHTML = list.map(r => {
     const label = gameLabel[r.gameType]  || '🎮';
@@ -315,6 +315,7 @@ socket.on('room_update', (room) => {
   if (gameType === 'insider')       handleInsiderRoomUpdate(room);
   else if (gameType === 'spyfall')  handleSpyfallRoomUpdate(room);
   else if (gameType === 'ito')      handleItoRoomUpdate(room);
+  else if (gameType === 'mind')     handleMindRoomUpdate(room);
 });
 
 // ── Shared socket events ──────────────────────────────────────────────────────

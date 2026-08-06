@@ -140,6 +140,19 @@
         </div>
       </div>
 
+      <!-- The Mind -->
+      <div onclick="doCreate('mind')" style="cursor:pointer;border:1.5px solid #06b6d4;border-radius:14px;padding:16px 20px;background:rgba(6,182,212,.08);width:100%;max-width:360px;transition:background .15s;"
+        onmouseover="this.style.background='rgba(6,182,212,.16)'" onmouseout="this.style.background='rgba(6,182,212,.08)'">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <span style="font-size:2rem;">🧘</span>
+          <div>
+            <div style="font-size:1rem;font-weight:700;">The Mind</div>
+            <div style="font-size:0.8rem;color:var(--muted);margin-top:2px;">วางไพ่เรียงลำดับ — ห้ามสื่อสาร</div>
+          </div>
+          <span style="margin-left:auto;font-size:0.75rem;background:#06b6d4;color:#fff;border-radius:6px;padding:2px 8px;font-weight:600;">PLAY</span>
+        </div>
+      </div>
+
       <button class="btn" onclick="show('s-home')" style="background:transparent;border:1.5px solid var(--border);color:var(--muted);max-width:360px;width:100%;">← Back</button>
     </div>
 
@@ -317,6 +330,47 @@
         </div>
       </div>
 
+      <!-- Mind: host settings -->
+      <div id="l-mind-settings-host" style="display:none;" class="card">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;">⚙️ Settings</p>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <label>🏆 จำนวน Level</label>
+              <span id="mind-maxlv-val" style="font-weight:700;color:#06b6d4;font-size:1rem;">5</span>
+            </div>
+            <input id="sl-mind-maxlv" type="range" min="1" max="12" step="1" value="5"
+              oninput="document.getElementById('mind-maxlv-val').textContent=this.value"
+              onchange="socket.emit('mind_set_max_level',{maxLevel:parseInt(this.value)})"
+              style="width:100%;accent-color:#06b6d4;">
+            <div class="muted" style="display:flex;justify-content:space-between;font-size:0.75rem;margin-top:2px;">
+              <span>1 (quick)</span><span>12 (full game)</span>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <label>❤️ ชีวิต</label>
+              <span id="mind-lives-val" style="font-weight:700;color:#ef4444;font-size:1rem;">3</span>
+            </div>
+            <input id="sl-mind-lives" type="range" min="1" max="10" step="1" value="3"
+              oninput="document.getElementById('mind-lives-val').textContent=this.value"
+              onchange="socket.emit('mind_set_lives',{lives:parseInt(this.value)})"
+              style="width:100%;accent-color:#ef4444;">
+            <div class="muted" style="display:flex;justify-content:space-between;font-size:0.75rem;margin-top:2px;">
+              <span>1 (hard)</span><span>10 (easy)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mind: non-host settings view -->
+      <div class="card" id="l-mind-settings-view" style="display:none;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span class="muted" style="font-size:0.85rem;">Settings</span>
+          <div id="l-mind-setting-chips" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
+        </div>
+      </div>
+
       <!-- Ito: non-host settings view -->
       <div class="card" id="l-ito-settings-view" style="display:none;">
         <div style="display:flex;justify-content:space-between;align-items:center;">
@@ -339,6 +393,81 @@
 
       <!-- spacer so content clears sticky footer -->
       <div style="height:100px;"></div>
+    </div>
+
+    <!-- MIND PLAYING ─────────────────────────────────────────────────────────── -->
+    <div id="s-mind-playing" class="screen" style="justify-content:flex-start;gap:14px;overflow-y:auto;padding-bottom:24px;">
+      <!-- Status bar -->
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-top:8px;">
+        <div id="mind-pl-lives" style="display:flex;gap:4px;font-size:1.3rem;"></div>
+        <div id="mind-pl-level" style="font-size:0.9rem;font-weight:700;color:#06b6d4;"></div>
+      </div>
+
+      <!-- Last played card -->
+      <div style="text-align:center;padding:8px 0;">
+        <div style="font-size:0.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;">ไพ่ล่าสุด</div>
+        <div id="mind-pl-last" style="font-size:4rem;font-weight:900;color:#06b6d4;line-height:1;min-height:4.5rem;display:flex;align-items:center;justify-content:center;">—</div>
+        <div id="mind-pl-last-by" style="font-size:0.78rem;color:var(--muted);margin-top:4px;min-height:1.2em;"></div>
+      </div>
+
+      <!-- Other players -->
+      <div id="mind-pl-others" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;"></div>
+
+      <!-- My cards -->
+      <div style="text-align:center;">
+        <div style="font-size:0.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;">ไพ่ของคุณ</div>
+        <div id="mind-pl-my-cards" style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:16px;"></div>
+        <button id="mind-pl-btn" onclick="socket.emit('mind_play_card')"
+          style="width:100%;max-width:280px;padding:18px;font-size:1.2rem;font-weight:700;border-radius:16px;background:linear-gradient(135deg,#06b6d4,#0891b2);color:#fff;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(6,182,212,.4);transition:transform .1s,opacity .1s;"
+          onmousedown="this.style.transform='scale(.97)'" onmouseup="this.style.transform=''">
+          วาง 🃏
+        </button>
+        <p id="mind-pl-no-cards" style="display:none;color:var(--muted);font-size:0.9rem;margin-top:8px;">ไม่มีไพ่แล้ว รอทีมก่อน...</p>
+      </div>
+
+      <!-- Rule reminder -->
+      <div class="card" style="text-align:center;font-size:0.82rem;color:var(--muted);line-height:1.6;">
+        🤫 ห้ามสื่อสาร — รู้สึกว่าถึงเวลาแล้วค่อยวาง<br>
+        <span style="font-size:0.75rem;opacity:.7;">No talking — feel the moment, then play</span>
+      </div>
+    </div>
+
+    <!-- MIND MISTAKE ──────────────────────────────────────────────────────────── -->
+    <div id="s-mind-mistake" class="screen" style="justify-content:center;gap:16px;">
+      <div style="font-size:3.5rem;text-align:center;">💥</div>
+      <div style="font-size:1.4rem;font-weight:800;text-align:center;color:#ef4444;">ผิดลำดับ!</div>
+      <div id="mind-mk-lives" style="display:flex;justify-content:center;gap:6px;font-size:1.4rem;"></div>
+      <div class="card" style="width:100%;max-width:360px;">
+        <p style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;">ไพ่ที่ตกหล่น (ต่ำกว่าไพ่ที่วาง)</p>
+        <div id="mind-mk-cards" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;"></div>
+      </div>
+      <p class="muted" style="font-size:0.85rem;text-align:center;">กลับสู่เกมอัตโนมัติ...</p>
+    </div>
+
+    <!-- MIND LEVEL CLEAR ─────────────────────────────────────────────────────── -->
+    <div id="s-mind-level-clear" class="screen" style="justify-content:center;gap:18px;">
+      <div style="font-size:4rem;text-align:center;">⭐</div>
+      <div id="mind-lc-title" style="font-size:1.5rem;font-weight:800;text-align:center;"></div>
+      <div id="mind-lc-lives" style="display:flex;justify-content:center;gap:6px;font-size:1.4rem;"></div>
+      <div id="mind-lc-host-btn" style="display:none;width:100%;max-width:280px;">
+        <button class="btn btn-primary" onclick="socket.emit('mind_next_level')" style="width:100%;font-size:1rem;">
+          Level ถัดไป →
+        </button>
+      </div>
+      <p id="mind-lc-wait" style="display:none;color:var(--muted);font-size:0.88rem;">รอ host กด...</p>
+    </div>
+
+    <!-- MIND RESULT ──────────────────────────────────────────────────────────── -->
+    <div id="s-mind-result" class="screen" style="justify-content:center;gap:18px;">
+      <div id="mind-res-icon" style="font-size:4rem;text-align:center;"></div>
+      <div id="mind-res-title" style="font-size:1.5rem;font-weight:800;text-align:center;"></div>
+      <div id="mind-res-subtitle" style="font-size:0.9rem;color:var(--muted);text-align:center;"></div>
+      <div id="mind-res-lives" style="display:flex;justify-content:center;gap:6px;font-size:1.4rem;"></div>
+      <div id="mind-res-host-btns" style="display:none;flex-direction:column;gap:10px;width:100%;max-width:280px;">
+        <button class="btn btn-primary" onclick="socket.emit('mind_start')" style="width:100%;">🔄 เล่นใหม่</button>
+        <button class="btn" onclick="socket.emit('mind_back_lobby')"
+          style="width:100%;background:transparent;border:1.5px solid var(--border);color:var(--muted);">← กลับ Lobby</button>
+      </div>
     </div>
 
     <!-- ITO PLAYING ──────────────────────────────────────────────────────────── -->
@@ -1326,6 +1455,7 @@
   <script src="/js/games/insider.js"></script>
   <script src="/js/games/spyfall.js"></script>
   <script src="/js/games/ito.js"></script>
+  <script src="/js/games/mind.js"></script>
 </body>
 
 </html>
