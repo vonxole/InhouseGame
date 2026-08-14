@@ -3530,7 +3530,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Sherlock Holmes",
+    "seriesThai": "เชอร์ล็อก โฮล์มส์"
   },
   {
     "word": "Santa Claus",
@@ -3544,7 +3546,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Christmas Folklore",
+    "seriesThai": "นิทานคริสต์มาส"
   },
   {
     "word": "Dracula",
@@ -3558,7 +3562,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Dracula",
+    "seriesThai": "แดร็กคูล่า"
   },
   {
     "word": "Robin Hood",
@@ -3572,7 +3578,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Robin Hood",
+    "seriesThai": "โรบิน ฮูด"
   },
   {
     "word": "Cinderella",
@@ -3586,7 +3594,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Cinderella",
+    "seriesThai": "ซินเดอเรลล่า"
   },
   {
     "word": "James Bond",
@@ -3600,7 +3610,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "James Bond (007)",
+    "seriesThai": "เจมส์ บอนด์ 007"
   },
   {
     "word": "Harry Potter",
@@ -3614,7 +3626,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Harry Potter",
+    "seriesThai": "แฮร์รี่ พอตเตอร์"
   },
   {
     "word": "Pinocchio",
@@ -3628,7 +3642,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Pinocchio",
+    "seriesThai": "พิน็อกคิโอ"
   },
   {
     "word": "Superman",
@@ -3642,7 +3658,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "DC Comics",
+    "seriesThai": "ดีซี คอมิกส์"
   },
   {
     "word": "Romeo",
@@ -3656,7 +3674,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Romeo and Juliet",
+    "seriesThai": "โรมิโอ แอนด์ จูเลียต"
   },
   {
     "word": "Napoleon",
@@ -3669,7 +3689,9 @@
     "emoji": "👑",
     "categories": [
       "Characters"
-    ]
+    ],
+    "series": "History",
+    "seriesThai": "บุคคลในประวัติศาสตร์"
   },
   {
     "word": "Cleopatra",
@@ -3682,7 +3704,9 @@
     "emoji": "👸",
     "categories": [
       "Characters"
-    ]
+    ],
+    "series": "History",
+    "seriesThai": "บุคคลในประวัติศาสตร์"
   },
   {
     "word": "Hercules",
@@ -3696,7 +3720,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Greek Mythology",
+    "seriesThai": "เทพปกรณัมกรีก"
   },
   {
     "word": "Medusa",
@@ -3710,7 +3736,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Greek Mythology",
+    "seriesThai": "เทพปกรณัมกรีก"
   },
   {
     "word": "Frankenstein",
@@ -3724,7 +3752,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Frankenstein",
+    "seriesThai": "แฟรงเกนสไตน์"
   },
   {
     "word": "Don Quixote",
@@ -3738,7 +3768,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Don Quixote",
+    "seriesThai": "ดอน กิโฆเต้"
   },
   {
     "word": "Hannibal Lecter",
@@ -3752,7 +3784,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Silence of the Lambs",
+    "seriesThai": "เงียบแกะบูชายัญ"
   },
   {
     "word": "Walter White",
@@ -3766,7 +3800,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Breaking Bad",
+    "seriesThai": "Breaking Bad"
   },
   {
     "word": "Macbeth",
@@ -3780,7 +3816,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Macbeth (Shakespeare)",
+    "seriesThai": "แมคเบธ"
   },
   {
     "word": "Machiavelli",
@@ -3793,7 +3831,9 @@
     "emoji": "♟️",
     "categories": [
       "Characters"
-    ]
+    ],
+    "series": "History",
+    "seriesThai": "บุคคลในประวัติศาสตร์"
   },
   {
     "word": "Rasputin",
@@ -3806,7 +3846,9 @@
     "emoji": "🧔",
     "categories": [
       "Characters"
-    ]
+    ],
+    "series": "History",
+    "seriesThai": "บุคคลในประวัติศาสตร์"
   },
   {
     "word": "Iago",
@@ -3820,7 +3862,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Othello (Shakespeare)",
+    "seriesThai": "โอเทลโล"
   },
   {
     "word": "carrot",
@@ -4458,7 +4502,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Mickey Mouse",
+    "seriesThai": "Mickey Mouse"
   },
   {
     "word": "SpongeBob",
@@ -4472,7 +4518,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "SpongeBob SquarePants",
+    "seriesThai": "สปองจ์บ็อบ"
   },
   {
     "word": "Doraemon",
@@ -4486,7 +4534,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Doraemon",
+    "seriesThai": "โดราเอมอน"
   },
   {
     "word": "Pikachu",
@@ -4500,7 +4550,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Pokémon",
+    "seriesThai": "โปเกมอน"
   },
   {
     "word": "Naruto",
@@ -4514,7 +4566,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Naruto",
+    "seriesThai": "นารูโตะ"
   },
   {
     "word": "Simba",
@@ -4528,7 +4582,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "The Lion King",
+    "seriesThai": "เดอะ ไลอ้อน คิง"
   },
   {
     "word": "Elsa",
@@ -4542,7 +4598,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Frozen",
+    "seriesThai": "โฟรเซ่น"
   },
   {
     "word": "Shrek",
@@ -4556,7 +4614,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Shrek",
+    "seriesThai": "ชเร็ค"
   },
   {
     "word": "Goku",
@@ -4569,7 +4629,9 @@
     "emoji": "⚡",
     "categories": [
       "Characters"
-    ]
+    ],
+    "series": "Dragon Ball",
+    "seriesThai": "ดราก้อนบอล"
   },
   {
     "word": "Tom and Jerry",
@@ -4583,7 +4645,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Tom and Jerry",
+    "seriesThai": "ทอมกับเจอร์รี่"
   },
   {
     "word": "Winnie the Pooh",
@@ -4597,7 +4661,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Winnie the Pooh",
+    "seriesThai": "วินนี่ เดอะ พูห์"
   },
   {
     "word": "Bugs Bunny",
@@ -4611,7 +4677,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Looney Tunes",
+    "seriesThai": "ลูนี่ ทูนส์"
   },
   {
     "word": "Totoro",
@@ -4625,7 +4693,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "My Neighbor Totoro",
+    "seriesThai": "โทนาริโนะ โทโทโระ"
   },
   {
     "word": "Woody",
@@ -4639,7 +4709,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Toy Story",
+    "seriesThai": "ทอย สตอรี่"
   },
   {
     "word": "Luffy",
@@ -4652,7 +4724,9 @@
     "emoji": "☠️",
     "categories": [
       "Characters"
-    ]
+    ],
+    "series": "One Piece",
+    "seriesThai": "วันพีซ"
   },
   {
     "word": "Sailor Moon",
@@ -4666,7 +4740,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Sailor Moon",
+    "seriesThai": "เซเลอร์มูน"
   },
   {
     "word": "Spirited Away",
@@ -4692,7 +4768,9 @@
     "emoji": "📓",
     "categories": [
       "Characters"
-    ]
+    ],
+    "series": "Death Note",
+    "seriesThai": "เดธ โน้ต"
   },
   {
     "word": "Attack on Titan",
@@ -4718,7 +4796,9 @@
     "emoji": "⚔️",
     "categories": [
       "Characters"
-    ]
+    ],
+    "series": "Attack on Titan",
+    "seriesThai": "อาแทค ออน ไทแทน"
   },
   {
     "word": "Nobita",
@@ -4732,7 +4812,9 @@
     "categories": [
       "Characters",
       "Movies & Cartoons"
-    ]
+    ],
+    "series": "Doraemon",
+    "seriesThai": "โดราเอมอน"
   },
   {
     "word": "Apple",

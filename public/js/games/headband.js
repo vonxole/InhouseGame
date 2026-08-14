@@ -193,6 +193,11 @@ function hbBeginTurn() {
     ctEl.style.display = w.country ? 'block' : 'none';
     if (w.country) document.getElementById('hb-word-country-text').textContent = `${w.country} · ${w.countryThai}`;
   }
+  const srEl = document.getElementById('hb-word-series');
+  if (srEl) {
+    srEl.style.display = w.series ? 'block' : 'none';
+    if (w.series) document.getElementById('hb-word-series-text').textContent = `${w.series} · ${w.seriesThai}`;
+  }
   document.getElementById('hb-word-cat').textContent   = w.category || '';
   const lvlEl = document.getElementById('hb-word-level');
   if (lvlEl && w.level) {
@@ -227,6 +232,11 @@ function hbChangeWord() {
   if (ctEl2) {
     ctEl2.style.display = w.country ? 'block' : 'none';
     if (w.country) document.getElementById('hb-word-country-text').textContent = `${w.country} · ${w.countryThai}`;
+  }
+  const srEl2 = document.getElementById('hb-word-series');
+  if (srEl2) {
+    srEl2.style.display = w.series ? 'block' : 'none';
+    if (w.series) document.getElementById('hb-word-series-text').textContent = `${w.series} · ${w.seriesThai}`;
   }
   document.getElementById('hb-word-cat').textContent  = w.category || '';
   const lvlEl = document.getElementById('hb-word-level');
