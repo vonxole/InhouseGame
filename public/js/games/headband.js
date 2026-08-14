@@ -199,8 +199,8 @@ function hbBeginTurn() {
 }
 
 function hbChangeWord() {
-  const player   = _hbPlayers[_hbCurrentIdx];
-  _hbCurrentWord = hbPickWord(player.levels);
+  const player   = _hbPlayers[_hbCurrentIdx] || null;
+  _hbCurrentWord = hbPickWord(player ? player.levels : []);
   const w        = _hbCurrentWord;
   document.getElementById('hb-word-en').textContent   = w.word  || '';
   document.getElementById('hb-word-thai').textContent = w.thai  || '';
