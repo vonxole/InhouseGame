@@ -87,8 +87,9 @@ function hbRenderPlayerList() {
 
   const startBtn = document.getElementById('hb-setup-start-btn');
   if (startBtn) {
-    startBtn.disabled = _hbPlayers.length < 2;
-    startBtn.style.opacity = _hbPlayers.length < 2 ? '.4' : '1';
+    const ok = _hbPlayers.length === 0 || _hbPlayers.length >= 2;
+    startBtn.disabled = !ok;
+    startBtn.style.opacity = ok ? '1' : '.4';
   }
 }
 
@@ -148,12 +149,12 @@ function hbStartGame() {
 }
 
 function hbShowTurn() {
-  const player   = _hbPlayers[_hbCurrentIdx];
-  _hbCurrentWord = hbPickWord(player.levels);
-  const name     = player.name;
+  const noPlayers = _hbPlayers.length === 0;
+  const player    = noPlayers ? null : _hbPlayers[_hbCurrentIdx];
+  _hbCurrentWord  = hbPickWord(player ? player.levels : []);
 
   // Reset turn UI
-  document.getElementById('hb-whose-turn').textContent     = `${name} กำลังเล่น`;
+  document.getElementById('hb-whose-turn').textContent = noPlayers ? '' : `${player.name} กำลังเล่น`;
   document.getElementById('hb-timer').textContent           = '0:00';
   document.getElementById('hb-pre-start').style.display    = 'flex';
   document.getElementById('hb-word-area').style.display    = 'none';
@@ -214,12 +215,16 @@ function hbChangeWord() {
 
 function hbStopTurn() {
   clearInterval(_hbTimerInterval);
-  const elapsed = _hbTimerStart ? Math.round((Date.now() - _hbTimerStart) / 1000) : 0;
-  const name    = _hbPlayers[_hbCurrentIdx].name;
-  _hbScores.push({ name, seconds: elapsed });
+  const elapsed   = _hbTimerStart ? Math.round((Date.now() - _hbTimerStart) / 1000) : 0;
+  const noPlayers = _hbPlayers.length === 0;
+  const label     = noPlayers ? (_hbCurrentWord?.word || '') : _hbPlayers[_hbCurrentIdx].name;
+  _hbScores.push({ name: label, seconds: elapsed });
 
-  document.getElementById('hb-done-name').textContent = name;
+  document.getElementById('hb-done-name').textContent = label;
   document.getElementById('hb-done-time').textContent = fmtTime(elapsed);
+
+  const nextBtn = document.getElementById('hb-next-btn');
+  if (nextBtn) nextBtn.textContent = _hbPlayers.length === 0 ? 'คำถัดไป →' : 'คนถัดไป →';
 
   show('s-hb-turn-done');
   const bar = document.getElementById('float-bar');
@@ -227,6 +232,10 @@ function hbStopTurn() {
 }
 
 function hbNextTurn() {
+  if (_hbPlayers.length === 0) {
+    hbShowTurn(); // no-player mode: just pick next word
+    return;
+  }
   _hbCurrentIdx++;
   if (_hbCurrentIdx >= _hbPlayers.length) {
     hbShowResult();
