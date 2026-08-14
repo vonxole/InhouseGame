@@ -95,18 +95,20 @@ function hbRenderPlayerList() {
 
 // ── Settings (multi-select) ───────────────────────────────────────────────────
 const HB_CAT_IDS = {
-  Animals:          'hbsp-cat-animals',
-  'Food & Drinks':  'hbsp-cat-food',
-  Brands:           'hbsp-cat-brands',
-  Characters:       'hbsp-cat-characters',
-  Concepts:         'hbsp-cat-concepts',
-  Countries:        'hbsp-cat-countries',
-  'Gadgets & Tools':'hbsp-cat-gadgets',
-  Landmarks:        'hbsp-cat-landmarks',
-  Objects:          'hbsp-cat-objects',
-  Occupations:      'hbsp-cat-occupations',
-  'Office & School':'hbsp-cat-office',
-  Places:           'hbsp-cat-places',
+  Animals:            'hbsp-cat-animals',
+  'Artists & Celebs': 'hbsp-cat-artists',
+  Brands:             'hbsp-cat-brands',
+  Characters:         'hbsp-cat-characters',
+  Concepts:           'hbsp-cat-concepts',
+  Countries:          'hbsp-cat-countries',
+  'Food & Drinks':    'hbsp-cat-food',
+  'Gadgets & Tools':  'hbsp-cat-gadgets',
+  Landmarks:          'hbsp-cat-landmarks',
+  'Movies & Cartoons':'hbsp-cat-movies',
+  Objects:            'hbsp-cat-objects',
+  Occupations:        'hbsp-cat-occupations',
+  'Office & School':  'hbsp-cat-office',
+  Places:             'hbsp-cat-places',
 };
 
 function hbToggleCat(cat) {
@@ -139,7 +141,8 @@ function hbPickWord(playerLevels) {
   // Use player-specific levels if set, else fall back to global levels
   const levels = (playerLevels && playerLevels.length > 0) ? playerLevels : _hbLevels;
   let pool = _hbWords;
-  if (_hbCategories.length > 0) pool = pool.filter(w => _hbCategories.includes(w.category));
+  if (_hbCategories.length > 0) pool = pool.filter(w =>
+    (w.categories || [w.category]).some(c => _hbCategories.includes(c)));
   if (levels.length        > 0) pool = pool.filter(w => levels.includes(w.level));
   if (pool.length === 0) pool = _hbWords;
   let fresh = pool.filter(w => !_hbHistory.has(w.word));
