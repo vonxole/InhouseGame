@@ -95,7 +95,7 @@ function hbRenderPlayerList() {
 
 // ── Settings (multi-select) ───────────────────────────────────────────────────
 const HB_CAT_IDS = {
-  General:'hbsp-cat-general', Objects:'hbsp-cat-objects',
+  General:'hbsp-cat-general', Animals:'hbsp-cat-animals', Objects:'hbsp-cat-objects',
   Characters:'hbsp-cat-characters', Cities:'hbsp-cat-cities', Drinks:'hbsp-cat-drinks',
   Occupations:'hbsp-cat-occupations', 'Office & School':'hbsp-cat-office', Places:'hbsp-cat-places',
 };

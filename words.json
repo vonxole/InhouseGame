@@ -4358,5 +4358,445 @@
     "hint": "tropical island resort famous for rice terraces and temples",
     "hintThai": "เกาะท่องเที่ยวมีนาขั้นบันไดและวัด",
     "pos": "noun"
+  },
+  {
+    "word": "dog",
+    "thai": "สุนัข",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "man's best friend, barks",
+    "hintThai": "สัตว์เลี้ยงที่ซื่อสัตย์ เห่าได้"
+  },
+  {
+    "word": "cat",
+    "thai": "แมว",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "purrs and meows",
+    "hintThai": "ร้องเหมียว ชอบนอน"
+  },
+  {
+    "word": "elephant",
+    "thai": "ช้าง",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "largest land animal, has a trunk",
+    "hintThai": "สัตว์บกที่ใหญ่ที่สุด มีงวง"
+  },
+  {
+    "word": "lion",
+    "thai": "สิงโต",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "king of the jungle, roars",
+    "hintThai": "ราชาแห่งป่า คำรามดัง"
+  },
+  {
+    "word": "tiger",
+    "thai": "เสือโคร่ง",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "big cat with stripes",
+    "hintThai": "แมวใหญ่มีลายทาง"
+  },
+  {
+    "word": "monkey",
+    "thai": "ลิง",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "swings through trees, loves bananas",
+    "hintThai": "ห้อยโหนต้นไม้ ชอบกล้วย"
+  },
+  {
+    "word": "fish",
+    "thai": "ปลา",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "lives in water, has fins",
+    "hintThai": "อาศัยในน้ำ มีครีบ"
+  },
+  {
+    "word": "horse",
+    "thai": "ม้า",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "you can ride it, gallops",
+    "hintThai": "ขี่ได้ วิ่งเร็ว"
+  },
+  {
+    "word": "rabbit",
+    "thai": "กระต่าย",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "long ears, hops",
+    "hintThai": "หูยาว กระโดด"
+  },
+  {
+    "word": "bear",
+    "thai": "หมี",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "hibernates in winter, loves honey",
+    "hintThai": "จำศีลฤดูหนาว ชอบน้ำผึ้ง"
+  },
+  {
+    "word": "duck",
+    "thai": "เป็ด",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "quacks, swims and flies",
+    "hintThai": "ร้องแควก ว่ายน้ำและบินได้"
+  },
+  {
+    "word": "cow",
+    "thai": "วัว",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "moos, gives milk",
+    "hintThai": "ร้องมู ให้นม"
+  },
+  {
+    "word": "pig",
+    "thai": "หมู",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "pink, rolls in mud, oinks",
+    "hintThai": "สีชมพู ชอบนอนโคลน"
+  },
+  {
+    "word": "snake",
+    "thai": "งู",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "no legs, slithers",
+    "hintThai": "ไม่มีขา เลื้อยคลาน"
+  },
+  {
+    "word": "frog",
+    "thai": "กบ",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "jumps, croaks, lives near water",
+    "hintThai": "กระโดด ร้องอ๊บ อยู่ใกล้น้ำ"
+  },
+  {
+    "word": "penguin",
+    "thai": "เพนกวิน",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "black and white bird that can't fly",
+    "hintThai": "นกขาวดำที่บินไม่ได้"
+  },
+  {
+    "word": "dolphin",
+    "thai": "โลมา",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "smart sea mammal, loves to jump",
+    "hintThai": "สัตว์เลี้ยงลูกด้วยนมในทะเล ฉลาดมาก"
+  },
+  {
+    "word": "bird",
+    "thai": "นก",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "has wings and feathers",
+    "hintThai": "มีปีกและขนนก"
+  },
+  {
+    "word": "chicken",
+    "thai": "ไก่",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "lays eggs, clucks",
+    "hintThai": "ออกไข่ ขันได้"
+  },
+  {
+    "word": "sheep",
+    "thai": "แกะ",
+    "category": "Animals",
+    "level": "easy",
+    "hint": "fluffy wool, baas",
+    "hintThai": "ขนฟู ร้องแม้"
+  },
+  {
+    "word": "giraffe",
+    "thai": "ยีราฟ",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "tallest animal, very long neck",
+    "hintThai": "สัตว์ที่สูงที่สุด คอยาวมาก"
+  },
+  {
+    "word": "zebra",
+    "thai": "ม้าลาย",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "looks like a horse with black and white stripes",
+    "hintThai": "หน้าตาคล้ายม้า มีลายขาวดำ"
+  },
+  {
+    "word": "gorilla",
+    "thai": "กอริลลา",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "largest primate, very strong",
+    "hintThai": "ไพรเมตที่ใหญ่ที่สุด แข็งแรงมาก"
+  },
+  {
+    "word": "crocodile",
+    "thai": "จระเข้",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "ancient reptile with big jaws",
+    "hintThai": "สัตว์เลื้อยคลานโบราณ ปากใหญ่"
+  },
+  {
+    "word": "parrot",
+    "thai": "นกแก้ว",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "colorful bird that can talk",
+    "hintThai": "นกสีสวย พูดได้"
+  },
+  {
+    "word": "flamingo",
+    "thai": "นกฟลามิงโก",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "pink bird that stands on one leg",
+    "hintThai": "นกสีชมพู ยืนขาเดียว"
+  },
+  {
+    "word": "panda",
+    "thai": "แพนด้า",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "black and white bear that eats bamboo",
+    "hintThai": "หมีขาวดำ กินไผ่"
+  },
+  {
+    "word": "koala",
+    "thai": "โคอาลา",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "Australian animal that sleeps in eucalyptus trees",
+    "hintThai": "สัตว์ออสเตรเลีย นอนบนต้นยูคาลิปตัส"
+  },
+  {
+    "word": "wolf",
+    "thai": "หมาป่า",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "hunts in packs, howls at the moon",
+    "hintThai": "ล่าเป็นฝูง หอนใส่พระจันทร์"
+  },
+  {
+    "word": "fox",
+    "thai": "สุนัขจิ้งจอก",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "clever, bushy tail, orange fur",
+    "hintThai": "ฉลาดแกมโกง หางฟู ขนสีส้ม"
+  },
+  {
+    "word": "eagle",
+    "thai": "นกอินทรี",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "large bird of prey with sharp eyes",
+    "hintThai": "นกล่าเหยื่อขนาดใหญ่ สายตาคม"
+  },
+  {
+    "word": "shark",
+    "thai": "ฉลาม",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "ocean predator with rows of sharp teeth",
+    "hintThai": "นักล่าในทะเล มีฟันหลายแถว"
+  },
+  {
+    "word": "whale",
+    "thai": "วาฬ",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "largest animal on Earth, lives in the ocean",
+    "hintThai": "สัตว์ที่ใหญ่ที่สุดในโลก อยู่ในทะเล"
+  },
+  {
+    "word": "octopus",
+    "thai": "ปลาหมึกยักษ์",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "eight arms, can change color",
+    "hintThai": "มีแปดแขน เปลี่ยนสีได้"
+  },
+  {
+    "word": "butterfly",
+    "thai": "ผีเสื้อ",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "starts as a caterpillar, colorful wings",
+    "hintThai": "เริ่มจากหนอน มีปีกสีสวย"
+  },
+  {
+    "word": "turtle",
+    "thai": "เต่า",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "slow mover with a hard shell on its back",
+    "hintThai": "เดินช้า มีกระดองแข็งบนหลัง"
+  },
+  {
+    "word": "cheetah",
+    "thai": "เสือชีตาห์",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "fastest land animal",
+    "hintThai": "สัตว์บกที่วิ่งเร็วที่สุด"
+  },
+  {
+    "word": "rhinoceros",
+    "thai": "แรด",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "large animal with a horn on its nose",
+    "hintThai": "สัตว์ใหญ่ มีเขาบนจมูก"
+  },
+  {
+    "word": "hippopotamus",
+    "thai": "ฮิปโป",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "huge river animal, opens mouth very wide",
+    "hintThai": "สัตว์น้ำขนาดใหญ่ อ้าปากกว้างมาก"
+  },
+  {
+    "word": "deer",
+    "thai": "กวาง",
+    "category": "Animals",
+    "level": "medium",
+    "hint": "graceful animal with antlers",
+    "hintThai": "สัตว์สง่างาม มีเขากิ่ง"
+  },
+  {
+    "word": "platypus",
+    "thai": "ตุ่นปากเป็ด",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "Australian mammal with a duck bill that lays eggs",
+    "hintThai": "สัตว์เลี้ยงลูกด้วยนมออสเตรเลีย ปากคล้ายเป็ด ออกไข่ได้"
+  },
+  {
+    "word": "pangolin",
+    "thai": "ลิ่น",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "covered in scales, rolls into a ball when scared",
+    "hintThai": "มีเกล็ดปกคลุม ม้วนตัวเป็นลูกบอลเมื่อกลัว"
+  },
+  {
+    "word": "capybara",
+    "thai": "คาปิบารา",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "world's largest rodent, looks like a giant guinea pig",
+    "hintThai": "สัตว์ฟันแทะที่ใหญ่ที่สุดในโลก หน้าตาคล้ายหนูตะเภายักษ์"
+  },
+  {
+    "word": "narwhal",
+    "thai": "นาร์วาล",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "arctic whale with a long spiral tusk",
+    "hintThai": "วาฬขั้วโลก มีงาเกลียวยาว"
+  },
+  {
+    "word": "axolotl",
+    "thai": "อาโซโลเติล",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "Mexican salamander that keeps its baby features forever",
+    "hintThai": "ซาลาแมนเดอร์เม็กซิกัน คงความเป็นตัวอ่อนตลอดชีวิต"
+  },
+  {
+    "word": "tapir",
+    "thai": "สมเสร็จ",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "pig-like animal with a short flexible snout",
+    "hintThai": "สัตว์คล้ายหมู จมูกสั้นยืดได้"
+  },
+  {
+    "word": "okapi",
+    "thai": "โอคาปิ",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "rainforest animal related to the giraffe, striped legs",
+    "hintThai": "สัตว์ป่าฝน ญาติยีราฟ มีขาลายทาง"
+  },
+  {
+    "word": "quokka",
+    "thai": "ควอกกา",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "small Australian marsupial famous for its smile",
+    "hintThai": "สัตว์มีถุงหน้าท้องออสเตรเลีย ขึ้นชื่อเรื่องยิ้ม"
+  },
+  {
+    "word": "meerkat",
+    "thai": "เมียร์แคท",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "small African animal that stands upright and watches for danger",
+    "hintThai": "สัตว์แอฟริกาตัวเล็ก ยืนตรงเฝ้าระวังภัย"
+  },
+  {
+    "word": "armadillo",
+    "thai": "อาร์มาดิลโล",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "armored mammal that rolls into a ball",
+    "hintThai": "สัตว์เลี้ยงลูกด้วยนมที่มีเกราะ ม้วนตัวได้"
+  },
+  {
+    "word": "chameleon",
+    "thai": "คาเมเลียน",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "lizard that changes color to match its surroundings",
+    "hintThai": "กิ้งก่าที่เปลี่ยนสีตามสภาพแวดล้อม"
+  },
+  {
+    "word": "manatee",
+    "thai": "พะยูน",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "gentle sea cow that grazes on underwater plants",
+    "hintThai": "สัตว์ทะเลอ่อนโยน กินพืชใต้น้ำ"
+  },
+  {
+    "word": "komodo dragon",
+    "thai": "มังกรโคโมโด",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "world's largest lizard from Indonesia",
+    "hintThai": "กิ้งก่าที่ใหญ่ที่สุดในโลก จากอินโดนีเซีย"
+  },
+  {
+    "word": "wolverine",
+    "thai": "วูล์ฟเวอรีน",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "fierce small predator related to the weasel",
+    "hintThai": "นักล่าตัวเล็กดุร้าย ญาติเฟอเรต"
+  },
+  {
+    "word": "mandrill",
+    "thai": "แมนดริล",
+    "category": "Animals",
+    "level": "hard",
+    "hint": "colorful-faced primate, the world's largest monkey",
+    "hintThai": "ไพรเมตหน้าสีสันสดใส ลิงที่ใหญ่ที่สุดในโลก"
   }
 ]
