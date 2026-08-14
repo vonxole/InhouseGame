@@ -51,14 +51,25 @@
 
       </div>
 
-      <!-- Bottom bar: Create + Headband -->
+      <!-- Bottom bar -->
       <div style="width:100%;padding:12px 16px 20px;border-top:1px solid var(--border);background:var(--bg);display:flex;flex-direction:column;gap:8px;">
-        <button class="btn btn-primary" onclick="showNameModal('create')" style="width:100%;font-size:1rem;">
-          🏠 Create a Room
-        </button>
         <button onclick="hbGoSetup()"
-          style="width:100%;padding:13px;border-radius:12px;border:1.5px solid #ca8a04;background:rgba(234,179,8,.08);color:#ca8a04;font-size:0.95rem;font-weight:700;cursor:pointer;">
-          🎯 คำบนหัว
+          style="width:100%;padding:14px 16px;border-radius:12px;border:1.5px solid #ca8a04;background:rgba(234,179,8,.08);color:#ca8a04;cursor:pointer;display:flex;align-items:center;gap:12px;text-align:left;">
+          <span style="font-size:1.6rem;line-height:1;">🎯</span>
+          <div style="flex:1;">
+            <div style="font-size:0.95rem;font-weight:700;">Guess Up</div>
+            <div style="font-size:0.75rem;opacity:.7;font-weight:400;margin-top:1px;">เล่นได้เลย ไม่ต้องจอย</div>
+          </div>
+          <span style="font-size:1rem;opacity:.5;">›</span>
+        </button>
+        <button onclick="showNameModal('create')"
+          style="width:100%;padding:14px 16px;border-radius:12px;border:1.5px solid var(--accent);background:rgba(124,58,237,.08);color:var(--accent);cursor:pointer;display:flex;align-items:center;gap:12px;text-align:left;">
+          <span style="font-size:1.6rem;line-height:1;">🏠</span>
+          <div style="flex:1;">
+            <div style="font-size:0.95rem;font-weight:700;">สร้างห้อง</div>
+            <div style="font-size:0.75rem;opacity:.7;font-weight:400;margin-top:1px;">เล่นกับเพื่อน ส่งโค้ดให้จอย</div>
+          </div>
+          <span style="font-size:1rem;opacity:.5;">›</span>
         </button>
       </div>
     </div>
@@ -471,7 +482,7 @@
     <div id="s-hb-setup" class="screen" style="justify-content:flex-start;gap:16px;overflow-y:auto;padding-bottom:32px;">
       <div style="display:flex;align-items:center;gap:10px;width:100%;padding-top:4px;">
         <button onclick="show('s-home')" style="background:transparent;border:none;color:var(--muted);font-size:1.1rem;cursor:pointer;padding:0;">←</button>
-        <h2 style="margin:0;font-size:1.2rem;">🎯 คำบนหัว</h2>
+        <h2 style="margin:0;font-size:1.2rem;">🎯 Guess Up</h2>
       </div>
 
       <!-- Players -->
