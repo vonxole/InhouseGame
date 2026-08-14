@@ -4,8 +4,8 @@ let _hbWords        = [];       // full word bank fetched from server
 let _hbPlayers      = [];       // [{ name }]
 let _hbScores       = [];       // [{ name, seconds }]
 let _hbCurrentIdx   = 0;
-let _hbCategory     = 'all';
-let _hbLevel        = 'all';
+let _hbCategories   = [];    // empty = all
+let _hbLevels       = [];    // empty = all
 let _hbHistory      = new Set();
 let _hbTimerInterval= null;
 let _hbTimerStart   = null;
@@ -24,11 +24,10 @@ async function hbGoSetup() {
   _hbPlayers    = [];
   _hbScores     = [];
   _hbHistory    = new Set();
-  _hbCategory   = 'all';
-  _hbLevel      = 'all';
+  _hbCategories = [];
+  _hbLevels     = [];
   hbRenderPlayerList();
-  hbSetCat('all');
-  hbSetLvl('all');
+  hbSyncPills();
   // Unmark float-bar for headband screens
   show('s-hb-setup');
   const bar = document.getElementById('float-bar');
@@ -69,31 +68,43 @@ function hbRenderPlayerList() {
   }
 }
 
-// ── Settings ──────────────────────────────────────────────────────────────────
-function hbSetCat(cat) {
-  _hbCategory = cat;
-  const ids = { all:'hbsp-cat-all', General:'hbsp-cat-general', Objects:'hbsp-cat-objects',
-    Characters:'hbsp-cat-characters', Cities:'hbsp-cat-cities', Drinks:'hbsp-cat-drinks',
-    Occupations:'hbsp-cat-occupations', 'Office & School':'hbsp-cat-office', Places:'hbsp-cat-places' };
-  Object.entries(ids).forEach(([k, id]) => {
-    const el = document.getElementById(id);
-    if (el) el.classList.toggle('active', k === cat);
-  });
+// ── Settings (multi-select) ───────────────────────────────────────────────────
+const HB_CAT_IDS = {
+  General:'hbsp-cat-general', Objects:'hbsp-cat-objects',
+  Characters:'hbsp-cat-characters', Cities:'hbsp-cat-cities', Drinks:'hbsp-cat-drinks',
+  Occupations:'hbsp-cat-occupations', 'Office & School':'hbsp-cat-office', Places:'hbsp-cat-places',
+};
+
+function hbToggleCat(cat) {
+  const idx = _hbCategories.indexOf(cat);
+  if (idx === -1) _hbCategories.push(cat);
+  else            _hbCategories.splice(idx, 1);
+  hbSyncPills();
 }
 
-function hbSetLvl(lvl) {
-  _hbLevel = lvl;
-  ['all','easy','medium','hard'].forEach(l => {
+function hbToggleLvl(lvl) {
+  const idx = _hbLevels.indexOf(lvl);
+  if (idx === -1) _hbLevels.push(lvl);
+  else            _hbLevels.splice(idx, 1);
+  hbSyncPills();
+}
+
+function hbSyncPills() {
+  Object.entries(HB_CAT_IDS).forEach(([cat, id]) => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('active', _hbCategories.includes(cat));
+  });
+  ['easy','medium','hard'].forEach(l => {
     const el = document.getElementById(`hbsp-lvl-${l}`);
-    if (el) el.classList.toggle('active', l === lvl);
+    if (el) el.classList.toggle('active', _hbLevels.includes(l));
   });
 }
 
 // ── Word picking ──────────────────────────────────────────────────────────────
 function hbPickWord() {
   let pool = _hbWords;
-  if (_hbCategory !== 'all') pool = pool.filter(w => w.category === _hbCategory);
-  if (_hbLevel    !== 'all') pool = pool.filter(w => w.level    === _hbLevel);
+  if (_hbCategories.length > 0) pool = pool.filter(w => _hbCategories.includes(w.category));
+  if (_hbLevels.length     > 0) pool = pool.filter(w => _hbLevels.includes(w.level));
   if (pool.length === 0) pool = _hbWords;
   let fresh = pool.filter(w => !_hbHistory.has(w.word));
   if (fresh.length === 0) { _hbHistory.clear(); fresh = pool; }
@@ -133,8 +144,8 @@ function hbShowTurn() {
 function hbBeginTurn() {
   const w = _hbCurrentWord;
   // Show word
-  document.getElementById('hb-word-thai').textContent  = w.thai  || '';
   document.getElementById('hb-word-en').textContent    = w.word  || '';
+  document.getElementById('hb-word-thai').textContent  = w.thai  || '';
   document.getElementById('hb-word-cat').textContent   = w.category || '';
   const lvlEl = document.getElementById('hb-word-level');
   if (lvlEl && w.level) {

@@ -490,27 +490,27 @@
       <div class="card" style="width:100%;gap:10px;display:flex;flex-direction:column;">
         <div style="font-size:0.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">หมวดหมู่</div>
         <div style="display:flex;flex-wrap:wrap;gap:6px;">
-          <button class="pill active" id="hbsp-cat-all"    onclick="hbSetCat('all')">ทั้งหมด</button>
-          <button class="pill" id="hbsp-cat-general"       onclick="hbSetCat('General')">General</button>
-          <button class="pill" id="hbsp-cat-objects"       onclick="hbSetCat('Objects')">Objects</button>
-          <button class="pill" id="hbsp-cat-characters"    onclick="hbSetCat('Characters')">Characters</button>
-          <button class="pill" id="hbsp-cat-cities"        onclick="hbSetCat('Cities')">Cities</button>
-          <button class="pill" id="hbsp-cat-drinks"        onclick="hbSetCat('Drinks')">Drinks</button>
-          <button class="pill" id="hbsp-cat-occupations"   onclick="hbSetCat('Occupations')">Occupations</button>
-          <button class="pill" id="hbsp-cat-office"        onclick="hbSetCat('Office & School')">Office</button>
-          <button class="pill" id="hbsp-cat-places"        onclick="hbSetCat('Places')">Places</button>
+          <button class="pill" id="hbsp-cat-general"       onclick="hbToggleCat('General')">General</button>
+          <button class="pill" id="hbsp-cat-objects"       onclick="hbToggleCat('Objects')">Objects</button>
+          <button class="pill" id="hbsp-cat-characters"    onclick="hbToggleCat('Characters')">Characters</button>
+          <button class="pill" id="hbsp-cat-cities"        onclick="hbToggleCat('Cities')">Cities</button>
+          <button class="pill" id="hbsp-cat-drinks"        onclick="hbToggleCat('Drinks')">Drinks</button>
+          <button class="pill" id="hbsp-cat-occupations"   onclick="hbToggleCat('Occupations')">Occupations</button>
+          <button class="pill" id="hbsp-cat-office"        onclick="hbToggleCat('Office & School')">Office</button>
+          <button class="pill" id="hbsp-cat-places"        onclick="hbToggleCat('Places')">Places</button>
         </div>
+        <div style="font-size:0.75rem;color:var(--muted);margin-top:2px;">ไม่เลือก = ใช้ทุกหมวด</div>
       </div>
 
       <!-- Difficulty -->
       <div class="card" style="width:100%;gap:10px;display:flex;flex-direction:column;">
         <div style="font-size:0.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">ระดับความยาก</div>
         <div style="display:flex;gap:6px;">
-          <button class="pill active" id="hbsp-lvl-all"    onclick="hbSetLvl('all')">ทั้งหมด</button>
-          <button class="pill" id="hbsp-lvl-easy"          onclick="hbSetLvl('easy')">ง่าย</button>
-          <button class="pill" id="hbsp-lvl-medium"        onclick="hbSetLvl('medium')">กลาง</button>
-          <button class="pill" id="hbsp-lvl-hard"          onclick="hbSetLvl('hard')">ยาก</button>
+          <button class="pill" id="hbsp-lvl-easy"   onclick="hbToggleLvl('easy')">Easy</button>
+          <button class="pill" id="hbsp-lvl-medium" onclick="hbToggleLvl('medium')">Medium</button>
+          <button class="pill" id="hbsp-lvl-hard"   onclick="hbToggleLvl('hard')">Hard</button>
         </div>
+        <div style="font-size:0.75rem;color:var(--muted);margin-top:2px;">ไม่เลือก = ใช้ทุกระดับ</div>
       </div>
 
       <button id="hb-setup-start-btn" class="btn btn-primary" onclick="hbStartGame()" disabled style="width:100%;opacity:.5;">
@@ -542,8 +542,8 @@
             <span id="hb-word-cat" style="font-size:0.82rem;color:var(--muted);background:rgba(255,255,255,.07);border-radius:20px;padding:3px 14px;"></span>
             <span id="hb-word-level" style="font-size:0.78rem;font-weight:600;border:1px solid;border-radius:20px;padding:2px 10px;"></span>
           </div>
-          <div id="hb-word-thai" style="font-size:4rem;font-weight:900;line-height:1.1;"></div>
-          <div id="hb-word-en"   style="font-size:1.8rem;font-weight:600;color:var(--muted);"></div>
+          <div id="hb-word-en"   style="font-size:4rem;font-weight:900;line-height:1.1;"></div>
+          <div id="hb-word-thai" style="font-size:1.6rem;font-weight:500;color:var(--muted);"></div>
         </div>
       </div>
 
