@@ -51,10 +51,14 @@
 
       </div>
 
-      <!-- Bottom bar: Create -->
-      <div style="width:100%;padding:12px 16px 20px;border-top:1px solid var(--border);background:var(--bg);">
+      <!-- Bottom bar: Create + Headband -->
+      <div style="width:100%;padding:12px 16px 20px;border-top:1px solid var(--border);background:var(--bg);display:flex;flex-direction:column;gap:8px;">
         <button class="btn btn-primary" onclick="showNameModal('create')" style="width:100%;font-size:1rem;">
           🏠 Create a Room
+        </button>
+        <button onclick="hbGoSetup()"
+          style="width:100%;padding:13px;border-radius:12px;border:1.5px solid #ca8a04;background:rgba(234,179,8,.08);color:#ca8a04;font-size:0.95rem;font-weight:700;cursor:pointer;">
+          🎯 คำบนหัว
         </button>
       </div>
     </div>
@@ -460,6 +464,119 @@
         <button class="btn btn-primary" onclick="socket.emit('mind_start')" style="width:100%;">🔄 เล่นใหม่</button>
         <button class="btn" onclick="socket.emit('mind_back_lobby')"
           style="width:100%;background:transparent;border:1.5px solid var(--border);color:var(--muted);">← กลับ Lobby</button>
+      </div>
+    </div>
+
+    <!-- HEADBAND SETUP ────────────────────────────────────────────────────────── -->
+    <div id="s-hb-setup" class="screen" style="justify-content:flex-start;gap:16px;overflow-y:auto;padding-bottom:32px;">
+      <div style="display:flex;align-items:center;gap:10px;width:100%;padding-top:4px;">
+        <button onclick="show('s-home')" style="background:transparent;border:none;color:var(--muted);font-size:1.1rem;cursor:pointer;padding:0;">←</button>
+        <h2 style="margin:0;font-size:1.2rem;">🎯 คำบนหัว</h2>
+      </div>
+
+      <!-- Players -->
+      <div class="card" style="width:100%;gap:10px;display:flex;flex-direction:column;">
+        <div style="font-size:0.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">ผู้เล่น</div>
+        <div id="hb-player-list" style="display:flex;flex-direction:column;gap:6px;"></div>
+        <div style="display:flex;gap:8px;margin-top:2px;">
+          <input id="hb-player-input" type="text" placeholder="ชื่อผู้เล่น" maxlength="16" autocomplete="off"
+            style="flex:1;font-size:0.95rem;" onkeydown="if(event.key==='Enter')hbAddPlayer()">
+          <button onclick="hbAddPlayer()"
+            style="padding:10px 16px;border-radius:10px;border:none;background:rgba(202,138,4,.2);color:#ca8a04;font-weight:700;cursor:pointer;">+ เพิ่ม</button>
+        </div>
+      </div>
+
+      <!-- Category -->
+      <div class="card" style="width:100%;gap:10px;display:flex;flex-direction:column;">
+        <div style="font-size:0.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">หมวดหมู่</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <button class="pill active" id="hbsp-cat-all"    onclick="hbSetCat('all')">ทั้งหมด</button>
+          <button class="pill" id="hbsp-cat-general"       onclick="hbSetCat('General')">General</button>
+          <button class="pill" id="hbsp-cat-objects"       onclick="hbSetCat('Objects')">Objects</button>
+          <button class="pill" id="hbsp-cat-characters"    onclick="hbSetCat('Characters')">Characters</button>
+          <button class="pill" id="hbsp-cat-cities"        onclick="hbSetCat('Cities')">Cities</button>
+          <button class="pill" id="hbsp-cat-drinks"        onclick="hbSetCat('Drinks')">Drinks</button>
+          <button class="pill" id="hbsp-cat-occupations"   onclick="hbSetCat('Occupations')">Occupations</button>
+          <button class="pill" id="hbsp-cat-office"        onclick="hbSetCat('Office & School')">Office</button>
+          <button class="pill" id="hbsp-cat-places"        onclick="hbSetCat('Places')">Places</button>
+        </div>
+      </div>
+
+      <!-- Difficulty -->
+      <div class="card" style="width:100%;gap:10px;display:flex;flex-direction:column;">
+        <div style="font-size:0.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">ระดับความยาก</div>
+        <div style="display:flex;gap:6px;">
+          <button class="pill active" id="hbsp-lvl-all"    onclick="hbSetLvl('all')">ทั้งหมด</button>
+          <button class="pill" id="hbsp-lvl-easy"          onclick="hbSetLvl('easy')">ง่าย</button>
+          <button class="pill" id="hbsp-lvl-medium"        onclick="hbSetLvl('medium')">กลาง</button>
+          <button class="pill" id="hbsp-lvl-hard"          onclick="hbSetLvl('hard')">ยาก</button>
+        </div>
+      </div>
+
+      <button id="hb-setup-start-btn" class="btn btn-primary" onclick="hbStartGame()" disabled style="width:100%;opacity:.5;">
+        ▶ เริ่มเกม
+      </button>
+    </div>
+
+    <!-- HEADBAND TURN ─────────────────────────────────────────────────────────── -->
+    <div id="s-hb-turn" class="screen" style="justify-content:space-between;padding:20px 20px 36px;gap:0;">
+
+      <!-- Top: name + timer -->
+      <div style="display:flex;justify-content:space-between;align-items:center;width:100%;">
+        <div id="hb-whose-turn" style="font-size:1rem;font-weight:700;color:#ca8a04;"></div>
+        <div id="hb-timer" style="font-size:1.5rem;font-weight:800;font-variant-numeric:tabular-nums;color:var(--muted);">0:00</div>
+      </div>
+
+      <!-- Word area (hidden before start, shown after) -->
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;width:100%;">
+        <!-- Before start: instruction -->
+        <div id="hb-pre-start" style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+          <div style="font-size:4rem;">🤔</div>
+          <p style="font-size:0.9rem;color:var(--muted);max-width:260px;line-height:1.6;margin:0;">
+            วางหน้าจอบนหัว หรือหันหน้าจอออก<br>แล้วให้คนอื่นกด <strong style="color:#ca8a04;">เริ่ม</strong>
+          </p>
+        </div>
+        <!-- After start: word -->
+        <div id="hb-word-area" style="display:none;flex-direction:column;align-items:center;gap:12px;width:100%;">
+          <div style="display:flex;gap:8px;align-items:center;">
+            <span id="hb-word-cat" style="font-size:0.82rem;color:var(--muted);background:rgba(255,255,255,.07);border-radius:20px;padding:3px 14px;"></span>
+            <span id="hb-word-level" style="font-size:0.78rem;font-weight:600;border:1px solid;border-radius:20px;padding:2px 10px;"></span>
+          </div>
+          <div id="hb-word-thai" style="font-size:4rem;font-weight:900;line-height:1.1;"></div>
+          <div id="hb-word-en"   style="font-size:1.8rem;font-weight:600;color:var(--muted);"></div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div style="display:flex;flex-direction:column;gap:10px;width:100%;">
+        <button id="hb-btn-start" onclick="hbBeginTurn()"
+          style="width:100%;padding:20px;border-radius:14px;border:none;background:linear-gradient(135deg,#ca8a04,#a16207);color:#fff;font-size:1.2rem;font-weight:800;cursor:pointer;">
+          ▶ เริ่มจับเวลา
+        </button>
+        <button id="hb-btn-stop" onclick="hbStopTurn()" style="display:none;
+          width:100%;padding:20px;border-radius:14px;border:none;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-size:1.3rem;font-weight:800;cursor:pointer;">
+          ✓ ถูกแล้ว! หยุดเวลา
+        </button>
+      </div>
+    </div>
+
+    <!-- HEADBAND TURN DONE ────────────────────────────────────────────────────── -->
+    <div id="s-hb-turn-done" class="screen" style="justify-content:center;gap:20px;">
+      <div style="font-size:3.5rem;text-align:center;">⏱️</div>
+      <div id="hb-done-name" style="font-size:1.1rem;font-weight:700;text-align:center;color:#ca8a04;"></div>
+      <div id="hb-done-time" style="font-size:4.5rem;font-weight:900;text-align:center;"></div>
+      <button class="btn btn-primary" onclick="hbNextTurn()" style="width:100%;max-width:280px;">คนถัดไป →</button>
+    </div>
+
+    <!-- HEADBAND RESULT ───────────────────────────────────────────────────────── -->
+    <div id="s-hb-result" class="screen" style="justify-content:center;gap:20px;">
+      <div style="font-size:3.5rem;text-align:center;">🏆</div>
+      <div style="font-size:1.5rem;font-weight:800;text-align:center;">ผลการแข่งขัน</div>
+      <div class="card" id="hb-leaderboard" style="width:100%;max-width:320px;"></div>
+      <div style="display:flex;flex-direction:column;gap:10px;width:100%;max-width:280px;">
+        <button class="btn btn-primary" onclick="hbRestartGame()" style="width:100%;">🔄 เล่นใหม่</button>
+        <button class="btn" onclick="show('s-hb-setup')"
+          style="width:100%;background:transparent;border:1.5px solid var(--border);color:var(--muted);">⚙️ ตั้งค่าใหม่</button>
       </div>
     </div>
 
@@ -1460,6 +1577,7 @@
   <script src="/js/games/spyfall.js"></script>
   <script src="/js/games/ito.js"></script>
   <script src="/js/games/mind.js"></script>
+  <script src="/js/games/headband.js"></script>
 </body>
 
 </html>

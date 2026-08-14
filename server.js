@@ -11,6 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const START_TIME = new Date();
 app.get('/api/version', (_, res) => res.json({ startedAt: START_TIME.toISOString() }));
+app.get('/api/words',   (_, res) => res.json(WORD_BANK));
 
 // ── Word Bank ─────────────────────────────────────────────────────────────────
 const WORD_BANK = require('./words.json');
@@ -44,6 +45,16 @@ function createRoom(hostId, hostName, gameType = 'insider', roomName = '') {
       playTime: 300,
       locations: [], realLocation: null, spyId: null,
       accusedId: null, spyGuess: null, outcome: null,
+    };
+  } else if (gameType === 'headband') {
+    rooms[code] = {
+      ...base,
+      hbCategory: 'all',
+      hbLevel:    'all',
+      hbWord:     null,
+      hbScore:    0,
+      hbSkipped:  0,
+      hbHistory:  [],
     };
   } else if (gameType === 'mind') {
     rooms[code] = {
@@ -118,6 +129,7 @@ gameModules.insider  = require('./games/insider')(io, rooms, { getRoom, pickWord
 gameModules.spyfall  = require('./games/spyfall')(io, rooms, { getRoom, broadcastRoomList });
 gameModules.ito      = require('./games/ito')(io, rooms, { getRoom });
 gameModules.mind     = require('./games/mind')(io, rooms, { getRoom });
+// headband is client-side only — no server module needed
 
 // ── Socket Events ─────────────────────────────────────────────────────────────
 io.on('connection', (socket) => {
