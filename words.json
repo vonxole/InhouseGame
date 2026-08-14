@@ -2,7 +2,7 @@
   {
     "word": "rain",
     "thai": "ฝน",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "water falling from the sky",
     "hintThai": "น้ำที่ตกจากท้องฟ้า",
@@ -12,7 +12,7 @@
   {
     "word": "smile",
     "thai": "รอยยิ้ม",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "expression of happiness on your face",
     "hintThai": "การแสดงออกถึงความสุขบนใบหน้า",
@@ -22,7 +22,7 @@
   {
     "word": "money",
     "thai": "เงิน",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "used to buy things",
     "hintThai": "ใช้ซื้อสิ่งของต่างๆ",
@@ -32,7 +32,7 @@
   {
     "word": "dream",
     "thai": "ความฝัน",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "happens while you sleep",
     "hintThai": "เกิดขึ้นขณะที่คุณนอนหลับ",
@@ -42,7 +42,7 @@
   {
     "word": "music",
     "thai": "ดนตรี",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "you listen to it",
     "hintThai": "คุณฟังมัน",
@@ -52,7 +52,7 @@
   {
     "word": "birthday",
     "thai": "วันเกิด",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "a special day once a year",
     "hintThai": "วันพิเศษที่เกิดปีละครั้ง",
@@ -62,7 +62,7 @@
   {
     "word": "holiday",
     "thai": "วันหยุด",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "a day off from work or school",
     "hintThai": "วันหยุดจากการทำงานหรือโรงเรียน",
@@ -72,7 +72,7 @@
   {
     "word": "shadow",
     "thai": "เงา",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "a dark shape made by blocking light",
     "hintThai": "รูปทรงสีเข้มที่เกิดจากการบังแสง",
@@ -82,7 +82,7 @@
   {
     "word": "secret",
     "thai": "ความลับ",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "something you do not tell others",
     "hintThai": "สิ่งที่คุณไม่บอกคนอื่น",
@@ -92,7 +92,7 @@
   {
     "word": "habit",
     "thai": "นิสัย / ความเคยชิน",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "something you do regularly without thinking",
     "hintThai": "สิ่งที่คุณทำเป็นประจำโดยไม่ต้องคิด",
@@ -102,7 +102,7 @@
   {
     "word": "tradition",
     "thai": "ประเพณี",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "a custom passed down through generations",
     "hintThai": "สิ่งที่สืบทอดและปฏิบัติมาจากรุ่นสู่รุ่น",
@@ -112,7 +112,7 @@
   {
     "word": "rumor",
     "thai": "ข่าวลือ",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "unverified information that spreads quickly",
     "hintThai": "ข่าวลือที่ยังไม่ได้รับการพิสูจน์",
@@ -122,7 +122,7 @@
   {
     "word": "patience",
     "thai": "ความอดทน",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "ability to wait calmly",
     "hintThai": "ความสามารถในการรอโดยไม่รำคาญ",
@@ -132,7 +132,7 @@
   {
     "word": "jealousy",
     "thai": "ความอิจฉา",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "feeling when you want what others have",
     "hintThai": "ความรู้สึกไม่พอใจเมื่อเห็นคนอื่นมีสิ่งที่ตัวเองอยากได้",
@@ -142,7 +142,7 @@
   {
     "word": "freedom",
     "thai": "อิสรภาพ",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "the right to do what you want",
     "hintThai": "ความสามารถในการทำสิ่งที่ต้องการโดยไม่ถูกจำกัด",
@@ -152,7 +152,7 @@
   {
     "word": "adventure",
     "thai": "การผจญภัย",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "an exciting or unusual experience",
     "hintThai": "การเดินทางหรือกิจกรรมที่น่าตื่นเต้น",
@@ -162,7 +162,7 @@
   {
     "word": "coincidence",
     "thai": "ความบังเอิญ",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "two things happening by chance at the same time",
     "hintThai": "สิ่งที่เกิดขึ้นพร้อมกันโดยบังเอิญ",
@@ -172,7 +172,7 @@
   {
     "word": "deadline",
     "thai": "กำหนดเส้นตาย",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "the last time something must be finished",
     "hintThai": "วันหรือเวลาสุดท้ายที่ต้องส่งงาน",
@@ -182,7 +182,7 @@
   {
     "word": "influence",
     "thai": "อิทธิพล",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "the power to affect others",
     "hintThai": "ความสามารถในการส่งผลต่อความคิดหรือการกระทำของคนอื่น",
@@ -192,7 +192,7 @@
   {
     "word": "reputation",
     "thai": "ชื่อเสียง",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "what people think of you",
     "hintThai": "สิ่งที่คนอื่นคิดและพูดถึงคุณ",
@@ -202,7 +202,7 @@
   {
     "word": "procrastination",
     "thai": "การผัดวันประกันพรุ่ง",
-    "category": "General",
+    "category": "Concepts",
     "level": "hard",
     "hint": "delaying tasks you should do now",
     "hintThai": "การผัดผ่อนงานออกไปเรื่อยๆ",
@@ -212,7 +212,7 @@
   {
     "word": "nostalgia",
     "thai": "ความคิดถึงอดีต",
-    "category": "General",
+    "category": "Concepts",
     "level": "hard",
     "hint": "longing for the past",
     "hintThai": "ความคิดถึงอดีตที่ผ่านมา",
@@ -222,7 +222,7 @@
   {
     "word": "sarcasm",
     "thai": "การเสียดสี / ประชด",
-    "category": "General",
+    "category": "Concepts",
     "level": "hard",
     "hint": "saying the opposite of what you mean",
     "hintThai": "การพูดตรงข้ามกับที่หมายความ มักใช้ประชดประชัน",
@@ -232,7 +232,7 @@
   {
     "word": "empathy",
     "thai": "ความเห็นอกเห็นใจ",
-    "category": "General",
+    "category": "Concepts",
     "level": "hard",
     "hint": "understanding how others feel",
     "hintThai": "ความสามารถในการเข้าใจความรู้สึกของผู้อื่น",
@@ -242,7 +242,7 @@
   {
     "word": "ambiguity",
     "thai": "ความคลุมเครือ",
-    "category": "General",
+    "category": "Concepts",
     "level": "hard",
     "hint": "when something has more than one meaning",
     "hintThai": "สิ่งที่มีความหมายได้หลายแบบ ไม่ชัดเจน",
@@ -252,7 +252,7 @@
   {
     "word": "phenomenon",
     "thai": "ปรากฏการณ์",
-    "category": "General",
+    "category": "Concepts",
     "level": "hard",
     "hint": "a remarkable observable fact or event",
     "hintThai": "เหตุการณ์หรือสิ่งที่สังเกตเห็นได้และน่าสนใจ",
@@ -262,7 +262,7 @@
   {
     "word": "perseverance",
     "thai": "ความพากเพียร",
-    "category": "General",
+    "category": "Concepts",
     "level": "hard",
     "hint": "continuing despite difficulty",
     "hintThai": "ความมุ่งมั่นทำต่อไปแม้จะเจอความยากลำบาก",
@@ -272,7 +272,7 @@
   {
     "word": "subconscious",
     "thai": "จิตใต้สำนึก",
-    "category": "General",
+    "category": "Concepts",
     "level": "hard",
     "hint": "thoughts you are not fully aware of",
     "hintThai": "ส่วนของจิตใจที่ทำงานโดยที่เราไม่รู้ตัว",
@@ -282,7 +282,7 @@
   {
     "word": "hunger",
     "thai": "ความหิว",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "the feeling when you need food",
     "hintThai": "ความรู้สึกอยากกินอาหารเมื่อท้องว่าง",
@@ -292,7 +292,7 @@
   {
     "word": "sleep",
     "thai": "การนอนหลับ",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "what your body does at night to rest",
     "hintThai": "สภาวะพักผ่อนที่ร่างกายและจิตใจหยุดทำงานชั่วคราว",
@@ -302,7 +302,7 @@
   {
     "word": "laugh",
     "thai": "เสียงหัวเราะ",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "a sound you make when something is funny",
     "hintThai": "เสียงที่เกิดขึ้นเมื่อรู้สึกสนุกหรือขบขัน",
@@ -312,7 +312,7 @@
   {
     "word": "speed",
     "thai": "ความเร็ว",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "how fast something moves",
     "hintThai": "ความเร็วในการเคลื่อนที่",
@@ -322,7 +322,7 @@
   {
     "word": "color",
     "thai": "สี",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "what your eyes see — red, blue, green…",
     "hintThai": "คุณสมบัติของแสงที่ตาเราเห็น เช่น แดง น้ำเงิน เขียว",
@@ -332,7 +332,7 @@
   {
     "word": "luck",
     "thai": "โชค",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "good things that happen by chance",
     "hintThai": "สิ่งที่เกิดขึ้นโดยบังเอิญในทางดี",
@@ -342,7 +342,7 @@
   {
     "word": "pain",
     "thai": "ความเจ็บปวด",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "an unpleasant feeling from injury",
     "hintThai": "ความรู้สึกเจ็บปวดทางร่างกายหรือจิตใจ",
@@ -352,7 +352,7 @@
   {
     "word": "fire",
     "thai": "ไฟ",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "hot and bright, it burns things",
     "hintThai": "ปรากฏการณ์ที่เกิดจากการเผาไหม้ ให้ความร้อนและแสง",
@@ -362,7 +362,7 @@
   {
     "word": "noise",
     "thai": "เสียงรบกวน",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "an unwanted or loud sound",
     "hintThai": "เสียงดังที่ไม่พึงประสงค์",
@@ -372,7 +372,7 @@
   {
     "word": "gift",
     "thai": "ของขวัญ",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "something you give someone on a special occasion",
     "hintThai": "สิ่งที่มอบให้กันเพื่อแสดงความรัก",
@@ -382,7 +382,7 @@
   {
     "word": "silence",
     "thai": "ความเงียบ",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "complete absence of sound",
     "hintThai": "ความเงียบ ไม่มีเสียงใดๆ",
@@ -392,7 +392,7 @@
   {
     "word": "memory",
     "thai": "ความทรงจำ",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "something you remember from the past",
     "hintThai": "สิ่งที่คุณจำไว้ในความทรงจำ",
@@ -402,7 +402,7 @@
   {
     "word": "fear",
     "thai": "ความกลัว",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "a feeling when you are scared",
     "hintThai": "ความรู้สึกเมื่อเจอสิ่งน่ากลัว",
@@ -412,7 +412,7 @@
   {
     "word": "sunset",
     "thai": "พระอาทิตย์ตก",
-    "category": "General",
+    "category": "Concepts",
     "level": "easy",
     "hint": "when the sun goes below the horizon in the evening",
     "hintThai": "ช่วงเวลาที่ดวงอาทิตย์ตกลงใต้ขอบฟ้าในตอนเย็น",
@@ -422,7 +422,7 @@
   {
     "word": "competition",
     "thai": "การแข่งขัน",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "trying to win against others",
     "hintThai": "การแข่งขันเพื่อชิงชัยเป็นผู้ชนะ",
@@ -432,7 +432,7 @@
   {
     "word": "consequence",
     "thai": "ผลที่ตามมา",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "what happens as a result of an action",
     "hintThai": "สิ่งที่เกิดขึ้นตามหลังจากการกระทำ",
@@ -442,7 +442,7 @@
   {
     "word": "obsession",
     "thai": "ความหมกมุ่น",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "when you think about one thing constantly",
     "hintThai": "ความคิดหรือความต้องการที่ครอบงำจิตใจอย่างรุนแรง",
@@ -452,7 +452,7 @@
   {
     "word": "sacrifice",
     "thai": "การเสียสละ",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "giving up something valuable for a purpose",
     "hintThai": "การยอมเสียสิ่งที่มีค่าเพื่อสิ่งที่สำคัญกว่า",
@@ -462,7 +462,7 @@
   {
     "word": "motivation",
     "thai": "แรงจูงใจ",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "what drives you to do something",
     "hintThai": "แรงกระตุ้นที่ทำให้อยากทำสิ่งต่างๆ",
@@ -472,7 +472,7 @@
   {
     "word": "stereotype",
     "thai": "อคติ / ภาพจำ",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "a fixed idea about a group of people",
     "hintThai": "ความเชื่อตายตัวเกี่ยวกับกลุ่มคน โดยไม่คำนึงถึงความแตกต่างของแต่ละคน",
@@ -482,7 +482,7 @@
   {
     "word": "illusion",
     "thai": "ภาพลวงตา / มายา",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "something that appears real but is not",
     "hintThai": "สิ่งที่ดูเหมือนจริงแต่ไม่ใช่ความจริง",
@@ -492,7 +492,7 @@
   {
     "word": "routine",
     "thai": "กิจวัตร",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "a set of activities you do regularly in order",
     "hintThai": "กิจกรรมที่ทำซ้ำในลำดับเดิมทุกวัน",
@@ -502,7 +502,7 @@
   {
     "word": "crisis",
     "thai": "วิกฤต",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "a very dangerous or difficult situation",
     "hintThai": "สถานการณ์เร่งด่วนและอันตรายที่ต้องแก้ไขทันที",
@@ -512,7 +512,7 @@
   {
     "word": "negotiation",
     "thai": "การเจรจา",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "a discussion to reach an agreement",
     "hintThai": "การพูดคุยเพื่อหาข้อตกลงที่ทั้งสองฝ่ายยอมรับ",
@@ -522,7 +522,7 @@
   {
     "word": "temptation",
     "thai": "การล่อใจ",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "a strong urge to do something you should avoid",
     "hintThai": "สิ่งที่ดึงดูดให้ทำในสิ่งที่อาจไม่ดี",
@@ -532,7 +532,7 @@
   {
     "word": "expectations",
     "thai": "ความคาดหวัง",
-    "category": "General",
+    "category": "Concepts",
     "level": "medium",
     "hint": "what you believe will or should happen",
     "hintThai": "สิ่งที่คาดหวังว่าจะเกิดขึ้น",
@@ -542,7 +542,7 @@
   {
     "word": "cognitive bias",
     "thai": "อคติทางความคิด",
-    "category": "General",
+    "category": "Concepts",
     "level": "hard",
     "hint": "systematic errors in thinking that affect decisions",
     "hintThai": "รูปแบบความคิดที่เบี่ยงเบนจากความเป็นจริงโดยไม่รู้ตัว",
@@ -552,7 +552,7 @@
   {
     "word": "paradox",
     "thai": "ความขัดแย้งในตัวเอง",
-    "category": "General",
+    "category": "Concepts",
     "level": "hard",
     "hint": "a statement that seems contradictory but may be true",
     "hintThai": "สิ่งที่ขัดแย้งกันในตัวเองแต่อาจเป็นจริง",
@@ -562,7 +562,7 @@
   {
     "word": "bureaucracy",
     "thai": "ระบบราชการ",
-    "category": "General",
+    "category": "Concepts",
     "level": "hard",
     "hint": "a complex system of rules and processes in organizations",
     "hintThai": "ระบบราชการที่มีขั้นตอนมากและซับซ้อน",
@@ -572,7 +572,7 @@
   {
     "word": "manipulation",
     "thai": "การบิดเบือน / ชักใย",
-    "category": "General",
+    "category": "Concepts",
     "level": "hard",
     "hint": "controlling someone unfairly for your own benefit",
     "hintThai": "การควบคุมหรือชักจูงคนอื่นอย่างแนบเนียน",
@@ -582,7 +582,7 @@
   {
     "word": "transparency",
     "thai": "ความโปร่งใส",
-    "category": "General",
+    "category": "Concepts",
     "level": "hard",
     "hint": "being open and honest with nothing hidden",
     "hintThai": "ความโปร่งใส ไม่ปิดบังข้อมูล",
@@ -592,7 +592,7 @@
   {
     "word": "accountability",
     "thai": "ความรับผิดชอบต่อสังคม",
-    "category": "General",
+    "category": "Concepts",
     "level": "hard",
     "hint": "being responsible and answerable for your actions",
     "hintThai": "ความรับผิดชอบต่อการกระทำและผลลัพธ์",
@@ -1172,7 +1172,7 @@
   {
     "word": "thermometer",
     "thai": "เทอร์โมมิเตอร์",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "easy",
     "hint": "measures temperature",
     "hintThai": "อุปกรณ์วัดอุณหภูมิ",
@@ -1182,7 +1182,7 @@
   {
     "word": "compass",
     "thai": "เข็มทิศ",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "shows which direction is north",
     "hintThai": "เครื่องมือบอกทิศทาง ชี้ไปทางเหนือเสมอ",
@@ -1192,7 +1192,7 @@
   {
     "word": "telescope",
     "thai": "กล้องโทรทรรศน์",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "makes distant things look close",
     "hintThai": "อุปกรณ์ที่ทำให้มองเห็นสิ่งที่อยู่ไกลๆ ได้ชัด",
@@ -1202,7 +1202,7 @@
   {
     "word": "magnifying glass",
     "thai": "แว่นขยาย",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "makes small things appear larger",
     "hintThai": "แว่นขยายสำหรับดูสิ่งเล็กให้ใหญ่ขึ้น",
@@ -1222,7 +1222,7 @@
   {
     "word": "blueprint",
     "thai": "แบบแปลนสิ่งก่อสร้าง",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "a detailed technical drawing of a building",
     "hintThai": "แบบแปลนทางเทคนิคสำหรับสร้างอาคารหรือสิ่งของ",
@@ -1232,7 +1232,7 @@
   {
     "word": "hourglass",
     "thai": "นาฬิกาทราย",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "measures time using falling sand",
     "hintThai": "อุปกรณ์วัดเวลาด้วยทรายที่ไหลผ่านรูแคบ",
@@ -1242,7 +1242,7 @@
   {
     "word": "barcode",
     "thai": "บาร์โค้ด",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "black and white lines that store product info",
     "hintThai": "เส้นดำขาวที่เครื่องสแกนอ่านเพื่อระบุสินค้า",
@@ -1252,7 +1252,7 @@
   {
     "word": "metronome",
     "thai": "เมโทรนอม",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "a device that keeps a steady beat for music",
     "hintThai": "อุปกรณ์ที่เคาะจังหวะสม่ำเสมอสำหรับนักดนตรี",
@@ -1262,7 +1262,7 @@
   {
     "word": "stethoscope",
     "thai": "หูฟังแพทย์",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "doctors use it to listen to your heart",
     "hintThai": "อุปกรณ์ฟังเสียงหัวใจและปอดของแพทย์",
@@ -1272,7 +1272,7 @@
   {
     "word": "protractor",
     "thai": "ไม้วัดมุม",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "a semicircular tool for measuring angles",
     "hintThai": "อุปกรณ์วัดมุมเป็นรูปครึ่งวงกลม",
@@ -1282,7 +1282,7 @@
   {
     "word": "defibrillator",
     "thai": "เครื่องกระตุ้นหัวใจ",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "hard",
     "hint": "a device that restarts a stopped heart with electricity",
     "hintThai": "เครื่องกระตุ้นหัวใจด้วยไฟฟ้าในกรณีฉุกเฉิน",
@@ -1292,7 +1292,7 @@
   {
     "word": "periscope",
     "thai": "กล้องเพอริสโคป",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "hard",
     "hint": "a tube with mirrors used in submarines to see above water",
     "hintThai": "ท่อที่ใช้มองสิ่งที่อยู่นอกสายตาโดยตรง เช่น ในเรือดำน้ำ",
@@ -1302,7 +1302,7 @@
   {
     "word": "sextant",
     "thai": "เครื่องวัดมุมดาว",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "hard",
     "hint": "an instrument used to navigate by measuring stars",
     "hintThai": "เครื่องมือนำทางทางทะเลที่วัดตำแหน่งดวงดาว",
@@ -1312,7 +1312,7 @@
   {
     "word": "spectrometer",
     "thai": "สเปกโตรมิเตอร์",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "hard",
     "hint": "a device that analyzes light wavelengths",
     "hintThai": "เครื่องมือวิเคราะห์แสงเพื่อระบุองค์ประกอบทางเคมี",
@@ -1322,7 +1322,7 @@
   {
     "word": "oscilloscope",
     "thai": "ออสซิลโลสโคป",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "hard",
     "hint": "shows electrical signals as waves on a screen",
     "hintThai": "เครื่องมือแสดงรูปคลื่นไฟฟ้าบนหน้าจอ",
@@ -1332,7 +1332,7 @@
   {
     "word": "spirometer",
     "thai": "เครื่องวัดสมรรถภาพปอด",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "hard",
     "hint": "measures how much air your lungs can hold",
     "hintThai": "เครื่องมือวัดปริมาณอากาศในปอด",
@@ -1372,7 +1372,7 @@
   {
     "word": "remote control",
     "thai": "รีโมตคอนโทรล",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "easy",
     "hint": "a device to operate a TV or AC from a distance",
     "hintThai": "อุปกรณ์ควบคุมโทรทัศน์หรืออุปกรณ์จากระยะไกล",
@@ -1412,7 +1412,7 @@
   {
     "word": "battery",
     "thai": "แบตเตอรี่",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "easy",
     "hint": "stores energy to power devices",
     "hintThai": "แหล่งพลังงานสำหรับอุปกรณ์ไฟฟ้า",
@@ -1462,7 +1462,7 @@
   {
     "word": "handcuffs",
     "thai": "กุญแจมือ",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "metal rings police use to restrain a person's wrists",
     "hintThai": "กุญแจมือสำหรับตรึงข้อมือ",
@@ -1472,7 +1472,7 @@
   {
     "word": "binoculars",
     "thai": "กล้องส่องทางไกล",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "two telescopes joined together to see far away",
     "hintThai": "กล้องส่องทางไกลที่มองด้วยตาสองข้าง",
@@ -1482,7 +1482,7 @@
   {
     "word": "safe",
     "thai": "ตู้เซฟ",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "a locked metal box for storing valuables",
     "hintThai": "กล่องโลหะแข็งแรงสำหรับเก็บของมีค่า",
@@ -1492,7 +1492,7 @@
   {
     "word": "polygraph",
     "thai": "เครื่องจับเท็จ",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "a machine used to detect if someone is lying",
     "hintThai": "เครื่องจับเท็จที่วัดสัญญาณร่างกายขณะตอบคำถาม",
@@ -1502,7 +1502,7 @@
   {
     "word": "USB drive",
     "thai": "แฟลชไดรฟ์",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "a small device you plug in to store files",
     "hintThai": "อุปกรณ์เก็บข้อมูลขนาดเล็กเสียบเข้าคอมพิวเตอร์",
@@ -1512,7 +1512,7 @@
   {
     "word": "padlock",
     "thai": "กุญแจคล้อง",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "a portable lock with a metal loop",
     "hintThai": "กุญแจแบบห่วงที่ล็อคแยกจากประตู",
@@ -1522,7 +1522,7 @@
   {
     "word": "walkie-talkie",
     "thai": "วิทยุสื่อสาร",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "a handheld two-way radio",
     "hintThai": "วิทยุสื่อสารพกพาแบบกดพูด",
@@ -1532,7 +1532,7 @@
   {
     "word": "fire extinguisher",
     "thai": "ถังดับเพลิง",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "medium",
     "hint": "a canister used to spray foam or gas on fires",
     "hintThai": "ถังดับเพลิงสำหรับดับไฟเบื้องต้น",
@@ -1562,7 +1562,7 @@
   {
     "word": "listening device",
     "thai": "อุปกรณ์盗听",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "hard",
     "hint": "a hidden microphone used to spy on conversations",
     "hintThai": "อุปกรณ์盗聴ที่ซ่อนไว้เพื่อดักฟัง",
@@ -1572,7 +1572,7 @@
   {
     "word": "body cam",
     "thai": "กล้องติดตัว",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "hard",
     "hint": "a small camera worn on the body to record events",
     "hintThai": "กล้องวิดีโอขนาดเล็กที่ตำรวจติดที่ตัวขณะปฏิบัติงาน",
@@ -1582,7 +1582,7 @@
   {
     "word": "night-vision goggles",
     "thai": "แว่นตามองกลางคืน",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "hard",
     "hint": "eyewear that lets you see in the dark",
     "hintThai": "แว่นตาพิเศษที่มองเห็นได้ในความมืด",
@@ -1592,7 +1592,7 @@
   {
     "word": "silencer",
     "thai": "ตัวเก็บเสียงปืน",
-    "category": "Objects",
+    "category": "Gadgets & Tools",
     "level": "hard",
     "hint": "a device attached to a gun to reduce the sound",
     "hintThai": "อุปกรณ์ที่ทำให้เสียงปืนเบาลง",
@@ -2142,7 +2142,7 @@
   {
     "word": "Eiffel Tower",
     "thai": "หอไอเฟล",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "easy",
     "hint": "a famous iron tower in Paris, France",
     "hintThai": "หอเหล็กสัญลักษณ์ของกรุงปารีส ฝรั่งเศส",
@@ -2152,7 +2152,7 @@
   {
     "word": "Great Wall",
     "thai": "กำแพงเมืองจีน",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "easy",
     "hint": "a very long ancient wall across northern China",
     "hintThai": "กำแพงยาวหลายพันกิโลเมตรที่สร้างในประเทศจีน",
@@ -2162,7 +2162,7 @@
   {
     "word": "Colosseum",
     "thai": "โคลอสเซียม",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "easy",
     "hint": "an ancient Roman arena used for gladiator fights",
     "hintThai": "สนามกีฬาโบราณขนาดใหญ่ในกรุงโรม อิตาลี",
@@ -2172,7 +2172,7 @@
   {
     "word": "Statue of Liberty",
     "thai": "เทพีเสรีภาพ",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "easy",
     "hint": "a giant green copper statue in New York harbor",
     "hintThai": "รูปปั้นสัญลักษณ์แห่งเสรีภาพที่มหานครนิวยอร์ก",
@@ -2182,7 +2182,7 @@
   {
     "word": "Big Ben",
     "thai": "บิ๊กเบน",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "easy",
     "hint": "a famous clock tower in London, England",
     "hintThai": "หอนาฬิกาสัญลักษณ์ของกรุงลอนดอน อังกฤษ",
@@ -2192,7 +2192,7 @@
   {
     "word": "Taj Mahal",
     "thai": "ทัชมาฮาล",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "easy",
     "hint": "a white marble mausoleum in Agra, India",
     "hintThai": "สุสานหินอ่อนสีขาวในอินเดีย สร้างด้วยความรัก",
@@ -2202,7 +2202,7 @@
   {
     "word": "Pyramids",
     "thai": "พีระมิด",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "easy",
     "hint": "ancient triangular stone structures in Egypt",
     "hintThai": "สิ่งก่อสร้างโบราณของฟาโรห์อียิปต์ที่ยังคงอยู่จนถึงปัจจุบัน",
@@ -2212,7 +2212,7 @@
   {
     "word": "Sydney Opera House",
     "thai": "ซิดนีย์โอเปร่าเฮาส์",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "easy",
     "hint": "a famous concert hall shaped like sails in Australia",
     "hintThai": "อาคารรูปทรงเปลือกหอยสัญลักษณ์ของซิดนีย์",
@@ -2222,7 +2222,7 @@
   {
     "word": "Mount Everest",
     "thai": "ยอดเขาเอเวอเรสต์",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "easy",
     "hint": "the highest mountain in the world, in Nepal",
     "hintThai": "ยอดเขาที่สูงที่สุดในโลก",
@@ -2232,7 +2232,7 @@
   {
     "word": "Grand Canyon",
     "thai": "แกรนด์แคนยอน",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "easy",
     "hint": "a vast red rock gorge in Arizona, USA",
     "hintThai": "หุบเขาลึกขนาดใหญ่ในรัฐแอริโซนา สหรัฐฯ",
@@ -2242,7 +2242,7 @@
   {
     "word": "Niagara Falls",
     "thai": "น้ำตกไนแองการา",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "easy",
     "hint": "a massive waterfall on the US-Canada border",
     "hintThai": "น้ำตกขนาดใหญ่บนชายแดนระหว่างแคนาดาและสหรัฐฯ",
@@ -2252,7 +2252,7 @@
   {
     "word": "Santorini",
     "thai": "ซานโตรีนี",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "easy",
     "hint": "a Greek island famous for white buildings and blue domes",
     "hintThai": "เกาะในกรีซที่มีบ้านหลังคาสีน้ำเงินและวิวทะเลสวยงาม",
@@ -2262,7 +2262,7 @@
   {
     "word": "Machu Picchu",
     "thai": "มาชูปิกชู",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "medium",
     "hint": "an ancient Inca city high in the Andes mountains of Peru",
     "hintThai": "เมืองโบราณของอินคาบนยอดเขาในเปรู",
@@ -2272,7 +2272,7 @@
   {
     "word": "Angkor Wat",
     "thai": "นครวัด",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "medium",
     "hint": "the largest Hindu temple complex, in Cambodia",
     "hintThai": "วัดโบราณขนาดใหญ่ในกัมพูชา",
@@ -2282,7 +2282,7 @@
   {
     "word": "Stonehenge",
     "thai": "สโตนเฮนจ์",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "medium",
     "hint": "a prehistoric circle of giant standing stones in England",
     "hintThai": "วงหินโบราณในอังกฤษที่ยังไม่ทราบวัตถุประสงค์แน่ชัด",
@@ -2292,7 +2292,7 @@
   {
     "word": "Sagrada Família",
     "thai": "ซากราดา ฟามิเลีย",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "medium",
     "hint": "Gaudí's unfinished cathedral in Barcelona, Spain",
     "hintThai": "มหาวิหารที่กำลังก่อสร้างในบาร์เซโลนา สเปน",
@@ -2302,7 +2302,7 @@
   {
     "word": "Petra",
     "thai": "เปตรา",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "medium",
     "hint": "an ancient city carved into rose-red rock in Jordan",
     "hintThai": "เมืองโบราณที่สร้างในหน้าผาหินทรายสีชมพูในจอร์แดน",
@@ -2312,7 +2312,7 @@
   {
     "word": "Louvre",
     "thai": "พิพิธภัณฑ์ลูฟวร์",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "medium",
     "hint": "the world's largest art museum in Paris, home to the Mona Lisa",
     "hintThai": "พิพิธภัณฑ์ศิลปะที่ใหญ่ที่สุดในโลก ตั้งอยู่ในปารีส",
@@ -2322,7 +2322,7 @@
   {
     "word": "Amazon River",
     "thai": "แม่น้ำอเมซอน",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "medium",
     "hint": "the world's largest river by volume, flowing through Brazil",
     "hintThai": "แม่น้ำที่มีปริมาณน้ำมากที่สุดในโลก ไหลผ่านป่าอเมซอน",
@@ -2332,7 +2332,7 @@
   {
     "word": "Burj Khalifa",
     "thai": "เบิร์จคาลิฟา",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "medium",
     "hint": "the world's tallest building, in Dubai",
     "hintThai": "ตึกที่สูงที่สุดในโลก ตั้งอยู่ในดูไบ",
@@ -2342,7 +2342,7 @@
   {
     "word": "Vatican",
     "thai": "นครวาติกัน",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "medium",
     "hint": "the smallest country in the world, home of the Pope",
     "hintThai": "นครรัฐที่เล็กที่สุดในโลก ศูนย์กลางคาทอลิก",
@@ -2352,7 +2352,7 @@
   {
     "word": "Galápagos Islands",
     "thai": "หมู่เกาะกาลาปากอส",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "hard",
     "hint": "islands in Ecuador famous for unique wildlife that inspired Darwin",
     "hintThai": "หมู่เกาะในมหาสมุทรแปซิฟิกที่ดาร์วินใช้พัฒนาทฤษฎีวิวัฒนาการ",
@@ -2362,7 +2362,7 @@
   {
     "word": "Chernobyl",
     "thai": "เชอร์โนบิล",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "hard",
     "hint": "site of a catastrophic 1986 nuclear disaster in Ukraine",
     "hintThai": "เมืองในยูเครนที่เกิดอุบัติเหตุโรงไฟฟ้านิวเคลียร์ครั้งใหญ่ที่สุด",
@@ -2372,7 +2372,7 @@
   {
     "word": "Area 51",
     "thai": "แอเรีย 51",
-    "category": "Places",
+    "category": "Landmarks",
     "level": "hard",
     "hint": "a classified US Air Force base famous for UFO conspiracy theories",
     "hintThai": "ฐานทัพลับของสหรัฐฯ ที่เกี่ยวข้องกับทฤษฎีสมคบคิดเรื่อง UFO",
@@ -2382,7 +2382,7 @@
   {
     "word": "Japan",
     "thai": "ญี่ปุ่น",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "an island nation known for sushi, anime, and Mount Fuji",
     "hintThai": "ประเทศเกาะในเอเชียตะวันออก ขึ้นชื่อเรื่องอนิเมะ ซูชิ และเทคโนโลยี",
@@ -2392,7 +2392,7 @@
   {
     "word": "France",
     "thai": "ฝรั่งเศส",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "a European country famous for the Eiffel Tower and wine",
     "hintThai": "ประเทศในยุโรปตะวันตก ขึ้นชื่อเรื่องแฟชั่น ไวน์ และหอไอเฟล",
@@ -2402,7 +2402,7 @@
   {
     "word": "Brazil",
     "thai": "บราซิล",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "the largest country in South America, famous for Carnival and football",
     "hintThai": "ประเทศที่ใหญ่ที่สุดในอเมริกาใต้ ขึ้นชื่อเรื่องฟุตบอลและป่าอเมซอน",
@@ -2412,7 +2412,7 @@
   {
     "word": "Australia",
     "thai": "ออสเตรเลีย",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "a continent-country known for kangaroos and the Great Barrier Reef",
     "hintThai": "ทวีปและประเทศที่อยู่ซีกโลกใต้ มีสัตว์ป่าเฉพาะถิ่นมากมาย",
@@ -2422,7 +2422,7 @@
   {
     "word": "India",
     "thai": "อินเดีย",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "a vast South Asian country known for the Taj Mahal and spices",
     "hintThai": "ประเทศที่มีประชากรมากที่สุดในโลก ขึ้นชื่อเรื่องอาหารเผ็ดและวัฒนธรรม",
@@ -2432,7 +2432,7 @@
   {
     "word": "Egypt",
     "thai": "อียิปต์",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "a country in North Africa home to ancient pyramids",
     "hintThai": "ประเทศในแอฟริกาเหนือ ขึ้นชื่อเรื่องพีระมิดและแม่น้ำไนล์",
@@ -2442,7 +2442,7 @@
   {
     "word": "Mexico",
     "thai": "เม็กซิโก",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "a North American country famous for tacos and Aztec ruins",
     "hintThai": "ประเทศในอเมริกาเหนือ ขึ้นชื่อเรื่องอาหารเผ็ด วัฒนธรรมแอซเทก",
@@ -2452,7 +2452,7 @@
   {
     "word": "Italy",
     "thai": "อิตาลี",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "a boot-shaped country in Europe known for pasta and the Colosseum",
     "hintThai": "ประเทศในยุโรป ขึ้นชื่อเรื่องพิซซ่า พาสต้า และโรมโบราณ",
@@ -2462,7 +2462,7 @@
   {
     "word": "South Korea",
     "thai": "เกาหลีใต้",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "an East Asian country famous for K-pop and technology",
     "hintThai": "ประเทศในเอเชียตะวันออก ขึ้นชื่อเรื่อง K-pop และซัมซุง",
@@ -2472,7 +2472,7 @@
   {
     "word": "Russia",
     "thai": "รัสเซีย",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "the world's largest country, spanning Europe and Asia",
     "hintThai": "ประเทศที่ใหญ่ที่สุดในโลก ครอบคลุมสองทวีป",
@@ -2482,7 +2482,7 @@
   {
     "word": "Argentina",
     "thai": "อาร์เจนตินา",
-    "category": "Places",
+    "category": "Countries",
     "level": "medium",
     "hint": "a South American country famous for tango and football legend Messi",
     "hintThai": "ประเทศในอเมริกาใต้ ขึ้นชื่อเรื่องเนื้อวัวและฟุตบอล",
@@ -2492,7 +2492,7 @@
   {
     "word": "Norway",
     "thai": "นอร์เวย์",
-    "category": "Places",
+    "category": "Countries",
     "level": "medium",
     "hint": "a Scandinavian country famous for fjords and the northern lights",
     "hintThai": "ประเทศในสแกนดิเนเวีย ขึ้นชื่อเรื่องออโรร่าและฟยอร์ด",
@@ -2502,7 +2502,7 @@
   {
     "word": "Switzerland",
     "thai": "สวิตเซอร์แลนด์",
-    "category": "Places",
+    "category": "Countries",
     "level": "medium",
     "hint": "a landlocked European country known for chocolate, cheese, and banks",
     "hintThai": "ประเทศในยุโรปที่ขึ้นชื่อเรื่องนาฬิกา ช็อกโกแลต และความเป็นกลาง",
@@ -2512,7 +2512,7 @@
   {
     "word": "Morocco",
     "thai": "โมร็อกโก",
-    "category": "Places",
+    "category": "Countries",
     "level": "medium",
     "hint": "a North African country known for its colorful medinas",
     "hintThai": "ประเทศในแอฟริกาเหนือ ขึ้นชื่อเรื่องตลาดเก่าและทะเลทราย",
@@ -2522,7 +2522,7 @@
   {
     "word": "New Zealand",
     "thai": "นิวซีแลนด์",
-    "category": "Places",
+    "category": "Countries",
     "level": "medium",
     "hint": "an island nation near Australia famous for Lord of the Rings scenery",
     "hintThai": "ประเทศเกาะในมหาสมุทรแปซิฟิกใต้ ขึ้นชื่อเรื่องทิวทัศน์สวยงาม",
@@ -2532,7 +2532,7 @@
   {
     "word": "Bangkok",
     "thai": "กรุงเทพมหานคร",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "the capital of Thailand, known for temples and street food",
     "hintThai": "เมืองหลวงของไทย ขึ้นชื่อเรื่องวัดและอาหารริมทาง",
@@ -2542,7 +2542,7 @@
   {
     "word": "Tokyo",
     "thai": "โตเกียว",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "the capital of Japan, the world's most populous metro area",
     "hintThai": "เมืองหลวงของญี่ปุ่น มีประชากรมากที่สุดในโลก",
@@ -2552,7 +2552,7 @@
   {
     "word": "Paris",
     "thai": "ปารีส",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "the capital of France, known as the City of Light",
     "hintThai": "เมืองหลวงของฝรั่งเศส มีหอไอเฟลเป็นสัญลักษณ์",
@@ -2562,7 +2562,7 @@
   {
     "word": "London",
     "thai": "ลอนดอน",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "the capital of the UK, home to Big Ben and Buckingham Palace",
     "hintThai": "เมืองหลวงของอังกฤษ มีหอนาฬิกา Big Ben",
@@ -2572,7 +2572,7 @@
   {
     "word": "Washington DC",
     "thai": "วอชิงตัน ดี.ซี.",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "the capital of the United States, home of the White House",
     "hintThai": "เมืองหลวงของสหรัฐอเมริกา ที่ตั้งของทำเนียบขาว",
@@ -2582,7 +2582,7 @@
   {
     "word": "Beijing",
     "thai": "ปักกิ่ง",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "the capital of China",
     "hintThai": "เมืองหลวงของจีน ที่ตั้งของพระราชวังต้องห้าม",
@@ -2592,7 +2592,7 @@
   {
     "word": "Rome",
     "thai": "โรม",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "the capital of Italy, known as the Eternal City",
     "hintThai": "เมืองหลวงของอิตาลี เรียกว่า นครนิรันดร์",
@@ -2602,7 +2602,7 @@
   {
     "word": "Moscow",
     "thai": "มอสโก",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "the capital of Russia",
     "hintThai": "เมืองหลวงของรัสเซีย ที่ตั้งของจัตุรัสแดงและเครมลิน",
@@ -2612,7 +2612,7 @@
   {
     "word": "Cairo",
     "thai": "ไคโร",
-    "category": "Places",
+    "category": "Countries",
     "level": "easy",
     "hint": "the capital of Egypt, near the Pyramids of Giza",
     "hintThai": "เมืองหลวงของอียิปต์ ใกล้กับพีระมิดกีซา",
@@ -2622,7 +2622,7 @@
   {
     "word": "Nairobi",
     "thai": "ไนโรบี",
-    "category": "Places",
+    "category": "Countries",
     "level": "medium",
     "hint": "the capital of Kenya, a major hub in East Africa",
     "hintThai": "เมืองหลวงของเคนยา ประตูสู่การท่องเที่ยวซาฟารี",
@@ -2632,7 +2632,7 @@
   {
     "word": "Reykjavik",
     "thai": "เรคยาวิก",
-    "category": "Places",
+    "category": "Countries",
     "level": "medium",
     "hint": "the capital of Iceland, one of the world's northernmost capitals",
     "hintThai": "เมืองหลวงของไอซ์แลนด์ ใกล้ออโรร่าและน้ำพุร้อน",
@@ -2642,7 +2642,7 @@
   {
     "word": "Kathmandu",
     "thai": "กาฐมาณฑุ",
-    "category": "Places",
+    "category": "Countries",
     "level": "medium",
     "hint": "the capital of Nepal, gateway to the Himalayas",
     "hintThai": "เมืองหลวงของเนปาล ใกล้กับยอดเขาเอเวอเรสต์",
@@ -2652,7 +2652,7 @@
   {
     "word": "Ulaanbaatar",
     "thai": "อูลานบาตอร์",
-    "category": "Places",
+    "category": "Countries",
     "level": "hard",
     "hint": "the capital of Mongolia, one of the coldest capitals on Earth",
     "hintThai": "เมืองหลวงของมองโกเลีย เมืองหลวงที่หนาวที่สุดในโลก",
@@ -2662,7 +2662,7 @@
   {
     "word": "Nur-Sultan",
     "thai": "นูร์-ซุลตัน",
-    "category": "Places",
+    "category": "Countries",
     "level": "hard",
     "hint": "the futuristic capital of Kazakhstan (also called Astana)",
     "hintThai": "เมืองหลวงของคาซัคสถาน เปลี่ยนชื่อใหม่จากอัสตานา",
@@ -2892,7 +2892,7 @@
   {
     "word": "carrot",
     "thai": "แครอท",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "an orange root vegetable rabbits love",
     "hintThai": "ผักสีส้มรูปทรงยาวที่กระต่ายชอบกิน",
@@ -2902,7 +2902,7 @@
   {
     "word": "broccoli",
     "thai": "บรอกโคลี",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a green vegetable that looks like a tiny tree",
     "hintThai": "ผักสีเขียวที่มีลักษณะคล้ายต้นไม้จิ๋ว",
@@ -2912,7 +2912,7 @@
   {
     "word": "onion",
     "thai": "หัวหอม",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a vegetable that makes you cry when you cut it",
     "hintThai": "ผักที่มีกลิ่นฉุนและทำให้น้ำตาไหลเมื่อหั่น",
@@ -2922,7 +2922,7 @@
   {
     "word": "garlic",
     "thai": "กระเทียม",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a strong-smelling ingredient used in cooking",
     "hintThai": "ผักกลิ่นฉุนที่ใช้ปรุงอาหารทั่วโลก",
@@ -2932,7 +2932,7 @@
   {
     "word": "potato",
     "thai": "มันฝรั่ง",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a starchy underground vegetable used for fries and chips",
     "hintThai": "หัวพืชใต้ดินสีน้ำตาล ทำได้ทั้งมันฝรั่งทอดและต้มบด",
@@ -2942,7 +2942,7 @@
   {
     "word": "tomato",
     "thai": "มะเขือเทศ",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a red round fruit often used in salads and sauces",
     "hintThai": "ผลสีแดงฉ่ำที่ใช้ทำซอสและสลัด",
@@ -2952,7 +2952,7 @@
   {
     "word": "cucumber",
     "thai": "แตงกวา",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a long green vegetable often eaten raw in salads",
     "hintThai": "ผักสีเขียวที่มีน้ำมาก กินสดหรือดองได้",
@@ -2962,7 +2962,7 @@
   {
     "word": "corn",
     "thai": "ข้าวโพด",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a yellow vegetable on a cob",
     "hintThai": "พืชที่มีเมล็ดเรียงอยู่บนฝัก สีเหลืองทอง",
@@ -2972,7 +2972,7 @@
   {
     "word": "mushroom",
     "thai": "เห็ด",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a fungus you eat, shaped like an umbrella",
     "hintThai": "พืชที่ไม่มีใบและไม่ใช้แสงแดด มีรูปทรงร่ม",
@@ -2982,7 +2982,7 @@
   {
     "word": "cabbage",
     "thai": "กะหล่ำปลี",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a round leafy green vegetable",
     "hintThai": "ผักใบกลมแน่นสีเขียวหรือม่วง",
@@ -2992,7 +2992,7 @@
   {
     "word": "spinach",
     "thai": "ผักโขม",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a dark leafy green vegetable Popeye loves",
     "hintThai": "ผักใบสีเขียวเข้มที่ Popeye ชอบกิน",
@@ -3002,7 +3002,7 @@
   {
     "word": "pumpkin",
     "thai": "ฟักทอง",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a large orange vegetable carved at Halloween",
     "hintThai": "ผักทรงกลมสีส้ม มักใช้ตกแต่งในวันฮาโลวีน",
@@ -3012,7 +3012,7 @@
   {
     "word": "eggplant",
     "thai": "มะเขือยาว",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a long purple vegetable used in stir-fries",
     "hintThai": "ผักสีม่วงเข้มรูปยาว",
@@ -3022,7 +3022,7 @@
   {
     "word": "chili",
     "thai": "พริก",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a small spicy pepper",
     "hintThai": "ผักที่ให้รสเผ็ดร้อน มีหลายสีและหลายขนาด",
@@ -3032,7 +3032,7 @@
   {
     "word": "ginger",
     "thai": "ขิง",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a knobbly root with a spicy flavor used in cooking and tea",
     "hintThai": "รากไม้มีกลิ่นฉุนหอม ใช้ปรุงอาหารและชา",
@@ -3042,7 +3042,7 @@
   {
     "word": "mango",
     "thai": "มะม่วง",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a tropical yellow-orange fruit popular in Thailand",
     "hintThai": "ผลไม้เขตร้อนสีเหลืองส้ม รสหวานหอม",
@@ -3052,7 +3052,7 @@
   {
     "word": "durian",
     "thai": "ทุเรียน",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "the \"king of fruits\" — spiky with a very strong smell",
     "hintThai": "ผลไม้เขตร้อนที่มีกลิ่นแรงมาก เปลือกมีหนาม",
@@ -3062,7 +3062,7 @@
   {
     "word": "strawberry",
     "thai": "สตรอว์เบอร์รี",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a small red heart-shaped fruit, often in desserts",
     "hintThai": "ผลไม้สีแดงรูปหัวใจ รสหวานอมเปรี้ยว",
@@ -3072,7 +3072,7 @@
   {
     "word": "watermelon",
     "thai": "แตงโม",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a large green fruit with red flesh and black seeds",
     "hintThai": "ผลไม้ขนาดใหญ่สีเขียว เนื้อในสีแดงฉ่ำ",
@@ -3082,7 +3082,7 @@
   {
     "word": "banana",
     "thai": "กล้วย",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a yellow curved fruit monkeys love",
     "hintThai": "ผลไม้สีเหลืองรูปโค้ง ลิงชอบกิน",
@@ -3092,7 +3092,7 @@
   {
     "word": "pineapple",
     "thai": "สับปะรด",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a tropical fruit with a spiky crown and sweet-sour taste",
     "hintThai": "ผลไม้มีใบแข็งบนหัว เนื้อเหลืองหวานอมเปรี้ยว",
@@ -3102,7 +3102,7 @@
   {
     "word": "grape",
     "thai": "องุ่น",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "small round fruits that grow in clusters, used to make wine",
     "hintThai": "ผลไม้เล็กๆ ที่เติบโตเป็นพวง ใช้ทำไวน์ได้",
@@ -3112,7 +3112,7 @@
   {
     "word": "lemon",
     "thai": "มะนาวเหลือง",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a sour yellow citrus fruit",
     "hintThai": "ผลไม้สีเหลืองรสเปรี้ยวจัด",
@@ -3122,7 +3122,7 @@
   {
     "word": "coconut",
     "thai": "มะพร้าว",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a large tropical fruit with white flesh and sweet water inside",
     "hintThai": "ผลไม้เขตร้อนที่มีน้ำและเนื้อขาวอยู่ในเปลือกแข็ง",
@@ -3132,7 +3132,7 @@
   {
     "word": "papaya",
     "thai": "มะละกอ",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "an orange tropical fruit used in som tum",
     "hintThai": "ผลไม้เขตร้อนสีส้ม มีเมล็ดดำอยู่ตรงกลาง",
@@ -3142,7 +3142,7 @@
   {
     "word": "lychee",
     "thai": "ลิ้นจี่",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a small white juicy tropical fruit with a rough red skin",
     "hintThai": "ผลไม้เล็กเปลือกแดงขรุขระ เนื้อขาวหวาน",
@@ -3152,7 +3152,7 @@
   {
     "word": "dragon fruit",
     "thai": "แก้วมังกร",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a bright pink fruit with white flesh and black seeds",
     "hintThai": "ผลไม้สีชมพูสดใส เนื้อในมีจุดดำเล็กๆ",
@@ -3162,7 +3162,7 @@
   {
     "word": "avocado",
     "thai": "อะโวคาโด",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "a creamy green fruit used in guacamole and on toast",
     "hintThai": "ผลไม้สีเขียวเนื้อครีมเข้มที่ใช้ทำกัวคาโมเล",
@@ -3172,7 +3172,7 @@
   {
     "word": "passion fruit",
     "thai": "เสาวรส",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "a wrinkled purple fruit with tangy yellow seeds inside",
     "hintThai": "ผลไม้เปลือกม่วงที่มีเนื้อสีส้มเหลืองรสเปรี้ยวหวาน",
@@ -3182,7 +3182,7 @@
   {
     "word": "jackfruit",
     "thai": "ขนุน",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "the world's largest tree fruit, with yellow pods inside",
     "hintThai": "ผลไม้ขนาดใหญ่ที่สุดในโลก เนื้อเหลืองหวาน",
@@ -3192,7 +3192,7 @@
   {
     "word": "pizza",
     "thai": "พิซซ่า",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a flat round dish with tomato sauce and cheese, baked in an oven",
     "hintThai": "อาหารอิตาเลียนแป้งกลมอบในเตา มีซอสและชีส",
@@ -3202,7 +3202,7 @@
   {
     "word": "sushi",
     "thai": "ซูชิ",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "Japanese rice rolls often topped with raw fish",
     "hintThai": "อาหารญี่ปุ่นที่ทำจากข้าวปั้นกับปลาดิบหรือไส้ต่างๆ",
@@ -3212,7 +3212,7 @@
   {
     "word": "burger",
     "thai": "เบอร์เกอร์",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a grilled patty in a bun with toppings",
     "hintThai": "แซนด์วิชที่มีเนื้อบดอยู่ระหว่างขนมปังกลม",
@@ -3222,7 +3222,7 @@
   {
     "word": "noodles",
     "thai": "เส้นก๋วยเตี๋ยว",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "long thin strips of pasta or wheat, eaten in soup or stir-fried",
     "hintThai": "อาหารที่ทำจากแป้งรีดเป็นเส้นยาว",
@@ -3232,7 +3232,7 @@
   {
     "word": "ice cream",
     "thai": "ไอศกรีม",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a sweet frozen dessert in a cone or cup",
     "hintThai": "ของหวานแช่แข็งทำจากนมหรือครีม",
@@ -3242,7 +3242,7 @@
   {
     "word": "chocolate",
     "thai": "ช็อกโกแลต",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a sweet brown food made from cacao beans",
     "hintThai": "อาหารหวานที่ทำจากเมล็ดโกโก้",
@@ -3252,7 +3252,7 @@
   {
     "word": "coffee",
     "thai": "กาแฟ",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a hot dark drink made from roasted beans",
     "hintThai": "เครื่องดื่มร้อนที่ทำจากเมล็ดกาแฟคั่ว",
@@ -3262,7 +3262,7 @@
   {
     "word": "popcorn",
     "thai": "ป๊อปคอร์น",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a snack made from heated corn kernels, eaten at the cinema",
     "hintThai": "ข้าวโพดที่ถูกความร้อนจนแตกฟูเป็นเม็ดขาว",
@@ -3272,7 +3272,7 @@
   {
     "word": "ramen",
     "thai": "ราเมน",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "Japanese noodle soup with broth, meat, and toppings",
     "hintThai": "บะหมี่ญี่ปุ่นในน้ำซุปร้อน มีหน้าหลากหลาย",
@@ -3282,7 +3282,7 @@
   {
     "word": "pad thai",
     "thai": "ผัดไทย",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "Thailand's most famous stir-fried noodle dish",
     "hintThai": "ผัดไทย บะหมี่ผัดแบบไทยที่มีกุ้ง ถั่วงอก และไข่",
@@ -3292,7 +3292,7 @@
   {
     "word": "curry",
     "thai": "แกงกะหรี่",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a spiced sauce dish popular in India and Thailand",
     "hintThai": "อาหารที่มีซอสเครื่องเทศข้นหนา กินกับข้าวหรือขนมปัง",
@@ -3302,7 +3302,7 @@
   {
     "word": "dim sum",
     "thai": "ติ่มซำ",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "small Chinese dishes served in steamer baskets",
     "hintThai": "อาหารจีนที่เสิร์ฟในตะกร้าเล็กๆ มักกินตอนเช้า",
@@ -3312,7 +3312,7 @@
   {
     "word": "croissant",
     "thai": "ครัวซองต์",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "a buttery, flaky crescent-shaped French pastry",
     "hintThai": "ขนมปังฝรั่งเศสรูปพระจันทร์เสี้ยว แป้งกรอบนอกนุ่มใน",
@@ -3322,7 +3322,7 @@
   {
     "word": "fondue",
     "thai": "ฟองดูว์",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "a Swiss dish where you dip food into melted cheese or chocolate",
     "hintThai": "อาหารสวิสที่จุ่มขนมปังลงในชีสหรือช็อกโกแลตละลาย",
@@ -3332,7 +3332,7 @@
   {
     "word": "tiramisu",
     "thai": "ทีรามิสุ",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "an Italian dessert made with coffee, mascarpone, and ladyfingers",
     "hintThai": "ของหวานอิตาเลียนที่มีชั้นครีมและขนมปังชุบกาแฟ",
@@ -3342,7 +3342,7 @@
   {
     "word": "boba tea",
     "thai": "ชานมไข่มุก",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a Taiwanese drink with tea, milk, and chewy tapioca balls",
     "hintThai": "ชานมไข่มุกที่มีลูกเม็ดเคี้ยวได้อยู่ด้านล่าง",
@@ -3352,7 +3352,7 @@
   {
     "word": "kimchi",
     "thai": "กิมจิ",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "a Korean fermented spicy cabbage dish",
     "hintThai": "ผักดองเกาหลีที่มีรสเผ็ดและเปรี้ยว",
@@ -3362,7 +3362,7 @@
   {
     "word": "truffle",
     "thai": "เห็ดทรัฟเฟิล",
-    "category": "Objects",
+    "category": "Food & Drinks",
     "level": "hard",
     "hint": "a rare underground fungus considered a luxury food ingredient",
     "hintThai": "เห็ดหายากที่หัวหมูขุดหา มีราคาแพงมาก",
@@ -3582,7 +3582,7 @@
   {
     "word": "Apple",
     "thai": "แอปเปิ้ล",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a tech company famous for iPhone, Mac, and a bitten fruit logo",
     "hintThai": "บริษัทเทคโนโลยีสหรัฐฯ ที่ผลิต iPhone และ Mac",
@@ -3592,7 +3592,7 @@
   {
     "word": "Google",
     "thai": "กูเกิล",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "the world's most used search engine",
     "hintThai": "บริษัทเทคโนโลยีที่ให้บริการเครื่องมือค้นหาและแอปมากมาย",
@@ -3602,7 +3602,7 @@
   {
     "word": "Netflix",
     "thai": "เน็ตฟลิกซ์",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a streaming service where you binge-watch series",
     "hintThai": "แพลตฟอร์มสตรีมมิ่งที่มีซีรีส์และภาพยนตร์มากมาย",
@@ -3612,7 +3612,7 @@
   {
     "word": "YouTube",
     "thai": "ยูทูบ",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a platform where anyone can upload and watch videos",
     "hintThai": "แพลตฟอร์มวิดีโอออนไลน์ที่ใหญ่ที่สุดในโลก",
@@ -3622,7 +3622,7 @@
   {
     "word": "TikTok",
     "thai": "ติ๊กต็อก",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "an app famous for short vertical videos",
     "hintThai": "แอปวิดีโอสั้นที่ได้รับความนิยมทั่วโลก",
@@ -3632,7 +3632,7 @@
   {
     "word": "Instagram",
     "thai": "อินสตาแกรม",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a social media app built around sharing photos",
     "hintThai": "แอปโซเชียลมีเดียสำหรับแชร์รูปภาพและวิดีโอ",
@@ -3642,7 +3642,7 @@
   {
     "word": "Amazon",
     "thai": "อเมซอน",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "the world's largest online shopping platform",
     "hintThai": "แม่น้ำและป่าฝนเขตร้อนขนาดใหญ่ที่สุดในโลก อยู่ในอเมริกาใต้",
@@ -3652,7 +3652,7 @@
   {
     "word": "Tesla",
     "thai": "เทสลา",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "an electric car brand founded by Elon Musk",
     "hintThai": "บริษัทรถยนต์ไฟฟ้าของ Elon Musk",
@@ -3662,7 +3662,7 @@
   {
     "word": "Microsoft",
     "thai": "ไมโครซอฟต์",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "the company behind Windows and Office",
     "hintThai": "บริษัทซอฟต์แวร์ที่ผลิต Windows และ Office",
@@ -3672,7 +3672,7 @@
   {
     "word": "Samsung",
     "thai": "ซัมซุง",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a South Korean tech giant making phones, TVs, and chips",
     "hintThai": "บริษัทเกาหลีใต้ที่ผลิตสมาร์ทโฟนและอิเล็กทรอนิกส์",
@@ -3682,7 +3682,7 @@
   {
     "word": "Spotify",
     "thai": "สปอติฟาย",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a music streaming app where you listen to millions of songs",
     "hintThai": "แอปฟังเพลงออนไลน์ที่ใหญ่ที่สุดในโลก",
@@ -3692,7 +3692,7 @@
   {
     "word": "ChatGPT",
     "thai": "แชตจีพีที",
-    "category": "Objects",
+    "category": "Brands",
     "level": "medium",
     "hint": "an AI chatbot made by OpenAI that answers almost anything",
     "hintThai": "ปัญญาประดิษฐ์ที่สนทนาได้ พัฒนาโดย OpenAI",
@@ -3702,7 +3702,7 @@
   {
     "word": "Nike",
     "thai": "ไนกี้",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a sportswear brand with a swoosh logo — \"Just Do It\"",
     "hintThai": "แบรนด์รองเท้าและเสื้อผ้ากีฬาสัญลักษณ์เป็นเครื่องหมาย Swoosh",
@@ -3712,7 +3712,7 @@
   {
     "word": "Adidas",
     "thai": "อาดิดาส",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a sportswear brand known for three stripes",
     "hintThai": "แบรนด์กีฬาเยอรมันที่มีสัญลักษณ์สามแถบ",
@@ -3722,7 +3722,7 @@
   {
     "word": "Louis Vuitton",
     "thai": "หลุยส์ วิตตอง",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a French luxury brand famous for monogram bags",
     "hintThai": "แบรนด์แฟชั่นหรูจากฝรั่งเศส ขึ้นชื่อเรื่องกระเป๋าลาย LV",
@@ -3732,7 +3732,7 @@
   {
     "word": "Gucci",
     "thai": "กุชชี่",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "an Italian luxury brand known for its double-G logo",
     "hintThai": "แบรนด์แฟชั่นหรูจากอิตาลี",
@@ -3742,7 +3742,7 @@
   {
     "word": "Chanel",
     "thai": "ชาแนล",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a French luxury house famous for No. 5 perfume and the little black dress",
     "hintThai": "แบรนด์แฟชั่นและน้ำหอมหรูจากฝรั่งเศส",
@@ -3752,7 +3752,7 @@
   {
     "word": "Zara",
     "thai": "ซาร่า",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a fast-fashion brand that copies runway looks quickly",
     "hintThai": "แบรนด์แฟชั่นสเปนที่อัปเดตสินค้าเร็วมาก",
@@ -3762,7 +3762,7 @@
   {
     "word": "H&M",
     "thai": "เอชแอนด์เอ็ม",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a Swedish affordable fashion chain",
     "hintThai": "แบรนด์เสื้อผ้าราคาย่อมเยาจากสวีเดน",
@@ -3772,7 +3772,7 @@
   {
     "word": "Rolex",
     "thai": "โรเล็กซ์",
-    "category": "Objects",
+    "category": "Brands",
     "level": "medium",
     "hint": "a Swiss luxury watch brand associated with success",
     "hintThai": "แบรนด์นาฬิกาหรูจากสวิตเซอร์แลนด์",
@@ -3782,7 +3782,7 @@
   {
     "word": "Hermès",
     "thai": "แอร์เมส",
-    "category": "Objects",
+    "category": "Brands",
     "level": "medium",
     "hint": "a French luxury brand famous for Birkin bags and silk scarves",
     "hintThai": "แบรนด์หรูฝรั่งเศส ขึ้นชื่อเรื่องกระเป๋า Birkin",
@@ -3792,7 +3792,7 @@
   {
     "word": "Balenciaga",
     "thai": "บาเลนเซียก้า",
-    "category": "Objects",
+    "category": "Brands",
     "level": "medium",
     "hint": "a high fashion brand known for oversized silhouettes and chunky sneakers",
     "hintThai": "แบรนด์แฟชั่นหรูที่ขึ้นชื่อเรื่องดีไซน์แปลกตา",
@@ -3802,7 +3802,7 @@
   {
     "word": "Supreme",
     "thai": "ซูพรีม",
-    "category": "Objects",
+    "category": "Brands",
     "level": "medium",
     "hint": "a streetwear brand whose red box logo creates huge hype every drop",
     "hintThai": "แบรนด์สตรีทแวร์ที่มีกล่องแดงเป็นโลโก้",
@@ -3812,7 +3812,7 @@
   {
     "word": "McDonald's",
     "thai": "แมคโดนัลด์",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a fast food chain famous for the Big Mac and golden arches",
     "hintThai": "ร้านฟาสต์ฟู้ดที่ใหญ่ที่สุดในโลก มีโลโก้ตัว M สีเหลือง",
@@ -3822,7 +3822,7 @@
   {
     "word": "Starbucks",
     "thai": "สตาร์บัคส์",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a global coffee chain with a mermaid logo",
     "hintThai": "ร้านกาแฟสหรัฐฯ ที่มีสาขาทั่วโลก",
@@ -3832,7 +3832,7 @@
   {
     "word": "Coca-Cola",
     "thai": "โคคา-โคล่า",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "the world's most famous cola drink in a red can",
     "hintThai": "น้ำอัดลมสีดำที่ขายดีที่สุดในโลก",
@@ -3842,7 +3842,7 @@
   {
     "word": "Red Bull",
     "thai": "เรดบูล",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "an energy drink originally from Thailand, sold worldwide",
     "hintThai": "เครื่องดื่มชูกำลังจากประเทศไทยที่ดังไปทั่วโลก",
@@ -3852,7 +3852,7 @@
   {
     "word": "KFC",
     "thai": "เคเอฟซี",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a fried chicken fast food chain started by Colonel Sanders",
     "hintThai": "ร้านไก่ทอดที่มีโลโก้พันเอก Sanders",
@@ -3862,7 +3862,7 @@
   {
     "word": "Oreo",
     "thai": "โอรีโอ้",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a black-and-white sandwich cookie you twist, lick, and dunk",
     "hintThai": "คุกกี้กลมสีดำไส้ครีมขาว",
@@ -3872,7 +3872,7 @@
   {
     "word": "Nutella",
     "thai": "นูเทลล่า",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a sweet hazelnut-chocolate spread in a brown jar",
     "hintThai": "ครีมช็อกโกแลตผสมเฮเซลนัทสำหรับทาขนมปัง",
@@ -3882,7 +3882,7 @@
   {
     "word": "Lay's",
     "thai": "เลย์ส",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a popular potato chip brand sold worldwide",
     "hintThai": "มันฝรั่งทอดกรอบในถุงที่ขายทั่วโลก",
@@ -3892,7 +3892,7 @@
   {
     "word": "Toyota",
     "thai": "โตโยต้า",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "the world's bestselling car brand, based in Japan",
     "hintThai": "บริษัทรถยนต์ญี่ปุ่นที่ขายดีที่สุดในโลก",
@@ -3902,7 +3902,7 @@
   {
     "word": "Ferrari",
     "thai": "เฟอร์รารี่",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "an Italian sports car brand known for speed and a prancing horse logo",
     "hintThai": "รถยนต์สปอร์ตสีแดงหรูจากอิตาลี",
@@ -3912,7 +3912,7 @@
   {
     "word": "Lamborghini",
     "thai": "แลมโบร์กินี",
-    "category": "Objects",
+    "category": "Brands",
     "level": "medium",
     "hint": "an Italian supercar brand whose cars are named after bulls",
     "hintThai": "รถสปอร์ตอิตาเลียนที่มีประตูแบบปีกผีเสื้อ",
@@ -3922,7 +3922,7 @@
   {
     "word": "Harley-Davidson",
     "thai": "ฮาร์ลีย์-เดวิดสัน",
-    "category": "Objects",
+    "category": "Brands",
     "level": "medium",
     "hint": "an American motorcycle brand famous for its loud rumble",
     "hintThai": "แบรนด์มอเตอร์ไซค์อเมริกันที่มีเสียงเครื่องยนต์เป็นเอกลักษณ์",
@@ -3932,7 +3932,7 @@
   {
     "word": "Disney",
     "thai": "ดิสนีย์",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "the entertainment giant behind Mickey Mouse, Pixar, and theme parks",
     "hintThai": "บริษัทบันเทิงสหรัฐฯ ที่สร้างการ์ตูนและสวนสนุก",
@@ -3942,7 +3942,7 @@
   {
     "word": "LEGO",
     "thai": "เลโก้",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a Danish toy company famous for colorful plastic building bricks",
     "hintThai": "ของเล่นเม็ดพลาสติกที่ต่อประกอบเป็นรูปต่างๆ",
@@ -3952,7 +3952,7 @@
   {
     "word": "IKEA",
     "thai": "อิเกีย",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "a Swedish furniture store where you assemble everything yourself",
     "hintThai": "ร้านเฟอร์นิเจอร์สวีเดนที่ต้องประกอบเอง",
@@ -3962,7 +3962,7 @@
   {
     "word": "Airbnb",
     "thai": "แอร์บีเอ็นบี",
-    "category": "Objects",
+    "category": "Brands",
     "level": "medium",
     "hint": "a platform where people rent out their homes to travelers",
     "hintThai": "แพลตฟอร์มเช่าที่พักจากเจ้าของบ้านทั่วโลก",
@@ -3972,7 +3972,7 @@
   {
     "word": "Uber",
     "thai": "อูเบอร์",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "an app that lets you book a car ride from your phone",
     "hintThai": "แอปเรียกรถโดยสารผ่านสมาร์ทโฟน",
@@ -3982,7 +3982,7 @@
   {
     "word": "NASA",
     "thai": "นาซ่า",
-    "category": "Objects",
+    "category": "Brands",
     "level": "easy",
     "hint": "the US space agency that sent astronauts to the Moon",
     "hintThai": "องค์กรอวกาศของสหรัฐอเมริกา",
@@ -3992,7 +3992,7 @@
   {
     "word": "Harvard",
     "thai": "ฮาร์วาร์ด",
-    "category": "Objects",
+    "category": "Brands",
     "level": "medium",
     "hint": "the most famous university in the world, in Boston USA",
     "hintThai": "มหาวิทยาลัยชื่อดังที่สุดในสหรัฐอเมริกา",
@@ -4002,7 +4002,7 @@
   {
     "word": "Rolls-Royce",
     "thai": "โรลส์-รอยซ์",
-    "category": "Objects",
+    "category": "Brands",
     "level": "medium",
     "hint": "the ultimate symbol of luxury — cars and jet engines",
     "hintThai": "แบรนด์รถยนต์หรูสูงสุดจากอังกฤษ",
@@ -4012,7 +4012,7 @@
   {
     "word": "Patagonia",
     "thai": "พาตาโกเนีย",
-    "category": "Objects",
+    "category": "Brands",
     "level": "hard",
     "hint": "an outdoor clothing brand famous for sustainability and donating profits to the planet",
     "hintThai": "แบรนด์เสื้อผ้าแนวกลางแจ้งที่ใส่ใจสิ่งแวดล้อม",
@@ -4020,19 +4020,9 @@
     "emoji": "🏔️"
   },
   {
-    "word": "coffee",
-    "thai": "กาแฟ",
-    "category": "Drinks",
-    "level": "easy",
-    "hint": "a hot dark drink made from roasted beans that helps you wake up",
-    "hintThai": "เครื่องดื่มร้อนที่ทำจากเมล็ดกาแฟคั่ว",
-    "pos": "noun",
-    "emoji": "☕"
-  },
-  {
     "word": "tea",
     "thai": "ชา",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a hot drink made by pouring water over dried leaves",
     "hintThai": "เครื่องดื่มร้อนที่ทำจากใบชา",
@@ -4042,7 +4032,7 @@
   {
     "word": "water",
     "thai": "น้ำเปล่า",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "the clearest drink with no taste, essential for life",
     "hintThai": "ของเหลวไม่มีสีที่จำเป็นต่อชีวิต",
@@ -4052,7 +4042,7 @@
   {
     "word": "milk",
     "thai": "นม",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a white drink that comes from cows and is good for your bones",
     "hintThai": "ของเหลวสีขาวที่ได้จากวัว",
@@ -4062,7 +4052,7 @@
   {
     "word": "juice",
     "thai": "น้ำผลไม้",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a drink squeezed from fruit",
     "hintThai": "น้ำที่คั้นจากผลไม้",
@@ -4072,7 +4062,7 @@
   {
     "word": "beer",
     "thai": "เบียร์",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a bubbly alcoholic drink made from hops and barley",
     "hintThai": "เครื่องดื่มแอลกอฮอล์ที่ทำจากข้าวมอลต์และฮอปส์",
@@ -4082,7 +4072,7 @@
   {
     "word": "wine",
     "thai": "ไวน์",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "an alcoholic drink made from fermented grapes",
     "hintThai": "เครื่องดื่มแอลกอฮอล์ที่ทำจากองุ่นหมัก",
@@ -4092,7 +4082,7 @@
   {
     "word": "smoothie",
     "thai": "สมูทตี้",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a thick blended drink made from fruit and sometimes yogurt or milk",
     "hintThai": "เครื่องดื่มข้นที่ปั่นจากผลไม้หรือผัก",
@@ -4102,7 +4092,7 @@
   {
     "word": "lemonade",
     "thai": "น้ำมะนาว",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a cold sweet drink made from lemon juice and sugar",
     "hintThai": "น้ำมะนาวหวานที่เสิร์ฟเย็น",
@@ -4112,7 +4102,7 @@
   {
     "word": "soda",
     "thai": "โซดา / น้ำอัดลม",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "easy",
     "hint": "a fizzy drink with bubbles, often sweet and flavored",
     "hintThai": "น้ำอัดลมหวานที่มีฟอง",
@@ -4122,7 +4112,7 @@
   {
     "word": "cocktail",
     "thai": "ค็อกเทล",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "a mixed alcoholic drink, often colorful and served at parties",
     "hintThai": "เครื่องดื่มแอลกอฮอล์ที่ผสมหลายชนิดเข้าด้วยกัน",
@@ -4132,7 +4122,7 @@
   {
     "word": "espresso",
     "thai": "เอสเพรสโซ",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "a very strong, small shot of coffee made by pushing hot water through ground beans",
     "hintThai": "กาแฟเข้มข้นที่ชงในปริมาณเล็กน้อย",
@@ -4142,7 +4132,7 @@
   {
     "word": "latte",
     "thai": "ลาเต้",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "a coffee drink made with espresso and lots of steamed milk",
     "hintThai": "กาแฟผสมนมร้อนในปริมาณมาก",
@@ -4152,7 +4142,7 @@
   {
     "word": "matcha",
     "thai": "มัทฉะ",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "a bright green Japanese powder made from ground tea leaves",
     "hintThai": "เครื่องดื่มที่ทำจากผงชาเขียวญี่ปุ่น",
@@ -4162,7 +4152,7 @@
   {
     "word": "bubble tea",
     "thai": "ชานมไข่มุก",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "a Taiwanese drink with tea, milk, and chewy tapioca balls at the bottom",
     "hintThai": "ชานมไข่มุกที่มีลูกเม็ดเคี้ยวได้อยู่ด้านล่าง",
@@ -4172,7 +4162,7 @@
   {
     "word": "whiskey",
     "thai": "วิสกี้",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "a strong alcoholic spirit aged in wooden barrels, often drunk on the rocks",
     "hintThai": "เครื่องดื่มแอลกอฮอล์กลั่นที่ทำจากธัญพืชและบ่มในถัง",
@@ -4182,7 +4172,7 @@
   {
     "word": "sparkling water",
     "thai": "น้ำอัดลมไม่มีรส",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "plain water with bubbles but no sugar or flavor",
     "hintThai": "น้ำแร่ที่มีฟองก๊าซคาร์บอนไดออกไซด์",
@@ -4192,7 +4182,7 @@
   {
     "word": "hot chocolate",
     "thai": "ช็อกโกแลตร้อน",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "a warm sweet drink made from cocoa or melted chocolate and milk",
     "hintThai": "เครื่องดื่มร้อนที่ทำจากโกโก้หรือช็อคโกแลต",
@@ -4202,7 +4192,7 @@
   {
     "word": "energy drink",
     "thai": "เครื่องดื่มชูกำลัง",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "medium",
     "hint": "a drink with caffeine and sugar that claims to boost your energy",
     "hintThai": "เครื่องดื่มที่มีคาเฟอีนและน้ำตาลสูงเพื่อเพิ่มพลังงาน",
@@ -4212,7 +4202,7 @@
   {
     "word": "kombucha",
     "thai": "คอมบูชา",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "hard",
     "hint": "a fizzy fermented tea drink believed to be good for your gut",
     "hintThai": "เครื่องดื่มชาหมักที่มีรสเปรี้ยวเล็กน้อย",
@@ -4222,7 +4212,7 @@
   {
     "word": "mocktail",
     "thai": "ม็อกเทล",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "hard",
     "hint": "a fancy mixed drink that looks like a cocktail but contains no alcohol",
     "hintThai": "เครื่องดื่มที่คล้ายค็อกเทลแต่ไม่มีแอลกอฮอล์",
@@ -4232,7 +4222,7 @@
   {
     "word": "cold brew",
     "thai": "โคลด์บรูว์",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "hard",
     "hint": "coffee steeped in cold water for many hours instead of using heat",
     "hintThai": "กาแฟที่ชงด้วยน้ำเย็นเป็นเวลานาน",
@@ -4242,7 +4232,7 @@
   {
     "word": "affogato",
     "thai": "อัฟโฟกาโต้",
-    "category": "Drinks",
+    "category": "Food & Drinks",
     "level": "hard",
     "hint": "an Italian dessert drink — a shot of hot espresso poured over vanilla ice cream",
     "hintThai": "เอสเปรสโซร้อนราดบนไอศกรีมวานิลลา",
@@ -4308,16 +4298,6 @@
     "hintThai": "ปากกาสีสดที่ใช้ขีดเน้นข้อความสำคัญ",
     "pos": "noun",
     "emoji": "✏️"
-  },
-  {
-    "word": "scissors",
-    "thai": "กรรไกร",
-    "category": "Office & School",
-    "level": "easy",
-    "hint": "a tool with two blades that cut paper, fabric, or other thin materials",
-    "hintThai": "อุปกรณ์สองใบมีดสำหรับตัดกระดาษหรือผ้า",
-    "pos": "noun",
-    "emoji": "✂️"
   },
   {
     "word": "ruler",
@@ -4560,16 +4540,6 @@
     "emoji": "📠"
   },
   {
-    "word": "calendar",
-    "thai": "ปฏิทิน",
-    "category": "Office & School",
-    "level": "easy",
-    "hint": "a chart showing all the days, weeks, and months of the year",
-    "hintThai": "แผนภูมิที่แสดงวัน สัปดาห์ และเดือนทั้งหมดของปี",
-    "pos": "noun",
-    "emoji": "📅"
-  },
-  {
     "word": "whiteboard eraser",
     "thai": "แปรงลบกระดาน",
     "category": "Office & School",
@@ -4600,47 +4570,11 @@
     "emoji": "🪪"
   },
   {
-    "word": "Bangkok",
-    "thai": "กรุงเทพฯ",
-    "country": "Thailand",
-    "countryThai": "ประเทศไทย",
-    "category": "Cities",
-    "level": "easy",
-    "hint": "capital city known for temples and street food",
-    "hintThai": "เมืองหลวงที่มีวัดและอาหารริมทาง",
-    "pos": "noun",
-    "emoji": "🐘"
-  },
-  {
-    "word": "Tokyo",
-    "thai": "โตเกียว",
-    "country": "Japan",
-    "countryThai": "ประเทศญี่ปุ่น",
-    "category": "Cities",
-    "level": "easy",
-    "hint": "the world's largest city, famous for sushi and anime",
-    "hintThai": "เมืองใหญ่ที่สุดในโลก มีซูชิและอนิเมะ",
-    "pos": "noun",
-    "emoji": "🗼"
-  },
-  {
-    "word": "Paris",
-    "thai": "ปารีส",
-    "country": "France",
-    "countryThai": "ประเทศฝรั่งเศส",
-    "category": "Cities",
-    "level": "easy",
-    "hint": "city of love with a famous iron tower",
-    "hintThai": "เมืองแห่งความรัก มีหอคอยเหล็กชื่อดัง",
-    "pos": "noun",
-    "emoji": "🗼"
-  },
-  {
     "word": "New York",
     "thai": "นิวยอร์ก",
     "country": "USA",
     "countryThai": "สหรัฐอเมริกา",
-    "category": "Cities",
+    "category": "Countries",
     "level": "easy",
     "hint": "city that never sleeps with a famous statue of liberty",
     "hintThai": "เมืองที่ไม่มีวันหลับ มีเทพีเสรีภาพ",
@@ -4648,23 +4582,11 @@
     "emoji": "🗽"
   },
   {
-    "word": "London",
-    "thai": "ลอนดอน",
-    "country": "UK",
-    "countryThai": "สหราชอาณาจักร",
-    "category": "Cities",
-    "level": "easy",
-    "hint": "city with a famous clock tower and red buses",
-    "hintThai": "มีหอนาฬิกาบิ๊กเบนและรถบัสสีแดง",
-    "pos": "noun",
-    "emoji": "🎡"
-  },
-  {
     "word": "Dubai",
     "thai": "ดูไบ",
     "country": "UAE",
     "countryThai": "สหรัฐอาหรับเอมิเรตส์",
-    "category": "Cities",
+    "category": "Countries",
     "level": "easy",
     "hint": "desert city famous for its skyscrapers and luxury",
     "hintThai": "เมืองทะเลทรายที่มีตึกสูงและความหรูหรา",
@@ -4676,7 +4598,7 @@
     "thai": "สิงคโปร์",
     "country": "Singapore",
     "countryThai": "ประเทศสิงคโปร์",
-    "category": "Cities",
+    "category": "Countries",
     "level": "easy",
     "hint": "small island city-state known for being very clean",
     "hintThai": "เกาะเล็กๆ ที่สะอาดมากที่สุดในโลก",
@@ -4688,7 +4610,7 @@
     "thai": "ซิดนีย์",
     "country": "Australia",
     "countryThai": "ประเทศออสเตรเลีย",
-    "category": "Cities",
+    "category": "Countries",
     "level": "medium",
     "hint": "city with a famous opera house by the harbor",
     "hintThai": "มีโรงโอเปร่าชื่อดังริมอ่าว",
@@ -4696,23 +4618,11 @@
     "emoji": "🦘"
   },
   {
-    "word": "Rome",
-    "thai": "โรม",
-    "country": "Italy",
-    "countryThai": "ประเทศอิตาลี",
-    "category": "Cities",
-    "level": "medium",
-    "hint": "ancient city with the Colosseum and the Vatican",
-    "hintThai": "เมืองโบราณ มีโคลอสเซียมและวาติกัน",
-    "pos": "noun",
-    "emoji": "🏛️"
-  },
-  {
     "word": "Barcelona",
     "thai": "บาร์เซโลนา",
     "country": "Spain",
     "countryThai": "ประเทศสเปน",
-    "category": "Cities",
+    "category": "Countries",
     "level": "medium",
     "hint": "coastal city famous for Gaudi's architecture and football",
     "hintThai": "เมืองชายฝั่งมีสถาปัตยกรรมของเกาดี",
@@ -4724,7 +4634,7 @@
     "thai": "อัมสเตอร์ดัม",
     "country": "Netherlands",
     "countryThai": "ประเทศเนเธอร์แลนด์",
-    "category": "Cities",
+    "category": "Countries",
     "level": "medium",
     "hint": "city of canals, bicycles, and tulips",
     "hintThai": "เมืองคูน้ำ จักรยาน และดอกทิวลิป",
@@ -4736,7 +4646,7 @@
     "thai": "อิสตันบูล",
     "country": "Turkey",
     "countryThai": "ประเทศตุรกี",
-    "category": "Cities",
+    "category": "Countries",
     "level": "medium",
     "hint": "city on two continents with grand mosques",
     "hintThai": "เมืองที่ตั้งอยู่บนสองทวีป มีมัสยิดใหญ่",
@@ -4744,23 +4654,11 @@
     "emoji": "🕌"
   },
   {
-    "word": "Cairo",
-    "thai": "ไคโร",
-    "country": "Egypt",
-    "countryThai": "ประเทศอียิปต์",
-    "category": "Cities",
-    "level": "medium",
-    "hint": "city near the ancient pyramids",
-    "hintThai": "เมืองใกล้พีระมิดโบราณ",
-    "pos": "noun",
-    "emoji": "🔺"
-  },
-  {
     "word": "Seoul",
     "thai": "โซล",
     "country": "South Korea",
     "countryThai": "ประเทศเกาหลีใต้",
-    "category": "Cities",
+    "category": "Countries",
     "level": "medium",
     "hint": "capital of K-pop and Korean BBQ",
     "hintThai": "เมืองหลวงของเคป็อปและบาร์บีคิวเกาหลี",
@@ -4772,7 +4670,7 @@
     "thai": "มุมไบ",
     "country": "India",
     "countryThai": "ประเทศอินเดีย",
-    "category": "Cities",
+    "category": "Countries",
     "level": "medium",
     "hint": "India's financial capital and Bollywood home",
     "hintThai": "เมืองหลวงการเงินและบอลลีวูดของอินเดีย",
@@ -4784,7 +4682,7 @@
     "thai": "เชียงใหม่",
     "country": "Thailand",
     "countryThai": "ประเทศไทย",
-    "category": "Cities",
+    "category": "Countries",
     "level": "medium",
     "hint": "northern Thai city famous for temples and mountains",
     "hintThai": "เมืองเหนือของไทย มีวัดและภูเขา",
@@ -4796,7 +4694,7 @@
     "thai": "เกียวโต",
     "country": "Japan",
     "countryThai": "ประเทศญี่ปุ่น",
-    "category": "Cities",
+    "category": "Countries",
     "level": "medium",
     "hint": "Japan's ancient capital full of temples and geishas",
     "hintThai": "เมืองหลวงเก่าญี่ปุ่น มีวัดและเกอิชา",
@@ -4808,7 +4706,7 @@
     "thai": "ปราก",
     "country": "Czech Republic",
     "countryThai": "สาธารณรัฐเช็ก",
-    "category": "Cities",
+    "category": "Countries",
     "level": "hard",
     "hint": "fairy-tale city with a medieval old town in Europe",
     "hintThai": "เมืองแบบเทพนิยาย มีเมืองเก่ายุคกลาง",
@@ -4820,7 +4718,7 @@
     "thai": "มาร์ราเกช",
     "country": "Morocco",
     "countryThai": "ประเทศโมร็อกโก",
-    "category": "Cities",
+    "category": "Countries",
     "level": "hard",
     "hint": "colorful maze-like market city in North Africa",
     "hintThai": "เมืองตลาดสีสันสดใสในแอฟริกาเหนือ",
@@ -4832,7 +4730,7 @@
     "thai": "บาหลี",
     "country": "Indonesia",
     "countryThai": "ประเทศอินโดนีเซีย",
-    "category": "Cities",
+    "category": "Countries",
     "level": "easy",
     "hint": "tropical island resort famous for rice terraces and temples",
     "hintThai": "เกาะท่องเที่ยวมีนาขั้นบันไดและวัด",

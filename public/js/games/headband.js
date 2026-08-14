@@ -95,9 +95,18 @@ function hbRenderPlayerList() {
 
 // ── Settings (multi-select) ───────────────────────────────────────────────────
 const HB_CAT_IDS = {
-  General:'hbsp-cat-general', Animals:'hbsp-cat-animals', Objects:'hbsp-cat-objects',
-  Characters:'hbsp-cat-characters', Cities:'hbsp-cat-cities', Drinks:'hbsp-cat-drinks',
-  Occupations:'hbsp-cat-occupations', 'Office & School':'hbsp-cat-office', Places:'hbsp-cat-places',
+  Animals:          'hbsp-cat-animals',
+  'Food & Drinks':  'hbsp-cat-food',
+  Brands:           'hbsp-cat-brands',
+  Characters:       'hbsp-cat-characters',
+  Concepts:         'hbsp-cat-concepts',
+  Countries:        'hbsp-cat-countries',
+  'Gadgets & Tools':'hbsp-cat-gadgets',
+  Landmarks:        'hbsp-cat-landmarks',
+  Objects:          'hbsp-cat-objects',
+  Occupations:      'hbsp-cat-occupations',
+  'Office & School':'hbsp-cat-office',
+  Places:           'hbsp-cat-places',
 };
 
 function hbToggleCat(cat) {
