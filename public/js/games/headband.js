@@ -35,13 +35,15 @@ async function hbGoSetup() {
 }
 
 // ── Player management ─────────────────────────────────────────────────────────
+// _hbPlayers = [{ name, levels: [] }]  levels=[] means use global / all
+
 function hbAddPlayer() {
   const inp  = document.getElementById('hb-player-input');
   const name = inp.value.trim();
-  if (!name || _hbPlayers.some(p => p.toLowerCase() === name.toLowerCase())) {
+  if (!name || _hbPlayers.some(p => p.name.toLowerCase() === name.toLowerCase())) {
     inp.value = ''; return;
   }
-  _hbPlayers.push(name);
+  _hbPlayers.push({ name, levels: [] });
   inp.value = '';
   hbRenderPlayerList();
 }
@@ -51,16 +53,38 @@ function hbRemovePlayer(idx) {
   hbRenderPlayerList();
 }
 
+function hbTogglePlayerLevel(idx, lvl) {
+  const p   = _hbPlayers[idx];
+  const pos = p.levels.indexOf(lvl);
+  if (pos === -1) p.levels.push(lvl);
+  else            p.levels.splice(pos, 1);
+  hbRenderPlayerList();
+}
+
+const LVL_COLORS = { easy: '#22c55e', medium: '#f59e0b', hard: '#ef4444' };
+
 function hbRenderPlayerList() {
   const list = document.getElementById('hb-player-list');
-  list.innerHTML = _hbPlayers.map((name, i) =>
-    `<div style="display:flex;align-items:center;gap:10px;padding:6px 0;">
-      <div class="avatar" style="width:32px;height:32px;font-size:0.85rem;">${name[0].toUpperCase()}</div>
-      <div style="flex:1;font-size:0.95rem;font-weight:600;">${name}</div>
+  list.innerHTML = _hbPlayers.map((p, i) => {
+    const pills = ['easy','medium','hard'].map(l => {
+      const active = p.levels.includes(l);
+      const c      = LVL_COLORS[l];
+      return `<button onclick="hbTogglePlayerLevel(${i},'${l}')" style="
+        padding:3px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;cursor:pointer;
+        border:1.5px solid ${active ? c : 'var(--border)'};
+        background:${active ? c + '22' : 'transparent'};
+        color:${active ? c : 'var(--muted)'};
+      ">${l}</button>`;
+    }).join('');
+    return `<div style="display:flex;align-items:center;gap:8px;padding:6px 0;flex-wrap:wrap;">
+      <div class="avatar" style="width:32px;height:32px;font-size:0.85rem;flex-shrink:0;">${p.name[0].toUpperCase()}</div>
+      <div style="font-size:0.95rem;font-weight:600;flex:1;min-width:60px;">${p.name}</div>
+      <div style="display:flex;gap:4px;">${pills}</div>
       <button onclick="hbRemovePlayer(${i})"
-        style="background:transparent;border:none;color:var(--muted);font-size:1rem;cursor:pointer;">✕</button>
-    </div>`
-  ).join('');
+        style="background:transparent;border:none;color:var(--muted);font-size:1rem;cursor:pointer;flex-shrink:0;">✕</button>
+    </div>`;
+  }).join('');
+
   const startBtn = document.getElementById('hb-setup-start-btn');
   if (startBtn) {
     startBtn.disabled = _hbPlayers.length < 2;
@@ -101,10 +125,12 @@ function hbSyncPills() {
 }
 
 // ── Word picking ──────────────────────────────────────────────────────────────
-function hbPickWord() {
+function hbPickWord(playerLevels) {
+  // Use player-specific levels if set, else fall back to global levels
+  const levels = (playerLevels && playerLevels.length > 0) ? playerLevels : _hbLevels;
   let pool = _hbWords;
   if (_hbCategories.length > 0) pool = pool.filter(w => _hbCategories.includes(w.category));
-  if (_hbLevels.length     > 0) pool = pool.filter(w => _hbLevels.includes(w.level));
+  if (levels.length        > 0) pool = pool.filter(w => levels.includes(w.level));
   if (pool.length === 0) pool = _hbWords;
   let fresh = pool.filter(w => !_hbHistory.has(w.word));
   if (fresh.length === 0) { _hbHistory.clear(); fresh = pool; }
@@ -122,8 +148,9 @@ function hbStartGame() {
 }
 
 function hbShowTurn() {
-  _hbCurrentWord = hbPickWord();
-  const name     = _hbPlayers[_hbCurrentIdx];
+  const player   = _hbPlayers[_hbCurrentIdx];
+  _hbCurrentWord = hbPickWord(player.levels);
+  const name     = player.name;
 
   // Reset turn UI
   document.getElementById('hb-whose-turn').textContent     = `${name} กำลังเล่น`;
@@ -132,6 +159,7 @@ function hbShowTurn() {
   document.getElementById('hb-word-area').style.display    = 'none';
   document.getElementById('hb-btn-start').style.display    = 'block';
   document.getElementById('hb-btn-stop').style.display     = 'none';
+  document.getElementById('hb-btn-change').style.display   = 'none';
 
   clearInterval(_hbTimerInterval);
   _hbTimerStart = null;
@@ -153,10 +181,11 @@ function hbBeginTurn() {
     lvlEl.textContent = w.level;
     lvlEl.style.color = lvlEl.style.borderColor = c;
   }
-  document.getElementById('hb-pre-start').style.display = 'none';
-  document.getElementById('hb-word-area').style.display = 'flex';
-  document.getElementById('hb-btn-start').style.display = 'none';
-  document.getElementById('hb-btn-stop').style.display  = 'block';
+  document.getElementById('hb-pre-start').style.display    = 'none';
+  document.getElementById('hb-word-area').style.display    = 'flex';
+  document.getElementById('hb-btn-start').style.display    = 'none';
+  document.getElementById('hb-btn-stop').style.display     = 'block';
+  document.getElementById('hb-btn-change').style.display   = 'block';
 
   // Start timer
   _hbTimerStart = Date.now();
@@ -168,10 +197,25 @@ function hbBeginTurn() {
   }, 500);
 }
 
+function hbChangeWord() {
+  const player   = _hbPlayers[_hbCurrentIdx];
+  _hbCurrentWord = hbPickWord(player.levels);
+  const w        = _hbCurrentWord;
+  document.getElementById('hb-word-en').textContent   = w.word  || '';
+  document.getElementById('hb-word-thai').textContent = w.thai  || '';
+  document.getElementById('hb-word-cat').textContent  = w.category || '';
+  const lvlEl = document.getElementById('hb-word-level');
+  if (lvlEl && w.level) {
+    const c = LVL_COLORS[w.level] || 'var(--muted)';
+    lvlEl.textContent = w.level;
+    lvlEl.style.color = lvlEl.style.borderColor = c;
+  }
+}
+
 function hbStopTurn() {
   clearInterval(_hbTimerInterval);
   const elapsed = _hbTimerStart ? Math.round((Date.now() - _hbTimerStart) / 1000) : 0;
-  const name    = _hbPlayers[_hbCurrentIdx];
+  const name    = _hbPlayers[_hbCurrentIdx].name;
   _hbScores.push({ name, seconds: elapsed });
 
   document.getElementById('hb-done-name').textContent = name;
