@@ -251,6 +251,11 @@ function hbShowResult() {
   if (bar) bar.style.display = 'none';
 }
 
+function hbEndGame() {
+  clearInterval(_hbTimerInterval);
+  hbShowResult();
+}
+
 function hbRestartGame() {
   _hbCurrentIdx = 0;
   _hbScores     = [];

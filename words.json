@@ -5,7 +5,8 @@
     "category": "General",
     "level": "easy",
     "hint": "water falling from the sky",
-    "hintThai": "น้ำที่ตกจากท้องฟ้า"
+    "hintThai": "น้ำที่ตกจากท้องฟ้า",
+    "pos": "noun"
   },
   {
     "word": "smile",
@@ -13,7 +14,8 @@
     "category": "General",
     "level": "easy",
     "hint": "expression of happiness on your face",
-    "hintThai": "การแสดงออกถึงความสุขบนใบหน้า"
+    "hintThai": "การแสดงออกถึงความสุขบนใบหน้า",
+    "pos": "noun"
   },
   {
     "word": "money",
@@ -21,7 +23,8 @@
     "category": "General",
     "level": "easy",
     "hint": "used to buy things",
-    "hintThai": "ใช้ซื้อสิ่งของต่างๆ"
+    "hintThai": "ใช้ซื้อสิ่งของต่างๆ",
+    "pos": "noun"
   },
   {
     "word": "dream",
@@ -29,7 +32,8 @@
     "category": "General",
     "level": "easy",
     "hint": "happens while you sleep",
-    "hintThai": "เกิดขึ้นขณะที่คุณนอนหลับ"
+    "hintThai": "เกิดขึ้นขณะที่คุณนอนหลับ",
+    "pos": "noun"
   },
   {
     "word": "music",
@@ -37,7 +41,8 @@
     "category": "General",
     "level": "easy",
     "hint": "you listen to it",
-    "hintThai": "คุณฟังมัน"
+    "hintThai": "คุณฟังมัน",
+    "pos": "noun"
   },
   {
     "word": "birthday",
@@ -45,7 +50,8 @@
     "category": "General",
     "level": "easy",
     "hint": "a special day once a year",
-    "hintThai": "วันพิเศษที่เกิดปีละครั้ง"
+    "hintThai": "วันพิเศษที่เกิดปีละครั้ง",
+    "pos": "noun"
   },
   {
     "word": "holiday",
@@ -53,7 +59,8 @@
     "category": "General",
     "level": "easy",
     "hint": "a day off from work or school",
-    "hintThai": "วันหยุดจากการทำงานหรือโรงเรียน"
+    "hintThai": "วันหยุดจากการทำงานหรือโรงเรียน",
+    "pos": "noun"
   },
   {
     "word": "shadow",
@@ -61,7 +68,8 @@
     "category": "General",
     "level": "easy",
     "hint": "a dark shape made by blocking light",
-    "hintThai": "รูปทรงสีเข้มที่เกิดจากการบังแสง"
+    "hintThai": "รูปทรงสีเข้มที่เกิดจากการบังแสง",
+    "pos": "noun"
   },
   {
     "word": "secret",
@@ -69,7 +77,8 @@
     "category": "General",
     "level": "easy",
     "hint": "something you do not tell others",
-    "hintThai": "สิ่งที่คุณไม่บอกคนอื่น"
+    "hintThai": "สิ่งที่คุณไม่บอกคนอื่น",
+    "pos": "noun"
   },
   {
     "word": "habit",
@@ -77,7 +86,8 @@
     "category": "General",
     "level": "easy",
     "hint": "something you do regularly without thinking",
-    "hintThai": "สิ่งที่คุณทำเป็นประจำโดยไม่ต้องคิด"
+    "hintThai": "สิ่งที่คุณทำเป็นประจำโดยไม่ต้องคิด",
+    "pos": "noun"
   },
   {
     "word": "tradition",
@@ -85,7 +95,8 @@
     "category": "General",
     "level": "medium",
     "hint": "a custom passed down through generations",
-    "hintThai": "สิ่งที่สืบทอดและปฏิบัติมาจากรุ่นสู่รุ่น"
+    "hintThai": "สิ่งที่สืบทอดและปฏิบัติมาจากรุ่นสู่รุ่น",
+    "pos": "noun"
   },
   {
     "word": "rumor",
@@ -93,7 +104,8 @@
     "category": "General",
     "level": "medium",
     "hint": "unverified information that spreads quickly",
-    "hintThai": "ข่าวลือที่ยังไม่ได้รับการพิสูจน์"
+    "hintThai": "ข่าวลือที่ยังไม่ได้รับการพิสูจน์",
+    "pos": "noun"
   },
   {
     "word": "patience",
@@ -101,7 +113,8 @@
     "category": "General",
     "level": "medium",
     "hint": "ability to wait calmly",
-    "hintThai": "ความสามารถในการรอโดยไม่รำคาญ"
+    "hintThai": "ความสามารถในการรอโดยไม่รำคาญ",
+    "pos": "noun"
   },
   {
     "word": "jealousy",
@@ -109,7 +122,8 @@
     "category": "General",
     "level": "medium",
     "hint": "feeling when you want what others have",
-    "hintThai": "ความรู้สึกไม่พอใจเมื่อเห็นคนอื่นมีสิ่งที่ตัวเองอยากได้"
+    "hintThai": "ความรู้สึกไม่พอใจเมื่อเห็นคนอื่นมีสิ่งที่ตัวเองอยากได้",
+    "pos": "noun"
   },
   {
     "word": "freedom",
@@ -117,7 +131,8 @@
     "category": "General",
     "level": "medium",
     "hint": "the right to do what you want",
-    "hintThai": "ความสามารถในการทำสิ่งที่ต้องการโดยไม่ถูกจำกัด"
+    "hintThai": "ความสามารถในการทำสิ่งที่ต้องการโดยไม่ถูกจำกัด",
+    "pos": "noun"
   },
   {
     "word": "adventure",
@@ -125,7 +140,8 @@
     "category": "General",
     "level": "medium",
     "hint": "an exciting or unusual experience",
-    "hintThai": "การเดินทางหรือกิจกรรมที่น่าตื่นเต้น"
+    "hintThai": "การเดินทางหรือกิจกรรมที่น่าตื่นเต้น",
+    "pos": "noun"
   },
   {
     "word": "coincidence",
@@ -133,7 +149,8 @@
     "category": "General",
     "level": "medium",
     "hint": "two things happening by chance at the same time",
-    "hintThai": "สิ่งที่เกิดขึ้นพร้อมกันโดยบังเอิญ"
+    "hintThai": "สิ่งที่เกิดขึ้นพร้อมกันโดยบังเอิญ",
+    "pos": "noun"
   },
   {
     "word": "deadline",
@@ -141,7 +158,8 @@
     "category": "General",
     "level": "medium",
     "hint": "the last time something must be finished",
-    "hintThai": "วันหรือเวลาสุดท้ายที่ต้องส่งงาน"
+    "hintThai": "วันหรือเวลาสุดท้ายที่ต้องส่งงาน",
+    "pos": "noun"
   },
   {
     "word": "influence",
@@ -149,7 +167,8 @@
     "category": "General",
     "level": "medium",
     "hint": "the power to affect others",
-    "hintThai": "ความสามารถในการส่งผลต่อความคิดหรือการกระทำของคนอื่น"
+    "hintThai": "ความสามารถในการส่งผลต่อความคิดหรือการกระทำของคนอื่น",
+    "pos": "noun"
   },
   {
     "word": "reputation",
@@ -157,7 +176,8 @@
     "category": "General",
     "level": "medium",
     "hint": "what people think of you",
-    "hintThai": "สิ่งที่คนอื่นคิดและพูดถึงคุณ"
+    "hintThai": "สิ่งที่คนอื่นคิดและพูดถึงคุณ",
+    "pos": "noun"
   },
   {
     "word": "procrastination",
@@ -165,7 +185,8 @@
     "category": "General",
     "level": "hard",
     "hint": "delaying tasks you should do now",
-    "hintThai": "การผัดผ่อนงานออกไปเรื่อยๆ"
+    "hintThai": "การผัดผ่อนงานออกไปเรื่อยๆ",
+    "pos": "noun"
   },
   {
     "word": "nostalgia",
@@ -173,7 +194,8 @@
     "category": "General",
     "level": "hard",
     "hint": "longing for the past",
-    "hintThai": "ความคิดถึงอดีตที่ผ่านมา"
+    "hintThai": "ความคิดถึงอดีตที่ผ่านมา",
+    "pos": "noun"
   },
   {
     "word": "sarcasm",
@@ -181,7 +203,8 @@
     "category": "General",
     "level": "hard",
     "hint": "saying the opposite of what you mean",
-    "hintThai": "การพูดตรงข้ามกับที่หมายความ มักใช้ประชดประชัน"
+    "hintThai": "การพูดตรงข้ามกับที่หมายความ มักใช้ประชดประชัน",
+    "pos": "noun"
   },
   {
     "word": "empathy",
@@ -189,7 +212,8 @@
     "category": "General",
     "level": "hard",
     "hint": "understanding how others feel",
-    "hintThai": "ความสามารถในการเข้าใจความรู้สึกของผู้อื่น"
+    "hintThai": "ความสามารถในการเข้าใจความรู้สึกของผู้อื่น",
+    "pos": "noun"
   },
   {
     "word": "ambiguity",
@@ -197,7 +221,8 @@
     "category": "General",
     "level": "hard",
     "hint": "when something has more than one meaning",
-    "hintThai": "สิ่งที่มีความหมายได้หลายแบบ ไม่ชัดเจน"
+    "hintThai": "สิ่งที่มีความหมายได้หลายแบบ ไม่ชัดเจน",
+    "pos": "noun"
   },
   {
     "word": "phenomenon",
@@ -205,7 +230,8 @@
     "category": "General",
     "level": "hard",
     "hint": "a remarkable observable fact or event",
-    "hintThai": "เหตุการณ์หรือสิ่งที่สังเกตเห็นได้และน่าสนใจ"
+    "hintThai": "เหตุการณ์หรือสิ่งที่สังเกตเห็นได้และน่าสนใจ",
+    "pos": "noun"
   },
   {
     "word": "perseverance",
@@ -213,7 +239,8 @@
     "category": "General",
     "level": "hard",
     "hint": "continuing despite difficulty",
-    "hintThai": "ความมุ่งมั่นทำต่อไปแม้จะเจอความยากลำบาก"
+    "hintThai": "ความมุ่งมั่นทำต่อไปแม้จะเจอความยากลำบาก",
+    "pos": "noun"
   },
   {
     "word": "subconscious",
@@ -221,7 +248,8 @@
     "category": "General",
     "level": "hard",
     "hint": "thoughts you are not fully aware of",
-    "hintThai": "ส่วนของจิตใจที่ทำงานโดยที่เราไม่รู้ตัว"
+    "hintThai": "ส่วนของจิตใจที่ทำงานโดยที่เราไม่รู้ตัว",
+    "pos": "noun"
   },
   {
     "word": "hunger",
@@ -229,7 +257,8 @@
     "category": "General",
     "level": "easy",
     "hint": "the feeling when you need food",
-    "hintThai": "ความรู้สึกอยากกินอาหารเมื่อท้องว่าง"
+    "hintThai": "ความรู้สึกอยากกินอาหารเมื่อท้องว่าง",
+    "pos": "noun"
   },
   {
     "word": "sleep",
@@ -237,7 +266,8 @@
     "category": "General",
     "level": "easy",
     "hint": "what your body does at night to rest",
-    "hintThai": "สภาวะพักผ่อนที่ร่างกายและจิตใจหยุดทำงานชั่วคราว"
+    "hintThai": "สภาวะพักผ่อนที่ร่างกายและจิตใจหยุดทำงานชั่วคราว",
+    "pos": "noun"
   },
   {
     "word": "laugh",
@@ -245,7 +275,8 @@
     "category": "General",
     "level": "easy",
     "hint": "a sound you make when something is funny",
-    "hintThai": "เสียงที่เกิดขึ้นเมื่อรู้สึกสนุกหรือขบขัน"
+    "hintThai": "เสียงที่เกิดขึ้นเมื่อรู้สึกสนุกหรือขบขัน",
+    "pos": "noun"
   },
   {
     "word": "speed",
@@ -253,7 +284,8 @@
     "category": "General",
     "level": "easy",
     "hint": "how fast something moves",
-    "hintThai": "ความเร็วในการเคลื่อนที่"
+    "hintThai": "ความเร็วในการเคลื่อนที่",
+    "pos": "noun"
   },
   {
     "word": "color",
@@ -261,7 +293,8 @@
     "category": "General",
     "level": "easy",
     "hint": "what your eyes see — red, blue, green…",
-    "hintThai": "คุณสมบัติของแสงที่ตาเราเห็น เช่น แดง น้ำเงิน เขียว"
+    "hintThai": "คุณสมบัติของแสงที่ตาเราเห็น เช่น แดง น้ำเงิน เขียว",
+    "pos": "noun"
   },
   {
     "word": "luck",
@@ -269,7 +302,8 @@
     "category": "General",
     "level": "easy",
     "hint": "good things that happen by chance",
-    "hintThai": "สิ่งที่เกิดขึ้นโดยบังเอิญในทางดี"
+    "hintThai": "สิ่งที่เกิดขึ้นโดยบังเอิญในทางดี",
+    "pos": "noun"
   },
   {
     "word": "pain",
@@ -277,7 +311,8 @@
     "category": "General",
     "level": "easy",
     "hint": "an unpleasant feeling from injury",
-    "hintThai": "ความรู้สึกเจ็บปวดทางร่างกายหรือจิตใจ"
+    "hintThai": "ความรู้สึกเจ็บปวดทางร่างกายหรือจิตใจ",
+    "pos": "noun"
   },
   {
     "word": "fire",
@@ -285,7 +320,8 @@
     "category": "General",
     "level": "easy",
     "hint": "hot and bright, it burns things",
-    "hintThai": "ปรากฏการณ์ที่เกิดจากการเผาไหม้ ให้ความร้อนและแสง"
+    "hintThai": "ปรากฏการณ์ที่เกิดจากการเผาไหม้ ให้ความร้อนและแสง",
+    "pos": "noun"
   },
   {
     "word": "noise",
@@ -293,7 +329,8 @@
     "category": "General",
     "level": "easy",
     "hint": "an unwanted or loud sound",
-    "hintThai": "เสียงดังที่ไม่พึงประสงค์"
+    "hintThai": "เสียงดังที่ไม่พึงประสงค์",
+    "pos": "noun"
   },
   {
     "word": "gift",
@@ -301,7 +338,8 @@
     "category": "General",
     "level": "easy",
     "hint": "something you give someone on a special occasion",
-    "hintThai": "สิ่งที่มอบให้กันเพื่อแสดงความรัก"
+    "hintThai": "สิ่งที่มอบให้กันเพื่อแสดงความรัก",
+    "pos": "noun"
   },
   {
     "word": "silence",
@@ -309,7 +347,8 @@
     "category": "General",
     "level": "easy",
     "hint": "complete absence of sound",
-    "hintThai": "ความเงียบ ไม่มีเสียงใดๆ"
+    "hintThai": "ความเงียบ ไม่มีเสียงใดๆ",
+    "pos": "noun"
   },
   {
     "word": "memory",
@@ -317,7 +356,8 @@
     "category": "General",
     "level": "easy",
     "hint": "something you remember from the past",
-    "hintThai": "สิ่งที่คุณจำไว้ในความทรงจำ"
+    "hintThai": "สิ่งที่คุณจำไว้ในความทรงจำ",
+    "pos": "noun"
   },
   {
     "word": "fear",
@@ -325,7 +365,8 @@
     "category": "General",
     "level": "easy",
     "hint": "a feeling when you are scared",
-    "hintThai": "ความรู้สึกเมื่อเจอสิ่งน่ากลัว"
+    "hintThai": "ความรู้สึกเมื่อเจอสิ่งน่ากลัว",
+    "pos": "noun"
   },
   {
     "word": "sunset",
@@ -333,7 +374,8 @@
     "category": "General",
     "level": "easy",
     "hint": "when the sun goes below the horizon in the evening",
-    "hintThai": "ช่วงเวลาที่ดวงอาทิตย์ตกลงใต้ขอบฟ้าในตอนเย็น"
+    "hintThai": "ช่วงเวลาที่ดวงอาทิตย์ตกลงใต้ขอบฟ้าในตอนเย็น",
+    "pos": "noun"
   },
   {
     "word": "competition",
@@ -341,7 +383,8 @@
     "category": "General",
     "level": "medium",
     "hint": "trying to win against others",
-    "hintThai": "การแข่งขันเพื่อชิงชัยเป็นผู้ชนะ"
+    "hintThai": "การแข่งขันเพื่อชิงชัยเป็นผู้ชนะ",
+    "pos": "noun"
   },
   {
     "word": "consequence",
@@ -349,7 +392,8 @@
     "category": "General",
     "level": "medium",
     "hint": "what happens as a result of an action",
-    "hintThai": "สิ่งที่เกิดขึ้นตามหลังจากการกระทำ"
+    "hintThai": "สิ่งที่เกิดขึ้นตามหลังจากการกระทำ",
+    "pos": "noun"
   },
   {
     "word": "obsession",
@@ -357,7 +401,8 @@
     "category": "General",
     "level": "medium",
     "hint": "when you think about one thing constantly",
-    "hintThai": "ความคิดหรือความต้องการที่ครอบงำจิตใจอย่างรุนแรง"
+    "hintThai": "ความคิดหรือความต้องการที่ครอบงำจิตใจอย่างรุนแรง",
+    "pos": "noun"
   },
   {
     "word": "sacrifice",
@@ -365,7 +410,8 @@
     "category": "General",
     "level": "medium",
     "hint": "giving up something valuable for a purpose",
-    "hintThai": "การยอมเสียสิ่งที่มีค่าเพื่อสิ่งที่สำคัญกว่า"
+    "hintThai": "การยอมเสียสิ่งที่มีค่าเพื่อสิ่งที่สำคัญกว่า",
+    "pos": "noun"
   },
   {
     "word": "motivation",
@@ -373,7 +419,8 @@
     "category": "General",
     "level": "medium",
     "hint": "what drives you to do something",
-    "hintThai": "แรงกระตุ้นที่ทำให้อยากทำสิ่งต่างๆ"
+    "hintThai": "แรงกระตุ้นที่ทำให้อยากทำสิ่งต่างๆ",
+    "pos": "noun"
   },
   {
     "word": "stereotype",
@@ -381,7 +428,8 @@
     "category": "General",
     "level": "medium",
     "hint": "a fixed idea about a group of people",
-    "hintThai": "ความเชื่อตายตัวเกี่ยวกับกลุ่มคน โดยไม่คำนึงถึงความแตกต่างของแต่ละคน"
+    "hintThai": "ความเชื่อตายตัวเกี่ยวกับกลุ่มคน โดยไม่คำนึงถึงความแตกต่างของแต่ละคน",
+    "pos": "noun"
   },
   {
     "word": "illusion",
@@ -389,7 +437,8 @@
     "category": "General",
     "level": "medium",
     "hint": "something that appears real but is not",
-    "hintThai": "สิ่งที่ดูเหมือนจริงแต่ไม่ใช่ความจริง"
+    "hintThai": "สิ่งที่ดูเหมือนจริงแต่ไม่ใช่ความจริง",
+    "pos": "noun"
   },
   {
     "word": "routine",
@@ -397,7 +446,8 @@
     "category": "General",
     "level": "medium",
     "hint": "a set of activities you do regularly in order",
-    "hintThai": "กิจกรรมที่ทำซ้ำในลำดับเดิมทุกวัน"
+    "hintThai": "กิจกรรมที่ทำซ้ำในลำดับเดิมทุกวัน",
+    "pos": "noun"
   },
   {
     "word": "crisis",
@@ -405,7 +455,8 @@
     "category": "General",
     "level": "medium",
     "hint": "a very dangerous or difficult situation",
-    "hintThai": "สถานการณ์เร่งด่วนและอันตรายที่ต้องแก้ไขทันที"
+    "hintThai": "สถานการณ์เร่งด่วนและอันตรายที่ต้องแก้ไขทันที",
+    "pos": "noun"
   },
   {
     "word": "negotiation",
@@ -413,7 +464,8 @@
     "category": "General",
     "level": "medium",
     "hint": "a discussion to reach an agreement",
-    "hintThai": "การพูดคุยเพื่อหาข้อตกลงที่ทั้งสองฝ่ายยอมรับ"
+    "hintThai": "การพูดคุยเพื่อหาข้อตกลงที่ทั้งสองฝ่ายยอมรับ",
+    "pos": "noun"
   },
   {
     "word": "temptation",
@@ -421,7 +473,8 @@
     "category": "General",
     "level": "medium",
     "hint": "a strong urge to do something you should avoid",
-    "hintThai": "สิ่งที่ดึงดูดให้ทำในสิ่งที่อาจไม่ดี"
+    "hintThai": "สิ่งที่ดึงดูดให้ทำในสิ่งที่อาจไม่ดี",
+    "pos": "noun"
   },
   {
     "word": "expectations",
@@ -429,7 +482,8 @@
     "category": "General",
     "level": "medium",
     "hint": "what you believe will or should happen",
-    "hintThai": "สิ่งที่คาดหวังว่าจะเกิดขึ้น"
+    "hintThai": "สิ่งที่คาดหวังว่าจะเกิดขึ้น",
+    "pos": "noun"
   },
   {
     "word": "cognitive bias",
@@ -437,7 +491,8 @@
     "category": "General",
     "level": "hard",
     "hint": "systematic errors in thinking that affect decisions",
-    "hintThai": "รูปแบบความคิดที่เบี่ยงเบนจากความเป็นจริงโดยไม่รู้ตัว"
+    "hintThai": "รูปแบบความคิดที่เบี่ยงเบนจากความเป็นจริงโดยไม่รู้ตัว",
+    "pos": "noun"
   },
   {
     "word": "paradox",
@@ -445,7 +500,8 @@
     "category": "General",
     "level": "hard",
     "hint": "a statement that seems contradictory but may be true",
-    "hintThai": "สิ่งที่ขัดแย้งกันในตัวเองแต่อาจเป็นจริง"
+    "hintThai": "สิ่งที่ขัดแย้งกันในตัวเองแต่อาจเป็นจริง",
+    "pos": "noun"
   },
   {
     "word": "bureaucracy",
@@ -453,7 +509,8 @@
     "category": "General",
     "level": "hard",
     "hint": "a complex system of rules and processes in organizations",
-    "hintThai": "ระบบราชการที่มีขั้นตอนมากและซับซ้อน"
+    "hintThai": "ระบบราชการที่มีขั้นตอนมากและซับซ้อน",
+    "pos": "noun"
   },
   {
     "word": "manipulation",
@@ -461,7 +518,8 @@
     "category": "General",
     "level": "hard",
     "hint": "controlling someone unfairly for your own benefit",
-    "hintThai": "การควบคุมหรือชักจูงคนอื่นอย่างแนบเนียน"
+    "hintThai": "การควบคุมหรือชักจูงคนอื่นอย่างแนบเนียน",
+    "pos": "noun"
   },
   {
     "word": "transparency",
@@ -469,7 +527,8 @@
     "category": "General",
     "level": "hard",
     "hint": "being open and honest with nothing hidden",
-    "hintThai": "ความโปร่งใส ไม่ปิดบังข้อมูล"
+    "hintThai": "ความโปร่งใส ไม่ปิดบังข้อมูล",
+    "pos": "noun"
   },
   {
     "word": "accountability",
@@ -477,7 +536,8 @@
     "category": "General",
     "level": "hard",
     "hint": "being responsible and answerable for your actions",
-    "hintThai": "ความรับผิดชอบต่อการกระทำและผลลัพธ์"
+    "hintThai": "ความรับผิดชอบต่อการกระทำและผลลัพธ์",
+    "pos": "noun"
   },
   {
     "word": "hospital",
@@ -485,7 +545,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "where sick people go to be treated",
-    "hintThai": "สถานที่ที่คนป่วยไปรักษา"
+    "hintThai": "สถานที่ที่คนป่วยไปรักษา",
+    "pos": "noun"
   },
   {
     "word": "airport",
@@ -493,7 +554,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "where planes take off and land",
-    "hintThai": "สถานที่ที่เครื่องบินขึ้นและลง"
+    "hintThai": "สถานที่ที่เครื่องบินขึ้นและลง",
+    "pos": "noun"
   },
   {
     "word": "library",
@@ -501,7 +563,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a building full of books to borrow",
-    "hintThai": "สถานที่ที่มีหนังสือให้ยืมและอ่าน"
+    "hintThai": "สถานที่ที่มีหนังสือให้ยืมและอ่าน",
+    "pos": "noun"
   },
   {
     "word": "market",
@@ -509,7 +572,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a place to buy and sell goods",
-    "hintThai": "สถานที่ซื้อขายสินค้าต่างๆ"
+    "hintThai": "สถานที่ซื้อขายสินค้าต่างๆ",
+    "pos": "noun"
   },
   {
     "word": "park",
@@ -517,7 +581,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "an outdoor area with grass and trees",
-    "hintThai": "พื้นที่สีเขียวกลางแจ้งสำหรับพักผ่อน"
+    "hintThai": "พื้นที่สีเขียวกลางแจ้งสำหรับพักผ่อน",
+    "pos": "noun"
   },
   {
     "word": "restaurant",
@@ -525,7 +590,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a place where you pay to eat food",
-    "hintThai": "สถานที่ที่คุณไปกินอาหารและจ่ายเงิน"
+    "hintThai": "สถานที่ที่คุณไปกินอาหารและจ่ายเงิน",
+    "pos": "noun"
   },
   {
     "word": "hotel",
@@ -533,7 +599,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a place where travelers sleep",
-    "hintThai": "สถานที่พักแรมชั่วคราว"
+    "hintThai": "สถานที่พักแรมชั่วคราว",
+    "pos": "noun"
   },
   {
     "word": "school",
@@ -541,7 +608,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a place where children learn",
-    "hintThai": "สถานที่ที่เด็กๆ ไปเรียนหนังสือ"
+    "hintThai": "สถานที่ที่เด็กๆ ไปเรียนหนังสือ",
+    "pos": "noun"
   },
   {
     "word": "gym",
@@ -549,7 +617,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a place to exercise and lift weights",
-    "hintThai": "สถานที่สำหรับออกกำลังกาย"
+    "hintThai": "สถานที่สำหรับออกกำลังกาย",
+    "pos": "noun"
   },
   {
     "word": "museum",
@@ -557,7 +626,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a building that displays historical objects",
-    "hintThai": "สถานที่ที่เก็บรักษาและแสดงสิ่งของทางประวัติศาสตร์"
+    "hintThai": "สถานที่ที่เก็บรักษาและแสดงสิ่งของทางประวัติศาสตร์",
+    "pos": "noun"
   },
   {
     "word": "embassy",
@@ -565,7 +635,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "office representing a country in another country",
-    "hintThai": "สถานที่ตั้งของตัวแทนรัฐบาลต่างประเทศ"
+    "hintThai": "สถานที่ตั้งของตัวแทนรัฐบาลต่างประเทศ",
+    "pos": "noun"
   },
   {
     "word": "stadium",
@@ -573,7 +644,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a large venue for sports events",
-    "hintThai": "สนามกีฬาขนาดใหญ่ที่มีอัฒจันทร์"
+    "hintThai": "สนามกีฬาขนาดใหญ่ที่มีอัฒจันทร์",
+    "pos": "noun"
   },
   {
     "word": "warehouse",
@@ -581,7 +653,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a large building for storing goods",
-    "hintThai": "อาคารขนาดใหญ่สำหรับเก็บสินค้า"
+    "hintThai": "อาคารขนาดใหญ่สำหรับเก็บสินค้า",
+    "pos": "noun"
   },
   {
     "word": "pharmacy",
@@ -589,7 +662,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a shop where you buy medicine",
-    "hintThai": "ร้านขายยาและผลิตภัณฑ์สุขภาพ"
+    "hintThai": "ร้านขายยาและผลิตภัณฑ์สุขภาพ",
+    "pos": "noun"
   },
   {
     "word": "observatory",
@@ -597,7 +671,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a place with telescopes to study the sky",
-    "hintThai": "อาคารที่ใช้ส่องดูดาวและวัตถุท้องฟ้า"
+    "hintThai": "อาคารที่ใช้ส่องดูดาวและวัตถุท้องฟ้า",
+    "pos": "noun"
   },
   {
     "word": "courtroom",
@@ -605,7 +680,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "where legal trials take place",
-    "hintThai": "ห้องพิจารณาคดีในศาล"
+    "hintThai": "ห้องพิจารณาคดีในศาล",
+    "pos": "noun"
   },
   {
     "word": "vineyard",
@@ -613,7 +689,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a farm where grapes are grown for wine",
-    "hintThai": "สวนองุ่นที่ใช้ทำไวน์"
+    "hintThai": "สวนองุ่นที่ใช้ทำไวน์",
+    "pos": "noun"
   },
   {
     "word": "aquarium",
@@ -621,7 +698,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a place where fish and sea life are displayed",
-    "hintThai": "สถานที่แสดงสัตว์น้ำในกระจกใส"
+    "hintThai": "สถานที่แสดงสัตว์น้ำในกระจกใส",
+    "pos": "noun"
   },
   {
     "word": "headquarters",
@@ -629,7 +707,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "the main office of an organization",
-    "hintThai": "ที่ตั้งหลักขององค์กรหรือบริษัท"
+    "hintThai": "ที่ตั้งหลักขององค์กรหรือบริษัท",
+    "pos": "noun"
   },
   {
     "word": "amphitheater",
@@ -637,7 +716,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "an outdoor circular venue for performances",
-    "hintThai": "โรงละครกลางแจ้งรูปครึ่งวงกลม"
+    "hintThai": "โรงละครกลางแจ้งรูปครึ่งวงกลม",
+    "pos": "noun"
   },
   {
     "word": "penitentiary",
@@ -645,7 +725,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "a large prison for serious criminals",
-    "hintThai": "เรือนจำสำหรับนักโทษคดีหนัก"
+    "hintThai": "เรือนจำสำหรับนักโทษคดีหนัก",
+    "pos": "noun"
   },
   {
     "word": "catacombs",
@@ -653,7 +734,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "underground tunnels used as burial chambers",
-    "hintThai": "อุโมงค์ใต้ดินที่ใช้ฝังศพในสมัยโบราณ"
+    "hintThai": "อุโมงค์ใต้ดินที่ใช้ฝังศพในสมัยโบราณ",
+    "pos": "noun"
   },
   {
     "word": "quarantine zone",
@@ -661,7 +743,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "an area isolated to prevent disease spread",
-    "hintThai": "พื้นที่กักกันเพื่อป้องกันการแพร่ระบาด"
+    "hintThai": "พื้นที่กักกันเพื่อป้องกันการแพร่ระบาด",
+    "pos": "noun"
   },
   {
     "word": "consulate",
@@ -669,7 +752,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "a government office in a foreign city",
-    "hintThai": "สำนักงานกงสุลของประเทศในต่างแดน"
+    "hintThai": "สำนักงานกงสุลของประเทศในต่างแดน",
+    "pos": "noun"
   },
   {
     "word": "beach",
@@ -677,7 +761,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "sandy shore next to the sea",
-    "hintThai": "ชายฝั่งทะเลที่มีทรายและน้ำ"
+    "hintThai": "ชายฝั่งทะเลที่มีทรายและน้ำ",
+    "pos": "noun"
   },
   {
     "word": "zoo",
@@ -685,7 +770,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a place where animals are kept for people to see",
-    "hintThai": "สถานที่แสดงและดูแลสัตว์ป่า"
+    "hintThai": "สถานที่แสดงและดูแลสัตว์ป่า",
+    "pos": "noun"
   },
   {
     "word": "supermarket",
@@ -693,7 +779,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a large shop that sells food and household items",
-    "hintThai": "ร้านค้าขนาดใหญ่ที่มีสินค้าหลากหลาย"
+    "hintThai": "ร้านค้าขนาดใหญ่ที่มีสินค้าหลากหลาย",
+    "pos": "noun"
   },
   {
     "word": "cinema",
@@ -701,7 +788,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a place where you watch movies on a big screen",
-    "hintThai": "โรงภาพยนตร์"
+    "hintThai": "โรงภาพยนตร์",
+    "pos": "noun"
   },
   {
     "word": "church",
@@ -709,7 +797,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a building where Christians worship",
-    "hintThai": "สถานที่สักการะบูชาของคริสต์ศาสนา"
+    "hintThai": "สถานที่สักการะบูชาของคริสต์ศาสนา",
+    "pos": "noun"
   },
   {
     "word": "bank",
@@ -717,7 +806,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a place where you save and borrow money",
-    "hintThai": "สถาบันการเงินที่รับฝากและให้กู้เงิน"
+    "hintThai": "สถาบันการเงินที่รับฝากและให้กู้เงิน",
+    "pos": "noun"
   },
   {
     "word": "post office",
@@ -725,7 +815,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "where you send letters and packages",
-    "hintThai": "สำนักงานไปรษณีย์สำหรับส่งจดหมายและพัสดุ"
+    "hintThai": "สำนักงานไปรษณีย์สำหรับส่งจดหมายและพัสดุ",
+    "pos": "noun"
   },
   {
     "word": "playground",
@@ -733,7 +824,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "an outdoor area with swings and slides for children",
-    "hintThai": "สนามเด็กเล่นที่มีอุปกรณ์สำหรับเด็ก"
+    "hintThai": "สนามเด็กเล่นที่มีอุปกรณ์สำหรับเด็ก",
+    "pos": "noun"
   },
   {
     "word": "farm",
@@ -741,7 +833,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "land where crops and animals are raised",
-    "hintThai": "พื้นที่ที่ใช้ปลูกพืชหรือเลี้ยงสัตว์"
+    "hintThai": "พื้นที่ที่ใช้ปลูกพืชหรือเลี้ยงสัตว์",
+    "pos": "noun"
   },
   {
     "word": "temple",
@@ -749,7 +842,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a place of worship in Buddhism or Hinduism",
-    "hintThai": "สถานที่ศักดิ์สิทธิ์สำหรับการสักการะบูชา"
+    "hintThai": "สถานที่ศักดิ์สิทธิ์สำหรับการสักการะบูชา",
+    "pos": "noun"
   },
   {
     "word": "stock exchange",
@@ -757,7 +851,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "where shares of companies are bought and sold",
-    "hintThai": "ตลาดหลักทรัพย์ที่ซื้อขายหุ้น"
+    "hintThai": "ตลาดหลักทรัพย์ที่ซื้อขายหุ้น",
+    "pos": "noun"
   },
   {
     "word": "orphanage",
@@ -765,7 +860,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a home for children without parents",
-    "hintThai": "บ้านเด็กกำพร้าที่ดูแลเด็กไร้ครอบครัว"
+    "hintThai": "บ้านเด็กกำพร้าที่ดูแลเด็กไร้ครอบครัว",
+    "pos": "noun"
   },
   {
     "word": "data center",
@@ -773,7 +869,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a building that houses computers and servers",
-    "hintThai": "ศูนย์คอมพิวเตอร์ที่เก็บและประมวลผลข้อมูลขนาดใหญ่"
+    "hintThai": "ศูนย์คอมพิวเตอร์ที่เก็บและประมวลผลข้อมูลขนาดใหญ่",
+    "pos": "noun"
   },
   {
     "word": "slaughterhouse",
@@ -781,7 +878,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a facility where animals are killed for meat",
-    "hintThai": "โรงฆ่าสัตว์สำหรับผลิตเนื้อสัตว์"
+    "hintThai": "โรงฆ่าสัตว์สำหรับผลิตเนื้อสัตว์",
+    "pos": "noun"
   },
   {
     "word": "refugee camp",
@@ -789,7 +887,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a temporary settlement for people who fled their country",
-    "hintThai": "ค่ายพักพิงสำหรับผู้ลี้ภัยหนีจากประเทศตัวเอง"
+    "hintThai": "ค่ายพักพิงสำหรับผู้ลี้ภัยหนีจากประเทศตัวเอง",
+    "pos": "noun"
   },
   {
     "word": "power plant",
@@ -797,7 +896,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a facility that generates electricity",
-    "hintThai": "โรงไฟฟ้าสำหรับผลิตกระแสไฟฟ้า"
+    "hintThai": "โรงไฟฟ้าสำหรับผลิตกระแสไฟฟ้า",
+    "pos": "noun"
   },
   {
     "word": "pawnshop",
@@ -805,7 +905,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a shop where you borrow money in exchange for valuables",
-    "hintThai": "ร้านรับจำนำของมีค่า"
+    "hintThai": "ร้านรับจำนำของมีค่า",
+    "pos": "noun"
   },
   {
     "word": "laundromat",
@@ -813,7 +914,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a place with coin-operated washing machines",
-    "hintThai": "ร้านซักผ้าบริการตนเองแบบหยอดเหรียญ"
+    "hintThai": "ร้านซักผ้าบริการตนเองแบบหยอดเหรียญ",
+    "pos": "noun"
   },
   {
     "word": "construction site",
@@ -821,7 +923,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "where a new building is being built",
-    "hintThai": "พื้นที่ก่อสร้างอาคารหรือโครงสร้าง"
+    "hintThai": "พื้นที่ก่อสร้างอาคารหรือโครงสร้าง",
+    "pos": "noun"
   },
   {
     "word": "border crossing",
@@ -829,7 +932,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a checkpoint where you enter another country",
-    "hintThai": "จุดผ่านแดนระหว่างสองประเทศ"
+    "hintThai": "จุดผ่านแดนระหว่างสองประเทศ",
+    "pos": "noun"
   },
   {
     "word": "black site",
@@ -837,7 +941,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "a secret government facility not officially acknowledged",
-    "hintThai": "สถานที่ลับที่รัฐบาลใช้สอบสวนนอกกฎหมาย"
+    "hintThai": "สถานที่ลับที่รัฐบาลใช้สอบสวนนอกกฎหมาย",
+    "pos": "noun"
   },
   {
     "word": "red-light district",
@@ -845,7 +950,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "an area known for adult entertainment businesses",
-    "hintThai": "ย่านที่มีธุรกิจบันเทิงผิดกฎหมายอยู่มาก"
+    "hintThai": "ย่านที่มีธุรกิจบันเทิงผิดกฎหมายอยู่มาก",
+    "pos": "noun"
   },
   {
     "word": "safe house",
@@ -853,7 +959,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "a secret location for hiding people in danger",
-    "hintThai": "บ้านพักลับสำหรับซ่อนตัวหรือปกป้องบุคคล"
+    "hintThai": "บ้านพักลับสำหรับซ่อนตัวหรือปกป้องบุคคล",
+    "pos": "noun"
   },
   {
     "word": "money laundry",
@@ -861,7 +968,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "a place that disguises the origin of illegal money",
-    "hintThai": "กระบวนการฟอกเงินผิดกฎหมายให้ดูถูกกฎหมาย"
+    "hintThai": "กระบวนการฟอกเงินผิดกฎหมายให้ดูถูกกฎหมาย",
+    "pos": "noun"
   },
   {
     "word": "umbrella",
@@ -869,7 +977,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "protects you from rain",
-    "hintThai": "ใช้กางเพื่อป้องกันฝนหรือแสงแดด"
+    "hintThai": "ใช้กางเพื่อป้องกันฝนหรือแสงแดด",
+    "pos": "noun"
   },
   {
     "word": "mirror",
@@ -877,7 +986,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "shows your reflection",
-    "hintThai": "ใช้ดูเงาของตัวเอง"
+    "hintThai": "ใช้ดูเงาของตัวเอง",
+    "pos": "noun"
   },
   {
     "word": "wallet",
@@ -885,7 +995,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "you keep money and cards in it",
-    "hintThai": "กระเป๋าเล็กสำหรับใส่เงินและบัตรต่างๆ"
+    "hintThai": "กระเป๋าเล็กสำหรับใส่เงินและบัตรต่างๆ",
+    "pos": "noun"
   },
   {
     "word": "scissors",
@@ -893,7 +1004,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a tool with two blades for cutting",
-    "hintThai": "อุปกรณ์ที่มีใบมีดสองชิ้นสำหรับตัด"
+    "hintThai": "อุปกรณ์ที่มีใบมีดสองชิ้นสำหรับตัด",
+    "pos": "noun"
   },
   {
     "word": "candle",
@@ -901,7 +1013,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "gives light when you burn it",
-    "hintThai": "แท่งขี้ผึ้งที่จุดไฟให้แสงสว่าง"
+    "hintThai": "แท่งขี้ผึ้งที่จุดไฟให้แสงสว่าง",
+    "pos": "noun"
   },
   {
     "word": "pillow",
@@ -909,7 +1022,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "you rest your head on it when sleeping",
-    "hintThai": "หมอนนิ่มสำหรับรองหัวขณะนอนหลับ"
+    "hintThai": "หมอนนิ่มสำหรับรองหัวขณะนอนหลับ",
+    "pos": "noun"
   },
   {
     "word": "key",
@@ -917,7 +1031,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a small tool that opens a lock",
-    "hintThai": "ใช้เปิดและปิดล็อค"
+    "hintThai": "ใช้เปิดและปิดล็อค",
+    "pos": "noun"
   },
   {
     "word": "clock",
@@ -925,7 +1040,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "tells you what time it is",
-    "hintThai": "อุปกรณ์บอกเวลา"
+    "hintThai": "อุปกรณ์บอกเวลา",
+    "pos": "noun"
   },
   {
     "word": "ladder",
@@ -933,7 +1049,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "you climb it to reach high places",
-    "hintThai": "อุปกรณ์สำหรับปีนขึ้นที่สูง"
+    "hintThai": "อุปกรณ์สำหรับปีนขึ้นที่สูง",
+    "pos": "noun"
   },
   {
     "word": "thermometer",
@@ -941,7 +1058,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "measures temperature",
-    "hintThai": "อุปกรณ์วัดอุณหภูมิ"
+    "hintThai": "อุปกรณ์วัดอุณหภูมิ",
+    "pos": "noun"
   },
   {
     "word": "compass",
@@ -949,7 +1067,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "shows which direction is north",
-    "hintThai": "เครื่องมือบอกทิศทาง ชี้ไปทางเหนือเสมอ"
+    "hintThai": "เครื่องมือบอกทิศทาง ชี้ไปทางเหนือเสมอ",
+    "pos": "noun"
   },
   {
     "word": "telescope",
@@ -957,7 +1076,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "makes distant things look close",
-    "hintThai": "อุปกรณ์ที่ทำให้มองเห็นสิ่งที่อยู่ไกลๆ ได้ชัด"
+    "hintThai": "อุปกรณ์ที่ทำให้มองเห็นสิ่งที่อยู่ไกลๆ ได้ชัด",
+    "pos": "noun"
   },
   {
     "word": "magnifying glass",
@@ -965,7 +1085,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "makes small things appear larger",
-    "hintThai": "แว่นขยายสำหรับดูสิ่งเล็กให้ใหญ่ขึ้น"
+    "hintThai": "แว่นขยายสำหรับดูสิ่งเล็กให้ใหญ่ขึ้น",
+    "pos": "noun"
   },
   {
     "word": "trophy",
@@ -973,7 +1094,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a prize given to winners",
-    "hintThai": "รางวัลที่มอบให้ผู้ชนะ"
+    "hintThai": "รางวัลที่มอบให้ผู้ชนะ",
+    "pos": "noun"
   },
   {
     "word": "blueprint",
@@ -981,7 +1103,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a detailed technical drawing of a building",
-    "hintThai": "แบบแปลนทางเทคนิคสำหรับสร้างอาคารหรือสิ่งของ"
+    "hintThai": "แบบแปลนทางเทคนิคสำหรับสร้างอาคารหรือสิ่งของ",
+    "pos": "noun"
   },
   {
     "word": "hourglass",
@@ -989,7 +1112,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "measures time using falling sand",
-    "hintThai": "อุปกรณ์วัดเวลาด้วยทรายที่ไหลผ่านรูแคบ"
+    "hintThai": "อุปกรณ์วัดเวลาด้วยทรายที่ไหลผ่านรูแคบ",
+    "pos": "noun"
   },
   {
     "word": "barcode",
@@ -997,7 +1121,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "black and white lines that store product info",
-    "hintThai": "เส้นดำขาวที่เครื่องสแกนอ่านเพื่อระบุสินค้า"
+    "hintThai": "เส้นดำขาวที่เครื่องสแกนอ่านเพื่อระบุสินค้า",
+    "pos": "noun"
   },
   {
     "word": "metronome",
@@ -1005,7 +1130,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a device that keeps a steady beat for music",
-    "hintThai": "อุปกรณ์ที่เคาะจังหวะสม่ำเสมอสำหรับนักดนตรี"
+    "hintThai": "อุปกรณ์ที่เคาะจังหวะสม่ำเสมอสำหรับนักดนตรี",
+    "pos": "noun"
   },
   {
     "word": "stethoscope",
@@ -1013,7 +1139,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "doctors use it to listen to your heart",
-    "hintThai": "อุปกรณ์ฟังเสียงหัวใจและปอดของแพทย์"
+    "hintThai": "อุปกรณ์ฟังเสียงหัวใจและปอดของแพทย์",
+    "pos": "noun"
   },
   {
     "word": "protractor",
@@ -1021,7 +1148,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a semicircular tool for measuring angles",
-    "hintThai": "อุปกรณ์วัดมุมเป็นรูปครึ่งวงกลม"
+    "hintThai": "อุปกรณ์วัดมุมเป็นรูปครึ่งวงกลม",
+    "pos": "noun"
   },
   {
     "word": "defibrillator",
@@ -1029,7 +1157,8 @@
     "category": "Objects",
     "level": "hard",
     "hint": "a device that restarts a stopped heart with electricity",
-    "hintThai": "เครื่องกระตุ้นหัวใจด้วยไฟฟ้าในกรณีฉุกเฉิน"
+    "hintThai": "เครื่องกระตุ้นหัวใจด้วยไฟฟ้าในกรณีฉุกเฉิน",
+    "pos": "noun"
   },
   {
     "word": "periscope",
@@ -1037,7 +1166,8 @@
     "category": "Objects",
     "level": "hard",
     "hint": "a tube with mirrors used in submarines to see above water",
-    "hintThai": "ท่อที่ใช้มองสิ่งที่อยู่นอกสายตาโดยตรง เช่น ในเรือดำน้ำ"
+    "hintThai": "ท่อที่ใช้มองสิ่งที่อยู่นอกสายตาโดยตรง เช่น ในเรือดำน้ำ",
+    "pos": "noun"
   },
   {
     "word": "sextant",
@@ -1045,7 +1175,8 @@
     "category": "Objects",
     "level": "hard",
     "hint": "an instrument used to navigate by measuring stars",
-    "hintThai": "เครื่องมือนำทางทางทะเลที่วัดตำแหน่งดวงดาว"
+    "hintThai": "เครื่องมือนำทางทางทะเลที่วัดตำแหน่งดวงดาว",
+    "pos": "noun"
   },
   {
     "word": "spectrometer",
@@ -1053,7 +1184,8 @@
     "category": "Objects",
     "level": "hard",
     "hint": "a device that analyzes light wavelengths",
-    "hintThai": "เครื่องมือวิเคราะห์แสงเพื่อระบุองค์ประกอบทางเคมี"
+    "hintThai": "เครื่องมือวิเคราะห์แสงเพื่อระบุองค์ประกอบทางเคมี",
+    "pos": "noun"
   },
   {
     "word": "oscilloscope",
@@ -1061,7 +1193,8 @@
     "category": "Objects",
     "level": "hard",
     "hint": "shows electrical signals as waves on a screen",
-    "hintThai": "เครื่องมือแสดงรูปคลื่นไฟฟ้าบนหน้าจอ"
+    "hintThai": "เครื่องมือแสดงรูปคลื่นไฟฟ้าบนหน้าจอ",
+    "pos": "noun"
   },
   {
     "word": "spirometer",
@@ -1069,7 +1202,8 @@
     "category": "Objects",
     "level": "hard",
     "hint": "measures how much air your lungs can hold",
-    "hintThai": "เครื่องมือวัดปริมาณอากาศในปอด"
+    "hintThai": "เครื่องมือวัดปริมาณอากาศในปอด",
+    "pos": "noun"
   },
   {
     "word": "toothbrush",
@@ -1077,7 +1211,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "you use it to clean your teeth every day",
-    "hintThai": "แปรงขนาดเล็กสำหรับแปรงฟัน"
+    "hintThai": "แปรงขนาดเล็กสำหรับแปรงฟัน",
+    "pos": "noun"
   },
   {
     "word": "stamp",
@@ -1085,7 +1220,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "small paper you stick on a letter to send it",
-    "hintThai": "ใช้ประทับบนซองจดหมาย"
+    "hintThai": "ใช้ประทับบนซองจดหมาย",
+    "pos": "noun"
   },
   {
     "word": "receipt",
@@ -1093,7 +1229,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a paper proof that you paid for something",
-    "hintThai": "ใบเสร็จยืนยันการชำระเงิน"
+    "hintThai": "ใบเสร็จยืนยันการชำระเงิน",
+    "pos": "noun"
   },
   {
     "word": "remote control",
@@ -1101,7 +1238,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a device to operate a TV or AC from a distance",
-    "hintThai": "อุปกรณ์ควบคุมโทรทัศน์หรืออุปกรณ์จากระยะไกล"
+    "hintThai": "อุปกรณ์ควบคุมโทรทัศน์หรืออุปกรณ์จากระยะไกล",
+    "pos": "noun"
   },
   {
     "word": "suitcase",
@@ -1109,7 +1247,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a large bag with wheels for travel",
-    "hintThai": "กระเป๋าเดินทางขนาดใหญ่มีล้อ"
+    "hintThai": "กระเป๋าเดินทางขนาดใหญ่มีล้อ",
+    "pos": "noun"
   },
   {
     "word": "pen",
@@ -1117,7 +1256,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a tool you use to write",
-    "hintThai": "ด้ามเขียนที่มีหมึกสำหรับเขียนหนังสือ"
+    "hintThai": "ด้ามเขียนที่มีหมึกสำหรับเขียนหนังสือ",
+    "pos": "noun"
   },
   {
     "word": "calendar",
@@ -1125,7 +1265,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "shows the days, weeks, and months of the year",
-    "hintThai": "ใช้ดูวันที่และวางแผนกิจกรรม"
+    "hintThai": "ใช้ดูวันที่และวางแผนกิจกรรม",
+    "pos": "noun"
   },
   {
     "word": "battery",
@@ -1133,7 +1274,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "stores energy to power devices",
-    "hintThai": "แหล่งพลังงานสำหรับอุปกรณ์ไฟฟ้า"
+    "hintThai": "แหล่งพลังงานสำหรับอุปกรณ์ไฟฟ้า",
+    "pos": "noun"
   },
   {
     "word": "rope",
@@ -1141,7 +1283,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a thick twisted cord used to tie things",
-    "hintThai": "เชือกที่ยาวและแข็งแรง"
+    "hintThai": "เชือกที่ยาวและแข็งแรง",
+    "pos": "noun"
   },
   {
     "word": "map",
@@ -1149,7 +1292,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a drawing showing roads and places",
-    "hintThai": "แผนที่แสดงพื้นที่ทางภูมิศาสตร์"
+    "hintThai": "แผนที่แสดงพื้นที่ทางภูมิศาสตร์",
+    "pos": "noun"
   },
   {
     "word": "envelope",
@@ -1157,7 +1301,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a paper cover you put a letter inside",
-    "hintThai": "ซองกระดาษสำหรับใส่จดหมาย"
+    "hintThai": "ซองกระดาษสำหรับใส่จดหมาย",
+    "pos": "noun"
   },
   {
     "word": "glasses",
@@ -1165,7 +1310,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "worn on your face to help you see better",
-    "hintThai": "เลนส์ที่ใส่กรอบสำหรับแก้ไขสายตา"
+    "hintThai": "เลนส์ที่ใส่กรอบสำหรับแก้ไขสายตา",
+    "pos": "noun"
   },
   {
     "word": "handcuffs",
@@ -1173,7 +1319,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "metal rings police use to restrain a person's wrists",
-    "hintThai": "กุญแจมือสำหรับตรึงข้อมือ"
+    "hintThai": "กุญแจมือสำหรับตรึงข้อมือ",
+    "pos": "noun"
   },
   {
     "word": "binoculars",
@@ -1181,7 +1328,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "two telescopes joined together to see far away",
-    "hintThai": "กล้องส่องทางไกลที่มองด้วยตาสองข้าง"
+    "hintThai": "กล้องส่องทางไกลที่มองด้วยตาสองข้าง",
+    "pos": "noun"
   },
   {
     "word": "safe",
@@ -1189,7 +1337,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a locked metal box for storing valuables",
-    "hintThai": "กล่องโลหะแข็งแรงสำหรับเก็บของมีค่า"
+    "hintThai": "กล่องโลหะแข็งแรงสำหรับเก็บของมีค่า",
+    "pos": "noun"
   },
   {
     "word": "polygraph",
@@ -1197,7 +1346,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a machine used to detect if someone is lying",
-    "hintThai": "เครื่องจับเท็จที่วัดสัญญาณร่างกายขณะตอบคำถาม"
+    "hintThai": "เครื่องจับเท็จที่วัดสัญญาณร่างกายขณะตอบคำถาม",
+    "pos": "noun"
   },
   {
     "word": "USB drive",
@@ -1205,7 +1355,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a small device you plug in to store files",
-    "hintThai": "อุปกรณ์เก็บข้อมูลขนาดเล็กเสียบเข้าคอมพิวเตอร์"
+    "hintThai": "อุปกรณ์เก็บข้อมูลขนาดเล็กเสียบเข้าคอมพิวเตอร์",
+    "pos": "noun"
   },
   {
     "word": "padlock",
@@ -1213,7 +1364,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a portable lock with a metal loop",
-    "hintThai": "กุญแจแบบห่วงที่ล็อคแยกจากประตู"
+    "hintThai": "กุญแจแบบห่วงที่ล็อคแยกจากประตู",
+    "pos": "noun"
   },
   {
     "word": "walkie-talkie",
@@ -1221,7 +1373,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a handheld two-way radio",
-    "hintThai": "วิทยุสื่อสารพกพาแบบกดพูด"
+    "hintThai": "วิทยุสื่อสารพกพาแบบกดพูด",
+    "pos": "noun"
   },
   {
     "word": "fire extinguisher",
@@ -1229,7 +1382,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a canister used to spray foam or gas on fires",
-    "hintThai": "ถังดับเพลิงสำหรับดับไฟเบื้องต้น"
+    "hintThai": "ถังดับเพลิงสำหรับดับไฟเบื้องต้น",
+    "pos": "noun"
   },
   {
     "word": "wig",
@@ -1237,7 +1391,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "fake hair worn on your head as a disguise or costume",
-    "hintThai": "ผมปลอมที่สวมบนหัว"
+    "hintThai": "ผมปลอมที่สวมบนหัว",
+    "pos": "noun"
   },
   {
     "word": "briefcase",
@@ -1245,7 +1400,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a flat rectangular bag for carrying documents",
-    "hintThai": "กระเป๋าถือสำหรับใส่เอกสารและอุปกรณ์ทำงาน"
+    "hintThai": "กระเป๋าถือสำหรับใส่เอกสารและอุปกรณ์ทำงาน",
+    "pos": "noun"
   },
   {
     "word": "listening device",
@@ -1253,7 +1409,8 @@
     "category": "Objects",
     "level": "hard",
     "hint": "a hidden microphone used to spy on conversations",
-    "hintThai": "อุปกรณ์盗聴ที่ซ่อนไว้เพื่อดักฟัง"
+    "hintThai": "อุปกรณ์盗聴ที่ซ่อนไว้เพื่อดักฟัง",
+    "pos": "noun"
   },
   {
     "word": "body cam",
@@ -1261,7 +1418,8 @@
     "category": "Objects",
     "level": "hard",
     "hint": "a small camera worn on the body to record events",
-    "hintThai": "กล้องวิดีโอขนาดเล็กที่ตำรวจติดที่ตัวขณะปฏิบัติงาน"
+    "hintThai": "กล้องวิดีโอขนาดเล็กที่ตำรวจติดที่ตัวขณะปฏิบัติงาน",
+    "pos": "noun"
   },
   {
     "word": "night-vision goggles",
@@ -1269,7 +1427,8 @@
     "category": "Objects",
     "level": "hard",
     "hint": "eyewear that lets you see in the dark",
-    "hintThai": "แว่นตาพิเศษที่มองเห็นได้ในความมืด"
+    "hintThai": "แว่นตาพิเศษที่มองเห็นได้ในความมืด",
+    "pos": "noun"
   },
   {
     "word": "silencer",
@@ -1277,7 +1436,8 @@
     "category": "Objects",
     "level": "hard",
     "hint": "a device attached to a gun to reduce the sound",
-    "hintThai": "อุปกรณ์ที่ทำให้เสียงปืนเบาลง"
+    "hintThai": "อุปกรณ์ที่ทำให้เสียงปืนเบาลง",
+    "pos": "noun"
   },
   {
     "word": "teacher",
@@ -1285,7 +1445,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "explains things and helps students learn",
-    "hintThai": "อธิบายสิ่งต่างๆ และช่วยนักเรียนเรียนรู้"
+    "hintThai": "อธิบายสิ่งต่างๆ และช่วยนักเรียนเรียนรู้",
+    "pos": "noun"
   },
   {
     "word": "doctor",
@@ -1293,7 +1454,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "treats sick or injured people",
-    "hintThai": "รักษาคนป่วยและบาดเจ็บ"
+    "hintThai": "รักษาคนป่วยและบาดเจ็บ",
+    "pos": "noun"
   },
   {
     "word": "chef",
@@ -1301,7 +1463,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "a professional cook in a restaurant",
-    "hintThai": "ทำอาหารมืออาชีพในร้านอาหาร"
+    "hintThai": "ทำอาหารมืออาชีพในร้านอาหาร",
+    "pos": "noun"
   },
   {
     "word": "police",
@@ -1309,7 +1472,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "keeps people safe and enforces the law",
-    "hintThai": "รักษาความปลอดภัยและบังคับใช้กฎหมาย"
+    "hintThai": "รักษาความปลอดภัยและบังคับใช้กฎหมาย",
+    "pos": "noun"
   },
   {
     "word": "singer",
@@ -1317,7 +1481,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "performs music using their voice",
-    "hintThai": "แสดงดนตรีด้วยเสียงร้อง"
+    "hintThai": "แสดงดนตรีด้วยเสียงร้อง",
+    "pos": "noun"
   },
   {
     "word": "farmer",
@@ -1325,7 +1490,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "grows crops or raises animals for food",
-    "hintThai": "ปลูกพืชหรือเลี้ยงสัตว์เพื่อเป็นอาหาร"
+    "hintThai": "ปลูกพืชหรือเลี้ยงสัตว์เพื่อเป็นอาหาร",
+    "pos": "noun"
   },
   {
     "word": "pilot",
@@ -1333,7 +1499,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "flies airplanes",
-    "hintThai": "บินเครื่องบิน"
+    "hintThai": "บินเครื่องบิน",
+    "pos": "noun"
   },
   {
     "word": "firefighter",
@@ -1341,7 +1508,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "puts out fires and saves people",
-    "hintThai": "ดับไฟและช่วยชีวิตผู้คน"
+    "hintThai": "ดับไฟและช่วยชีวิตผู้คน",
+    "pos": "noun"
   },
   {
     "word": "athlete",
@@ -1349,7 +1517,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "competes in sports professionally",
-    "hintThai": "แข่งขันกีฬาอย่างมืออาชีพ"
+    "hintThai": "แข่งขันกีฬาอย่างมืออาชีพ",
+    "pos": "noun"
   },
   {
     "word": "scientist",
@@ -1357,7 +1526,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "studies and researches how the world works",
-    "hintThai": "ศึกษาวิจัยว่าโลกทำงานอย่างไร"
+    "hintThai": "ศึกษาวิจัยว่าโลกทำงานอย่างไร",
+    "pos": "noun"
   },
   {
     "word": "archaeologist",
@@ -1365,7 +1535,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "digs up and studies ancient objects",
-    "hintThai": "ขุดค้นและศึกษาวัตถุโบราณ"
+    "hintThai": "ขุดค้นและศึกษาวัตถุโบราณ",
+    "pos": "noun"
   },
   {
     "word": "journalist",
@@ -1373,7 +1544,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "writes or reports news stories",
-    "hintThai": "เขียนหรือรายงานข่าว"
+    "hintThai": "เขียนหรือรายงานข่าว",
+    "pos": "noun"
   },
   {
     "word": "detective",
@@ -1381,7 +1553,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "investigates crimes and finds clues",
-    "hintThai": "สืบสวนคดีอาชญากรรมและหาเบาะแส"
+    "hintThai": "สืบสวนคดีอาชญากรรมและหาเบาะแส",
+    "pos": "noun"
   },
   {
     "word": "diplomat",
@@ -1389,7 +1562,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "represents their country abroad and negotiates",
-    "hintThai": "เป็นตัวแทนประเทศในต่างแดนและเจรจา"
+    "hintThai": "เป็นตัวแทนประเทศในต่างแดนและเจรจา",
+    "pos": "noun"
   },
   {
     "word": "astronaut",
@@ -1397,7 +1571,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "travels to space",
-    "hintThai": "เดินทางไปอวกาศ"
+    "hintThai": "เดินทางไปอวกาศ",
+    "pos": "noun"
   },
   {
     "word": "therapist",
@@ -1405,7 +1580,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "helps people with emotional and mental health",
-    "hintThai": "ช่วยดูแลสุขภาพจิตและอารมณ์"
+    "hintThai": "ช่วยดูแลสุขภาพจิตและอารมณ์",
+    "pos": "noun"
   },
   {
     "word": "auctioneer",
@@ -1413,7 +1589,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "runs sales where people bid for items",
-    "hintThai": "ดำเนินการประมูลสินค้า"
+    "hintThai": "ดำเนินการประมูลสินค้า",
+    "pos": "noun"
   },
   {
     "word": "sommelier",
@@ -1421,7 +1598,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "an expert in selecting and serving wine",
-    "hintThai": "ผู้เชี่ยวชาญการเลือกและเสิร์ฟไวน์"
+    "hintThai": "ผู้เชี่ยวชาญการเลือกและเสิร์ฟไวน์",
+    "pos": "noun"
   },
   {
     "word": "actuary",
@@ -1429,7 +1607,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "calculates financial risk using statistics",
-    "hintThai": "คำนวณความเสี่ยงทางการเงินด้วยสถิติ"
+    "hintThai": "คำนวณความเสี่ยงทางการเงินด้วยสถิติ",
+    "pos": "noun"
   },
   {
     "word": "ghostwriter",
@@ -1437,7 +1616,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "writes content that someone else publishes as their own",
-    "hintThai": "เขียนเนื้อหาที่คนอื่นนำไปเผยแพร่เป็นชื่อตัวเอง"
+    "hintThai": "เขียนเนื้อหาที่คนอื่นนำไปเผยแพร่เป็นชื่อตัวเอง",
+    "pos": "noun"
   },
   {
     "word": "whistleblower",
@@ -1445,7 +1625,8 @@
     "category": "Occupations",
     "level": "hard",
     "hint": "exposes illegal activity within an organization",
-    "hintThai": "เปิดเผยการกระทำผิดภายในองค์กร"
+    "hintThai": "เปิดเผยการกระทำผิดภายในองค์กร",
+    "pos": "noun"
   },
   {
     "word": "cryptographer",
@@ -1453,7 +1634,8 @@
     "category": "Occupations",
     "level": "hard",
     "hint": "creates or breaks secret codes",
-    "hintThai": "สร้างหรือถอดรหัสลับ"
+    "hintThai": "สร้างหรือถอดรหัสลับ",
+    "pos": "noun"
   },
   {
     "word": "undercover agent",
@@ -1461,7 +1643,8 @@
     "category": "Occupations",
     "level": "hard",
     "hint": "secretly infiltrates a group to gather information",
-    "hintThai": "แทรกซึมกลุ่มเป้าหมายอย่างลับๆ เพื่อรวบรวมข้อมูล"
+    "hintThai": "แทรกซึมกลุ่มเป้าหมายอย่างลับๆ เพื่อรวบรวมข้อมูล",
+    "pos": "noun"
   },
   {
     "word": "forensic accountant",
@@ -1469,7 +1652,8 @@
     "category": "Occupations",
     "level": "hard",
     "hint": "investigates financial crimes through numbers",
-    "hintThai": "สืบสวนอาชญากรรมทางการเงินผ่านตัวเลข"
+    "hintThai": "สืบสวนอาชญากรรมทางการเงินผ่านตัวเลข",
+    "pos": "noun"
   },
   {
     "word": "double agent",
@@ -1477,7 +1661,8 @@
     "category": "Occupations",
     "level": "hard",
     "hint": "a spy who works for two opposing sides",
-    "hintThai": "สายลับที่ทำงานให้ทั้งสองฝ่ายที่เป็นศัตรูกัน"
+    "hintThai": "สายลับที่ทำงานให้ทั้งสองฝ่ายที่เป็นศัตรูกัน",
+    "pos": "noun"
   },
   {
     "word": "coroner",
@@ -1485,7 +1670,8 @@
     "category": "Occupations",
     "level": "hard",
     "hint": "investigates the cause of suspicious deaths",
-    "hintThai": "สืบสวนสาเหตุการตายที่น่าสงสัย"
+    "hintThai": "สืบสวนสาเหตุการตายที่น่าสงสัย",
+    "pos": "noun"
   },
   {
     "word": "nurse",
@@ -1493,7 +1679,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "helps doctors and takes care of patients",
-    "hintThai": "ช่วยแพทย์และดูแลผู้ป่วย"
+    "hintThai": "ช่วยแพทย์และดูแลผู้ป่วย",
+    "pos": "noun"
   },
   {
     "word": "cashier",
@@ -1501,7 +1688,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "handles payments at a shop or restaurant",
-    "hintThai": "รับชำระเงินที่ร้านหรือร้านอาหาร"
+    "hintThai": "รับชำระเงินที่ร้านหรือร้านอาหาร",
+    "pos": "noun"
   },
   {
     "word": "driver",
@@ -1509,7 +1697,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "operates a vehicle to transport people or goods",
-    "hintThai": "ขับยานพาหนะเพื่อขนส่งคนหรือสินค้า"
+    "hintThai": "ขับยานพาหนะเพื่อขนส่งคนหรือสินค้า",
+    "pos": "noun"
   },
   {
     "word": "baker",
@@ -1517,7 +1706,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "makes bread, cakes, and pastries",
-    "hintThai": "ทำขนมปัง เค้ก และขนมอบ"
+    "hintThai": "ทำขนมปัง เค้ก และขนมอบ",
+    "pos": "noun"
   },
   {
     "word": "judge",
@@ -1525,7 +1715,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "makes legal decisions in a court",
-    "hintThai": "ตัดสินคดีในศาล"
+    "hintThai": "ตัดสินคดีในศาล",
+    "pos": "noun"
   },
   {
     "word": "actor",
@@ -1533,7 +1724,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "performs roles in movies, TV, or theatre",
-    "hintThai": "แสดงบทบาทในหนัง โทรทัศน์ หรือละครเวที"
+    "hintThai": "แสดงบทบาทในหนัง โทรทัศน์ หรือละครเวที",
+    "pos": "noun"
   },
   {
     "word": "dentist",
@@ -1541,7 +1733,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "a doctor who takes care of your teeth",
-    "hintThai": "แพทย์ที่ดูแลฟัน"
+    "hintThai": "แพทย์ที่ดูแลฟัน",
+    "pos": "noun"
   },
   {
     "word": "librarian",
@@ -1549,7 +1742,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "works in a library and helps people find books",
-    "hintThai": "ทำงานในห้องสมุดและช่วยคนหาหนังสือ"
+    "hintThai": "ทำงานในห้องสมุดและช่วยคนหาหนังสือ",
+    "pos": "noun"
   },
   {
     "word": "guard",
@@ -1557,7 +1751,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "protects a building or person",
-    "hintThai": "ดูแลรักษาความปลอดภัยของอาคารหรือบุคคล"
+    "hintThai": "ดูแลรักษาความปลอดภัยของอาคารหรือบุคคล",
+    "pos": "noun"
   },
   {
     "word": "photographer",
@@ -1565,7 +1760,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "takes photos professionally",
-    "hintThai": "ถ่ายภาพอย่างมืออาชีพ"
+    "hintThai": "ถ่ายภาพอย่างมืออาชีพ",
+    "pos": "noun"
   },
   {
     "word": "mechanic",
@@ -1573,7 +1769,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "repairs cars and engines",
-    "hintThai": "ซ่อมรถยนต์และเครื่องยนต์"
+    "hintThai": "ซ่อมรถยนต์และเครื่องยนต์",
+    "pos": "noun"
   },
   {
     "word": "waiter",
@@ -1581,7 +1778,8 @@
     "category": "Occupations",
     "level": "easy",
     "hint": "serves food and drinks at a restaurant",
-    "hintThai": "เสิร์ฟอาหารและเครื่องดื่มในร้านอาหาร"
+    "hintThai": "เสิร์ฟอาหารและเครื่องดื่มในร้านอาหาร",
+    "pos": "noun"
   },
   {
     "word": "hacker",
@@ -1589,7 +1787,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "breaks into computer systems",
-    "hintThai": "เจาะระบบคอมพิวเตอร์"
+    "hintThai": "เจาะระบบคอมพิวเตอร์",
+    "pos": "noun"
   },
   {
     "word": "lobbyist",
@@ -1597,7 +1796,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "tries to influence politicians on behalf of a group",
-    "hintThai": "พยายามโน้มน้าวนักการเมืองแทนกลุ่มผลประโยชน์"
+    "hintThai": "พยายามโน้มน้าวนักการเมืองแทนกลุ่มผลประโยชน์",
+    "pos": "noun"
   },
   {
     "word": "bounty hunter",
@@ -1605,7 +1805,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "tracks down and captures fugitives for a reward",
-    "hintThai": "ติดตามและจับตัวผู้หลบหนีเพื่อรับรางวัล"
+    "hintThai": "ติดตามและจับตัวผู้หลบหนีเพื่อรับรางวัล",
+    "pos": "noun"
   },
   {
     "word": "profiler",
@@ -1613,7 +1814,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "analyzes criminal behavior to help catch suspects",
-    "hintThai": "วิเคราะห์พฤติกรรมอาชญากรเพื่อช่วยจับผู้ต้องสงสัย"
+    "hintThai": "วิเคราะห์พฤติกรรมอาชญากรเพื่อช่วยจับผู้ต้องสงสัย",
+    "pos": "noun"
   },
   {
     "word": "middleman",
@@ -1621,7 +1823,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "a person who connects buyers and sellers",
-    "hintThai": "คนกลางที่เชื่อมต่อผู้ซื้อและผู้ขาย"
+    "hintThai": "คนกลางที่เชื่อมต่อผู้ซื้อและผู้ขาย",
+    "pos": "noun"
   },
   {
     "word": "social worker",
@@ -1629,7 +1832,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "helps vulnerable people improve their lives",
-    "hintThai": "ช่วยเหลือผู้ที่เปราะบางให้ชีวิตดีขึ้น"
+    "hintThai": "ช่วยเหลือผู้ที่เปราะบางให้ชีวิตดีขึ้น",
+    "pos": "noun"
   },
   {
     "word": "translator",
@@ -1637,7 +1841,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "converts speech or text from one language to another",
-    "hintThai": "แปลคำพูดหรือข้อความจากภาษาหนึ่งไปอีกภาษา"
+    "hintThai": "แปลคำพูดหรือข้อความจากภาษาหนึ่งไปอีกภาษา",
+    "pos": "noun"
   },
   {
     "word": "stockbroker",
@@ -1645,7 +1850,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "buys and sells shares on behalf of clients",
-    "hintThai": "ซื้อขายหุ้นแทนลูกค้า"
+    "hintThai": "ซื้อขายหุ้นแทนลูกค้า",
+    "pos": "noun"
   },
   {
     "word": "hitman",
@@ -1653,7 +1859,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "a person hired to kill someone",
-    "hintThai": "รับจ้างฆ่าคน"
+    "hintThai": "รับจ้างฆ่าคน",
+    "pos": "noun"
   },
   {
     "word": "con artist",
@@ -1661,7 +1868,8 @@
     "category": "Occupations",
     "level": "medium",
     "hint": "tricks people out of money through deception",
-    "hintThai": "หลอกลวงคนเพื่อเอาเงิน"
+    "hintThai": "หลอกลวงคนเพื่อเอาเงิน",
+    "pos": "noun"
   },
   {
     "word": "fixer",
@@ -1669,7 +1877,8 @@
     "category": "Occupations",
     "level": "hard",
     "hint": "secretly resolves problems for powerful people",
-    "hintThai": "แก้ปัญหาลับๆ ให้คนมีอำนาจ"
+    "hintThai": "แก้ปัญหาลับๆ ให้คนมีอำนาจ",
+    "pos": "noun"
   },
   {
     "word": "sleeper agent",
@@ -1677,7 +1886,8 @@
     "category": "Occupations",
     "level": "hard",
     "hint": "a spy who blends into society waiting to be activated",
-    "hintThai": "สายลับที่ซ่อนตัวในสังคมรอรับคำสั่ง"
+    "hintThai": "สายลับที่ซ่อนตัวในสังคมรอรับคำสั่ง",
+    "pos": "noun"
   },
   {
     "word": "mole",
@@ -1685,7 +1895,8 @@
     "category": "Occupations",
     "level": "hard",
     "hint": "a spy secretly working inside an organization",
-    "hintThai": "สายลับที่แฝงตัวอยู่ภายในองค์กร"
+    "hintThai": "สายลับที่แฝงตัวอยู่ภายในองค์กร",
+    "pos": "noun"
   },
   {
     "word": "money mule",
@@ -1693,7 +1904,8 @@
     "category": "Occupations",
     "level": "hard",
     "hint": "someone used to transfer illegally obtained money",
-    "hintThai": "คนที่ถูกใช้โอนเงินที่ได้มาจากการกระทำผิดกฎหมาย"
+    "hintThai": "คนที่ถูกใช้โอนเงินที่ได้มาจากการกระทำผิดกฎหมาย",
+    "pos": "noun"
   },
   {
     "word": "getaway driver",
@@ -1701,7 +1913,8 @@
     "category": "Occupations",
     "level": "hard",
     "hint": "drives the escape vehicle after a crime",
-    "hintThai": "คนขับรถหลบหนีหลังก่ออาชญากรรม"
+    "hintThai": "คนขับรถหลบหนีหลังก่ออาชญากรรม",
+    "pos": "noun"
   },
   {
     "word": "arms dealer",
@@ -1709,7 +1922,8 @@
     "category": "Occupations",
     "level": "hard",
     "hint": "illegally trades weapons",
-    "hintThai": "ค้าอาวุธผิดกฎหมาย"
+    "hintThai": "ค้าอาวุธผิดกฎหมาย",
+    "pos": "noun"
   },
   {
     "word": "Eiffel Tower",
@@ -1717,7 +1931,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a famous iron tower in Paris, France",
-    "hintThai": "หอเหล็กสัญลักษณ์ของกรุงปารีส ฝรั่งเศส"
+    "hintThai": "หอเหล็กสัญลักษณ์ของกรุงปารีส ฝรั่งเศส",
+    "pos": "noun"
   },
   {
     "word": "Great Wall",
@@ -1725,7 +1940,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a very long ancient wall across northern China",
-    "hintThai": "กำแพงยาวหลายพันกิโลเมตรที่สร้างในประเทศจีน"
+    "hintThai": "กำแพงยาวหลายพันกิโลเมตรที่สร้างในประเทศจีน",
+    "pos": "noun"
   },
   {
     "word": "Colosseum",
@@ -1733,7 +1949,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "an ancient Roman arena used for gladiator fights",
-    "hintThai": "สนามกีฬาโบราณขนาดใหญ่ในกรุงโรม อิตาลี"
+    "hintThai": "สนามกีฬาโบราณขนาดใหญ่ในกรุงโรม อิตาลี",
+    "pos": "noun"
   },
   {
     "word": "Statue of Liberty",
@@ -1741,7 +1958,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a giant green copper statue in New York harbor",
-    "hintThai": "รูปปั้นสัญลักษณ์แห่งเสรีภาพที่มหานครนิวยอร์ก"
+    "hintThai": "รูปปั้นสัญลักษณ์แห่งเสรีภาพที่มหานครนิวยอร์ก",
+    "pos": "noun"
   },
   {
     "word": "Big Ben",
@@ -1749,7 +1967,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a famous clock tower in London, England",
-    "hintThai": "หอนาฬิกาสัญลักษณ์ของกรุงลอนดอน อังกฤษ"
+    "hintThai": "หอนาฬิกาสัญลักษณ์ของกรุงลอนดอน อังกฤษ",
+    "pos": "noun"
   },
   {
     "word": "Taj Mahal",
@@ -1757,7 +1976,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a white marble mausoleum in Agra, India",
-    "hintThai": "สุสานหินอ่อนสีขาวในอินเดีย สร้างด้วยความรัก"
+    "hintThai": "สุสานหินอ่อนสีขาวในอินเดีย สร้างด้วยความรัก",
+    "pos": "noun"
   },
   {
     "word": "Pyramids",
@@ -1765,7 +1985,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "ancient triangular stone structures in Egypt",
-    "hintThai": "สิ่งก่อสร้างโบราณของฟาโรห์อียิปต์ที่ยังคงอยู่จนถึงปัจจุบัน"
+    "hintThai": "สิ่งก่อสร้างโบราณของฟาโรห์อียิปต์ที่ยังคงอยู่จนถึงปัจจุบัน",
+    "pos": "noun"
   },
   {
     "word": "Sydney Opera House",
@@ -1773,7 +1994,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a famous concert hall shaped like sails in Australia",
-    "hintThai": "อาคารรูปทรงเปลือกหอยสัญลักษณ์ของซิดนีย์"
+    "hintThai": "อาคารรูปทรงเปลือกหอยสัญลักษณ์ของซิดนีย์",
+    "pos": "noun"
   },
   {
     "word": "Mount Everest",
@@ -1781,7 +2003,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "the highest mountain in the world, in Nepal",
-    "hintThai": "ยอดเขาที่สูงที่สุดในโลก"
+    "hintThai": "ยอดเขาที่สูงที่สุดในโลก",
+    "pos": "noun"
   },
   {
     "word": "Grand Canyon",
@@ -1789,7 +2012,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a vast red rock gorge in Arizona, USA",
-    "hintThai": "หุบเขาลึกขนาดใหญ่ในรัฐแอริโซนา สหรัฐฯ"
+    "hintThai": "หุบเขาลึกขนาดใหญ่ในรัฐแอริโซนา สหรัฐฯ",
+    "pos": "noun"
   },
   {
     "word": "Niagara Falls",
@@ -1797,7 +2021,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a massive waterfall on the US-Canada border",
-    "hintThai": "น้ำตกขนาดใหญ่บนชายแดนระหว่างแคนาดาและสหรัฐฯ"
+    "hintThai": "น้ำตกขนาดใหญ่บนชายแดนระหว่างแคนาดาและสหรัฐฯ",
+    "pos": "noun"
   },
   {
     "word": "Santorini",
@@ -1805,7 +2030,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a Greek island famous for white buildings and blue domes",
-    "hintThai": "เกาะในกรีซที่มีบ้านหลังคาสีน้ำเงินและวิวทะเลสวยงาม"
+    "hintThai": "เกาะในกรีซที่มีบ้านหลังคาสีน้ำเงินและวิวทะเลสวยงาม",
+    "pos": "noun"
   },
   {
     "word": "Machu Picchu",
@@ -1813,7 +2039,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "an ancient Inca city high in the Andes mountains of Peru",
-    "hintThai": "เมืองโบราณของอินคาบนยอดเขาในเปรู"
+    "hintThai": "เมืองโบราณของอินคาบนยอดเขาในเปรู",
+    "pos": "noun"
   },
   {
     "word": "Angkor Wat",
@@ -1821,7 +2048,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "the largest Hindu temple complex, in Cambodia",
-    "hintThai": "วัดโบราณขนาดใหญ่ในกัมพูชา"
+    "hintThai": "วัดโบราณขนาดใหญ่ในกัมพูชา",
+    "pos": "noun"
   },
   {
     "word": "Stonehenge",
@@ -1829,7 +2057,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a prehistoric circle of giant standing stones in England",
-    "hintThai": "วงหินโบราณในอังกฤษที่ยังไม่ทราบวัตถุประสงค์แน่ชัด"
+    "hintThai": "วงหินโบราณในอังกฤษที่ยังไม่ทราบวัตถุประสงค์แน่ชัด",
+    "pos": "noun"
   },
   {
     "word": "Sagrada Família",
@@ -1837,7 +2066,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "Gaudí's unfinished cathedral in Barcelona, Spain",
-    "hintThai": "มหาวิหารที่กำลังก่อสร้างในบาร์เซโลนา สเปน"
+    "hintThai": "มหาวิหารที่กำลังก่อสร้างในบาร์เซโลนา สเปน",
+    "pos": "noun"
   },
   {
     "word": "Petra",
@@ -1845,7 +2075,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "an ancient city carved into rose-red rock in Jordan",
-    "hintThai": "เมืองโบราณที่สร้างในหน้าผาหินทรายสีชมพูในจอร์แดน"
+    "hintThai": "เมืองโบราณที่สร้างในหน้าผาหินทรายสีชมพูในจอร์แดน",
+    "pos": "noun"
   },
   {
     "word": "Louvre",
@@ -1853,7 +2084,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "the world's largest art museum in Paris, home to the Mona Lisa",
-    "hintThai": "พิพิธภัณฑ์ศิลปะที่ใหญ่ที่สุดในโลก ตั้งอยู่ในปารีส"
+    "hintThai": "พิพิธภัณฑ์ศิลปะที่ใหญ่ที่สุดในโลก ตั้งอยู่ในปารีส",
+    "pos": "noun"
   },
   {
     "word": "Amazon River",
@@ -1861,7 +2093,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "the world's largest river by volume, flowing through Brazil",
-    "hintThai": "แม่น้ำที่มีปริมาณน้ำมากที่สุดในโลก ไหลผ่านป่าอเมซอน"
+    "hintThai": "แม่น้ำที่มีปริมาณน้ำมากที่สุดในโลก ไหลผ่านป่าอเมซอน",
+    "pos": "noun"
   },
   {
     "word": "Burj Khalifa",
@@ -1869,7 +2102,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "the world's tallest building, in Dubai",
-    "hintThai": "ตึกที่สูงที่สุดในโลก ตั้งอยู่ในดูไบ"
+    "hintThai": "ตึกที่สูงที่สุดในโลก ตั้งอยู่ในดูไบ",
+    "pos": "noun"
   },
   {
     "word": "Vatican",
@@ -1877,7 +2111,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "the smallest country in the world, home of the Pope",
-    "hintThai": "นครรัฐที่เล็กที่สุดในโลก ศูนย์กลางคาทอลิก"
+    "hintThai": "นครรัฐที่เล็กที่สุดในโลก ศูนย์กลางคาทอลิก",
+    "pos": "noun"
   },
   {
     "word": "Galápagos Islands",
@@ -1885,7 +2120,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "islands in Ecuador famous for unique wildlife that inspired Darwin",
-    "hintThai": "หมู่เกาะในมหาสมุทรแปซิฟิกที่ดาร์วินใช้พัฒนาทฤษฎีวิวัฒนาการ"
+    "hintThai": "หมู่เกาะในมหาสมุทรแปซิฟิกที่ดาร์วินใช้พัฒนาทฤษฎีวิวัฒนาการ",
+    "pos": "noun"
   },
   {
     "word": "Chernobyl",
@@ -1893,7 +2129,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "site of a catastrophic 1986 nuclear disaster in Ukraine",
-    "hintThai": "เมืองในยูเครนที่เกิดอุบัติเหตุโรงไฟฟ้านิวเคลียร์ครั้งใหญ่ที่สุด"
+    "hintThai": "เมืองในยูเครนที่เกิดอุบัติเหตุโรงไฟฟ้านิวเคลียร์ครั้งใหญ่ที่สุด",
+    "pos": "noun"
   },
   {
     "word": "Area 51",
@@ -1901,7 +2138,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "a classified US Air Force base famous for UFO conspiracy theories",
-    "hintThai": "ฐานทัพลับของสหรัฐฯ ที่เกี่ยวข้องกับทฤษฎีสมคบคิดเรื่อง UFO"
+    "hintThai": "ฐานทัพลับของสหรัฐฯ ที่เกี่ยวข้องกับทฤษฎีสมคบคิดเรื่อง UFO",
+    "pos": "noun"
   },
   {
     "word": "Japan",
@@ -1909,7 +2147,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "an island nation known for sushi, anime, and Mount Fuji",
-    "hintThai": "ประเทศเกาะในเอเชียตะวันออก ขึ้นชื่อเรื่องอนิเมะ ซูชิ และเทคโนโลยี"
+    "hintThai": "ประเทศเกาะในเอเชียตะวันออก ขึ้นชื่อเรื่องอนิเมะ ซูชิ และเทคโนโลยี",
+    "pos": "noun"
   },
   {
     "word": "France",
@@ -1917,7 +2156,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a European country famous for the Eiffel Tower and wine",
-    "hintThai": "ประเทศในยุโรปตะวันตก ขึ้นชื่อเรื่องแฟชั่น ไวน์ และหอไอเฟล"
+    "hintThai": "ประเทศในยุโรปตะวันตก ขึ้นชื่อเรื่องแฟชั่น ไวน์ และหอไอเฟล",
+    "pos": "noun"
   },
   {
     "word": "Brazil",
@@ -1925,7 +2165,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "the largest country in South America, famous for Carnival and football",
-    "hintThai": "ประเทศที่ใหญ่ที่สุดในอเมริกาใต้ ขึ้นชื่อเรื่องฟุตบอลและป่าอเมซอน"
+    "hintThai": "ประเทศที่ใหญ่ที่สุดในอเมริกาใต้ ขึ้นชื่อเรื่องฟุตบอลและป่าอเมซอน",
+    "pos": "noun"
   },
   {
     "word": "Australia",
@@ -1933,7 +2174,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a continent-country known for kangaroos and the Great Barrier Reef",
-    "hintThai": "ทวีปและประเทศที่อยู่ซีกโลกใต้ มีสัตว์ป่าเฉพาะถิ่นมากมาย"
+    "hintThai": "ทวีปและประเทศที่อยู่ซีกโลกใต้ มีสัตว์ป่าเฉพาะถิ่นมากมาย",
+    "pos": "noun"
   },
   {
     "word": "India",
@@ -1941,7 +2183,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a vast South Asian country known for the Taj Mahal and spices",
-    "hintThai": "ประเทศที่มีประชากรมากที่สุดในโลก ขึ้นชื่อเรื่องอาหารเผ็ดและวัฒนธรรม"
+    "hintThai": "ประเทศที่มีประชากรมากที่สุดในโลก ขึ้นชื่อเรื่องอาหารเผ็ดและวัฒนธรรม",
+    "pos": "noun"
   },
   {
     "word": "Egypt",
@@ -1949,7 +2192,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a country in North Africa home to ancient pyramids",
-    "hintThai": "ประเทศในแอฟริกาเหนือ ขึ้นชื่อเรื่องพีระมิดและแม่น้ำไนล์"
+    "hintThai": "ประเทศในแอฟริกาเหนือ ขึ้นชื่อเรื่องพีระมิดและแม่น้ำไนล์",
+    "pos": "noun"
   },
   {
     "word": "Mexico",
@@ -1957,7 +2201,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a North American country famous for tacos and Aztec ruins",
-    "hintThai": "ประเทศในอเมริกาเหนือ ขึ้นชื่อเรื่องอาหารเผ็ด วัฒนธรรมแอซเทก"
+    "hintThai": "ประเทศในอเมริกาเหนือ ขึ้นชื่อเรื่องอาหารเผ็ด วัฒนธรรมแอซเทก",
+    "pos": "noun"
   },
   {
     "word": "Italy",
@@ -1965,7 +2210,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "a boot-shaped country in Europe known for pasta and the Colosseum",
-    "hintThai": "ประเทศในยุโรป ขึ้นชื่อเรื่องพิซซ่า พาสต้า และโรมโบราณ"
+    "hintThai": "ประเทศในยุโรป ขึ้นชื่อเรื่องพิซซ่า พาสต้า และโรมโบราณ",
+    "pos": "noun"
   },
   {
     "word": "South Korea",
@@ -1973,7 +2219,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "an East Asian country famous for K-pop and technology",
-    "hintThai": "ประเทศในเอเชียตะวันออก ขึ้นชื่อเรื่อง K-pop และซัมซุง"
+    "hintThai": "ประเทศในเอเชียตะวันออก ขึ้นชื่อเรื่อง K-pop และซัมซุง",
+    "pos": "noun"
   },
   {
     "word": "Russia",
@@ -1981,7 +2228,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "the world's largest country, spanning Europe and Asia",
-    "hintThai": "ประเทศที่ใหญ่ที่สุดในโลก ครอบคลุมสองทวีป"
+    "hintThai": "ประเทศที่ใหญ่ที่สุดในโลก ครอบคลุมสองทวีป",
+    "pos": "noun"
   },
   {
     "word": "Argentina",
@@ -1989,7 +2237,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a South American country famous for tango and football legend Messi",
-    "hintThai": "ประเทศในอเมริกาใต้ ขึ้นชื่อเรื่องเนื้อวัวและฟุตบอล"
+    "hintThai": "ประเทศในอเมริกาใต้ ขึ้นชื่อเรื่องเนื้อวัวและฟุตบอล",
+    "pos": "noun"
   },
   {
     "word": "Norway",
@@ -1997,7 +2246,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a Scandinavian country famous for fjords and the northern lights",
-    "hintThai": "ประเทศในสแกนดิเนเวีย ขึ้นชื่อเรื่องออโรร่าและฟยอร์ด"
+    "hintThai": "ประเทศในสแกนดิเนเวีย ขึ้นชื่อเรื่องออโรร่าและฟยอร์ด",
+    "pos": "noun"
   },
   {
     "word": "Switzerland",
@@ -2005,7 +2255,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a landlocked European country known for chocolate, cheese, and banks",
-    "hintThai": "ประเทศในยุโรปที่ขึ้นชื่อเรื่องนาฬิกา ช็อกโกแลต และความเป็นกลาง"
+    "hintThai": "ประเทศในยุโรปที่ขึ้นชื่อเรื่องนาฬิกา ช็อกโกแลต และความเป็นกลาง",
+    "pos": "noun"
   },
   {
     "word": "Morocco",
@@ -2013,7 +2264,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "a North African country known for its colorful medinas",
-    "hintThai": "ประเทศในแอฟริกาเหนือ ขึ้นชื่อเรื่องตลาดเก่าและทะเลทราย"
+    "hintThai": "ประเทศในแอฟริกาเหนือ ขึ้นชื่อเรื่องตลาดเก่าและทะเลทราย",
+    "pos": "noun"
   },
   {
     "word": "New Zealand",
@@ -2021,7 +2273,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "an island nation near Australia famous for Lord of the Rings scenery",
-    "hintThai": "ประเทศเกาะในมหาสมุทรแปซิฟิกใต้ ขึ้นชื่อเรื่องทิวทัศน์สวยงาม"
+    "hintThai": "ประเทศเกาะในมหาสมุทรแปซิฟิกใต้ ขึ้นชื่อเรื่องทิวทัศน์สวยงาม",
+    "pos": "noun"
   },
   {
     "word": "Bangkok",
@@ -2029,7 +2282,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "the capital of Thailand, known for temples and street food",
-    "hintThai": "เมืองหลวงของไทย ขึ้นชื่อเรื่องวัดและอาหารริมทาง"
+    "hintThai": "เมืองหลวงของไทย ขึ้นชื่อเรื่องวัดและอาหารริมทาง",
+    "pos": "noun"
   },
   {
     "word": "Tokyo",
@@ -2037,7 +2291,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "the capital of Japan, the world's most populous metro area",
-    "hintThai": "เมืองหลวงของญี่ปุ่น มีประชากรมากที่สุดในโลก"
+    "hintThai": "เมืองหลวงของญี่ปุ่น มีประชากรมากที่สุดในโลก",
+    "pos": "noun"
   },
   {
     "word": "Paris",
@@ -2045,7 +2300,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "the capital of France, known as the City of Light",
-    "hintThai": "เมืองหลวงของฝรั่งเศส มีหอไอเฟลเป็นสัญลักษณ์"
+    "hintThai": "เมืองหลวงของฝรั่งเศส มีหอไอเฟลเป็นสัญลักษณ์",
+    "pos": "noun"
   },
   {
     "word": "London",
@@ -2053,7 +2309,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "the capital of the UK, home to Big Ben and Buckingham Palace",
-    "hintThai": "เมืองหลวงของอังกฤษ มีหอนาฬิกา Big Ben"
+    "hintThai": "เมืองหลวงของอังกฤษ มีหอนาฬิกา Big Ben",
+    "pos": "noun"
   },
   {
     "word": "Washington DC",
@@ -2061,7 +2318,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "the capital of the United States, home of the White House",
-    "hintThai": "เมืองหลวงของสหรัฐอเมริกา ที่ตั้งของทำเนียบขาว"
+    "hintThai": "เมืองหลวงของสหรัฐอเมริกา ที่ตั้งของทำเนียบขาว",
+    "pos": "noun"
   },
   {
     "word": "Beijing",
@@ -2069,7 +2327,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "the capital of China",
-    "hintThai": "เมืองหลวงของจีน ที่ตั้งของพระราชวังต้องห้าม"
+    "hintThai": "เมืองหลวงของจีน ที่ตั้งของพระราชวังต้องห้าม",
+    "pos": "noun"
   },
   {
     "word": "Rome",
@@ -2077,7 +2336,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "the capital of Italy, known as the Eternal City",
-    "hintThai": "เมืองหลวงของอิตาลี เรียกว่า นครนิรันดร์"
+    "hintThai": "เมืองหลวงของอิตาลี เรียกว่า นครนิรันดร์",
+    "pos": "noun"
   },
   {
     "word": "Moscow",
@@ -2085,7 +2345,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "the capital of Russia",
-    "hintThai": "เมืองหลวงของรัสเซีย ที่ตั้งของจัตุรัสแดงและเครมลิน"
+    "hintThai": "เมืองหลวงของรัสเซีย ที่ตั้งของจัตุรัสแดงและเครมลิน",
+    "pos": "noun"
   },
   {
     "word": "Cairo",
@@ -2093,7 +2354,8 @@
     "category": "Places",
     "level": "easy",
     "hint": "the capital of Egypt, near the Pyramids of Giza",
-    "hintThai": "เมืองหลวงของอียิปต์ ใกล้กับพีระมิดกีซา"
+    "hintThai": "เมืองหลวงของอียิปต์ ใกล้กับพีระมิดกีซา",
+    "pos": "noun"
   },
   {
     "word": "Nairobi",
@@ -2101,7 +2363,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "the capital of Kenya, a major hub in East Africa",
-    "hintThai": "เมืองหลวงของเคนยา ประตูสู่การท่องเที่ยวซาฟารี"
+    "hintThai": "เมืองหลวงของเคนยา ประตูสู่การท่องเที่ยวซาฟารี",
+    "pos": "noun"
   },
   {
     "word": "Reykjavik",
@@ -2109,7 +2372,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "the capital of Iceland, one of the world's northernmost capitals",
-    "hintThai": "เมืองหลวงของไอซ์แลนด์ ใกล้ออโรร่าและน้ำพุร้อน"
+    "hintThai": "เมืองหลวงของไอซ์แลนด์ ใกล้ออโรร่าและน้ำพุร้อน",
+    "pos": "noun"
   },
   {
     "word": "Kathmandu",
@@ -2117,7 +2381,8 @@
     "category": "Places",
     "level": "medium",
     "hint": "the capital of Nepal, gateway to the Himalayas",
-    "hintThai": "เมืองหลวงของเนปาล ใกล้กับยอดเขาเอเวอเรสต์"
+    "hintThai": "เมืองหลวงของเนปาล ใกล้กับยอดเขาเอเวอเรสต์",
+    "pos": "noun"
   },
   {
     "word": "Ulaanbaatar",
@@ -2125,7 +2390,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "the capital of Mongolia, one of the coldest capitals on Earth",
-    "hintThai": "เมืองหลวงของมองโกเลีย เมืองหลวงที่หนาวที่สุดในโลก"
+    "hintThai": "เมืองหลวงของมองโกเลีย เมืองหลวงที่หนาวที่สุดในโลก",
+    "pos": "noun"
   },
   {
     "word": "Nur-Sultan",
@@ -2133,7 +2399,8 @@
     "category": "Places",
     "level": "hard",
     "hint": "the futuristic capital of Kazakhstan (also called Astana)",
-    "hintThai": "เมืองหลวงของคาซัคสถาน เปลี่ยนชื่อใหม่จากอัสตานา"
+    "hintThai": "เมืองหลวงของคาซัคสถาน เปลี่ยนชื่อใหม่จากอัสตานา",
+    "pos": "noun"
   },
   {
     "word": "Sherlock Holmes",
@@ -2141,7 +2408,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a brilliant fictional detective created by Arthur Conan Doyle",
-    "hintThai": "นักสืบในจินตนาการชื่อดังที่สร้างโดย อาร์เธอร์ โคแนน ดอยล์"
+    "hintThai": "นักสืบในจินตนาการชื่อดังที่สร้างโดย อาร์เธอร์ โคแนน ดอยล์",
+    "pos": "noun"
   },
   {
     "word": "Santa Claus",
@@ -2149,7 +2417,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a jolly old man in red who delivers gifts on Christmas Eve",
-    "hintThai": "ชายอ้วนร่าเริงในชุดแดงที่แจกของขวัญในคืนคริสต์มาส"
+    "hintThai": "ชายอ้วนร่าเริงในชุดแดงที่แจกของขวัญในคืนคริสต์มาส",
+    "pos": "noun"
   },
   {
     "word": "Dracula",
@@ -2157,7 +2426,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a famous fictional vampire from Transylvania",
-    "hintThai": "แวมไพร์ในจินตนาการชื่อดังจากทรานซิลวาเนีย"
+    "hintThai": "แวมไพร์ในจินตนาการชื่อดังจากทรานซิลวาเนีย",
+    "pos": "noun"
   },
   {
     "word": "Robin Hood",
@@ -2165,7 +2435,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a legendary English outlaw who stole from the rich to give to the poor",
-    "hintThai": "อัศวินโจรในตำนานที่ขโมยจากคนรวยให้คนจน"
+    "hintThai": "อัศวินโจรในตำนานที่ขโมยจากคนรวยให้คนจน",
+    "pos": "noun"
   },
   {
     "word": "Cinderella",
@@ -2173,7 +2444,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a fairy-tale girl who loses her glass slipper at midnight",
-    "hintThai": "เจ้าหญิงในเทพนิยายที่ทำรองเท้าแก้วหายตอนเที่ยงคืน"
+    "hintThai": "เจ้าหญิงในเทพนิยายที่ทำรองเท้าแก้วหายตอนเที่ยงคืน",
+    "pos": "noun"
   },
   {
     "word": "James Bond",
@@ -2181,7 +2453,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a fictional British spy known as Agent 007",
-    "hintThai": "สายลับอังกฤษในจินตนาการ รหัส 007"
+    "hintThai": "สายลับอังกฤษในจินตนาการ รหัส 007",
+    "pos": "noun"
   },
   {
     "word": "Harry Potter",
@@ -2189,7 +2462,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a young wizard at Hogwarts School in a famous book series",
-    "hintThai": "เด็กพ่อมดที่เรียนที่โรงเรียนฮอกวอตส์"
+    "hintThai": "เด็กพ่อมดที่เรียนที่โรงเรียนฮอกวอตส์",
+    "pos": "noun"
   },
   {
     "word": "Pinocchio",
@@ -2197,7 +2471,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a wooden puppet whose nose grows when he lies",
-    "hintThai": "หุ่นไม้ที่จมูกยาวขึ้นทุกครั้งที่โกหก"
+    "hintThai": "หุ่นไม้ที่จมูกยาวขึ้นทุกครั้งที่โกหก",
+    "pos": "noun"
   },
   {
     "word": "Superman",
@@ -2205,7 +2480,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a superhero from Krypton who can fly and has super strength",
-    "hintThai": "ซูเปอร์ฮีโร่จากดาวคริปตันที่บินได้และมีพลังมหาศาล"
+    "hintThai": "ซูเปอร์ฮีโร่จากดาวคริปตันที่บินได้และมีพลังมหาศาล",
+    "pos": "noun"
   },
   {
     "word": "Romeo",
@@ -2213,7 +2489,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "the male lead in Shakespeare's most famous tragedy about love",
-    "hintThai": "พระเอกในโศกนาฏกรรมความรักของเชกสเปียร์"
+    "hintThai": "พระเอกในโศกนาฏกรรมความรักของเชกสเปียร์",
+    "pos": "noun"
   },
   {
     "word": "Napoleon",
@@ -2221,7 +2498,8 @@
     "category": "Characters",
     "level": "medium",
     "hint": "a French military general who became Emperor of France",
-    "hintThai": "นายพลทหารฝรั่งเศสที่กลายเป็นจักรพรรดิ"
+    "hintThai": "นายพลทหารฝรั่งเศสที่กลายเป็นจักรพรรดิ",
+    "pos": "noun"
   },
   {
     "word": "Cleopatra",
@@ -2229,7 +2507,8 @@
     "category": "Characters",
     "level": "medium",
     "hint": "the last active ruler of ancient Egypt, famous for her intelligence and beauty",
-    "hintThai": "ราชินีองค์สุดท้ายของอียิปต์โบราณ ขึ้นชื่อเรื่องความฉลาดและความงาม"
+    "hintThai": "ราชินีองค์สุดท้ายของอียิปต์โบราณ ขึ้นชื่อเรื่องความฉลาดและความงาม",
+    "pos": "noun"
   },
   {
     "word": "Hercules",
@@ -2237,7 +2516,8 @@
     "category": "Characters",
     "level": "medium",
     "hint": "a hero from Greek mythology famous for his incredible strength",
-    "hintThai": "วีรบุรุษในตำนานกรีกที่มีพลังมหาศาล"
+    "hintThai": "วีรบุรุษในตำนานกรีกที่มีพลังมหาศาล",
+    "pos": "noun"
   },
   {
     "word": "Medusa",
@@ -2245,7 +2525,8 @@
     "category": "Characters",
     "level": "medium",
     "hint": "a monster from Greek mythology whose gaze turns people to stone",
-    "hintThai": "สัตว์ประหลาดในตำนานกรีกที่ทำให้คนกลายเป็นหินได้"
+    "hintThai": "สัตว์ประหลาดในตำนานกรีกที่ทำให้คนกลายเป็นหินได้",
+    "pos": "noun"
   },
   {
     "word": "Frankenstein",
@@ -2253,7 +2534,8 @@
     "category": "Characters",
     "level": "medium",
     "hint": "a scientist who creates a monster from body parts in a Gothic novel",
-    "hintThai": "นักวิทยาศาสตร์ที่สร้างสัตว์ประหลาดจากชิ้นส่วนร่างกายในนิยายสยองขวัญ"
+    "hintThai": "นักวิทยาศาสตร์ที่สร้างสัตว์ประหลาดจากชิ้นส่วนร่างกายในนิยายสยองขวัญ",
+    "pos": "noun"
   },
   {
     "word": "Don Quixote",
@@ -2261,7 +2543,8 @@
     "category": "Characters",
     "level": "medium",
     "hint": "a Spanish literary character who believes he is a knight fighting windmills",
-    "hintThai": "ตัวละครสเปนที่คิดว่าตัวเองเป็นอัศวินไปต่อสู้กับกังหันลม"
+    "hintThai": "ตัวละครสเปนที่คิดว่าตัวเองเป็นอัศวินไปต่อสู้กับกังหันลม",
+    "pos": "noun"
   },
   {
     "word": "Hannibal Lecter",
@@ -2269,7 +2552,8 @@
     "category": "Characters",
     "level": "medium",
     "hint": "a brilliant but terrifying fictional cannibal psychiatrist",
-    "hintThai": "จิตแพทย์ในจินตนาการที่ฉลาดแต่เป็นฆาตกรสยองขวัญ"
+    "hintThai": "จิตแพทย์ในจินตนาการที่ฉลาดแต่เป็นฆาตกรสยองขวัญ",
+    "pos": "noun"
   },
   {
     "word": "Walter White",
@@ -2277,7 +2561,8 @@
     "category": "Characters",
     "level": "medium",
     "hint": "a chemistry teacher who becomes a drug lord in Breaking Bad",
-    "hintThai": "ครูสอนเคมีที่กลายเป็นพ่อค้ายาเสพติดใน Breaking Bad"
+    "hintThai": "ครูสอนเคมีที่กลายเป็นพ่อค้ายาเสพติดใน Breaking Bad",
+    "pos": "noun"
   },
   {
     "word": "Macbeth",
@@ -2285,7 +2570,8 @@
     "category": "Characters",
     "level": "hard",
     "hint": "a Scottish general who murders the king to seize power in Shakespeare's play",
-    "hintThai": "ขุนนางสก็อตที่สังหารกษัตริย์เพื่อแย่งชิงอำนาจในละครของเชกสเปียร์"
+    "hintThai": "ขุนนางสก็อตที่สังหารกษัตริย์เพื่อแย่งชิงอำนาจในละครของเชกสเปียร์",
+    "pos": "noun"
   },
   {
     "word": "Machiavelli",
@@ -2293,7 +2579,8 @@
     "category": "Characters",
     "level": "hard",
     "hint": "an Italian thinker who wrote that leaders should do anything to keep power",
-    "hintThai": "นักคิดอิตาลีที่เขียนว่าผู้นำต้องทำทุกอย่างเพื่อรักษาอำนาจ"
+    "hintThai": "นักคิดอิตาลีที่เขียนว่าผู้นำต้องทำทุกอย่างเพื่อรักษาอำนาจ",
+    "pos": "noun"
   },
   {
     "word": "Rasputin",
@@ -2301,7 +2588,8 @@
     "category": "Characters",
     "level": "hard",
     "hint": "a mysterious Russian mystic who had great influence over the Romanov royal family",
-    "hintThai": "พระนักบวชรัสเซียลึกลับที่มีอิทธิพลต่อราชวงศ์โรมานอฟ"
+    "hintThai": "พระนักบวชรัสเซียลึกลับที่มีอิทธิพลต่อราชวงศ์โรมานอฟ",
+    "pos": "noun"
   },
   {
     "word": "Iago",
@@ -2309,7 +2597,8 @@
     "category": "Characters",
     "level": "hard",
     "hint": "the manipulative villain in Shakespeare's Othello",
-    "hintThai": "ตัวร้ายหัวฉลาดในละคร Othello ของเชกสเปียร์"
+    "hintThai": "ตัวร้ายหัวฉลาดในละคร Othello ของเชกสเปียร์",
+    "pos": "noun"
   },
   {
     "word": "carrot",
@@ -2317,7 +2606,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "an orange root vegetable rabbits love",
-    "hintThai": "ผักสีส้มรูปทรงยาวที่กระต่ายชอบกิน"
+    "hintThai": "ผักสีส้มรูปทรงยาวที่กระต่ายชอบกิน",
+    "pos": "noun"
   },
   {
     "word": "broccoli",
@@ -2325,7 +2615,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a green vegetable that looks like a tiny tree",
-    "hintThai": "ผักสีเขียวที่มีลักษณะคล้ายต้นไม้จิ๋ว"
+    "hintThai": "ผักสีเขียวที่มีลักษณะคล้ายต้นไม้จิ๋ว",
+    "pos": "noun"
   },
   {
     "word": "onion",
@@ -2333,7 +2624,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a vegetable that makes you cry when you cut it",
-    "hintThai": "ผักที่มีกลิ่นฉุนและทำให้น้ำตาไหลเมื่อหั่น"
+    "hintThai": "ผักที่มีกลิ่นฉุนและทำให้น้ำตาไหลเมื่อหั่น",
+    "pos": "noun"
   },
   {
     "word": "garlic",
@@ -2341,7 +2633,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a strong-smelling ingredient used in cooking",
-    "hintThai": "ผักกลิ่นฉุนที่ใช้ปรุงอาหารทั่วโลก"
+    "hintThai": "ผักกลิ่นฉุนที่ใช้ปรุงอาหารทั่วโลก",
+    "pos": "noun"
   },
   {
     "word": "potato",
@@ -2349,7 +2642,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a starchy underground vegetable used for fries and chips",
-    "hintThai": "หัวพืชใต้ดินสีน้ำตาล ทำได้ทั้งมันฝรั่งทอดและต้มบด"
+    "hintThai": "หัวพืชใต้ดินสีน้ำตาล ทำได้ทั้งมันฝรั่งทอดและต้มบด",
+    "pos": "noun"
   },
   {
     "word": "tomato",
@@ -2357,7 +2651,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a red round fruit often used in salads and sauces",
-    "hintThai": "ผลสีแดงฉ่ำที่ใช้ทำซอสและสลัด"
+    "hintThai": "ผลสีแดงฉ่ำที่ใช้ทำซอสและสลัด",
+    "pos": "noun"
   },
   {
     "word": "cucumber",
@@ -2365,7 +2660,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a long green vegetable often eaten raw in salads",
-    "hintThai": "ผักสีเขียวที่มีน้ำมาก กินสดหรือดองได้"
+    "hintThai": "ผักสีเขียวที่มีน้ำมาก กินสดหรือดองได้",
+    "pos": "noun"
   },
   {
     "word": "corn",
@@ -2373,7 +2669,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a yellow vegetable on a cob",
-    "hintThai": "พืชที่มีเมล็ดเรียงอยู่บนฝัก สีเหลืองทอง"
+    "hintThai": "พืชที่มีเมล็ดเรียงอยู่บนฝัก สีเหลืองทอง",
+    "pos": "noun"
   },
   {
     "word": "mushroom",
@@ -2381,7 +2678,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a fungus you eat, shaped like an umbrella",
-    "hintThai": "พืชที่ไม่มีใบและไม่ใช้แสงแดด มีรูปทรงร่ม"
+    "hintThai": "พืชที่ไม่มีใบและไม่ใช้แสงแดด มีรูปทรงร่ม",
+    "pos": "noun"
   },
   {
     "word": "cabbage",
@@ -2389,7 +2687,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a round leafy green vegetable",
-    "hintThai": "ผักใบกลมแน่นสีเขียวหรือม่วง"
+    "hintThai": "ผักใบกลมแน่นสีเขียวหรือม่วง",
+    "pos": "noun"
   },
   {
     "word": "spinach",
@@ -2397,7 +2696,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a dark leafy green vegetable Popeye loves",
-    "hintThai": "ผักใบสีเขียวเข้มที่ Popeye ชอบกิน"
+    "hintThai": "ผักใบสีเขียวเข้มที่ Popeye ชอบกิน",
+    "pos": "noun"
   },
   {
     "word": "pumpkin",
@@ -2405,7 +2705,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a large orange vegetable carved at Halloween",
-    "hintThai": "ผักทรงกลมสีส้ม มักใช้ตกแต่งในวันฮาโลวีน"
+    "hintThai": "ผักทรงกลมสีส้ม มักใช้ตกแต่งในวันฮาโลวีน",
+    "pos": "noun"
   },
   {
     "word": "eggplant",
@@ -2413,7 +2714,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a long purple vegetable used in stir-fries",
-    "hintThai": "ผักสีม่วงเข้มรูปยาว"
+    "hintThai": "ผักสีม่วงเข้มรูปยาว",
+    "pos": "noun"
   },
   {
     "word": "chili",
@@ -2421,7 +2723,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a small spicy pepper",
-    "hintThai": "ผักที่ให้รสเผ็ดร้อน มีหลายสีและหลายขนาด"
+    "hintThai": "ผักที่ให้รสเผ็ดร้อน มีหลายสีและหลายขนาด",
+    "pos": "noun"
   },
   {
     "word": "ginger",
@@ -2429,7 +2732,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a knobbly root with a spicy flavor used in cooking and tea",
-    "hintThai": "รากไม้มีกลิ่นฉุนหอม ใช้ปรุงอาหารและชา"
+    "hintThai": "รากไม้มีกลิ่นฉุนหอม ใช้ปรุงอาหารและชา",
+    "pos": "noun"
   },
   {
     "word": "mango",
@@ -2437,7 +2741,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a tropical yellow-orange fruit popular in Thailand",
-    "hintThai": "ผลไม้เขตร้อนสีเหลืองส้ม รสหวานหอม"
+    "hintThai": "ผลไม้เขตร้อนสีเหลืองส้ม รสหวานหอม",
+    "pos": "noun"
   },
   {
     "word": "durian",
@@ -2445,7 +2750,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "the \"king of fruits\" — spiky with a very strong smell",
-    "hintThai": "ผลไม้เขตร้อนที่มีกลิ่นแรงมาก เปลือกมีหนาม"
+    "hintThai": "ผลไม้เขตร้อนที่มีกลิ่นแรงมาก เปลือกมีหนาม",
+    "pos": "noun"
   },
   {
     "word": "strawberry",
@@ -2453,7 +2759,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a small red heart-shaped fruit, often in desserts",
-    "hintThai": "ผลไม้สีแดงรูปหัวใจ รสหวานอมเปรี้ยว"
+    "hintThai": "ผลไม้สีแดงรูปหัวใจ รสหวานอมเปรี้ยว",
+    "pos": "noun"
   },
   {
     "word": "watermelon",
@@ -2461,7 +2768,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a large green fruit with red flesh and black seeds",
-    "hintThai": "ผลไม้ขนาดใหญ่สีเขียว เนื้อในสีแดงฉ่ำ"
+    "hintThai": "ผลไม้ขนาดใหญ่สีเขียว เนื้อในสีแดงฉ่ำ",
+    "pos": "noun"
   },
   {
     "word": "banana",
@@ -2469,7 +2777,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a yellow curved fruit monkeys love",
-    "hintThai": "ผลไม้สีเหลืองรูปโค้ง ลิงชอบกิน"
+    "hintThai": "ผลไม้สีเหลืองรูปโค้ง ลิงชอบกิน",
+    "pos": "noun"
   },
   {
     "word": "pineapple",
@@ -2477,7 +2786,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a tropical fruit with a spiky crown and sweet-sour taste",
-    "hintThai": "ผลไม้มีใบแข็งบนหัว เนื้อเหลืองหวานอมเปรี้ยว"
+    "hintThai": "ผลไม้มีใบแข็งบนหัว เนื้อเหลืองหวานอมเปรี้ยว",
+    "pos": "noun"
   },
   {
     "word": "grape",
@@ -2485,7 +2795,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "small round fruits that grow in clusters, used to make wine",
-    "hintThai": "ผลไม้เล็กๆ ที่เติบโตเป็นพวง ใช้ทำไวน์ได้"
+    "hintThai": "ผลไม้เล็กๆ ที่เติบโตเป็นพวง ใช้ทำไวน์ได้",
+    "pos": "noun"
   },
   {
     "word": "lemon",
@@ -2493,7 +2804,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a sour yellow citrus fruit",
-    "hintThai": "ผลไม้สีเหลืองรสเปรี้ยวจัด"
+    "hintThai": "ผลไม้สีเหลืองรสเปรี้ยวจัด",
+    "pos": "noun"
   },
   {
     "word": "coconut",
@@ -2501,7 +2813,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a large tropical fruit with white flesh and sweet water inside",
-    "hintThai": "ผลไม้เขตร้อนที่มีน้ำและเนื้อขาวอยู่ในเปลือกแข็ง"
+    "hintThai": "ผลไม้เขตร้อนที่มีน้ำและเนื้อขาวอยู่ในเปลือกแข็ง",
+    "pos": "noun"
   },
   {
     "word": "papaya",
@@ -2509,7 +2822,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "an orange tropical fruit used in som tum",
-    "hintThai": "ผลไม้เขตร้อนสีส้ม มีเมล็ดดำอยู่ตรงกลาง"
+    "hintThai": "ผลไม้เขตร้อนสีส้ม มีเมล็ดดำอยู่ตรงกลาง",
+    "pos": "noun"
   },
   {
     "word": "lychee",
@@ -2517,7 +2831,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a small white juicy tropical fruit with a rough red skin",
-    "hintThai": "ผลไม้เล็กเปลือกแดงขรุขระ เนื้อขาวหวาน"
+    "hintThai": "ผลไม้เล็กเปลือกแดงขรุขระ เนื้อขาวหวาน",
+    "pos": "noun"
   },
   {
     "word": "dragon fruit",
@@ -2525,7 +2840,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a bright pink fruit with white flesh and black seeds",
-    "hintThai": "ผลไม้สีชมพูสดใส เนื้อในมีจุดดำเล็กๆ"
+    "hintThai": "ผลไม้สีชมพูสดใส เนื้อในมีจุดดำเล็กๆ",
+    "pos": "noun"
   },
   {
     "word": "avocado",
@@ -2533,7 +2849,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a creamy green fruit used in guacamole and on toast",
-    "hintThai": "ผลไม้สีเขียวเนื้อครีมเข้มที่ใช้ทำกัวคาโมเล"
+    "hintThai": "ผลไม้สีเขียวเนื้อครีมเข้มที่ใช้ทำกัวคาโมเล",
+    "pos": "noun"
   },
   {
     "word": "passion fruit",
@@ -2541,7 +2858,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a wrinkled purple fruit with tangy yellow seeds inside",
-    "hintThai": "ผลไม้เปลือกม่วงที่มีเนื้อสีส้มเหลืองรสเปรี้ยวหวาน"
+    "hintThai": "ผลไม้เปลือกม่วงที่มีเนื้อสีส้มเหลืองรสเปรี้ยวหวาน",
+    "pos": "noun"
   },
   {
     "word": "jackfruit",
@@ -2549,7 +2867,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "the world's largest tree fruit, with yellow pods inside",
-    "hintThai": "ผลไม้ขนาดใหญ่ที่สุดในโลก เนื้อเหลืองหวาน"
+    "hintThai": "ผลไม้ขนาดใหญ่ที่สุดในโลก เนื้อเหลืองหวาน",
+    "pos": "noun"
   },
   {
     "word": "pizza",
@@ -2557,7 +2876,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a flat round dish with tomato sauce and cheese, baked in an oven",
-    "hintThai": "อาหารอิตาเลียนแป้งกลมอบในเตา มีซอสและชีส"
+    "hintThai": "อาหารอิตาเลียนแป้งกลมอบในเตา มีซอสและชีส",
+    "pos": "noun"
   },
   {
     "word": "sushi",
@@ -2565,7 +2885,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "Japanese rice rolls often topped with raw fish",
-    "hintThai": "อาหารญี่ปุ่นที่ทำจากข้าวปั้นกับปลาดิบหรือไส้ต่างๆ"
+    "hintThai": "อาหารญี่ปุ่นที่ทำจากข้าวปั้นกับปลาดิบหรือไส้ต่างๆ",
+    "pos": "noun"
   },
   {
     "word": "burger",
@@ -2573,7 +2894,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a grilled patty in a bun with toppings",
-    "hintThai": "แซนด์วิชที่มีเนื้อบดอยู่ระหว่างขนมปังกลม"
+    "hintThai": "แซนด์วิชที่มีเนื้อบดอยู่ระหว่างขนมปังกลม",
+    "pos": "noun"
   },
   {
     "word": "noodles",
@@ -2581,7 +2903,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "long thin strips of pasta or wheat, eaten in soup or stir-fried",
-    "hintThai": "อาหารที่ทำจากแป้งรีดเป็นเส้นยาว"
+    "hintThai": "อาหารที่ทำจากแป้งรีดเป็นเส้นยาว",
+    "pos": "noun"
   },
   {
     "word": "ice cream",
@@ -2589,7 +2912,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a sweet frozen dessert in a cone or cup",
-    "hintThai": "ของหวานแช่แข็งทำจากนมหรือครีม"
+    "hintThai": "ของหวานแช่แข็งทำจากนมหรือครีม",
+    "pos": "noun"
   },
   {
     "word": "chocolate",
@@ -2597,7 +2921,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a sweet brown food made from cacao beans",
-    "hintThai": "อาหารหวานที่ทำจากเมล็ดโกโก้"
+    "hintThai": "อาหารหวานที่ทำจากเมล็ดโกโก้",
+    "pos": "noun"
   },
   {
     "word": "coffee",
@@ -2605,7 +2930,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a hot dark drink made from roasted beans",
-    "hintThai": "เครื่องดื่มร้อนที่ทำจากเมล็ดกาแฟคั่ว"
+    "hintThai": "เครื่องดื่มร้อนที่ทำจากเมล็ดกาแฟคั่ว",
+    "pos": "noun"
   },
   {
     "word": "popcorn",
@@ -2613,7 +2939,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a snack made from heated corn kernels, eaten at the cinema",
-    "hintThai": "ข้าวโพดที่ถูกความร้อนจนแตกฟูเป็นเม็ดขาว"
+    "hintThai": "ข้าวโพดที่ถูกความร้อนจนแตกฟูเป็นเม็ดขาว",
+    "pos": "noun"
   },
   {
     "word": "ramen",
@@ -2621,7 +2948,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "Japanese noodle soup with broth, meat, and toppings",
-    "hintThai": "บะหมี่ญี่ปุ่นในน้ำซุปร้อน มีหน้าหลากหลาย"
+    "hintThai": "บะหมี่ญี่ปุ่นในน้ำซุปร้อน มีหน้าหลากหลาย",
+    "pos": "noun"
   },
   {
     "word": "pad thai",
@@ -2629,7 +2957,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "Thailand's most famous stir-fried noodle dish",
-    "hintThai": "ผัดไทย บะหมี่ผัดแบบไทยที่มีกุ้ง ถั่วงอก และไข่"
+    "hintThai": "ผัดไทย บะหมี่ผัดแบบไทยที่มีกุ้ง ถั่วงอก และไข่",
+    "pos": "noun"
   },
   {
     "word": "curry",
@@ -2637,7 +2966,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a spiced sauce dish popular in India and Thailand",
-    "hintThai": "อาหารที่มีซอสเครื่องเทศข้นหนา กินกับข้าวหรือขนมปัง"
+    "hintThai": "อาหารที่มีซอสเครื่องเทศข้นหนา กินกับข้าวหรือขนมปัง",
+    "pos": "noun"
   },
   {
     "word": "dim sum",
@@ -2645,7 +2975,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "small Chinese dishes served in steamer baskets",
-    "hintThai": "อาหารจีนที่เสิร์ฟในตะกร้าเล็กๆ มักกินตอนเช้า"
+    "hintThai": "อาหารจีนที่เสิร์ฟในตะกร้าเล็กๆ มักกินตอนเช้า",
+    "pos": "noun"
   },
   {
     "word": "croissant",
@@ -2653,7 +2984,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a buttery, flaky crescent-shaped French pastry",
-    "hintThai": "ขนมปังฝรั่งเศสรูปพระจันทร์เสี้ยว แป้งกรอบนอกนุ่มใน"
+    "hintThai": "ขนมปังฝรั่งเศสรูปพระจันทร์เสี้ยว แป้งกรอบนอกนุ่มใน",
+    "pos": "noun"
   },
   {
     "word": "fondue",
@@ -2661,7 +2993,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a Swiss dish where you dip food into melted cheese or chocolate",
-    "hintThai": "อาหารสวิสที่จุ่มขนมปังลงในชีสหรือช็อกโกแลตละลาย"
+    "hintThai": "อาหารสวิสที่จุ่มขนมปังลงในชีสหรือช็อกโกแลตละลาย",
+    "pos": "noun"
   },
   {
     "word": "tiramisu",
@@ -2669,7 +3002,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "an Italian dessert made with coffee, mascarpone, and ladyfingers",
-    "hintThai": "ของหวานอิตาเลียนที่มีชั้นครีมและขนมปังชุบกาแฟ"
+    "hintThai": "ของหวานอิตาเลียนที่มีชั้นครีมและขนมปังชุบกาแฟ",
+    "pos": "noun"
   },
   {
     "word": "boba tea",
@@ -2677,7 +3011,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a Taiwanese drink with tea, milk, and chewy tapioca balls",
-    "hintThai": "ชานมไข่มุกที่มีลูกเม็ดเคี้ยวได้อยู่ด้านล่าง"
+    "hintThai": "ชานมไข่มุกที่มีลูกเม็ดเคี้ยวได้อยู่ด้านล่าง",
+    "pos": "noun"
   },
   {
     "word": "kimchi",
@@ -2685,7 +3020,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a Korean fermented spicy cabbage dish",
-    "hintThai": "ผักดองเกาหลีที่มีรสเผ็ดและเปรี้ยว"
+    "hintThai": "ผักดองเกาหลีที่มีรสเผ็ดและเปรี้ยว",
+    "pos": "noun"
   },
   {
     "word": "truffle",
@@ -2693,7 +3029,8 @@
     "category": "Objects",
     "level": "hard",
     "hint": "a rare underground fungus considered a luxury food ingredient",
-    "hintThai": "เห็ดหายากที่หัวหมูขุดหา มีราคาแพงมาก"
+    "hintThai": "เห็ดหายากที่หัวหมูขุดหา มีราคาแพงมาก",
+    "pos": "noun"
   },
   {
     "word": "Mickey Mouse",
@@ -2701,7 +3038,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "Disney's iconic cartoon mouse with round black ears",
-    "hintThai": "หนูการ์ตูนสัญลักษณ์ของดิสนีย์ที่มีหูกลมสีดำ"
+    "hintThai": "หนูการ์ตูนสัญลักษณ์ของดิสนีย์ที่มีหูกลมสีดำ",
+    "pos": "noun"
   },
   {
     "word": "SpongeBob",
@@ -2709,7 +3047,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a cheerful yellow sea sponge who lives under the sea and fries burgers",
-    "hintThai": "ฟองน้ำสีเหลืองร่าเริงที่อาศัยอยู่ใต้ทะเลและทำเบอร์เกอร์"
+    "hintThai": "ฟองน้ำสีเหลืองร่าเริงที่อาศัยอยู่ใต้ทะเลและทำเบอร์เกอร์",
+    "pos": "noun"
   },
   {
     "word": "Doraemon",
@@ -2717,7 +3056,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a blue robotic cat from the future with a magic pocket",
-    "hintThai": "แมวหุ่นยนต์สีน้ำเงินจากอนาคตที่มีกระเป๋ามหัศจรรย์"
+    "hintThai": "แมวหุ่นยนต์สีน้ำเงินจากอนาคตที่มีกระเป๋ามหัศจรรย์",
+    "pos": "noun"
   },
   {
     "word": "Pikachu",
@@ -2725,7 +3065,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a yellow electric mouse Pokémon",
-    "hintThai": "โปเกมอนหนูสีเหลืองที่มีพลังไฟฟ้า"
+    "hintThai": "โปเกมอนหนูสีเหลืองที่มีพลังไฟฟ้า",
+    "pos": "noun"
   },
   {
     "word": "Naruto",
@@ -2733,7 +3074,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a young ninja with a fox spirit sealed inside him",
-    "hintThai": "นินจาหนุ่มที่มีจิ้งจอกเก้าหางถูกผนึกอยู่ในร่าง"
+    "hintThai": "นินจาหนุ่มที่มีจิ้งจอกเก้าหางถูกผนึกอยู่ในร่าง",
+    "pos": "noun"
   },
   {
     "word": "Simba",
@@ -2741,7 +3083,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "the young lion prince in The Lion King",
-    "hintThai": "เจ้าชายสิงโตหนุ่มใน The Lion King"
+    "hintThai": "เจ้าชายสิงโตหนุ่มใน The Lion King",
+    "pos": "noun"
   },
   {
     "word": "Elsa",
@@ -2749,7 +3092,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a queen with ice powers in Frozen",
-    "hintThai": "ราชินีที่มีพลังน้ำแข็งใน Frozen"
+    "hintThai": "ราชินีที่มีพลังน้ำแข็งใน Frozen",
+    "pos": "noun"
   },
   {
     "word": "Shrek",
@@ -2757,7 +3101,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a large green ogre who lives in a swamp",
-    "hintThai": "ยักษ์เขียวขนาดใหญ่ที่อาศัยอยู่ในหนองน้ำ"
+    "hintThai": "ยักษ์เขียวขนาดใหญ่ที่อาศัยอยู่ในหนองน้ำ",
+    "pos": "noun"
   },
   {
     "word": "Goku",
@@ -2765,7 +3110,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a Saiyan warrior who trains to be the strongest in Dragon Ball",
-    "hintThai": "นักรบไซย่าที่ฝึกตัวเองให้แข็งแกร่งที่สุดใน Dragon Ball"
+    "hintThai": "นักรบไซย่าที่ฝึกตัวเองให้แข็งแกร่งที่สุดใน Dragon Ball",
+    "pos": "noun"
   },
   {
     "word": "Tom and Jerry",
@@ -2773,7 +3119,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a classic cartoon about a cat always chasing a mouse",
-    "hintThai": "การ์ตูนคลาสสิกเรื่องแมวที่ไล่จับหนูตลอดเวลา"
+    "hintThai": "การ์ตูนคลาสสิกเรื่องแมวที่ไล่จับหนูตลอดเวลา",
+    "pos": "noun"
   },
   {
     "word": "Winnie the Pooh",
@@ -2781,7 +3128,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a yellow bear who loves honey",
-    "hintThai": "หมีสีเหลืองที่ชอบกินน้ำผึ้ง"
+    "hintThai": "หมีสีเหลืองที่ชอบกินน้ำผึ้ง",
+    "pos": "noun"
   },
   {
     "word": "Bugs Bunny",
@@ -2789,7 +3137,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a wise-cracking grey rabbit who munches carrots",
-    "hintThai": "กระต่ายขี้ตลกที่ชอบกินแครอทและพูดเก่ง"
+    "hintThai": "กระต่ายขี้ตลกที่ชอบกินแครอทและพูดเก่ง",
+    "pos": "noun"
   },
   {
     "word": "Totoro",
@@ -2797,7 +3146,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a giant fluffy forest spirit in a Studio Ghibli film",
-    "hintThai": "วิญญาณป่าตัวใหญ่นุ่มนวลในภาพยนตร์ Studio Ghibli"
+    "hintThai": "วิญญาณป่าตัวใหญ่นุ่มนวลในภาพยนตร์ Studio Ghibli",
+    "pos": "noun"
   },
   {
     "word": "Woody",
@@ -2805,7 +3155,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a cowboy doll who is the leader of the toys in Toy Story",
-    "hintThai": "ตุ๊กตาคาวบอยที่เป็นหัวหน้าของเล่นใน Toy Story"
+    "hintThai": "ตุ๊กตาคาวบอยที่เป็นหัวหน้าของเล่นใน Toy Story",
+    "pos": "noun"
   },
   {
     "word": "Luffy",
@@ -2813,7 +3164,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a rubber-bodied pirate who wants to become King of the Pirates in One Piece",
-    "hintThai": "โจรสลัดที่ร่างกายยืดได้อยากเป็นราชาโจรสลัดใน One Piece"
+    "hintThai": "โจรสลัดที่ร่างกายยืดได้อยากเป็นราชาโจรสลัดใน One Piece",
+    "pos": "noun"
   },
   {
     "word": "Sailor Moon",
@@ -2821,7 +3173,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "a magical girl warrior who fights evil in the name of the moon",
-    "hintThai": "นักรบเวทย์มนตร์สาวที่ต่อสู้กับความชั่วในนามพระจันทร์"
+    "hintThai": "นักรบเวทย์มนตร์สาวที่ต่อสู้กับความชั่วในนามพระจันทร์",
+    "pos": "noun"
   },
   {
     "word": "Spirited Away",
@@ -2829,7 +3182,8 @@
     "category": "Characters",
     "level": "medium",
     "hint": "a Studio Ghibli film where a girl works in a spirit bathhouse",
-    "hintThai": "ภาพยนตร์ Studio Ghibli เรื่องเด็กสาวที่ไปทำงานในโรงอาบน้ำของวิญญาณ"
+    "hintThai": "ภาพยนตร์ Studio Ghibli เรื่องเด็กสาวที่ไปทำงานในโรงอาบน้ำของวิญญาณ",
+    "pos": "noun"
   },
   {
     "word": "Light Yagami",
@@ -2837,7 +3191,8 @@
     "category": "Characters",
     "level": "medium",
     "hint": "a genius student who finds a notebook that kills anyone whose name is written in it",
-    "hintThai": "นักเรียนอัจฉริยะที่พบสมุดที่สามารถฆ่าคนได้"
+    "hintThai": "นักเรียนอัจฉริยะที่พบสมุดที่สามารถฆ่าคนได้",
+    "pos": "noun"
   },
   {
     "word": "Attack on Titan",
@@ -2845,7 +3200,8 @@
     "category": "Characters",
     "level": "medium",
     "hint": "an anime where humanity lives behind walls to hide from giant humanoid monsters",
-    "hintThai": "อนิเมะที่มนุษย์อาศัยอยู่หลังกำแพงเพื่อหลบจากยักษ์มนุษย์"
+    "hintThai": "อนิเมะที่มนุษย์อาศัยอยู่หลังกำแพงเพื่อหลบจากยักษ์มนุษย์",
+    "pos": "noun"
   },
   {
     "word": "Levi Ackerman",
@@ -2853,7 +3209,8 @@
     "category": "Characters",
     "level": "medium",
     "hint": "humanity's strongest soldier in Attack on Titan",
-    "hintThai": "ทหารที่แข็งแกร่งที่สุดของมนุษยชาติใน Attack on Titan"
+    "hintThai": "ทหารที่แข็งแกร่งที่สุดของมนุษยชาติใน Attack on Titan",
+    "pos": "noun"
   },
   {
     "word": "Nobita",
@@ -2861,7 +3218,8 @@
     "category": "Characters",
     "level": "easy",
     "hint": "Doraemon's clumsy owner who always needs help",
-    "hintThai": "เจ้าของโดราเอมอนที่งุ่มง่ามและต้องการความช่วยเหลือเสมอ"
+    "hintThai": "เจ้าของโดราเอมอนที่งุ่มง่ามและต้องการความช่วยเหลือเสมอ",
+    "pos": "noun"
   },
   {
     "word": "Apple",
@@ -2869,7 +3227,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a tech company famous for iPhone, Mac, and a bitten fruit logo",
-    "hintThai": "บริษัทเทคโนโลยีสหรัฐฯ ที่ผลิต iPhone และ Mac"
+    "hintThai": "บริษัทเทคโนโลยีสหรัฐฯ ที่ผลิต iPhone และ Mac",
+    "pos": "noun"
   },
   {
     "word": "Google",
@@ -2877,7 +3236,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "the world's most used search engine",
-    "hintThai": "บริษัทเทคโนโลยีที่ให้บริการเครื่องมือค้นหาและแอปมากมาย"
+    "hintThai": "บริษัทเทคโนโลยีที่ให้บริการเครื่องมือค้นหาและแอปมากมาย",
+    "pos": "noun"
   },
   {
     "word": "Netflix",
@@ -2885,7 +3245,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a streaming service where you binge-watch series",
-    "hintThai": "แพลตฟอร์มสตรีมมิ่งที่มีซีรีส์และภาพยนตร์มากมาย"
+    "hintThai": "แพลตฟอร์มสตรีมมิ่งที่มีซีรีส์และภาพยนตร์มากมาย",
+    "pos": "noun"
   },
   {
     "word": "YouTube",
@@ -2893,7 +3254,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a platform where anyone can upload and watch videos",
-    "hintThai": "แพลตฟอร์มวิดีโอออนไลน์ที่ใหญ่ที่สุดในโลก"
+    "hintThai": "แพลตฟอร์มวิดีโอออนไลน์ที่ใหญ่ที่สุดในโลก",
+    "pos": "noun"
   },
   {
     "word": "TikTok",
@@ -2901,7 +3263,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "an app famous for short vertical videos",
-    "hintThai": "แอปวิดีโอสั้นที่ได้รับความนิยมทั่วโลก"
+    "hintThai": "แอปวิดีโอสั้นที่ได้รับความนิยมทั่วโลก",
+    "pos": "noun"
   },
   {
     "word": "Instagram",
@@ -2909,7 +3272,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a social media app built around sharing photos",
-    "hintThai": "แอปโซเชียลมีเดียสำหรับแชร์รูปภาพและวิดีโอ"
+    "hintThai": "แอปโซเชียลมีเดียสำหรับแชร์รูปภาพและวิดีโอ",
+    "pos": "noun"
   },
   {
     "word": "Amazon",
@@ -2917,7 +3281,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "the world's largest online shopping platform",
-    "hintThai": "แม่น้ำและป่าฝนเขตร้อนขนาดใหญ่ที่สุดในโลก อยู่ในอเมริกาใต้"
+    "hintThai": "แม่น้ำและป่าฝนเขตร้อนขนาดใหญ่ที่สุดในโลก อยู่ในอเมริกาใต้",
+    "pos": "noun"
   },
   {
     "word": "Tesla",
@@ -2925,7 +3290,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "an electric car brand founded by Elon Musk",
-    "hintThai": "บริษัทรถยนต์ไฟฟ้าของ Elon Musk"
+    "hintThai": "บริษัทรถยนต์ไฟฟ้าของ Elon Musk",
+    "pos": "noun"
   },
   {
     "word": "Microsoft",
@@ -2933,7 +3299,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "the company behind Windows and Office",
-    "hintThai": "บริษัทซอฟต์แวร์ที่ผลิต Windows และ Office"
+    "hintThai": "บริษัทซอฟต์แวร์ที่ผลิต Windows และ Office",
+    "pos": "noun"
   },
   {
     "word": "Samsung",
@@ -2941,7 +3308,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a South Korean tech giant making phones, TVs, and chips",
-    "hintThai": "บริษัทเกาหลีใต้ที่ผลิตสมาร์ทโฟนและอิเล็กทรอนิกส์"
+    "hintThai": "บริษัทเกาหลีใต้ที่ผลิตสมาร์ทโฟนและอิเล็กทรอนิกส์",
+    "pos": "noun"
   },
   {
     "word": "Spotify",
@@ -2949,7 +3317,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a music streaming app where you listen to millions of songs",
-    "hintThai": "แอปฟังเพลงออนไลน์ที่ใหญ่ที่สุดในโลก"
+    "hintThai": "แอปฟังเพลงออนไลน์ที่ใหญ่ที่สุดในโลก",
+    "pos": "noun"
   },
   {
     "word": "ChatGPT",
@@ -2957,7 +3326,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "an AI chatbot made by OpenAI that answers almost anything",
-    "hintThai": "ปัญญาประดิษฐ์ที่สนทนาได้ พัฒนาโดย OpenAI"
+    "hintThai": "ปัญญาประดิษฐ์ที่สนทนาได้ พัฒนาโดย OpenAI",
+    "pos": "noun"
   },
   {
     "word": "Nike",
@@ -2965,7 +3335,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a sportswear brand with a swoosh logo — \"Just Do It\"",
-    "hintThai": "แบรนด์รองเท้าและเสื้อผ้ากีฬาสัญลักษณ์เป็นเครื่องหมาย Swoosh"
+    "hintThai": "แบรนด์รองเท้าและเสื้อผ้ากีฬาสัญลักษณ์เป็นเครื่องหมาย Swoosh",
+    "pos": "noun"
   },
   {
     "word": "Adidas",
@@ -2973,7 +3344,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a sportswear brand known for three stripes",
-    "hintThai": "แบรนด์กีฬาเยอรมันที่มีสัญลักษณ์สามแถบ"
+    "hintThai": "แบรนด์กีฬาเยอรมันที่มีสัญลักษณ์สามแถบ",
+    "pos": "noun"
   },
   {
     "word": "Louis Vuitton",
@@ -2981,7 +3353,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a French luxury brand famous for monogram bags",
-    "hintThai": "แบรนด์แฟชั่นหรูจากฝรั่งเศส ขึ้นชื่อเรื่องกระเป๋าลาย LV"
+    "hintThai": "แบรนด์แฟชั่นหรูจากฝรั่งเศส ขึ้นชื่อเรื่องกระเป๋าลาย LV",
+    "pos": "noun"
   },
   {
     "word": "Gucci",
@@ -2989,7 +3362,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "an Italian luxury brand known for its double-G logo",
-    "hintThai": "แบรนด์แฟชั่นหรูจากอิตาลี"
+    "hintThai": "แบรนด์แฟชั่นหรูจากอิตาลี",
+    "pos": "noun"
   },
   {
     "word": "Chanel",
@@ -2997,7 +3371,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a French luxury house famous for No. 5 perfume and the little black dress",
-    "hintThai": "แบรนด์แฟชั่นและน้ำหอมหรูจากฝรั่งเศส"
+    "hintThai": "แบรนด์แฟชั่นและน้ำหอมหรูจากฝรั่งเศส",
+    "pos": "noun"
   },
   {
     "word": "Zara",
@@ -3005,7 +3380,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a fast-fashion brand that copies runway looks quickly",
-    "hintThai": "แบรนด์แฟชั่นสเปนที่อัปเดตสินค้าเร็วมาก"
+    "hintThai": "แบรนด์แฟชั่นสเปนที่อัปเดตสินค้าเร็วมาก",
+    "pos": "noun"
   },
   {
     "word": "H&M",
@@ -3013,7 +3389,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a Swedish affordable fashion chain",
-    "hintThai": "แบรนด์เสื้อผ้าราคาย่อมเยาจากสวีเดน"
+    "hintThai": "แบรนด์เสื้อผ้าราคาย่อมเยาจากสวีเดน",
+    "pos": "noun"
   },
   {
     "word": "Rolex",
@@ -3021,7 +3398,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a Swiss luxury watch brand associated with success",
-    "hintThai": "แบรนด์นาฬิกาหรูจากสวิตเซอร์แลนด์"
+    "hintThai": "แบรนด์นาฬิกาหรูจากสวิตเซอร์แลนด์",
+    "pos": "noun"
   },
   {
     "word": "Hermès",
@@ -3029,7 +3407,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a French luxury brand famous for Birkin bags and silk scarves",
-    "hintThai": "แบรนด์หรูฝรั่งเศส ขึ้นชื่อเรื่องกระเป๋า Birkin"
+    "hintThai": "แบรนด์หรูฝรั่งเศส ขึ้นชื่อเรื่องกระเป๋า Birkin",
+    "pos": "noun"
   },
   {
     "word": "Balenciaga",
@@ -3037,7 +3416,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a high fashion brand known for oversized silhouettes and chunky sneakers",
-    "hintThai": "แบรนด์แฟชั่นหรูที่ขึ้นชื่อเรื่องดีไซน์แปลกตา"
+    "hintThai": "แบรนด์แฟชั่นหรูที่ขึ้นชื่อเรื่องดีไซน์แปลกตา",
+    "pos": "noun"
   },
   {
     "word": "Supreme",
@@ -3045,7 +3425,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a streetwear brand whose red box logo creates huge hype every drop",
-    "hintThai": "แบรนด์สตรีทแวร์ที่มีกล่องแดงเป็นโลโก้"
+    "hintThai": "แบรนด์สตรีทแวร์ที่มีกล่องแดงเป็นโลโก้",
+    "pos": "noun"
   },
   {
     "word": "McDonald's",
@@ -3053,7 +3434,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a fast food chain famous for the Big Mac and golden arches",
-    "hintThai": "ร้านฟาสต์ฟู้ดที่ใหญ่ที่สุดในโลก มีโลโก้ตัว M สีเหลือง"
+    "hintThai": "ร้านฟาสต์ฟู้ดที่ใหญ่ที่สุดในโลก มีโลโก้ตัว M สีเหลือง",
+    "pos": "noun"
   },
   {
     "word": "Starbucks",
@@ -3061,7 +3443,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a global coffee chain with a mermaid logo",
-    "hintThai": "ร้านกาแฟสหรัฐฯ ที่มีสาขาทั่วโลก"
+    "hintThai": "ร้านกาแฟสหรัฐฯ ที่มีสาขาทั่วโลก",
+    "pos": "noun"
   },
   {
     "word": "Coca-Cola",
@@ -3069,7 +3452,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "the world's most famous cola drink in a red can",
-    "hintThai": "น้ำอัดลมสีดำที่ขายดีที่สุดในโลก"
+    "hintThai": "น้ำอัดลมสีดำที่ขายดีที่สุดในโลก",
+    "pos": "noun"
   },
   {
     "word": "Red Bull",
@@ -3077,7 +3461,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "an energy drink originally from Thailand, sold worldwide",
-    "hintThai": "เครื่องดื่มชูกำลังจากประเทศไทยที่ดังไปทั่วโลก"
+    "hintThai": "เครื่องดื่มชูกำลังจากประเทศไทยที่ดังไปทั่วโลก",
+    "pos": "noun"
   },
   {
     "word": "KFC",
@@ -3085,7 +3470,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a fried chicken fast food chain started by Colonel Sanders",
-    "hintThai": "ร้านไก่ทอดที่มีโลโก้พันเอก Sanders"
+    "hintThai": "ร้านไก่ทอดที่มีโลโก้พันเอก Sanders",
+    "pos": "noun"
   },
   {
     "word": "Oreo",
@@ -3093,7 +3479,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a black-and-white sandwich cookie you twist, lick, and dunk",
-    "hintThai": "คุกกี้กลมสีดำไส้ครีมขาว"
+    "hintThai": "คุกกี้กลมสีดำไส้ครีมขาว",
+    "pos": "noun"
   },
   {
     "word": "Nutella",
@@ -3101,7 +3488,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a sweet hazelnut-chocolate spread in a brown jar",
-    "hintThai": "ครีมช็อกโกแลตผสมเฮเซลนัทสำหรับทาขนมปัง"
+    "hintThai": "ครีมช็อกโกแลตผสมเฮเซลนัทสำหรับทาขนมปัง",
+    "pos": "noun"
   },
   {
     "word": "Lay's",
@@ -3109,7 +3497,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a popular potato chip brand sold worldwide",
-    "hintThai": "มันฝรั่งทอดกรอบในถุงที่ขายทั่วโลก"
+    "hintThai": "มันฝรั่งทอดกรอบในถุงที่ขายทั่วโลก",
+    "pos": "noun"
   },
   {
     "word": "Toyota",
@@ -3117,7 +3506,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "the world's bestselling car brand, based in Japan",
-    "hintThai": "บริษัทรถยนต์ญี่ปุ่นที่ขายดีที่สุดในโลก"
+    "hintThai": "บริษัทรถยนต์ญี่ปุ่นที่ขายดีที่สุดในโลก",
+    "pos": "noun"
   },
   {
     "word": "Ferrari",
@@ -3125,7 +3515,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "an Italian sports car brand known for speed and a prancing horse logo",
-    "hintThai": "รถยนต์สปอร์ตสีแดงหรูจากอิตาลี"
+    "hintThai": "รถยนต์สปอร์ตสีแดงหรูจากอิตาลี",
+    "pos": "noun"
   },
   {
     "word": "Lamborghini",
@@ -3133,7 +3524,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "an Italian supercar brand whose cars are named after bulls",
-    "hintThai": "รถสปอร์ตอิตาเลียนที่มีประตูแบบปีกผีเสื้อ"
+    "hintThai": "รถสปอร์ตอิตาเลียนที่มีประตูแบบปีกผีเสื้อ",
+    "pos": "noun"
   },
   {
     "word": "Harley-Davidson",
@@ -3141,7 +3533,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "an American motorcycle brand famous for its loud rumble",
-    "hintThai": "แบรนด์มอเตอร์ไซค์อเมริกันที่มีเสียงเครื่องยนต์เป็นเอกลักษณ์"
+    "hintThai": "แบรนด์มอเตอร์ไซค์อเมริกันที่มีเสียงเครื่องยนต์เป็นเอกลักษณ์",
+    "pos": "noun"
   },
   {
     "word": "Disney",
@@ -3149,7 +3542,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "the entertainment giant behind Mickey Mouse, Pixar, and theme parks",
-    "hintThai": "บริษัทบันเทิงสหรัฐฯ ที่สร้างการ์ตูนและสวนสนุก"
+    "hintThai": "บริษัทบันเทิงสหรัฐฯ ที่สร้างการ์ตูนและสวนสนุก",
+    "pos": "noun"
   },
   {
     "word": "LEGO",
@@ -3157,7 +3551,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a Danish toy company famous for colorful plastic building bricks",
-    "hintThai": "ของเล่นเม็ดพลาสติกที่ต่อประกอบเป็นรูปต่างๆ"
+    "hintThai": "ของเล่นเม็ดพลาสติกที่ต่อประกอบเป็นรูปต่างๆ",
+    "pos": "noun"
   },
   {
     "word": "IKEA",
@@ -3165,7 +3560,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "a Swedish furniture store where you assemble everything yourself",
-    "hintThai": "ร้านเฟอร์นิเจอร์สวีเดนที่ต้องประกอบเอง"
+    "hintThai": "ร้านเฟอร์นิเจอร์สวีเดนที่ต้องประกอบเอง",
+    "pos": "noun"
   },
   {
     "word": "Airbnb",
@@ -3173,7 +3569,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "a platform where people rent out their homes to travelers",
-    "hintThai": "แพลตฟอร์มเช่าที่พักจากเจ้าของบ้านทั่วโลก"
+    "hintThai": "แพลตฟอร์มเช่าที่พักจากเจ้าของบ้านทั่วโลก",
+    "pos": "noun"
   },
   {
     "word": "Uber",
@@ -3181,7 +3578,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "an app that lets you book a car ride from your phone",
-    "hintThai": "แอปเรียกรถโดยสารผ่านสมาร์ทโฟน"
+    "hintThai": "แอปเรียกรถโดยสารผ่านสมาร์ทโฟน",
+    "pos": "noun"
   },
   {
     "word": "NASA",
@@ -3189,7 +3587,8 @@
     "category": "Objects",
     "level": "easy",
     "hint": "the US space agency that sent astronauts to the Moon",
-    "hintThai": "องค์กรอวกาศของสหรัฐอเมริกา"
+    "hintThai": "องค์กรอวกาศของสหรัฐอเมริกา",
+    "pos": "noun"
   },
   {
     "word": "Harvard",
@@ -3197,7 +3596,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "the most famous university in the world, in Boston USA",
-    "hintThai": "มหาวิทยาลัยชื่อดังที่สุดในสหรัฐอเมริกา"
+    "hintThai": "มหาวิทยาลัยชื่อดังที่สุดในสหรัฐอเมริกา",
+    "pos": "noun"
   },
   {
     "word": "Rolls-Royce",
@@ -3205,7 +3605,8 @@
     "category": "Objects",
     "level": "medium",
     "hint": "the ultimate symbol of luxury — cars and jet engines",
-    "hintThai": "แบรนด์รถยนต์หรูสูงสุดจากอังกฤษ"
+    "hintThai": "แบรนด์รถยนต์หรูสูงสุดจากอังกฤษ",
+    "pos": "noun"
   },
   {
     "word": "Patagonia",
@@ -3213,7 +3614,8 @@
     "category": "Objects",
     "level": "hard",
     "hint": "an outdoor clothing brand famous for sustainability and donating profits to the planet",
-    "hintThai": "แบรนด์เสื้อผ้าแนวกลางแจ้งที่ใส่ใจสิ่งแวดล้อม"
+    "hintThai": "แบรนด์เสื้อผ้าแนวกลางแจ้งที่ใส่ใจสิ่งแวดล้อม",
+    "pos": "noun"
   },
   {
     "word": "coffee",
@@ -3221,7 +3623,8 @@
     "category": "Drinks",
     "level": "easy",
     "hint": "a hot dark drink made from roasted beans that helps you wake up",
-    "hintThai": "เครื่องดื่มร้อนที่ทำจากเมล็ดกาแฟคั่ว"
+    "hintThai": "เครื่องดื่มร้อนที่ทำจากเมล็ดกาแฟคั่ว",
+    "pos": "noun"
   },
   {
     "word": "tea",
@@ -3229,7 +3632,8 @@
     "category": "Drinks",
     "level": "easy",
     "hint": "a hot drink made by pouring water over dried leaves",
-    "hintThai": "เครื่องดื่มร้อนที่ทำจากใบชา"
+    "hintThai": "เครื่องดื่มร้อนที่ทำจากใบชา",
+    "pos": "noun"
   },
   {
     "word": "water",
@@ -3237,7 +3641,8 @@
     "category": "Drinks",
     "level": "easy",
     "hint": "the clearest drink with no taste, essential for life",
-    "hintThai": "ของเหลวไม่มีสีที่จำเป็นต่อชีวิต"
+    "hintThai": "ของเหลวไม่มีสีที่จำเป็นต่อชีวิต",
+    "pos": "noun"
   },
   {
     "word": "milk",
@@ -3245,7 +3650,8 @@
     "category": "Drinks",
     "level": "easy",
     "hint": "a white drink that comes from cows and is good for your bones",
-    "hintThai": "ของเหลวสีขาวที่ได้จากวัว"
+    "hintThai": "ของเหลวสีขาวที่ได้จากวัว",
+    "pos": "noun"
   },
   {
     "word": "juice",
@@ -3253,7 +3659,8 @@
     "category": "Drinks",
     "level": "easy",
     "hint": "a drink squeezed from fruit",
-    "hintThai": "น้ำที่คั้นจากผลไม้"
+    "hintThai": "น้ำที่คั้นจากผลไม้",
+    "pos": "noun"
   },
   {
     "word": "beer",
@@ -3261,7 +3668,8 @@
     "category": "Drinks",
     "level": "easy",
     "hint": "a bubbly alcoholic drink made from hops and barley",
-    "hintThai": "เครื่องดื่มแอลกอฮอล์ที่ทำจากข้าวมอลต์และฮอปส์"
+    "hintThai": "เครื่องดื่มแอลกอฮอล์ที่ทำจากข้าวมอลต์และฮอปส์",
+    "pos": "noun"
   },
   {
     "word": "wine",
@@ -3269,7 +3677,8 @@
     "category": "Drinks",
     "level": "easy",
     "hint": "an alcoholic drink made from fermented grapes",
-    "hintThai": "เครื่องดื่มแอลกอฮอล์ที่ทำจากองุ่นหมัก"
+    "hintThai": "เครื่องดื่มแอลกอฮอล์ที่ทำจากองุ่นหมัก",
+    "pos": "noun"
   },
   {
     "word": "smoothie",
@@ -3277,7 +3686,8 @@
     "category": "Drinks",
     "level": "easy",
     "hint": "a thick blended drink made from fruit and sometimes yogurt or milk",
-    "hintThai": "เครื่องดื่มข้นที่ปั่นจากผลไม้หรือผัก"
+    "hintThai": "เครื่องดื่มข้นที่ปั่นจากผลไม้หรือผัก",
+    "pos": "noun"
   },
   {
     "word": "lemonade",
@@ -3285,7 +3695,8 @@
     "category": "Drinks",
     "level": "easy",
     "hint": "a cold sweet drink made from lemon juice and sugar",
-    "hintThai": "น้ำมะนาวหวานที่เสิร์ฟเย็น"
+    "hintThai": "น้ำมะนาวหวานที่เสิร์ฟเย็น",
+    "pos": "noun"
   },
   {
     "word": "soda",
@@ -3293,7 +3704,8 @@
     "category": "Drinks",
     "level": "easy",
     "hint": "a fizzy drink with bubbles, often sweet and flavored",
-    "hintThai": "น้ำอัดลมหวานที่มีฟอง"
+    "hintThai": "น้ำอัดลมหวานที่มีฟอง",
+    "pos": "noun"
   },
   {
     "word": "cocktail",
@@ -3301,7 +3713,8 @@
     "category": "Drinks",
     "level": "medium",
     "hint": "a mixed alcoholic drink, often colorful and served at parties",
-    "hintThai": "เครื่องดื่มแอลกอฮอล์ที่ผสมหลายชนิดเข้าด้วยกัน"
+    "hintThai": "เครื่องดื่มแอลกอฮอล์ที่ผสมหลายชนิดเข้าด้วยกัน",
+    "pos": "noun"
   },
   {
     "word": "espresso",
@@ -3309,7 +3722,8 @@
     "category": "Drinks",
     "level": "medium",
     "hint": "a very strong, small shot of coffee made by pushing hot water through ground beans",
-    "hintThai": "กาแฟเข้มข้นที่ชงในปริมาณเล็กน้อย"
+    "hintThai": "กาแฟเข้มข้นที่ชงในปริมาณเล็กน้อย",
+    "pos": "noun"
   },
   {
     "word": "latte",
@@ -3317,7 +3731,8 @@
     "category": "Drinks",
     "level": "medium",
     "hint": "a coffee drink made with espresso and lots of steamed milk",
-    "hintThai": "กาแฟผสมนมร้อนในปริมาณมาก"
+    "hintThai": "กาแฟผสมนมร้อนในปริมาณมาก",
+    "pos": "noun"
   },
   {
     "word": "matcha",
@@ -3325,7 +3740,8 @@
     "category": "Drinks",
     "level": "medium",
     "hint": "a bright green Japanese powder made from ground tea leaves",
-    "hintThai": "เครื่องดื่มที่ทำจากผงชาเขียวญี่ปุ่น"
+    "hintThai": "เครื่องดื่มที่ทำจากผงชาเขียวญี่ปุ่น",
+    "pos": "noun"
   },
   {
     "word": "bubble tea",
@@ -3333,7 +3749,8 @@
     "category": "Drinks",
     "level": "medium",
     "hint": "a Taiwanese drink with tea, milk, and chewy tapioca balls at the bottom",
-    "hintThai": "ชานมไข่มุกที่มีลูกเม็ดเคี้ยวได้อยู่ด้านล่าง"
+    "hintThai": "ชานมไข่มุกที่มีลูกเม็ดเคี้ยวได้อยู่ด้านล่าง",
+    "pos": "noun"
   },
   {
     "word": "whiskey",
@@ -3341,7 +3758,8 @@
     "category": "Drinks",
     "level": "medium",
     "hint": "a strong alcoholic spirit aged in wooden barrels, often drunk on the rocks",
-    "hintThai": "เครื่องดื่มแอลกอฮอล์กลั่นที่ทำจากธัญพืชและบ่มในถัง"
+    "hintThai": "เครื่องดื่มแอลกอฮอล์กลั่นที่ทำจากธัญพืชและบ่มในถัง",
+    "pos": "noun"
   },
   {
     "word": "sparkling water",
@@ -3349,7 +3767,8 @@
     "category": "Drinks",
     "level": "medium",
     "hint": "plain water with bubbles but no sugar or flavor",
-    "hintThai": "น้ำแร่ที่มีฟองก๊าซคาร์บอนไดออกไซด์"
+    "hintThai": "น้ำแร่ที่มีฟองก๊าซคาร์บอนไดออกไซด์",
+    "pos": "noun"
   },
   {
     "word": "hot chocolate",
@@ -3357,7 +3776,8 @@
     "category": "Drinks",
     "level": "medium",
     "hint": "a warm sweet drink made from cocoa or melted chocolate and milk",
-    "hintThai": "เครื่องดื่มร้อนที่ทำจากโกโก้หรือช็อคโกแลต"
+    "hintThai": "เครื่องดื่มร้อนที่ทำจากโกโก้หรือช็อคโกแลต",
+    "pos": "noun"
   },
   {
     "word": "energy drink",
@@ -3365,7 +3785,8 @@
     "category": "Drinks",
     "level": "medium",
     "hint": "a drink with caffeine and sugar that claims to boost your energy",
-    "hintThai": "เครื่องดื่มที่มีคาเฟอีนและน้ำตาลสูงเพื่อเพิ่มพลังงาน"
+    "hintThai": "เครื่องดื่มที่มีคาเฟอีนและน้ำตาลสูงเพื่อเพิ่มพลังงาน",
+    "pos": "noun"
   },
   {
     "word": "kombucha",
@@ -3373,7 +3794,8 @@
     "category": "Drinks",
     "level": "hard",
     "hint": "a fizzy fermented tea drink believed to be good for your gut",
-    "hintThai": "เครื่องดื่มชาหมักที่มีรสเปรี้ยวเล็กน้อย"
+    "hintThai": "เครื่องดื่มชาหมักที่มีรสเปรี้ยวเล็กน้อย",
+    "pos": "noun"
   },
   {
     "word": "mocktail",
@@ -3381,7 +3803,8 @@
     "category": "Drinks",
     "level": "hard",
     "hint": "a fancy mixed drink that looks like a cocktail but contains no alcohol",
-    "hintThai": "เครื่องดื่มที่คล้ายค็อกเทลแต่ไม่มีแอลกอฮอล์"
+    "hintThai": "เครื่องดื่มที่คล้ายค็อกเทลแต่ไม่มีแอลกอฮอล์",
+    "pos": "noun"
   },
   {
     "word": "cold brew",
@@ -3389,7 +3812,8 @@
     "category": "Drinks",
     "level": "hard",
     "hint": "coffee steeped in cold water for many hours instead of using heat",
-    "hintThai": "กาแฟที่ชงด้วยน้ำเย็นเป็นเวลานาน"
+    "hintThai": "กาแฟที่ชงด้วยน้ำเย็นเป็นเวลานาน",
+    "pos": "noun"
   },
   {
     "word": "affogato",
@@ -3397,7 +3821,8 @@
     "category": "Drinks",
     "level": "hard",
     "hint": "an Italian dessert drink — a shot of hot espresso poured over vanilla ice cream",
-    "hintThai": "เอสเปรสโซร้อนราดบนไอศกรีมวานิลลา"
+    "hintThai": "เอสเปรสโซร้อนราดบนไอศกรีมวานิลลา",
+    "pos": "noun"
   },
   {
     "word": "stapler",
@@ -3405,7 +3830,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a tool that joins sheets of paper together with a small metal clip",
-    "hintThai": "อุปกรณ์ที่ใช้เย็บกระดาษเข้าด้วยกันด้วยลวดโลหะ"
+    "hintThai": "อุปกรณ์ที่ใช้เย็บกระดาษเข้าด้วยกันด้วยลวดโลหะ",
+    "pos": "noun"
   },
   {
     "word": "whiteboard",
@@ -3413,7 +3839,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a smooth white surface you can write on with a marker and wipe clean",
-    "hintThai": "กระดานขาวที่เขียนได้ด้วยปากกาและลบออกได้"
+    "hintThai": "กระดานขาวที่เขียนได้ด้วยปากกาและลบออกได้",
+    "pos": "noun"
   },
   {
     "word": "projector",
@@ -3421,7 +3848,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a device that shines an image or video onto a wall or screen",
-    "hintThai": "อุปกรณ์ฉายภาพหรือวิดีโอบนผนังหรือจอ"
+    "hintThai": "อุปกรณ์ฉายภาพหรือวิดีโอบนผนังหรือจอ",
+    "pos": "noun"
   },
   {
     "word": "printer",
@@ -3429,7 +3857,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a machine connected to a computer that puts text or images on paper",
-    "hintThai": "เครื่องที่พิมพ์ข้อความหรือภาพลงบนกระดาษ"
+    "hintThai": "เครื่องที่พิมพ์ข้อความหรือภาพลงบนกระดาษ",
+    "pos": "noun"
   },
   {
     "word": "sticky note",
@@ -3437,7 +3866,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a small piece of coloured paper with a sticky back used for quick reminders",
-    "hintThai": "กระดาษสีเล็กๆที่มีกาวด้านหลังสำหรับจดบันทึกย่อ"
+    "hintThai": "กระดาษสีเล็กๆที่มีกาวด้านหลังสำหรับจดบันทึกย่อ",
+    "pos": "noun"
   },
   {
     "word": "highlighter",
@@ -3445,7 +3875,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a bright-coloured pen used to mark important text so it stands out",
-    "hintThai": "ปากกาสีสดที่ใช้ขีดเน้นข้อความสำคัญ"
+    "hintThai": "ปากกาสีสดที่ใช้ขีดเน้นข้อความสำคัญ",
+    "pos": "noun"
   },
   {
     "word": "scissors",
@@ -3453,7 +3884,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a tool with two blades that cut paper, fabric, or other thin materials",
-    "hintThai": "อุปกรณ์สองใบมีดสำหรับตัดกระดาษหรือผ้า"
+    "hintThai": "อุปกรณ์สองใบมีดสำหรับตัดกระดาษหรือผ้า",
+    "pos": "noun"
   },
   {
     "word": "ruler",
@@ -3461,7 +3893,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a long flat strip used for measuring length and drawing straight lines",
-    "hintThai": "แท่งแบนยาวสำหรับวัดความยาวและลากเส้นตรง"
+    "hintThai": "แท่งแบนยาวสำหรับวัดความยาวและลากเส้นตรง",
+    "pos": "noun"
   },
   {
     "word": "eraser",
@@ -3469,7 +3902,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a small block used to remove pencil or pen marks from paper",
-    "hintThai": "ก้อนเล็กๆใช้ลบรอยดินสอหรือปากกาออกจากกระดาษ"
+    "hintThai": "ก้อนเล็กๆใช้ลบรอยดินสอหรือปากกาออกจากกระดาษ",
+    "pos": "noun"
   },
   {
     "word": "notebook",
@@ -3477,7 +3911,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a book with blank or lined pages for writing notes",
-    "hintThai": "สมุดที่มีหน้ากระดาษเปล่าหรือบรรทัดสำหรับจดบันทึก"
+    "hintThai": "สมุดที่มีหน้ากระดาษเปล่าหรือบรรทัดสำหรับจดบันทึก",
+    "pos": "noun"
   },
   {
     "word": "calculator",
@@ -3485,7 +3920,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a small electronic device used to do maths quickly",
-    "hintThai": "อุปกรณ์อิเล็กทรอนิกส์ขนาดเล็กสำหรับคำนวณตัวเลข"
+    "hintThai": "อุปกรณ์อิเล็กทรอนิกส์ขนาดเล็กสำหรับคำนวณตัวเลข",
+    "pos": "noun"
   },
   {
     "word": "backpack",
@@ -3493,7 +3929,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a bag with two straps worn on your back to carry things",
-    "hintThai": "กระเป๋าสะพายหลังที่มีสายสองเส้น"
+    "hintThai": "กระเป๋าสะพายหลังที่มีสายสองเส้น",
+    "pos": "noun"
   },
   {
     "word": "pencil case",
@@ -3501,7 +3938,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a small pouch or box that holds pens, pencils, and stationery",
-    "hintThai": "กล่องหรือถุงเล็กสำหรับใส่ดินสอและอุปกรณ์เครื่องเขียน"
+    "hintThai": "กล่องหรือถุงเล็กสำหรับใส่ดินสอและอุปกรณ์เครื่องเขียน",
+    "pos": "noun"
   },
   {
     "word": "marker",
@@ -3509,7 +3947,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a thick pen used to write on whiteboards or flip charts",
-    "hintThai": "ปากกาหัวหนาสำหรับเขียนบนไวท์บอร์ด"
+    "hintThai": "ปากกาหัวหนาสำหรับเขียนบนไวท์บอร์ด",
+    "pos": "noun"
   },
   {
     "word": "tape",
@@ -3517,7 +3956,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a clear sticky strip used to join or seal pieces of paper",
-    "hintThai": "เทปใสที่มีกาวสำหรับติดหรือปิดผนึกกระดาษ"
+    "hintThai": "เทปใสที่มีกาวสำหรับติดหรือปิดผนึกกระดาษ",
+    "pos": "noun"
   },
   {
     "word": "folder",
@@ -3525,7 +3965,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a stiff cover used to keep papers organised together",
-    "hintThai": "ปกแข็งที่ใช้จัดเก็บกระดาษให้เป็นระเบียบ"
+    "hintThai": "ปกแข็งที่ใช้จัดเก็บกระดาษให้เป็นระเบียบ",
+    "pos": "noun"
   },
   {
     "word": "clipboard",
@@ -3533,7 +3974,8 @@
     "category": "Office & School",
     "level": "medium",
     "hint": "a flat board with a clip at the top for holding paper while writing",
-    "hintThai": "กระดานแบนที่มีคลิปด้านบนสำหรับหนีบกระดาษขณะเขียน"
+    "hintThai": "กระดานแบนที่มีคลิปด้านบนสำหรับหนีบกระดาษขณะเขียน",
+    "pos": "noun"
   },
   {
     "word": "hole punch",
@@ -3541,7 +3983,8 @@
     "category": "Office & School",
     "level": "medium",
     "hint": "a tool that makes round holes in paper so it can be put in a binder",
-    "hintThai": "อุปกรณ์เจาะรูกลมในกระดาษเพื่อใส่แฟ้ม"
+    "hintThai": "อุปกรณ์เจาะรูกลมในกระดาษเพื่อใส่แฟ้ม",
+    "pos": "noun"
   },
   {
     "word": "binder",
@@ -3549,7 +3992,8 @@
     "category": "Office & School",
     "level": "medium",
     "hint": "a large folder with metal rings inside that hold punched pages",
-    "hintThai": "แฟ้มขนาดใหญ่ที่มีห่วงโลหะสำหรับเก็บกระดาษที่เจาะรูแล้ว"
+    "hintThai": "แฟ้มขนาดใหญ่ที่มีห่วงโลหะสำหรับเก็บกระดาษที่เจาะรูแล้ว",
+    "pos": "noun"
   },
   {
     "word": "desk lamp",
@@ -3557,7 +4001,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a small light that sits on a desk to help you see while working",
-    "hintThai": "โคมไฟขนาดเล็กที่วางบนโต๊ะเพื่อให้แสงสว่างขณะทำงาน"
+    "hintThai": "โคมไฟขนาดเล็กที่วางบนโต๊ะเพื่อให้แสงสว่างขณะทำงาน",
+    "pos": "noun"
   },
   {
     "word": "webcam",
@@ -3565,7 +4010,8 @@
     "category": "Office & School",
     "level": "medium",
     "hint": "a small camera attached to a computer for video calls",
-    "hintThai": "กล้องขนาดเล็กที่ต่อกับคอมพิวเตอร์สำหรับวิดีโอคอล"
+    "hintThai": "กล้องขนาดเล็กที่ต่อกับคอมพิวเตอร์สำหรับวิดีโอคอล",
+    "pos": "noun"
   },
   {
     "word": "headset",
@@ -3573,7 +4019,8 @@
     "category": "Office & School",
     "level": "medium",
     "hint": "earphones combined with a microphone, used for calls or listening",
-    "hintThai": "หูฟังที่มีไมโครโฟนในตัวสำหรับโทรศัพท์หรือฟังเพลง"
+    "hintThai": "หูฟังที่มีไมโครโฟนในตัวสำหรับโทรศัพท์หรือฟังเพลง",
+    "pos": "noun"
   },
   {
     "word": "mouse pad",
@@ -3581,7 +4028,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a flat pad placed under a computer mouse so it moves smoothly",
-    "hintThai": "แผ่นรองที่วางใต้เมาส์คอมพิวเตอร์เพื่อให้เลื่อนได้คล่อง"
+    "hintThai": "แผ่นรองที่วางใต้เมาส์คอมพิวเตอร์เพื่อให้เลื่อนได้คล่อง",
+    "pos": "noun"
   },
   {
     "word": "keyboard",
@@ -3589,7 +4037,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a board with many keys used to type text into a computer",
-    "hintThai": "แผงที่มีปุ่มมากมายสำหรับพิมพ์ข้อความเข้าคอมพิวเตอร์"
+    "hintThai": "แผงที่มีปุ่มมากมายสำหรับพิมพ์ข้อความเข้าคอมพิวเตอร์",
+    "pos": "noun"
   },
   {
     "word": "monitor",
@@ -3597,7 +4046,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "the screen that shows what your computer is doing",
-    "hintThai": "จอแสดงผลที่แสดงสิ่งที่คอมพิวเตอร์กำลังทำ"
+    "hintThai": "จอแสดงผลที่แสดงสิ่งที่คอมพิวเตอร์กำลังทำ",
+    "pos": "noun"
   },
   {
     "word": "shredder",
@@ -3605,7 +4055,8 @@
     "category": "Office & School",
     "level": "medium",
     "hint": "a machine that cuts paper into tiny strips so documents cannot be read",
-    "hintThai": "เครื่องที่ตัดกระดาษเป็นชิ้นเล็กๆเพื่อทำลายเอกสาร"
+    "hintThai": "เครื่องที่ตัดกระดาษเป็นชิ้นเล็กๆเพื่อทำลายเอกสาร",
+    "pos": "noun"
   },
   {
     "word": "filing cabinet",
@@ -3613,7 +4064,8 @@
     "category": "Office & School",
     "level": "medium",
     "hint": "a tall metal furniture with drawers used to store paper files",
-    "hintThai": "เฟอร์นิเจอร์โลหะสูงที่มีลิ้นชักสำหรับเก็บแฟ้มเอกสาร"
+    "hintThai": "เฟอร์นิเจอร์โลหะสูงที่มีลิ้นชักสำหรับเก็บแฟ้มเอกสาร",
+    "pos": "noun"
   },
   {
     "word": "extension cord",
@@ -3621,7 +4073,8 @@
     "category": "Office & School",
     "level": "medium",
     "hint": "a cable with extra sockets that lets you plug in several devices far from the wall",
-    "hintThai": "สายไฟที่มีปลั๊กหลายช่องเพื่อต่ออุปกรณ์หลายตัวห่างจากผนัง"
+    "hintThai": "สายไฟที่มีปลั๊กหลายช่องเพื่อต่ออุปกรณ์หลายตัวห่างจากผนัง",
+    "pos": "noun"
   },
   {
     "word": "USB hub",
@@ -3629,7 +4082,8 @@
     "category": "Office & School",
     "level": "medium",
     "hint": "a device that adds extra USB ports so you can connect many devices at once",
-    "hintThai": "อุปกรณ์ที่เพิ่มพอร์ต USB เพื่อต่ออุปกรณ์หลายตัวพร้อมกัน"
+    "hintThai": "อุปกรณ์ที่เพิ่มพอร์ต USB เพื่อต่ออุปกรณ์หลายตัวพร้อมกัน",
+    "pos": "noun"
   },
   {
     "word": "globe",
@@ -3637,7 +4091,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a round model of the Earth that spins on a stand",
-    "hintThai": "โมเดลโลกทรงกลมที่หมุนได้บนขาตั้ง"
+    "hintThai": "โมเดลโลกทรงกลมที่หมุนได้บนขาตั้ง",
+    "pos": "noun"
   },
   {
     "word": "scanner",
@@ -3645,7 +4100,8 @@
     "category": "Office & School",
     "level": "medium",
     "hint": "a machine that converts a paper document into a digital image on your computer",
-    "hintThai": "เครื่องที่แปลงเอกสารกระดาษเป็นภาพดิจิทัลในคอมพิวเตอร์"
+    "hintThai": "เครื่องที่แปลงเอกสารกระดาษเป็นภาพดิจิทัลในคอมพิวเตอร์",
+    "pos": "noun"
   },
   {
     "word": "calendar",
@@ -3653,7 +4109,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a chart showing all the days, weeks, and months of the year",
-    "hintThai": "แผนภูมิที่แสดงวัน สัปดาห์ และเดือนทั้งหมดของปี"
+    "hintThai": "แผนภูมิที่แสดงวัน สัปดาห์ และเดือนทั้งหมดของปี",
+    "pos": "noun"
   },
   {
     "word": "whiteboard eraser",
@@ -3661,7 +4118,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a soft block used to wipe writing off a whiteboard",
-    "hintThai": "ก้อนนุ่มสำหรับลบตัวเขียนออกจากไวท์บอร์ด"
+    "hintThai": "ก้อนนุ่มสำหรับลบตัวเขียนออกจากไวท์บอร์ด",
+    "pos": "noun"
   },
   {
     "word": "name tag",
@@ -3669,7 +4127,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a small badge worn on clothing to show who you are",
-    "hintThai": "ป้ายเล็กๆที่ติดบนเสื้อผ้าเพื่อแสดงตัวตน"
+    "hintThai": "ป้ายเล็กๆที่ติดบนเสื้อผ้าเพื่อแสดงตัวตน",
+    "pos": "noun"
   },
   {
     "word": "ID card",
@@ -3677,7 +4136,8 @@
     "category": "Office & School",
     "level": "easy",
     "hint": "a card you carry or swipe to prove who you are and enter a building",
-    "hintThai": "บัตรที่พกพาหรือแตะเพื่อยืนยันตัวตนและเข้าอาคาร"
+    "hintThai": "บัตรที่พกพาหรือแตะเพื่อยืนยันตัวตนและเข้าอาคาร",
+    "pos": "noun"
   },
   {
     "word": "Bangkok",
@@ -3687,7 +4147,8 @@
     "category": "Cities",
     "level": "easy",
     "hint": "capital city known for temples and street food",
-    "hintThai": "เมืองหลวงที่มีวัดและอาหารริมทาง"
+    "hintThai": "เมืองหลวงที่มีวัดและอาหารริมทาง",
+    "pos": "noun"
   },
   {
     "word": "Tokyo",
@@ -3697,7 +4158,8 @@
     "category": "Cities",
     "level": "easy",
     "hint": "the world's largest city, famous for sushi and anime",
-    "hintThai": "เมืองใหญ่ที่สุดในโลก มีซูชิและอนิเมะ"
+    "hintThai": "เมืองใหญ่ที่สุดในโลก มีซูชิและอนิเมะ",
+    "pos": "noun"
   },
   {
     "word": "Paris",
@@ -3707,7 +4169,8 @@
     "category": "Cities",
     "level": "easy",
     "hint": "city of love with a famous iron tower",
-    "hintThai": "เมืองแห่งความรัก มีหอคอยเหล็กชื่อดัง"
+    "hintThai": "เมืองแห่งความรัก มีหอคอยเหล็กชื่อดัง",
+    "pos": "noun"
   },
   {
     "word": "New York",
@@ -3717,7 +4180,8 @@
     "category": "Cities",
     "level": "easy",
     "hint": "city that never sleeps with a famous statue of liberty",
-    "hintThai": "เมืองที่ไม่มีวันหลับ มีเทพีเสรีภาพ"
+    "hintThai": "เมืองที่ไม่มีวันหลับ มีเทพีเสรีภาพ",
+    "pos": "noun"
   },
   {
     "word": "London",
@@ -3727,7 +4191,8 @@
     "category": "Cities",
     "level": "easy",
     "hint": "city with a famous clock tower and red buses",
-    "hintThai": "มีหอนาฬิกาบิ๊กเบนและรถบัสสีแดง"
+    "hintThai": "มีหอนาฬิกาบิ๊กเบนและรถบัสสีแดง",
+    "pos": "noun"
   },
   {
     "word": "Dubai",
@@ -3737,7 +4202,8 @@
     "category": "Cities",
     "level": "easy",
     "hint": "desert city famous for its skyscrapers and luxury",
-    "hintThai": "เมืองทะเลทรายที่มีตึกสูงและความหรูหรา"
+    "hintThai": "เมืองทะเลทรายที่มีตึกสูงและความหรูหรา",
+    "pos": "noun"
   },
   {
     "word": "Singapore",
@@ -3747,7 +4213,8 @@
     "category": "Cities",
     "level": "easy",
     "hint": "small island city-state known for being very clean",
-    "hintThai": "เกาะเล็กๆ ที่สะอาดมากที่สุดในโลก"
+    "hintThai": "เกาะเล็กๆ ที่สะอาดมากที่สุดในโลก",
+    "pos": "noun"
   },
   {
     "word": "Sydney",
@@ -3757,7 +4224,8 @@
     "category": "Cities",
     "level": "medium",
     "hint": "city with a famous opera house by the harbor",
-    "hintThai": "มีโรงโอเปร่าชื่อดังริมอ่าว"
+    "hintThai": "มีโรงโอเปร่าชื่อดังริมอ่าว",
+    "pos": "noun"
   },
   {
     "word": "Rome",
@@ -3767,7 +4235,8 @@
     "category": "Cities",
     "level": "medium",
     "hint": "ancient city with the Colosseum and the Vatican",
-    "hintThai": "เมืองโบราณ มีโคลอสเซียมและวาติกัน"
+    "hintThai": "เมืองโบราณ มีโคลอสเซียมและวาติกัน",
+    "pos": "noun"
   },
   {
     "word": "Barcelona",
@@ -3777,7 +4246,8 @@
     "category": "Cities",
     "level": "medium",
     "hint": "coastal city famous for Gaudi's architecture and football",
-    "hintThai": "เมืองชายฝั่งมีสถาปัตยกรรมของเกาดี"
+    "hintThai": "เมืองชายฝั่งมีสถาปัตยกรรมของเกาดี",
+    "pos": "noun"
   },
   {
     "word": "Amsterdam",
@@ -3787,7 +4257,8 @@
     "category": "Cities",
     "level": "medium",
     "hint": "city of canals, bicycles, and tulips",
-    "hintThai": "เมืองคูน้ำ จักรยาน และดอกทิวลิป"
+    "hintThai": "เมืองคูน้ำ จักรยาน และดอกทิวลิป",
+    "pos": "noun"
   },
   {
     "word": "Istanbul",
@@ -3797,7 +4268,8 @@
     "category": "Cities",
     "level": "medium",
     "hint": "city on two continents with grand mosques",
-    "hintThai": "เมืองที่ตั้งอยู่บนสองทวีป มีมัสยิดใหญ่"
+    "hintThai": "เมืองที่ตั้งอยู่บนสองทวีป มีมัสยิดใหญ่",
+    "pos": "noun"
   },
   {
     "word": "Cairo",
@@ -3807,7 +4279,8 @@
     "category": "Cities",
     "level": "medium",
     "hint": "city near the ancient pyramids",
-    "hintThai": "เมืองใกล้พีระมิดโบราณ"
+    "hintThai": "เมืองใกล้พีระมิดโบราณ",
+    "pos": "noun"
   },
   {
     "word": "Seoul",
@@ -3817,7 +4290,8 @@
     "category": "Cities",
     "level": "medium",
     "hint": "capital of K-pop and Korean BBQ",
-    "hintThai": "เมืองหลวงของเคป็อปและบาร์บีคิวเกาหลี"
+    "hintThai": "เมืองหลวงของเคป็อปและบาร์บีคิวเกาหลี",
+    "pos": "noun"
   },
   {
     "word": "Mumbai",
@@ -3827,7 +4301,8 @@
     "category": "Cities",
     "level": "medium",
     "hint": "India's financial capital and Bollywood home",
-    "hintThai": "เมืองหลวงการเงินและบอลลีวูดของอินเดีย"
+    "hintThai": "เมืองหลวงการเงินและบอลลีวูดของอินเดีย",
+    "pos": "noun"
   },
   {
     "word": "Chiang Mai",
@@ -3837,7 +4312,8 @@
     "category": "Cities",
     "level": "medium",
     "hint": "northern Thai city famous for temples and mountains",
-    "hintThai": "เมืองเหนือของไทย มีวัดและภูเขา"
+    "hintThai": "เมืองเหนือของไทย มีวัดและภูเขา",
+    "pos": "noun"
   },
   {
     "word": "Kyoto",
@@ -3847,7 +4323,8 @@
     "category": "Cities",
     "level": "medium",
     "hint": "Japan's ancient capital full of temples and geishas",
-    "hintThai": "เมืองหลวงเก่าญี่ปุ่น มีวัดและเกอิชา"
+    "hintThai": "เมืองหลวงเก่าญี่ปุ่น มีวัดและเกอิชา",
+    "pos": "noun"
   },
   {
     "word": "Prague",
@@ -3857,7 +4334,8 @@
     "category": "Cities",
     "level": "hard",
     "hint": "fairy-tale city with a medieval old town in Europe",
-    "hintThai": "เมืองแบบเทพนิยาย มีเมืองเก่ายุคกลาง"
+    "hintThai": "เมืองแบบเทพนิยาย มีเมืองเก่ายุคกลาง",
+    "pos": "noun"
   },
   {
     "word": "Marrakech",
@@ -3867,7 +4345,8 @@
     "category": "Cities",
     "level": "hard",
     "hint": "colorful maze-like market city in North Africa",
-    "hintThai": "เมืองตลาดสีสันสดใสในแอฟริกาเหนือ"
+    "hintThai": "เมืองตลาดสีสันสดใสในแอฟริกาเหนือ",
+    "pos": "noun"
   },
   {
     "word": "Bali",
@@ -3877,6 +4356,7 @@
     "category": "Cities",
     "level": "easy",
     "hint": "tropical island resort famous for rice terraces and temples",
-    "hintThai": "เกาะท่องเที่ยวมีนาขั้นบันไดและวัด"
+    "hintThai": "เกาะท่องเที่ยวมีนาขั้นบันไดและวัด",
+    "pos": "noun"
   }
 ]
