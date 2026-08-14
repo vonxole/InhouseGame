@@ -2147,7 +2147,9 @@
     "hint": "a famous iron tower in Paris, France",
     "hintThai": "หอเหล็กสัญลักษณ์ของกรุงปารีส ฝรั่งเศส",
     "pos": "noun",
-    "emoji": "🗼"
+    "emoji": "🗼",
+    "country": "France",
+    "countryThai": "ฝรั่งเศส"
   },
   {
     "word": "Great Wall",
@@ -2157,7 +2159,9 @@
     "hint": "a very long ancient wall across northern China",
     "hintThai": "กำแพงยาวหลายพันกิโลเมตรที่สร้างในประเทศจีน",
     "pos": "noun",
-    "emoji": "🧱"
+    "emoji": "🧱",
+    "country": "China",
+    "countryThai": "จีน"
   },
   {
     "word": "Colosseum",
@@ -2167,7 +2171,9 @@
     "hint": "an ancient Roman arena used for gladiator fights",
     "hintThai": "สนามกีฬาโบราณขนาดใหญ่ในกรุงโรม อิตาลี",
     "pos": "noun",
-    "emoji": "🏛️"
+    "emoji": "🏛️",
+    "country": "Italy",
+    "countryThai": "อิตาลี"
   },
   {
     "word": "Statue of Liberty",
@@ -2177,7 +2183,9 @@
     "hint": "a giant green copper statue in New York harbor",
     "hintThai": "รูปปั้นสัญลักษณ์แห่งเสรีภาพที่มหานครนิวยอร์ก",
     "pos": "noun",
-    "emoji": "🗽"
+    "emoji": "🗽",
+    "country": "USA",
+    "countryThai": "สหรัฐอเมริกา"
   },
   {
     "word": "Big Ben",
@@ -2187,7 +2195,9 @@
     "hint": "a famous clock tower in London, England",
     "hintThai": "หอนาฬิกาสัญลักษณ์ของกรุงลอนดอน อังกฤษ",
     "pos": "noun",
-    "emoji": "🕰️"
+    "emoji": "🕰️",
+    "country": "UK",
+    "countryThai": "สหราชอาณาจักร"
   },
   {
     "word": "Taj Mahal",
@@ -2197,7 +2207,9 @@
     "hint": "a white marble mausoleum in Agra, India",
     "hintThai": "สุสานหินอ่อนสีขาวในอินเดีย สร้างด้วยความรัก",
     "pos": "noun",
-    "emoji": "🕌"
+    "emoji": "🕌",
+    "country": "India",
+    "countryThai": "อินเดีย"
   },
   {
     "word": "Pyramids",
@@ -2207,7 +2219,9 @@
     "hint": "ancient triangular stone structures in Egypt",
     "hintThai": "สิ่งก่อสร้างโบราณของฟาโรห์อียิปต์ที่ยังคงอยู่จนถึงปัจจุบัน",
     "pos": "noun",
-    "emoji": "🔺"
+    "emoji": "🔺",
+    "country": "Egypt",
+    "countryThai": "อียิปต์"
   },
   {
     "word": "Sydney Opera House",
@@ -2217,7 +2231,9 @@
     "hint": "a famous concert hall shaped like sails in Australia",
     "hintThai": "อาคารรูปทรงเปลือกหอยสัญลักษณ์ของซิดนีย์",
     "pos": "noun",
-    "emoji": "🎭"
+    "emoji": "🎭",
+    "country": "Australia",
+    "countryThai": "ออสเตรเลีย"
   },
   {
     "word": "Mount Everest",
@@ -2227,7 +2243,9 @@
     "hint": "the highest mountain in the world, in Nepal",
     "hintThai": "ยอดเขาที่สูงที่สุดในโลก",
     "pos": "noun",
-    "emoji": "⛰️"
+    "emoji": "⛰️",
+    "country": "Nepal",
+    "countryThai": "เนปาล"
   },
   {
     "word": "Grand Canyon",
@@ -2237,7 +2255,9 @@
     "hint": "a vast red rock gorge in Arizona, USA",
     "hintThai": "หุบเขาลึกขนาดใหญ่ในรัฐแอริโซนา สหรัฐฯ",
     "pos": "noun",
-    "emoji": "🏜️"
+    "emoji": "🏜️",
+    "country": "USA",
+    "countryThai": "สหรัฐอเมริกา"
   },
   {
     "word": "Niagara Falls",
@@ -2247,7 +2267,9 @@
     "hint": "a massive waterfall on the US-Canada border",
     "hintThai": "น้ำตกขนาดใหญ่บนชายแดนระหว่างแคนาดาและสหรัฐฯ",
     "pos": "noun",
-    "emoji": "💧"
+    "emoji": "💧",
+    "country": "USA / Canada",
+    "countryThai": "สหรัฐ / แคนาดา"
   },
   {
     "word": "Santorini",
@@ -2257,7 +2279,9 @@
     "hint": "a Greek island famous for white buildings and blue domes",
     "hintThai": "เกาะในกรีซที่มีบ้านหลังคาสีน้ำเงินและวิวทะเลสวยงาม",
     "pos": "noun",
-    "emoji": "🏝️"
+    "emoji": "🏝️",
+    "country": "Greece",
+    "countryThai": "กรีซ"
   },
   {
     "word": "Machu Picchu",
@@ -2267,7 +2291,9 @@
     "hint": "an ancient Inca city high in the Andes mountains of Peru",
     "hintThai": "เมืองโบราณของอินคาบนยอดเขาในเปรู",
     "pos": "noun",
-    "emoji": "⛰️"
+    "emoji": "⛰️",
+    "country": "Peru",
+    "countryThai": "เปรู"
   },
   {
     "word": "Angkor Wat",
@@ -2277,7 +2303,9 @@
     "hint": "the largest Hindu temple complex, in Cambodia",
     "hintThai": "วัดโบราณขนาดใหญ่ในกัมพูชา",
     "pos": "noun",
-    "emoji": "🛕"
+    "emoji": "🛕",
+    "country": "Cambodia",
+    "countryThai": "กัมพูชา"
   },
   {
     "word": "Stonehenge",
@@ -2287,7 +2315,9 @@
     "hint": "a prehistoric circle of giant standing stones in England",
     "hintThai": "วงหินโบราณในอังกฤษที่ยังไม่ทราบวัตถุประสงค์แน่ชัด",
     "pos": "noun",
-    "emoji": "🪨"
+    "emoji": "🪨",
+    "country": "UK",
+    "countryThai": "สหราชอาณาจักร"
   },
   {
     "word": "Sagrada Família",
@@ -2297,7 +2327,9 @@
     "hint": "Gaudí's unfinished cathedral in Barcelona, Spain",
     "hintThai": "มหาวิหารที่กำลังก่อสร้างในบาร์เซโลนา สเปน",
     "pos": "noun",
-    "emoji": "⛪"
+    "emoji": "⛪",
+    "country": "Spain",
+    "countryThai": "สเปน"
   },
   {
     "word": "Petra",
@@ -2307,7 +2339,9 @@
     "hint": "an ancient city carved into rose-red rock in Jordan",
     "hintThai": "เมืองโบราณที่สร้างในหน้าผาหินทรายสีชมพูในจอร์แดน",
     "pos": "noun",
-    "emoji": "🏜️"
+    "emoji": "🏜️",
+    "country": "Jordan",
+    "countryThai": "จอร์แดน"
   },
   {
     "word": "Louvre",
@@ -2317,7 +2351,9 @@
     "hint": "the world's largest art museum in Paris, home to the Mona Lisa",
     "hintThai": "พิพิธภัณฑ์ศิลปะที่ใหญ่ที่สุดในโลก ตั้งอยู่ในปารีส",
     "pos": "noun",
-    "emoji": "🖼️"
+    "emoji": "🖼️",
+    "country": "France",
+    "countryThai": "ฝรั่งเศส"
   },
   {
     "word": "Amazon River",
@@ -2327,7 +2363,9 @@
     "hint": "the world's largest river by volume, flowing through Brazil",
     "hintThai": "แม่น้ำที่มีปริมาณน้ำมากที่สุดในโลก ไหลผ่านป่าอเมซอน",
     "pos": "noun",
-    "emoji": "🌿"
+    "emoji": "🌿",
+    "country": "Brazil",
+    "countryThai": "บราซิล"
   },
   {
     "word": "Burj Khalifa",
@@ -2337,7 +2375,9 @@
     "hint": "the world's tallest building, in Dubai",
     "hintThai": "ตึกที่สูงที่สุดในโลก ตั้งอยู่ในดูไบ",
     "pos": "noun",
-    "emoji": "🏙️"
+    "emoji": "🏙️",
+    "country": "UAE",
+    "countryThai": "สหรัฐอาหรับเอมิเรตส์"
   },
   {
     "word": "Vatican",
@@ -2347,7 +2387,9 @@
     "hint": "the smallest country in the world, home of the Pope",
     "hintThai": "นครรัฐที่เล็กที่สุดในโลก ศูนย์กลางคาทอลิก",
     "pos": "noun",
-    "emoji": "⛪"
+    "emoji": "⛪",
+    "country": "Vatican City",
+    "countryThai": "นครวาติกัน"
   },
   {
     "word": "Galápagos Islands",
@@ -2357,7 +2399,9 @@
     "hint": "islands in Ecuador famous for unique wildlife that inspired Darwin",
     "hintThai": "หมู่เกาะในมหาสมุทรแปซิฟิกที่ดาร์วินใช้พัฒนาทฤษฎีวิวัฒนาการ",
     "pos": "noun",
-    "emoji": "🦎"
+    "emoji": "🦎",
+    "country": "Ecuador",
+    "countryThai": "เอกวาดอร์"
   },
   {
     "word": "Chernobyl",
@@ -2367,7 +2411,9 @@
     "hint": "site of a catastrophic 1986 nuclear disaster in Ukraine",
     "hintThai": "เมืองในยูเครนที่เกิดอุบัติเหตุโรงไฟฟ้านิวเคลียร์ครั้งใหญ่ที่สุด",
     "pos": "noun",
-    "emoji": "☢️"
+    "emoji": "☢️",
+    "country": "Ukraine",
+    "countryThai": "ยูเครน"
   },
   {
     "word": "Area 51",
@@ -2377,7 +2423,9 @@
     "hint": "a classified US Air Force base famous for UFO conspiracy theories",
     "hintThai": "ฐานทัพลับของสหรัฐฯ ที่เกี่ยวข้องกับทฤษฎีสมคบคิดเรื่อง UFO",
     "pos": "noun",
-    "emoji": "👽"
+    "emoji": "👽",
+    "country": "USA",
+    "countryThai": "สหรัฐอเมริกา"
   },
   {
     "word": "Japan",

@@ -185,6 +185,11 @@ function hbBeginTurn() {
   document.getElementById('hb-word-emoji').textContent = w.emoji || '';
   document.getElementById('hb-word-en').textContent    = w.word  || '';
   document.getElementById('hb-word-thai').textContent  = w.thai  || '';
+  const ctEl = document.getElementById('hb-word-country');
+  if (ctEl) {
+    ctEl.style.display = w.country ? 'block' : 'none';
+    if (w.country) document.getElementById('hb-word-country-text').textContent = `${w.country} · ${w.countryThai}`;
+  }
   document.getElementById('hb-word-cat').textContent   = w.category || '';
   const lvlEl = document.getElementById('hb-word-level');
   if (lvlEl && w.level) {
@@ -215,6 +220,11 @@ function hbChangeWord() {
   document.getElementById('hb-word-emoji').textContent = w.emoji || '';
   document.getElementById('hb-word-en').textContent   = w.word  || '';
   document.getElementById('hb-word-thai').textContent = w.thai  || '';
+  const ctEl2 = document.getElementById('hb-word-country');
+  if (ctEl2) {
+    ctEl2.style.display = w.country ? 'block' : 'none';
+    if (w.country) document.getElementById('hb-word-country-text').textContent = `${w.country} · ${w.countryThai}`;
+  }
   document.getElementById('hb-word-cat').textContent  = w.category || '';
   const lvlEl = document.getElementById('hb-word-level');
   if (lvlEl && w.level) {
