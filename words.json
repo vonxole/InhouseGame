@@ -6,7 +6,8 @@
     "level": "easy",
     "hint": "water falling from the sky",
     "hintThai": "น้ำที่ตกจากท้องฟ้า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌧️"
   },
   {
     "word": "smile",
@@ -15,7 +16,8 @@
     "level": "easy",
     "hint": "expression of happiness on your face",
     "hintThai": "การแสดงออกถึงความสุขบนใบหน้า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "😊"
   },
   {
     "word": "money",
@@ -24,7 +26,8 @@
     "level": "easy",
     "hint": "used to buy things",
     "hintThai": "ใช้ซื้อสิ่งของต่างๆ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💰"
   },
   {
     "word": "dream",
@@ -33,7 +36,8 @@
     "level": "easy",
     "hint": "happens while you sleep",
     "hintThai": "เกิดขึ้นขณะที่คุณนอนหลับ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💭"
   },
   {
     "word": "music",
@@ -42,7 +46,8 @@
     "level": "easy",
     "hint": "you listen to it",
     "hintThai": "คุณฟังมัน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎵"
   },
   {
     "word": "birthday",
@@ -51,7 +56,8 @@
     "level": "easy",
     "hint": "a special day once a year",
     "hintThai": "วันพิเศษที่เกิดปีละครั้ง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎂"
   },
   {
     "word": "holiday",
@@ -60,7 +66,8 @@
     "level": "easy",
     "hint": "a day off from work or school",
     "hintThai": "วันหยุดจากการทำงานหรือโรงเรียน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏖️"
   },
   {
     "word": "shadow",
@@ -69,7 +76,8 @@
     "level": "easy",
     "hint": "a dark shape made by blocking light",
     "hintThai": "รูปทรงสีเข้มที่เกิดจากการบังแสง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌑"
   },
   {
     "word": "secret",
@@ -78,7 +86,8 @@
     "level": "easy",
     "hint": "something you do not tell others",
     "hintThai": "สิ่งที่คุณไม่บอกคนอื่น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🤫"
   },
   {
     "word": "habit",
@@ -87,7 +96,8 @@
     "level": "easy",
     "hint": "something you do regularly without thinking",
     "hintThai": "สิ่งที่คุณทำเป็นประจำโดยไม่ต้องคิด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔄"
   },
   {
     "word": "tradition",
@@ -96,7 +106,8 @@
     "level": "medium",
     "hint": "a custom passed down through generations",
     "hintThai": "สิ่งที่สืบทอดและปฏิบัติมาจากรุ่นสู่รุ่น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏮"
   },
   {
     "word": "rumor",
@@ -105,7 +116,8 @@
     "level": "medium",
     "hint": "unverified information that spreads quickly",
     "hintThai": "ข่าวลือที่ยังไม่ได้รับการพิสูจน์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🗣️"
   },
   {
     "word": "patience",
@@ -114,7 +126,8 @@
     "level": "medium",
     "hint": "ability to wait calmly",
     "hintThai": "ความสามารถในการรอโดยไม่รำคาญ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⏳"
   },
   {
     "word": "jealousy",
@@ -123,7 +136,8 @@
     "level": "medium",
     "hint": "feeling when you want what others have",
     "hintThai": "ความรู้สึกไม่พอใจเมื่อเห็นคนอื่นมีสิ่งที่ตัวเองอยากได้",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💚"
   },
   {
     "word": "freedom",
@@ -132,7 +146,8 @@
     "level": "medium",
     "hint": "the right to do what you want",
     "hintThai": "ความสามารถในการทำสิ่งที่ต้องการโดยไม่ถูกจำกัด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🕊️"
   },
   {
     "word": "adventure",
@@ -141,7 +156,8 @@
     "level": "medium",
     "hint": "an exciting or unusual experience",
     "hintThai": "การเดินทางหรือกิจกรรมที่น่าตื่นเต้น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🗺️"
   },
   {
     "word": "coincidence",
@@ -150,7 +166,8 @@
     "level": "medium",
     "hint": "two things happening by chance at the same time",
     "hintThai": "สิ่งที่เกิดขึ้นพร้อมกันโดยบังเอิญ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎯"
   },
   {
     "word": "deadline",
@@ -159,7 +176,8 @@
     "level": "medium",
     "hint": "the last time something must be finished",
     "hintThai": "วันหรือเวลาสุดท้ายที่ต้องส่งงาน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⏰"
   },
   {
     "word": "influence",
@@ -168,7 +186,8 @@
     "level": "medium",
     "hint": "the power to affect others",
     "hintThai": "ความสามารถในการส่งผลต่อความคิดหรือการกระทำของคนอื่น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌀"
   },
   {
     "word": "reputation",
@@ -177,7 +196,8 @@
     "level": "medium",
     "hint": "what people think of you",
     "hintThai": "สิ่งที่คนอื่นคิดและพูดถึงคุณ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⭐"
   },
   {
     "word": "procrastination",
@@ -186,7 +206,8 @@
     "level": "hard",
     "hint": "delaying tasks you should do now",
     "hintThai": "การผัดผ่อนงานออกไปเรื่อยๆ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🛋️"
   },
   {
     "word": "nostalgia",
@@ -195,7 +216,8 @@
     "level": "hard",
     "hint": "longing for the past",
     "hintThai": "ความคิดถึงอดีตที่ผ่านมา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📸"
   },
   {
     "word": "sarcasm",
@@ -204,7 +226,8 @@
     "level": "hard",
     "hint": "saying the opposite of what you mean",
     "hintThai": "การพูดตรงข้ามกับที่หมายความ มักใช้ประชดประชัน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🙄"
   },
   {
     "word": "empathy",
@@ -213,7 +236,8 @@
     "level": "hard",
     "hint": "understanding how others feel",
     "hintThai": "ความสามารถในการเข้าใจความรู้สึกของผู้อื่น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🤝"
   },
   {
     "word": "ambiguity",
@@ -222,7 +246,8 @@
     "level": "hard",
     "hint": "when something has more than one meaning",
     "hintThai": "สิ่งที่มีความหมายได้หลายแบบ ไม่ชัดเจน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "❓"
   },
   {
     "word": "phenomenon",
@@ -231,7 +256,8 @@
     "level": "hard",
     "hint": "a remarkable observable fact or event",
     "hintThai": "เหตุการณ์หรือสิ่งที่สังเกตเห็นได้และน่าสนใจ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "✨"
   },
   {
     "word": "perseverance",
@@ -240,7 +266,8 @@
     "level": "hard",
     "hint": "continuing despite difficulty",
     "hintThai": "ความมุ่งมั่นทำต่อไปแม้จะเจอความยากลำบาก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💪"
   },
   {
     "word": "subconscious",
@@ -249,7 +276,8 @@
     "level": "hard",
     "hint": "thoughts you are not fully aware of",
     "hintThai": "ส่วนของจิตใจที่ทำงานโดยที่เราไม่รู้ตัว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧠"
   },
   {
     "word": "hunger",
@@ -258,7 +286,8 @@
     "level": "easy",
     "hint": "the feeling when you need food",
     "hintThai": "ความรู้สึกอยากกินอาหารเมื่อท้องว่าง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍽️"
   },
   {
     "word": "sleep",
@@ -267,7 +296,8 @@
     "level": "easy",
     "hint": "what your body does at night to rest",
     "hintThai": "สภาวะพักผ่อนที่ร่างกายและจิตใจหยุดทำงานชั่วคราว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "😴"
   },
   {
     "word": "laugh",
@@ -276,7 +306,8 @@
     "level": "easy",
     "hint": "a sound you make when something is funny",
     "hintThai": "เสียงที่เกิดขึ้นเมื่อรู้สึกสนุกหรือขบขัน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "😂"
   },
   {
     "word": "speed",
@@ -285,7 +316,8 @@
     "level": "easy",
     "hint": "how fast something moves",
     "hintThai": "ความเร็วในการเคลื่อนที่",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💨"
   },
   {
     "word": "color",
@@ -294,7 +326,8 @@
     "level": "easy",
     "hint": "what your eyes see — red, blue, green…",
     "hintThai": "คุณสมบัติของแสงที่ตาเราเห็น เช่น แดง น้ำเงิน เขียว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌈"
   },
   {
     "word": "luck",
@@ -303,7 +336,8 @@
     "level": "easy",
     "hint": "good things that happen by chance",
     "hintThai": "สิ่งที่เกิดขึ้นโดยบังเอิญในทางดี",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍀"
   },
   {
     "word": "pain",
@@ -312,7 +346,8 @@
     "level": "easy",
     "hint": "an unpleasant feeling from injury",
     "hintThai": "ความรู้สึกเจ็บปวดทางร่างกายหรือจิตใจ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💢"
   },
   {
     "word": "fire",
@@ -321,7 +356,8 @@
     "level": "easy",
     "hint": "hot and bright, it burns things",
     "hintThai": "ปรากฏการณ์ที่เกิดจากการเผาไหม้ ให้ความร้อนและแสง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔥"
   },
   {
     "word": "noise",
@@ -330,7 +366,8 @@
     "level": "easy",
     "hint": "an unwanted or loud sound",
     "hintThai": "เสียงดังที่ไม่พึงประสงค์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📢"
   },
   {
     "word": "gift",
@@ -339,7 +376,8 @@
     "level": "easy",
     "hint": "something you give someone on a special occasion",
     "hintThai": "สิ่งที่มอบให้กันเพื่อแสดงความรัก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎁"
   },
   {
     "word": "silence",
@@ -348,7 +386,8 @@
     "level": "easy",
     "hint": "complete absence of sound",
     "hintThai": "ความเงียบ ไม่มีเสียงใดๆ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🤫"
   },
   {
     "word": "memory",
@@ -357,7 +396,8 @@
     "level": "easy",
     "hint": "something you remember from the past",
     "hintThai": "สิ่งที่คุณจำไว้ในความทรงจำ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📸"
   },
   {
     "word": "fear",
@@ -366,7 +406,8 @@
     "level": "easy",
     "hint": "a feeling when you are scared",
     "hintThai": "ความรู้สึกเมื่อเจอสิ่งน่ากลัว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "😨"
   },
   {
     "word": "sunset",
@@ -375,7 +416,8 @@
     "level": "easy",
     "hint": "when the sun goes below the horizon in the evening",
     "hintThai": "ช่วงเวลาที่ดวงอาทิตย์ตกลงใต้ขอบฟ้าในตอนเย็น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌅"
   },
   {
     "word": "competition",
@@ -384,7 +426,8 @@
     "level": "medium",
     "hint": "trying to win against others",
     "hintThai": "การแข่งขันเพื่อชิงชัยเป็นผู้ชนะ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏆"
   },
   {
     "word": "consequence",
@@ -393,7 +436,8 @@
     "level": "medium",
     "hint": "what happens as a result of an action",
     "hintThai": "สิ่งที่เกิดขึ้นตามหลังจากการกระทำ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⚖️"
   },
   {
     "word": "obsession",
@@ -402,7 +446,8 @@
     "level": "medium",
     "hint": "when you think about one thing constantly",
     "hintThai": "ความคิดหรือความต้องการที่ครอบงำจิตใจอย่างรุนแรง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔁"
   },
   {
     "word": "sacrifice",
@@ -411,7 +456,8 @@
     "level": "medium",
     "hint": "giving up something valuable for a purpose",
     "hintThai": "การยอมเสียสิ่งที่มีค่าเพื่อสิ่งที่สำคัญกว่า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💔"
   },
   {
     "word": "motivation",
@@ -420,7 +466,8 @@
     "level": "medium",
     "hint": "what drives you to do something",
     "hintThai": "แรงกระตุ้นที่ทำให้อยากทำสิ่งต่างๆ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🚀"
   },
   {
     "word": "stereotype",
@@ -429,7 +476,8 @@
     "level": "medium",
     "hint": "a fixed idea about a group of people",
     "hintThai": "ความเชื่อตายตัวเกี่ยวกับกลุ่มคน โดยไม่คำนึงถึงความแตกต่างของแต่ละคน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📦"
   },
   {
     "word": "illusion",
@@ -438,7 +486,8 @@
     "level": "medium",
     "hint": "something that appears real but is not",
     "hintThai": "สิ่งที่ดูเหมือนจริงแต่ไม่ใช่ความจริง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🪄"
   },
   {
     "word": "routine",
@@ -447,7 +496,8 @@
     "level": "medium",
     "hint": "a set of activities you do regularly in order",
     "hintThai": "กิจกรรมที่ทำซ้ำในลำดับเดิมทุกวัน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔄"
   },
   {
     "word": "crisis",
@@ -456,7 +506,8 @@
     "level": "medium",
     "hint": "a very dangerous or difficult situation",
     "hintThai": "สถานการณ์เร่งด่วนและอันตรายที่ต้องแก้ไขทันที",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🚨"
   },
   {
     "word": "negotiation",
@@ -465,7 +516,8 @@
     "level": "medium",
     "hint": "a discussion to reach an agreement",
     "hintThai": "การพูดคุยเพื่อหาข้อตกลงที่ทั้งสองฝ่ายยอมรับ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🤝"
   },
   {
     "word": "temptation",
@@ -474,7 +526,8 @@
     "level": "medium",
     "hint": "a strong urge to do something you should avoid",
     "hintThai": "สิ่งที่ดึงดูดให้ทำในสิ่งที่อาจไม่ดี",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "😈"
   },
   {
     "word": "expectations",
@@ -483,7 +536,8 @@
     "level": "medium",
     "hint": "what you believe will or should happen",
     "hintThai": "สิ่งที่คาดหวังว่าจะเกิดขึ้น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📋"
   },
   {
     "word": "cognitive bias",
@@ -492,7 +546,8 @@
     "level": "hard",
     "hint": "systematic errors in thinking that affect decisions",
     "hintThai": "รูปแบบความคิดที่เบี่ยงเบนจากความเป็นจริงโดยไม่รู้ตัว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧠"
   },
   {
     "word": "paradox",
@@ -501,7 +556,8 @@
     "level": "hard",
     "hint": "a statement that seems contradictory but may be true",
     "hintThai": "สิ่งที่ขัดแย้งกันในตัวเองแต่อาจเป็นจริง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌀"
   },
   {
     "word": "bureaucracy",
@@ -510,7 +566,8 @@
     "level": "hard",
     "hint": "a complex system of rules and processes in organizations",
     "hintThai": "ระบบราชการที่มีขั้นตอนมากและซับซ้อน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📋"
   },
   {
     "word": "manipulation",
@@ -519,7 +576,8 @@
     "level": "hard",
     "hint": "controlling someone unfairly for your own benefit",
     "hintThai": "การควบคุมหรือชักจูงคนอื่นอย่างแนบเนียน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧵"
   },
   {
     "word": "transparency",
@@ -528,7 +586,8 @@
     "level": "hard",
     "hint": "being open and honest with nothing hidden",
     "hintThai": "ความโปร่งใส ไม่ปิดบังข้อมูล",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🪟"
   },
   {
     "word": "accountability",
@@ -537,7 +596,8 @@
     "level": "hard",
     "hint": "being responsible and answerable for your actions",
     "hintThai": "ความรับผิดชอบต่อการกระทำและผลลัพธ์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "✅"
   },
   {
     "word": "hospital",
@@ -546,7 +606,8 @@
     "level": "easy",
     "hint": "where sick people go to be treated",
     "hintThai": "สถานที่ที่คนป่วยไปรักษา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏥"
   },
   {
     "word": "airport",
@@ -555,7 +616,8 @@
     "level": "easy",
     "hint": "where planes take off and land",
     "hintThai": "สถานที่ที่เครื่องบินขึ้นและลง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "✈️"
   },
   {
     "word": "library",
@@ -564,7 +626,8 @@
     "level": "easy",
     "hint": "a building full of books to borrow",
     "hintThai": "สถานที่ที่มีหนังสือให้ยืมและอ่าน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📚"
   },
   {
     "word": "market",
@@ -573,7 +636,8 @@
     "level": "easy",
     "hint": "a place to buy and sell goods",
     "hintThai": "สถานที่ซื้อขายสินค้าต่างๆ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🛒"
   },
   {
     "word": "park",
@@ -582,7 +646,8 @@
     "level": "easy",
     "hint": "an outdoor area with grass and trees",
     "hintThai": "พื้นที่สีเขียวกลางแจ้งสำหรับพักผ่อน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌳"
   },
   {
     "word": "restaurant",
@@ -591,7 +656,8 @@
     "level": "easy",
     "hint": "a place where you pay to eat food",
     "hintThai": "สถานที่ที่คุณไปกินอาหารและจ่ายเงิน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍽️"
   },
   {
     "word": "hotel",
@@ -600,7 +666,8 @@
     "level": "easy",
     "hint": "a place where travelers sleep",
     "hintThai": "สถานที่พักแรมชั่วคราว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏨"
   },
   {
     "word": "school",
@@ -609,7 +676,8 @@
     "level": "easy",
     "hint": "a place where children learn",
     "hintThai": "สถานที่ที่เด็กๆ ไปเรียนหนังสือ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏫"
   },
   {
     "word": "gym",
@@ -618,7 +686,8 @@
     "level": "easy",
     "hint": "a place to exercise and lift weights",
     "hintThai": "สถานที่สำหรับออกกำลังกาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏋️"
   },
   {
     "word": "museum",
@@ -627,7 +696,8 @@
     "level": "easy",
     "hint": "a building that displays historical objects",
     "hintThai": "สถานที่ที่เก็บรักษาและแสดงสิ่งของทางประวัติศาสตร์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏛️"
   },
   {
     "word": "embassy",
@@ -636,7 +706,8 @@
     "level": "medium",
     "hint": "office representing a country in another country",
     "hintThai": "สถานที่ตั้งของตัวแทนรัฐบาลต่างประเทศ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏛️"
   },
   {
     "word": "stadium",
@@ -645,7 +716,8 @@
     "level": "medium",
     "hint": "a large venue for sports events",
     "hintThai": "สนามกีฬาขนาดใหญ่ที่มีอัฒจันทร์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏟️"
   },
   {
     "word": "warehouse",
@@ -654,7 +726,8 @@
     "level": "medium",
     "hint": "a large building for storing goods",
     "hintThai": "อาคารขนาดใหญ่สำหรับเก็บสินค้า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📦"
   },
   {
     "word": "pharmacy",
@@ -663,7 +736,8 @@
     "level": "medium",
     "hint": "a shop where you buy medicine",
     "hintThai": "ร้านขายยาและผลิตภัณฑ์สุขภาพ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💊"
   },
   {
     "word": "observatory",
@@ -672,7 +746,8 @@
     "level": "medium",
     "hint": "a place with telescopes to study the sky",
     "hintThai": "อาคารที่ใช้ส่องดูดาวและวัตถุท้องฟ้า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔭"
   },
   {
     "word": "courtroom",
@@ -681,7 +756,8 @@
     "level": "medium",
     "hint": "where legal trials take place",
     "hintThai": "ห้องพิจารณาคดีในศาล",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⚖️"
   },
   {
     "word": "vineyard",
@@ -690,7 +766,8 @@
     "level": "medium",
     "hint": "a farm where grapes are grown for wine",
     "hintThai": "สวนองุ่นที่ใช้ทำไวน์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍇"
   },
   {
     "word": "aquarium",
@@ -699,7 +776,8 @@
     "level": "medium",
     "hint": "a place where fish and sea life are displayed",
     "hintThai": "สถานที่แสดงสัตว์น้ำในกระจกใส",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🐠"
   },
   {
     "word": "headquarters",
@@ -708,7 +786,8 @@
     "level": "hard",
     "hint": "the main office of an organization",
     "hintThai": "ที่ตั้งหลักขององค์กรหรือบริษัท",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏢"
   },
   {
     "word": "amphitheater",
@@ -717,7 +796,8 @@
     "level": "hard",
     "hint": "an outdoor circular venue for performances",
     "hintThai": "โรงละครกลางแจ้งรูปครึ่งวงกลม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎭"
   },
   {
     "word": "penitentiary",
@@ -726,7 +806,8 @@
     "level": "hard",
     "hint": "a large prison for serious criminals",
     "hintThai": "เรือนจำสำหรับนักโทษคดีหนัก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⛓️"
   },
   {
     "word": "catacombs",
@@ -735,7 +816,8 @@
     "level": "hard",
     "hint": "underground tunnels used as burial chambers",
     "hintThai": "อุโมงค์ใต้ดินที่ใช้ฝังศพในสมัยโบราณ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💀"
   },
   {
     "word": "quarantine zone",
@@ -744,7 +826,8 @@
     "level": "hard",
     "hint": "an area isolated to prevent disease spread",
     "hintThai": "พื้นที่กักกันเพื่อป้องกันการแพร่ระบาด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🚧"
   },
   {
     "word": "consulate",
@@ -753,7 +836,8 @@
     "level": "hard",
     "hint": "a government office in a foreign city",
     "hintThai": "สำนักงานกงสุลของประเทศในต่างแดน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏛️"
   },
   {
     "word": "beach",
@@ -762,7 +846,8 @@
     "level": "easy",
     "hint": "sandy shore next to the sea",
     "hintThai": "ชายฝั่งทะเลที่มีทรายและน้ำ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏖️"
   },
   {
     "word": "zoo",
@@ -771,7 +856,8 @@
     "level": "easy",
     "hint": "a place where animals are kept for people to see",
     "hintThai": "สถานที่แสดงและดูแลสัตว์ป่า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🦁"
   },
   {
     "word": "supermarket",
@@ -780,7 +866,8 @@
     "level": "easy",
     "hint": "a large shop that sells food and household items",
     "hintThai": "ร้านค้าขนาดใหญ่ที่มีสินค้าหลากหลาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🛍️"
   },
   {
     "word": "cinema",
@@ -789,7 +876,8 @@
     "level": "easy",
     "hint": "a place where you watch movies on a big screen",
     "hintThai": "โรงภาพยนตร์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎬"
   },
   {
     "word": "church",
@@ -798,7 +886,8 @@
     "level": "easy",
     "hint": "a building where Christians worship",
     "hintThai": "สถานที่สักการะบูชาของคริสต์ศาสนา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⛪"
   },
   {
     "word": "bank",
@@ -807,7 +896,8 @@
     "level": "easy",
     "hint": "a place where you save and borrow money",
     "hintThai": "สถาบันการเงินที่รับฝากและให้กู้เงิน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏦"
   },
   {
     "word": "post office",
@@ -816,7 +906,8 @@
     "level": "easy",
     "hint": "where you send letters and packages",
     "hintThai": "สำนักงานไปรษณีย์สำหรับส่งจดหมายและพัสดุ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📮"
   },
   {
     "word": "playground",
@@ -825,7 +916,8 @@
     "level": "easy",
     "hint": "an outdoor area with swings and slides for children",
     "hintThai": "สนามเด็กเล่นที่มีอุปกรณ์สำหรับเด็ก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🛝"
   },
   {
     "word": "farm",
@@ -834,7 +926,8 @@
     "level": "easy",
     "hint": "land where crops and animals are raised",
     "hintThai": "พื้นที่ที่ใช้ปลูกพืชหรือเลี้ยงสัตว์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🚜"
   },
   {
     "word": "temple",
@@ -843,7 +936,8 @@
     "level": "easy",
     "hint": "a place of worship in Buddhism or Hinduism",
     "hintThai": "สถานที่ศักดิ์สิทธิ์สำหรับการสักการะบูชา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🛕"
   },
   {
     "word": "stock exchange",
@@ -852,7 +946,8 @@
     "level": "medium",
     "hint": "where shares of companies are bought and sold",
     "hintThai": "ตลาดหลักทรัพย์ที่ซื้อขายหุ้น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📈"
   },
   {
     "word": "orphanage",
@@ -861,7 +956,8 @@
     "level": "medium",
     "hint": "a home for children without parents",
     "hintThai": "บ้านเด็กกำพร้าที่ดูแลเด็กไร้ครอบครัว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏠"
   },
   {
     "word": "data center",
@@ -870,7 +966,8 @@
     "level": "medium",
     "hint": "a building that houses computers and servers",
     "hintThai": "ศูนย์คอมพิวเตอร์ที่เก็บและประมวลผลข้อมูลขนาดใหญ่",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🖥️"
   },
   {
     "word": "slaughterhouse",
@@ -879,7 +976,8 @@
     "level": "medium",
     "hint": "a facility where animals are killed for meat",
     "hintThai": "โรงฆ่าสัตว์สำหรับผลิตเนื้อสัตว์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔪"
   },
   {
     "word": "refugee camp",
@@ -888,7 +986,8 @@
     "level": "medium",
     "hint": "a temporary settlement for people who fled their country",
     "hintThai": "ค่ายพักพิงสำหรับผู้ลี้ภัยหนีจากประเทศตัวเอง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⛺"
   },
   {
     "word": "power plant",
@@ -897,7 +996,8 @@
     "level": "medium",
     "hint": "a facility that generates electricity",
     "hintThai": "โรงไฟฟ้าสำหรับผลิตกระแสไฟฟ้า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⚡"
   },
   {
     "word": "pawnshop",
@@ -906,7 +1006,8 @@
     "level": "medium",
     "hint": "a shop where you borrow money in exchange for valuables",
     "hintThai": "ร้านรับจำนำของมีค่า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💍"
   },
   {
     "word": "laundromat",
@@ -915,7 +1016,8 @@
     "level": "medium",
     "hint": "a place with coin-operated washing machines",
     "hintThai": "ร้านซักผ้าบริการตนเองแบบหยอดเหรียญ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧺"
   },
   {
     "word": "construction site",
@@ -924,7 +1026,8 @@
     "level": "medium",
     "hint": "where a new building is being built",
     "hintThai": "พื้นที่ก่อสร้างอาคารหรือโครงสร้าง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏗️"
   },
   {
     "word": "border crossing",
@@ -933,7 +1036,8 @@
     "level": "medium",
     "hint": "a checkpoint where you enter another country",
     "hintThai": "จุดผ่านแดนระหว่างสองประเทศ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🚧"
   },
   {
     "word": "black site",
@@ -942,7 +1046,8 @@
     "level": "hard",
     "hint": "a secret government facility not officially acknowledged",
     "hintThai": "สถานที่ลับที่รัฐบาลใช้สอบสวนนอกกฎหมาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🕵️"
   },
   {
     "word": "red-light district",
@@ -951,7 +1056,8 @@
     "level": "hard",
     "hint": "an area known for adult entertainment businesses",
     "hintThai": "ย่านที่มีธุรกิจบันเทิงผิดกฎหมายอยู่มาก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔴"
   },
   {
     "word": "safe house",
@@ -960,7 +1066,8 @@
     "level": "hard",
     "hint": "a secret location for hiding people in danger",
     "hintThai": "บ้านพักลับสำหรับซ่อนตัวหรือปกป้องบุคคล",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏠"
   },
   {
     "word": "money laundry",
@@ -969,7 +1076,8 @@
     "level": "hard",
     "hint": "a place that disguises the origin of illegal money",
     "hintThai": "กระบวนการฟอกเงินผิดกฎหมายให้ดูถูกกฎหมาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💸"
   },
   {
     "word": "umbrella",
@@ -978,7 +1086,8 @@
     "level": "easy",
     "hint": "protects you from rain",
     "hintThai": "ใช้กางเพื่อป้องกันฝนหรือแสงแดด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "☂️"
   },
   {
     "word": "mirror",
@@ -987,7 +1096,8 @@
     "level": "easy",
     "hint": "shows your reflection",
     "hintThai": "ใช้ดูเงาของตัวเอง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🪞"
   },
   {
     "word": "wallet",
@@ -996,7 +1106,8 @@
     "level": "easy",
     "hint": "you keep money and cards in it",
     "hintThai": "กระเป๋าเล็กสำหรับใส่เงินและบัตรต่างๆ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👛"
   },
   {
     "word": "scissors",
@@ -1005,7 +1116,8 @@
     "level": "easy",
     "hint": "a tool with two blades for cutting",
     "hintThai": "อุปกรณ์ที่มีใบมีดสองชิ้นสำหรับตัด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "✂️"
   },
   {
     "word": "candle",
@@ -1014,7 +1126,8 @@
     "level": "easy",
     "hint": "gives light when you burn it",
     "hintThai": "แท่งขี้ผึ้งที่จุดไฟให้แสงสว่าง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🕯️"
   },
   {
     "word": "pillow",
@@ -1023,7 +1136,8 @@
     "level": "easy",
     "hint": "you rest your head on it when sleeping",
     "hintThai": "หมอนนิ่มสำหรับรองหัวขณะนอนหลับ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🛏️"
   },
   {
     "word": "key",
@@ -1032,7 +1146,8 @@
     "level": "easy",
     "hint": "a small tool that opens a lock",
     "hintThai": "ใช้เปิดและปิดล็อค",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔑"
   },
   {
     "word": "clock",
@@ -1041,7 +1156,8 @@
     "level": "easy",
     "hint": "tells you what time it is",
     "hintThai": "อุปกรณ์บอกเวลา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⏰"
   },
   {
     "word": "ladder",
@@ -1050,7 +1166,8 @@
     "level": "easy",
     "hint": "you climb it to reach high places",
     "hintThai": "อุปกรณ์สำหรับปีนขึ้นที่สูง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🪜"
   },
   {
     "word": "thermometer",
@@ -1059,7 +1176,8 @@
     "level": "easy",
     "hint": "measures temperature",
     "hintThai": "อุปกรณ์วัดอุณหภูมิ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌡️"
   },
   {
     "word": "compass",
@@ -1068,7 +1186,8 @@
     "level": "medium",
     "hint": "shows which direction is north",
     "hintThai": "เครื่องมือบอกทิศทาง ชี้ไปทางเหนือเสมอ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧭"
   },
   {
     "word": "telescope",
@@ -1077,7 +1196,8 @@
     "level": "medium",
     "hint": "makes distant things look close",
     "hintThai": "อุปกรณ์ที่ทำให้มองเห็นสิ่งที่อยู่ไกลๆ ได้ชัด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔭"
   },
   {
     "word": "magnifying glass",
@@ -1086,7 +1206,8 @@
     "level": "medium",
     "hint": "makes small things appear larger",
     "hintThai": "แว่นขยายสำหรับดูสิ่งเล็กให้ใหญ่ขึ้น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔍"
   },
   {
     "word": "trophy",
@@ -1095,7 +1216,8 @@
     "level": "medium",
     "hint": "a prize given to winners",
     "hintThai": "รางวัลที่มอบให้ผู้ชนะ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏆"
   },
   {
     "word": "blueprint",
@@ -1104,7 +1226,8 @@
     "level": "medium",
     "hint": "a detailed technical drawing of a building",
     "hintThai": "แบบแปลนทางเทคนิคสำหรับสร้างอาคารหรือสิ่งของ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📐"
   },
   {
     "word": "hourglass",
@@ -1113,7 +1236,8 @@
     "level": "medium",
     "hint": "measures time using falling sand",
     "hintThai": "อุปกรณ์วัดเวลาด้วยทรายที่ไหลผ่านรูแคบ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⌛"
   },
   {
     "word": "barcode",
@@ -1122,7 +1246,8 @@
     "level": "medium",
     "hint": "black and white lines that store product info",
     "hintThai": "เส้นดำขาวที่เครื่องสแกนอ่านเพื่อระบุสินค้า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📊"
   },
   {
     "word": "metronome",
@@ -1131,7 +1256,8 @@
     "level": "medium",
     "hint": "a device that keeps a steady beat for music",
     "hintThai": "อุปกรณ์ที่เคาะจังหวะสม่ำเสมอสำหรับนักดนตรี",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎵"
   },
   {
     "word": "stethoscope",
@@ -1140,7 +1266,8 @@
     "level": "medium",
     "hint": "doctors use it to listen to your heart",
     "hintThai": "อุปกรณ์ฟังเสียงหัวใจและปอดของแพทย์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🩺"
   },
   {
     "word": "protractor",
@@ -1149,7 +1276,8 @@
     "level": "medium",
     "hint": "a semicircular tool for measuring angles",
     "hintThai": "อุปกรณ์วัดมุมเป็นรูปครึ่งวงกลม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📐"
   },
   {
     "word": "defibrillator",
@@ -1158,7 +1286,8 @@
     "level": "hard",
     "hint": "a device that restarts a stopped heart with electricity",
     "hintThai": "เครื่องกระตุ้นหัวใจด้วยไฟฟ้าในกรณีฉุกเฉิน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⚡"
   },
   {
     "word": "periscope",
@@ -1167,7 +1296,8 @@
     "level": "hard",
     "hint": "a tube with mirrors used in submarines to see above water",
     "hintThai": "ท่อที่ใช้มองสิ่งที่อยู่นอกสายตาโดยตรง เช่น ในเรือดำน้ำ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔭"
   },
   {
     "word": "sextant",
@@ -1176,7 +1306,8 @@
     "level": "hard",
     "hint": "an instrument used to navigate by measuring stars",
     "hintThai": "เครื่องมือนำทางทางทะเลที่วัดตำแหน่งดวงดาว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧭"
   },
   {
     "word": "spectrometer",
@@ -1185,7 +1316,8 @@
     "level": "hard",
     "hint": "a device that analyzes light wavelengths",
     "hintThai": "เครื่องมือวิเคราะห์แสงเพื่อระบุองค์ประกอบทางเคมี",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔬"
   },
   {
     "word": "oscilloscope",
@@ -1194,7 +1326,8 @@
     "level": "hard",
     "hint": "shows electrical signals as waves on a screen",
     "hintThai": "เครื่องมือแสดงรูปคลื่นไฟฟ้าบนหน้าจอ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📡"
   },
   {
     "word": "spirometer",
@@ -1203,7 +1336,8 @@
     "level": "hard",
     "hint": "measures how much air your lungs can hold",
     "hintThai": "เครื่องมือวัดปริมาณอากาศในปอด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💨"
   },
   {
     "word": "toothbrush",
@@ -1212,7 +1346,8 @@
     "level": "easy",
     "hint": "you use it to clean your teeth every day",
     "hintThai": "แปรงขนาดเล็กสำหรับแปรงฟัน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🪥"
   },
   {
     "word": "stamp",
@@ -1221,7 +1356,8 @@
     "level": "easy",
     "hint": "small paper you stick on a letter to send it",
     "hintThai": "ใช้ประทับบนซองจดหมาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📮"
   },
   {
     "word": "receipt",
@@ -1230,7 +1366,8 @@
     "level": "easy",
     "hint": "a paper proof that you paid for something",
     "hintThai": "ใบเสร็จยืนยันการชำระเงิน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧾"
   },
   {
     "word": "remote control",
@@ -1239,7 +1376,8 @@
     "level": "easy",
     "hint": "a device to operate a TV or AC from a distance",
     "hintThai": "อุปกรณ์ควบคุมโทรทัศน์หรืออุปกรณ์จากระยะไกล",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📺"
   },
   {
     "word": "suitcase",
@@ -1248,7 +1386,8 @@
     "level": "easy",
     "hint": "a large bag with wheels for travel",
     "hintThai": "กระเป๋าเดินทางขนาดใหญ่มีล้อ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧳"
   },
   {
     "word": "pen",
@@ -1257,7 +1396,8 @@
     "level": "easy",
     "hint": "a tool you use to write",
     "hintThai": "ด้ามเขียนที่มีหมึกสำหรับเขียนหนังสือ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🖊️"
   },
   {
     "word": "calendar",
@@ -1266,7 +1406,8 @@
     "level": "easy",
     "hint": "shows the days, weeks, and months of the year",
     "hintThai": "ใช้ดูวันที่และวางแผนกิจกรรม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📅"
   },
   {
     "word": "battery",
@@ -1275,7 +1416,8 @@
     "level": "easy",
     "hint": "stores energy to power devices",
     "hintThai": "แหล่งพลังงานสำหรับอุปกรณ์ไฟฟ้า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔋"
   },
   {
     "word": "rope",
@@ -1284,7 +1426,8 @@
     "level": "easy",
     "hint": "a thick twisted cord used to tie things",
     "hintThai": "เชือกที่ยาวและแข็งแรง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🪢"
   },
   {
     "word": "map",
@@ -1293,7 +1436,8 @@
     "level": "easy",
     "hint": "a drawing showing roads and places",
     "hintThai": "แผนที่แสดงพื้นที่ทางภูมิศาสตร์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🗺️"
   },
   {
     "word": "envelope",
@@ -1302,7 +1446,8 @@
     "level": "easy",
     "hint": "a paper cover you put a letter inside",
     "hintThai": "ซองกระดาษสำหรับใส่จดหมาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "✉️"
   },
   {
     "word": "glasses",
@@ -1311,7 +1456,8 @@
     "level": "easy",
     "hint": "worn on your face to help you see better",
     "hintThai": "เลนส์ที่ใส่กรอบสำหรับแก้ไขสายตา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👓"
   },
   {
     "word": "handcuffs",
@@ -1320,7 +1466,8 @@
     "level": "medium",
     "hint": "metal rings police use to restrain a person's wrists",
     "hintThai": "กุญแจมือสำหรับตรึงข้อมือ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔒"
   },
   {
     "word": "binoculars",
@@ -1329,7 +1476,8 @@
     "level": "medium",
     "hint": "two telescopes joined together to see far away",
     "hintThai": "กล้องส่องทางไกลที่มองด้วยตาสองข้าง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔭"
   },
   {
     "word": "safe",
@@ -1338,7 +1486,8 @@
     "level": "medium",
     "hint": "a locked metal box for storing valuables",
     "hintThai": "กล่องโลหะแข็งแรงสำหรับเก็บของมีค่า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔐"
   },
   {
     "word": "polygraph",
@@ -1347,7 +1496,8 @@
     "level": "medium",
     "hint": "a machine used to detect if someone is lying",
     "hintThai": "เครื่องจับเท็จที่วัดสัญญาณร่างกายขณะตอบคำถาม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📊"
   },
   {
     "word": "USB drive",
@@ -1356,7 +1506,8 @@
     "level": "medium",
     "hint": "a small device you plug in to store files",
     "hintThai": "อุปกรณ์เก็บข้อมูลขนาดเล็กเสียบเข้าคอมพิวเตอร์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💾"
   },
   {
     "word": "padlock",
@@ -1365,7 +1516,8 @@
     "level": "medium",
     "hint": "a portable lock with a metal loop",
     "hintThai": "กุญแจแบบห่วงที่ล็อคแยกจากประตู",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔒"
   },
   {
     "word": "walkie-talkie",
@@ -1374,7 +1526,8 @@
     "level": "medium",
     "hint": "a handheld two-way radio",
     "hintThai": "วิทยุสื่อสารพกพาแบบกดพูด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📻"
   },
   {
     "word": "fire extinguisher",
@@ -1383,7 +1536,8 @@
     "level": "medium",
     "hint": "a canister used to spray foam or gas on fires",
     "hintThai": "ถังดับเพลิงสำหรับดับไฟเบื้องต้น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧯"
   },
   {
     "word": "wig",
@@ -1392,7 +1546,8 @@
     "level": "medium",
     "hint": "fake hair worn on your head as a disguise or costume",
     "hintThai": "ผมปลอมที่สวมบนหัว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👱"
   },
   {
     "word": "briefcase",
@@ -1401,7 +1556,8 @@
     "level": "medium",
     "hint": "a flat rectangular bag for carrying documents",
     "hintThai": "กระเป๋าถือสำหรับใส่เอกสารและอุปกรณ์ทำงาน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💼"
   },
   {
     "word": "listening device",
@@ -1410,7 +1566,8 @@
     "level": "hard",
     "hint": "a hidden microphone used to spy on conversations",
     "hintThai": "อุปกรณ์盗聴ที่ซ่อนไว้เพื่อดักฟัง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎧"
   },
   {
     "word": "body cam",
@@ -1419,7 +1576,8 @@
     "level": "hard",
     "hint": "a small camera worn on the body to record events",
     "hintThai": "กล้องวิดีโอขนาดเล็กที่ตำรวจติดที่ตัวขณะปฏิบัติงาน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📷"
   },
   {
     "word": "night-vision goggles",
@@ -1428,7 +1586,8 @@
     "level": "hard",
     "hint": "eyewear that lets you see in the dark",
     "hintThai": "แว่นตาพิเศษที่มองเห็นได้ในความมืด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌙"
   },
   {
     "word": "silencer",
@@ -1437,7 +1596,8 @@
     "level": "hard",
     "hint": "a device attached to a gun to reduce the sound",
     "hintThai": "อุปกรณ์ที่ทำให้เสียงปืนเบาลง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔇"
   },
   {
     "word": "teacher",
@@ -1446,7 +1606,8 @@
     "level": "easy",
     "hint": "explains things and helps students learn",
     "hintThai": "อธิบายสิ่งต่างๆ และช่วยนักเรียนเรียนรู้",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👩‍🏫"
   },
   {
     "word": "doctor",
@@ -1455,7 +1616,8 @@
     "level": "easy",
     "hint": "treats sick or injured people",
     "hintThai": "รักษาคนป่วยและบาดเจ็บ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👨‍⚕️"
   },
   {
     "word": "chef",
@@ -1464,7 +1626,8 @@
     "level": "easy",
     "hint": "a professional cook in a restaurant",
     "hintThai": "ทำอาหารมืออาชีพในร้านอาหาร",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👨‍🍳"
   },
   {
     "word": "police",
@@ -1473,7 +1636,8 @@
     "level": "easy",
     "hint": "keeps people safe and enforces the law",
     "hintThai": "รักษาความปลอดภัยและบังคับใช้กฎหมาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👮"
   },
   {
     "word": "singer",
@@ -1482,7 +1646,8 @@
     "level": "easy",
     "hint": "performs music using their voice",
     "hintThai": "แสดงดนตรีด้วยเสียงร้อง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎤"
   },
   {
     "word": "farmer",
@@ -1491,7 +1656,8 @@
     "level": "easy",
     "hint": "grows crops or raises animals for food",
     "hintThai": "ปลูกพืชหรือเลี้ยงสัตว์เพื่อเป็นอาหาร",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👨‍🌾"
   },
   {
     "word": "pilot",
@@ -1500,7 +1666,8 @@
     "level": "easy",
     "hint": "flies airplanes",
     "hintThai": "บินเครื่องบิน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👨‍✈️"
   },
   {
     "word": "firefighter",
@@ -1509,7 +1676,8 @@
     "level": "easy",
     "hint": "puts out fires and saves people",
     "hintThai": "ดับไฟและช่วยชีวิตผู้คน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👨‍🚒"
   },
   {
     "word": "athlete",
@@ -1518,7 +1686,8 @@
     "level": "easy",
     "hint": "competes in sports professionally",
     "hintThai": "แข่งขันกีฬาอย่างมืออาชีพ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏅"
   },
   {
     "word": "scientist",
@@ -1527,7 +1696,8 @@
     "level": "easy",
     "hint": "studies and researches how the world works",
     "hintThai": "ศึกษาวิจัยว่าโลกทำงานอย่างไร",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👩‍🔬"
   },
   {
     "word": "archaeologist",
@@ -1536,7 +1706,8 @@
     "level": "medium",
     "hint": "digs up and studies ancient objects",
     "hintThai": "ขุดค้นและศึกษาวัตถุโบราณ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⛏️"
   },
   {
     "word": "journalist",
@@ -1545,7 +1716,8 @@
     "level": "medium",
     "hint": "writes or reports news stories",
     "hintThai": "เขียนหรือรายงานข่าว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📰"
   },
   {
     "word": "detective",
@@ -1554,7 +1726,8 @@
     "level": "medium",
     "hint": "investigates crimes and finds clues",
     "hintThai": "สืบสวนคดีอาชญากรรมและหาเบาะแส",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔍"
   },
   {
     "word": "diplomat",
@@ -1563,7 +1736,8 @@
     "level": "medium",
     "hint": "represents their country abroad and negotiates",
     "hintThai": "เป็นตัวแทนประเทศในต่างแดนและเจรจา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🤝"
   },
   {
     "word": "astronaut",
@@ -1572,7 +1746,8 @@
     "level": "medium",
     "hint": "travels to space",
     "hintThai": "เดินทางไปอวกาศ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👨‍🚀"
   },
   {
     "word": "therapist",
@@ -1581,7 +1756,8 @@
     "level": "medium",
     "hint": "helps people with emotional and mental health",
     "hintThai": "ช่วยดูแลสุขภาพจิตและอารมณ์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🛋️"
   },
   {
     "word": "auctioneer",
@@ -1590,7 +1766,8 @@
     "level": "medium",
     "hint": "runs sales where people bid for items",
     "hintThai": "ดำเนินการประมูลสินค้า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔨"
   },
   {
     "word": "sommelier",
@@ -1599,7 +1776,8 @@
     "level": "medium",
     "hint": "an expert in selecting and serving wine",
     "hintThai": "ผู้เชี่ยวชาญการเลือกและเสิร์ฟไวน์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍷"
   },
   {
     "word": "actuary",
@@ -1608,7 +1786,8 @@
     "level": "medium",
     "hint": "calculates financial risk using statistics",
     "hintThai": "คำนวณความเสี่ยงทางการเงินด้วยสถิติ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📊"
   },
   {
     "word": "ghostwriter",
@@ -1617,7 +1796,8 @@
     "level": "medium",
     "hint": "writes content that someone else publishes as their own",
     "hintThai": "เขียนเนื้อหาที่คนอื่นนำไปเผยแพร่เป็นชื่อตัวเอง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "✍️"
   },
   {
     "word": "whistleblower",
@@ -1626,7 +1806,8 @@
     "level": "hard",
     "hint": "exposes illegal activity within an organization",
     "hintThai": "เปิดเผยการกระทำผิดภายในองค์กร",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📢"
   },
   {
     "word": "cryptographer",
@@ -1635,7 +1816,8 @@
     "level": "hard",
     "hint": "creates or breaks secret codes",
     "hintThai": "สร้างหรือถอดรหัสลับ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔐"
   },
   {
     "word": "undercover agent",
@@ -1644,7 +1826,8 @@
     "level": "hard",
     "hint": "secretly infiltrates a group to gather information",
     "hintThai": "แทรกซึมกลุ่มเป้าหมายอย่างลับๆ เพื่อรวบรวมข้อมูล",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🕵️"
   },
   {
     "word": "forensic accountant",
@@ -1653,7 +1836,8 @@
     "level": "hard",
     "hint": "investigates financial crimes through numbers",
     "hintThai": "สืบสวนอาชญากรรมทางการเงินผ่านตัวเลข",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔍"
   },
   {
     "word": "double agent",
@@ -1662,7 +1846,8 @@
     "level": "hard",
     "hint": "a spy who works for two opposing sides",
     "hintThai": "สายลับที่ทำงานให้ทั้งสองฝ่ายที่เป็นศัตรูกัน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎭"
   },
   {
     "word": "coroner",
@@ -1671,7 +1856,8 @@
     "level": "hard",
     "hint": "investigates the cause of suspicious deaths",
     "hintThai": "สืบสวนสาเหตุการตายที่น่าสงสัย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔬"
   },
   {
     "word": "nurse",
@@ -1680,7 +1866,8 @@
     "level": "easy",
     "hint": "helps doctors and takes care of patients",
     "hintThai": "ช่วยแพทย์และดูแลผู้ป่วย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👩‍⚕️"
   },
   {
     "word": "cashier",
@@ -1689,7 +1876,8 @@
     "level": "easy",
     "hint": "handles payments at a shop or restaurant",
     "hintThai": "รับชำระเงินที่ร้านหรือร้านอาหาร",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🛒"
   },
   {
     "word": "driver",
@@ -1698,7 +1886,8 @@
     "level": "easy",
     "hint": "operates a vehicle to transport people or goods",
     "hintThai": "ขับยานพาหนะเพื่อขนส่งคนหรือสินค้า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🚗"
   },
   {
     "word": "baker",
@@ -1707,7 +1896,8 @@
     "level": "easy",
     "hint": "makes bread, cakes, and pastries",
     "hintThai": "ทำขนมปัง เค้ก และขนมอบ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍞"
   },
   {
     "word": "judge",
@@ -1716,7 +1906,8 @@
     "level": "easy",
     "hint": "makes legal decisions in a court",
     "hintThai": "ตัดสินคดีในศาล",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⚖️"
   },
   {
     "word": "actor",
@@ -1725,7 +1916,8 @@
     "level": "easy",
     "hint": "performs roles in movies, TV, or theatre",
     "hintThai": "แสดงบทบาทในหนัง โทรทัศน์ หรือละครเวที",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎭"
   },
   {
     "word": "dentist",
@@ -1734,7 +1926,8 @@
     "level": "easy",
     "hint": "a doctor who takes care of your teeth",
     "hintThai": "แพทย์ที่ดูแลฟัน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🦷"
   },
   {
     "word": "librarian",
@@ -1743,7 +1936,8 @@
     "level": "easy",
     "hint": "works in a library and helps people find books",
     "hintThai": "ทำงานในห้องสมุดและช่วยคนหาหนังสือ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📚"
   },
   {
     "word": "guard",
@@ -1752,7 +1946,8 @@
     "level": "easy",
     "hint": "protects a building or person",
     "hintThai": "ดูแลรักษาความปลอดภัยของอาคารหรือบุคคล",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💂"
   },
   {
     "word": "photographer",
@@ -1761,7 +1956,8 @@
     "level": "easy",
     "hint": "takes photos professionally",
     "hintThai": "ถ่ายภาพอย่างมืออาชีพ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📷"
   },
   {
     "word": "mechanic",
@@ -1770,7 +1966,8 @@
     "level": "easy",
     "hint": "repairs cars and engines",
     "hintThai": "ซ่อมรถยนต์และเครื่องยนต์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔩"
   },
   {
     "word": "waiter",
@@ -1779,7 +1976,8 @@
     "level": "easy",
     "hint": "serves food and drinks at a restaurant",
     "hintThai": "เสิร์ฟอาหารและเครื่องดื่มในร้านอาหาร",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍽️"
   },
   {
     "word": "hacker",
@@ -1788,7 +1986,8 @@
     "level": "medium",
     "hint": "breaks into computer systems",
     "hintThai": "เจาะระบบคอมพิวเตอร์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💻"
   },
   {
     "word": "lobbyist",
@@ -1797,7 +1996,8 @@
     "level": "medium",
     "hint": "tries to influence politicians on behalf of a group",
     "hintThai": "พยายามโน้มน้าวนักการเมืองแทนกลุ่มผลประโยชน์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏛️"
   },
   {
     "word": "bounty hunter",
@@ -1806,7 +2006,8 @@
     "level": "medium",
     "hint": "tracks down and captures fugitives for a reward",
     "hintThai": "ติดตามและจับตัวผู้หลบหนีเพื่อรับรางวัล",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏹"
   },
   {
     "word": "profiler",
@@ -1815,7 +2016,8 @@
     "level": "medium",
     "hint": "analyzes criminal behavior to help catch suspects",
     "hintThai": "วิเคราะห์พฤติกรรมอาชญากรเพื่อช่วยจับผู้ต้องสงสัย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧠"
   },
   {
     "word": "middleman",
@@ -1824,7 +2026,8 @@
     "level": "medium",
     "hint": "a person who connects buyers and sellers",
     "hintThai": "คนกลางที่เชื่อมต่อผู้ซื้อและผู้ขาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🤝"
   },
   {
     "word": "social worker",
@@ -1833,7 +2036,8 @@
     "level": "medium",
     "hint": "helps vulnerable people improve their lives",
     "hintThai": "ช่วยเหลือผู้ที่เปราะบางให้ชีวิตดีขึ้น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🤲"
   },
   {
     "word": "translator",
@@ -1842,7 +2046,8 @@
     "level": "medium",
     "hint": "converts speech or text from one language to another",
     "hintThai": "แปลคำพูดหรือข้อความจากภาษาหนึ่งไปอีกภาษา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌐"
   },
   {
     "word": "stockbroker",
@@ -1851,7 +2056,8 @@
     "level": "medium",
     "hint": "buys and sells shares on behalf of clients",
     "hintThai": "ซื้อขายหุ้นแทนลูกค้า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📈"
   },
   {
     "word": "hitman",
@@ -1860,7 +2066,8 @@
     "level": "medium",
     "hint": "a person hired to kill someone",
     "hintThai": "รับจ้างฆ่าคน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎯"
   },
   {
     "word": "con artist",
@@ -1869,7 +2076,8 @@
     "level": "medium",
     "hint": "tricks people out of money through deception",
     "hintThai": "หลอกลวงคนเพื่อเอาเงิน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎭"
   },
   {
     "word": "fixer",
@@ -1878,7 +2086,8 @@
     "level": "hard",
     "hint": "secretly resolves problems for powerful people",
     "hintThai": "แก้ปัญหาลับๆ ให้คนมีอำนาจ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔧"
   },
   {
     "word": "sleeper agent",
@@ -1887,7 +2096,8 @@
     "level": "hard",
     "hint": "a spy who blends into society waiting to be activated",
     "hintThai": "สายลับที่ซ่อนตัวในสังคมรอรับคำสั่ง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "😴"
   },
   {
     "word": "mole",
@@ -1896,7 +2106,8 @@
     "level": "hard",
     "hint": "a spy secretly working inside an organization",
     "hintThai": "สายลับที่แฝงตัวอยู่ภายในองค์กร",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🕵️"
   },
   {
     "word": "money mule",
@@ -1905,7 +2116,8 @@
     "level": "hard",
     "hint": "someone used to transfer illegally obtained money",
     "hintThai": "คนที่ถูกใช้โอนเงินที่ได้มาจากการกระทำผิดกฎหมาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💸"
   },
   {
     "word": "getaway driver",
@@ -1914,7 +2126,8 @@
     "level": "hard",
     "hint": "drives the escape vehicle after a crime",
     "hintThai": "คนขับรถหลบหนีหลังก่ออาชญากรรม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🚗"
   },
   {
     "word": "arms dealer",
@@ -1923,7 +2136,8 @@
     "level": "hard",
     "hint": "illegally trades weapons",
     "hintThai": "ค้าอาวุธผิดกฎหมาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔫"
   },
   {
     "word": "Eiffel Tower",
@@ -1932,7 +2146,8 @@
     "level": "easy",
     "hint": "a famous iron tower in Paris, France",
     "hintThai": "หอเหล็กสัญลักษณ์ของกรุงปารีส ฝรั่งเศส",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🗼"
   },
   {
     "word": "Great Wall",
@@ -1941,7 +2156,8 @@
     "level": "easy",
     "hint": "a very long ancient wall across northern China",
     "hintThai": "กำแพงยาวหลายพันกิโลเมตรที่สร้างในประเทศจีน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧱"
   },
   {
     "word": "Colosseum",
@@ -1950,7 +2166,8 @@
     "level": "easy",
     "hint": "an ancient Roman arena used for gladiator fights",
     "hintThai": "สนามกีฬาโบราณขนาดใหญ่ในกรุงโรม อิตาลี",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏛️"
   },
   {
     "word": "Statue of Liberty",
@@ -1959,7 +2176,8 @@
     "level": "easy",
     "hint": "a giant green copper statue in New York harbor",
     "hintThai": "รูปปั้นสัญลักษณ์แห่งเสรีภาพที่มหานครนิวยอร์ก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🗽"
   },
   {
     "word": "Big Ben",
@@ -1968,7 +2186,8 @@
     "level": "easy",
     "hint": "a famous clock tower in London, England",
     "hintThai": "หอนาฬิกาสัญลักษณ์ของกรุงลอนดอน อังกฤษ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🕰️"
   },
   {
     "word": "Taj Mahal",
@@ -1977,7 +2196,8 @@
     "level": "easy",
     "hint": "a white marble mausoleum in Agra, India",
     "hintThai": "สุสานหินอ่อนสีขาวในอินเดีย สร้างด้วยความรัก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🕌"
   },
   {
     "word": "Pyramids",
@@ -1986,7 +2206,8 @@
     "level": "easy",
     "hint": "ancient triangular stone structures in Egypt",
     "hintThai": "สิ่งก่อสร้างโบราณของฟาโรห์อียิปต์ที่ยังคงอยู่จนถึงปัจจุบัน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔺"
   },
   {
     "word": "Sydney Opera House",
@@ -1995,7 +2216,8 @@
     "level": "easy",
     "hint": "a famous concert hall shaped like sails in Australia",
     "hintThai": "อาคารรูปทรงเปลือกหอยสัญลักษณ์ของซิดนีย์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎭"
   },
   {
     "word": "Mount Everest",
@@ -2004,7 +2226,8 @@
     "level": "easy",
     "hint": "the highest mountain in the world, in Nepal",
     "hintThai": "ยอดเขาที่สูงที่สุดในโลก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⛰️"
   },
   {
     "word": "Grand Canyon",
@@ -2013,7 +2236,8 @@
     "level": "easy",
     "hint": "a vast red rock gorge in Arizona, USA",
     "hintThai": "หุบเขาลึกขนาดใหญ่ในรัฐแอริโซนา สหรัฐฯ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏜️"
   },
   {
     "word": "Niagara Falls",
@@ -2022,7 +2246,8 @@
     "level": "easy",
     "hint": "a massive waterfall on the US-Canada border",
     "hintThai": "น้ำตกขนาดใหญ่บนชายแดนระหว่างแคนาดาและสหรัฐฯ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💧"
   },
   {
     "word": "Santorini",
@@ -2031,7 +2256,8 @@
     "level": "easy",
     "hint": "a Greek island famous for white buildings and blue domes",
     "hintThai": "เกาะในกรีซที่มีบ้านหลังคาสีน้ำเงินและวิวทะเลสวยงาม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏝️"
   },
   {
     "word": "Machu Picchu",
@@ -2040,7 +2266,8 @@
     "level": "medium",
     "hint": "an ancient Inca city high in the Andes mountains of Peru",
     "hintThai": "เมืองโบราณของอินคาบนยอดเขาในเปรู",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⛰️"
   },
   {
     "word": "Angkor Wat",
@@ -2049,7 +2276,8 @@
     "level": "medium",
     "hint": "the largest Hindu temple complex, in Cambodia",
     "hintThai": "วัดโบราณขนาดใหญ่ในกัมพูชา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🛕"
   },
   {
     "word": "Stonehenge",
@@ -2058,7 +2286,8 @@
     "level": "medium",
     "hint": "a prehistoric circle of giant standing stones in England",
     "hintThai": "วงหินโบราณในอังกฤษที่ยังไม่ทราบวัตถุประสงค์แน่ชัด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🪨"
   },
   {
     "word": "Sagrada Família",
@@ -2067,7 +2296,8 @@
     "level": "medium",
     "hint": "Gaudí's unfinished cathedral in Barcelona, Spain",
     "hintThai": "มหาวิหารที่กำลังก่อสร้างในบาร์เซโลนา สเปน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⛪"
   },
   {
     "word": "Petra",
@@ -2076,7 +2306,8 @@
     "level": "medium",
     "hint": "an ancient city carved into rose-red rock in Jordan",
     "hintThai": "เมืองโบราณที่สร้างในหน้าผาหินทรายสีชมพูในจอร์แดน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏜️"
   },
   {
     "word": "Louvre",
@@ -2085,7 +2316,8 @@
     "level": "medium",
     "hint": "the world's largest art museum in Paris, home to the Mona Lisa",
     "hintThai": "พิพิธภัณฑ์ศิลปะที่ใหญ่ที่สุดในโลก ตั้งอยู่ในปารีส",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🖼️"
   },
   {
     "word": "Amazon River",
@@ -2094,7 +2326,8 @@
     "level": "medium",
     "hint": "the world's largest river by volume, flowing through Brazil",
     "hintThai": "แม่น้ำที่มีปริมาณน้ำมากที่สุดในโลก ไหลผ่านป่าอเมซอน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌿"
   },
   {
     "word": "Burj Khalifa",
@@ -2103,7 +2336,8 @@
     "level": "medium",
     "hint": "the world's tallest building, in Dubai",
     "hintThai": "ตึกที่สูงที่สุดในโลก ตั้งอยู่ในดูไบ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏙️"
   },
   {
     "word": "Vatican",
@@ -2112,7 +2346,8 @@
     "level": "medium",
     "hint": "the smallest country in the world, home of the Pope",
     "hintThai": "นครรัฐที่เล็กที่สุดในโลก ศูนย์กลางคาทอลิก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⛪"
   },
   {
     "word": "Galápagos Islands",
@@ -2121,7 +2356,8 @@
     "level": "hard",
     "hint": "islands in Ecuador famous for unique wildlife that inspired Darwin",
     "hintThai": "หมู่เกาะในมหาสมุทรแปซิฟิกที่ดาร์วินใช้พัฒนาทฤษฎีวิวัฒนาการ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🦎"
   },
   {
     "word": "Chernobyl",
@@ -2130,7 +2366,8 @@
     "level": "hard",
     "hint": "site of a catastrophic 1986 nuclear disaster in Ukraine",
     "hintThai": "เมืองในยูเครนที่เกิดอุบัติเหตุโรงไฟฟ้านิวเคลียร์ครั้งใหญ่ที่สุด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "☢️"
   },
   {
     "word": "Area 51",
@@ -2139,7 +2376,8 @@
     "level": "hard",
     "hint": "a classified US Air Force base famous for UFO conspiracy theories",
     "hintThai": "ฐานทัพลับของสหรัฐฯ ที่เกี่ยวข้องกับทฤษฎีสมคบคิดเรื่อง UFO",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👽"
   },
   {
     "word": "Japan",
@@ -2148,7 +2386,8 @@
     "level": "easy",
     "hint": "an island nation known for sushi, anime, and Mount Fuji",
     "hintThai": "ประเทศเกาะในเอเชียตะวันออก ขึ้นชื่อเรื่องอนิเมะ ซูชิ และเทคโนโลยี",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🗾"
   },
   {
     "word": "France",
@@ -2157,7 +2396,8 @@
     "level": "easy",
     "hint": "a European country famous for the Eiffel Tower and wine",
     "hintThai": "ประเทศในยุโรปตะวันตก ขึ้นชื่อเรื่องแฟชั่น ไวน์ และหอไอเฟล",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥖"
   },
   {
     "word": "Brazil",
@@ -2166,7 +2406,8 @@
     "level": "easy",
     "hint": "the largest country in South America, famous for Carnival and football",
     "hintThai": "ประเทศที่ใหญ่ที่สุดในอเมริกาใต้ ขึ้นชื่อเรื่องฟุตบอลและป่าอเมซอน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌴"
   },
   {
     "word": "Australia",
@@ -2175,7 +2416,8 @@
     "level": "easy",
     "hint": "a continent-country known for kangaroos and the Great Barrier Reef",
     "hintThai": "ทวีปและประเทศที่อยู่ซีกโลกใต้ มีสัตว์ป่าเฉพาะถิ่นมากมาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🦘"
   },
   {
     "word": "India",
@@ -2184,7 +2426,8 @@
     "level": "easy",
     "hint": "a vast South Asian country known for the Taj Mahal and spices",
     "hintThai": "ประเทศที่มีประชากรมากที่สุดในโลก ขึ้นชื่อเรื่องอาหารเผ็ดและวัฒนธรรม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🪷"
   },
   {
     "word": "Egypt",
@@ -2193,7 +2436,8 @@
     "level": "easy",
     "hint": "a country in North Africa home to ancient pyramids",
     "hintThai": "ประเทศในแอฟริกาเหนือ ขึ้นชื่อเรื่องพีระมิดและแม่น้ำไนล์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔺"
   },
   {
     "word": "Mexico",
@@ -2202,7 +2446,8 @@
     "level": "easy",
     "hint": "a North American country famous for tacos and Aztec ruins",
     "hintThai": "ประเทศในอเมริกาเหนือ ขึ้นชื่อเรื่องอาหารเผ็ด วัฒนธรรมแอซเทก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌮"
   },
   {
     "word": "Italy",
@@ -2211,7 +2456,8 @@
     "level": "easy",
     "hint": "a boot-shaped country in Europe known for pasta and the Colosseum",
     "hintThai": "ประเทศในยุโรป ขึ้นชื่อเรื่องพิซซ่า พาสต้า และโรมโบราณ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍕"
   },
   {
     "word": "South Korea",
@@ -2220,7 +2466,8 @@
     "level": "easy",
     "hint": "an East Asian country famous for K-pop and technology",
     "hintThai": "ประเทศในเอเชียตะวันออก ขึ้นชื่อเรื่อง K-pop และซัมซุง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍜"
   },
   {
     "word": "Russia",
@@ -2229,7 +2476,8 @@
     "level": "easy",
     "hint": "the world's largest country, spanning Europe and Asia",
     "hintThai": "ประเทศที่ใหญ่ที่สุดในโลก ครอบคลุมสองทวีป",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🐻"
   },
   {
     "word": "Argentina",
@@ -2238,7 +2486,8 @@
     "level": "medium",
     "hint": "a South American country famous for tango and football legend Messi",
     "hintThai": "ประเทศในอเมริกาใต้ ขึ้นชื่อเรื่องเนื้อวัวและฟุตบอล",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⚽"
   },
   {
     "word": "Norway",
@@ -2247,7 +2496,8 @@
     "level": "medium",
     "hint": "a Scandinavian country famous for fjords and the northern lights",
     "hintThai": "ประเทศในสแกนดิเนเวีย ขึ้นชื่อเรื่องออโรร่าและฟยอร์ด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌊"
   },
   {
     "word": "Switzerland",
@@ -2256,7 +2506,8 @@
     "level": "medium",
     "hint": "a landlocked European country known for chocolate, cheese, and banks",
     "hintThai": "ประเทศในยุโรปที่ขึ้นชื่อเรื่องนาฬิกา ช็อกโกแลต และความเป็นกลาง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧀"
   },
   {
     "word": "Morocco",
@@ -2265,7 +2516,8 @@
     "level": "medium",
     "hint": "a North African country known for its colorful medinas",
     "hintThai": "ประเทศในแอฟริกาเหนือ ขึ้นชื่อเรื่องตลาดเก่าและทะเลทราย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🕌"
   },
   {
     "word": "New Zealand",
@@ -2274,7 +2526,8 @@
     "level": "medium",
     "hint": "an island nation near Australia famous for Lord of the Rings scenery",
     "hintThai": "ประเทศเกาะในมหาสมุทรแปซิฟิกใต้ ขึ้นชื่อเรื่องทิวทัศน์สวยงาม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥝"
   },
   {
     "word": "Bangkok",
@@ -2283,7 +2536,8 @@
     "level": "easy",
     "hint": "the capital of Thailand, known for temples and street food",
     "hintThai": "เมืองหลวงของไทย ขึ้นชื่อเรื่องวัดและอาหารริมทาง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🐘"
   },
   {
     "word": "Tokyo",
@@ -2292,7 +2546,8 @@
     "level": "easy",
     "hint": "the capital of Japan, the world's most populous metro area",
     "hintThai": "เมืองหลวงของญี่ปุ่น มีประชากรมากที่สุดในโลก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🗼"
   },
   {
     "word": "Paris",
@@ -2301,7 +2556,8 @@
     "level": "easy",
     "hint": "the capital of France, known as the City of Light",
     "hintThai": "เมืองหลวงของฝรั่งเศส มีหอไอเฟลเป็นสัญลักษณ์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🗼"
   },
   {
     "word": "London",
@@ -2310,7 +2566,8 @@
     "level": "easy",
     "hint": "the capital of the UK, home to Big Ben and Buckingham Palace",
     "hintThai": "เมืองหลวงของอังกฤษ มีหอนาฬิกา Big Ben",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎡"
   },
   {
     "word": "Washington DC",
@@ -2319,7 +2576,8 @@
     "level": "easy",
     "hint": "the capital of the United States, home of the White House",
     "hintThai": "เมืองหลวงของสหรัฐอเมริกา ที่ตั้งของทำเนียบขาว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏛️"
   },
   {
     "word": "Beijing",
@@ -2328,7 +2586,8 @@
     "level": "easy",
     "hint": "the capital of China",
     "hintThai": "เมืองหลวงของจีน ที่ตั้งของพระราชวังต้องห้าม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🐉"
   },
   {
     "word": "Rome",
@@ -2337,7 +2596,8 @@
     "level": "easy",
     "hint": "the capital of Italy, known as the Eternal City",
     "hintThai": "เมืองหลวงของอิตาลี เรียกว่า นครนิรันดร์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏛️"
   },
   {
     "word": "Moscow",
@@ -2346,7 +2606,8 @@
     "level": "easy",
     "hint": "the capital of Russia",
     "hintThai": "เมืองหลวงของรัสเซีย ที่ตั้งของจัตุรัสแดงและเครมลิน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔴"
   },
   {
     "word": "Cairo",
@@ -2355,7 +2616,8 @@
     "level": "easy",
     "hint": "the capital of Egypt, near the Pyramids of Giza",
     "hintThai": "เมืองหลวงของอียิปต์ ใกล้กับพีระมิดกีซา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔺"
   },
   {
     "word": "Nairobi",
@@ -2364,7 +2626,8 @@
     "level": "medium",
     "hint": "the capital of Kenya, a major hub in East Africa",
     "hintThai": "เมืองหลวงของเคนยา ประตูสู่การท่องเที่ยวซาฟารี",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🦁"
   },
   {
     "word": "Reykjavik",
@@ -2373,7 +2636,8 @@
     "level": "medium",
     "hint": "the capital of Iceland, one of the world's northernmost capitals",
     "hintThai": "เมืองหลวงของไอซ์แลนด์ ใกล้ออโรร่าและน้ำพุร้อน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌋"
   },
   {
     "word": "Kathmandu",
@@ -2382,7 +2646,8 @@
     "level": "medium",
     "hint": "the capital of Nepal, gateway to the Himalayas",
     "hintThai": "เมืองหลวงของเนปาล ใกล้กับยอดเขาเอเวอเรสต์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⛰️"
   },
   {
     "word": "Ulaanbaatar",
@@ -2391,7 +2656,8 @@
     "level": "hard",
     "hint": "the capital of Mongolia, one of the coldest capitals on Earth",
     "hintThai": "เมืองหลวงของมองโกเลีย เมืองหลวงที่หนาวที่สุดในโลก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🐴"
   },
   {
     "word": "Nur-Sultan",
@@ -2400,7 +2666,8 @@
     "level": "hard",
     "hint": "the futuristic capital of Kazakhstan (also called Astana)",
     "hintThai": "เมืองหลวงของคาซัคสถาน เปลี่ยนชื่อใหม่จากอัสตานา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌾"
   },
   {
     "word": "Sherlock Holmes",
@@ -2409,7 +2676,8 @@
     "level": "easy",
     "hint": "a brilliant fictional detective created by Arthur Conan Doyle",
     "hintThai": "นักสืบในจินตนาการชื่อดังที่สร้างโดย อาร์เธอร์ โคแนน ดอยล์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔍"
   },
   {
     "word": "Santa Claus",
@@ -2418,7 +2686,8 @@
     "level": "easy",
     "hint": "a jolly old man in red who delivers gifts on Christmas Eve",
     "hintThai": "ชายอ้วนร่าเริงในชุดแดงที่แจกของขวัญในคืนคริสต์มาส",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎅"
   },
   {
     "word": "Dracula",
@@ -2427,7 +2696,8 @@
     "level": "easy",
     "hint": "a famous fictional vampire from Transylvania",
     "hintThai": "แวมไพร์ในจินตนาการชื่อดังจากทรานซิลวาเนีย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧛"
   },
   {
     "word": "Robin Hood",
@@ -2436,7 +2706,8 @@
     "level": "easy",
     "hint": "a legendary English outlaw who stole from the rich to give to the poor",
     "hintThai": "อัศวินโจรในตำนานที่ขโมยจากคนรวยให้คนจน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏹"
   },
   {
     "word": "Cinderella",
@@ -2445,7 +2716,8 @@
     "level": "easy",
     "hint": "a fairy-tale girl who loses her glass slipper at midnight",
     "hintThai": "เจ้าหญิงในเทพนิยายที่ทำรองเท้าแก้วหายตอนเที่ยงคืน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👠"
   },
   {
     "word": "James Bond",
@@ -2454,7 +2726,8 @@
     "level": "easy",
     "hint": "a fictional British spy known as Agent 007",
     "hintThai": "สายลับอังกฤษในจินตนาการ รหัส 007",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔫"
   },
   {
     "word": "Harry Potter",
@@ -2463,7 +2736,8 @@
     "level": "easy",
     "hint": "a young wizard at Hogwarts School in a famous book series",
     "hintThai": "เด็กพ่อมดที่เรียนที่โรงเรียนฮอกวอตส์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⚡"
   },
   {
     "word": "Pinocchio",
@@ -2472,7 +2746,8 @@
     "level": "easy",
     "hint": "a wooden puppet whose nose grows when he lies",
     "hintThai": "หุ่นไม้ที่จมูกยาวขึ้นทุกครั้งที่โกหก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🪵"
   },
   {
     "word": "Superman",
@@ -2481,7 +2756,8 @@
     "level": "easy",
     "hint": "a superhero from Krypton who can fly and has super strength",
     "hintThai": "ซูเปอร์ฮีโร่จากดาวคริปตันที่บินได้และมีพลังมหาศาล",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🦸"
   },
   {
     "word": "Romeo",
@@ -2490,7 +2766,8 @@
     "level": "easy",
     "hint": "the male lead in Shakespeare's most famous tragedy about love",
     "hintThai": "พระเอกในโศกนาฏกรรมความรักของเชกสเปียร์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌹"
   },
   {
     "word": "Napoleon",
@@ -2499,7 +2776,8 @@
     "level": "medium",
     "hint": "a French military general who became Emperor of France",
     "hintThai": "นายพลทหารฝรั่งเศสที่กลายเป็นจักรพรรดิ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👑"
   },
   {
     "word": "Cleopatra",
@@ -2508,7 +2786,8 @@
     "level": "medium",
     "hint": "the last active ruler of ancient Egypt, famous for her intelligence and beauty",
     "hintThai": "ราชินีองค์สุดท้ายของอียิปต์โบราณ ขึ้นชื่อเรื่องความฉลาดและความงาม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👸"
   },
   {
     "word": "Hercules",
@@ -2517,7 +2796,8 @@
     "level": "medium",
     "hint": "a hero from Greek mythology famous for his incredible strength",
     "hintThai": "วีรบุรุษในตำนานกรีกที่มีพลังมหาศาล",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💪"
   },
   {
     "word": "Medusa",
@@ -2526,7 +2806,8 @@
     "level": "medium",
     "hint": "a monster from Greek mythology whose gaze turns people to stone",
     "hintThai": "สัตว์ประหลาดในตำนานกรีกที่ทำให้คนกลายเป็นหินได้",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🐍"
   },
   {
     "word": "Frankenstein",
@@ -2535,7 +2816,8 @@
     "level": "medium",
     "hint": "a scientist who creates a monster from body parts in a Gothic novel",
     "hintThai": "นักวิทยาศาสตร์ที่สร้างสัตว์ประหลาดจากชิ้นส่วนร่างกายในนิยายสยองขวัญ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧟"
   },
   {
     "word": "Don Quixote",
@@ -2544,7 +2826,8 @@
     "level": "medium",
     "hint": "a Spanish literary character who believes he is a knight fighting windmills",
     "hintThai": "ตัวละครสเปนที่คิดว่าตัวเองเป็นอัศวินไปต่อสู้กับกังหันลม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏇"
   },
   {
     "word": "Hannibal Lecter",
@@ -2553,7 +2836,8 @@
     "level": "medium",
     "hint": "a brilliant but terrifying fictional cannibal psychiatrist",
     "hintThai": "จิตแพทย์ในจินตนาการที่ฉลาดแต่เป็นฆาตกรสยองขวัญ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "😈"
   },
   {
     "word": "Walter White",
@@ -2562,7 +2846,8 @@
     "level": "medium",
     "hint": "a chemistry teacher who becomes a drug lord in Breaking Bad",
     "hintThai": "ครูสอนเคมีที่กลายเป็นพ่อค้ายาเสพติดใน Breaking Bad",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧪"
   },
   {
     "word": "Macbeth",
@@ -2571,7 +2856,8 @@
     "level": "hard",
     "hint": "a Scottish general who murders the king to seize power in Shakespeare's play",
     "hintThai": "ขุนนางสก็อตที่สังหารกษัตริย์เพื่อแย่งชิงอำนาจในละครของเชกสเปียร์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🗡️"
   },
   {
     "word": "Machiavelli",
@@ -2580,7 +2866,8 @@
     "level": "hard",
     "hint": "an Italian thinker who wrote that leaders should do anything to keep power",
     "hintThai": "นักคิดอิตาลีที่เขียนว่าผู้นำต้องทำทุกอย่างเพื่อรักษาอำนาจ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "♟️"
   },
   {
     "word": "Rasputin",
@@ -2589,7 +2876,8 @@
     "level": "hard",
     "hint": "a mysterious Russian mystic who had great influence over the Romanov royal family",
     "hintThai": "พระนักบวชรัสเซียลึกลับที่มีอิทธิพลต่อราชวงศ์โรมานอฟ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧔"
   },
   {
     "word": "Iago",
@@ -2598,7 +2886,8 @@
     "level": "hard",
     "hint": "the manipulative villain in Shakespeare's Othello",
     "hintThai": "ตัวร้ายหัวฉลาดในละคร Othello ของเชกสเปียร์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎭"
   },
   {
     "word": "carrot",
@@ -2607,7 +2896,8 @@
     "level": "easy",
     "hint": "an orange root vegetable rabbits love",
     "hintThai": "ผักสีส้มรูปทรงยาวที่กระต่ายชอบกิน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥕"
   },
   {
     "word": "broccoli",
@@ -2616,7 +2906,8 @@
     "level": "easy",
     "hint": "a green vegetable that looks like a tiny tree",
     "hintThai": "ผักสีเขียวที่มีลักษณะคล้ายต้นไม้จิ๋ว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥦"
   },
   {
     "word": "onion",
@@ -2625,7 +2916,8 @@
     "level": "easy",
     "hint": "a vegetable that makes you cry when you cut it",
     "hintThai": "ผักที่มีกลิ่นฉุนและทำให้น้ำตาไหลเมื่อหั่น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧅"
   },
   {
     "word": "garlic",
@@ -2634,7 +2926,8 @@
     "level": "easy",
     "hint": "a strong-smelling ingredient used in cooking",
     "hintThai": "ผักกลิ่นฉุนที่ใช้ปรุงอาหารทั่วโลก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧄"
   },
   {
     "word": "potato",
@@ -2643,7 +2936,8 @@
     "level": "easy",
     "hint": "a starchy underground vegetable used for fries and chips",
     "hintThai": "หัวพืชใต้ดินสีน้ำตาล ทำได้ทั้งมันฝรั่งทอดและต้มบด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥔"
   },
   {
     "word": "tomato",
@@ -2652,7 +2946,8 @@
     "level": "easy",
     "hint": "a red round fruit often used in salads and sauces",
     "hintThai": "ผลสีแดงฉ่ำที่ใช้ทำซอสและสลัด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍅"
   },
   {
     "word": "cucumber",
@@ -2661,7 +2956,8 @@
     "level": "easy",
     "hint": "a long green vegetable often eaten raw in salads",
     "hintThai": "ผักสีเขียวที่มีน้ำมาก กินสดหรือดองได้",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥒"
   },
   {
     "word": "corn",
@@ -2670,7 +2966,8 @@
     "level": "easy",
     "hint": "a yellow vegetable on a cob",
     "hintThai": "พืชที่มีเมล็ดเรียงอยู่บนฝัก สีเหลืองทอง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌽"
   },
   {
     "word": "mushroom",
@@ -2679,7 +2976,8 @@
     "level": "easy",
     "hint": "a fungus you eat, shaped like an umbrella",
     "hintThai": "พืชที่ไม่มีใบและไม่ใช้แสงแดด มีรูปทรงร่ม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍄"
   },
   {
     "word": "cabbage",
@@ -2688,7 +2986,8 @@
     "level": "easy",
     "hint": "a round leafy green vegetable",
     "hintThai": "ผักใบกลมแน่นสีเขียวหรือม่วง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥬"
   },
   {
     "word": "spinach",
@@ -2697,7 +2996,8 @@
     "level": "easy",
     "hint": "a dark leafy green vegetable Popeye loves",
     "hintThai": "ผักใบสีเขียวเข้มที่ Popeye ชอบกิน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥬"
   },
   {
     "word": "pumpkin",
@@ -2706,7 +3006,8 @@
     "level": "easy",
     "hint": "a large orange vegetable carved at Halloween",
     "hintThai": "ผักทรงกลมสีส้ม มักใช้ตกแต่งในวันฮาโลวีน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎃"
   },
   {
     "word": "eggplant",
@@ -2715,7 +3016,8 @@
     "level": "easy",
     "hint": "a long purple vegetable used in stir-fries",
     "hintThai": "ผักสีม่วงเข้มรูปยาว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍆"
   },
   {
     "word": "chili",
@@ -2724,7 +3026,8 @@
     "level": "easy",
     "hint": "a small spicy pepper",
     "hintThai": "ผักที่ให้รสเผ็ดร้อน มีหลายสีและหลายขนาด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌶️"
   },
   {
     "word": "ginger",
@@ -2733,7 +3036,8 @@
     "level": "easy",
     "hint": "a knobbly root with a spicy flavor used in cooking and tea",
     "hintThai": "รากไม้มีกลิ่นฉุนหอม ใช้ปรุงอาหารและชา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🫚"
   },
   {
     "word": "mango",
@@ -2742,7 +3046,8 @@
     "level": "easy",
     "hint": "a tropical yellow-orange fruit popular in Thailand",
     "hintThai": "ผลไม้เขตร้อนสีเหลืองส้ม รสหวานหอม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥭"
   },
   {
     "word": "durian",
@@ -2751,7 +3056,8 @@
     "level": "easy",
     "hint": "the \"king of fruits\" — spiky with a very strong smell",
     "hintThai": "ผลไม้เขตร้อนที่มีกลิ่นแรงมาก เปลือกมีหนาม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌵"
   },
   {
     "word": "strawberry",
@@ -2760,7 +3066,8 @@
     "level": "easy",
     "hint": "a small red heart-shaped fruit, often in desserts",
     "hintThai": "ผลไม้สีแดงรูปหัวใจ รสหวานอมเปรี้ยว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍓"
   },
   {
     "word": "watermelon",
@@ -2769,7 +3076,8 @@
     "level": "easy",
     "hint": "a large green fruit with red flesh and black seeds",
     "hintThai": "ผลไม้ขนาดใหญ่สีเขียว เนื้อในสีแดงฉ่ำ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍉"
   },
   {
     "word": "banana",
@@ -2778,7 +3086,8 @@
     "level": "easy",
     "hint": "a yellow curved fruit monkeys love",
     "hintThai": "ผลไม้สีเหลืองรูปโค้ง ลิงชอบกิน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍌"
   },
   {
     "word": "pineapple",
@@ -2787,7 +3096,8 @@
     "level": "easy",
     "hint": "a tropical fruit with a spiky crown and sweet-sour taste",
     "hintThai": "ผลไม้มีใบแข็งบนหัว เนื้อเหลืองหวานอมเปรี้ยว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍍"
   },
   {
     "word": "grape",
@@ -2796,7 +3106,8 @@
     "level": "easy",
     "hint": "small round fruits that grow in clusters, used to make wine",
     "hintThai": "ผลไม้เล็กๆ ที่เติบโตเป็นพวง ใช้ทำไวน์ได้",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍇"
   },
   {
     "word": "lemon",
@@ -2805,7 +3116,8 @@
     "level": "easy",
     "hint": "a sour yellow citrus fruit",
     "hintThai": "ผลไม้สีเหลืองรสเปรี้ยวจัด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍋"
   },
   {
     "word": "coconut",
@@ -2814,7 +3126,8 @@
     "level": "easy",
     "hint": "a large tropical fruit with white flesh and sweet water inside",
     "hintThai": "ผลไม้เขตร้อนที่มีน้ำและเนื้อขาวอยู่ในเปลือกแข็ง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥥"
   },
   {
     "word": "papaya",
@@ -2823,7 +3136,8 @@
     "level": "easy",
     "hint": "an orange tropical fruit used in som tum",
     "hintThai": "ผลไม้เขตร้อนสีส้ม มีเมล็ดดำอยู่ตรงกลาง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍈"
   },
   {
     "word": "lychee",
@@ -2832,7 +3146,8 @@
     "level": "easy",
     "hint": "a small white juicy tropical fruit with a rough red skin",
     "hintThai": "ผลไม้เล็กเปลือกแดงขรุขระ เนื้อขาวหวาน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍒"
   },
   {
     "word": "dragon fruit",
@@ -2841,7 +3156,8 @@
     "level": "easy",
     "hint": "a bright pink fruit with white flesh and black seeds",
     "hintThai": "ผลไม้สีชมพูสดใส เนื้อในมีจุดดำเล็กๆ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🐉"
   },
   {
     "word": "avocado",
@@ -2850,7 +3166,8 @@
     "level": "medium",
     "hint": "a creamy green fruit used in guacamole and on toast",
     "hintThai": "ผลไม้สีเขียวเนื้อครีมเข้มที่ใช้ทำกัวคาโมเล",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥑"
   },
   {
     "word": "passion fruit",
@@ -2859,7 +3176,8 @@
     "level": "medium",
     "hint": "a wrinkled purple fruit with tangy yellow seeds inside",
     "hintThai": "ผลไม้เปลือกม่วงที่มีเนื้อสีส้มเหลืองรสเปรี้ยวหวาน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💜"
   },
   {
     "word": "jackfruit",
@@ -2868,7 +3186,8 @@
     "level": "medium",
     "hint": "the world's largest tree fruit, with yellow pods inside",
     "hintThai": "ผลไม้ขนาดใหญ่ที่สุดในโลก เนื้อเหลืองหวาน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍈"
   },
   {
     "word": "pizza",
@@ -2877,7 +3196,8 @@
     "level": "easy",
     "hint": "a flat round dish with tomato sauce and cheese, baked in an oven",
     "hintThai": "อาหารอิตาเลียนแป้งกลมอบในเตา มีซอสและชีส",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍕"
   },
   {
     "word": "sushi",
@@ -2886,7 +3206,8 @@
     "level": "easy",
     "hint": "Japanese rice rolls often topped with raw fish",
     "hintThai": "อาหารญี่ปุ่นที่ทำจากข้าวปั้นกับปลาดิบหรือไส้ต่างๆ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍣"
   },
   {
     "word": "burger",
@@ -2895,7 +3216,8 @@
     "level": "easy",
     "hint": "a grilled patty in a bun with toppings",
     "hintThai": "แซนด์วิชที่มีเนื้อบดอยู่ระหว่างขนมปังกลม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍔"
   },
   {
     "word": "noodles",
@@ -2904,7 +3226,8 @@
     "level": "easy",
     "hint": "long thin strips of pasta or wheat, eaten in soup or stir-fried",
     "hintThai": "อาหารที่ทำจากแป้งรีดเป็นเส้นยาว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍜"
   },
   {
     "word": "ice cream",
@@ -2913,7 +3236,8 @@
     "level": "easy",
     "hint": "a sweet frozen dessert in a cone or cup",
     "hintThai": "ของหวานแช่แข็งทำจากนมหรือครีม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍦"
   },
   {
     "word": "chocolate",
@@ -2922,7 +3246,8 @@
     "level": "easy",
     "hint": "a sweet brown food made from cacao beans",
     "hintThai": "อาหารหวานที่ทำจากเมล็ดโกโก้",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍫"
   },
   {
     "word": "coffee",
@@ -2931,7 +3256,8 @@
     "level": "easy",
     "hint": "a hot dark drink made from roasted beans",
     "hintThai": "เครื่องดื่มร้อนที่ทำจากเมล็ดกาแฟคั่ว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "☕"
   },
   {
     "word": "popcorn",
@@ -2940,7 +3266,8 @@
     "level": "easy",
     "hint": "a snack made from heated corn kernels, eaten at the cinema",
     "hintThai": "ข้าวโพดที่ถูกความร้อนจนแตกฟูเป็นเม็ดขาว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍿"
   },
   {
     "word": "ramen",
@@ -2949,7 +3276,8 @@
     "level": "easy",
     "hint": "Japanese noodle soup with broth, meat, and toppings",
     "hintThai": "บะหมี่ญี่ปุ่นในน้ำซุปร้อน มีหน้าหลากหลาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍜"
   },
   {
     "word": "pad thai",
@@ -2958,7 +3286,8 @@
     "level": "easy",
     "hint": "Thailand's most famous stir-fried noodle dish",
     "hintThai": "ผัดไทย บะหมี่ผัดแบบไทยที่มีกุ้ง ถั่วงอก และไข่",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍜"
   },
   {
     "word": "curry",
@@ -2967,7 +3296,8 @@
     "level": "easy",
     "hint": "a spiced sauce dish popular in India and Thailand",
     "hintThai": "อาหารที่มีซอสเครื่องเทศข้นหนา กินกับข้าวหรือขนมปัง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍛"
   },
   {
     "word": "dim sum",
@@ -2976,7 +3306,8 @@
     "level": "medium",
     "hint": "small Chinese dishes served in steamer baskets",
     "hintThai": "อาหารจีนที่เสิร์ฟในตะกร้าเล็กๆ มักกินตอนเช้า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥟"
   },
   {
     "word": "croissant",
@@ -2985,7 +3316,8 @@
     "level": "medium",
     "hint": "a buttery, flaky crescent-shaped French pastry",
     "hintThai": "ขนมปังฝรั่งเศสรูปพระจันทร์เสี้ยว แป้งกรอบนอกนุ่มใน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥐"
   },
   {
     "word": "fondue",
@@ -2994,7 +3326,8 @@
     "level": "medium",
     "hint": "a Swiss dish where you dip food into melted cheese or chocolate",
     "hintThai": "อาหารสวิสที่จุ่มขนมปังลงในชีสหรือช็อกโกแลตละลาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🫕"
   },
   {
     "word": "tiramisu",
@@ -3003,7 +3336,8 @@
     "level": "medium",
     "hint": "an Italian dessert made with coffee, mascarpone, and ladyfingers",
     "hintThai": "ของหวานอิตาเลียนที่มีชั้นครีมและขนมปังชุบกาแฟ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍰"
   },
   {
     "word": "boba tea",
@@ -3012,7 +3346,8 @@
     "level": "easy",
     "hint": "a Taiwanese drink with tea, milk, and chewy tapioca balls",
     "hintThai": "ชานมไข่มุกที่มีลูกเม็ดเคี้ยวได้อยู่ด้านล่าง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧋"
   },
   {
     "word": "kimchi",
@@ -3021,7 +3356,8 @@
     "level": "medium",
     "hint": "a Korean fermented spicy cabbage dish",
     "hintThai": "ผักดองเกาหลีที่มีรสเผ็ดและเปรี้ยว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥬"
   },
   {
     "word": "truffle",
@@ -3030,7 +3366,8 @@
     "level": "hard",
     "hint": "a rare underground fungus considered a luxury food ingredient",
     "hintThai": "เห็ดหายากที่หัวหมูขุดหา มีราคาแพงมาก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍄"
   },
   {
     "word": "Mickey Mouse",
@@ -3039,7 +3376,8 @@
     "level": "easy",
     "hint": "Disney's iconic cartoon mouse with round black ears",
     "hintThai": "หนูการ์ตูนสัญลักษณ์ของดิสนีย์ที่มีหูกลมสีดำ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🐭"
   },
   {
     "word": "SpongeBob",
@@ -3048,7 +3386,8 @@
     "level": "easy",
     "hint": "a cheerful yellow sea sponge who lives under the sea and fries burgers",
     "hintThai": "ฟองน้ำสีเหลืองร่าเริงที่อาศัยอยู่ใต้ทะเลและทำเบอร์เกอร์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧽"
   },
   {
     "word": "Doraemon",
@@ -3057,7 +3396,8 @@
     "level": "easy",
     "hint": "a blue robotic cat from the future with a magic pocket",
     "hintThai": "แมวหุ่นยนต์สีน้ำเงินจากอนาคตที่มีกระเป๋ามหัศจรรย์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🤖"
   },
   {
     "word": "Pikachu",
@@ -3066,7 +3406,8 @@
     "level": "easy",
     "hint": "a yellow electric mouse Pokémon",
     "hintThai": "โปเกมอนหนูสีเหลืองที่มีพลังไฟฟ้า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⚡"
   },
   {
     "word": "Naruto",
@@ -3075,7 +3416,8 @@
     "level": "easy",
     "hint": "a young ninja with a fox spirit sealed inside him",
     "hintThai": "นินจาหนุ่มที่มีจิ้งจอกเก้าหางถูกผนึกอยู่ในร่าง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍜"
   },
   {
     "word": "Simba",
@@ -3084,7 +3426,8 @@
     "level": "easy",
     "hint": "the young lion prince in The Lion King",
     "hintThai": "เจ้าชายสิงโตหนุ่มใน The Lion King",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🦁"
   },
   {
     "word": "Elsa",
@@ -3093,7 +3436,8 @@
     "level": "easy",
     "hint": "a queen with ice powers in Frozen",
     "hintThai": "ราชินีที่มีพลังน้ำแข็งใน Frozen",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "❄️"
   },
   {
     "word": "Shrek",
@@ -3102,7 +3446,8 @@
     "level": "easy",
     "hint": "a large green ogre who lives in a swamp",
     "hintThai": "ยักษ์เขียวขนาดใหญ่ที่อาศัยอยู่ในหนองน้ำ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧅"
   },
   {
     "word": "Goku",
@@ -3111,7 +3456,8 @@
     "level": "easy",
     "hint": "a Saiyan warrior who trains to be the strongest in Dragon Ball",
     "hintThai": "นักรบไซย่าที่ฝึกตัวเองให้แข็งแกร่งที่สุดใน Dragon Ball",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⚡"
   },
   {
     "word": "Tom and Jerry",
@@ -3120,7 +3466,8 @@
     "level": "easy",
     "hint": "a classic cartoon about a cat always chasing a mouse",
     "hintThai": "การ์ตูนคลาสสิกเรื่องแมวที่ไล่จับหนูตลอดเวลา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🐱"
   },
   {
     "word": "Winnie the Pooh",
@@ -3129,7 +3476,8 @@
     "level": "easy",
     "hint": "a yellow bear who loves honey",
     "hintThai": "หมีสีเหลืองที่ชอบกินน้ำผึ้ง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍯"
   },
   {
     "word": "Bugs Bunny",
@@ -3138,7 +3486,8 @@
     "level": "easy",
     "hint": "a wise-cracking grey rabbit who munches carrots",
     "hintThai": "กระต่ายขี้ตลกที่ชอบกินแครอทและพูดเก่ง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🐰"
   },
   {
     "word": "Totoro",
@@ -3147,7 +3496,8 @@
     "level": "easy",
     "hint": "a giant fluffy forest spirit in a Studio Ghibli film",
     "hintThai": "วิญญาณป่าตัวใหญ่นุ่มนวลในภาพยนตร์ Studio Ghibli",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌳"
   },
   {
     "word": "Woody",
@@ -3156,7 +3506,8 @@
     "level": "easy",
     "hint": "a cowboy doll who is the leader of the toys in Toy Story",
     "hintThai": "ตุ๊กตาคาวบอยที่เป็นหัวหน้าของเล่นใน Toy Story",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🤠"
   },
   {
     "word": "Luffy",
@@ -3165,7 +3516,8 @@
     "level": "easy",
     "hint": "a rubber-bodied pirate who wants to become King of the Pirates in One Piece",
     "hintThai": "โจรสลัดที่ร่างกายยืดได้อยากเป็นราชาโจรสลัดใน One Piece",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "☠️"
   },
   {
     "word": "Sailor Moon",
@@ -3174,7 +3526,8 @@
     "level": "easy",
     "hint": "a magical girl warrior who fights evil in the name of the moon",
     "hintThai": "นักรบเวทย์มนตร์สาวที่ต่อสู้กับความชั่วในนามพระจันทร์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌙"
   },
   {
     "word": "Spirited Away",
@@ -3183,7 +3536,8 @@
     "level": "medium",
     "hint": "a Studio Ghibli film where a girl works in a spirit bathhouse",
     "hintThai": "ภาพยนตร์ Studio Ghibli เรื่องเด็กสาวที่ไปทำงานในโรงอาบน้ำของวิญญาณ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "♨️"
   },
   {
     "word": "Light Yagami",
@@ -3192,7 +3546,8 @@
     "level": "medium",
     "hint": "a genius student who finds a notebook that kills anyone whose name is written in it",
     "hintThai": "นักเรียนอัจฉริยะที่พบสมุดที่สามารถฆ่าคนได้",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📓"
   },
   {
     "word": "Attack on Titan",
@@ -3201,7 +3556,8 @@
     "level": "medium",
     "hint": "an anime where humanity lives behind walls to hide from giant humanoid monsters",
     "hintThai": "อนิเมะที่มนุษย์อาศัยอยู่หลังกำแพงเพื่อหลบจากยักษ์มนุษย์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⚔️"
   },
   {
     "word": "Levi Ackerman",
@@ -3210,7 +3566,8 @@
     "level": "medium",
     "hint": "humanity's strongest soldier in Attack on Titan",
     "hintThai": "ทหารที่แข็งแกร่งที่สุดของมนุษยชาติใน Attack on Titan",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⚔️"
   },
   {
     "word": "Nobita",
@@ -3219,7 +3576,8 @@
     "level": "easy",
     "hint": "Doraemon's clumsy owner who always needs help",
     "hintThai": "เจ้าของโดราเอมอนที่งุ่มง่ามและต้องการความช่วยเหลือเสมอ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📚"
   },
   {
     "word": "Apple",
@@ -3228,7 +3586,8 @@
     "level": "easy",
     "hint": "a tech company famous for iPhone, Mac, and a bitten fruit logo",
     "hintThai": "บริษัทเทคโนโลยีสหรัฐฯ ที่ผลิต iPhone และ Mac",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍎"
   },
   {
     "word": "Google",
@@ -3237,7 +3596,8 @@
     "level": "easy",
     "hint": "the world's most used search engine",
     "hintThai": "บริษัทเทคโนโลยีที่ให้บริการเครื่องมือค้นหาและแอปมากมาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔍"
   },
   {
     "word": "Netflix",
@@ -3246,7 +3606,8 @@
     "level": "easy",
     "hint": "a streaming service where you binge-watch series",
     "hintThai": "แพลตฟอร์มสตรีมมิ่งที่มีซีรีส์และภาพยนตร์มากมาย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📺"
   },
   {
     "word": "YouTube",
@@ -3255,7 +3616,8 @@
     "level": "easy",
     "hint": "a platform where anyone can upload and watch videos",
     "hintThai": "แพลตฟอร์มวิดีโอออนไลน์ที่ใหญ่ที่สุดในโลก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "▶️"
   },
   {
     "word": "TikTok",
@@ -3264,7 +3626,8 @@
     "level": "easy",
     "hint": "an app famous for short vertical videos",
     "hintThai": "แอปวิดีโอสั้นที่ได้รับความนิยมทั่วโลก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎵"
   },
   {
     "word": "Instagram",
@@ -3273,7 +3636,8 @@
     "level": "easy",
     "hint": "a social media app built around sharing photos",
     "hintThai": "แอปโซเชียลมีเดียสำหรับแชร์รูปภาพและวิดีโอ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📸"
   },
   {
     "word": "Amazon",
@@ -3282,7 +3646,8 @@
     "level": "easy",
     "hint": "the world's largest online shopping platform",
     "hintThai": "แม่น้ำและป่าฝนเขตร้อนขนาดใหญ่ที่สุดในโลก อยู่ในอเมริกาใต้",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📦"
   },
   {
     "word": "Tesla",
@@ -3291,7 +3656,8 @@
     "level": "easy",
     "hint": "an electric car brand founded by Elon Musk",
     "hintThai": "บริษัทรถยนต์ไฟฟ้าของ Elon Musk",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⚡"
   },
   {
     "word": "Microsoft",
@@ -3300,7 +3666,8 @@
     "level": "easy",
     "hint": "the company behind Windows and Office",
     "hintThai": "บริษัทซอฟต์แวร์ที่ผลิต Windows และ Office",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🪟"
   },
   {
     "word": "Samsung",
@@ -3309,7 +3676,8 @@
     "level": "easy",
     "hint": "a South Korean tech giant making phones, TVs, and chips",
     "hintThai": "บริษัทเกาหลีใต้ที่ผลิตสมาร์ทโฟนและอิเล็กทรอนิกส์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📱"
   },
   {
     "word": "Spotify",
@@ -3318,7 +3686,8 @@
     "level": "easy",
     "hint": "a music streaming app where you listen to millions of songs",
     "hintThai": "แอปฟังเพลงออนไลน์ที่ใหญ่ที่สุดในโลก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎵"
   },
   {
     "word": "ChatGPT",
@@ -3327,7 +3696,8 @@
     "level": "medium",
     "hint": "an AI chatbot made by OpenAI that answers almost anything",
     "hintThai": "ปัญญาประดิษฐ์ที่สนทนาได้ พัฒนาโดย OpenAI",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🤖"
   },
   {
     "word": "Nike",
@@ -3336,7 +3706,8 @@
     "level": "easy",
     "hint": "a sportswear brand with a swoosh logo — \"Just Do It\"",
     "hintThai": "แบรนด์รองเท้าและเสื้อผ้ากีฬาสัญลักษณ์เป็นเครื่องหมาย Swoosh",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👟"
   },
   {
     "word": "Adidas",
@@ -3345,7 +3716,8 @@
     "level": "easy",
     "hint": "a sportswear brand known for three stripes",
     "hintThai": "แบรนด์กีฬาเยอรมันที่มีสัญลักษณ์สามแถบ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👟"
   },
   {
     "word": "Louis Vuitton",
@@ -3354,7 +3726,8 @@
     "level": "easy",
     "hint": "a French luxury brand famous for monogram bags",
     "hintThai": "แบรนด์แฟชั่นหรูจากฝรั่งเศส ขึ้นชื่อเรื่องกระเป๋าลาย LV",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👜"
   },
   {
     "word": "Gucci",
@@ -3363,7 +3736,8 @@
     "level": "easy",
     "hint": "an Italian luxury brand known for its double-G logo",
     "hintThai": "แบรนด์แฟชั่นหรูจากอิตาลี",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👜"
   },
   {
     "word": "Chanel",
@@ -3372,7 +3746,8 @@
     "level": "easy",
     "hint": "a French luxury house famous for No. 5 perfume and the little black dress",
     "hintThai": "แบรนด์แฟชั่นและน้ำหอมหรูจากฝรั่งเศส",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💄"
   },
   {
     "word": "Zara",
@@ -3381,7 +3756,8 @@
     "level": "easy",
     "hint": "a fast-fashion brand that copies runway looks quickly",
     "hintThai": "แบรนด์แฟชั่นสเปนที่อัปเดตสินค้าเร็วมาก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👗"
   },
   {
     "word": "H&M",
@@ -3390,7 +3766,8 @@
     "level": "easy",
     "hint": "a Swedish affordable fashion chain",
     "hintThai": "แบรนด์เสื้อผ้าราคาย่อมเยาจากสวีเดน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🛍️"
   },
   {
     "word": "Rolex",
@@ -3399,7 +3776,8 @@
     "level": "medium",
     "hint": "a Swiss luxury watch brand associated with success",
     "hintThai": "แบรนด์นาฬิกาหรูจากสวิตเซอร์แลนด์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⌚"
   },
   {
     "word": "Hermès",
@@ -3408,7 +3786,8 @@
     "level": "medium",
     "hint": "a French luxury brand famous for Birkin bags and silk scarves",
     "hintThai": "แบรนด์หรูฝรั่งเศส ขึ้นชื่อเรื่องกระเป๋า Birkin",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧣"
   },
   {
     "word": "Balenciaga",
@@ -3417,7 +3796,8 @@
     "level": "medium",
     "hint": "a high fashion brand known for oversized silhouettes and chunky sneakers",
     "hintThai": "แบรนด์แฟชั่นหรูที่ขึ้นชื่อเรื่องดีไซน์แปลกตา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "👟"
   },
   {
     "word": "Supreme",
@@ -3426,7 +3806,8 @@
     "level": "medium",
     "hint": "a streetwear brand whose red box logo creates huge hype every drop",
     "hintThai": "แบรนด์สตรีทแวร์ที่มีกล่องแดงเป็นโลโก้",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔴"
   },
   {
     "word": "McDonald's",
@@ -3435,7 +3816,8 @@
     "level": "easy",
     "hint": "a fast food chain famous for the Big Mac and golden arches",
     "hintThai": "ร้านฟาสต์ฟู้ดที่ใหญ่ที่สุดในโลก มีโลโก้ตัว M สีเหลือง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍔"
   },
   {
     "word": "Starbucks",
@@ -3444,7 +3826,8 @@
     "level": "easy",
     "hint": "a global coffee chain with a mermaid logo",
     "hintThai": "ร้านกาแฟสหรัฐฯ ที่มีสาขาทั่วโลก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "☕"
   },
   {
     "word": "Coca-Cola",
@@ -3453,7 +3836,8 @@
     "level": "easy",
     "hint": "the world's most famous cola drink in a red can",
     "hintThai": "น้ำอัดลมสีดำที่ขายดีที่สุดในโลก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥤"
   },
   {
     "word": "Red Bull",
@@ -3462,7 +3846,8 @@
     "level": "easy",
     "hint": "an energy drink originally from Thailand, sold worldwide",
     "hintThai": "เครื่องดื่มชูกำลังจากประเทศไทยที่ดังไปทั่วโลก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🐂"
   },
   {
     "word": "KFC",
@@ -3471,7 +3856,8 @@
     "level": "easy",
     "hint": "a fried chicken fast food chain started by Colonel Sanders",
     "hintThai": "ร้านไก่ทอดที่มีโลโก้พันเอก Sanders",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍗"
   },
   {
     "word": "Oreo",
@@ -3480,7 +3866,8 @@
     "level": "easy",
     "hint": "a black-and-white sandwich cookie you twist, lick, and dunk",
     "hintThai": "คุกกี้กลมสีดำไส้ครีมขาว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍪"
   },
   {
     "word": "Nutella",
@@ -3489,7 +3876,8 @@
     "level": "easy",
     "hint": "a sweet hazelnut-chocolate spread in a brown jar",
     "hintThai": "ครีมช็อกโกแลตผสมเฮเซลนัทสำหรับทาขนมปัง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍫"
   },
   {
     "word": "Lay's",
@@ -3498,7 +3886,8 @@
     "level": "easy",
     "hint": "a popular potato chip brand sold worldwide",
     "hintThai": "มันฝรั่งทอดกรอบในถุงที่ขายทั่วโลก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥔"
   },
   {
     "word": "Toyota",
@@ -3507,7 +3896,8 @@
     "level": "easy",
     "hint": "the world's bestselling car brand, based in Japan",
     "hintThai": "บริษัทรถยนต์ญี่ปุ่นที่ขายดีที่สุดในโลก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🚗"
   },
   {
     "word": "Ferrari",
@@ -3516,7 +3906,8 @@
     "level": "easy",
     "hint": "an Italian sports car brand known for speed and a prancing horse logo",
     "hintThai": "รถยนต์สปอร์ตสีแดงหรูจากอิตาลี",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏎️"
   },
   {
     "word": "Lamborghini",
@@ -3525,7 +3916,8 @@
     "level": "medium",
     "hint": "an Italian supercar brand whose cars are named after bulls",
     "hintThai": "รถสปอร์ตอิตาเลียนที่มีประตูแบบปีกผีเสื้อ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏎️"
   },
   {
     "word": "Harley-Davidson",
@@ -3534,7 +3926,8 @@
     "level": "medium",
     "hint": "an American motorcycle brand famous for its loud rumble",
     "hintThai": "แบรนด์มอเตอร์ไซค์อเมริกันที่มีเสียงเครื่องยนต์เป็นเอกลักษณ์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏍️"
   },
   {
     "word": "Disney",
@@ -3543,7 +3936,8 @@
     "level": "easy",
     "hint": "the entertainment giant behind Mickey Mouse, Pixar, and theme parks",
     "hintThai": "บริษัทบันเทิงสหรัฐฯ ที่สร้างการ์ตูนและสวนสนุก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "✨"
   },
   {
     "word": "LEGO",
@@ -3552,7 +3946,8 @@
     "level": "easy",
     "hint": "a Danish toy company famous for colorful plastic building bricks",
     "hintThai": "ของเล่นเม็ดพลาสติกที่ต่อประกอบเป็นรูปต่างๆ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧱"
   },
   {
     "word": "IKEA",
@@ -3561,7 +3956,8 @@
     "level": "easy",
     "hint": "a Swedish furniture store where you assemble everything yourself",
     "hintThai": "ร้านเฟอร์นิเจอร์สวีเดนที่ต้องประกอบเอง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🪑"
   },
   {
     "word": "Airbnb",
@@ -3570,7 +3966,8 @@
     "level": "medium",
     "hint": "a platform where people rent out their homes to travelers",
     "hintThai": "แพลตฟอร์มเช่าที่พักจากเจ้าของบ้านทั่วโลก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏠"
   },
   {
     "word": "Uber",
@@ -3579,7 +3976,8 @@
     "level": "easy",
     "hint": "an app that lets you book a car ride from your phone",
     "hintThai": "แอปเรียกรถโดยสารผ่านสมาร์ทโฟน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🚗"
   },
   {
     "word": "NASA",
@@ -3588,7 +3986,8 @@
     "level": "easy",
     "hint": "the US space agency that sent astronauts to the Moon",
     "hintThai": "องค์กรอวกาศของสหรัฐอเมริกา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🚀"
   },
   {
     "word": "Harvard",
@@ -3597,7 +3996,8 @@
     "level": "medium",
     "hint": "the most famous university in the world, in Boston USA",
     "hintThai": "มหาวิทยาลัยชื่อดังที่สุดในสหรัฐอเมริกา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎓"
   },
   {
     "word": "Rolls-Royce",
@@ -3606,7 +4006,8 @@
     "level": "medium",
     "hint": "the ultimate symbol of luxury — cars and jet engines",
     "hintThai": "แบรนด์รถยนต์หรูสูงสุดจากอังกฤษ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🚗"
   },
   {
     "word": "Patagonia",
@@ -3615,7 +4016,8 @@
     "level": "hard",
     "hint": "an outdoor clothing brand famous for sustainability and donating profits to the planet",
     "hintThai": "แบรนด์เสื้อผ้าแนวกลางแจ้งที่ใส่ใจสิ่งแวดล้อม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏔️"
   },
   {
     "word": "coffee",
@@ -3624,7 +4026,8 @@
     "level": "easy",
     "hint": "a hot dark drink made from roasted beans that helps you wake up",
     "hintThai": "เครื่องดื่มร้อนที่ทำจากเมล็ดกาแฟคั่ว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "☕"
   },
   {
     "word": "tea",
@@ -3633,7 +4036,8 @@
     "level": "easy",
     "hint": "a hot drink made by pouring water over dried leaves",
     "hintThai": "เครื่องดื่มร้อนที่ทำจากใบชา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍵"
   },
   {
     "word": "water",
@@ -3642,7 +4046,8 @@
     "level": "easy",
     "hint": "the clearest drink with no taste, essential for life",
     "hintThai": "ของเหลวไม่มีสีที่จำเป็นต่อชีวิต",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💧"
   },
   {
     "word": "milk",
@@ -3651,7 +4056,8 @@
     "level": "easy",
     "hint": "a white drink that comes from cows and is good for your bones",
     "hintThai": "ของเหลวสีขาวที่ได้จากวัว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥛"
   },
   {
     "word": "juice",
@@ -3660,7 +4066,8 @@
     "level": "easy",
     "hint": "a drink squeezed from fruit",
     "hintThai": "น้ำที่คั้นจากผลไม้",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧃"
   },
   {
     "word": "beer",
@@ -3669,7 +4076,8 @@
     "level": "easy",
     "hint": "a bubbly alcoholic drink made from hops and barley",
     "hintThai": "เครื่องดื่มแอลกอฮอล์ที่ทำจากข้าวมอลต์และฮอปส์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍺"
   },
   {
     "word": "wine",
@@ -3678,7 +4086,8 @@
     "level": "easy",
     "hint": "an alcoholic drink made from fermented grapes",
     "hintThai": "เครื่องดื่มแอลกอฮอล์ที่ทำจากองุ่นหมัก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍷"
   },
   {
     "word": "smoothie",
@@ -3687,7 +4096,8 @@
     "level": "easy",
     "hint": "a thick blended drink made from fruit and sometimes yogurt or milk",
     "hintThai": "เครื่องดื่มข้นที่ปั่นจากผลไม้หรือผัก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥤"
   },
   {
     "word": "lemonade",
@@ -3696,7 +4106,8 @@
     "level": "easy",
     "hint": "a cold sweet drink made from lemon juice and sugar",
     "hintThai": "น้ำมะนาวหวานที่เสิร์ฟเย็น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍋"
   },
   {
     "word": "soda",
@@ -3705,7 +4116,8 @@
     "level": "easy",
     "hint": "a fizzy drink with bubbles, often sweet and flavored",
     "hintThai": "น้ำอัดลมหวานที่มีฟอง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥤"
   },
   {
     "word": "cocktail",
@@ -3714,7 +4126,8 @@
     "level": "medium",
     "hint": "a mixed alcoholic drink, often colorful and served at parties",
     "hintThai": "เครื่องดื่มแอลกอฮอล์ที่ผสมหลายชนิดเข้าด้วยกัน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍹"
   },
   {
     "word": "espresso",
@@ -3723,7 +4136,8 @@
     "level": "medium",
     "hint": "a very strong, small shot of coffee made by pushing hot water through ground beans",
     "hintThai": "กาแฟเข้มข้นที่ชงในปริมาณเล็กน้อย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "☕"
   },
   {
     "word": "latte",
@@ -3732,7 +4146,8 @@
     "level": "medium",
     "hint": "a coffee drink made with espresso and lots of steamed milk",
     "hintThai": "กาแฟผสมนมร้อนในปริมาณมาก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "☕"
   },
   {
     "word": "matcha",
@@ -3741,7 +4156,8 @@
     "level": "medium",
     "hint": "a bright green Japanese powder made from ground tea leaves",
     "hintThai": "เครื่องดื่มที่ทำจากผงชาเขียวญี่ปุ่น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍵"
   },
   {
     "word": "bubble tea",
@@ -3750,7 +4166,8 @@
     "level": "medium",
     "hint": "a Taiwanese drink with tea, milk, and chewy tapioca balls at the bottom",
     "hintThai": "ชานมไข่มุกที่มีลูกเม็ดเคี้ยวได้อยู่ด้านล่าง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧋"
   },
   {
     "word": "whiskey",
@@ -3759,7 +4176,8 @@
     "level": "medium",
     "hint": "a strong alcoholic spirit aged in wooden barrels, often drunk on the rocks",
     "hintThai": "เครื่องดื่มแอลกอฮอล์กลั่นที่ทำจากธัญพืชและบ่มในถัง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🥃"
   },
   {
     "word": "sparkling water",
@@ -3768,7 +4186,8 @@
     "level": "medium",
     "hint": "plain water with bubbles but no sugar or flavor",
     "hintThai": "น้ำแร่ที่มีฟองก๊าซคาร์บอนไดออกไซด์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💧"
   },
   {
     "word": "hot chocolate",
@@ -3777,7 +4196,8 @@
     "level": "medium",
     "hint": "a warm sweet drink made from cocoa or melted chocolate and milk",
     "hintThai": "เครื่องดื่มร้อนที่ทำจากโกโก้หรือช็อคโกแลต",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍫"
   },
   {
     "word": "energy drink",
@@ -3786,7 +4206,8 @@
     "level": "medium",
     "hint": "a drink with caffeine and sugar that claims to boost your energy",
     "hintThai": "เครื่องดื่มที่มีคาเฟอีนและน้ำตาลสูงเพื่อเพิ่มพลังงาน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⚡"
   },
   {
     "word": "kombucha",
@@ -3795,7 +4216,8 @@
     "level": "hard",
     "hint": "a fizzy fermented tea drink believed to be good for your gut",
     "hintThai": "เครื่องดื่มชาหมักที่มีรสเปรี้ยวเล็กน้อย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍶"
   },
   {
     "word": "mocktail",
@@ -3804,7 +4226,8 @@
     "level": "hard",
     "hint": "a fancy mixed drink that looks like a cocktail but contains no alcohol",
     "hintThai": "เครื่องดื่มที่คล้ายค็อกเทลแต่ไม่มีแอลกอฮอล์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍹"
   },
   {
     "word": "cold brew",
@@ -3813,7 +4236,8 @@
     "level": "hard",
     "hint": "coffee steeped in cold water for many hours instead of using heat",
     "hintThai": "กาแฟที่ชงด้วยน้ำเย็นเป็นเวลานาน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "☕"
   },
   {
     "word": "affogato",
@@ -3822,7 +4246,8 @@
     "level": "hard",
     "hint": "an Italian dessert drink — a shot of hot espresso poured over vanilla ice cream",
     "hintThai": "เอสเปรสโซร้อนราดบนไอศกรีมวานิลลา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🍦"
   },
   {
     "word": "stapler",
@@ -3831,7 +4256,8 @@
     "level": "easy",
     "hint": "a tool that joins sheets of paper together with a small metal clip",
     "hintThai": "อุปกรณ์ที่ใช้เย็บกระดาษเข้าด้วยกันด้วยลวดโลหะ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📌"
   },
   {
     "word": "whiteboard",
@@ -3840,7 +4266,8 @@
     "level": "easy",
     "hint": "a smooth white surface you can write on with a marker and wipe clean",
     "hintThai": "กระดานขาวที่เขียนได้ด้วยปากกาและลบออกได้",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📋"
   },
   {
     "word": "projector",
@@ -3849,7 +4276,8 @@
     "level": "easy",
     "hint": "a device that shines an image or video onto a wall or screen",
     "hintThai": "อุปกรณ์ฉายภาพหรือวิดีโอบนผนังหรือจอ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📽️"
   },
   {
     "word": "printer",
@@ -3858,7 +4286,8 @@
     "level": "easy",
     "hint": "a machine connected to a computer that puts text or images on paper",
     "hintThai": "เครื่องที่พิมพ์ข้อความหรือภาพลงบนกระดาษ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🖨️"
   },
   {
     "word": "sticky note",
@@ -3867,7 +4296,8 @@
     "level": "easy",
     "hint": "a small piece of coloured paper with a sticky back used for quick reminders",
     "hintThai": "กระดาษสีเล็กๆที่มีกาวด้านหลังสำหรับจดบันทึกย่อ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📝"
   },
   {
     "word": "highlighter",
@@ -3876,7 +4306,8 @@
     "level": "easy",
     "hint": "a bright-coloured pen used to mark important text so it stands out",
     "hintThai": "ปากกาสีสดที่ใช้ขีดเน้นข้อความสำคัญ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "✏️"
   },
   {
     "word": "scissors",
@@ -3885,7 +4316,8 @@
     "level": "easy",
     "hint": "a tool with two blades that cut paper, fabric, or other thin materials",
     "hintThai": "อุปกรณ์สองใบมีดสำหรับตัดกระดาษหรือผ้า",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "✂️"
   },
   {
     "word": "ruler",
@@ -3894,7 +4326,8 @@
     "level": "easy",
     "hint": "a long flat strip used for measuring length and drawing straight lines",
     "hintThai": "แท่งแบนยาวสำหรับวัดความยาวและลากเส้นตรง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📏"
   },
   {
     "word": "eraser",
@@ -3903,7 +4336,8 @@
     "level": "easy",
     "hint": "a small block used to remove pencil or pen marks from paper",
     "hintThai": "ก้อนเล็กๆใช้ลบรอยดินสอหรือปากกาออกจากกระดาษ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🗑️"
   },
   {
     "word": "notebook",
@@ -3912,7 +4346,8 @@
     "level": "easy",
     "hint": "a book with blank or lined pages for writing notes",
     "hintThai": "สมุดที่มีหน้ากระดาษเปล่าหรือบรรทัดสำหรับจดบันทึก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📓"
   },
   {
     "word": "calculator",
@@ -3921,7 +4356,8 @@
     "level": "easy",
     "hint": "a small electronic device used to do maths quickly",
     "hintThai": "อุปกรณ์อิเล็กทรอนิกส์ขนาดเล็กสำหรับคำนวณตัวเลข",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧮"
   },
   {
     "word": "backpack",
@@ -3930,7 +4366,8 @@
     "level": "easy",
     "hint": "a bag with two straps worn on your back to carry things",
     "hintThai": "กระเป๋าสะพายหลังที่มีสายสองเส้น",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎒"
   },
   {
     "word": "pencil case",
@@ -3939,7 +4376,8 @@
     "level": "easy",
     "hint": "a small pouch or box that holds pens, pencils, and stationery",
     "hintThai": "กล่องหรือถุงเล็กสำหรับใส่ดินสอและอุปกรณ์เครื่องเขียน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "✏️"
   },
   {
     "word": "marker",
@@ -3948,7 +4386,8 @@
     "level": "easy",
     "hint": "a thick pen used to write on whiteboards or flip charts",
     "hintThai": "ปากกาหัวหนาสำหรับเขียนบนไวท์บอร์ด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🖊️"
   },
   {
     "word": "tape",
@@ -3957,7 +4396,8 @@
     "level": "easy",
     "hint": "a clear sticky strip used to join or seal pieces of paper",
     "hintThai": "เทปใสที่มีกาวสำหรับติดหรือปิดผนึกกระดาษ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎀"
   },
   {
     "word": "folder",
@@ -3966,7 +4406,8 @@
     "level": "easy",
     "hint": "a stiff cover used to keep papers organised together",
     "hintThai": "ปกแข็งที่ใช้จัดเก็บกระดาษให้เป็นระเบียบ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📂"
   },
   {
     "word": "clipboard",
@@ -3975,7 +4416,8 @@
     "level": "medium",
     "hint": "a flat board with a clip at the top for holding paper while writing",
     "hintThai": "กระดานแบนที่มีคลิปด้านบนสำหรับหนีบกระดาษขณะเขียน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📋"
   },
   {
     "word": "hole punch",
@@ -3984,7 +4426,8 @@
     "level": "medium",
     "hint": "a tool that makes round holes in paper so it can be put in a binder",
     "hintThai": "อุปกรณ์เจาะรูกลมในกระดาษเพื่อใส่แฟ้ม",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⭕"
   },
   {
     "word": "binder",
@@ -3993,7 +4436,8 @@
     "level": "medium",
     "hint": "a large folder with metal rings inside that hold punched pages",
     "hintThai": "แฟ้มขนาดใหญ่ที่มีห่วงโลหะสำหรับเก็บกระดาษที่เจาะรูแล้ว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📁"
   },
   {
     "word": "desk lamp",
@@ -4002,7 +4446,8 @@
     "level": "easy",
     "hint": "a small light that sits on a desk to help you see while working",
     "hintThai": "โคมไฟขนาดเล็กที่วางบนโต๊ะเพื่อให้แสงสว่างขณะทำงาน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "💡"
   },
   {
     "word": "webcam",
@@ -4011,7 +4456,8 @@
     "level": "medium",
     "hint": "a small camera attached to a computer for video calls",
     "hintThai": "กล้องขนาดเล็กที่ต่อกับคอมพิวเตอร์สำหรับวิดีโอคอล",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📷"
   },
   {
     "word": "headset",
@@ -4020,7 +4466,8 @@
     "level": "medium",
     "hint": "earphones combined with a microphone, used for calls or listening",
     "hintThai": "หูฟังที่มีไมโครโฟนในตัวสำหรับโทรศัพท์หรือฟังเพลง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎧"
   },
   {
     "word": "mouse pad",
@@ -4029,7 +4476,8 @@
     "level": "easy",
     "hint": "a flat pad placed under a computer mouse so it moves smoothly",
     "hintThai": "แผ่นรองที่วางใต้เมาส์คอมพิวเตอร์เพื่อให้เลื่อนได้คล่อง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🖱️"
   },
   {
     "word": "keyboard",
@@ -4038,7 +4486,8 @@
     "level": "easy",
     "hint": "a board with many keys used to type text into a computer",
     "hintThai": "แผงที่มีปุ่มมากมายสำหรับพิมพ์ข้อความเข้าคอมพิวเตอร์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⌨️"
   },
   {
     "word": "monitor",
@@ -4047,7 +4496,8 @@
     "level": "easy",
     "hint": "the screen that shows what your computer is doing",
     "hintThai": "จอแสดงผลที่แสดงสิ่งที่คอมพิวเตอร์กำลังทำ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🖥️"
   },
   {
     "word": "shredder",
@@ -4056,7 +4506,8 @@
     "level": "medium",
     "hint": "a machine that cuts paper into tiny strips so documents cannot be read",
     "hintThai": "เครื่องที่ตัดกระดาษเป็นชิ้นเล็กๆเพื่อทำลายเอกสาร",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🗑️"
   },
   {
     "word": "filing cabinet",
@@ -4065,7 +4516,8 @@
     "level": "medium",
     "hint": "a tall metal furniture with drawers used to store paper files",
     "hintThai": "เฟอร์นิเจอร์โลหะสูงที่มีลิ้นชักสำหรับเก็บแฟ้มเอกสาร",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📁"
   },
   {
     "word": "extension cord",
@@ -4074,7 +4526,8 @@
     "level": "medium",
     "hint": "a cable with extra sockets that lets you plug in several devices far from the wall",
     "hintThai": "สายไฟที่มีปลั๊กหลายช่องเพื่อต่ออุปกรณ์หลายตัวห่างจากผนัง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔌"
   },
   {
     "word": "USB hub",
@@ -4083,7 +4536,8 @@
     "level": "medium",
     "hint": "a device that adds extra USB ports so you can connect many devices at once",
     "hintThai": "อุปกรณ์ที่เพิ่มพอร์ต USB เพื่อต่ออุปกรณ์หลายตัวพร้อมกัน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔌"
   },
   {
     "word": "globe",
@@ -4092,7 +4546,8 @@
     "level": "easy",
     "hint": "a round model of the Earth that spins on a stand",
     "hintThai": "โมเดลโลกทรงกลมที่หมุนได้บนขาตั้ง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌍"
   },
   {
     "word": "scanner",
@@ -4101,7 +4556,8 @@
     "level": "medium",
     "hint": "a machine that converts a paper document into a digital image on your computer",
     "hintThai": "เครื่องที่แปลงเอกสารกระดาษเป็นภาพดิจิทัลในคอมพิวเตอร์",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📠"
   },
   {
     "word": "calendar",
@@ -4110,7 +4566,8 @@
     "level": "easy",
     "hint": "a chart showing all the days, weeks, and months of the year",
     "hintThai": "แผนภูมิที่แสดงวัน สัปดาห์ และเดือนทั้งหมดของปี",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "📅"
   },
   {
     "word": "whiteboard eraser",
@@ -4119,7 +4576,8 @@
     "level": "easy",
     "hint": "a soft block used to wipe writing off a whiteboard",
     "hintThai": "ก้อนนุ่มสำหรับลบตัวเขียนออกจากไวท์บอร์ด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🧹"
   },
   {
     "word": "name tag",
@@ -4128,7 +4586,8 @@
     "level": "easy",
     "hint": "a small badge worn on clothing to show who you are",
     "hintThai": "ป้ายเล็กๆที่ติดบนเสื้อผ้าเพื่อแสดงตัวตน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏷️"
   },
   {
     "word": "ID card",
@@ -4137,7 +4596,8 @@
     "level": "easy",
     "hint": "a card you carry or swipe to prove who you are and enter a building",
     "hintThai": "บัตรที่พกพาหรือแตะเพื่อยืนยันตัวตนและเข้าอาคาร",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🪪"
   },
   {
     "word": "Bangkok",
@@ -4148,7 +4608,8 @@
     "level": "easy",
     "hint": "capital city known for temples and street food",
     "hintThai": "เมืองหลวงที่มีวัดและอาหารริมทาง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🐘"
   },
   {
     "word": "Tokyo",
@@ -4159,7 +4620,8 @@
     "level": "easy",
     "hint": "the world's largest city, famous for sushi and anime",
     "hintThai": "เมืองใหญ่ที่สุดในโลก มีซูชิและอนิเมะ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🗼"
   },
   {
     "word": "Paris",
@@ -4170,7 +4632,8 @@
     "level": "easy",
     "hint": "city of love with a famous iron tower",
     "hintThai": "เมืองแห่งความรัก มีหอคอยเหล็กชื่อดัง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🗼"
   },
   {
     "word": "New York",
@@ -4181,7 +4644,8 @@
     "level": "easy",
     "hint": "city that never sleeps with a famous statue of liberty",
     "hintThai": "เมืองที่ไม่มีวันหลับ มีเทพีเสรีภาพ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🗽"
   },
   {
     "word": "London",
@@ -4192,7 +4656,8 @@
     "level": "easy",
     "hint": "city with a famous clock tower and red buses",
     "hintThai": "มีหอนาฬิกาบิ๊กเบนและรถบัสสีแดง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎡"
   },
   {
     "word": "Dubai",
@@ -4203,7 +4668,8 @@
     "level": "easy",
     "hint": "desert city famous for its skyscrapers and luxury",
     "hintThai": "เมืองทะเลทรายที่มีตึกสูงและความหรูหรา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏙️"
   },
   {
     "word": "Singapore",
@@ -4214,7 +4680,8 @@
     "level": "easy",
     "hint": "small island city-state known for being very clean",
     "hintThai": "เกาะเล็กๆ ที่สะอาดมากที่สุดในโลก",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🦁"
   },
   {
     "word": "Sydney",
@@ -4225,7 +4692,8 @@
     "level": "medium",
     "hint": "city with a famous opera house by the harbor",
     "hintThai": "มีโรงโอเปร่าชื่อดังริมอ่าว",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🦘"
   },
   {
     "word": "Rome",
@@ -4236,7 +4704,8 @@
     "level": "medium",
     "hint": "ancient city with the Colosseum and the Vatican",
     "hintThai": "เมืองโบราณ มีโคลอสเซียมและวาติกัน",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏛️"
   },
   {
     "word": "Barcelona",
@@ -4247,7 +4716,8 @@
     "level": "medium",
     "hint": "coastal city famous for Gaudi's architecture and football",
     "hintThai": "เมืองชายฝั่งมีสถาปัตยกรรมของเกาดี",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⚽"
   },
   {
     "word": "Amsterdam",
@@ -4258,7 +4728,8 @@
     "level": "medium",
     "hint": "city of canals, bicycles, and tulips",
     "hintThai": "เมืองคูน้ำ จักรยาน และดอกทิวลิป",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌷"
   },
   {
     "word": "Istanbul",
@@ -4269,7 +4740,8 @@
     "level": "medium",
     "hint": "city on two continents with grand mosques",
     "hintThai": "เมืองที่ตั้งอยู่บนสองทวีป มีมัสยิดใหญ่",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🕌"
   },
   {
     "word": "Cairo",
@@ -4280,7 +4752,8 @@
     "level": "medium",
     "hint": "city near the ancient pyramids",
     "hintThai": "เมืองใกล้พีระมิดโบราณ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🔺"
   },
   {
     "word": "Seoul",
@@ -4291,7 +4764,8 @@
     "level": "medium",
     "hint": "capital of K-pop and Korean BBQ",
     "hintThai": "เมืองหลวงของเคป็อปและบาร์บีคิวเกาหลี",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎶"
   },
   {
     "word": "Mumbai",
@@ -4302,7 +4776,8 @@
     "level": "medium",
     "hint": "India's financial capital and Bollywood home",
     "hintThai": "เมืองหลวงการเงินและบอลลีวูดของอินเดีย",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🎬"
   },
   {
     "word": "Chiang Mai",
@@ -4313,7 +4788,8 @@
     "level": "medium",
     "hint": "northern Thai city famous for temples and mountains",
     "hintThai": "เมืองเหนือของไทย มีวัดและภูเขา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏔️"
   },
   {
     "word": "Kyoto",
@@ -4324,7 +4800,8 @@
     "level": "medium",
     "hint": "Japan's ancient capital full of temples and geishas",
     "hintThai": "เมืองหลวงเก่าญี่ปุ่น มีวัดและเกอิชา",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "⛩️"
   },
   {
     "word": "Prague",
@@ -4335,7 +4812,8 @@
     "level": "hard",
     "hint": "fairy-tale city with a medieval old town in Europe",
     "hintThai": "เมืองแบบเทพนิยาย มีเมืองเก่ายุคกลาง",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🏰"
   },
   {
     "word": "Marrakech",
@@ -4346,7 +4824,8 @@
     "level": "hard",
     "hint": "colorful maze-like market city in North Africa",
     "hintThai": "เมืองตลาดสีสันสดใสในแอฟริกาเหนือ",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🕌"
   },
   {
     "word": "Bali",
@@ -4357,7 +4836,8 @@
     "level": "easy",
     "hint": "tropical island resort famous for rice terraces and temples",
     "hintThai": "เกาะท่องเที่ยวมีนาขั้นบันไดและวัด",
-    "pos": "noun"
+    "pos": "noun",
+    "emoji": "🌺"
   },
   {
     "word": "dog",
@@ -4365,7 +4845,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "man's best friend, barks",
-    "hintThai": "สัตว์เลี้ยงที่ซื่อสัตย์ เห่าได้"
+    "hintThai": "สัตว์เลี้ยงที่ซื่อสัตย์ เห่าได้",
+    "emoji": "🐕"
   },
   {
     "word": "cat",
@@ -4373,7 +4854,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "purrs and meows",
-    "hintThai": "ร้องเหมียว ชอบนอน"
+    "hintThai": "ร้องเหมียว ชอบนอน",
+    "emoji": "🐈"
   },
   {
     "word": "elephant",
@@ -4381,7 +4863,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "largest land animal, has a trunk",
-    "hintThai": "สัตว์บกที่ใหญ่ที่สุด มีงวง"
+    "hintThai": "สัตว์บกที่ใหญ่ที่สุด มีงวง",
+    "emoji": "🐘"
   },
   {
     "word": "lion",
@@ -4389,7 +4872,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "king of the jungle, roars",
-    "hintThai": "ราชาแห่งป่า คำรามดัง"
+    "hintThai": "ราชาแห่งป่า คำรามดัง",
+    "emoji": "🦁"
   },
   {
     "word": "tiger",
@@ -4397,7 +4881,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "big cat with stripes",
-    "hintThai": "แมวใหญ่มีลายทาง"
+    "hintThai": "แมวใหญ่มีลายทาง",
+    "emoji": "🐯"
   },
   {
     "word": "monkey",
@@ -4405,7 +4890,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "swings through trees, loves bananas",
-    "hintThai": "ห้อยโหนต้นไม้ ชอบกล้วย"
+    "hintThai": "ห้อยโหนต้นไม้ ชอบกล้วย",
+    "emoji": "🐒"
   },
   {
     "word": "fish",
@@ -4413,7 +4899,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "lives in water, has fins",
-    "hintThai": "อาศัยในน้ำ มีครีบ"
+    "hintThai": "อาศัยในน้ำ มีครีบ",
+    "emoji": "🐟"
   },
   {
     "word": "horse",
@@ -4421,7 +4908,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "you can ride it, gallops",
-    "hintThai": "ขี่ได้ วิ่งเร็ว"
+    "hintThai": "ขี่ได้ วิ่งเร็ว",
+    "emoji": "🐎"
   },
   {
     "word": "rabbit",
@@ -4429,7 +4917,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "long ears, hops",
-    "hintThai": "หูยาว กระโดด"
+    "hintThai": "หูยาว กระโดด",
+    "emoji": "🐰"
   },
   {
     "word": "bear",
@@ -4437,7 +4926,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "hibernates in winter, loves honey",
-    "hintThai": "จำศีลฤดูหนาว ชอบน้ำผึ้ง"
+    "hintThai": "จำศีลฤดูหนาว ชอบน้ำผึ้ง",
+    "emoji": "🐻"
   },
   {
     "word": "duck",
@@ -4445,7 +4935,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "quacks, swims and flies",
-    "hintThai": "ร้องแควก ว่ายน้ำและบินได้"
+    "hintThai": "ร้องแควก ว่ายน้ำและบินได้",
+    "emoji": "🦆"
   },
   {
     "word": "cow",
@@ -4453,7 +4944,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "moos, gives milk",
-    "hintThai": "ร้องมู ให้นม"
+    "hintThai": "ร้องมู ให้นม",
+    "emoji": "🐄"
   },
   {
     "word": "pig",
@@ -4461,7 +4953,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "pink, rolls in mud, oinks",
-    "hintThai": "สีชมพู ชอบนอนโคลน"
+    "hintThai": "สีชมพู ชอบนอนโคลน",
+    "emoji": "🐷"
   },
   {
     "word": "snake",
@@ -4469,7 +4962,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "no legs, slithers",
-    "hintThai": "ไม่มีขา เลื้อยคลาน"
+    "hintThai": "ไม่มีขา เลื้อยคลาน",
+    "emoji": "🐍"
   },
   {
     "word": "frog",
@@ -4477,7 +4971,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "jumps, croaks, lives near water",
-    "hintThai": "กระโดด ร้องอ๊บ อยู่ใกล้น้ำ"
+    "hintThai": "กระโดด ร้องอ๊บ อยู่ใกล้น้ำ",
+    "emoji": "🐸"
   },
   {
     "word": "penguin",
@@ -4485,7 +4980,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "black and white bird that can't fly",
-    "hintThai": "นกขาวดำที่บินไม่ได้"
+    "hintThai": "นกขาวดำที่บินไม่ได้",
+    "emoji": "🐧"
   },
   {
     "word": "dolphin",
@@ -4493,7 +4989,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "smart sea mammal, loves to jump",
-    "hintThai": "สัตว์เลี้ยงลูกด้วยนมในทะเล ฉลาดมาก"
+    "hintThai": "สัตว์เลี้ยงลูกด้วยนมในทะเล ฉลาดมาก",
+    "emoji": "🐬"
   },
   {
     "word": "bird",
@@ -4501,7 +4998,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "has wings and feathers",
-    "hintThai": "มีปีกและขนนก"
+    "hintThai": "มีปีกและขนนก",
+    "emoji": "🐦"
   },
   {
     "word": "chicken",
@@ -4509,7 +5007,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "lays eggs, clucks",
-    "hintThai": "ออกไข่ ขันได้"
+    "hintThai": "ออกไข่ ขันได้",
+    "emoji": "🐔"
   },
   {
     "word": "sheep",
@@ -4517,7 +5016,8 @@
     "category": "Animals",
     "level": "easy",
     "hint": "fluffy wool, baas",
-    "hintThai": "ขนฟู ร้องแม้"
+    "hintThai": "ขนฟู ร้องแม้",
+    "emoji": "🐑"
   },
   {
     "word": "giraffe",
@@ -4525,7 +5025,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "tallest animal, very long neck",
-    "hintThai": "สัตว์ที่สูงที่สุด คอยาวมาก"
+    "hintThai": "สัตว์ที่สูงที่สุด คอยาวมาก",
+    "emoji": "🦒"
   },
   {
     "word": "zebra",
@@ -4533,7 +5034,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "looks like a horse with black and white stripes",
-    "hintThai": "หน้าตาคล้ายม้า มีลายขาวดำ"
+    "hintThai": "หน้าตาคล้ายม้า มีลายขาวดำ",
+    "emoji": "🦓"
   },
   {
     "word": "gorilla",
@@ -4541,7 +5043,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "largest primate, very strong",
-    "hintThai": "ไพรเมตที่ใหญ่ที่สุด แข็งแรงมาก"
+    "hintThai": "ไพรเมตที่ใหญ่ที่สุด แข็งแรงมาก",
+    "emoji": "🦍"
   },
   {
     "word": "crocodile",
@@ -4549,7 +5052,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "ancient reptile with big jaws",
-    "hintThai": "สัตว์เลื้อยคลานโบราณ ปากใหญ่"
+    "hintThai": "สัตว์เลื้อยคลานโบราณ ปากใหญ่",
+    "emoji": "🐊"
   },
   {
     "word": "parrot",
@@ -4557,7 +5061,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "colorful bird that can talk",
-    "hintThai": "นกสีสวย พูดได้"
+    "hintThai": "นกสีสวย พูดได้",
+    "emoji": "🦜"
   },
   {
     "word": "flamingo",
@@ -4565,7 +5070,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "pink bird that stands on one leg",
-    "hintThai": "นกสีชมพู ยืนขาเดียว"
+    "hintThai": "นกสีชมพู ยืนขาเดียว",
+    "emoji": "🦩"
   },
   {
     "word": "panda",
@@ -4573,7 +5079,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "black and white bear that eats bamboo",
-    "hintThai": "หมีขาวดำ กินไผ่"
+    "hintThai": "หมีขาวดำ กินไผ่",
+    "emoji": "🐼"
   },
   {
     "word": "koala",
@@ -4581,7 +5088,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "Australian animal that sleeps in eucalyptus trees",
-    "hintThai": "สัตว์ออสเตรเลีย นอนบนต้นยูคาลิปตัส"
+    "hintThai": "สัตว์ออสเตรเลีย นอนบนต้นยูคาลิปตัส",
+    "emoji": "🐨"
   },
   {
     "word": "wolf",
@@ -4589,7 +5097,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "hunts in packs, howls at the moon",
-    "hintThai": "ล่าเป็นฝูง หอนใส่พระจันทร์"
+    "hintThai": "ล่าเป็นฝูง หอนใส่พระจันทร์",
+    "emoji": "🐺"
   },
   {
     "word": "fox",
@@ -4597,7 +5106,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "clever, bushy tail, orange fur",
-    "hintThai": "ฉลาดแกมโกง หางฟู ขนสีส้ม"
+    "hintThai": "ฉลาดแกมโกง หางฟู ขนสีส้ม",
+    "emoji": "🦊"
   },
   {
     "word": "eagle",
@@ -4605,7 +5115,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "large bird of prey with sharp eyes",
-    "hintThai": "นกล่าเหยื่อขนาดใหญ่ สายตาคม"
+    "hintThai": "นกล่าเหยื่อขนาดใหญ่ สายตาคม",
+    "emoji": "🦅"
   },
   {
     "word": "shark",
@@ -4613,7 +5124,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "ocean predator with rows of sharp teeth",
-    "hintThai": "นักล่าในทะเล มีฟันหลายแถว"
+    "hintThai": "นักล่าในทะเล มีฟันหลายแถว",
+    "emoji": "🦈"
   },
   {
     "word": "whale",
@@ -4621,7 +5133,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "largest animal on Earth, lives in the ocean",
-    "hintThai": "สัตว์ที่ใหญ่ที่สุดในโลก อยู่ในทะเล"
+    "hintThai": "สัตว์ที่ใหญ่ที่สุดในโลก อยู่ในทะเล",
+    "emoji": "🐳"
   },
   {
     "word": "octopus",
@@ -4629,7 +5142,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "eight arms, can change color",
-    "hintThai": "มีแปดแขน เปลี่ยนสีได้"
+    "hintThai": "มีแปดแขน เปลี่ยนสีได้",
+    "emoji": "🐙"
   },
   {
     "word": "butterfly",
@@ -4637,7 +5151,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "starts as a caterpillar, colorful wings",
-    "hintThai": "เริ่มจากหนอน มีปีกสีสวย"
+    "hintThai": "เริ่มจากหนอน มีปีกสีสวย",
+    "emoji": "🦋"
   },
   {
     "word": "turtle",
@@ -4645,7 +5160,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "slow mover with a hard shell on its back",
-    "hintThai": "เดินช้า มีกระดองแข็งบนหลัง"
+    "hintThai": "เดินช้า มีกระดองแข็งบนหลัง",
+    "emoji": "🐢"
   },
   {
     "word": "cheetah",
@@ -4653,7 +5169,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "fastest land animal",
-    "hintThai": "สัตว์บกที่วิ่งเร็วที่สุด"
+    "hintThai": "สัตว์บกที่วิ่งเร็วที่สุด",
+    "emoji": "🐆"
   },
   {
     "word": "rhinoceros",
@@ -4661,7 +5178,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "large animal with a horn on its nose",
-    "hintThai": "สัตว์ใหญ่ มีเขาบนจมูก"
+    "hintThai": "สัตว์ใหญ่ มีเขาบนจมูก",
+    "emoji": "🦏"
   },
   {
     "word": "hippopotamus",
@@ -4669,7 +5187,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "huge river animal, opens mouth very wide",
-    "hintThai": "สัตว์น้ำขนาดใหญ่ อ้าปากกว้างมาก"
+    "hintThai": "สัตว์น้ำขนาดใหญ่ อ้าปากกว้างมาก",
+    "emoji": "🦛"
   },
   {
     "word": "deer",
@@ -4677,7 +5196,8 @@
     "category": "Animals",
     "level": "medium",
     "hint": "graceful animal with antlers",
-    "hintThai": "สัตว์สง่างาม มีเขากิ่ง"
+    "hintThai": "สัตว์สง่างาม มีเขากิ่ง",
+    "emoji": "🦌"
   },
   {
     "word": "platypus",
@@ -4685,7 +5205,8 @@
     "category": "Animals",
     "level": "hard",
     "hint": "Australian mammal with a duck bill that lays eggs",
-    "hintThai": "สัตว์เลี้ยงลูกด้วยนมออสเตรเลีย ปากคล้ายเป็ด ออกไข่ได้"
+    "hintThai": "สัตว์เลี้ยงลูกด้วยนมออสเตรเลีย ปากคล้ายเป็ด ออกไข่ได้",
+    "emoji": "🥚"
   },
   {
     "word": "pangolin",
@@ -4693,7 +5214,8 @@
     "category": "Animals",
     "level": "hard",
     "hint": "covered in scales, rolls into a ball when scared",
-    "hintThai": "มีเกล็ดปกคลุม ม้วนตัวเป็นลูกบอลเมื่อกลัว"
+    "hintThai": "มีเกล็ดปกคลุม ม้วนตัวเป็นลูกบอลเมื่อกลัว",
+    "emoji": "🌀"
   },
   {
     "word": "capybara",
@@ -4701,7 +5223,8 @@
     "category": "Animals",
     "level": "hard",
     "hint": "world's largest rodent, looks like a giant guinea pig",
-    "hintThai": "สัตว์ฟันแทะที่ใหญ่ที่สุดในโลก หน้าตาคล้ายหนูตะเภายักษ์"
+    "hintThai": "สัตว์ฟันแทะที่ใหญ่ที่สุดในโลก หน้าตาคล้ายหนูตะเภายักษ์",
+    "emoji": "🐹"
   },
   {
     "word": "narwhal",
@@ -4709,7 +5232,8 @@
     "category": "Animals",
     "level": "hard",
     "hint": "arctic whale with a long spiral tusk",
-    "hintThai": "วาฬขั้วโลก มีงาเกลียวยาว"
+    "hintThai": "วาฬขั้วโลก มีงาเกลียวยาว",
+    "emoji": "🌊"
   },
   {
     "word": "axolotl",
@@ -4717,7 +5241,8 @@
     "category": "Animals",
     "level": "hard",
     "hint": "Mexican salamander that keeps its baby features forever",
-    "hintThai": "ซาลาแมนเดอร์เม็กซิกัน คงความเป็นตัวอ่อนตลอดชีวิต"
+    "hintThai": "ซาลาแมนเดอร์เม็กซิกัน คงความเป็นตัวอ่อนตลอดชีวิต",
+    "emoji": "🫧"
   },
   {
     "word": "tapir",
@@ -4725,7 +5250,8 @@
     "category": "Animals",
     "level": "hard",
     "hint": "pig-like animal with a short flexible snout",
-    "hintThai": "สัตว์คล้ายหมู จมูกสั้นยืดได้"
+    "hintThai": "สัตว์คล้ายหมู จมูกสั้นยืดได้",
+    "emoji": "🐗"
   },
   {
     "word": "okapi",
@@ -4733,7 +5259,8 @@
     "category": "Animals",
     "level": "hard",
     "hint": "rainforest animal related to the giraffe, striped legs",
-    "hintThai": "สัตว์ป่าฝน ญาติยีราฟ มีขาลายทาง"
+    "hintThai": "สัตว์ป่าฝน ญาติยีราฟ มีขาลายทาง",
+    "emoji": "🦒"
   },
   {
     "word": "quokka",
@@ -4741,7 +5268,8 @@
     "category": "Animals",
     "level": "hard",
     "hint": "small Australian marsupial famous for its smile",
-    "hintThai": "สัตว์มีถุงหน้าท้องออสเตรเลีย ขึ้นชื่อเรื่องยิ้ม"
+    "hintThai": "สัตว์มีถุงหน้าท้องออสเตรเลีย ขึ้นชื่อเรื่องยิ้ม",
+    "emoji": "🦘"
   },
   {
     "word": "meerkat",
@@ -4749,7 +5277,8 @@
     "category": "Animals",
     "level": "hard",
     "hint": "small African animal that stands upright and watches for danger",
-    "hintThai": "สัตว์แอฟริกาตัวเล็ก ยืนตรงเฝ้าระวังภัย"
+    "hintThai": "สัตว์แอฟริกาตัวเล็ก ยืนตรงเฝ้าระวังภัย",
+    "emoji": "👀"
   },
   {
     "word": "armadillo",
@@ -4757,7 +5286,8 @@
     "category": "Animals",
     "level": "hard",
     "hint": "armored mammal that rolls into a ball",
-    "hintThai": "สัตว์เลี้ยงลูกด้วยนมที่มีเกราะ ม้วนตัวได้"
+    "hintThai": "สัตว์เลี้ยงลูกด้วยนมที่มีเกราะ ม้วนตัวได้",
+    "emoji": "🛡️"
   },
   {
     "word": "chameleon",
@@ -4765,7 +5295,8 @@
     "category": "Animals",
     "level": "hard",
     "hint": "lizard that changes color to match its surroundings",
-    "hintThai": "กิ้งก่าที่เปลี่ยนสีตามสภาพแวดล้อม"
+    "hintThai": "กิ้งก่าที่เปลี่ยนสีตามสภาพแวดล้อม",
+    "emoji": "🦎"
   },
   {
     "word": "manatee",
@@ -4773,7 +5304,8 @@
     "category": "Animals",
     "level": "hard",
     "hint": "gentle sea cow that grazes on underwater plants",
-    "hintThai": "สัตว์ทะเลอ่อนโยน กินพืชใต้น้ำ"
+    "hintThai": "สัตว์ทะเลอ่อนโยน กินพืชใต้น้ำ",
+    "emoji": "🌿"
   },
   {
     "word": "komodo dragon",
@@ -4781,7 +5313,8 @@
     "category": "Animals",
     "level": "hard",
     "hint": "world's largest lizard from Indonesia",
-    "hintThai": "กิ้งก่าที่ใหญ่ที่สุดในโลก จากอินโดนีเซีย"
+    "hintThai": "กิ้งก่าที่ใหญ่ที่สุดในโลก จากอินโดนีเซีย",
+    "emoji": "🐉"
   },
   {
     "word": "wolverine",
@@ -4789,7 +5322,8 @@
     "category": "Animals",
     "level": "hard",
     "hint": "fierce small predator related to the weasel",
-    "hintThai": "นักล่าตัวเล็กดุร้าย ญาติเฟอเรต"
+    "hintThai": "นักล่าตัวเล็กดุร้าย ญาติเฟอเรต",
+    "emoji": "🦡"
   },
   {
     "word": "mandrill",
@@ -4797,6 +5331,7 @@
     "category": "Animals",
     "level": "hard",
     "hint": "colorful-faced primate, the world's largest monkey",
-    "hintThai": "ไพรเมตหน้าสีสันสดใส ลิงที่ใหญ่ที่สุดในโลก"
+    "hintThai": "ไพรเมตหน้าสีสันสดใส ลิงที่ใหญ่ที่สุดในโลก",
+    "emoji": "🐒"
   }
 ]

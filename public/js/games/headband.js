@@ -173,6 +173,7 @@ function hbShowTurn() {
 function hbBeginTurn() {
   const w = _hbCurrentWord;
   // Show word
+  document.getElementById('hb-word-emoji').textContent = w.emoji || '';
   document.getElementById('hb-word-en').textContent    = w.word  || '';
   document.getElementById('hb-word-thai').textContent  = w.thai  || '';
   document.getElementById('hb-word-cat').textContent   = w.category || '';
@@ -202,6 +203,7 @@ function hbChangeWord() {
   const player   = _hbPlayers[_hbCurrentIdx] || null;
   _hbCurrentWord = hbPickWord(player ? player.levels : []);
   const w        = _hbCurrentWord;
+  document.getElementById('hb-word-emoji').textContent = w.emoji || '';
   document.getElementById('hb-word-en').textContent   = w.word  || '';
   document.getElementById('hb-word-thai').textContent = w.thai  || '';
   document.getElementById('hb-word-cat').textContent  = w.category || '';
