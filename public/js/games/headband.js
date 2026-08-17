@@ -122,6 +122,7 @@ function hbRenderPlayerList() {
 
 // ── Settings (multi-select) ───────────────────────────────────────────────────
 const HB_CAT_IDS = {
+  Actions:            'hbsp-cat-actions',
   Animals:            'hbsp-cat-animals',
   'Artists & Celebs': 'hbsp-cat-artists',
   Brands:             'hbsp-cat-brands',

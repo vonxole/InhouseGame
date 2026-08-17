@@ -7819,5 +7819,486 @@
     "categories": [
       "Artists & Celebs"
     ]
+  },
+  {
+    "word": "swimming",
+    "thai": "ว่ายน้ำ",
+    "emoji": "🏊",
+    "level": "easy",
+    "hint": "You do this in water",
+    "hintThai": "ทำในน้ำ",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "dancing",
+    "thai": "เต้นรำ",
+    "emoji": "💃",
+    "level": "easy",
+    "hint": "Moving your body to music",
+    "hintThai": "ขยับตามเพลง",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "sleeping",
+    "thai": "นอนหลับ",
+    "emoji": "😴",
+    "level": "easy",
+    "hint": "You do this in bed at night",
+    "hintThai": "ทำบนเตียงตอนกลางคืน",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "crying",
+    "thai": "ร้องไห้",
+    "emoji": "😭",
+    "level": "easy",
+    "hint": "Tears come from your eyes",
+    "hintThai": "น้ำตาไหล",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "laughing",
+    "thai": "หัวเราะ",
+    "emoji": "😂",
+    "level": "easy",
+    "hint": "You make this sound when something is funny",
+    "hintThai": "เสียงเวลาขำ",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "eating",
+    "thai": "กินข้าว",
+    "emoji": "🍴",
+    "level": "easy",
+    "hint": "You use your mouth and hands",
+    "hintThai": "ใช้ปากและมือ",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "running",
+    "thai": "วิ่ง",
+    "emoji": "🏃",
+    "level": "easy",
+    "hint": "Faster than walking",
+    "hintThai": "เร็วกว่าเดิน",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "jumping",
+    "thai": "กระโดด",
+    "emoji": "🦘",
+    "level": "easy",
+    "hint": "Both feet leave the ground",
+    "hintThai": "ยกเท้าทั้งสองพ้นพื้น",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "singing",
+    "thai": "ร้องเพลง",
+    "emoji": "🎤",
+    "level": "easy",
+    "hint": "Using your voice to make music",
+    "hintThai": "ใช้เสียงทำเพลง",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "cooking",
+    "thai": "ทำอาหาร",
+    "emoji": "🍳",
+    "level": "easy",
+    "hint": "You do this in the kitchen",
+    "hintThai": "ทำในครัว",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "driving",
+    "thai": "ขับรถ",
+    "emoji": "🚗",
+    "level": "easy",
+    "hint": "You need a steering wheel",
+    "hintThai": "ต้องการพวงมาลัย",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "fighting",
+    "thai": "ต่อสู้",
+    "emoji": "🥊",
+    "level": "easy",
+    "hint": "Two people against each other",
+    "hintThai": "สองคนสู้กัน",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "hugging",
+    "thai": "กอด",
+    "emoji": "🤗",
+    "level": "easy",
+    "hint": "Wrapping arms around someone",
+    "hintThai": "โอบแขนรอบคนอื่น",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "sneezing",
+    "thai": "จาม",
+    "emoji": "🤧",
+    "level": "easy",
+    "hint": "Achoo!",
+    "hintThai": "อาชู!",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "painting",
+    "thai": "วาดรูป",
+    "emoji": "🎨",
+    "level": "easy",
+    "hint": "You need a brush and canvas",
+    "hintThai": "ต้องการแปรงและผืนผ้าใบ",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "meditating",
+    "thai": "นั่งสมาธิ",
+    "emoji": "🧘",
+    "level": "medium",
+    "hint": "Sitting still, eyes closed, breathing",
+    "hintThai": "นั่งนิ่ง หลับตา หายใจ",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "surfing",
+    "thai": "เล่นเซิร์ฟ",
+    "emoji": "🏄",
+    "level": "medium",
+    "hint": "Standing on a board on waves",
+    "hintThai": "ยืนบนกระดานในคลื่น",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "skateboarding",
+    "thai": "เล่นสเก็ตบอร์ด",
+    "emoji": "🛹",
+    "level": "medium",
+    "hint": "Riding a board with four wheels on flat ground",
+    "hintThai": "ขี่กระดานสี่ล้อบนพื้นราบ",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "photobombing",
+    "thai": "โผล่ในรูปคนอื่น",
+    "emoji": "📸",
+    "level": "medium",
+    "hint": "Sneaking into someone else's photo",
+    "hintThai": "แอบเข้าไปในรูปคนอื่น",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "procrastinating",
+    "thai": "ผัดวันประกันพรุ่ง",
+    "emoji": "⏳",
+    "level": "medium",
+    "hint": "Delaying things you should do now",
+    "hintThai": "เลื่อนสิ่งที่ควรทำตอนนี้",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "multitasking",
+    "thai": "ทำหลายอย่างพร้อมกัน",
+    "emoji": "🤹",
+    "level": "medium",
+    "hint": "Doing several things at once",
+    "hintThai": "ทำหลายอย่างพร้อมกัน",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "flirting",
+    "thai": "จีบ",
+    "emoji": "😏",
+    "level": "medium",
+    "hint": "Showing romantic interest",
+    "hintThai": "แสดงความสนใจแบบโรแมนติก",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "gossiping",
+    "thai": "นินทา",
+    "emoji": "🗣️",
+    "level": "medium",
+    "hint": "Talking about others behind their back",
+    "hintThai": "พูดถึงคนอื่นลับหลัง",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "binge-watching",
+    "thai": "ดูซีรีส์ยาว",
+    "emoji": "📺",
+    "level": "medium",
+    "hint": "Watching many episodes in a row",
+    "hintThai": "ดูหลายตอนติดต่อกัน",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "overthinking",
+    "thai": "คิดมาก",
+    "emoji": "🤔",
+    "level": "medium",
+    "hint": "Your brain won't stop running",
+    "hintThai": "สมองไม่หยุดคิด",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "eavesdropping",
+    "thai": "แอบฟัง",
+    "emoji": "👂",
+    "level": "medium",
+    "hint": "Listening to others without them knowing",
+    "hintThai": "ฟังคนอื่นโดยที่เขาไม่รู้",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "window shopping",
+    "thai": "เดินดูของไม่ซื้อ",
+    "emoji": "🛍️",
+    "level": "medium",
+    "hint": "Browsing shops without buying anything",
+    "hintThai": "เดินดูร้านโดยไม่ซื้อ",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "napping",
+    "thai": "งีบหลับ",
+    "emoji": "💤",
+    "level": "medium",
+    "hint": "A short sleep during the day",
+    "hintThai": "นอนหลับสั้นๆ กลางวัน",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "brainstorming",
+    "thai": "ระดมความคิด",
+    "emoji": "💡",
+    "level": "medium",
+    "hint": "Generating ideas as a group",
+    "hintThai": "คิดไอเดียเป็นกลุ่ม",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "gaslighting",
+    "thai": "บิดเบือนความจริง",
+    "emoji": "🕯️",
+    "level": "hard",
+    "hint": "Making someone question their own memory",
+    "hintThai": "ทำให้คนอื่นสงสัยความจำตัวเอง",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "micromanaging",
+    "thai": "จุกจิกเรื่องงาน",
+    "emoji": "🔍",
+    "level": "hard",
+    "hint": "Controlling every tiny detail of someone's work",
+    "hintThai": "ควบคุมทุกรายละเอียดงานของคนอื่น",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "doomscrolling",
+    "thai": "เลื่อนข่าวร้ายไม่หยุด",
+    "emoji": "📱",
+    "level": "hard",
+    "hint": "Endlessly reading bad news on your phone",
+    "hintThai": "อ่านข่าวร้ายในมือถือไม่หยุด",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "ghosting",
+    "thai": "หายหัวไป",
+    "emoji": "👻",
+    "level": "hard",
+    "hint": "Suddenly disappearing and ignoring someone",
+    "hintThai": "หายตัวและเพิกเฉยคนอื่นทันที",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "networking",
+    "thai": "สร้างคอนเนกชัน",
+    "emoji": "🤝",
+    "level": "hard",
+    "hint": "Building professional connections",
+    "hintThai": "สร้างความสัมพันธ์ทางอาชีพ",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "catfishing",
+    "thai": "แอบอ้างตัวตนออนไลน์",
+    "emoji": "🐟",
+    "level": "hard",
+    "hint": "Pretending to be someone else online",
+    "hintThai": "แกล้งทำเป็นคนอื่นออนไลน์",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "people-watching",
+    "thai": "นั่งดูคน",
+    "emoji": "👀",
+    "level": "hard",
+    "hint": "Observing strangers in public",
+    "hintThai": "สังเกตคนแปลกหน้าในที่สาธารณะ",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
+  },
+  {
+    "word": "mansplaining",
+    "thai": "อธิบายแบบอวดรู้",
+    "emoji": "🙄",
+    "level": "hard",
+    "hint": "Explaining something condescendingly, usually by a man",
+    "hintThai": "อธิบายแบบดูถูก มักเป็นผู้ชาย",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "pos": "verb"
   }
 ]
