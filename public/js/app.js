@@ -249,7 +249,7 @@ socket.on('rooms_list', (list) => {
   if (noRooms) noRooms.style.display = 'none';
   if (wrap)    wrap.style.display    = 'flex';
 
-  const gameLabel  = { insider: '🕵️ Insider', spyfall: '🕵️ Spyfall', ito: '🔢 Ito', mind: '🧘 The Mind', headband: '🎯 Word Up' };
+  const gameLabel  = { insider: '🕵️ Insider', spyfall: '🕵️ Spyfall', ito: '🔢 Ito', mind: '🧘 The Mind', headband: '🎯 Word Up - คำบนหัว' };
   const gameAccent = { insider: 'rgba(124,58,237,.2)', spyfall: 'rgba(14,165,233,.2)', ito: 'rgba(249,115,22,.15)', mind: 'rgba(6,182,212,.15)', headband: 'rgba(234,179,8,.15)' };
   const gameColor  = { insider: 'var(--accent2)', spyfall: '#0ea5e9', ito: '#f97316', mind: '#06b6d4', headband: '#ca8a04' };
 
