@@ -2,19 +2,85 @@ const express = require('express');
 const http    = require('http');
 const { Server } = require('socket.io');
 const path    = require('path');
+const fs      = require('fs');
 
 const app    = express();
 const server = http.createServer(app);
 const io     = new Server(server, { cors: { origin: '*' } });
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
 
 const START_TIME = new Date();
 app.get('/api/version', (_, res) => res.json({ startedAt: START_TIME.toISOString() }));
 app.get('/api/words',   (_, res) => res.json(WORD_BANK));
 
 // ── Word Bank ─────────────────────────────────────────────────────────────────
-const WORD_BANK = require('./words.json');
+const WORDS_PATH = path.join(__dirname, 'words.json');
+const WORD_BANK  = require('./words.json');   // mutable array — push() persists in memory
+
+// ── Admin API ─────────────────────────────────────────────────────────────────
+const ADMIN_PASS = process.env.ADMIN_PASS || 'wordupAdmin';
+
+function adminAuth(req, res, next) {
+  if (req.headers['x-admin-pass'] !== ADMIN_PASS) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+  next();
+}
+
+// POST /api/admin/auth  — verify password
+app.post('/api/admin/auth', (req, res) => {
+  const ok = (req.body?.pass || '') === ADMIN_PASS;
+  res.json({ ok });
+});
+
+// GET /api/admin/meta  — master lists for dropdowns
+app.get('/api/admin/meta', adminAuth, (req, res) => {
+  const categories = [...new Set(WORD_BANK.map(w => w.category))].sort();
+  const seriesMap  = {};
+  const countryMap = {};
+  WORD_BANK.forEach(w => {
+    if (w.series)  seriesMap[w.series]   = w.seriesThai  || '';
+    if (w.country) countryMap[w.country] = w.countryThai || '';
+  });
+  res.json({ categories, seriesMap, countryMap });
+});
+
+// POST /api/admin/check  — duplicate check
+app.post('/api/admin/check', adminAuth, (req, res) => {
+  const word  = (req.body?.word || '').trim();
+  if (!word) return res.status(400).json({ error: 'word required' });
+  const found = WORD_BANK.find(w => w.word.toLowerCase() === word.toLowerCase());
+  res.json({ exists: !!found, entry: found || null });
+});
+
+// POST /api/admin/words  — add new word
+app.post('/api/admin/words', adminAuth, (req, res) => {
+  const w = req.body;
+  if (!w?.word || !w?.thai || !w?.category) {
+    return res.status(400).json({ error: 'Missing required fields' });
+  }
+  if (WORD_BANK.some(x => x.word.toLowerCase() === w.word.toLowerCase().trim())) {
+    return res.status(409).json({ error: 'Word already exists' });
+  }
+  const entry = {
+    word:      w.word.trim(),
+    thai:      w.thai.trim(),
+    category:  w.category,
+    categories: w.categories?.length ? w.categories : [w.category],
+    level:     w.level || 'medium',
+    hint:      w.hint  || '',
+    hintThai:  w.hintThai || '',
+    emoji:     w.emoji || '❓',
+    pos:       w.pos   || 'noun',
+    ...(w.series      ? { series:      w.series,      seriesThai:  w.seriesThai  || '' } : {}),
+    ...(w.country     ? { country:     w.country,     countryThai: w.countryThai || '' } : {}),
+  };
+  WORD_BANK.push(entry);
+  fs.writeFileSync(WORDS_PATH, JSON.stringify(WORD_BANK, null, 2), 'utf-8');
+  res.json({ ok: true, total: WORD_BANK.length });
+});
 
 function pickWord(filterCategories = [], filterLevels = []) {
   let pool = WORD_BANK;

@@ -519,12 +519,21 @@
       </div>
 
       <!-- Category -->
-      <div class="card" style="width:100%;gap:10px;display:flex;flex-direction:column;">
+      <div class="card" style="width:100%;gap:12px;display:flex;flex-direction:column;">
         <div style="font-size:0.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">หมวดหมู่</div>
+
+        <!-- Digio group -->
+        <div style="background:rgba(124,58,237,.10);border:1px solid rgba(124,58,237,.25);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:8px;">
+          <div style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#a78bfa;">🏢 Digio</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <button class="pill" id="hbsp-cat-digio-biz"  onclick="hbToggleCat('Digio Business')">💳 Business</button>
+            <button class="pill" id="hbsp-cat-digio-tech" onclick="hbToggleCat('Digio Tech')">💻 Tech</button>
+          </div>
+        </div>
+
+        <!-- General categories -->
         <div style="display:flex;flex-wrap:wrap;gap:6px;">
-          <button class="pill" id="hbsp-cat-actions"     onclick="hbToggleCat('Actions')">🏃 Actions</button>
-          <button class="pill" id="hbsp-cat-digio-biz"  onclick="hbToggleCat('Digio Business')">💳 Digio Business</button>
-          <button class="pill" id="hbsp-cat-digio-tech" onclick="hbToggleCat('Digio Tech')">💻 Digio Tech</button>
+          <button class="pill" id="hbsp-cat-actions"      onclick="hbToggleCat('Actions')">🏃 Actions</button>
           <button class="pill" id="hbsp-cat-animals"      onclick="hbToggleCat('Animals')">🐾 Animals</button>
           <button class="pill" id="hbsp-cat-artists"      onclick="hbToggleCat('Artists & Celebs')">🌟 Artists & Celebs</button>
           <button class="pill" id="hbsp-cat-brands"       onclick="hbToggleCat('Brands')">🏷️ Brands</button>
@@ -540,7 +549,8 @@
           <button class="pill" id="hbsp-cat-office"       onclick="hbToggleCat('Office & School')">🏫 Office</button>
           <button class="pill" id="hbsp-cat-places"       onclick="hbToggleCat('Places')">🏥 Places</button>
         </div>
-        <div style="font-size:0.75rem;color:var(--muted);margin-top:2px;">ไม่เลือก = ใช้ทุกหมวด</div>
+
+        <div style="font-size:0.75rem;color:var(--muted);">ไม่เลือก = ใช้ทุกหมวด</div>
       </div>
 
       <!-- Difficulty -->

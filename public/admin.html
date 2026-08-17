@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Word Up — เพิ่มคำ</title>
+<style>
+:root {
+  --bg:      #0f0f1a;
+  --card:    #1a1a2e;
+  --accent:  #7c3aed;
+  --accent2: #a855f7;
+  --green:   #10b981;
+  --red:     #ef4444;
+  --yellow:  #f59e0b;
+  --text:    #e2e8f0;
+  --muted:   #64748b;
+  --border:  #2d2d4e;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-height: 100dvh; display: flex; justify-content: center; align-items: flex-start;
+}
+#app { width: 100%; max-width: 480px; padding: 24px 16px 48px; }
+
+/* screens */
+.screen { display: none; flex-direction: column; gap: 20px; }
+.screen.active { display: flex; }
+
+/* header */
+.page-title { font-size: 22px; font-weight: 700; }
+.page-sub   { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+/* card */
+.card {
+  background: var(--card); border-radius: 16px; padding: 20px;
+  border: 1px solid var(--border);
+}
+
+/* inputs */
+label { font-size: 12px; color: var(--muted); display: block; margin-bottom: 6px; }
+input[type=text], input[type=password], textarea, select {
+  width: 100%; background: #0f0f1a; color: var(--text);
+  border: 1px solid var(--border); border-radius: 10px;
+  padding: 12px 14px; font-size: 15px; outline: none;
+  font-family: inherit;
+}
+input:focus, textarea:focus, select:focus { border-color: var(--accent); }
+textarea { resize: vertical; min-height: 70px; }
+select { appearance: none; -webkit-appearance: none; cursor: pointer; }
+.select-wrap { position: relative; }
+.select-wrap::after {
+  content: '▾'; position: absolute; right: 14px; top: 50%;
+  transform: translateY(-50%); pointer-events: none; color: var(--muted);
+}
+
+/* emoji row */
+.emoji-row { display: flex; gap: 10px; align-items: center; }
+.emoji-row input { flex: 1; }
+.emoji-preview {
+  font-size: 36px; width: 56px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  background: #0f0f1a; border: 1px solid var(--border); border-radius: 10px;
+}
+
+/* pills */
+.pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill {
+  padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border);
+  background: transparent; color: var(--muted); font-size: 13px; cursor: pointer;
+  transition: all .15s; white-space: nowrap;
+}
+.pill:hover  { border-color: var(--accent2); color: var(--text); }
+.pill.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* buttons */
+.btn {
+  width: 100%; padding: 14px; border-radius: 12px; border: none;
+  font-size: 16px; font-weight: 600; cursor: pointer; transition: opacity .15s;
+}
+.btn:active { opacity: .7; }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-green   { background: var(--green);  color: #fff; }
+.btn-ghost   { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+
+/* result card */
+.result-card {
+  border-radius: 12px; padding: 14px 16px;
+  display: flex; gap: 12px; align-items: center;
+}
+.result-card.exists { background: rgba(239,68,68,.12); border: 1px solid rgba(239,68,68,.3); }
+.result-card.ok     { background: rgba(16,185,129,.12); border: 1px solid rgba(16,185,129,.3); }
+.result-emoji { font-size: 28px; }
+.result-info  { flex: 1; }
+.result-word  { font-size: 17px; font-weight: 700; }
+.result-thai  { font-size: 13px; color: var(--muted); }
+.result-meta  { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.result-badge {
+  font-size: 11px; padding: 2px 8px; border-radius: 999px; font-weight: 600;
+}
+.badge-red   { background: rgba(239,68,68,.2);  color: #f87171; }
+.badge-green { background: rgba(16,185,129,.2); color: #34d399; }
+
+/* alert */
+.alert { padding: 12px 14px; border-radius: 10px; font-size: 14px; }
+.alert-err  { background: rgba(239,68,68,.12); border: 1px solid rgba(239,68,68,.3); color: #f87171; }
+.alert-ok   { background: rgba(16,185,129,.12); border: 1px solid rgba(16,185,129,.3); color: #34d399; }
+
+/* step indicator */
+.steps { display: flex; gap: 8px; align-items: center; }
+.step-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--border); transition: background .2s;
+}
+.step-dot.active { background: var(--accent); }
+.step-label { font-size: 12px; color: var(--muted); margin-left: 4px; }
+
+/* section label */
+.section-label {
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--muted); margin-bottom: 10px;
+}
+
+/* hidden */
+.hidden { display: none !important; }
+
+/* separator */
+.sep { height: 1px; background: var(--border); margin: 4px 0; }
+
+/* back link */
+.back-link {
+  text-align: center; color: var(--muted); font-size: 14px;
+  cursor: pointer; text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<div id="app">
+
+  <!-- ── Screen 1: Login ───────────────────────────────────────── -->
+  <div id="scr-login" class="screen active">
+    <div style="text-align:center; padding: 32px 0 8px;">
+      <div style="font-size:48px; margin-bottom:12px;">🔐</div>
+      <div class="page-title">Word Up Admin</div>
+      <div class="page-sub">เพิ่มคำศัพท์ใหม่เข้าเกม</div>
+    </div>
+    <div class="card">
+      <label>รหัสผ่าน</label>
+      <input id="inp-pass" type="password" placeholder="••••••••" autocomplete="current-password">
+      <div id="login-err" class="alert alert-err hidden" style="margin-top:12px;"></div>
+    </div>
+    <button class="btn btn-primary" onclick="doLogin()">เข้าสู่ระบบ</button>
+  </div>
+
+  <!-- ── Screen 2: Check word ──────────────────────────────────── -->
+  <div id="scr-check" class="screen">
+    <div>
+      <div class="steps">
+        <div class="step-dot active"></div>
+        <div class="step-dot"></div>
+        <span class="step-label">1 / 2 — ตรวจสอบคำ</span>
+      </div>
+    </div>
+    <div class="card">
+      <label>คำ (ภาษาอังกฤษ)</label>
+      <div style="display:flex; gap:10px;">
+        <input id="inp-word" type="text" placeholder="เช่น  Kubernetes" style="flex:1;">
+        <button class="btn btn-primary" style="width:auto; padding:12px 20px; font-size:14px;" onclick="checkWord()">ตรวจสอบ</button>
+      </div>
+    </div>
+    <div id="check-result" class="hidden"></div>
+    <button id="btn-proceed" class="btn btn-green hidden" onclick="goToForm()">กรอกรายละเอียด →</button>
+    <div class="back-link" onclick="logout()">← ออกจากระบบ</div>
+  </div>
+
+  <!-- ── Screen 3: Word form ───────────────────────────────────── -->
+  <div id="scr-form" class="screen">
+    <div>
+      <div class="steps">
+        <div class="step-dot"></div>
+        <div class="step-dot active"></div>
+        <span class="step-label">2 / 2 — รายละเอียด</span>
+      </div>
+    </div>
+
+    <!-- Word preview -->
+    <div class="card" style="text-align:center; padding:16px;">
+      <div id="form-emoji-big" style="font-size:48px; line-height:1.2;">❓</div>
+      <div id="form-word-big" style="font-size:24px; font-weight:700; margin-top:6px;"></div>
+    </div>
+
+    <!-- Core fields -->
+    <div class="card" style="display:flex; flex-direction:column; gap:16px;">
+      <div>
+        <label>คำแปลภาษาไทย *</label>
+        <input id="inp-thai" type="text" placeholder="เช่น  คิวเบอร์เนทิส">
+      </div>
+      <div>
+        <label>Emoji</label>
+        <div class="emoji-row">
+          <input id="inp-emoji" type="text" placeholder="วางหรือพิมพ์ emoji" maxlength="8"
+                 oninput="document.getElementById('form-emoji-big').textContent = this.value || '❓'">
+          <div class="emoji-preview" id="emoji-preview">❓</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Level -->
+    <div class="card">
+      <div class="section-label">ระดับ</div>
+      <div class="pills">
+        <button class="pill" id="lvl-easy"   onclick="setLevel('easy')">🟢 Easy</button>
+        <button class="pill active" id="lvl-medium" onclick="setLevel('medium')">🟡 Medium</button>
+        <button class="pill" id="lvl-hard"   onclick="setLevel('hard')">🔴 Hard</button>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="card">
+      <div class="section-label">หมวดหมู่ (เลือกได้หลายอัน)</div>
+      <div id="cat-pills" class="pills"></div>
+    </div>
+
+    <!-- POS -->
+    <div class="card">
+      <div class="section-label">ชนิดคำ</div>
+      <div class="pills">
+        <button class="pill active" id="pos-noun"  onclick="setPos('noun')">Noun</button>
+        <button class="pill" id="pos-verb"  onclick="setPos('verb')">Verb</button>
+        <button class="pill" id="pos-adj"   onclick="setPos('adj')">Adj</button>
+        <button class="pill" id="pos-phrase" onclick="setPos('phrase')">Phrase</button>
+      </div>
+    </div>
+
+    <!-- Hints -->
+    <div class="card" style="display:flex; flex-direction:column; gap:16px;">
+      <div>
+        <label>Hint (English)</label>
+        <textarea id="inp-hint" placeholder="คำอธิบายภาษาอังกฤษ ใช้ระหว่างเล่น"></textarea>
+      </div>
+      <div>
+        <label>Hint (ภาษาไทย)</label>
+        <textarea id="inp-hint-thai" placeholder="คำอธิบายภาษาไทย ใช้ระหว่างเล่น"></textarea>
+      </div>
+    </div>
+
+    <!-- Series (Characters) -->
+    <div id="section-series" class="card hidden" style="display:flex; flex-direction:column; gap:16px;">
+      <div class="section-label">🎭 ตัวละครจากเรื่องอะไร</div>
+      <div>
+        <label>Series (ชื่อเรื่อง)</label>
+        <div class="select-wrap">
+          <select id="sel-series" onchange="onSeriesChange(this.value)">
+            <option value="">— เลือกเรื่อง หรือพิมพ์ใหม่ —</option>
+          </select>
+        </div>
+      </div>
+      <div id="series-new-row" class="hidden" style="display:flex; flex-direction:column; gap:10px;">
+        <div>
+          <label>ชื่อเรื่อง (EN)</label>
+          <input id="inp-series" type="text" placeholder="เช่น  One Piece">
+        </div>
+        <div>
+          <label>ชื่อเรื่อง (TH)</label>
+          <input id="inp-series-thai" type="text" placeholder="เช่น  วันพีซ">
+        </div>
+      </div>
+    </div>
+
+    <!-- Country (Landmarks) -->
+    <div id="section-country" class="card hidden" style="display:flex; flex-direction:column; gap:16px;">
+      <div class="section-label">🌍 สถานที่อยู่ในประเทศอะไร</div>
+      <div>
+        <label>Country (ประเทศ)</label>
+        <div class="select-wrap">
+          <select id="sel-country" onchange="onCountryChange(this.value)">
+            <option value="">— เลือกประเทศ หรือพิมพ์ใหม่ —</option>
+          </select>
+        </div>
+      </div>
+      <div id="country-new-row" class="hidden" style="display:flex; flex-direction:column; gap:10px;">
+        <div>
+          <label>ประเทศ (EN)</label>
+          <input id="inp-country" type="text" placeholder="เช่น  France">
+        </div>
+        <div>
+          <label>ประเทศ (TH)</label>
+          <input id="inp-country-thai" type="text" placeholder="เช่น  ฝรั่งเศส">
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <div id="form-msg" class="hidden"></div>
+    <button class="btn btn-green" onclick="submitWord()">✅ เพิ่มคำ</button>
+    <div class="back-link" onclick="show('scr-check')">← กลับไปค้นหาคำ</div>
+  </div>
+
+</div>
+
+<script>
+// ── State ──────────────────────────────────────────────────────────────────
+let _pass       = sessionStorage.getItem('admin_pass') || '';
+let _wordToAdd  = '';
+let _level      = 'medium';
+let _pos        = 'noun';
+let _cats       = [];       // selected categories
+let _meta       = null;     // { categories, seriesMap, countryMap }
+
+// ── Screens ────────────────────────────────────────────────────────────────
+function show(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function hide(el) { el.classList.add('hidden'); }
+function reveal(el) { el.classList.remove('hidden'); }
+
+// ── Login ──────────────────────────────────────────────────────────────────
+async function doLogin() {
+  const pass = document.getElementById('inp-pass').value;
+  const r = await fetch('/api/admin/auth', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ pass })
+  });
+  const data = await r.json();
+  if (data.ok) {
+    _pass = pass;
+    sessionStorage.setItem('admin_pass', pass);
+    await loadMeta();
+    show('scr-check');
+  } else {
+    const err = document.getElementById('login-err');
+    err.textContent = 'รหัสผ่านไม่ถูกต้อง';
+    reveal(err);
+  }
+}
+
+function logout() {
+  sessionStorage.removeItem('admin_pass');
+  _pass = '';
+  show('scr-login');
+}
+
+document.getElementById('inp-pass').addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+
+// ── Load meta ──────────────────────────────────────────────────────────────
+async function loadMeta() {
+  const r = await fetch('/api/admin/meta', { headers: { 'x-admin-pass': _pass } });
+  _meta = await r.json();
+  buildCatPills();
+  buildSeriesDropdown();
+  buildCountryDropdown();
+}
+
+function buildCatPills() {
+  const el = document.getElementById('cat-pills');
+  el.innerHTML = '';
+  (_meta?.categories || []).forEach(cat => {
+    const b = document.createElement('button');
+    b.className = 'pill';
+    b.textContent = cat;
+    b.dataset.cat = cat;
+    b.onclick = () => toggleCat(cat, b);
+    el.appendChild(b);
+  });
+}
+
+function buildSeriesDropdown() {
+  const sel = document.getElementById('sel-series');
+  // keep first option
+  sel.innerHTML = '<option value="">— เลือกเรื่อง หรือพิมพ์ใหม่ —</option>';
+  Object.entries(_meta?.seriesMap || {}).sort().forEach(([s, st]) => {
+    const o = document.createElement('option');
+    o.value = s; o.textContent = `${s}  (${st})`;
+    sel.appendChild(o);
+  });
+  const o = document.createElement('option');
+  o.value = '__new__'; o.textContent = '✏️  เรื่องใหม่...';
+  sel.appendChild(o);
+}
+
+function buildCountryDropdown() {
+  const sel = document.getElementById('sel-country');
+  sel.innerHTML = '<option value="">— เลือกประเทศ หรือพิมพ์ใหม่ —</option>';
+  Object.entries(_meta?.countryMap || {}).sort().forEach(([c, ct]) => {
+    const o = document.createElement('option');
+    o.value = c; o.textContent = `${c}  (${ct})`;
+    sel.appendChild(o);
+  });
+  const o = document.createElement('option');
+  o.value = '__new__'; o.textContent = '✏️  ประเทศใหม่...';
+  sel.appendChild(o);
+}
+
+// ── Check word ─────────────────────────────────────────────────────────────
+async function checkWord() {
+  const word = document.getElementById('inp-word').value.trim();
+  if (!word) return;
+
+  const r    = await fetch('/api/admin/check', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'x-admin-pass': _pass },
+    body: JSON.stringify({ word })
+  });
+  const data = await r.json();
+  const box  = document.getElementById('check-result');
+  const btn  = document.getElementById('btn-proceed');
+  reveal(box);
+
+  if (data.exists) {
+    const e = data.entry;
+    box.innerHTML = `
+      <div class="result-card exists">
+        <div class="result-emoji">${e.emoji || '❓'}</div>
+        <div class="result-info">
+          <div class="result-word">${e.word}</div>
+          <div class="result-thai">${e.thai}</div>
+          <div class="result-meta">${e.category} · ${e.level}</div>
+        </div>
+        <span class="result-badge badge-red">มีแล้ว</span>
+      </div>`;
+    hide(btn);
+  } else {
+    box.innerHTML = `
+      <div class="result-card ok">
+        <div class="result-emoji">✅</div>
+        <div class="result-info">
+          <div class="result-word">${word}</div>
+          <div class="result-thai" style="color:var(--green)">ไม่มีในฐานข้อมูล</div>
+        </div>
+        <span class="result-badge badge-green">ใหม่</span>
+      </div>`;
+    _wordToAdd = word;
+    reveal(btn);
+  }
+}
+
+document.getElementById('inp-word').addEventListener('keydown', e => { if (e.key === 'Enter') checkWord(); });
+
+// ── Go to form ─────────────────────────────────────────────────────────────
+function goToForm() {
+  // reset form
+  document.getElementById('inp-thai').value      = '';
+  document.getElementById('inp-emoji').value     = '';
+  document.getElementById('inp-hint').value      = '';
+  document.getElementById('inp-hint-thai').value = '';
+  document.getElementById('form-word-big').textContent = _wordToAdd;
+  document.getElementById('form-emoji-big').textContent = '❓';
+  document.getElementById('emoji-preview').textContent  = '❓';
+  setLevel('medium');
+  setPos('noun');
+  _cats = [];
+  document.querySelectorAll('#cat-pills .pill').forEach(b => b.classList.remove('active'));
+  hide(document.getElementById('section-series'));
+  hide(document.getElementById('section-country'));
+  hide(document.getElementById('series-new-row'));
+  hide(document.getElementById('country-new-row'));
+  document.getElementById('sel-series').value  = '';
+  document.getElementById('sel-country').value = '';
+  hide(document.getElementById('form-msg'));
+  show('scr-form');
+}
+
+// ── Level / Pos toggles ────────────────────────────────────────────────────
+function setLevel(lvl) {
+  _level = lvl;
+  ['easy','medium','hard'].forEach(l => {
+    document.getElementById(`lvl-${l}`).classList.toggle('active', l === lvl);
+  });
+}
+
+function setPos(pos) {
+  _pos = pos;
+  ['noun','verb','adj','phrase'].forEach(p => {
+    document.getElementById(`pos-${p}`).classList.toggle('active', p === pos);
+  });
+}
+
+// ── Category pills ─────────────────────────────────────────────────────────
+function toggleCat(cat, btn) {
+  const idx = _cats.indexOf(cat);
+  if (idx === -1) { _cats.push(cat);    btn.classList.add('active'); }
+  else            { _cats.splice(idx,1); btn.classList.remove('active'); }
+
+  // Show/hide conditional sections
+  document.getElementById('section-series').classList.toggle(
+    'hidden', !_cats.includes('Characters'));
+  document.getElementById('section-country').classList.toggle(
+    'hidden', !_cats.includes('Landmarks'));
+}
+
+// ── Series dropdown ────────────────────────────────────────────────────────
+function onSeriesChange(val) {
+  const row = document.getElementById('series-new-row');
+  if (val === '__new__') {
+    reveal(row);
+    document.getElementById('inp-series').value      = '';
+    document.getElementById('inp-series-thai').value = '';
+  } else if (val) {
+    hide(row);
+    // pre-fill hidden inputs for existing series
+    document.getElementById('inp-series').value      = val;
+    document.getElementById('inp-series-thai').value = _meta.seriesMap[val] || '';
+  } else {
+    hide(row);
+    document.getElementById('inp-series').value      = '';
+    document.getElementById('inp-series-thai').value = '';
+  }
+}
+
+// ── Country dropdown ───────────────────────────────────────────────────────
+function onCountryChange(val) {
+  const row = document.getElementById('country-new-row');
+  if (val === '__new__') {
+    reveal(row);
+    document.getElementById('inp-country').value      = '';
+    document.getElementById('inp-country-thai').value = '';
+  } else if (val) {
+    hide(row);
+    document.getElementById('inp-country').value      = val;
+    document.getElementById('inp-country-thai').value = _meta.countryMap[val] || '';
+  } else {
+    hide(row);
+    document.getElementById('inp-country').value      = '';
+    document.getElementById('inp-country-thai').value = '';
+  }
+}
+
+// ── Submit ─────────────────────────────────────────────────────────────────
+async function submitWord() {
+  const thai = document.getElementById('inp-thai').value.trim();
+  if (!thai)         { showFormMsg('กรุณาใส่คำแปลภาษาไทย', 'err'); return; }
+  if (!_cats.length) { showFormMsg('กรุณาเลือกหมวดหมู่อย่างน้อย 1 อัน', 'err'); return; }
+
+  const emoji     = document.getElementById('inp-emoji').value.trim() || '❓';
+  const hint      = document.getElementById('inp-hint').value.trim();
+  const hintThai  = document.getElementById('inp-hint-thai').value.trim();
+  const series    = document.getElementById('inp-series').value.trim();
+  const seriesThai= document.getElementById('inp-series-thai').value.trim();
+  const country   = document.getElementById('inp-country').value.trim();
+  const countryTh = document.getElementById('inp-country-thai').value.trim();
+
+  const payload = {
+    word:       _wordToAdd,
+    thai,
+    emoji,
+    level:      _level,
+    category:   _cats[0],
+    categories: _cats,
+    pos:        _pos,
+    hint,
+    hintThai,
+    ...(series  ? { series, seriesThai }          : {}),
+    ...(country ? { country, countryThai: countryTh } : {}),
+  };
+
+  const r    = await fetch('/api/admin/words', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'x-admin-pass': _pass },
+    body: JSON.stringify(payload)
+  });
+  const data = await r.json();
+
+  if (r.ok && data.ok) {
+    showFormMsg(`✅ เพิ่ม "${_wordToAdd}" สำเร็จ! (ทั้งหมด ${data.total} คำ)`, 'ok');
+    await loadMeta(); // refresh dropdowns
+    setTimeout(() => {
+      // reset check screen for next word
+      document.getElementById('inp-word').value = '';
+      document.getElementById('check-result').classList.add('hidden');
+      document.getElementById('btn-proceed').classList.add('hidden');
+      show('scr-check');
+    }, 1800);
+  } else {
+    showFormMsg(data.error || 'เกิดข้อผิดพลาด', 'err');
+  }
+}
+
+function showFormMsg(msg, type) {
+  const el = document.getElementById('form-msg');
+  el.className = `alert ${type === 'ok' ? 'alert-ok' : 'alert-err'}`;
+  el.textContent = msg;
+  reveal(el);
+}
+
+// ── Auto-login if session still valid ─────────────────────────────────────
+(async () => {
+  if (!_pass) return;
+  const r = await fetch('/api/admin/auth', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ pass: _pass })
+  });
+  const data = await r.json();
+  if (data.ok) { await loadMeta(); show('scr-check'); }
+  else { sessionStorage.removeItem('admin_pass'); _pass = ''; }
+})();
+</script>
+</body>
+</html>
