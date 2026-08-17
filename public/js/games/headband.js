@@ -122,21 +122,23 @@ function hbRenderPlayerList() {
 
 // ── Settings (multi-select) ───────────────────────────────────────────────────
 const HB_CAT_IDS = {
-  Actions:            'hbsp-cat-actions',
-  Animals:            'hbsp-cat-animals',
-  'Artists & Celebs': 'hbsp-cat-artists',
-  Brands:             'hbsp-cat-brands',
-  Characters:         'hbsp-cat-characters',
-  Concepts:           'hbsp-cat-concepts',
-  Countries:          'hbsp-cat-countries',
-  'Food & Drinks':    'hbsp-cat-food',
-  'Gadgets & Tools':  'hbsp-cat-gadgets',
-  Landmarks:          'hbsp-cat-landmarks',
-  'Movies & Cartoons':'hbsp-cat-movies',
-  Objects:            'hbsp-cat-objects',
-  Occupations:        'hbsp-cat-occupations',
-  'Office & School':  'hbsp-cat-office',
-  Places:             'hbsp-cat-places',
+  Actions:              'hbsp-cat-actions',
+  Animals:              'hbsp-cat-animals',
+  'Digio Business':     'hbsp-cat-digio-biz',
+  'Digio Tech':         'hbsp-cat-digio-tech',
+  'Artists & Celebs':   'hbsp-cat-artists',
+  Brands:               'hbsp-cat-brands',
+  Characters:           'hbsp-cat-characters',
+  Concepts:             'hbsp-cat-concepts',
+  Countries:            'hbsp-cat-countries',
+  'Food & Drinks':      'hbsp-cat-food',
+  'Gadgets & Tools':    'hbsp-cat-gadgets',
+  Landmarks:            'hbsp-cat-landmarks',
+  'Movies & Cartoons':  'hbsp-cat-movies',
+  Objects:              'hbsp-cat-objects',
+  Occupations:          'hbsp-cat-occupations',
+  'Office & School':    'hbsp-cat-office',
+  Places:               'hbsp-cat-places',
 };
 
 function hbToggleCat(cat) {

@@ -8300,5 +8300,2592 @@
       "Actions"
     ],
     "pos": "verb"
+  },
+  {
+    "word": "breakdancing",
+    "thai": "เบรกแดนซ์",
+    "emoji": "🕺",
+    "category": "Actions",
+    "categories": [
+      "Actions"
+    ],
+    "level": "medium",
+    "pos": "verb",
+    "hint": "A street dance style with spins and freezes on the floor",
+    "hintThai": "การเต้นบนพื้น มีสปินและท่าหยุดนิ่ง"
+  },
+  {
+    "word": "crew",
+    "thai": "ทีม/แก๊งค์",
+    "emoji": "👥",
+    "category": "Concepts",
+    "categories": [
+      "Concepts"
+    ],
+    "level": "medium",
+    "pos": "noun",
+    "hint": "A tight group of people who do things together",
+    "hintThai": "กลุ่มคนที่ทำสิ่งต่างๆ ด้วยกัน"
+  },
+  {
+    "word": "PromptPay",
+    "thai": "พร้อมเพย์",
+    "emoji": "📲",
+    "level": "easy",
+    "hint": "Thailand's national instant transfer system",
+    "hintThai": "ระบบโอนเงินทันทีของไทย",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "BOT",
+    "thai": "ธนาคารแห่งประเทศไทย",
+    "emoji": "🏛️",
+    "level": "easy",
+    "hint": "Thailand's central bank",
+    "hintThai": "ธนาคารกลางของประเทศไทย",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "KYC",
+    "thai": "รู้จักลูกค้า",
+    "emoji": "🪪",
+    "level": "medium",
+    "hint": "Verifying who your customer really is",
+    "hintThai": "กระบวนการยืนยันตัวตนลูกค้า",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "AML",
+    "thai": "ป้องกันฟอกเงิน",
+    "emoji": "🚨",
+    "level": "medium",
+    "hint": "Rules to stop dirty money entering the system",
+    "hintThai": "กฎเพื่อป้องกันเงินผิดกฎหมายเข้าระบบ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "e-KYC",
+    "thai": "ยืนยันตัวตนดิจิทัล",
+    "emoji": "📷",
+    "level": "medium",
+    "hint": "Verifying identity digitally without visiting a branch",
+    "hintThai": "ยืนยันตัวตนผ่านดิจิทัลโดยไม่ต้องไปสาขา",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "SWIFT",
+    "thai": "สวิฟต์",
+    "emoji": "✈️",
+    "level": "medium",
+    "hint": "Global network for international bank messages",
+    "hintThai": "เครือข่ายโอนเงินระหว่างประเทศ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "reconciliation",
+    "thai": "การกระทบยอด",
+    "emoji": "🔁",
+    "level": "hard",
+    "hint": "Matching transaction records to make sure everything adds up",
+    "hintThai": "ตรวจสอบยอดธุรกรรมให้ตรงกัน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "acquirer",
+    "thai": "ผู้รับบัตร",
+    "emoji": "🏪",
+    "level": "medium",
+    "hint": "The bank that processes card payments for merchants",
+    "hintThai": "ธนาคารที่รับชำระบัตรให้ร้านค้า",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "issuer",
+    "thai": "ผู้ออกบัตร",
+    "emoji": "💳",
+    "level": "medium",
+    "hint": "The bank that gave the cardholder their card",
+    "hintThai": "ธนาคารที่ออกบัตรให้ผู้ถือบัตร",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "merchant",
+    "thai": "ร้านค้า",
+    "emoji": "🏬",
+    "level": "easy",
+    "hint": "The business that accepts card payments",
+    "hintThai": "ธุรกิจที่รับชำระด้วยบัตร",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "authorization",
+    "thai": "การอนุมัติรายการ",
+    "emoji": "✅",
+    "level": "medium",
+    "hint": "Checking if a card has enough funds before approving",
+    "hintThai": "ตรวจสอบว่าบัตรมีวงเงินพอก่อนอนุมัติ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "settlement",
+    "thai": "การชำระเงินรวม",
+    "emoji": "💰",
+    "level": "medium",
+    "hint": "The actual movement of money between banks after transactions",
+    "hintThai": "การโอนเงินจริงระหว่างธนาคารหลังธุรกรรม",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "clearing",
+    "thai": "การหักบัญชี",
+    "emoji": "📋",
+    "level": "hard",
+    "hint": "Processing and sorting transactions before settlement",
+    "hintThai": "ประมวลผลธุรกรรมก่อนชำระเงิน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "chargeback",
+    "thai": "การโต้แย้งรายการ",
+    "emoji": "↩️",
+    "level": "medium",
+    "hint": "When a cardholder disputes a charge and wants money back",
+    "hintThai": "เมื่อผู้ถือบัตรโต้แย้งรายการและขอเงินคืน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "interchange",
+    "thai": "ค่าธรรมเนียมแลกเปลี่ยน",
+    "emoji": "🔄",
+    "level": "hard",
+    "hint": "Fee paid by acquirer to issuer for each card transaction",
+    "hintThai": "ค่าธรรมเนียมที่ผู้รับบัตรจ่ายให้ผู้ออกบัตร",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "MDR",
+    "thai": "อัตราค่าธรรมเนียมร้านค้า",
+    "emoji": "%",
+    "level": "hard",
+    "hint": "Percentage fee a merchant pays per card transaction",
+    "hintThai": "ค่าธรรมเนียมที่ร้านค้าจ่ายต่อธุรกรรมบัตร",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "POS terminal",
+    "thai": "เครื่องรูดบัตร",
+    "emoji": "🖥️",
+    "level": "easy",
+    "hint": "The device at checkout where you tap or swipe your card",
+    "hintThai": "เครื่องที่ร้านค้าใช้รับชำระบัตร",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "mPOS",
+    "thai": "เครื่องรูดบัตรมือถือ",
+    "emoji": "📱",
+    "level": "medium",
+    "hint": "Turns a smartphone into a card reader",
+    "hintThai": "แปลงสมาร์ทโฟนให้เป็นเครื่องรับบัตร",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "contactless",
+    "thai": "ไร้สัมผัส",
+    "emoji": "📡",
+    "level": "easy",
+    "hint": "Tap your card or phone — no PIN needed for small amounts",
+    "hintThai": "แตะบัตรหรือมือถือ ไม่ต้องใส่รหัส",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "EMV",
+    "thai": "ชิปมาตรฐาน",
+    "emoji": "🔲",
+    "level": "hard",
+    "hint": "The global standard for chip-based payment cards",
+    "hintThai": "มาตรฐานสากลสำหรับบัตรชิป",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "tokenization",
+    "thai": "การแทนที่ข้อมูลบัตร",
+    "emoji": "🔐",
+    "level": "hard",
+    "hint": "Replacing card numbers with a secure random token",
+    "hintThai": "แทนเลขบัตรด้วยรหัสสุ่มที่ปลอดภัย",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "3D Secure",
+    "thai": "ยืนยันตัวตน 3 ชั้น",
+    "emoji": "🛡️",
+    "level": "hard",
+    "hint": "Extra authentication step for online card payments",
+    "hintThai": "การยืนยันเพิ่มเติมสำหรับชำระออนไลน์",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "BIN",
+    "thai": "รหัสต้นบัตร",
+    "emoji": "🔢",
+    "level": "hard",
+    "hint": "First 6–8 digits of a card number identifying the bank",
+    "hintThai": "6–8 หลักแรกของบัตรที่บอกว่าออกโดยธนาคารใด",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "MID",
+    "thai": "รหัสร้านค้า",
+    "emoji": "🆔",
+    "level": "hard",
+    "hint": "Unique ID assigned by the acquirer to each merchant",
+    "hintThai": "รหัสเฉพาะที่ผู้รับบัตรมอบให้ร้านค้าแต่ละราย",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "refund",
+    "thai": "การคืนเงิน",
+    "emoji": "💸",
+    "level": "easy",
+    "hint": "Money sent back to the customer after a return",
+    "hintThai": "เงินที่ส่งคืนลูกค้าหลังการคืนสินค้า",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "void",
+    "thai": "การยกเลิกรายการ",
+    "emoji": "❌",
+    "level": "medium",
+    "hint": "Cancelling a transaction before it settles",
+    "hintThai": "ยกเลิกรายการก่อนชำระเงิน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "decline",
+    "thai": "การปฏิเสธรายการ",
+    "emoji": "🚫",
+    "level": "easy",
+    "hint": "When a card payment is rejected",
+    "hintThai": "เมื่อรายการบัตรถูกปฏิเสธ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "fraud",
+    "thai": "การทุจริต",
+    "emoji": "🎭",
+    "level": "medium",
+    "hint": "Unauthorized or deceptive card use",
+    "hintThai": "การใช้บัตรโดยไม่ได้รับอนุญาต",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "skimming",
+    "thai": "การดักข้อมูลบัตร",
+    "emoji": "🕵️",
+    "level": "hard",
+    "hint": "Stealing card data by tampering with a card reader",
+    "hintThai": "ขโมยข้อมูลบัตรจากเครื่องรูด",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "payment gateway",
+    "thai": "ระบบรับชำระออนไลน์",
+    "emoji": "🚪",
+    "level": "medium",
+    "hint": "Software that connects online shops to payment networks",
+    "hintThai": "ซอฟต์แวร์เชื่อมร้านออนไลน์กับเครือข่ายชำระเงิน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "PayFac",
+    "thai": "ตัวกลางรับชำระ",
+    "emoji": "🤝",
+    "level": "hard",
+    "hint": "A company that lets sub-merchants process payments under its MID",
+    "hintThai": "บริษัทที่ให้ร้านค้าย่อยชำระเงินภายใต้ MID ของตน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "aggregator",
+    "thai": "ผู้รวบรวมร้านค้า",
+    "emoji": "🗂️",
+    "level": "hard",
+    "hint": "Bundles many small merchants under one acquiring account",
+    "hintThai": "รวบรวมร้านค้าเล็กๆ ภายใต้บัญชี acquiring เดียว",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "surcharge",
+    "thai": "ค่าธรรมเนียมเพิ่มเติม",
+    "emoji": "➕",
+    "level": "medium",
+    "hint": "Extra fee charged to customers who pay by card",
+    "hintThai": "ค่าธรรมเนียมพิเศษสำหรับลูกค้าที่จ่ายด้วยบัตร",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "dispute",
+    "thai": "การโต้แย้ง",
+    "emoji": "⚖️",
+    "level": "medium",
+    "hint": "A formal disagreement between cardholder and merchant",
+    "hintThai": "ข้อโต้แย้งระหว่างผู้ถือบัตรกับร้านค้า",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "e-Wallet",
+    "thai": "กระเป๋าเงินดิจิทัล",
+    "emoji": "👜",
+    "level": "easy",
+    "hint": "App that stores money for payments",
+    "hintThai": "แอปที่เก็บเงินสำหรับชำระ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "QR payment",
+    "thai": "ชำระด้วย QR โค้ด",
+    "emoji": "◼️",
+    "level": "easy",
+    "hint": "Scan a code instead of swiping a card",
+    "hintThai": "สแกนโค้ดแทนการรูดบัตร",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "open banking",
+    "thai": "โอเพ่นแบงกิ้ง",
+    "emoji": "🔓",
+    "level": "hard",
+    "hint": "Sharing bank data with third-party apps via APIs",
+    "hintThai": "แชร์ข้อมูลธนาคารกับแอปภายนอกผ่าน API",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "BNPL",
+    "thai": "ซื้อก่อนจ่ายทีหลัง",
+    "emoji": "⏳",
+    "level": "medium",
+    "hint": "Buy now, split into instalments later",
+    "hintThai": "ซื้อตอนนี้ แล้วแบ่งจ่ายทีหลัง",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "digital lending",
+    "thai": "สินเชื่อดิจิทัล",
+    "emoji": "💻",
+    "level": "medium",
+    "hint": "Getting a loan entirely through an app",
+    "hintThai": "กู้เงินผ่านแอปทั้งหมด",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "super app",
+    "thai": "ซูเปอร์แอป",
+    "emoji": "📲",
+    "level": "easy",
+    "hint": "One app that does banking, shopping, food, and more",
+    "hintThai": "แอปเดียวที่ทำได้ทั้งธนาคาร ช้อปปิ้ง อาหาร",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "embedded finance",
+    "thai": "การเงินฝังในแพลตฟอร์ม",
+    "emoji": "🔩",
+    "level": "hard",
+    "hint": "Financial services built inside non-financial apps",
+    "hintThai": "บริการทางการเงินในแอปที่ไม่ใช่ธนาคาร",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "sandbox",
+    "thai": "สภาพแวดล้อมทดสอบ",
+    "emoji": "🏖️",
+    "level": "medium",
+    "hint": "A safe test environment where you can break things without consequences",
+    "hintThai": "พื้นที่ทดสอบที่ปลอดภัย ทำผิดพลาดได้",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "cross-border payment",
+    "thai": "โอนเงินข้ามประเทศ",
+    "emoji": "🌏",
+    "level": "medium",
+    "hint": "Sending money from one country to another",
+    "hintThai": "ส่งเงินจากประเทศหนึ่งไปอีกประเทศ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "remittance",
+    "thai": "การส่งเงินกลับบ้าน",
+    "emoji": "💌",
+    "level": "medium",
+    "hint": "Migrant workers sending money home",
+    "hintThai": "แรงงานต่างด้าวส่งเงินกลับบ้าน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "regtech",
+    "thai": "เทคโนโลยีกำกับดูแล",
+    "emoji": "📐",
+    "level": "hard",
+    "hint": "Tech that helps companies comply with regulations",
+    "hintThai": "เทคโนโลยีช่วยบริษัทปฏิบัติตามกฎ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "transaction",
+    "thai": "ธุรกรรม",
+    "emoji": "🔄",
+    "level": "easy",
+    "hint": "Any single act of paying or transferring money",
+    "hintThai": "การชำระหรือโอนเงินครั้งหนึ่งๆ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "transfer",
+    "thai": "การโอนเงิน",
+    "emoji": "➡️",
+    "level": "easy",
+    "hint": "Moving money from one account to another",
+    "hintThai": "ย้ายเงินจากบัญชีหนึ่งไปอีกบัญชี",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "deposit",
+    "thai": "การฝากเงิน",
+    "emoji": "📥",
+    "level": "easy",
+    "hint": "Putting money into an account",
+    "hintThai": "ใส่เงินเข้าบัญชี",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "withdrawal",
+    "thai": "การถอนเงิน",
+    "emoji": "📤",
+    "level": "easy",
+    "hint": "Taking money out of an account",
+    "hintThai": "เอาเงินออกจากบัญชี",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "balance",
+    "thai": "ยอดคงเหลือ",
+    "emoji": "⚖️",
+    "level": "easy",
+    "hint": "How much money is in your account right now",
+    "hintThai": "จำนวนเงินในบัญชีตอนนี้",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "statement",
+    "thai": "ใบแจ้งยอด",
+    "emoji": "📄",
+    "level": "easy",
+    "hint": "Monthly record of all your account activity",
+    "hintThai": "บันทึกธุรกรรมบัญชีรายเดือน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "invoice",
+    "thai": "ใบแจ้งหนี้",
+    "emoji": "🧾",
+    "level": "easy",
+    "hint": "A bill requesting payment for goods or services",
+    "hintThai": "เอกสารขอชำระเงินสำหรับสินค้าหรือบริการ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "receipt",
+    "thai": "ใบเสร็จ",
+    "emoji": "🗒️",
+    "level": "easy",
+    "hint": "Proof that you've already paid",
+    "hintThai": "หลักฐานว่าจ่ายเงินแล้ว",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "overdraft",
+    "thai": "เบิกเกินบัญชี",
+    "emoji": "🔴",
+    "level": "medium",
+    "hint": "Spending more than what's in your account",
+    "hintThai": "ใช้เงินเกินที่มีในบัญชี",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "wire transfer",
+    "thai": "โอนเงินผ่านธนาคาร",
+    "emoji": "🌐",
+    "level": "medium",
+    "hint": "Sending money electronically between banks, often across borders",
+    "hintThai": "ส่งเงินระหว่างธนาคารทางอิเล็กทรอนิกส์",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "batch",
+    "thai": "การประมวลกลุ่ม",
+    "emoji": "📦",
+    "level": "medium",
+    "hint": "A group of transactions processed together at once",
+    "hintThai": "ธุรกรรมกลุ่มที่ประมวลผลพร้อมกัน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "cutoff time",
+    "thai": "เวลาปิดรับรายการ",
+    "emoji": "⏰",
+    "level": "medium",
+    "hint": "Deadline after which transactions roll to the next business day",
+    "hintThai": "เส้นตายที่รายการหลังจากนั้นจะนับเป็นวันถัดไป",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "loan",
+    "thai": "เงินกู้",
+    "emoji": "💵",
+    "level": "easy",
+    "hint": "Borrowed money you have to pay back with interest",
+    "hintThai": "เงินที่ยืมมาและต้องคืนพร้อมดอกเบี้ย",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "interest",
+    "thai": "ดอกเบี้ย",
+    "emoji": "📈",
+    "level": "easy",
+    "hint": "The cost of borrowing money",
+    "hintThai": "ค่าใช้จ่ายของการกู้ยืมเงิน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "credit",
+    "thai": "เครดิต",
+    "emoji": "💳",
+    "level": "easy",
+    "hint": "Ability to borrow money or buy now and pay later",
+    "hintThai": "ความสามารถในการกู้ยืมหรือซื้อก่อนจ่ายทีหลัง",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "credit limit",
+    "thai": "วงเงินเครดิต",
+    "emoji": "🚧",
+    "level": "easy",
+    "hint": "Maximum you're allowed to spend on your credit card",
+    "hintThai": "จำนวนสูงสุดที่ใช้บัตรเครดิตได้",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "default",
+    "thai": "การผิดนัดชำระ",
+    "emoji": "❗",
+    "level": "medium",
+    "hint": "Failing to meet a debt obligation",
+    "hintThai": "ไม่สามารถชำระหนี้ตามที่ตกลงไว้",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "revenue",
+    "thai": "รายได้",
+    "emoji": "💰",
+    "level": "easy",
+    "hint": "Total money coming into a business before expenses",
+    "hintThai": "เงินทั้งหมดที่เข้ามาในธุรกิจก่อนหักค่าใช้จ่าย",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "expense",
+    "thai": "ค่าใช้จ่าย",
+    "emoji": "🧾",
+    "level": "easy",
+    "hint": "Money going out of a business",
+    "hintThai": "เงินที่ออกไปจากธุรกิจ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "profit",
+    "thai": "กำไร",
+    "emoji": "📊",
+    "level": "easy",
+    "hint": "Revenue minus expenses — the good number",
+    "hintThai": "รายได้ลบค่าใช้จ่าย — ตัวเลขที่ดี",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "loss",
+    "thai": "ขาดทุน",
+    "emoji": "📉",
+    "level": "easy",
+    "hint": "When expenses exceed revenue",
+    "hintThai": "เมื่อค่าใช้จ่ายมากกว่ารายได้",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "cash flow",
+    "thai": "กระแสเงินสด",
+    "emoji": "🌊",
+    "level": "medium",
+    "hint": "The movement of money in and out of a business",
+    "hintThai": "การไหลเข้าออกของเงินสดในธุรกิจ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "budget",
+    "thai": "งบประมาณ",
+    "emoji": "📋",
+    "level": "easy",
+    "hint": "A plan for how you'll spend money",
+    "hintThai": "แผนการใช้จ่ายเงิน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "audit",
+    "thai": "การตรวจสอบบัญชี",
+    "emoji": "🔍",
+    "level": "medium",
+    "hint": "An independent check of financial records",
+    "hintThai": "การตรวจสอบบันทึกทางการเงินโดยอิสระ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "ROI",
+    "thai": "ผลตอบแทนการลงทุน",
+    "emoji": "🎯",
+    "level": "medium",
+    "hint": "How much you earn back relative to what you invested",
+    "hintThai": "ได้รับเงินคืนเท่าไหร่เทียบกับที่ลงทุน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "VAT",
+    "thai": "ภาษีมูลค่าเพิ่ม",
+    "emoji": "🏷️",
+    "level": "easy",
+    "hint": "7% tax added to most goods and services in Thailand",
+    "hintThai": "ภาษี 7% ที่เพิ่มในสินค้าและบริการส่วนใหญ่ในไทย",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "withholding tax",
+    "thai": "ภาษีหัก ณ ที่จ่าย",
+    "emoji": "✂️",
+    "level": "medium",
+    "hint": "Tax deducted from payment before it reaches the recipient",
+    "hintThai": "ภาษีที่หักออกก่อนโอนเงินให้ผู้รับ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "liquidity",
+    "thai": "สภาพคล่อง",
+    "emoji": "💧",
+    "level": "hard",
+    "hint": "How easily assets can be converted to cash",
+    "hintThai": "ความสามารถแปลงสินทรัพย์เป็นเงินสดได้เร็วแค่ไหน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "fee",
+    "thai": "ค่าธรรมเนียม",
+    "emoji": "💸",
+    "level": "easy",
+    "hint": "A charge for a service",
+    "hintThai": "ค่าบริการ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Visa",
+    "thai": "วีซ่า",
+    "emoji": "💳",
+    "level": "easy",
+    "hint": "The world's largest card payment network, blue and gold",
+    "hintThai": "เครือข่ายบัตรที่ใหญ่ที่สุดในโลก สีน้ำเงินและทอง",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Mastercard",
+    "thai": "มาสเตอร์การ์ด",
+    "emoji": "🔴",
+    "level": "easy",
+    "hint": "Two overlapping circles — red and orange — on every card",
+    "hintThai": "วงกลมสองวงซ้อนกัน สีแดงและส้ม",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Amex",
+    "thai": "อเมริกัน เอ็กซ์เพรส",
+    "emoji": "💙",
+    "level": "easy",
+    "hint": "Green centurion logo, often used by premium cardholders",
+    "hintThai": "โลโก้เซ็นจูเรียน มักใช้โดยผู้ถือบัตรระดับพรีเมียม",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "JCB",
+    "thai": "เจซีบี",
+    "emoji": "🎌",
+    "level": "medium",
+    "hint": "Japanese card scheme, popular in Asia and duty-free shops",
+    "hintThai": "card scheme ของญี่ปุ่น นิยมในเอเชียและร้านปลอดภาษี",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "UnionPay",
+    "thai": "ยูเนี่ยนเพย์",
+    "emoji": "🇨🇳",
+    "level": "medium",
+    "hint": "China's national card scheme, largest by number of cards issued",
+    "hintThai": "card scheme ของจีน ออกบัตรมากที่สุดในโลก",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "card scheme",
+    "thai": "เครือข่ายบัตร",
+    "emoji": "🌐",
+    "level": "medium",
+    "hint": "The network rules and infrastructure that make card payments work",
+    "hintThai": "กฎและโครงสร้างพื้นฐานที่ทำให้บัตรชำระได้",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "white label",
+    "thai": "ไวท์เลเบล",
+    "emoji": "🏷️",
+    "level": "medium",
+    "hint": "A product built by one company but branded as another's",
+    "hintThai": "สินค้าที่บริษัทหนึ่งสร้างแต่ติดแบรนด์อีกบริษัท",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "acquirer bank",
+    "thai": "ธนาคารผู้รับบัตร",
+    "emoji": "🏦",
+    "level": "medium",
+    "hint": "The bank that signs up merchants and settles card payments for them",
+    "hintThai": "ธนาคารที่รับสมัครร้านค้าและชำระเงินบัตรให้",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "issuing bank",
+    "thai": "ธนาคารผู้ออกบัตร",
+    "emoji": "🏛️",
+    "level": "medium",
+    "hint": "The bank that gave you your credit or debit card",
+    "hintThai": "ธนาคารที่ออกบัตรเครดิตหรือเดบิตให้คุณ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "four-party model",
+    "thai": "โมเดลสี่ฝ่าย",
+    "emoji": "4️⃣",
+    "level": "hard",
+    "hint": "Cardholder, merchant, issuer, acquirer — the backbone of card payments",
+    "hintThai": "ผู้ถือบัตร ร้านค้า ผู้ออกบัตร ผู้รับบัตร — โครงสร้างบัตร",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "PCI DSS",
+    "thai": "มาตรฐานความปลอดภัยบัตร",
+    "emoji": "🔒",
+    "level": "hard",
+    "hint": "Security standard every business handling card data must follow",
+    "hintThai": "มาตรฐานความปลอดภัยที่ทุกธุรกิจที่จัดการข้อมูลบัตรต้องปฏิบัติตาม",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "installment",
+    "thai": "ผ่อนชำระ",
+    "emoji": "📆",
+    "level": "easy",
+    "hint": "Splitting a payment into monthly chunks",
+    "hintThai": "แบ่งชำระเป็นรายเดือน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "full payment",
+    "thai": "ชำระเต็มจำนวน",
+    "emoji": "💯",
+    "level": "easy",
+    "hint": "Paying the entire amount at once, no split",
+    "hintThai": "จ่ายครบทั้งหมดในครั้งเดียว",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "bill presentment",
+    "thai": "การส่งใบเรียกเก็บเงิน",
+    "emoji": "📨",
+    "level": "medium",
+    "hint": "Sending a bill to customers via SMS, email, or app before they pay",
+    "hintThai": "ส่งใบแจ้งหนี้ให้ลูกค้าผ่าน SMS อีเมล หรือแอปก่อนชำระ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "real-time payment",
+    "thai": "ชำระทันที",
+    "emoji": "⚡",
+    "level": "medium",
+    "hint": "Money moves instantly — no waiting for next business day",
+    "hintThai": "เงินโอนทันที ไม่ต้องรอวันทำการถัดไป",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "SLA",
+    "thai": "ข้อตกลงระดับบริการ",
+    "emoji": "📋",
+    "level": "medium",
+    "hint": "The agreed minimum quality and speed of a service",
+    "hintThai": "ข้อตกลงคุณภาพและความเร็วขั้นต่ำของบริการ",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "onboarding",
+    "thai": "การรับสมัครลูกค้าใหม่",
+    "emoji": "🚀",
+    "level": "easy",
+    "hint": "The process of signing up and setting up a new merchant or customer",
+    "hintThai": "กระบวนการรับสมัครและตั้งค่าให้ร้านค้าหรือลูกค้าใหม่",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "biometrics",
+    "thai": "ไบโอเมตริกส์",
+    "emoji": "👁️",
+    "level": "medium",
+    "hint": "Using fingerprint, face, or iris to verify identity",
+    "hintThai": "ใช้ลายนิ้วมือ ใบหน้า หรือม่านตา ยืนยันตัวตน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "OCR",
+    "thai": "อ่านตัวอักษรจากภาพ",
+    "emoji": "📷",
+    "level": "medium",
+    "hint": "Technology that reads text from images or scanned documents",
+    "hintThai": "เทคโนโลยีอ่านตัวอักษรจากรูปภาพหรือเอกสารสแกน",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "NFC",
+    "thai": "สื่อสารระยะใกล้",
+    "emoji": "📡",
+    "level": "medium",
+    "hint": "Tap your phone to pay — works within a few centimetres",
+    "hintThai": "แตะมือถือจ่าย ใช้ได้ในระยะไม่กี่เซนติเมตร",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "cloud speaker",
+    "thai": "ลำโพงแจ้งเตือนการชำระ",
+    "emoji": "🔊",
+    "level": "easy",
+    "hint": "Device that announces out loud when a QR payment is received",
+    "hintThai": "อุปกรณ์ที่ประกาศเสียงดังเมื่อรับชำระ QR แล้ว",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "EDC",
+    "thai": "เครื่องรับบัตรอิเล็กทรอนิกส์",
+    "emoji": "🖥️",
+    "level": "medium",
+    "hint": "The card terminal on the counter where you insert or tap your card",
+    "hintThai": "เครื่องรับบัตรบนเคาน์เตอร์ที่เสียบหรือแตะบัตร",
+    "category": "Digio Business",
+    "categories": [
+      "Digio Business"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "UAT",
+    "thai": "ทดสอบโดยผู้ใช้จริง",
+    "emoji": "🧪",
+    "level": "easy",
+    "hint": "Client tests the system before go-live",
+    "hintThai": "ลูกค้าทดสอบระบบก่อน go-live",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "SIT",
+    "thai": "ทดสอบการเชื่อมต่อระบบ",
+    "emoji": "🔗",
+    "level": "medium",
+    "hint": "Testing that all connected systems work together",
+    "hintThai": "ทดสอบว่าระบบที่เชื่อมต่อกันทำงานได้",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "production",
+    "thai": "ระบบจริง",
+    "emoji": "🚀",
+    "level": "easy",
+    "hint": "The live environment real users interact with",
+    "hintThai": "ระบบที่ผู้ใช้จริงใช้งาน",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "staging",
+    "thai": "สภาพแวดล้อมทดสอบก่อน live",
+    "emoji": "🎭",
+    "level": "medium",
+    "hint": "Mirror of production used for final checks before release",
+    "hintThai": "สภาพแวดล้อมก่อน live สำหรับตรวจก่อน release",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "development",
+    "thai": "สภาพแวดล้อมพัฒนา",
+    "emoji": "💻",
+    "level": "easy",
+    "hint": "Where developers write and test code locally",
+    "hintThai": "ที่นักพัฒนาเขียนและทดสอบโค้ด",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "regression test",
+    "thai": "ทดสอบซ้ำหลังแก้บัก",
+    "emoji": "🔄",
+    "level": "medium",
+    "hint": "Re-running tests to make sure old features still work after changes",
+    "hintThai": "รันการทดสอบซ้ำว่าฟีเจอร์เก่ายังทำงานหลังแก้ไข",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "test case",
+    "thai": "กรณีทดสอบ",
+    "emoji": "📋",
+    "level": "easy",
+    "hint": "A specific scenario written to verify a feature works",
+    "hintThai": "สถานการณ์ที่เขียนไว้เพื่อตรวจสอบฟีเจอร์",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "deployment",
+    "thai": "การติดตั้งระบบ",
+    "emoji": "📦",
+    "level": "easy",
+    "hint": "Pushing code or an update to a server or environment",
+    "hintThai": "ส่งโค้ดหรืออัปเดตไปยัง server หรือสภาพแวดล้อม",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "rollback",
+    "thai": "ย้อนกลับเวอร์ชัน",
+    "emoji": "⏪",
+    "level": "medium",
+    "hint": "Reverting to a previous version when something breaks",
+    "hintThai": "กลับไปเวอร์ชันก่อนหน้าเมื่อมีปัญหา",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "hotfix",
+    "thai": "แก้ด่วน",
+    "emoji": "🔥",
+    "level": "easy",
+    "hint": "An urgent patch pushed directly to production to fix a bug",
+    "hintThai": "แพตช์ด่วนที่ส่งตรงไป production เพื่อแก้บัก",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "release",
+    "thai": "ปล่อยเวอร์ชันใหม่",
+    "emoji": "🎉",
+    "level": "easy",
+    "hint": "Publishing a new version of software to users",
+    "hintThai": "เผยแพร่ซอฟต์แวร์เวอร์ชันใหม่ให้ผู้ใช้",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "go-live",
+    "thai": "เปิดตัวระบบ",
+    "emoji": "🟢",
+    "level": "easy",
+    "hint": "The moment a system officially launches for real users",
+    "hintThai": "ช่วงเวลาที่ระบบเปิดใช้งานจริงอย่างเป็นทางการ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "CI/CD",
+    "thai": "ระบบ build และ deploy อัตโนมัติ",
+    "emoji": "⚙️",
+    "level": "hard",
+    "hint": "Automating the build, test, and deploy pipeline",
+    "hintThai": "ทำให้กระบวนการ build ทดสอบ deploy เป็นอัตโนมัติ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "bug",
+    "thai": "ข้อผิดพลาดในโปรแกรม",
+    "emoji": "🐛",
+    "level": "easy",
+    "hint": "An error in code that causes unexpected behaviour",
+    "hintThai": "ข้อผิดพลาดในโค้ดที่ทำให้เกิดพฤติกรรมไม่คาดคิด",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "incident",
+    "thai": "เหตุการณ์ฉุกเฉิน",
+    "emoji": "🚨",
+    "level": "medium",
+    "hint": "An unplanned outage or service degradation affecting users",
+    "hintThai": "การหยุดชะงักหรือประสิทธิภาพลดลงที่กระทบผู้ใช้",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "downtime",
+    "thai": "ระบบล่ม",
+    "emoji": "🔴",
+    "level": "easy",
+    "hint": "When a service is unavailable",
+    "hintThai": "ช่วงที่บริการไม่สามารถใช้งานได้",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "root cause",
+    "thai": "สาเหตุหลัก",
+    "emoji": "🌱",
+    "level": "medium",
+    "hint": "The underlying reason an incident happened",
+    "hintThai": "สาเหตุที่แท้จริงที่ทำให้เกิดปัญหา",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "postmortem",
+    "thai": "วิเคราะห์หลังเหตุการณ์",
+    "emoji": "📝",
+    "level": "hard",
+    "hint": "A written review of what went wrong and how to prevent it",
+    "hintThai": "เอกสารวิเคราะห์ว่าอะไรผิดพลาดและป้องกันอย่างไร",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "API",
+    "thai": "ส่วนเชื่อมต่อโปรแกรม",
+    "emoji": "🔌",
+    "level": "easy",
+    "hint": "A way for two systems to talk to each other",
+    "hintThai": "ทางให้สองระบบสื่อสารกัน",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "webhook",
+    "thai": "การแจ้งเตือนอัตโนมัติ",
+    "emoji": "🪝",
+    "level": "medium",
+    "hint": "A system that pushes data to you automatically when an event happens",
+    "hintThai": "ระบบที่ส่งข้อมูลให้อัตโนมัติเมื่อเกิดเหตุการณ์",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "endpoint",
+    "thai": "จุดเชื่อมต่อ API",
+    "emoji": "📍",
+    "level": "medium",
+    "hint": "A specific URL that an API exposes for a function",
+    "hintThai": "URL เฉพาะที่ API เปิดให้ใช้งานฟังก์ชันหนึ่ง",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "timeout",
+    "thai": "หมดเวลารอ",
+    "emoji": "⏱️",
+    "level": "easy",
+    "hint": "When a request takes too long and the system gives up waiting",
+    "hintThai": "เมื่อคำขอใช้เวลานานเกินไปและระบบหยุดรอ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "retry",
+    "thai": "ลองใหม่อีกครั้ง",
+    "emoji": "🔁",
+    "level": "easy",
+    "hint": "Automatically sending a failed request again",
+    "hintThai": "ส่งคำขอที่ล้มเหลวอีกครั้งโดยอัตโนมัติ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "callback",
+    "thai": "แจ้งผลกลับ",
+    "emoji": "📞",
+    "level": "medium",
+    "hint": "A notification sent back to tell you whether a transaction succeeded",
+    "hintThai": "การแจ้งกลับว่าธุรกรรมสำเร็จหรือไม่",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "encryption",
+    "thai": "การเข้ารหัส",
+    "emoji": "🔐",
+    "level": "medium",
+    "hint": "Scrambling data so only the right person can read it",
+    "hintThai": "เข้ารหัสข้อมูลให้อ่านได้เฉพาะผู้ที่มีสิทธิ์",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "SSL/TLS",
+    "thai": "การเข้ารหัสการส่งข้อมูล",
+    "emoji": "🛡️",
+    "level": "medium",
+    "hint": "The padlock in your browser — encrypts data in transit",
+    "hintThai": "กุญแจในเบราว์เซอร์ เข้ารหัสข้อมูลระหว่างส่ง",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "HTTP 200",
+    "thai": "สำเร็จ",
+    "emoji": "✅",
+    "level": "easy",
+    "hint": "The status code meaning everything worked fine",
+    "hintThai": "รหัสสถานะที่หมายความว่าสำเร็จ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "HTTP 500",
+    "thai": "เซิร์ฟเวอร์พัง",
+    "emoji": "💥",
+    "level": "easy",
+    "hint": "Internal server error — something went wrong on the server side",
+    "hintThai": "ข้อผิดพลาดภายในเซิร์ฟเวอร์",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "sprint",
+    "thai": "รอบการทำงาน",
+    "emoji": "🏃",
+    "level": "easy",
+    "hint": "A 1-2 week cycle where a team delivers a chunk of work",
+    "hintThai": "รอบ 1-2 สัปดาห์ที่ทีมส่งงานชิ้นหนึ่ง",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "backlog",
+    "thai": "รายการงานที่รอ",
+    "emoji": "📥",
+    "level": "easy",
+    "hint": "The queue of features and tasks waiting to be worked on",
+    "hintThai": "คิวฟีเจอร์และงานที่รออยู่",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "ticket",
+    "thai": "ใบงาน",
+    "emoji": "🎫",
+    "level": "easy",
+    "hint": "A logged task or bug in a project management tool",
+    "hintThai": "งานหรือบักที่บันทึกในระบบจัดการโปรเจกต์",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "pull request",
+    "thai": "ขอรวมโค้ด",
+    "emoji": "🔀",
+    "level": "medium",
+    "hint": "Asking teammates to review your code before merging",
+    "hintThai": "ขอให้เพื่อนทีมรีวิวโค้ดก่อนรวม",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "code review",
+    "thai": "ตรวจสอบโค้ด",
+    "emoji": "👀",
+    "level": "medium",
+    "hint": "A teammate reads your code to catch bugs or bad practices",
+    "hintThai": "เพื่อนทีมอ่านโค้ดเพื่อหาบักหรือแนวทางที่ไม่ดี",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "monitoring",
+    "thai": "การตรวจสอบระบบ",
+    "emoji": "📊",
+    "level": "easy",
+    "hint": "Watching system health and performance in real time",
+    "hintThai": "ดูสุขภาพและประสิทธิภาพระบบแบบเรียลไทม์",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "log",
+    "thai": "บันทึกระบบ",
+    "emoji": "📜",
+    "level": "easy",
+    "hint": "A record of everything a system does — useful for debugging",
+    "hintThai": "บันทึกทุกสิ่งที่ระบบทำ ใช้ debug ได้",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "on-call",
+    "thai": "เวรเฝ้าระบบ",
+    "emoji": "📟",
+    "level": "easy",
+    "hint": "Being available 24/7 to respond to incidents",
+    "hintThai": "พร้อมตอบสนองเหตุการณ์ฉุกเฉินตลอด 24 ชั่วโมง",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "microservices",
+    "thai": "สถาปัตยกรรมย่อย",
+    "emoji": "🧩",
+    "level": "hard",
+    "hint": "Breaking an app into small independent services that each do one thing",
+    "hintThai": "แบ่งแอปเป็นบริการย่อยๆ อิสระที่ทำสิ่งเดียว",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "load balancing",
+    "thai": "กระจายโหลด",
+    "emoji": "⚖️",
+    "level": "hard",
+    "hint": "Spreading traffic across multiple servers so none gets overwhelmed",
+    "hintThai": "กระจาย traffic ไปหลาย server ให้ไม่มีตัวใดล่ม",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "cloud",
+    "thai": "คลาวด์",
+    "emoji": "☁️",
+    "level": "easy",
+    "hint": "Storing and running things on remote servers via the internet",
+    "hintThai": "เก็บและรันบน server ระยะไกลผ่านอินเทอร์เน็ต",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Docker",
+    "thai": "ด็อกเกอร์",
+    "emoji": "🐳",
+    "level": "medium",
+    "hint": "Tool that packages apps into portable containers",
+    "hintThai": "เครื่องมือบรรจุแอปในคอนเทนเนอร์แบบพกพา",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Java",
+    "thai": "จาวา",
+    "emoji": "☕",
+    "level": "easy",
+    "hint": "Coffee-logo language, king of enterprise backends",
+    "hintThai": "ภาษาโลโก้กาแฟ ราชา backend องค์กร",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Python",
+    "thai": "ไพทอน",
+    "emoji": "🐍",
+    "level": "easy",
+    "hint": "Snake-named language loved by data scientists and scripters",
+    "hintThai": "ภาษาชื่องูที่ data scientist และ scripter ชื่นชอบ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "JavaScript",
+    "thai": "จาวาสคริปต์",
+    "emoji": "🌐",
+    "level": "easy",
+    "hint": "The language that makes websites interactive",
+    "hintThai": "ภาษาที่ทำให้เว็บไซต์โต้ตอบได้",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "TypeScript",
+    "thai": "ไทป์สคริปต์",
+    "emoji": "🔷",
+    "level": "medium",
+    "hint": "JavaScript with strict types added on top",
+    "hintThai": "JavaScript ที่เพิ่ม type เข้าไป",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Kotlin",
+    "thai": "คอตลิน",
+    "emoji": "🤖",
+    "level": "medium",
+    "hint": "Google's preferred language for Android development",
+    "hintThai": "ภาษาที่ Google ชอบสำหรับพัฒนา Android",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Swift",
+    "thai": "สวิฟต์",
+    "emoji": "🍎",
+    "level": "medium",
+    "hint": "Apple's language for building iOS and Mac apps",
+    "hintThai": "ภาษาของ Apple สำหรับสร้างแอป iOS",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "SQL",
+    "thai": "เอสคิวแอล",
+    "emoji": "🗄️",
+    "level": "easy",
+    "hint": "Language for querying and managing databases",
+    "hintThai": "ภาษาสำหรับ query และจัดการฐานข้อมูล",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Go",
+    "thai": "โกแลง",
+    "emoji": "🔵",
+    "level": "medium",
+    "hint": "Google's fast, simple language great for APIs and microservices",
+    "hintThai": "ภาษาของ Google เร็ว เรียบง่าย เหมาะกับ API",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "PHP",
+    "thai": "พีเอชพี",
+    "emoji": "🐘",
+    "level": "easy",
+    "hint": "Elephant-logo language that powers a huge portion of the web",
+    "hintThai": "ภาษาโลโก้ช้างที่ขับเคลื่อนเว็บส่วนใหญ่",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Spring Boot",
+    "thai": "สปริงบูต",
+    "emoji": "🍃",
+    "level": "medium",
+    "hint": "Java framework for building production-ready APIs fast",
+    "hintThai": "เฟรมเวิร์ค Java สำหรับสร้าง API พร้อม production เร็ว",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "React",
+    "thai": "รีแอคท์",
+    "emoji": "⚛️",
+    "level": "easy",
+    "hint": "Facebook's library for building UI components",
+    "hintThai": "ไลบรารีของ Facebook สำหรับสร้าง UI",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "React Native",
+    "thai": "รีแอคท์เนทีฟ",
+    "emoji": "📱",
+    "level": "medium",
+    "hint": "Write once, deploy to iOS and Android",
+    "hintThai": "เขียนครั้งเดียว deploy ได้ทั้ง iOS และ Android",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Flutter",
+    "thai": "ฟลัตเตอร์",
+    "emoji": "🦋",
+    "level": "medium",
+    "hint": "Google's UI toolkit for cross-platform mobile apps",
+    "hintThai": "UI toolkit ของ Google สำหรับแอปหลายแพลตฟอร์ม",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Node.js",
+    "thai": "โหนด",
+    "emoji": "🟢",
+    "level": "easy",
+    "hint": "Run JavaScript on the server side",
+    "hintThai": "รัน JavaScript บน server",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Angular",
+    "thai": "แองกูลาร์",
+    "emoji": "🔺",
+    "level": "medium",
+    "hint": "Google's full framework for building web apps",
+    "hintThai": "เฟรมเวิร์คครบชุดของ Google สำหรับเว็บ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "MySQL",
+    "thai": "มายเอสคิวแอล",
+    "emoji": "🐬",
+    "level": "easy",
+    "hint": "Dolphin-logo relational database, popular in web apps",
+    "hintThai": "ฐานข้อมูล relational โลโก้โลมา นิยมในเว็บ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "PostgreSQL",
+    "thai": "โพสท์เกรส",
+    "emoji": "🐘",
+    "level": "medium",
+    "hint": "Open-source relational database known for reliability",
+    "hintThai": "ฐานข้อมูล relational open-source ขึ้นชื่อเรื่องความเสถียร",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "MongoDB",
+    "thai": "มองโกดีบี",
+    "emoji": "🍃",
+    "level": "medium",
+    "hint": "NoSQL database that stores data as JSON-like documents",
+    "hintThai": "ฐานข้อมูล NoSQL เก็บข้อมูลเป็น document คล้าย JSON",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Redis",
+    "thai": "เรดิส",
+    "emoji": "🔴",
+    "level": "medium",
+    "hint": "Super-fast in-memory store, great for caching and sessions",
+    "hintThai": "ฐานข้อมูลใน memory เร็วมาก เหมาะกับ cache และ session",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Oracle",
+    "thai": "โอราเคิล",
+    "emoji": "🏢",
+    "level": "medium",
+    "hint": "Enterprise database favourite of banks and large corporations",
+    "hintThai": "ฐานข้อมูลองค์กรที่ธนาคารและบริษัทใหญ่ชื่นชอบ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "AWS",
+    "thai": "อเมซอน เว็บ เซอร์วิส",
+    "emoji": "☁️",
+    "level": "easy",
+    "hint": "Amazon's cloud platform — the market leader",
+    "hintThai": "แพลตฟอร์ม cloud ของ Amazon ผู้นำตลาด",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "GCP",
+    "thai": "กูเกิล คลาวด์",
+    "emoji": "🔵",
+    "level": "easy",
+    "hint": "Google's cloud platform",
+    "hintThai": "แพลตฟอร์ม cloud ของ Google",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Kubernetes",
+    "thai": "คิวเบอร์เนทิส",
+    "emoji": "⎈",
+    "level": "hard",
+    "hint": "Orchestrates Docker containers at scale",
+    "hintThai": "จัดการ Docker container จำนวนมากให้เป็นระเบียบ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Nginx",
+    "thai": "เอ็นจินเอ็กซ์",
+    "emoji": "🌿",
+    "level": "medium",
+    "hint": "High-performance web server and reverse proxy",
+    "hintThai": "เว็บเซิร์ฟเวอร์ประสิทธิภาพสูงและ reverse proxy",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Git",
+    "thai": "กิต",
+    "emoji": "🌿",
+    "level": "easy",
+    "hint": "Version control — tracks every change ever made to code",
+    "hintThai": "ติดตามทุกการเปลี่ยนแปลงของโค้ด",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "GitHub",
+    "thai": "กิตฮับ",
+    "emoji": "🐙",
+    "level": "easy",
+    "hint": "Octopus-logo platform for hosting Git repositories",
+    "hintThai": "แพลตฟอร์มโลโก้หนวดสำหรับเก็บ Git repository",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "GitLab",
+    "thai": "กิตแล็บ",
+    "emoji": "🦊",
+    "level": "easy",
+    "hint": "Fox-logo Git platform with built-in CI/CD",
+    "hintThai": "แพลตฟอร์ม Git โลโก้สุนัขจิ้งจอก มี CI/CD ในตัว",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Jira",
+    "thai": "ไจร่า",
+    "emoji": "🎫",
+    "level": "easy",
+    "hint": "Issue and project tracking tool used by most dev teams",
+    "hintThai": "เครื่องมือติดตาม issue และโปรเจกต์ที่ทีม dev ใช้",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Confluence",
+    "thai": "คอนฟลูเอนซ์",
+    "emoji": "📖",
+    "level": "medium",
+    "hint": "Wiki-style documentation platform, paired with Jira",
+    "hintThai": "แพลตฟอร์มเอกสารสไตล์ wiki คู่กับ Jira",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Postman",
+    "thai": "โปสต์แมน",
+    "emoji": "📬",
+    "level": "easy",
+    "hint": "Tool for testing and exploring APIs",
+    "hintThai": "เครื่องมือทดสอบและสำรวจ API",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Swagger",
+    "thai": "สแวกเกอร์",
+    "emoji": "📄",
+    "level": "medium",
+    "hint": "Auto-generates API documentation from code",
+    "hintThai": "สร้างเอกสาร API อัตโนมัติจากโค้ด",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Grafana",
+    "thai": "กราฟาน่า",
+    "emoji": "📊",
+    "level": "medium",
+    "hint": "Dashboard tool for visualising metrics and logs",
+    "hintThai": "เครื่องมือ dashboard สำหรับแสดง metric และ log",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Jenkins",
+    "thai": "เจนกินส์",
+    "emoji": "🤵",
+    "level": "medium",
+    "hint": "Butler-logo automation server for CI/CD pipelines",
+    "hintThai": "เซิร์ฟเวอร์ automation โลโก้ผู้รับใช้สำหรับ CI/CD",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Slack",
+    "thai": "สแลค",
+    "emoji": "💬",
+    "level": "easy",
+    "hint": "Team chat app where work actually happens",
+    "hintThai": "แอปแชททีมที่งานเกิดขึ้นจริง",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "VS Code",
+    "thai": "วีเอส โค้ด",
+    "emoji": "💙",
+    "level": "easy",
+    "hint": "Microsoft's free, wildly popular code editor",
+    "hintThai": "โปรแกรมแก้ไขโค้ดฟรีของ Microsoft ที่ได้รับความนิยมสูง",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "IntelliJ",
+    "thai": "อินเทลลิเจ",
+    "emoji": "🧠",
+    "level": "medium",
+    "hint": "JetBrains IDE beloved by Java developers",
+    "hintThai": "IDE ของ JetBrains ที่ Java developer ชื่นชอบ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "REST API",
+    "thai": "เรสต์ เอพีไอ",
+    "emoji": "🔗",
+    "level": "easy",
+    "hint": "The most common style for web APIs using HTTP",
+    "hintThai": "สไตล์ API เว็บที่พบบ่อยที่สุด ใช้ HTTP",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "JSON",
+    "thai": "เจสัน",
+    "emoji": "{}",
+    "level": "easy",
+    "hint": "Lightweight data format that APIs use to send information",
+    "hintThai": "รูปแบบข้อมูลน้ำหนักเบาที่ API ใช้ส่งข้อมูล",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "XML",
+    "thai": "เอ็กซ์เอ็มแอล",
+    "emoji": "📰",
+    "level": "medium",
+    "hint": "Older tag-based data format still common in banking systems",
+    "hintThai": "รูปแบบข้อมูลแบบ tag เก่า ยังพบในระบบธนาคาร",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Kafka",
+    "thai": "คาฟกา",
+    "emoji": "📨",
+    "level": "hard",
+    "hint": "High-throughput message queue for streaming events between systems",
+    "hintThai": "คิวข้อความปริมาณสูงสำหรับส่ง event ระหว่างระบบ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "GraphQL",
+    "thai": "กราฟคิวแอล",
+    "emoji": "◈",
+    "level": "hard",
+    "hint": "Query language for APIs — ask exactly for what you need",
+    "hintThai": "ภาษา query สำหรับ API ขอเฉพาะข้อมูลที่ต้องการ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Server",
+    "thai": "เซิร์ฟเวอร์",
+    "emoji": "🖥️",
+    "level": "easy",
+    "hint": "The machine that receives requests and sends back responses",
+    "hintThai": "เครื่องที่รับ request และส่ง response กลับ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Load Balancer",
+    "thai": "โหลด บาลานเซอร์",
+    "emoji": "⚖️",
+    "level": "medium",
+    "hint": "Distributes traffic evenly across multiple servers",
+    "hintThai": "กระจาย traffic ให้เท่ากันระหว่างหลาย server",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Firewall",
+    "thai": "ไฟร์วอลล์",
+    "emoji": "🔥",
+    "level": "easy",
+    "hint": "Security barrier that controls what traffic can enter or leave",
+    "hintThai": "กำแพงรักษาความปลอดภัยที่คุมการเข้าออกของ traffic",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "VPN",
+    "thai": "วีพีเอ็น",
+    "emoji": "🔐",
+    "level": "easy",
+    "hint": "Encrypts your connection and masks your location",
+    "hintThai": "เข้ารหัสการเชื่อมต่อและซ่อนตำแหน่งของคุณ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "IP Address",
+    "thai": "ไอพี แอดเดรส",
+    "emoji": "📍",
+    "level": "easy",
+    "hint": "Unique number that identifies a device on a network",
+    "hintThai": "เลขเฉพาะที่ระบุอุปกรณ์บนเครือข่าย",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Port",
+    "thai": "พอร์ต",
+    "emoji": "🚪",
+    "level": "medium",
+    "hint": "A numbered 'door' on a server where a specific service listens",
+    "hintThai": "'ประตู' หมายเลขบน server ที่ service แต่ละตัวรับฟัง",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Proxy",
+    "thai": "พร็อกซี่",
+    "emoji": "🪞",
+    "level": "medium",
+    "hint": "Middleman server that sits between client and destination",
+    "hintThai": "เซิร์ฟเวอร์ตัวกลางระหว่าง client กับปลายทาง",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "On-premise",
+    "thai": "ออนพรีมิส",
+    "emoji": "🏢",
+    "level": "medium",
+    "hint": "Servers you own and manage in your own building, not the cloud",
+    "hintThai": "เซิร์ฟเวอร์ที่บริษัทเป็นเจ้าของและดูแลเอง",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Domain",
+    "thai": "โดเมน",
+    "emoji": "🌐",
+    "level": "easy",
+    "hint": "The human-readable address of a website, like google.com",
+    "hintThai": "ที่อยู่เว็บไซต์ที่มนุษย์อ่านได้ เช่น google.com",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "DNS",
+    "thai": "ดีเอ็นเอส",
+    "emoji": "📖",
+    "level": "medium",
+    "hint": "Phonebook of the internet — translates domain names to IP addresses",
+    "hintThai": "สมุดโทรศัพท์อินเทอร์เน็ต แปลงชื่อโดเมนเป็น IP",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Subdomain",
+    "thai": "ซับโดเมน",
+    "emoji": "🔗",
+    "level": "medium",
+    "hint": "Prefix before the main domain, like api.example.com",
+    "hintThai": "ส่วนนำหน้าโดเมนหลัก เช่น api.example.com",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Hostname",
+    "thai": "โฮสต์เนม",
+    "emoji": "🏷️",
+    "level": "medium",
+    "hint": "The name given to a specific machine on a network",
+    "hintThai": "ชื่อที่ตั้งให้กับเครื่องใดเครื่องหนึ่งบนเครือข่าย",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "SSL",
+    "thai": "เอสเอสแอล",
+    "emoji": "🔒",
+    "level": "easy",
+    "hint": "Encrypts data between browser and server — the padlock icon",
+    "hintThai": "เข้ารหัสข้อมูลระหว่าง browser กับ server — ไอคอนกุญแจ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "TLS",
+    "thai": "ทีแอลเอส",
+    "emoji": "🔐",
+    "level": "medium",
+    "hint": "The modern, more secure successor to SSL",
+    "hintThai": "รุ่นต่อจาก SSL ที่ปลอดภัยกว่า",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Certificate",
+    "thai": "เซอร์ติฟิเคต",
+    "emoji": "📜",
+    "level": "medium",
+    "hint": "Digital document that proves a server's identity and enables encryption",
+    "hintThai": "เอกสารดิจิทัลยืนยันตัวตน server และเปิดใช้การเข้ารหัส",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "HTTPS",
+    "thai": "เอชทีทีพีเอส",
+    "emoji": "🔒",
+    "level": "easy",
+    "hint": "HTTP with encryption — the S stands for Secure",
+    "hintThai": "HTTP ที่มีการเข้ารหัส — S ย่อมาจาก Secure",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Let's Encrypt",
+    "thai": "เล็ตส์ เอ็นคริปต์",
+    "emoji": "🆓",
+    "level": "hard",
+    "hint": "Free, automated certificate authority used by millions of sites",
+    "hintThai": "ผู้ออก certificate ฟรีที่เว็บไซต์นับล้านใช้",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "CSR",
+    "thai": "ซีเอสอาร์",
+    "emoji": "📋",
+    "level": "hard",
+    "hint": "Certificate Signing Request — the form you submit to get a cert issued",
+    "hintThai": "คำขอที่ส่งให้ผู้ออก certificate เพื่อรับ cert",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Private Key",
+    "thai": "ไพรเวท คีย์",
+    "emoji": "🗝️",
+    "level": "medium",
+    "hint": "Secret key used to decrypt data encrypted with the public key",
+    "hintThai": "กุญแจลับสำหรับถอดรหัสข้อมูลที่เข้ารหัสด้วย public key",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
+  },
+  {
+    "word": "Public Key",
+    "thai": "พับลิก คีย์",
+    "emoji": "🔑",
+    "level": "medium",
+    "hint": "Key shared openly so others can encrypt data for you",
+    "hintThai": "กุญแจที่แชร์ให้คนอื่นเข้ารหัสข้อมูลส่งให้คุณ",
+    "category": "Digio Tech",
+    "categories": [
+      "Digio Tech"
+    ],
+    "pos": "noun"
   }
 ]
