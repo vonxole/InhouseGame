@@ -12,15 +12,18 @@ let _hbTimerStart   = null;
 let _hbCurrentWord  = null;
 
 // Speed Round state
-let _hbMode         = 'classic'; // 'classic' | 'speed'
-let _hbTimeLimit    = 60;
-let _hbSpeedCorrect = [];
-let _hbSpeedPassed  = [];
-let _hbSpeedTimeLeft= 60;
-let _hbSpeedInterval= null;
-let _hbSwipeLocked  = false;
-let _hbTouchStartY  = 0;
-let _hbTouchStartX  = 0;
+let _hbMode           = 'classic'; // 'classic' | 'speed'
+let _hbTimeLimit      = 60;
+let _hbSpeedCorrect   = [];
+let _hbSpeedPassed    = [];
+let _hbSpeedTimeLeft  = 60;
+let _hbSpeedInterval  = null;
+let _hbSwipeLocked    = false;
+let _hbTouchStartY    = 0;
+let _hbTouchStartX    = 0;
+let _hbSpeedPlayerIdx = 0;
+let _hbSpeedScores    = []; // [{ name, correct, passed }]
+let _hbPlayersOpen    = false;
 
 // ── Entry point (from home screen button) ────────────────────────────────────
 async function hbGoSetup() {
@@ -77,6 +80,14 @@ function hbTogglePlayerLevel(idx, lvl) {
 
 const LVL_COLORS = { easy: '#22c55e', medium: '#f59e0b', hard: '#ef4444' };
 
+function hbTogglePlayersPanel() {
+  _hbPlayersOpen = !_hbPlayersOpen;
+  const panel   = document.getElementById('hb-players-panel');
+  const chevron = document.getElementById('hb-players-chevron');
+  if (panel)   panel.style.display   = _hbPlayersOpen ? 'flex' : 'none';
+  if (chevron) chevron.style.transform = _hbPlayersOpen ? 'rotate(180deg)' : '';
+}
+
 function hbRenderPlayerList() {
   const list = document.getElementById('hb-player-list');
   list.innerHTML = _hbPlayers.map((p, i) => {
@@ -105,6 +116,8 @@ function hbRenderPlayerList() {
     startBtn.disabled = !ok;
     startBtn.style.opacity = ok ? '1' : '.4';
   }
+  const badge = document.getElementById('hb-player-count-badge');
+  if (badge) badge.textContent = _hbPlayers.length > 0 ? `${_hbPlayers.length} คน` : 'ไม่ระบุ';
 }
 
 // ── Settings (multi-select) ───────────────────────────────────────────────────
@@ -384,30 +397,44 @@ function hbStartGameMode() {
 
 // ── Speed Round core ──────────────────────────────────────────────────────────
 function hbStartSpeedGame() {
-  _hbSpeedCorrect  = [];
-  _hbSpeedPassed   = [];
-  _hbHistory       = new Set();
-  _hbSpeedTimeLeft = _hbTimeLimit;
-  _hbSwipeLocked   = false;
+  _hbSpeedCorrect   = [];
+  _hbSpeedPassed    = [];
+  _hbSpeedScores    = [];
+  _hbSpeedPlayerIdx = 0;
+  _hbHistory        = new Set();
+  _hbSwipeLocked    = false;
   clearInterval(_hbSpeedInterval);
-
-  // Show ready screen
-  const readyEl = document.getElementById('hb-speed-ready');
-  const cdEl    = document.getElementById('hb-speed-cd');
-  if (readyEl) readyEl.style.display = 'flex';
-  if (cdEl)    cdEl.style.display    = 'none';
-
-  // Show time in ready screen
-  const timeEl = document.getElementById('hb-speed-ready-time');
-  if (timeEl) timeEl.textContent = `เวลา ${_hbTimeLimit / 60} นาที`;
-
-  // Init timer display (don't start yet)
-  hbSpeedUpdateTimer();
-  hbSpeedUpdateScore();
 
   show('s-hb-speed');
   const bar = document.getElementById('float-bar');
   if (bar) bar.style.display = 'none';
+
+  hbSpeedShowReady();
+}
+
+function hbSpeedShowReady() {
+  _hbSpeedCorrect  = [];
+  _hbSpeedPassed   = [];
+  _hbSpeedTimeLeft = _hbTimeLimit;
+  _hbSwipeLocked   = false;
+
+  const readyEl    = document.getElementById('hb-speed-ready');
+  const cdEl       = document.getElementById('hb-speed-cd');
+  const betweenEl  = document.getElementById('hb-speed-between');
+  if (readyEl)   readyEl.style.display   = 'flex';
+  if (cdEl)      cdEl.style.display      = 'none';
+  if (betweenEl) betweenEl.style.display = 'none';
+
+  // Show player name + time in ready screen
+  const hasPlayers = _hbPlayers.length > 0;
+  const playerName = hasPlayers ? _hbPlayers[_hbSpeedPlayerIdx].name : null;
+  const timeEl     = document.getElementById('hb-speed-ready-time');
+  if (timeEl) {
+    timeEl.textContent = (playerName ? `${playerName} · ` : '') + `เวลา ${_hbTimeLimit / 60} นาที`;
+  }
+
+  hbSpeedUpdateTimer();
+  hbSpeedUpdateScore();
 }
 
 function hbSpeedCountdown() {
@@ -550,41 +577,88 @@ function hbSpeedEnd() {
   clearInterval(_hbSpeedInterval);
   _hbSpeedTimeLeft = 0;
 
-  // Detach listeners
   const area = document.getElementById('hb-speed-word-area');
   if (area) { area.ontouchstart = null; area.ontouchend = null; area.onmousedown = null; area.onmouseup = null; }
+
+  // Save score for current player (if players mode)
+  const hasPlayers = _hbPlayers.length > 0;
+  if (hasPlayers) {
+    _hbSpeedScores.push({
+      name:    _hbPlayers[_hbSpeedPlayerIdx].name,
+      correct: _hbSpeedCorrect.length,
+      passed:  _hbSpeedPassed.length,
+    });
+
+    const isLast = _hbSpeedPlayerIdx >= _hbPlayers.length - 1;
+    if (!isLast) {
+      // Show between-player screen
+      const betweenEl = document.getElementById('hb-speed-between');
+      const scoreEl   = document.getElementById('hb-speed-between-score');
+      const nextEl    = document.getElementById('hb-speed-between-next');
+      const nextName  = _hbPlayers[_hbSpeedPlayerIdx + 1].name;
+      if (scoreEl) scoreEl.textContent = `${_hbPlayers[_hbSpeedPlayerIdx].name} ได้ ✅ ${_hbSpeedCorrect.length} คำ`;
+      if (nextEl)  nextEl.textContent  = `ถัดไป: ${nextName}`;
+      if (betweenEl) betweenEl.style.display = 'flex';
+      return;
+    }
+  }
 
   hbShowSpeedResult();
 }
 
-function hbShowSpeedResult() {
-  const total   = _hbSpeedCorrect.length + _hbSpeedPassed.length;
-  const summary = document.getElementById('hb-speed-summary');
-  if (summary) summary.textContent = `ถูก ${_hbSpeedCorrect.length} / ${total} คำ ใน ${fmtTime(_hbTimeLimit)}`;
+function hbSpeedNextPlayer() {
+  _hbSpeedPlayerIdx++;
+  hbSpeedShowReady();
+}
 
-  const list = document.getElementById('hb-speed-list');
-  if (list) {
-    const rows = [
-      ..._hbSpeedCorrect.map(w => `
-        <div style="display:flex;align-items:center;gap:12px;padding:8px 12px;background:rgba(34,197,94,.1);border-radius:10px;border-left:3px solid #22c55e;">
-          <span style="font-size:1.3rem;">${w.emoji || '📝'}</span>
-          <div style="flex:1;">
-            <div style="font-weight:700;font-size:0.95rem;">${w.word}</div>
-            <div style="font-size:0.78rem;color:var(--muted);">${w.thai}</div>
+function hbShowSpeedResult() {
+  const hasPlayers = _hbSpeedScores.length > 0;
+  const summary    = document.getElementById('hb-speed-summary');
+  const list       = document.getElementById('hb-speed-list');
+
+  if (hasPlayers) {
+    // Player leaderboard
+    const sorted = [..._hbSpeedScores].sort((a, b) => b.correct - a.correct);
+    const medals = ['🥇','🥈','🥉'];
+    if (summary) summary.textContent = `${sorted[0].name} ชนะด้วย ${sorted[0].correct} คำ!`;
+    if (list) {
+      list.innerHTML = sorted.map((s, i) => `
+        <div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(255,255,255,.04);border-radius:12px;${i===0?'border:1.5px solid #22c55e;':''}">
+          <span style="font-size:1.5rem;width:32px;text-align:center;">${medals[i] || `${i+1}.`}</span>
+          <div style="flex:1;font-weight:700;">${s.name}</div>
+          <div style="text-align:right;">
+            <div style="font-size:1.3rem;font-weight:900;color:#22c55e;">✅ ${s.correct}</div>
+            <div style="font-size:0.75rem;color:var(--muted);">ผ่าน ${s.passed}</div>
           </div>
-          <span style="font-size:1rem;">✅</span>
-        </div>`),
-      ..._hbSpeedPassed.map(w => `
-        <div style="display:flex;align-items:center;gap:12px;padding:8px 12px;background:rgba(239,68,68,.08);border-radius:10px;border-left:3px solid #ef4444;">
-          <span style="font-size:1.3rem;">${w.emoji || '📝'}</span>
-          <div style="flex:1;">
-            <div style="font-weight:700;font-size:0.95rem;">${w.word}</div>
-            <div style="font-size:0.78rem;color:var(--muted);">${w.thai}</div>
-          </div>
-          <span style="font-size:1rem;">⏭️</span>
-        </div>`),
-    ];
-    list.innerHTML = rows.join('');
+        </div>`).join('');
+    }
+  } else {
+    // No-player mode: show word list
+    const total = _hbSpeedCorrect.length + _hbSpeedPassed.length;
+    if (summary) summary.textContent = `ถูก ${_hbSpeedCorrect.length} / ${total} คำ ใน ${fmtTime(_hbTimeLimit)}`;
+    if (list) {
+      const rows = [
+        ..._hbSpeedCorrect.map(w => `
+          <div style="display:flex;align-items:center;gap:12px;padding:8px 12px;background:rgba(34,197,94,.1);border-radius:10px;border-left:3px solid #22c55e;">
+            <span style="font-size:1.3rem;">${w.emoji || '📝'}</span>
+            <div style="flex:1;">
+              <div style="font-weight:700;font-size:0.95rem;">${w.word}</div>
+              <div style="font-size:0.78rem;color:var(--muted);">${w.thai}</div>
+            </div>
+            <span style="font-size:1rem;">✅</span>
+          </div>`),
+        ..._hbSpeedPassed.map(w => `
+          <div style="display:flex;align-items:center;gap:12px;padding:8px 12px;background:rgba(239,68,68,.08);border-radius:10px;border-left:3px solid #ef4444;">
+            <span style="font-size:1.3rem;">${w.emoji || '📝'}</span>
+            <div style="flex:1;">
+              <div style="font-weight:700;font-size:0.95rem;">${w.word}</div>
+              <div style="font-size:0.78rem;color:var(--muted);">${w.thai}</div>
+            </div>
+            <span style="font-size:1rem;">⏭️</span>
+          </div>`),
+      ];
+      list.innerHTML = rows.join('');
+    }
   }
 
   show('s-hb-speed-result');
