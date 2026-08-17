@@ -485,6 +485,35 @@
         <h2 style="margin:0;font-size:1.2rem;">🎯 Guess Up</h2>
       </div>
 
+      <!-- Mode -->
+      <div class="card" style="width:100%;gap:10px;display:flex;flex-direction:column;">
+        <div style="font-size:0.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">โหมดเกม</div>
+        <div style="display:flex;gap:8px;">
+          <button id="hbsp-mode-classic" onclick="hbSetMode('classic')"
+            style="flex:1;padding:12px 8px;border-radius:12px;border:2px solid var(--accent);background:rgba(202,138,4,.15);color:#ca8a04;font-weight:700;font-size:0.9rem;cursor:pointer;">
+            ⏱️ Guess Up<div style="font-size:0.72rem;font-weight:400;color:var(--muted);margin-top:2px;">นับเวลาขึ้น</div>
+          </button>
+          <button id="hbsp-mode-speed" onclick="hbSetMode('speed')"
+            style="flex:1;padding:12px 8px;border-radius:12px;border:2px solid var(--border);background:transparent;color:var(--muted);font-weight:700;font-size:0.9rem;cursor:pointer;">
+            ⚡ Speed Round<div style="font-size:0.72rem;font-weight:400;margin-top:2px;">จับเวลาถอยหลัง</div>
+          </button>
+        </div>
+        <!-- Time limit (speed only) -->
+        <div id="hbsp-time-wrap" style="display:none;flex-direction:column;gap:8px;">
+          <div style="font-size:0.75rem;color:var(--muted);">เวลาต่อรอบ</div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <button onclick="hbAdjustTime(-1)"
+              style="width:40px;height:40px;border-radius:50%;border:1.5px solid var(--border);background:transparent;color:var(--text);font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;">−</button>
+            <div style="flex:1;text-align:center;">
+              <span id="hbsp-time-display" style="font-size:2rem;font-weight:900;">1</span>
+              <span style="font-size:0.85rem;color:var(--muted);margin-left:4px;">นาที</span>
+            </div>
+            <button onclick="hbAdjustTime(1)"
+              style="width:40px;height:40px;border-radius:50%;border:1.5px solid var(--border);background:transparent;color:var(--text);font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;">+</button>
+          </div>
+        </div>
+      </div>
+
       <!-- Players -->
       <div class="card" style="width:100%;gap:10px;display:flex;flex-direction:column;">
         <div style="font-size:0.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">ผู้เล่น</div>
@@ -530,42 +559,17 @@
         <div style="font-size:0.75rem;color:var(--muted);margin-top:2px;">ไม่เลือก = ใช้ทุกระดับ</div>
       </div>
 
-      <!-- Mode -->
-      <div class="card" style="width:100%;gap:10px;display:flex;flex-direction:column;">
-        <div style="font-size:0.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">โหมดเกม</div>
-        <div style="display:flex;gap:8px;">
-          <button id="hbsp-mode-classic" onclick="hbSetMode('classic')"
-            style="flex:1;padding:12px 8px;border-radius:12px;border:2px solid var(--accent);background:rgba(202,138,4,.15);color:#ca8a04;font-weight:700;font-size:0.9rem;cursor:pointer;">
-            ⏱️ Guess Up<div style="font-size:0.72rem;font-weight:400;color:var(--muted);margin-top:2px;">นับเวลาขึ้น</div>
-          </button>
-          <button id="hbsp-mode-speed" onclick="hbSetMode('speed')"
-            style="flex:1;padding:12px 8px;border-radius:12px;border:2px solid var(--border);background:transparent;color:var(--muted);font-weight:700;font-size:0.9rem;cursor:pointer;">
-            ⚡ Speed Round<div style="font-size:0.72rem;font-weight:400;margin-top:2px;">จับเวลาถอยหลัง</div>
-          </button>
-        </div>
-        <!-- Time limit (speed only) -->
-        <div id="hbsp-time-wrap" style="display:none;flex-direction:column;gap:8px;">
-          <div style="font-size:0.75rem;color:var(--muted);">เวลาต่อรอบ</div>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <button onclick="hbAdjustTime(-1)"
-              style="width:40px;height:40px;border-radius:50%;border:1.5px solid var(--border);background:transparent;color:var(--text);font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;">−</button>
-            <div style="flex:1;text-align:center;">
-              <span id="hbsp-time-display" style="font-size:2rem;font-weight:900;">1</span>
-              <span style="font-size:0.85rem;color:var(--muted);margin-left:4px;">นาที</span>
-            </div>
-            <button onclick="hbAdjustTime(1)"
-              style="width:40px;height:40px;border-radius:50%;border:1.5px solid var(--border);background:transparent;color:var(--text);font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;">+</button>
-          </div>
-        </div>
-      </div>
-
       <button id="hb-setup-start-btn" class="btn btn-primary" onclick="hbStartGameMode()" disabled style="width:100%;opacity:.5;">
         ▶ เริ่มเกม
       </button>
     </div>
 
     <!-- HEADBAND TURN ─────────────────────────────────────────────────────────── -->
-    <div id="s-hb-turn" class="screen" style="justify-content:space-between;padding:20px 20px 36px;gap:0;">
+    <div id="s-hb-turn" class="screen" style="justify-content:space-between;padding:20px 20px 36px;gap:0;position:relative;">
+      <!-- Countdown overlay (shared with speed) -->
+      <div id="hb-turn-cd" style="position:absolute;inset:0;background:var(--bg);z-index:19;display:none;align-items:center;justify-content:center;border-radius:inherit;">
+        <div id="hb-turn-cd-num" style="font-size:10rem;font-weight:900;line-height:1;transition:transform .15s ease,opacity .15s ease;"></div>
+      </div>
 
       <!-- Top: name + timer -->
       <div style="display:flex;justify-content:space-between;align-items:center;width:100%;">
@@ -640,6 +644,26 @@
 
     <!-- SPEED TURN ───────────────────────────────────────────────────────────── -->
     <div id="s-hb-speed" class="screen" style="justify-content:space-between;padding:0;gap:0;overflow:hidden;position:relative;">
+
+      <!-- Ready overlay -->
+      <div id="hb-speed-ready" style="position:absolute;inset:0;background:var(--bg);z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:32px;">
+        <div style="font-size:3.5rem;">⚡</div>
+        <div style="font-size:1.6rem;font-weight:800;text-align:center;">Speed Round</div>
+        <div style="font-size:0.95rem;color:var(--muted);text-align:center;line-height:1.7;">
+          ปัดขึ้น = ถูก &nbsp;·&nbsp; ปัดลง = ผ่าน<br>
+          <span id="hb-speed-ready-time" style="color:#22c55e;font-weight:700;"></span>
+        </div>
+        <button onclick="hbSpeedCountdown()"
+          style="width:100%;max-width:240px;padding:18px;border-radius:14px;border:none;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-size:1.2rem;font-weight:800;cursor:pointer;margin-top:8px;">
+          พร้อมแล้ว! ▶
+        </button>
+        <button onclick="show('s-hb-setup')" style="background:transparent;border:none;color:var(--muted);font-size:0.8rem;cursor:pointer;">← ตั้งค่า</button>
+      </div>
+
+      <!-- Countdown overlay (3-2-1) -->
+      <div id="hb-speed-cd" style="position:absolute;inset:0;background:var(--bg);z-index:19;display:none;align-items:center;justify-content:center;">
+        <div id="hb-speed-cd-num" style="font-size:10rem;font-weight:900;line-height:1;transition:transform .15s ease,opacity .15s ease;"></div>
+      </div>
 
       <!-- Top bar: timer -->
       <div style="width:100%;padding:20px 24px 12px;display:flex;flex-direction:column;gap:8px;background:var(--surface);z-index:2;">

@@ -197,6 +197,30 @@ function hbShowTurn() {
 }
 
 function hbBeginTurn() {
+  // Countdown 3-2-1 before showing word
+  const cdEl  = document.getElementById('hb-turn-cd');
+  const numEl = document.getElementById('hb-turn-cd-num');
+  if (cdEl && numEl) {
+    cdEl.style.display = 'flex';
+    let count = 3;
+    numEl.textContent = count; numEl.style.opacity = '1'; numEl.style.transform = 'scale(1)';
+    const iv = setInterval(() => {
+      count--;
+      if (count <= 0) {
+        clearInterval(iv);
+        cdEl.style.display = 'none';
+        hbDoBeginTurn();
+      } else {
+        numEl.style.opacity = '0'; numEl.style.transform = 'scale(1.3)';
+        setTimeout(() => { numEl.textContent = count; numEl.style.opacity = '1'; numEl.style.transform = 'scale(1)'; }, 150);
+      }
+    }, 800);
+  } else {
+    hbDoBeginTurn();
+  }
+}
+
+function hbDoBeginTurn() {
   const w = _hbCurrentWord;
   // Show word
   document.getElementById('hb-word-emoji').textContent = w.emoji || '';
@@ -365,22 +389,65 @@ function hbStartSpeedGame() {
   _hbHistory       = new Set();
   _hbSpeedTimeLeft = _hbTimeLimit;
   _hbSwipeLocked   = false;
+  clearInterval(_hbSpeedInterval);
 
-  // Init display
+  // Show ready screen
+  const readyEl = document.getElementById('hb-speed-ready');
+  const cdEl    = document.getElementById('hb-speed-cd');
+  if (readyEl) readyEl.style.display = 'flex';
+  if (cdEl)    cdEl.style.display    = 'none';
+
+  // Show time in ready screen
+  const timeEl = document.getElementById('hb-speed-ready-time');
+  if (timeEl) timeEl.textContent = `เวลา ${_hbTimeLimit / 60} นาที`;
+
+  // Init timer display (don't start yet)
+  hbSpeedUpdateTimer();
+  hbSpeedUpdateScore();
+
+  show('s-hb-speed');
+  const bar = document.getElementById('float-bar');
+  if (bar) bar.style.display = 'none';
+}
+
+function hbSpeedCountdown() {
+  const readyEl = document.getElementById('hb-speed-ready');
+  const cdEl    = document.getElementById('hb-speed-cd');
+  const numEl   = document.getElementById('hb-speed-cd-num');
+  if (readyEl) readyEl.style.display = 'none';
+  if (cdEl)    { cdEl.style.display = 'flex'; }
+
+  let count = 3;
+  if (numEl) { numEl.textContent = count; numEl.style.opacity = '1'; numEl.style.transform = 'scale(1)'; }
+
+  const iv = setInterval(() => {
+    count--;
+    if (count <= 0) {
+      clearInterval(iv);
+      if (cdEl) cdEl.style.display = 'none';
+      hbSpeedBegin();
+    } else {
+      if (numEl) {
+        numEl.style.opacity = '0'; numEl.style.transform = 'scale(1.3)';
+        setTimeout(() => {
+          numEl.textContent = count;
+          numEl.style.opacity = '1'; numEl.style.transform = 'scale(1)';
+        }, 150);
+      }
+    }
+  }, 800);
+}
+
+function hbSpeedBegin() {
+  // Pick first word and attach swipe listeners
   hbSpeedShowWord(hbPickWord([]));
 
-  // Start countdown
-  clearInterval(_hbSpeedInterval);
-  hbSpeedUpdateTimer();
+  // Start countdown timer
   _hbSpeedInterval = setInterval(() => {
     _hbSpeedTimeLeft--;
     hbSpeedUpdateTimer();
     if (_hbSpeedTimeLeft <= 0) hbSpeedEnd();
   }, 1000);
-
-  show('s-hb-speed');
-  const bar = document.getElementById('float-bar');
-  if (bar) bar.style.display = 'none';
 
   // Attach swipe listeners
   const area = document.getElementById('hb-speed-word-area');
