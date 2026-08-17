@@ -338,7 +338,7 @@ function hbSetMode(mode) {
     modeSpeed.style.color          = isSpeed ? '#22c55e'        : 'var(--muted)';
   }
   if (timeWrap) timeWrap.style.display = isSpeed ? 'flex' : 'none';
-  if (isSpeed && _hbTimeLimit) hbSetTime(_hbTimeLimit);
+  if (isSpeed) hbSetTime(_hbTimeLimit / 60);
 }
 
 function hbSetTime(mins) {
